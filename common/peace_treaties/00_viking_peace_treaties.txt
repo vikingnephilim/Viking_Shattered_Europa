@@ -1,4 +1,4 @@
-po_hre_viking_anglican = {
+viking_hre_religious_commotion = {
 	category = 6
 	power_projection = vassalized_rival
 	power_cost_base = 1
@@ -15,399 +15,9 @@ po_hre_viking_anglican = {
 		concede_colonial_region = 0
 	}
 	warscore_cap = -1
-	requires_is_allowed = yes
-	is_visible = {
-		OR = {
-			religion = cathar
-			religion = catholic
-			religion = fraticelli
-			religion = hussite
-			religion = lollard
-			religion = protestant
-			religion = reformed
-			religion = waldensian
-		}
-		government = monarchy
-	}
-	is_allowed = {
-		is_religion_enabled = anglican
-	}
-	effect = {
-		set_hre_religion = ROOT
-		set_hre_heretic_religion = anglican
-	}
-	ai_weight = {
-		export_to_variable = {
-			variable_name = ai_value
-			value = 50
-		}
-		limit = {
-			owns_core_province = 1
-		}
-	}
-}
-
-po_hre_viking_cathar = {
-	category = 6
-	power_projection = vassalized_rival
-	power_cost_base = 1
-	prestige_base = 1
-	ae_base = 2
-	warscore_cost = {
-		all_provinces = 0
-		no_provinces = 20
-		owner_keeps = 0
-		conquered = 1
-		returned_core = 0
-		released_nation = 0
-		cancelled_subject = 0
-		concede_colonial_region = 0
-	}
-	warscore_cap = -1
-	requires_is_allowed = yes
-	is_visible = {
-		OR = {
-			religion = anglican
-			religion = catholic
-			religion = fraticelli
-			religion = hussite
-			religion = lollard
-			religion = protestant
-			religion = reformed
-			religion = waldensian
-		}
-		government = monarchy
-	}
-	is_allowed = {
-		is_religion_enabled = cathar
-	}
-	effect = {
-		set_hre_religion = ROOT
-		set_hre_heretic_religion = cathar
-	}
-	ai_weight = {
-		export_to_variable = {
-			variable_name = ai_value
-			value = 50
-		}
-		limit = {
-			owns_core_province = 1
-		}
-	}
-}
-
-po_hre_viking_catholic = {
-	category = 6
-	power_projection = vassalized_rival
-	power_cost_base = 1
-	prestige_base = 1
-	ae_base = 2
-	warscore_cost = {
-		all_provinces = 0
-		no_provinces = 20
-		owner_keeps = 0
-		conquered = 1
-		returned_core = 0
-		released_nation = 0
-		cancelled_subject = 0
-		concede_colonial_region = 0
-	}
-	warscore_cap = -1
-	requires_is_allowed = yes
-	is_visible = {
-		OR = {
-			religion = anglican
-			religion = cathar
-			religion = fraticelli
-			religion = hussite
-			religion = lollard
-			religion = protestant
-			religion = reformed
-			religion = waldensian
-		}
-		government = monarchy
-	}
-	is_allowed = {
-		is_religion_enabled = catholic
-	}
-	effect = {
-		set_hre_religion = ROOT
-		set_hre_heretic_religion = catholic
-	}
-	ai_weight = {
-		export_to_variable = {
-			variable_name = ai_value
-			value = 50
-		}
-		limit = {
-			owns_core_province = 1
-		}
-	}
-}
-
-po_hre_viking_fraticelli = {
-	category = 6
-	power_projection = vassalized_rival
-	power_cost_base = 1
-	prestige_base = 1
-	ae_base = 2
-	warscore_cost = {
-		all_provinces = 0
-		no_provinces = 20
-		owner_keeps = 0
-		conquered = 1
-		returned_core = 0
-		released_nation = 0
-		cancelled_subject = 0
-		concede_colonial_region = 0
-	}
-	warscore_cap = -1
-	requires_is_allowed = yes
-	is_visible = {
-		OR = {
-			religion = anglican
-			religion = cathar
-			religion = catholic
-			religion = hussite
-			religion = lollard
-			religion = protestant
-			religion = reformed
-			religion = waldensian
-		}
-		government = monarchy
-	}
-	is_allowed = {
-		is_religion_enabled = fraticelli
-	}
-	effect = {
-		set_hre_religion = ROOT
-		set_hre_heretic_religion = fraticelli
-	}
-	ai_weight = {
-		export_to_variable = {
-			variable_name = ai_value
-			value = 50
-		}
-		limit = {
-			owns_core_province = 1
-		}
-	}
-}
-
-po_hre_viking_hussite = {
-	category = 6
-	power_projection = vassalized_rival
-	power_cost_base = 1
-	prestige_base = 1
-	ae_base = 2
-	warscore_cost = {
-		all_provinces = 0
-		no_provinces = 20
-		owner_keeps = 0
-		conquered = 1
-		returned_core = 0
-		released_nation = 0
-		cancelled_subject = 0
-		concede_colonial_region = 0
-	}
-	warscore_cap = -1
-	requires_is_allowed = yes
-	is_visible = {
-		OR = {
-			religion = anglican
-			religion = cathar
-			religion = catholic
-			religion = fraticelli
-			religion = lollard
-			religion = protestant
-			religion = reformed
-			religion = waldensian
-		}
-		government = monarchy
-	}
-	is_allowed = {
-		is_religion_enabled = hussite
-	}
-	effect = {
-		set_hre_religion = ROOT
-		set_hre_heretic_religion = hussite
-	}
-	ai_weight = {
-		export_to_variable = {
-			variable_name = ai_value
-			value = 50
-		}
-		limit = {
-			owns_core_province = 1
-		}
-	}
-}
-
-po_hre_viking_lollard = {
-	category = 6
-	power_projection = vassalized_rival
-	power_cost_base = 1
-	prestige_base = 1
-	ae_base = 2
-	warscore_cost = {
-		all_provinces = 0
-		no_provinces = 20
-		owner_keeps = 0
-		conquered = 1
-		returned_core = 0
-		released_nation = 0
-		cancelled_subject = 0
-		concede_colonial_region = 0
-	}
-	warscore_cap = -1
-	requires_is_allowed = yes
-	is_visible = {
-		OR = {
-			religion = anglican
-			religion = cathar
-			religion = catholic
-			religion = fraticelli
-			religion = hussite
-			religion = protestant
-			religion = reformed
-			religion = waldensian
-		}
-		government = monarchy
-	}
-	is_allowed = {
-		is_religion_enabled = lollard
-	}
-	effect = {
-		set_hre_religion = ROOT
-		set_hre_heretic_religion = lollard
-	}
-	ai_weight = {
-		export_to_variable = {
-			variable_name = ai_value
-			value = 50
-		}
-		limit = {
-			owns_core_province = 1
-		}
-	}
-}
-
-po_hre_viking_protestant = {
-	category = 6
-	power_projection = vassalized_rival
-	power_cost_base = 1
-	prestige_base = 1
-	ae_base = 2
-	warscore_cost = {
-		all_provinces = 0
-		no_provinces = 20
-		owner_keeps = 0
-		conquered = 1
-		returned_core = 0
-		released_nation = 0
-		cancelled_subject = 0
-		concede_colonial_region = 0
-	}
-	warscore_cap = -1
-	requires_is_allowed = yes
-	is_visible = {
-		OR = {
-			religion = anglican
-			religion = cathar
-			religion = catholic
-			religion = fraticelli
-			religion = hussite
-			religion = lollard
-			religion = reformed
-			religion = waldensian
-		}
-		government = monarchy
-	}
-	is_allowed = {
-		is_religion_enabled = protestant
-	}
-	effect = {
-		set_hre_religion = ROOT
-		set_hre_heretic_religion = protestant
-	}
-	ai_weight = {
-		export_to_variable = {
-			variable_name = ai_value
-			value = 50
-		}
-		limit = {
-			owns_core_province = 1
-		}
-	}
-}
-
-po_hre_viking_reformed = {
-	category = 6
-	power_projection = vassalized_rival
-	power_cost_base = 1
-	prestige_base = 1
-	ae_base = 2
-	warscore_cost = {
-		all_provinces = 0
-		no_provinces = 20
-		owner_keeps = 0
-		conquered = 1
-		returned_core = 0
-		released_nation = 0
-		cancelled_subject = 0
-		concede_colonial_region = 0
-	}
-	warscore_cap = -1
-	requires_is_allowed = yes
-	is_visible = {
-		OR = {
-			religion = anglican
-			religion = cathar
-			religion = catholic
-			religion = fraticelli
-			religion = hussite
-			religion = lollard
-			religion = protestant
-			religion = waldensian
-		}
-		government = monarchy
-	}
-	is_allowed = {
-		is_religion_enabled = reformed
-	}
-	effect = {
-		set_hre_religion = ROOT
-		set_hre_heretic_religion = reformed
-	}
-	ai_weight = {
-		export_to_variable = {
-			variable_name = ai_value
-			value = 50
-		}
-		limit = {
-			owns_core_province = 1
-		}
-	}
-}
-
-po_hre_viking_waldensian = {
-	category = 6
-	power_projection = vassalized_rival
-	power_cost_base = 1
-	prestige_base = 1
-	ae_base = 2
-	warscore_cost = {
-		all_provinces = 0
-		no_provinces = 20
-		owner_keeps = 0
-		conquered = 1
-		returned_core = 0
-		released_nation = 0
-		cancelled_subject = 0
-		concede_colonial_region = 0
-	}
-	warscore_cap = -1
-	requires_is_allowed = yes
+	requires_demand_independence = no
+	is_make_subject = yes
+	requires_is_allowed = no
 	is_visible = {
 		OR = {
 			religion = anglican
@@ -418,15 +28,743 @@ po_hre_viking_waldensian = {
 			religion = lollard
 			religion = protestant
 			religion = reformed
+			religion = waldensian
 		}
-		government = monarchy
 	}
 	is_allowed = {
-		is_religion_enabled = waldensian
+		OR = {
+			religion = anglican
+			religion = cathar
+			religion = catholic
+			religion = fraticelli
+			religion = hussite
+			religion = lollard
+			religion = protestant
+			religion = reformed
+			religion = waldensian
+		}
 	}
 	effect = {
-		set_hre_religion = ROOT
-		set_hre_heretic_religion = waldensian
+		if = {
+			limit = {
+				religion = anglican
+				FROM = {
+					religion = cathar
+				}
+			}
+			set_hre_religion = anglican
+			set_hre_heretic_religion = cathar
+		}
+		else_if = {
+			limit = {
+				religion = anglican
+				FROM = {
+					religion = catholic
+				}
+			}
+			set_hre_religion = anglican
+			set_hre_heretic_religion = catholic
+		}
+		else_if = {
+			limit = {
+				religion = anglican
+				FROM = {
+					religion = fraticelli
+				}
+			}
+			set_hre_religion = anglican
+			set_hre_heretic_religion = fraticelli
+		}
+		else_if = {
+			limit = {
+				religion = anglican
+				FROM = {
+					religion = hussite
+				}
+			}
+			set_hre_religion = anglican
+			set_hre_heretic_religion = hussite
+		}
+		else_if = {
+			limit = {
+				religion = anglican
+				FROM = {
+					religion = lollard
+				}
+			}
+			set_hre_religion = anglican
+			set_hre_heretic_religion = lollard
+		}
+		else_if = {
+			limit = {
+				religion = anglican
+				FROM = {
+					religion = protestant
+				}
+			}
+			set_hre_religion = anglican
+			set_hre_heretic_religion = protestant
+		}
+		else_if = {
+			limit = {
+				religion = anglican
+				FROM = {
+					religion = reformed
+				}
+			}
+			set_hre_religion = anglican
+			set_hre_heretic_religion = reformed
+		}
+		else_if = {
+			limit = {
+				religion = anglican
+				FROM = {
+					religion = waldensian
+				}
+			}
+			set_hre_religion = anglican
+			set_hre_heretic_religion = waldensian
+		}
+		else_if = {
+			limit = {
+				religion = cathar
+				FROM = {
+					religion = anglican
+				}
+			}
+			set_hre_religion = cathar
+			set_hre_heretic_religion = anglican
+		}
+		else_if = {
+			limit = {
+				religion = cathar
+				FROM = {
+					religion = catholic
+				}
+			}
+			set_hre_religion = cathar
+			set_hre_heretic_religion = catholic
+		}
+		else_if = {
+			limit = {
+				religion = cathar
+				FROM = {
+					religion = fraticelli
+				}
+			}
+			set_hre_religion = cathar
+			set_hre_heretic_religion = fraticelli
+		}
+		else_if = {
+			limit = {
+				religion = cathar
+				FROM = {
+					religion = hussite
+				}
+			}
+			set_hre_religion = cathar
+			set_hre_heretic_religion = hussite
+		}
+		else_if = {
+			limit = {
+				religion = cathar
+				FROM = {
+					religion = lollard
+				}
+			}
+			set_hre_religion = cathar
+			set_hre_heretic_religion = lollard
+		}
+		else_if = {
+			limit = {
+				religion = cathar
+				FROM = {
+					religion = protestant
+				}
+			}
+			set_hre_religion = cathar
+			set_hre_heretic_religion = protestant
+		}
+		else_if = {
+			limit = {
+				religion = cathar
+				FROM = {
+					religion = reformed
+				}
+			}
+			set_hre_religion = cathar
+			set_hre_heretic_religion = reformed
+		}
+		else_if = {
+			limit = {
+				religion = cathar
+				FROM = {
+					religion = waldensian
+				}
+			}
+			set_hre_religion = cathar
+			set_hre_heretic_religion = waldensian
+		}
+		else_if = {
+			limit = {
+				religion = catholic
+				FROM = {
+					religion = anglican
+				}
+			}
+			set_hre_religion = catholic
+			set_hre_heretic_religion = anglican
+		}
+		else_if = {
+			limit = {
+				religion = catholic
+				FROM = {
+					religion = cathar
+				}
+			}
+			set_hre_religion = catholic
+			set_hre_heretic_religion = cathar
+		}
+		else_if = {
+			limit = {
+				religion = catholic
+				FROM = {
+					religion = fraticelli
+				}
+			}
+			set_hre_religion = catholic
+			set_hre_heretic_religion = fraticelli
+		}
+		else_if = {
+			limit = {
+				religion = catholic
+				FROM = {
+					religion = hussite
+				}
+			}
+			set_hre_religion = catholic
+			set_hre_heretic_religion = hussite
+		}
+		else_if = {
+			limit = {
+				religion = catholic
+				FROM = {
+					religion = lollard
+				}
+			}
+			set_hre_religion = catholic
+			set_hre_heretic_religion = lollard
+		}
+		else_if = {
+			limit = {
+				religion = catholic
+				FROM = {
+					religion = protestant
+				}
+			}
+			set_hre_religion = catholic
+			set_hre_heretic_religion = protestant
+		}
+		else_if = {
+			limit = {
+				religion = catholic
+				FROM = {
+					religion = reformed
+				}
+			}
+			set_hre_religion = catholic
+			set_hre_heretic_religion = reformed
+		}
+		else_if = {
+			limit = {
+				religion = catholic
+				FROM = {
+					religion = waldensian
+				}
+			}
+			set_hre_religion = catholic
+			set_hre_heretic_religion = waldensian
+		}
+		else_if = {
+			limit = {
+				religion = fraticelli
+				FROM = {
+					religion = anglican
+				}
+			}
+			set_hre_religion = fraticelli
+			set_hre_heretic_religion = anglican
+		}
+		else_if = {
+			limit = {
+				religion = fraticelli
+				FROM = {
+					religion = cathar
+				}
+			}
+			set_hre_religion = fraticelli
+			set_hre_heretic_religion = cathar
+		}
+		else_if = {
+			limit = {
+				religion = fraticelli
+				FROM = {
+					religion = catholic
+				}
+			}
+			set_hre_religion = fraticelli
+			set_hre_heretic_religion = catholic
+		}
+		else_if = {
+			limit = {
+				religion = fraticelli
+				FROM = {
+					religion = hussite
+				}
+			}
+			set_hre_religion = fraticelli
+			set_hre_heretic_religion = hussite
+		}
+		else_if = {
+			limit = {
+				religion = fraticelli
+				FROM = {
+					religion = lollard
+				}
+			}
+			set_hre_religion = fraticelli
+			set_hre_heretic_religion = lollard
+		}
+		else_if = {
+			limit = {
+				religion = fraticelli
+				FROM = {
+					religion = protestant
+				}
+			}
+			set_hre_religion = fraticelli
+			set_hre_heretic_religion = protestant
+		}
+		else_if = {
+			limit = {
+				religion = fraticelli
+				FROM = {
+					religion = reformed
+				}
+			}
+			set_hre_religion = fraticelli
+			set_hre_heretic_religion = reformed
+		}
+		else_if = {
+			limit = {
+				religion = fraticelli
+				FROM = {
+					religion = waldensian
+				}
+			}
+			set_hre_religion = fraticelli
+			set_hre_heretic_religion = waldensian
+		}
+		else_if = {
+			limit = {
+				religion = hussite
+				FROM = {
+					religion = anglican
+				}
+			}
+			set_hre_religion = hussite
+			set_hre_heretic_religion = anglican
+		}
+		else_if = {
+			limit = {
+				religion = hussite
+				FROM = {
+					religion = cathar
+				}
+			}
+			set_hre_religion = hussite
+			set_hre_heretic_religion = cathar
+		}
+		else_if = {
+			limit = {
+				religion = hussite
+				FROM = {
+					religion = catholic
+				}
+			}
+			set_hre_religion = hussite
+			set_hre_heretic_religion = catholic
+		}
+		else_if = {
+			limit = {
+				religion = hussite
+				FROM = {
+					religion = fraticelli
+				}
+			}
+			set_hre_religion = hussite
+			set_hre_heretic_religion = fraticelli
+		}
+		else_if = {
+			limit = {
+				religion = hussite
+				FROM = {
+					religion = lollard
+				}
+			}
+			set_hre_religion = hussite
+			set_hre_heretic_religion = lollard
+		}
+		else_if = {
+			limit = {
+				religion = hussite
+				FROM = {
+					religion = protestant
+				}
+			}
+			set_hre_religion = hussite
+			set_hre_heretic_religion = protestant
+		}
+		else_if = {
+			limit = {
+				religion = hussite
+				FROM = {
+					religion = reformed
+				}
+			}
+			set_hre_religion = hussite
+			set_hre_heretic_religion = reformed
+		}
+		else_if = {
+			limit = {
+				religion = hussite
+				FROM = {
+					religion = waldensian
+				}
+			}
+			set_hre_religion = hussite
+			set_hre_heretic_religion = waldensian
+		}
+		else_if = {
+			limit = {
+				religion = lollard
+				FROM = {
+					religion = anglican
+				}
+			}
+			set_hre_religion = lollard
+			set_hre_heretic_religion = anglican
+		}
+		else_if = {
+			limit = {
+				religion = lollard
+				FROM = {
+					religion = cathar
+				}
+			}
+			set_hre_religion = lollard
+			set_hre_heretic_religion = cathar
+		}
+		else_if = {
+			limit = {
+				religion = lollard
+				FROM = {
+					religion = catholic
+				}
+			}
+			set_hre_religion = lollard
+			set_hre_heretic_religion = catholic
+		}
+		else_if = {
+			limit = {
+				religion = lollard
+				FROM = {
+					religion = fraticelli
+				}
+			}
+			set_hre_religion = lollard
+			set_hre_heretic_religion = fraticelli
+		}
+		else_if = {
+			limit = {
+				religion = lollard
+				FROM = {
+					religion = hussite
+				}
+			}
+			set_hre_religion = lollard
+			set_hre_heretic_religion = hussite
+		}
+		else_if = {
+			limit = {
+				religion = lollard
+				FROM = {
+					religion = protestant
+				}
+			}
+			set_hre_religion = lollard
+			set_hre_heretic_religion = protestant
+		}
+		else_if = {
+			limit = {
+				religion = lollard
+				FROM = {
+					religion = reformed
+				}
+			}
+			set_hre_religion = lollard
+			set_hre_heretic_religion = reformed
+		}
+		else_if = {
+			limit = {
+				religion = lollard
+				FROM = {
+					religion = waldensian
+				}
+			}
+			set_hre_religion = hussite
+			set_hre_heretic_religion = waldensian
+		}
+		else_if = {
+			limit = {
+				religion = protestant
+				FROM = {
+					religion = anglican
+				}
+			}
+			set_hre_religion = protestant
+			set_hre_heretic_religion = anglican
+		}
+		else_if = {
+			limit = {
+				religion = protestant
+				FROM = {
+					religion = cathar
+				}
+			}
+			set_hre_religion = protestant
+			set_hre_heretic_religion = cathar
+		}
+		else_if = {
+			limit = {
+				religion = protestant
+				FROM = {
+					religion = catholic
+				}
+			}
+			set_hre_religion = protestant
+			set_hre_heretic_religion = catholic
+		}
+		else_if = {
+			limit = {
+				religion = protestant
+				FROM = {
+					religion = fraticelli
+				}
+			}
+			set_hre_religion = protestant
+			set_hre_heretic_religion = fraticelli
+		}
+		else_if = {
+			limit = {
+				religion = protestant
+				FROM = {
+					religion = hussite
+				}
+			}
+			set_hre_religion = protestant
+			set_hre_heretic_religion = hussite
+		}
+		else_if = {
+			limit = {
+				religion = protestant
+				FROM = {
+					religion = lollard
+				}
+			}
+			set_hre_religion = protestant
+			set_hre_heretic_religion = lollard
+		}
+		else_if = {
+			limit = {
+				religion =protestant
+				FROM = {
+					religion = reformed
+				}
+			}
+			set_hre_religion = protestant
+			set_hre_heretic_religion = reformed
+		}
+		else_if = {
+			limit = {
+				religion = protestant
+				FROM = {
+					religion = waldensian
+				}
+			}
+			set_hre_religion = protestant
+			set_hre_heretic_religion = waldensian
+		}
+		else_if = {
+			limit = {
+				religion = reformed
+				FROM = {
+					religion = anglican
+				}
+			}
+			set_hre_religion = reformed
+			set_hre_heretic_religion = anglican
+		}
+		else_if = {
+			limit = {
+				religion = reformed
+				FROM = {
+					religion = cathar
+				}
+			}
+			set_hre_religion = reformed
+			set_hre_heretic_religion = cathar
+		}
+		else_if = {
+			limit = {
+				religion = reformed
+				FROM = {
+					religion = catholic
+				}
+			}
+			set_hre_religion = reformed
+			set_hre_heretic_religion = catholic
+		}
+		else_if = {
+			limit = {
+				religion = reformed
+				FROM = {
+					religion = fraticelli
+				}
+			}
+			set_hre_religion = reformed
+			set_hre_heretic_religion = fraticelli
+		}
+		else_if = {
+			limit = {
+				religion = reformed
+				FROM = {
+					religion = hussite
+				}
+			}
+			set_hre_religion = reformed
+			set_hre_heretic_religion = hussite
+		}
+		else_if = {
+			limit = {
+				religion = reformed
+				FROM = {
+					religion = lollard
+				}
+			}
+			set_hre_religion = reformed
+			set_hre_heretic_religion = lollard
+		}
+		else_if = {
+			limit = {
+				religion = reformed
+				FROM = {
+					religion = protestant
+				}
+			}
+			set_hre_religion = reformed
+			set_hre_heretic_religion = protestant
+		}
+		else_if = {
+			limit = {
+				religion = reformed
+				FROM = {
+					religion = waldensian
+				}
+			}
+			set_hre_religion = reformed
+			set_hre_heretic_religion = waldensian
+		}
+		else_if = {
+			limit = {
+				religion = waldensian
+				FROM = {
+					religion = anglican
+				}
+			}
+			set_hre_religion = waldensian
+			set_hre_heretic_religion = anglican
+		}
+		else_if = {
+			limit = {
+				religion = waldensian
+				FROM = {
+					religion = cathar
+				}
+			}
+			set_hre_religion = waldensian
+			set_hre_heretic_religion = cathar
+		}
+		else_if = {
+			limit = {
+				religion = waldensian
+				FROM = {
+					religion = catholic
+				}
+			}
+			set_hre_religion = waldensian
+			set_hre_heretic_religion = catholic
+		}
+		else_if = {
+			limit = {
+				religion = waldensian
+				FROM = {
+					religion = fraticelli
+				}
+			}
+			set_hre_religion = waldensian
+			set_hre_heretic_religion = fraticelli
+		}
+		else_if = {
+			limit = {
+				religion = waldensian
+				FROM = {
+					religion = hussite
+				}
+			}
+			set_hre_religion = waldensian
+			set_hre_heretic_religion = hussite
+		}
+		else_if = {
+			limit = {
+				religion = waldensian
+				FROM = {
+					religion = lollard
+				}
+			}
+			set_hre_religion = waldensian
+			set_hre_heretic_religion = lollard
+		}
+		else_if = {
+			limit = {
+				religion = waldensian
+				FROM = {
+					religion = protestant
+				}
+			}
+			set_hre_religion = waldensian
+			set_hre_heretic_religion = protestant
+		}
+		else = {
+			limit = {
+				religion = waldensian
+				FROM = {
+					religion = reformed
+				}
+			}
+			set_hre_religion = waldensian
+			set_hre_heretic_religion = reformed
+		}
 	}
 	ai_weight = {
 		export_to_variable = {

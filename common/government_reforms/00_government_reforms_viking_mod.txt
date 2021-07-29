@@ -354,7 +354,11 @@ baltic_tribal_fed = {
 	icon = "commander_king_reform"
 	allow_normal_conversion = yes
 	potential = {
+		OR = {
 		religion = baltic_pagan_reformed
+		religion = slavic_pagan_reformed
+		religion = finnish_pagan_reformed
+		}
 		tag = BLT
 		NOT = {
 			religion = norse_pagan_reformed

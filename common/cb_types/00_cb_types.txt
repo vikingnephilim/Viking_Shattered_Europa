@@ -1320,14 +1320,12 @@ cb_world_crusade = {
 }
 
 #Force HRE Religion
-cb_hre_religion_change = {
+viking_cb_hre_religion_change = {
 	ai_peace_desire = -50
 	valid_for_subject = no
 	prerequisites = {
 		is_emperor = no
-		NOT = {
-			is_year = 1650
-		}
+		NOT = { is_year = 1650 }
 		OR = {
 			religion = anglican
 			religion = cathar
@@ -1339,14 +1337,14 @@ cb_hre_religion_change = {
 			religion = reformed
 			religion = waldensian
 		}
+		is_free_or_tributary_trigger = yes
+		#cb_on_religious_enemies = yes
 		government = monarchy
 		is_revolutionary = no
 		FROM = {
 			is_emperor = yes
-			NOT = {
-				religion = ROOT
-			}
+			NOT = { religion = ROOT }
 		}
 	}
-	war_goal = hre_religion_change
+	war_goal = viking_wg_hre_religion_change
 }
