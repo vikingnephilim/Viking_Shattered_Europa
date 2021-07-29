@@ -1,0 +1,1601 @@
+GRE_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		culture_group = byzantine
+		NOT = {
+			tag = RUM
+			tag = AYD
+			was_tag = AYD
+			tag = CND
+			was_tag = CND
+			tag = DUL
+			was_tag = DUL
+			tag = ERE
+			was_tag = ERE
+			tag = GRM
+			was_tag = GRM
+			tag = KAR
+			was_tag = KAR
+			tag = MEN
+			was_tag = MEN
+			tag = OSM
+			was_tag = OSM
+			tag = RAM
+			was_tag = RAM
+			tag = SRU
+			was_tag = SRU
+		}
+	}
+	has_country_shield = yes
+	become_a_league = {
+		icon = me_mission_sweden_gather_supporters
+		required_missions = {
+		}
+		position = 1
+		trigger = {
+			adm =3
+		}
+		effect = {
+			add_adm_power = 200
+			change_government = republic
+			add_government_reform = grk_demo
+		}
+	}
+	epi_thessaly = {
+		icon = mission_conquer_50_development
+		required_missions = {
+			become_a_league
+		}
+		position = 2
+		provinces_to_highlight = {
+			area = northern_greece_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			NOT = {
+				province_is_on_an_island = yes
+			}
+		}
+		trigger = {
+			northern_greece_area = {
+				type = all
+				OR = {
+					province_is_on_an_island = yes
+					owned_by = ROOT
+				}
+			}
+		}
+		effect = {
+			add_army_tradition = 10
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				add_army_professionalism = 0.05
+			}
+			add_prestige = 25
+			142 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			macedonia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	epi_theodore = {
+		icon = mission_build_up_to_force_limit
+		required_missions = {
+			epi_thessaly
+		}
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 142
+				province_id = 148
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			142 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			148 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_army_tradition = 15
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				add_army_professionalism = 0.05
+			}
+			aegean_archipelago_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			163 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			calabria_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			122 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	epi_greece = {
+		icon = mission_empire
+		required_missions = {
+			epi_theodore
+		}
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 164
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				AND = {
+					OR = {
+						area = northern_greece_area
+						area = morea_area
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						province_is_on_an_island = yes
+					}
+				}
+			}
+		}
+		trigger = {
+			northern_greece_area = {
+				type = all
+				OR = {
+					province_is_on_an_island = yes
+					owned_by = ROOT
+				}
+			}
+			morea_area = {
+				type = all
+				OR = {
+					province_is_on_an_island = yes
+					owned_by = ROOT
+				}
+			}
+			164 = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			complete_mission = epi_morea
+			capital_scope = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			thrace_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	epi_constantinople = {
+		icon = mission_conquer_50_development
+		required_missions = {
+			epi_greece
+		}
+		position = 5
+		provinces_to_highlight = {
+			province_id = 151
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			151 = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			151 = {
+				change_province_name = "Constantinople"
+				rename_capital = "Constantinople"
+				change_culture = greek
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = constantinople_restored
+					}
+				}
+				151 = {
+					add_base_tax = 4
+					add_base_production = 4
+					add_base_manpower = 3
+				}
+				set_global_flag = constantinople_restored
+			}
+			add_prestige = 25
+			set_capital = 151
+			hudavendigar_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			aydin_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			bulgaria_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			silistria_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	CEP_aegean = {
+		icon = mission_sea_battles
+		required_missions = {
+			epi_constantinople
+		}
+		position = 6
+		provinces_to_highlight = {
+			area = aegean_archipelago_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			aegean_archipelago_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			aydin_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			hudavendigar_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	epi_anatolia = {
+		icon = mission_cannons_firing
+		required_missions = {
+			CEP_aegean
+		}
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				area = aegean_archipelago_area
+				area = hudavendigar_area
+				area = aydin_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			aegean_archipelago_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			hudavendigar_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			aydin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_army_tradition = 15
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				add_army_professionalism = 0.05
+			}
+			add_mil_power = 100
+		}
+	}
+	NAX_initial_fortifications = {
+		icon = mission_portuguese_oman
+		required_missions = {
+			CEP_nax_minor_asia
+		}
+		position = 9
+		provinces_to_highlight = {
+			province_id = 164
+			OR = {
+				NOT = {
+					fort_level = 3
+				}
+				NOT = {
+					owned_by = ROOT
+				}
+			}
+		}
+		trigger = {
+			164 = {
+				fort_level = 3
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			164 = {
+				add_province_modifier = {
+					name = NAX_primary_garrisons
+					duration = 14600
+				}
+			}
+		}
+	}
+	NAX_island_garrisons = {
+		icon = mission_have_two_subjects
+		required_missions = {
+			NAX_initial_fortifications
+		}
+		position = 10
+		provinces_to_highlight = {
+			province_id = 164
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					development = 12
+				}
+			}
+		}
+		trigger = {
+			has_mil_advisor = yes
+			164 = {
+				owned_by = ROOT
+				development = 12
+			}
+		}
+		effect = {
+			164 = {
+				add_province_modifier = {
+					name = NAX_independent_garrisons
+					duration = -1
+				}
+			}
+		}
+	}
+	NAX_grand_aegean_fishery = {
+		icon = mission_rb_cod_wars
+		required_missions = {
+			NAX_island_garrisons
+		}
+		position = 11
+		provinces_to_highlight = {
+			province_id = 3003
+			OR = {
+				NOT = {
+					has_manufactory_trigger = no
+				}
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					base_production = 6
+				}
+			}
+		}
+		trigger = {
+			3003 = {
+				has_manufactory_trigger = yes
+				owned_by = ROOT
+				base_production = 6
+			}
+		}
+		effect = {
+			3003 = {
+				add_province_modifier = {
+					name = NAX_grand_aegean_fishery
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+GRE_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+			culture_group = byzantine
+			NOT = {
+				tag = RUM
+				tag = AYD
+				was_tag = AYD
+				tag = CND
+				was_tag = CND
+				tag = DUL
+				was_tag = DUL
+				tag = ERE
+				was_tag = ERE
+				tag = GRM
+				was_tag = GRM
+				tag = KAR
+				was_tag = KAR
+				tag = MEN
+				was_tag = MEN
+				tag = OSM
+				was_tag = OSM
+				tag = RAM
+				was_tag = RAM
+				tag = SRU
+				was_tag = SRU
+			}
+	}
+	has_country_shield = yes
+	NAX_troubling_tides = {
+		icon = mission_teutonic_knights
+		required_missions = {
+			gre_pride
+		}
+		position = 2
+		provinces_to_highlight = {
+		}
+		trigger = {
+			army_size = 40
+			navy_size = 4
+		}
+		effect = {
+			add_country_modifier = {
+				name = NAX_crusader_ambitions
+				duration = 9125
+			}
+		}
+	}
+	NAX_fallback_islands = {
+		icon = mission_invade_island
+		required_missions = {
+			NAX_troubling_tides
+		}
+		position = 3
+		provinces_to_highlight = {
+			province_id = 164
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			164 = {
+				owned_by = ROOT
+			}
+			mil_tech = 5
+			treasury = 30
+			manpower = 1
+		}
+		effect = {
+			164 = {
+				add_province_modifier = {
+					name = NAX_island_fallback_points
+					duration = 14600
+				}
+			}
+		}
+	}
+	NAX_lordship_of_negroponte = {
+		icon = mission_sea_battles
+		required_missions = {
+			NAX_fallback_islands
+		}
+		position = 4
+		provinces_to_highlight = {
+			province_id = 3003
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			3003 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			morea_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	epi_south_naples = {
+		icon = mission_cannons_firing
+		required_missions = {
+			NAX_lordship_of_negroponte
+		}
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = calabria_area
+				province_id = 122
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			calabria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			122 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			apulia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			sicily_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			western_sicily_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			naples_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			120 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	epi_naples = {
+		icon = mission_build_up_to_force_limit
+		required_missions = {
+			epi_south_naples
+		}
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				area = apulia_area
+				area = naples_area
+				province_id = 120
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			apulia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			naples_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			120 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			apulia_area = {
+				add_province_modifier = {
+					name = "faster_integration"
+					duration = 7300
+				}
+			}
+			2983 = {
+				add_province_modifier = {
+					name = "faster_integration"
+					duration = 7300
+				}
+			}
+			121 = {
+				add_province_modifier = {
+					name = "faster_integration"
+					duration = 7300
+				}
+			}
+			120 = {
+				add_province_modifier = {
+					name = "faster_integration"
+					duration = 7300
+				}
+			}
+		}
+	}
+	gre_crimea = {
+		required_missions = {
+			epi_naples
+		}
+		position = 7
+		icon = mission_colonial
+		provinces_to_highlight = {
+			area = crimea_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			crimea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			crimea_area = {
+				add_province_modifier = {
+					name = colony_gre
+					duration = -1
+				}
+			}
+			sicily_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			western_sicily_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			122 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			123 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	gre_gaul = {
+		required_missions = {
+		}
+		position = 8
+		icon = mission_conquer_50_development
+		provinces_to_highlight = {
+			province_id = 201
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		trigger = {
+			owns_core_province = 201
+		}
+		effect = {
+			201 = {
+				change_culture = greek
+				add_province_modifier = {
+					name = gallic_frontier
+					duration = -1
+				}
+			}
+			226 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	gre_gibraltar = {
+		required_missions = {
+			gre_gaul
+		}
+		position = 9
+		icon = mission_galleys_in_port
+		provinces_to_highlight = {
+			province_id = 226
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		trigger = {
+			owns_core_province = 226
+		}
+		effect = {
+			226 = {
+				add_province_modifier = {
+					name = the_rock_gre
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = gre_legacy_restored
+				duration = -1
+			}
+		}
+	}
+	gre_democracy = {
+		required_missions = {
+			gre_gibraltar
+		}
+		position = 10
+		icon = mission_alliances
+		trigger = {
+			faction_in_power = gl_democrats
+			custom_trigger_tooltip = {
+				tooltip = "democracy.tooltip"
+				NOT = {
+					has_country_flag = oligarchy
+				}
+				NOT = {
+					has_country_flag = aristocracy
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = democracy_ftw
+				duration = -1
+			}
+			set_country_flag = democracy
+		}
+	}
+	epi_bulgaria = {
+		icon = mission_cossack_cavalry
+		required_missions = {
+				}
+		position = 11
+		provinces_to_highlight = {
+			OR = {
+				area = bulgaria_area
+				area = silistria_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			bulgaria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			silistria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+		}
+	}
+	recover_rome = {
+		position = 12
+		icon = mission_religious
+		required_missions = {
+			epi_bulgaria
+		}
+		provinces_to_highlight = {
+			province_id = 118
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			owns = 118
+		}
+		effect = {
+			add_country_modifier = {
+				name = "roman_italy"
+				duration = 5475
+			}
+			venetia_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "Purple Phoenix"
+					}
+				}
+				country_event = {
+					id = flavor_byz.2
+				}
+			}
+		}
+	}
+}
+
+GRE_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+			culture_group = byzantine
+			NOT = {
+				tag = RUM
+				tag = AYD
+				was_tag = AYD
+				tag = CND
+				was_tag = CND
+				tag = DUL
+				was_tag = DUL
+				tag = ERE
+				was_tag = ERE
+				tag = GRM
+				was_tag = GRM
+				tag = KAR
+				was_tag = KAR
+				tag = MEN
+				was_tag = MEN
+				tag = OSM
+				was_tag = OSM
+				tag = RAM
+				was_tag = RAM
+				tag = SRU
+				was_tag = SRU
+			}
+	}
+	has_country_shield = yes
+	gre_pride = {
+		required_missions = {
+		}
+		position = 1
+		icon = mission_assemble_an_army
+		provinces_to_highlight = {
+			area = morea_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			morea_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = greek_pride
+				duration = 5475
+			}
+			aegean_archipelago_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	gre_navy = {
+		required_missions = {
+			gre_pride
+		}
+		position = 2
+		icon = mission_establish_high_seas_navy
+		trigger = {
+			navy_size_percentage = 1
+			sailors_percentage = 0.7
+		}
+		effect = {
+			add_country_modifier = {
+				name = greek_navy
+				duration = -1
+			}
+		}
+	}
+	gre_aegean_trade = {
+		required_missions = {
+			gre_navy
+		}
+		position = 3
+		icon = mission_dominate_home_trade_node
+		trigger = {
+			num_of_light_ship = 15
+			trade_income_percentage = 0.4
+		}
+		effect = {
+			add_country_modifier = {
+				name = greek_trade
+				duration = -1
+			}
+			146 = {
+				add_province_modifier = {
+					name = gre_center_of_trade
+					duration = -1
+				}
+			}
+		}
+	}
+	gre_egypt_trade = {
+		required_missions = {
+			gre_aegean_trade
+		}
+		position = 4
+		icon = mission_dominate_home_trade_node
+		trigger = {
+			358 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 5
+		}
+	}
+	epi_albania = {
+		icon = mission_cannons_firing
+		required_missions = {
+			gre_egypt_trade
+		}
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				province_id = 143
+				province_id = 4175
+				province_id = 4750
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			143 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4175 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			4750 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_army_tradition = 10
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				add_army_professionalism = 0.05
+			}
+		}
+	}
+	epi_sicily = {
+		icon = mission_invade_island
+		required_missions = {
+			epi_albania
+		}
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				area = western_sicily_area
+				area = sicily_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			western_sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sicily_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			sicily_area = {
+				add_province_modifier = {
+					name = "faster_integration"
+					duration = 7300
+				}
+			}
+		}
+	}
+	NAX_wandering_hospitaller = {
+		icon = mission_teutonic_knights
+		required_missions = {
+			epi_sicily
+		}
+		position = 7
+		provinces_to_highlight = {
+			province_id = 320
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			320 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = NAX_tamed_the_knights
+				duration = 7300
+			}
+		}
+	}
+	NAX_kingdom_of_candia = {
+		icon = mission_galleys_in_port
+		required_missions = {
+			NAX_wandering_hospitaller
+		}
+		position = 8
+		provinces_to_highlight = {
+			province_id = 163
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			163 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			163 = {
+				add_province_modifier = {
+					name = NAX_seized_shipyards
+					duration = -1
+				}
+			}
+			321 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			378 = {
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+		}
+	}
+	recover_rome_pp = {
+		position = 9
+		icon = mission_pf_cross
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			province_id = 118
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			owns = 118
+		}
+		effect = {
+			add_country_modifier = {
+				name = "roman_italy"
+				duration = 5475
+			}
+			tuscany_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			emilia_romagna_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			central_italy_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	recover_north_italy = {
+		position = 10
+		icon = mission_pf_map_table
+		required_missions = {
+			recover_rome_pp
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = tuscany_area
+				area = emilia_romagna_area
+				area = central_italy_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			tuscany_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			emilia_romagna_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			central_italy_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			tuscany_area = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "faster_integration"
+					duration = 5475
+				}
+			}
+			central_italy_area = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "faster_integration"
+					duration = 5475
+				}
+			}
+			emilia_romagna_area = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_province_modifier = {
+					name = "faster_integration"
+					duration = 5475
+				}
+			}
+			lombardy_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			po_valley_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			piedmont_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			liguria_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	recover_lombardia = {
+		position = 11
+		icon = mission_empire
+		required_missions = {
+			recover_north_italy
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = lombardy_area
+				area = po_valley_area
+				area = piedmont_area
+				area = liguria_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			lombardy_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			po_valley_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			piedmont_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			liguria_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "byzantine_unification_of_italy"
+				duration = 7300
+			}
+		}
+	}
+	gre_league = {
+		required_missions = {
+		}
+		icon = mission_monarch_in_throne_room
+		position = 12
+		provinces_to_highlight = {
+			province_id = 146
+			NOT = {
+				is_capital_of = ROOT
+			}
+		}
+		trigger = {
+			capital = 146
+			is_at_war = no
+			NOT = {
+				unrest = 0.01
+			}
+		}
+		effect = {
+			change_government = republic
+			add_government_reform = greek_league_reform
+			add_country_modifier = {
+				name = became_a_league_gre
+				duration = 3650
+			}
+		}
+	}
+	gre_polis = {
+		required_missions = {
+			gre_league
+		}
+		position = 13
+		icon = mission_early_game_buildings
+		trigger = {
+			current_size_of_parliament = 15
+		}
+		effect = {
+			every_owned_province = {
+				limit = {
+					culture_group = byzantine
+				}
+				add_province_modifier = {
+					name = greek_polis
+					duration = -1
+				}
+			}
+		}
+	}
+	gre_hellas = {
+		position = 14
+		required_missions = {
+			gre_polis
+		}
+		icon = mission_empire
+		provinces_to_highlight = {
+			OR = {
+				province_id = 146
+				province_id = 148
+				province_id = 151
+				province_id = 321
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					culture = ROOT
+				}
+				unrest = 0.01
+			}
+		}
+		trigger = {
+			146 = {
+				culture = ROOT
+				owned_by = ROOT
+				NOT = {
+					unrest = 0.01
+				}
+			}
+			148 = {
+				culture = ROOT
+				owned_by = ROOT
+				NOT = {
+					unrest = 0.01
+				}
+			}
+			151 = {
+				culture = ROOT
+				owned_by = ROOT
+				NOT = {
+					unrest = 0.01
+				}
+			}
+			321 = {
+				culture = ROOT
+				owned_by = ROOT
+				NOT = {
+					unrest = 0.01
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = hellas_mega
+				duration = -1
+			}
+		}
+	}
+}

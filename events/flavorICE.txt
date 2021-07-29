@@ -1,0 +1,166 @@
+########################################
+# Flavor Events for Iceland
+########################################
+namespace = flavor_ice
+normal_or_historical_nations = yes
+# Contact with old Colonies
+country_event = {
+	id = flavor_ice.1
+	title = "flavor_ice.EVTNAME1"
+	desc = "flavor_ice.EVTDESC1"
+	picture = COURT_eventPicture
+	fire_only_once = yes
+	trigger = {
+		OR = {
+			AND = {
+				tag = ICE
+				NOT = { is_year = 1500 }
+				NOT = {
+					has_country_modifier = ice_old_colonies
+				}
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "flavor_ice.EVTOPTA1"
+		add_country_modifier = {
+			name = ice_old_colonies
+			duration = 18250
+		}
+	}
+}
+# Trade with old Colonies
+country_event = {
+	id = flavor_ice.2
+	title = "flavor_ice.EVTNAME2"
+	desc = "flavor_ice.EVTDESC2"
+	picture = ECONOMY_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = ICE
+		has_country_modifier = ice_old_colonies
+		NOT = { has_country_modifier = ice_trade_colonies }
+	}
+	mean_time_to_happen = {
+		months = 20
+	}
+	option = {
+		name = "flavor_ice.EVTOPTA2"
+		add_years_of_income = 2
+		if = {
+			limit = {
+				NOT = { has_completed_all_reforms_trigger = yes }
+			}
+			add_reform_progress_small_effect = yes
+			create_alliance = VIN
+			create_alliance = MRL
+		}
+		hidden_effect = {
+			sea_of_labrador_area = { discover_country = ICE }
+			gulf_of_st_lawrence_area = { discover_country = ICE }
+			hudson_bay_sea_area = { discover_country = ICE }
+			north_atlantic_area = { discover_country = ICE }
+			notre_dame_mountains_area = { discover_country = ICE }
+			greenland_area = { discover_country = ICE }
+			cote_nord_area = { discover_country = ICE }
+			great_woods_area = {  discover_country = ICE }
+			maine_area = { discover_country = ICE }
+			denmark_strait_area = { discover_country = ICE }
+			upper_acadia_area = { discover_country = ICE}
+			lower_acadia_area = { discover_country = ICE  }
+			massachusetts_bay_area = { discover_country = ICE }
+			newfoundland_area = { discover_country = ICE }
+			gulf_stream_area = { discover_country = ICE }
+			connecticut_valley_area = { discover_country = ICE }
+		}
+		add_country_modifier = {
+			name = ice_trade_colonies
+			duration = 18250
+		}
+	}
+	option = {
+		name = "flavor_ice.EVTOPTB2"
+		add_prestige = -100
+		set_country_flag = vinlanders_turned_away
+	}
+}
+# Norse Influx
+country_event = {
+	id = flavor_ice.3
+	title = "flavor_ice.EVTNAME3"
+	desc = "flavor_ice.EVTDESC3"
+	picture = ADVISOR_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = ICE
+		has_country_modifier = ice_trade_colonies
+		NOT = { has_country_flag = vinlanders_turned_away }
+		NOT = { is_year = 1471 }
+		OR = {
+			dip = 3
+			adm = 3
+			mil = 3
+		}
+	}
+	mean_time_to_happen = {
+		months = 20
+	}
+	option = {
+		name = "flavor_ice.EVTOPTA3"
+		add_adm_power = 10
+		add_prestige = 10
+		define_advisor = {
+			type = inquisitor
+			name = "Magnuz Gunnarsson"
+			culture = vinlandic
+			religion = norse_pagan_reformed
+			skill = 3
+			discount = yes
+		}
+		remove_country_modifier = ice_old_colonies
+		add_country_modifier = {
+			name = ice_norse_influx
+			duration = -1
+		}
+		add_innovativeness_small_effect = yes
+	}
+}
+# Norse Conversion
+country_event = {
+	id = flavor_ice.4
+	title = "flavor_ice.EVTNAME4"
+	desc = "flavor_ice.EVTDESC4"
+	picture = ST_PETERS_CHURCH_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = ICE
+		has_country_modifier = ice_norse_influx
+		NOT = {	has_country_flag = screw_pope }
+		NOT = { has_country_flag = hail_popeman }
+		NOT = { is_year = 1500 }
+		OR = {
+			dip = 3
+			adm = 3
+			mil = 3
+		}
+	}
+	mean_time_to_happen = {
+		months = 20
+	}
+	option = {
+		name = "flavor_ice.EVTOPTA4"
+		add_prestige = 10
+		change_religion = norse_pagan_reformed
+		set_country_flag = screw_pope
+		add_innovativeness_small_effect = yes
+	}
+	option = {
+		name = "flavor_ice.EVTOPTB4"
+		set_country_flag = hail_popeman
+		add_stability_or_adm_power = yes
+		add_innovativeness_small_effect = yes
+	}
+}

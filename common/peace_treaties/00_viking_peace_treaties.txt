@@ -1,0 +1,440 @@
+po_hre_viking_anglican = {
+	category = 6
+	power_projection = vassalized_rival
+	power_cost_base = 1
+	prestige_base = 1
+	ae_base = 2
+	warscore_cost = {
+		all_provinces = 0
+		no_provinces = 20
+		owner_keeps = 0
+		conquered = 1
+		returned_core = 0
+		released_nation = 0
+		cancelled_subject = 0
+		concede_colonial_region = 0
+	}
+	warscore_cap = -1
+	requires_is_allowed = yes
+	is_visible = {
+		OR = {
+			religion = cathar
+			religion = catholic
+			religion = fraticelli
+			religion = hussite
+			religion = lollard
+			religion = protestant
+			religion = reformed
+			religion = waldensian
+		}
+		government = monarchy
+	}
+	is_allowed = {
+		is_religion_enabled = anglican
+	}
+	effect = {
+		set_hre_religion = ROOT
+		set_hre_heretic_religion = anglican
+	}
+	ai_weight = {
+		export_to_variable = {
+			variable_name = ai_value
+			value = 50
+		}
+		limit = {
+			owns_core_province = 1
+		}
+	}
+}
+
+po_hre_viking_cathar = {
+	category = 6
+	power_projection = vassalized_rival
+	power_cost_base = 1
+	prestige_base = 1
+	ae_base = 2
+	warscore_cost = {
+		all_provinces = 0
+		no_provinces = 20
+		owner_keeps = 0
+		conquered = 1
+		returned_core = 0
+		released_nation = 0
+		cancelled_subject = 0
+		concede_colonial_region = 0
+	}
+	warscore_cap = -1
+	requires_is_allowed = yes
+	is_visible = {
+		OR = {
+			religion = anglican
+			religion = catholic
+			religion = fraticelli
+			religion = hussite
+			religion = lollard
+			religion = protestant
+			religion = reformed
+			religion = waldensian
+		}
+		government = monarchy
+	}
+	is_allowed = {
+		is_religion_enabled = cathar
+	}
+	effect = {
+		set_hre_religion = ROOT
+		set_hre_heretic_religion = cathar
+	}
+	ai_weight = {
+		export_to_variable = {
+			variable_name = ai_value
+			value = 50
+		}
+		limit = {
+			owns_core_province = 1
+		}
+	}
+}
+
+po_hre_viking_catholic = {
+	category = 6
+	power_projection = vassalized_rival
+	power_cost_base = 1
+	prestige_base = 1
+	ae_base = 2
+	warscore_cost = {
+		all_provinces = 0
+		no_provinces = 20
+		owner_keeps = 0
+		conquered = 1
+		returned_core = 0
+		released_nation = 0
+		cancelled_subject = 0
+		concede_colonial_region = 0
+	}
+	warscore_cap = -1
+	requires_is_allowed = yes
+	is_visible = {
+		OR = {
+			religion = anglican
+			religion = cathar
+			religion = fraticelli
+			religion = hussite
+			religion = lollard
+			religion = protestant
+			religion = reformed
+			religion = waldensian
+		}
+		government = monarchy
+	}
+	is_allowed = {
+		is_religion_enabled = catholic
+	}
+	effect = {
+		set_hre_religion = ROOT
+		set_hre_heretic_religion = catholic
+	}
+	ai_weight = {
+		export_to_variable = {
+			variable_name = ai_value
+			value = 50
+		}
+		limit = {
+			owns_core_province = 1
+		}
+	}
+}
+
+po_hre_viking_fraticelli = {
+	category = 6
+	power_projection = vassalized_rival
+	power_cost_base = 1
+	prestige_base = 1
+	ae_base = 2
+	warscore_cost = {
+		all_provinces = 0
+		no_provinces = 20
+		owner_keeps = 0
+		conquered = 1
+		returned_core = 0
+		released_nation = 0
+		cancelled_subject = 0
+		concede_colonial_region = 0
+	}
+	warscore_cap = -1
+	requires_is_allowed = yes
+	is_visible = {
+		OR = {
+			religion = anglican
+			religion = cathar
+			religion = catholic
+			religion = hussite
+			religion = lollard
+			religion = protestant
+			religion = reformed
+			religion = waldensian
+		}
+		government = monarchy
+	}
+	is_allowed = {
+		is_religion_enabled = fraticelli
+	}
+	effect = {
+		set_hre_religion = ROOT
+		set_hre_heretic_religion = fraticelli
+	}
+	ai_weight = {
+		export_to_variable = {
+			variable_name = ai_value
+			value = 50
+		}
+		limit = {
+			owns_core_province = 1
+		}
+	}
+}
+
+po_hre_viking_hussite = {
+	category = 6
+	power_projection = vassalized_rival
+	power_cost_base = 1
+	prestige_base = 1
+	ae_base = 2
+	warscore_cost = {
+		all_provinces = 0
+		no_provinces = 20
+		owner_keeps = 0
+		conquered = 1
+		returned_core = 0
+		released_nation = 0
+		cancelled_subject = 0
+		concede_colonial_region = 0
+	}
+	warscore_cap = -1
+	requires_is_allowed = yes
+	is_visible = {
+		OR = {
+			religion = anglican
+			religion = cathar
+			religion = catholic
+			religion = fraticelli
+			religion = lollard
+			religion = protestant
+			religion = reformed
+			religion = waldensian
+		}
+		government = monarchy
+	}
+	is_allowed = {
+		is_religion_enabled = hussite
+	}
+	effect = {
+		set_hre_religion = ROOT
+		set_hre_heretic_religion = hussite
+	}
+	ai_weight = {
+		export_to_variable = {
+			variable_name = ai_value
+			value = 50
+		}
+		limit = {
+			owns_core_province = 1
+		}
+	}
+}
+
+po_hre_viking_lollard = {
+	category = 6
+	power_projection = vassalized_rival
+	power_cost_base = 1
+	prestige_base = 1
+	ae_base = 2
+	warscore_cost = {
+		all_provinces = 0
+		no_provinces = 20
+		owner_keeps = 0
+		conquered = 1
+		returned_core = 0
+		released_nation = 0
+		cancelled_subject = 0
+		concede_colonial_region = 0
+	}
+	warscore_cap = -1
+	requires_is_allowed = yes
+	is_visible = {
+		OR = {
+			religion = anglican
+			religion = cathar
+			religion = catholic
+			religion = fraticelli
+			religion = hussite
+			religion = protestant
+			religion = reformed
+			religion = waldensian
+		}
+		government = monarchy
+	}
+	is_allowed = {
+		is_religion_enabled = lollard
+	}
+	effect = {
+		set_hre_religion = ROOT
+		set_hre_heretic_religion = lollard
+	}
+	ai_weight = {
+		export_to_variable = {
+			variable_name = ai_value
+			value = 50
+		}
+		limit = {
+			owns_core_province = 1
+		}
+	}
+}
+
+po_hre_viking_protestant = {
+	category = 6
+	power_projection = vassalized_rival
+	power_cost_base = 1
+	prestige_base = 1
+	ae_base = 2
+	warscore_cost = {
+		all_provinces = 0
+		no_provinces = 20
+		owner_keeps = 0
+		conquered = 1
+		returned_core = 0
+		released_nation = 0
+		cancelled_subject = 0
+		concede_colonial_region = 0
+	}
+	warscore_cap = -1
+	requires_is_allowed = yes
+	is_visible = {
+		OR = {
+			religion = anglican
+			religion = cathar
+			religion = catholic
+			religion = fraticelli
+			religion = hussite
+			religion = lollard
+			religion = reformed
+			religion = waldensian
+		}
+		government = monarchy
+	}
+	is_allowed = {
+		is_religion_enabled = protestant
+	}
+	effect = {
+		set_hre_religion = ROOT
+		set_hre_heretic_religion = protestant
+	}
+	ai_weight = {
+		export_to_variable = {
+			variable_name = ai_value
+			value = 50
+		}
+		limit = {
+			owns_core_province = 1
+		}
+	}
+}
+
+po_hre_viking_reformed = {
+	category = 6
+	power_projection = vassalized_rival
+	power_cost_base = 1
+	prestige_base = 1
+	ae_base = 2
+	warscore_cost = {
+		all_provinces = 0
+		no_provinces = 20
+		owner_keeps = 0
+		conquered = 1
+		returned_core = 0
+		released_nation = 0
+		cancelled_subject = 0
+		concede_colonial_region = 0
+	}
+	warscore_cap = -1
+	requires_is_allowed = yes
+	is_visible = {
+		OR = {
+			religion = anglican
+			religion = cathar
+			religion = catholic
+			religion = fraticelli
+			religion = hussite
+			religion = lollard
+			religion = protestant
+			religion = waldensian
+		}
+		government = monarchy
+	}
+	is_allowed = {
+		is_religion_enabled = reformed
+	}
+	effect = {
+		set_hre_religion = ROOT
+		set_hre_heretic_religion = reformed
+	}
+	ai_weight = {
+		export_to_variable = {
+			variable_name = ai_value
+			value = 50
+		}
+		limit = {
+			owns_core_province = 1
+		}
+	}
+}
+
+po_hre_viking_waldensian = {
+	category = 6
+	power_projection = vassalized_rival
+	power_cost_base = 1
+	prestige_base = 1
+	ae_base = 2
+	warscore_cost = {
+		all_provinces = 0
+		no_provinces = 20
+		owner_keeps = 0
+		conquered = 1
+		returned_core = 0
+		released_nation = 0
+		cancelled_subject = 0
+		concede_colonial_region = 0
+	}
+	warscore_cap = -1
+	requires_is_allowed = yes
+	is_visible = {
+		OR = {
+			religion = anglican
+			religion = cathar
+			religion = catholic
+			religion = fraticelli
+			religion = hussite
+			religion = lollard
+			religion = protestant
+			religion = reformed
+		}
+		government = monarchy
+	}
+	is_allowed = {
+		is_religion_enabled = waldensian
+	}
+	effect = {
+		set_hre_religion = ROOT
+		set_hre_heretic_religion = waldensian
+	}
+	ai_weight = {
+		export_to_variable = {
+			variable_name = ai_value
+			value = 50
+		}
+		limit = {
+			owns_core_province = 1
+		}
+	}
+}

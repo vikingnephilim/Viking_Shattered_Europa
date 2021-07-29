@@ -1,0 +1,335 @@
+country_decisions = {
+	denmark_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_denmark_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = DAN }
+			NOT = { tag = PAP }
+			NOT = { tag = SCA }
+			NOT = { tag = SWE }
+			NOT = { tag = NOR }
+			NOT = { tag = HLR }
+			OR = {
+			primary_culture = danish
+			primary_culture = scanian
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+					adm_tech = 7
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 6		# Skane
+				province_id = 12	# Sjaeland
+				province_id = 15	# Jutland
+				province_id = 1981	# Bornholm
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 7
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 6		# Skane
+			owns_core_province = 12		# Sjaeland
+			owns_core_province = 15		# Jutland
+			owns_core_province = 1981	# Bornholm
+		}
+		effect = {
+			change_tag = DAN
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			skaneland_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = DAN
+			}
+			jutland_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = DAN
+			}
+			denmark_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = DAN
+			}
+			gotaland_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = DAN
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			swap_non_generic_missions = yes
+			add_prestige = 10
+			set_country_flag = formed_denmark_flag
+			if = {
+				limit = { primary_culture = danish }
+				add_accepted_culture = scanian
+			}
+			if = {
+				limit = { primary_culture = scanian }
+				add_accepted_culture = danish
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	sweden_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_sweden_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = SWE }
+			NOT = { tag = PAP }
+			NOT = { tag = SCA }
+			NOT = { tag = DAN }
+			NOT = { tag = NOR }
+			NOT = { tag = HLR }
+			OR = {
+			primary_culture = geats
+			primary_culture = scanian
+			primary_culture = swedish
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+					adm_tech = 7
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1		# Uppland
+				province_id = 6		# Skane
+				province_id = 7		# Vastergotland
+				province_id = 25	# Gotland
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 7
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 1		# Uppland
+			owns_core_province = 6		# Skane
+			owns_core_province = 7		# Vastergotland
+			owns_core_province = 25		# Gotland
+		}
+		effect = {
+			change_tag = SWE
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			skaneland_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SWE
+			}
+			gotaland_area = {
+			limit = {
+				NOT = { owned_by = ROOT }
+			}
+			add_permanent_claim = SWE
+			}
+			vastra_gotaland_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SWE
+			}
+			norrland_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SWE
+			}
+			svealand_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SWE
+			}
+			ostra_svealand_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SWE
+			}
+			bothnia_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = SWE
+			}
+			finland_area = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_claim = SWE
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			swap_non_generic_missions = yes
+			add_prestige = 10
+			set_country_flag = formed_sweden_flag
+			add_accepted_culture = elfdalian
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	scandinavian_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = { has_country_flag = formed_scandinavia_flag }
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = { exists = SCA }
+			NOT = { tag = PAP }
+			NOT = { tag = HLR }
+			culture_group = scandinavian
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+					adm_tech = 10
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1		# Uppland
+				province_id = 6		# Skane
+				province_id = 7		# Vastergotland
+				province_id = 12		# Sjaelland
+				province_id = 15		# Jylland
+				province_id = 17		# Akershus
+			}
+			OR = {
+				NOT = { owned_by = ROOT }
+				NOT = { is_core = ROOT }
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 1		# Uppland
+			owns_core_province = 6		# Skane
+			owns_core_province = 7		# Vastergotland
+			owns_core_province = 12		# Sjaelland
+			owns_core_province = 15		# Jylland
+			owns_core_province = 17		# Akershus
+		}
+		effect = {
+			change_tag = SCA
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = { NOT = { government_rank = 2 } }
+				set_government_rank = 2
+			}
+			scandinavia_region = {
+				limit = {
+					NOT = { owned_by = ROOT }
+				}
+				add_permanent_claim = SCA
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = { has_custom_ideas = no }
+				country_event = { id = ideagroups.1 } #Swap Ideas
+			}
+			swap_non_generic_missions = yes
+			add_prestige = 10
+			set_country_flag = formed_scandinavia_flag
+			add_accepted_culture = elfdalian
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

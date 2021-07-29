@@ -1,0 +1,88 @@
+namespace = druidic
+country_event = {
+	id = druidic.1
+	title = druidic.1.t
+	desc = druidic.1.d
+	picture = PROTESTANT_PRINTED_eventPicture
+	trigger = {
+		any_owned_province = { religion = druidic_pagan }
+		has_global_flag = druidism_restored
+		NOT = { has_country_flag = druid_embraced }
+		NOT = { has_country_flag = druid_rejected }
+		NOT = { religion = druidic_pagan }
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
+	option = {
+		name = "druidic.1.a" #embrace druid
+		ai_chance = { factor = 40 }
+		add_country_modifier = {
+			name = druidic_restored
+			duration = 3650
+		}
+		change_religion = druidic_pagan
+		change_government = theocracy
+		add_government_reform = druid_soc
+		add_stability = -2
+		define_ruler = {
+			name = "Iolo"
+			dynasty = "Morganwg"
+			culture = welsh
+			religion = druidic_pagan
+			max_random_adm = 3
+			max_random_dip = 3
+			max_random_mil = 3
+			age = 17
+		}
+		set_country_flag = druid_embraced
+	}
+	option = {
+		name = "druidic.1.b"
+		ai_chance = { factor = 60 }
+		PAP = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_sent_help
+			}
+		}
+		add_stability = 3
+		add_years_of_income = 10
+		#crush the CoR
+		set_country_flag = druid_rejected
+	}
+}
+country_event = {
+	id = druidic.2
+	title = druidic.2.t
+	desc = druidic.2.d
+	picture = PROTESTANT_PRINTED_eventPicture
+	trigger = {
+		owns_core_province = 234
+		has_country_flag = druid_rejected
+		NOT = { has_country_flag = prot_druid }
+	}
+	mean_time_to_happen = {
+		days = 30
+	}
+	option = {
+		name = "druidic.2.a"
+		clr_global_flag = druidism_restored
+		234 = {
+			remove_reform_center = druidic_pagan
+			change_religion = ROOT
+		}
+		add_years_of_income = 4
+	}
+	option = {
+		name = "druidic.2.b"
+		add_stability = -2
+		PAP = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_refused_send_help
+			}
+		}
+	}
+}
+		

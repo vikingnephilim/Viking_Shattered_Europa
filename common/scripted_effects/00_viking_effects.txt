@@ -1,0 +1,74 @@
+setup_flip_to_colonial_culture = {
+	#to
+	if = {
+		limit = {
+			can_country_flip_to_colonial_culture = {
+				to = $to$
+			}
+		}
+		random_owned_province = {
+			limit = {
+				can_province_flip_to_colonial_culture = {
+					to = $to$
+				}
+			}
+			save_event_target_as = flip_to_$to$
+		}
+	}
+}
+
+flip_to_colonial_culture = {
+	#to
+	if = {
+		limit = {
+			NOT = {
+				primary_culture = $to$
+			}
+		}
+		change_primary_culture = $to$
+	}
+	event_target:flip_to_$to$ = {
+		region = {
+			limit = {
+				owned_by = ROOT
+				is_culture_to_$to$ = {
+					cond = culture
+				}
+			}
+			change_culture = $to$
+		}
+	}
+	set_country_flag = embraced_new_colonial_culture
+}
+
+accept_to_colonial_culture = {
+	#to
+	if = {
+		limit = {
+			NOT = {
+				primary_culture = $to$
+			}
+		}
+		add_accepted_culture = $to$
+	}
+	event_target:flip_to_$to$ = {
+		region = {
+			limit = {
+				owned_by = ROOT
+				is_culture_to_$to$ = {
+					cond = culture
+				}
+			}
+			change_culture = $to$
+		}
+	}
+	set_country_flag = accepted_new_colonial_culture
+}
+
+refuse_colonial_culture = {
+	#to
+	event_target:flip_to_$to$ = {
+		change_culture = $to$
+	}
+	set_country_flag = rejected_new_colonial_culture
+}

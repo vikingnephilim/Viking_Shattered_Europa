@@ -1,0 +1,194 @@
+persian_minors = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			culture_group = iranian
+			culture_group = east_iranian
+			culture_group = west_persian
+		}
+		OR = {
+			religion_group = zoroastrian_group
+		}
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	##Mission Start
+	Prepare_for_war = {
+		icon = mission_conquer_persia
+		position = 1
+		trigger = {
+			army_size_percentage = 0.5
+			manpower_percentage = 0.5
+		}
+		effect = {
+			if = {
+				limit = {
+					tag = QOM
+					OR = {
+						exists = ISF
+						exists = FRS
+						exists = KRM
+						exists = SIS
+					}
+				}
+				add_casus_belli = {
+					target = ISF
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = FRS
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = KRM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = SIS
+					type = cb_vassalize_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = ISF
+					OR = {
+						exists = QOM
+						exists = FRS
+						exists = KRM
+						exists = SIS
+					}
+				}
+				add_casus_belli = {
+					target = QOM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = FRS
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = KRM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = SIS
+					type = cb_vassalize_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = FRS
+					OR = {
+						exists = ISF
+						exists = QOM
+						exists = KRM
+						exists = SIS
+					}
+				}
+				add_casus_belli = {
+					target = ISF
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = QOM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = KRM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = SIS
+					type = cb_vassalize_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = KRM
+					OR = {
+						exists = ISF
+						exists = FRS
+						exists = QOM
+						exists = SIS
+					}
+				}
+				add_casus_belli = {
+					target = ISF
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = FRS
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = QOM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = SIS
+					type = cb_vassalize_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = SIS
+					OR = {
+						exists = ISF
+						exists = FRS
+						exists = KRM
+						exists = QOM
+					}
+				}
+				add_casus_belli = {
+					target = ISF
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = FRS
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = KRM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = QOM
+					type = cb_vassalize_mission
+				}
+			}
+		}
+	}
+	##Mission End
+	##Mission Start
+	convert_heretics_heathens = {
+		icon = mission_hands_praying
+		required_missions = {
+			Prepare_for_war
+		}
+		position = 2
+			provinces_to_highlight = {
+				region = persia_region
+				OR = {
+					NOT = {
+						religion = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+		}
+		trigger = {
+				persia_region = {
+					type = all
+					owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "persian_integration"
+				duration = -1
+			}
+		}
+	}

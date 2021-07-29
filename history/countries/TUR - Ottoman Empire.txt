@@ -1,0 +1,34 @@
+government = monarchy
+add_government_reform = ottoman_government
+primary_culture = turkish
+add_accepted_culture = bulgarian
+add_accepted_culture = greek
+religion = sunni
+
+technology_group = ottoman
+capital = 149 # Edirne
+national_focus = MIL
+add_army_professionalism = 0.1
+change_estate_land_share = {
+	estate = estate_church
+	share = -10
+}
+change_estate_land_share = {
+	estate = estate_nobles
+	share = 10
+}
+1444.10.1 = {
+	set_estate_privilege = estate_dhimmi_guaranteed_autonomy
+}
+1444.1.1 = {
+	monarch = {
+		name = "Mehmed II Fatih"
+		dynasty = Osmanoglu
+		birth_date = 1432.3.30
+		adm = 6
+		dip = 4
+		mil = 6
+	}
+	clear_scripted_personalities = yes
+	add_piety = -0.2
+}

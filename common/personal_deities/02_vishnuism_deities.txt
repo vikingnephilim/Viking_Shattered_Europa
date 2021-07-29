@@ -1,0 +1,127 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new dieties, make sure they are uniquely named.
+shiva = {
+	# (Diplomatic - War)
+	fire_damage = 0.1
+	war_exhaustion = -0.05
+	allow = {
+		religion = vishnuism
+	}
+	sprite = 1
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}
+	}
+}
+
+ganesha = {
+	#(Diplomatic - Peace)
+	improve_relation_modifier = 0.15
+	global_missionary_strength = 0.01
+	allow = {
+		religion = vishnuism
+	}
+	sprite = 2
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}
+	}
+}
+
+surya = {
+	#(Economic - Income)
+	production_efficiency = 0.2
+	global_tax_modifier = 0.05
+	allow = {
+		religion = vishnuism
+	}
+	sprite = 3
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}
+		modifier = {
+			factor = 2
+			personality = ai_colonialist
+		}
+	}
+}
+
+ganga = {
+	#(Economic - Savings)
+	build_time = -0.15
+	build_cost = -0.1
+	allow = {
+		religion = vishnuism
+	}
+	sprite = 4
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}
+		modifier = {
+			factor = 2
+			personality = ai_colonialist
+		}
+	}
+}
+
+shakti = {
+	#(Military - Offensive)
+	movement_speed = 0.15
+	siege_ability = 0.15
+	allow = {
+		religion = vishnuism
+	}
+	sprite = 5
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}
+	}
+}
+
+vishnu = {
+	# (Military - Defensive)
+	core_creation = -0.1
+	discipline = 0.05
+	allow = {
+		religion = vishnuism
+	}
+	sprite = 6
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_balanced
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_capitalist
+		}
+	}
+}

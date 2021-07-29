@@ -1,0 +1,1492 @@
+BEYLIK_MISSIONS_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		NOT = {
+			tag = RUM
+			culture_group = byzantine
+		}
+		OR = {
+			tag = AYD
+			was_tag = AYD
+			tag = CND
+			was_tag = CND
+			tag = DUL
+			was_tag = DUL
+			tag = ERE
+			was_tag = ERE
+			tag = GRM
+			was_tag = GRM
+			tag = KAR
+			was_tag = KAR
+			tag = MEN
+			was_tag = MEN
+			tag = OSM
+			was_tag = OSM
+			tag = RAM
+			was_tag = RAM
+			tag = SRU
+			was_tag = SRU
+		}
+	}
+	has_country_shield = yes
+	AYD_scio = {
+		icon = mission_unite_home_region
+		required_missions = {
+			beylik_force_limit_mission
+		}
+		position = 2
+		provinces_to_highlight = {
+			province_id = 2348
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			2348 = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Beylik_Events.12
+			}
+			2348 = {
+				if = {
+					limit = {
+						NOT = {
+							has_building = shipyard
+						}
+						NOT = {
+							has_building = grand_shipyard
+						}
+					}
+					add_building = shipyard
+				}
+				else = {
+					add_base_production = 3
+				}
+			}
+			2348 = {
+				#scio
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				add_permanent_claim = ROOT
+			}
+			3003 = {
+				#negroponte
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				add_permanent_claim = ROOT
+			}
+			164 = {
+				#naxos
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				add_permanent_claim = ROOT
+			}
+			163 = {
+				#crete
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				add_permanent_claim = ROOT
+			}
+			320 = {
+				#rhodes
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				add_permanent_claim = ROOT
+			}
+			321 = {
+				#cyprus
+				if = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	GRM_aydin = {
+		icon = mission_unite_home_region
+		required_missions = {
+			AYD_scio
+		}
+		position = 3
+		provinces_to_highlight = {
+			area = aydin_area
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			aydin_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			kastamonu_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	MEN_aydin = {
+		icon = mission_unite_home_region
+		required_missions = {
+			GRM_aydin
+		}
+		position = 4
+		provinces_to_highlight = {
+			area = aydin_area
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			aydin_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+		}
+	}
+	MEN_rhodes = {
+		icon = me_mission_ottomans_capture_rhodes
+		required_missions = {
+			MEN_aydin
+		}
+		position = 5
+		provinces_to_highlight = {
+			province_id = 320
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			320 = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_stability_or_adm_power = yes
+			country_event = {
+				id = ME_Beylik_Events.13
+			}
+		}
+	}
+	AYD_raids = {
+		icon = me_mission_ottomans_piracy
+		required_missions = {
+			MEN_rhodes 
+		}
+		position = 6
+		provinces_to_highlight = {
+			province_id = 1319
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			owns = 2348
+			owns = 3003
+			owns = 164
+			owns = 163
+			owns = 320
+			owns = 321
+			1320 = {
+				#sea of marmara
+				privateer_power = {
+					country = ROOT
+					share = 50
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = ayd_raid_tt
+		}
+	}
+}
+
+BEYLIK_MISSIONS_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		NOT = {
+			tag = RUM
+			culture_group = byzantine
+		}
+		OR = {
+			tag = AYD
+			was_tag = AYD
+			tag = CND
+			was_tag = CND
+			tag = DUL
+			was_tag = DUL
+			tag = ERE
+			was_tag = ERE
+			tag = GRM
+			was_tag = GRM
+			tag = KAR
+			was_tag = KAR
+			tag = MEN
+			was_tag = MEN
+			tag = OSM
+			was_tag = OSM
+			tag = RAM
+			was_tag = RAM
+			tag = SRU
+			was_tag = SRU
+		}
+	}
+	has_country_shield = yes
+	DUL_gold = {
+		icon = me_mission_manchu_gold
+		required_missions = {
+			beylik_force_limit_mission
+		}
+		position = 2
+		provinces_to_highlight = {
+			province_id = 332
+		}
+		trigger = {
+			stability = 2
+			332 = {
+				if = {
+					limit = {
+						has_dlc = "Mandate of Heaven"
+					}
+					custom_trigger_tooltip = {
+						tooltip = IS_PROSPEROUS
+						is_prosperous = yes
+					}
+				}
+				base_production = 10
+			}
+		}
+		effect = {
+			332 = {
+				change_trade_goods = gold
+				add_base_production = -5
+				#proper event to be introduced in a hotfix
+			}
+			add_country_modifier = {
+				name = dul_gold_inflation
+				duration = 9125
+			}
+		}
+	}
+	DUL_women = {
+		icon = me_dul_archers
+		required_missions = {
+			DUL_gold
+		}
+		position = 3
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = {
+				has_building = barracks
+			}
+		}
+		trigger = {
+			manpower_percentage = 1
+			manpower = 40
+			barracks = 3
+		}
+		effect = {
+			country_event = {
+				id = ME_Beylik_Events.11
+			}
+		}
+	}
+	beylik_officer_mission = {
+		icon = me_bey_general
+		required_missions = {
+			DUL_women
+		}
+		position = 4
+		trigger = {
+			army_tradition = 50
+			barracks = 2
+			government_rank = 2
+		}
+		effect = {
+			create_general = {
+				tradition = 100
+			}
+		}
+	}
+	beylik_castle = {
+		icon = me_bey_palace
+		required_missions = {
+			beylik_officer_mission
+		}
+		position = 5
+		provinces_to_highlight = {
+			owned_by = ROOT
+			is_capital = yes
+		}
+		trigger = {
+			capital_scope = {
+				fort_level = 3
+			}
+			total_development = 150
+		}
+		effect = {
+			capital_scope = {
+				add_province_modifier = {
+					name = beylik_ghulams
+					duration = -1
+				}
+			}
+		}
+	}
+	KAR_ankara = {
+		icon = me_mission_ottomans_march_into_baghdad
+		required_missions = {
+			beylik_officer_mission
+		}
+		position = 6
+		provinces_to_highlight = {
+			province_id = 326
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			326 = {
+				controlled_by = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = ankara_tooltip
+			IF = {
+				limit = {
+					326 = {
+						owner = {
+							war_with = ROOT
+						}
+					}
+				}
+				country_event = {
+					id = ME_Beylik_Events.5
+				}
+			}
+			ELSE = {
+				add_mil_power = 100
+			}
+		}
+	}
+	beylik_anatolia = {
+		icon = me_bey_anatolia
+		required_missions = {
+			KAR_ankara
+		}
+		position = 7
+		provinces_to_highlight = {
+			region = anatolia_region
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 24
+				region = anatolia_region
+			}
+			num_of_owned_provinces_with = {
+				value = 3
+				province_has_center_of_trade_of_level = 1
+				region = anatolia_region
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+			}
+			country_event = {
+				id = ME_Beylik_Events.1
+			}
+		}
+	}
+	beylik_rum = {
+		icon = me_mission_ottomans_sultan_of_rum
+		required_missions = {
+			beylik_anatolia
+		}
+		position = 8
+		provinces_to_highlight = {
+			region = anatolia_region
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			anatolia_region = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 15
+			country_event = {
+				id = ME_Beylik_Events.2
+			}
+		}
+	}
+}
+
+BEYLIK_MISSIONS_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		NOT = {
+			tag = RUM
+			culture_group = byzantine
+		}
+		OR = {
+			tag = AYD
+			was_tag = AYD
+			tag = CND
+			was_tag = CND
+			tag = DUL
+			was_tag = DUL
+			tag = ERE
+			was_tag = ERE
+			tag = GRM
+			was_tag = GRM
+			tag = KAR
+			was_tag = KAR
+			tag = MEN
+			was_tag = MEN
+			tag = OSM
+			was_tag = OSM
+			tag = RAM
+			was_tag = RAM
+			tag = SRU
+			was_tag = SRU
+		}
+	}
+	has_country_shield = yes
+	beylik_force_limit_mission = {
+		icon = me_rally_beys
+		required_missions = {
+		}
+		position = 1
+		trigger = {
+			army_size_percentage = 1
+			is_subject = no
+			stability = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = beylik_freedom
+				duration = 3650
+			}
+			hidden_effect = {
+				anatolia_region = {
+					limit = {
+						OR = {
+							owned_by = TUR
+							any_neighbor_province = {
+								is_core = ROOT
+							}
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			custom_tooltip = beylik_anatolia_provinces_tooltip
+		}
+	}
+	CND_cores = {
+		icon = mission_unite_home_region
+		required_missions = {
+			beylik_force_limit_mission
+		}
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4313
+				province_id = 2304
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			4313 = {
+				#kangiri
+				owned_by = ROOT
+			}
+			2304 = {
+				#canik
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = cnd_expansion
+				duration = 9125
+			}
+		}
+	}
+	ERE_cores = {
+		#copied from Karaman
+		icon = mission_unite_home_region
+		required_missions = {
+			CND_cores
+		}
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4307
+				province_id = 2301
+				province_id = 2305
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			4307 = {
+				#aksaray
+				owned_by = ROOT
+			}
+			2301 = {
+				#kayseri
+				owned_by = ROOT
+			}
+			2305 = {
+				#erzincan
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ere_expansion
+				duration = 9125
+			}
+		}
+	}
+	RAM_allies = {
+		icon = me_mission_ottomans_a_mamluk_buffer
+		required_missions = {
+			ERE_cores
+		}
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				owned_by = TUR
+				owned_by = MAM
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			is_at_war = no
+			if = {
+				limit = {
+					exists = TUR
+					exists = MAM
+				}
+				OR = {
+					AND = {
+						alliance_with = TUR
+						marriage_with = TUR
+						NOT = {
+							alliance_with = MAM
+						}
+					}
+					AND = {
+						alliance_with = MAM
+						marriage_with = MAM
+						NOT = {
+							alliance_with = TUR
+						}
+					}
+					AND = {
+						TUR = {
+							OR = {
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = insulted
+								}
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = scornfully_insulted
+								}
+							}
+						}
+						MAM = {
+							OR = {
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = insulted
+								}
+								has_opinion_modifier = {
+									who = ROOT
+									modifier = scornfully_insulted
+								}
+							}
+						}
+					}
+				}
+			}
+			else = {
+				num_of_allies = 2
+			}
+		}
+		effect = {
+			custom_tooltip = ram_ally_tt
+			hidden_effect
+			{
+				if = {
+					limit = {
+						alliance_with = TUR
+					}
+					create_general = {
+						tradition = 50
+						add_siege = 2
+					}
+				}
+				else_if = {
+					limit = {
+						alliance_with = MAM
+					}
+					add_country_modifier = {
+						name = ram_manpower
+						duration = 12775
+					}
+				}
+				else_if = {
+					limit = {
+						AND = {
+							TUR = {
+								OR = {
+									has_opinion_modifier = {
+										who = ROOT
+										modifier = insulted
+									}
+									has_opinion_modifier = {
+										who = ROOT
+										modifier = scornfully_insulted
+									}
+								}
+							}
+							MAM = {
+								OR = {
+									has_opinion_modifier = {
+										who = ROOT
+										modifier = insulted
+									}
+									has_opinion_modifier = {
+										who = ROOT
+										modifier = scornfully_insulted
+									}
+								}
+							}
+						}
+					}
+					add_country_modifier = {
+						name = ram_home_defense
+						duration = 9125
+					}
+				}
+				else = {
+					add_dip_power = 100
+				}
+			}
+		}
+	}
+	CND_buildings = {
+		icon = me_kar_buildings
+		required_missions = {
+			RAM_allies
+		}
+		position = 5
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = {
+				has_building = temple
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}
+		effect = {
+			define_advisor = {
+				type = artist
+				skill = 2
+				cost_multiplier = 0.5
+				culture = turkish
+				religion = sunni
+			}
+		}
+	}
+	MEN_buildings = {
+		icon = me_kar_buildings
+		required_missions = {
+			CND_buildings
+		}
+		position = 6
+		provinces_to_highlight = {
+			province_id = 319			#metesha
+			NOT = {
+				has_building = temple
+			}
+		}
+		trigger = {
+			319 = {
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+				base_tax = 10
+			}
+			OR = {
+				NOT = {
+					piety = -0.75
+				}
+				piety = 0.75
+			}
+		}
+		effect = {
+			add_prestige = 10
+			319 = {
+				add_province_modifier = {
+					name = men_mosque
+					duration = -1
+				}
+			}
+		}
+	}
+	SRU_buildings = {
+		icon = me_sru_mosque
+		required_missions = {
+			MEN_buildings
+		}
+		position = 7
+		provinces_to_highlight = {
+			province_id = 2297			#manisa
+			NOT = {
+				has_building = temple
+			}
+		}
+		trigger = {
+			2297 = {
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+				base_tax = 10
+			}
+			OR = {
+				NOT = {
+					piety = -0.75
+				}
+				piety = 0.75
+			}
+		}
+		effect = {
+			add_prestige = 10
+			2297 = {
+				add_province_modifier = {
+					name = sru_ulucami
+					duration = -1
+				}
+			}
+		}
+	}
+	KAR_madrasas_mission = {
+		icon = me_kar_madrasa
+		required_missions = {
+			SRU_buildings
+		}
+		position = 8
+		provinces_to_highlight = {
+			owned_by = ROOT
+			NOT = {
+				has_building = university
+			}
+		}
+		trigger = {
+			university = 5
+			capital_scope = {
+				has_building = university
+			}
+		}
+		effect = {
+			change_innovativeness = 4
+			add_country_modifier = {
+				name = kar_madrasas
+				duration = 9125
+			}
+		}
+	}
+	CND_science = {
+		icon = me_cnd_book
+		required_missions = {
+			KAR_madrasas_mission
+		}
+		position = 9
+		provinces_to_highlight = {
+			owned_by = ROOT
+			is_capital = yes
+			NOT = {
+				has_building = temple
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Rule Britannia"
+				}
+				innovativeness = 15
+			}
+			capital_scope = {
+				has_building = university
+			}
+			natural_scientist = 3
+		}
+		effect = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+		}
+	}
+}
+
+BEYLIK_MISSIONS_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		NOT = {
+			tag = RUM
+			culture_group = byzantine
+		}
+		OR = {
+			tag = AYD
+			was_tag = AYD
+			tag = CND
+			was_tag = CND
+			tag = DUL
+			was_tag = DUL
+			tag = ERE
+			was_tag = ERE
+			tag = GRM
+			was_tag = GRM
+			tag = KAR
+			was_tag = KAR
+			tag = MEN
+			was_tag = MEN
+			tag = OSM
+			was_tag = OSM
+			tag = RAM
+			was_tag = RAM
+			tag = SRU
+			was_tag = SRU
+		}
+	}
+	has_country_shield = yes
+	beylik_kill_tur = {
+		icon = me_mission_ottomans_return_to_full_strength
+		required_missions = {
+			beylik_force_limit_mission
+		}
+		position = 2
+		provinces_to_highlight = {
+			is_core = RUM
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			NOT = {
+				exists = TUR
+			}
+			government_rank = 2
+			custom_trigger_tooltip = {
+				tooltip = beylik_kill_ottos_tt
+				all_province = {
+					OR = {
+						AND = {
+							is_core = RUM
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = RUM
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "Rights of Man"
+				}
+				great_power_rank = 6
+			}
+		}
+		effect = {
+			set_government_rank = 3
+			country_event = {
+				id = ME_Beylik_Events.8
+			}
+		}
+	}
+	KAR_ports = {
+		icon = me_mission_ottomans_access_the_persian_gulf
+		required_missions = {
+			beylik_kill_tur
+		}
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2298
+				province_id = 2302
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			2298 = {
+				#teke
+				owned_by = ROOT
+				development = 20
+			}
+			2302 = {
+				#teke
+				owned_by = ROOT
+				development = 20
+			}
+		}
+		effect = {
+			2298 = {
+				add_province_modifier = {
+					name = kar_ports
+					duration = -1
+				}
+			}
+			2302 = {
+				add_province_modifier = {
+					name = kar_ports
+					duration = -1
+				}
+			}
+		}
+	}
+	AYD_mosque = {
+		icon = me_ayd_mosque
+		required_missions = {
+			KAR_ports
+		}
+		provinces_to_highlight = {
+			province_id = 318
+			NOT = {
+				has_building = temple
+			}
+		}
+		position = 4
+		trigger = {
+			318 = {
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+				base_tax = 10
+			}
+		}
+		effect = {
+			add_prestige = 10
+			318 = {
+				add_province_modifier = {
+					name = ayd_isa_bey
+					duration = -1
+				}
+			}
+		}
+	}
+	CND_ports = {
+		icon = mission_african_gold
+		required_missions = {
+			AYD_mosque
+		}
+		position = 5
+		provinces_to_highlight = {
+			province_id = 328
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			328 = {
+				#sinop
+				owned_by = ROOT
+				development = 20
+				OR = {
+					has_building = marketplace
+					has_building = trade_depot
+					has_building = stock_exchange
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Beylik_Events.9
+			}
+		}
+	}
+	ERE_tombs = {
+		icon = me_ere_tomb
+		required_missions = {
+			CND_ports
+		}
+		position = 6
+		provinces_to_highlight = {
+			area = rum_area
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			rum_area = {
+				type = all
+				development = 10
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = ERE_tombs_tt
+		}
+	}
+	ERE_frontier = {
+		icon = mission_non-western_cavalry_raid
+		required_missions = {
+			ERE_tombs
+		}
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				area = erzurum_area
+				area = north_kurdistan_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			erzurum_area = {
+				type = all
+				owned_by = ROOT
+			}
+			north_kurdistan_area = {
+				type = all
+				owned_by = ROOT
+			}
+			AKK = {
+				OR = {
+					exists = no
+					NOT = {
+						total_development = 25
+					}
+				}
+			}
+			QAR = {
+				OR = {
+					exists = no
+					NOT = {
+						total_development = 25
+					}
+				}
+			}
+		}
+		effect = {
+			add_stability_or_adm_power = yes
+			add_country_modifier = {
+				name = ERE_turkomen
+				duration = 9125
+			}
+		}
+	}
+}
+
+BEYLIK_MISSIONS_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		NOT = {
+			tag = RUM
+			culture_group = byzantine
+		}
+		OR = {
+			tag = AYD
+			was_tag = AYD
+			tag = CND
+			was_tag = CND
+			tag = DUL
+			was_tag = DUL
+			tag = ERE
+			was_tag = ERE
+			tag = GRM
+			was_tag = GRM
+			tag = KAR
+			was_tag = KAR
+			tag = MEN
+			was_tag = MEN
+			tag = OSM
+			was_tag = OSM
+			tag = RAM
+			was_tag = RAM
+			tag = SRU
+			was_tag = SRU
+		}
+	}
+	has_country_shield = yes
+	AYD_navy = {
+		icon = me_bey_navy
+		required_missions = {
+			beylik_force_limit_mission
+		}
+		position = 2
+		trigger = {
+			navy_size = 350
+		}
+		effect = {
+			add_navy_tradition = 25
+			add_country_modifier = {
+				name = ayd_big_navy
+				duration = -1
+			}
+		}
+	}
+	
+	GRM_karaman = {
+		icon = me_mission_ottomans_annex_the_karamanids
+		required_missions = {
+			AYD_navy
+		}
+		position = 3
+		provinces_to_highlight = {
+			area = karaman_area
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			karaman_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			rum_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			cukurova_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			dulkadir_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	GRM_candar = {
+		icon = me_mission_ottomans_annex_the_isfendiyarids
+		required_missions = {
+			GRM_karaman
+		}
+		position = 4
+		provinces_to_highlight = {
+			area = kastamonu_area
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			kastamonu_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			328 = {
+				add_center_of_trade_level = 1
+			}
+		}
+	}
+	KAR_cores = {
+		icon = me_mission_ottomans_annex_the_karamanids
+		required_missions = {
+			GRM_candar
+		}
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				province_id = 4311
+				province_id = 1848
+				province_id = 4314
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			4311 = {
+				#karahisar
+				owned_by = ROOT
+			}
+			1848 = {
+				#hamid
+				owned_by = ROOT
+			}
+			4314 = {
+				#kirshehir
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = kar_expansion
+				duration = 9125
+			}
+		}
+	}
+	RAM_copts = {
+		icon = me_ram_copt
+		required_missions = {
+			KAR_cores
+		}
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				province_id = 358
+				province_id = 1227
+				province_id = 2313
+				province_id = 1234
+				province_id = 419
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			OR = {
+				#coptic sites
+				358 = {
+					owned_by = ROOT
+				}
+				1227 = {
+					owned_by = ROOT
+				}
+				2313 = {
+					owned_by = ROOT
+				}
+				1234 = {
+					owned_by = ROOT
+				}
+				419 = {
+					owned_by = ROOT
+				}
+			}
+			theologian = 1
+		}
+		effect = {
+			country_event = {
+				id = ME_Beylik_Events.10
+			}
+		}
+	}
+	DUL_shia = {
+		icon = shia_missions_icon
+		required_missions = {
+			RAM_copts
+		}
+		position = 7
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				piety = 0.9
+				NOT = {
+					piety = -0.9
+				}
+			}
+			stability = 3
+			capital_scope = {
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Beylik_Events.15
+			}
+		}
+	}
+	GRM_old = {
+		icon = me_mission_golden_horde_horsemen
+		required_missions = {
+			DUL_shia
+		}
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				area = rum_area
+				area = cukurova_area
+				area = dulkadir_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			rum_area = {
+				type = all
+				owned_by = ROOT
+			}
+			cukurova_area = {
+				type = all
+				owned_by = ROOT
+			}
+			dulkadir_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = GRM_old_tt
+			kerman_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			farsistan_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

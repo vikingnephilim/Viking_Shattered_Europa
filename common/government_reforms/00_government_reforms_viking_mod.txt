@@ -1,0 +1,4122 @@
+### MAKE SURE YOU PUT YOUR GOVERNMENT TYPE ###
+###### IN THE RIGHT SECTIONS AND IN THE ######
+## GOVERNMENTS FILE SO THAT IT WILL SHOW UP ##
+##############################################
+################ MONARCHIES ##################
+##############################################
+monarchy_mechanic = {
+	monarchy = yes
+	heir = yes
+	queen = yes
+	basic_reform = yes	# = invisible/does not take up a slot
+	valid_for_nation_designer = no
+	custom_attributes = {
+		enables_aristocratic_idea_group = yes
+	}
+	modifiers = {
+		nobles_influence_modifier = 0.05
+	}
+}
+
+cathar_reform = {
+	icon = "commander_king_reform"
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		tolerance_own = 1
+		tolerance_heretic = 1
+		idea_cost = -0.05
+	}
+	potential = {
+		religion = cathar
+	}
+	trigger = {
+		religion = cathar
+	}
+	ai = {
+		factor = 0.5
+		modifier = {
+			factor = 10
+			religion = cathar
+		}
+	}
+}
+
+irish_clan = {
+	icon = "king"
+	allow_normal_conversion = yes
+	potential = {
+		AND = {
+			OR = {
+				tag = MCM
+				tag = LEI
+				tag = DMS
+				tag = ORD
+				tag = ULS
+				tag = TYR
+				tag = TRY
+				tag = SLN
+				tag = CNN
+				tag = KID
+				tag = MNS
+				tag = FLY
+			}
+			NOT = {
+				tag = IRE
+			}
+			NOT = {
+				religion = norse_pagan_reformed
+			}
+			NOT = {
+				religion = hellenic_pagan
+			}
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = -10
+	monarchy = yes
+	valid_for_nation_designer = no
+	maintain_dynasty = yes
+	royal_marriage = yes
+	queen = yes
+	rulers_can_be_generals = yes
+	modifiers = {
+		production_efficiency = 0.1
+		tolerance_own = 3
+	}
+}
+
+french_feudalism = {
+	icon = feudalism
+	allow_normal_conversion = yes
+	potential = {
+		AND = {
+			OR = {
+				culture_group = french
+				culture_group = south_french
+				culture_group = north_french
+				has_reform = french_absolutism
+				has_reform = ancien_regime_reform
+			}
+			OR = {
+				vassal = 1
+				personal_union = 1
+				march = 1
+			}
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		AND = {
+			OR = {
+				culture_group = french
+				culture_group = south_french
+				culture_group = north_french
+				has_reform = french_absolutism
+				has_reform = ancien_regime_reform
+			}
+			OR = {
+				vassal = 1
+				personal_union = 1
+				march = 1
+			}
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	lock_level_when_selected = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		min_autonomy = -10
+		global_autonomy = -0.025
+	}
+}
+
+ancien_regime_reform = {
+	icon = French_Reformed	#ancien_regime
+	allow_normal_conversion = yes
+	lock_level_when_selected = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	potential = {
+		OR = {
+			culture_group = french
+			culture_group = south_french
+			culture_group = north_french
+			has_reform = french_absolutism
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		OR = {
+			culture_group = french
+			culture_group = south_french
+			culture_group = north_french
+			has_reform = french_absolutism
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	modifiers = {
+		global_autonomy = -0.025
+		governing_capacity = 150
+		max_absolutism = 15
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+french_absolutism = {
+	icon = French_Absolutism
+	allow_normal_conversion = yes
+	lock_level_when_selected = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	potential = {
+		OR = {
+			culture_group = french
+			culture_group = south_french
+			culture_group = north_french
+			has_reform = ancien_regime_reform
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		OR = {
+			culture_group = french
+			culture_group = south_french
+			culture_group = north_french
+			has_reform = ancien_regime_reform
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	modifiers = {
+		governing_capacity = 250
+		max_absolutism = 5
+		global_autonomy = -0.05
+		monarch_admin_power = 1
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+enlightened_despotism_reform = {
+	icon = spain_bourbon
+	allow_normal_conversion = yes
+	potential = {
+		tag = SPA
+		absolutism = 50
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		tag = SPA
+		absolutism = 50
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 70
+	modifiers = {
+		max_absolutism = 5
+		build_cost = -0.15
+		prestige = 1
+		governing_capacity = 250
+	}
+	ai = {
+		factor = 103
+	}
+}
+
+granadan_iqta_reform = {
+	icon = granada_iqta
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 50
+	queen = no
+	potential = {
+		OR = {
+			AND = {
+				religion_group = muslim
+				primary_culture = andalucian
+			}
+			NOT = {
+				religion = norse_pagan_reformed
+			}
+			NOT = {
+				religion = hellenic_pagan
+			}
+			NOT = {
+				religion = druidic_pagan
+			}
+			has_reform = iqta
+			has_reform = granadan_iqta_reform
+		}
+	}
+	trigger = {
+		OR = {
+			AND = {
+				religion_group = muslim
+				primary_culture = andalucian
+			}
+			NOT = {
+				religion = norse_pagan_reformed
+			}
+			NOT = {
+				religion = hellenic_pagan
+			}
+			NOT = {
+				religion = druidic_pagan
+			}
+			has_reform = iqta
+			has_reform = granadan_iqta_reform
+		}
+	}
+	modifiers = {
+		trade_efficiency = 0.1
+		global_trade_goods_size_modifier = 0.05
+		global_heretic_missionary_strength = 0.02
+	}
+	government_abilities = {
+		iqta_mechanic
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+baltic_tribal_fed = {
+	icon = "commander_king_reform"
+	allow_normal_conversion = yes
+	potential = {
+		religion = baltic_pagan_reformed
+		tag = BLT
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = -10
+	monarchy = yes
+	fixed_rank = 2
+	valid_for_nation_designer = no
+	maintain_dynasty = yes
+	royal_marriage = yes
+	queen = yes
+	rulers_can_be_generals = yes
+	modifiers = {
+		monarch_military_power = 2
+		governing_capacity_modifier = -0.5
+		cavalry_flanking = 0.5
+		manpower_in_true_faith_provinces = 0.2
+	}
+	government_abilities = {
+		tribal_federation_mechanic
+	}
+}
+
+basic_reformed_mandala_reform = {
+	icon = "mandala_system"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			AND = {
+				NOT = {
+					religion = shinto
+				}
+				NOT = {
+					religion = confucianism
+				}
+				NOT = {
+					religion = tantra
+				}
+				NOT = {
+					religion = taoism
+				}
+				NOT = {
+					religion = zen
+				}
+				NOT = {
+					religion = norse_pagan_reformed
+				}
+				NOT = {
+					religion = hellenic_pagan
+				}
+				NOT = {
+					religion = druidic_pagan
+				}
+				OR = {
+					religion_group = eastern
+					religion_group = dharmic
+					religion_group = muslim
+				}
+				technology_group = chinese
+			}
+			has_reform = basic_reformed_mandala_reform
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	nation_designer_trigger = {
+		NOT = {
+			religion = shinto
+		}
+		NOT = {
+			religion = confucianism
+		}
+		NOT = {
+			religion = tantra
+		}
+		NOT = {
+			religion = taoism
+		}
+		NOT = {
+			religion = zen
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		OR = {
+			religion_group = eastern
+			religion_group = dharmic
+			religion_group = muslim
+		}
+		technology_group = chinese
+	}
+	trigger = {
+		has_reform = basic_reformed_mandala_reform
+	}
+	modifiers = {
+		vassal_forcelimit_bonus = 1
+		governing_capacity = 100
+		reduced_liberty_desire_on_same_continent = 5
+	}
+	custom_attributes = {
+		enables_mandala_periphery = yes		#15% tax in subjects
+	}
+	ai = {
+		factor = 101
+	}
+}
+
+maharajadhiraja_reform = {
+	icon = tribal_federation
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 20
+	potential = {
+		OR = {
+			has_reform = maharajadhiraja_reform
+			tag = NPL
+			NOT = {
+				religion = norse_pagan_reformed
+			}
+			NOT = {
+				religion = hellenic_pagan
+			}
+			NOT = {
+				religion = druidic_pagan
+			}
+		}
+	}
+	modifiers = {
+		legitimacy = 0.25
+		global_autonomy = -0.025
+		yearly_absolutism = 0.1
+		max_absolutism = 10
+	}
+	ai = {
+		factor = 100
+	}
+	#Add -5 Noble Influence
+}
+
+mandala_reform = {
+	icon = "mandala_system"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = {
+			religion = shinto
+		}
+		NOT = {
+			religion = confucianism
+		}
+		NOT = {
+			religion = tantra
+		}
+		NOT = {
+			religion = taoism
+		}
+		NOT = {
+			religion = zen
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		OR = {
+			religion_group = eastern
+			religion_group = dharmic
+			religion_group = muslim
+			religion = dayawism
+		}
+		technology_group = chinese
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	nation_designer_trigger = {
+		NOT = {
+			religion = shinto
+		}
+		NOT = {
+			religion = confucianism
+		}
+		OR = {
+			religion_group = eastern
+			religion_group = dharmic
+			religion_group = muslim
+		}
+		technology_group = chinese
+	}
+	legacy_equivalent = despotic_monarchy
+	modifiers = {
+		vassal_income = 0.15
+		vassal_forcelimit_bonus = 1
+		governing_capacity = 50
+	}
+}
+
+nayankara_reform = {
+	icon = "nayankara_system"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "Dharma"
+		technology_group = indian
+		OR = {
+			religion_group = dharmic
+			religion = buddhism
+			religion = vajrayana
+			religion = mahayana
+		}
+		OR = {
+			culture_group = dravidian
+			primary_culture = oriya
+			primary_culture = sinhala
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	legacy_equivalent = feudal_monarchy
+	nation_designer_trigger = {
+		technology_group = indian
+		OR = {
+			religion_group = dharmic
+			religion = buddhism
+			religion = vajrayana
+			religion = mahayana
+		}
+		OR = {
+			culture_group = dravidian
+			primary_culture = oriya
+			primary_culture = sinhala
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	modifiers = {
+		vassal_forcelimit_bonus = 1
+		global_manpower_modifier = 0.15
+	}
+}
+
+misl_confederacy_reform = {
+	allow_normal_conversion = yes
+	icon = "misl_confederacy"
+	potential = {
+		has_dlc = "Dharma"
+		religion = sikhism
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	nation_designer_trigger = {
+		religion = sikhism
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	legacy_equivalent = feudal_monarchy
+	modifiers = {
+		global_manpower_modifier = 0.1
+		land_maintenance_modifier = -0.1
+	}
+}
+
+polynesian_tribe = {
+	icon = "assembly_hall"
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = polynesian_g
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = -10
+	monarchy = yes
+	fixed_rank = 1
+	allow_force_tributary = yes
+	valid_for_nation_designer = no
+	maintain_dynasty = yes
+	can_form_trade_league = yes
+	royal_marriage = no
+	queen = no
+	rulers_can_be_generals = yes
+	modifiers = {
+		stability_cost_modifier = -0.33
+		range = 1
+	}
+}
+
+sharifate_reform = {
+	icon = hejaz_sharif
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	fixed_rank = 1
+	nation_designer_cost = 0
+	queen = no
+	potential = {
+		OR = {
+			AND = {
+				religion_group = muslim
+				primary_culture = hejazi_culture
+			}
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		OR = {
+			AND = {
+				religion_group = muslim
+				primary_culture = hejazi_culture
+			}
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	modifiers = {
+		global_unrest = -1
+		legitimacy = 0.5
+		tolerance_heretic = -3
+		church_influence_modifier = 0.2
+	}
+	government_abilities = {
+		iqta_mechanic
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+norman_duchy_reform = {
+	icon = "norman_duchy"
+	allow_normal_conversion = yes
+	lock_level_when_selected = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	potential = {
+		primary_culture = normand
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		primary_culture = normand
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	modifiers = {
+		harsh_treatment_cost = -0.2
+		infantry_power = 0.025
+		governing_capacity = 100
+	}
+	fixed_rank = 1
+	ai = {
+		factor = 100
+	}
+}
+
+hessian_militarized_monarchy_reform = {
+	icon = hesse_monarchy
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	fixed_rank = 1
+	nation_designer_cost = 50
+	potential = {
+		OR = {
+			tag = HES
+			has_reform = hessian_militarized_monarchy_reform
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		OR = {
+			tag = HES
+			has_reform = hessian_militarized_monarchy_reform
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	modifiers = {
+		yearly_army_professionalism = 0.0025
+		discipline = 0.025
+		possible_condottieri = 2
+	}
+	custom_attributes = {
+		enables_patriotism = yes
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+margrave_reform = {
+	icon = march
+	allow_normal_conversion = yes
+	fixed_rank = 1
+	potential = {
+		is_part_of_hre = yes
+		NOT = {
+			total_development = 300
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		is_part_of_hre = yes
+		NOT = {
+			total_development = 300
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		defensiveness = 0.1
+		global_manpower_modifier = 0.15
+		nobles_influence_modifier = 0.1
+	}
+}
+
+beylik = {
+	icon = beylik
+	allow_normal_conversion = yes
+	potential = {
+		primary_culture = turkish
+		NOT = {
+			tag = TUR
+		}
+		NOT = {
+			tag = RUM
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		primary_culture = turkish
+		NOT = {
+			tag = TUR
+		}
+		NOT = {
+			tag = RUM
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	valid_for_nation_designer = yes
+	fixed_rank = 1
+	nation_designer_cost = 0
+	nation_designer_cost = 0
+	modifiers = {
+		army_tradition = 0.25
+		unjustified_demands = -0.15
+	}
+	government_abilities = {
+		iqta_mechanic
+	}
+}
+
+theocratic_autocracy = {
+	icon = "pope_highlighted"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			has_reform = theocratic_autocracy
+			tag = BYZ
+			tag = ROM
+			tag = ERM
+			tag = WRM
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		OR = {
+			has_reform = theocratic_autocracy
+			tag = BYZ
+			tag = ROM
+			tag = ERM
+			tag = WRM
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	valid_for_nation_designer = yes
+	fixed_rank = 1
+	nation_designer_cost = 100
+	modifiers = {
+		administrative_efficiency = 0.05
+		governing_capacity = 150
+	}
+	custom_attributes = {
+		enables_roman_empire = yes		#Co-Emperor Mechanic
+	}
+}
+
+geo_despotate = {
+	icon = "castle"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = GEO
+			tag = IME
+			tag = SME
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	valid_for_nation_designer = yes
+	fixed_rank = 1
+	nation_designer_cost = -10
+	monarchy = yes
+	allow_force_tributary = yes
+	valid_for_nation_designer = no
+	maintain_dynasty = yes
+	royal_marriage = yes
+	queen = yes
+	rulers_can_be_generals = yes
+	modifiers = {
+		defensiveness = 0.15
+		culture_conversion_cost = -0.2
+	}
+}
+
+despotate_of_caucasia_reform = {
+	icon = crown
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	fixed_rank = 1
+	nation_designer_cost = 0
+	potential = {
+		OR = {
+			culture_group = caucasian
+			has_reform = despotate_of_caucasia_reform
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	modifiers = {
+		land_morale = 0.05
+		tolerance_heretic = 1
+		culture_conversion_cost = -0.2
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+despotate_of_serbia_reform = {
+	icon = serbian_despotate
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	fixed_rank = 1
+	nation_designer_cost = 0
+	potential = {
+		OR = {
+			primary_culture = serbian
+			has_reform = despotate_of_serbia_reform
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		OR = {
+			primary_culture = serbian
+			has_reform = despotate_of_serbia_reform
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	modifiers = {
+		diplomatic_reputation = 1
+	}
+	custom_attributes = {
+		enables_byzantine_administration = yes		#-10% admin tech cost and 0.5 legitimacy while byzantium exists
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+byz_rumpstate = {
+	icon = "king"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = FEO
+			tag = TRE
+		}
+	}
+	fixed_rank = 1
+	valid_for_nation_designer = yes
+	nation_designer_cost = -10
+	monarchy = yes
+	valid_for_nation_designer = no
+	maintain_dynasty = yes
+	royal_marriage = yes
+	queen = yes
+	rulers_can_be_generals = yes
+	modifiers = {
+		leader_land_fire = 1
+		yearly_corruption = -0.01
+	}
+}
+
+daimyo = {
+	icon = "daimyo"
+	allow_normal_conversion = no
+	potential = {
+		NOT = {
+			has_country_flag = formed_japan_flag
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		overlord = {
+			has_reform = shogunate
+		}
+	}
+	legacy_equivalent = daimyo_legacy
+	fixed_rank = 1
+	maintain_dynasty = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	lock_level_when_selected = yes
+	nation_designer_trigger = {
+		culture_group = japanese_g
+		technology_group = chinese
+		capital_scope = {
+			region = japan_region
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	modifiers = {
+		land_morale = 0.1
+		infantry_power = 0.1
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+indep_daimyo = {
+	icon = "samurai"
+	allow_normal_conversion = no
+	potential = {
+		NOT = {
+			has_country_flag = formed_japan_flag
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		OR = {
+			AND = {
+				OR = {
+					is_subject = no
+					overlord = {
+						NOT = {
+							has_reform = shogunate
+						}
+					}
+				}
+				capital_scope = {
+					region = japan_region
+				}
+				culture_group = japanese_g
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = indep_daimyo
+			}
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	nation_designer_trigger = {
+		culture_group = japanese_g
+		technology_group = chinese
+		capital_scope = {
+			region = japan_region
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	legacy_equivalent = indep_daimyo_legacy
+	fixed_rank = 1
+	maintain_dynasty = yes
+	modifiers = {
+		land_morale = 0.1
+		infantry_power = 0.1
+		governing_capacity = -150
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+principality = {
+	icon = "russian_principality"
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = east_slavic
+		NOT = {
+			has_reform = tsardom
+		}
+		NOT = {
+			have_had_reform = tsardom
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		OR = {
+			religion = orthodox
+			religion = paulician
+			religion = bogomilist
+			religion = monothelite
+			religion = iconoclast
+		}
+		OR = {
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = principality
+			}
+		}
+	}
+	fixed_rank = 1
+	legacy_equivalent = principality_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 5
+	nation_designer_trigger = {
+		culture_group = east_slavic
+		religion = orthodox
+	}
+	modifiers = {
+		global_unrest = -1
+		global_tax_modifier = 0.05
+		governing_capacity = 100
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Third Rome"
+		}
+		government_abilities = {
+			russian_mechanic
+		}
+	}
+}
+
+crown_of_castille = {
+	icon = castille_isabelle
+	allow_normal_conversion = yes
+	fixed_rank = 1
+	potential = {
+		OR = {
+			tag = CAS
+			tag = SPA
+			has_reform = crown_of_castille
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		has_reform = crown_of_castille
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	modifiers = {
+		diplomatic_upkeep = 1
+	}
+	custom_attributes = {
+		enables_trade_princes = yes		#1 Merchant if you got a aragonese of catalan vassal
+	}
+	ai = {
+		factor = 101
+	}
+}
+
+crown_of_aragon = {
+	icon = aragon_alfonso
+	fixed_rank = 1
+	allow_normal_conversion = yes
+	effect = {
+	}
+	potential = {
+		OR = {
+			tag = ARA
+			has_reform = crown_of_aragon
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		has_reform = crown_of_aragon
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		min_autonomy = 10
+		global_unrest = -1
+	}
+	custom_attributes = {
+		enables_kingdom_of_aragon = yes
+		enables_principality_of_catalonia = yes
+		enables_city_of_valencia = yes
+		enables_kingdom_of_sicily = yes
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+office_of_lord_regent_reform = {
+	icon = sten_sture
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 25
+	fixed_rank = 1
+	potential = {
+		OR = {
+			primary_culture = swedish
+			primary_culture = geats
+			primary_culture = scanian
+			has_reform = office_of_lord_regent_reform
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		OR = {
+			primary_culture = swedish
+			primary_culture = geats
+			primary_culture = scanian
+			has_reform = office_of_lord_regent_reform
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	modifiers = {
+		legitimacy = 0.5
+		prestige = 0.5
+		war_exhaustion = -0.025
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+hungarian_archduchy_reform = {
+	icon = "austrian_archduchy_reform"
+	allow_normal_conversion = yes
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	potential = {
+		OR = {
+			tag = HUN
+			was_tag = HUN
+			has_reform = hungarian_archduchy_reform
+			have_had_reform = hungarian_archduchy_reform
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	nation_designer_cost = 0
+	fixed_rank = 2
+	modifiers = {
+		mercenary_manpower = 0.25
+		special_unit_forcelimit = 0.1
+		nobles_influence_modifier = 0.05
+		maratha_exclusive_influence_modifier = 0.05
+		rajput_exclusive_influence_modifier = 0.05
+	}
+}
+
+feudal_theocracy = {
+	icon = "feudal_theocracy"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			religion_group = zoroastrian_group
+			religion_group = muslim
+		}
+	}
+	nation_designer_trigger = {
+		OR = {
+			religion_group = zoroastrian_group
+			religion_group = muslim
+		}
+	}
+	legacy_equivalent = feudal_theocracy_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 60
+	modifiers = {
+		missionaries = 1
+		global_missionary_strength = 0.01
+		tolerance_own = 2
+		governing_capacity = 50
+		brahmins_hindu_loyalty_modifier = 0.05
+		church_loyalty_modifier = 0.05
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Cradle of Civilization"
+		}
+		government_abilities = {
+			feudal_theocracy_mechanic
+		}
+	}
+}
+
+arch_monarchy_reform = {
+	icon = "king"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	fixed_rank = 2
+	trigger = {
+		OR = {
+			vassal = 1
+			personal_union = 1
+			march = 1
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	modifiers = {
+		prestige = 0.5
+		reduced_liberty_desire = -0.25
+	}
+}
+
+lithuania_warlord_duke = {
+	icon = "crown_highlighted"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = lithuania_warlord_duke
+			tag = LIT
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		has_reform = lithuania_warlord_duke
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 30
+	fixed_rank = 2
+	modifiers = {
+		years_of_nationalism = -5
+		promote_culture_cost = -0.5
+		governing_capacity = 200
+	}
+}
+
+arch_duchy_reform = {
+	icon = archduchy
+	allow_normal_conversion = yes
+	fixed_rank = 2
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	potential = {
+		OR = {
+			primary_culture = austrian
+			has_reform = arch_duchy_reform
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		OR = {
+			primary_culture = austrian
+			has_reform = arch_duchy_reform
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	modifiers = {
+		prestige = 0.5
+		papal_influence = 0.5
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+crown_of_saint_wenceslaus = {
+	icon = crown_of_saint_wenceslaus
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = crown_of_saint_wenceslaus
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	modifiers = {
+		legitimacy = 0.5
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+		fixed_rank = 2
+		queen = yes
+		heir = no
+		duration = 100
+		has_term_election = yes
+		states_general_mechanic = {
+			Catholics = {
+				improve_relation_modifier = 0.1
+				land_morale = 0.05
+			}
+			Ultraquists = {
+				global_unrest = -1
+				tolerance_heretic = 1
+			}
+		}
+	}
+}
+
+crown_of_saint_wenceslaus_2 = {
+	icon = crown_of_saint_wenceslaus
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	fixed_rank = 2
+	nation_designer_cost = 20
+	potential = {
+		OR = {
+			tag = BOH
+			has_reform = crown_of_saint_wenceslaus_2
+			NOT = {
+				religion = norse_pagan_reformed
+			}
+			NOT = {
+				religion = hellenic_pagan
+			}
+			NOT = {
+				religion = druidic_pagan
+			}
+		}
+	}
+	modifiers = {
+		legitimacy = 0.5
+	}
+}
+
+polish_constitutionalism_reform = {
+	icon = poland_constitution_painting
+	allow_normal_conversion = yes
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+	fixed_rank = 2
+	nation_designer_cost = 100
+	potential = {
+		OR = {
+			tag = POL
+			tag = PLC
+			has_reform = polish_constitutionalism_reform
+			NOT = {
+				religion = norse_pagan_reformed
+			}
+			NOT = {
+				religion = hellenic_pagan
+			}
+			NOT = {
+				religion = druidic_pagan
+			}
+		}
+	}
+	trigger = {
+		has_reform = polish_constitutionalism_reform
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	modifiers = {
+		monarch_admin_power = 1
+		administrative_efficiency = 0.05
+		max_absolutism = -10
+	}
+	has_parliament = yes
+	custom_attributes = {
+		enables_national_strenghtening_project = yes		#+15% Manpower, -0.05 monthly devastation and -10 Hostile Movement Speed in provinces with accepted culture.
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+hessian_modern_militarized_monarchy_reform = {
+	icon = hesse_modern
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	fixed_rank = 2
+	nation_designer_cost = 125
+	potential = {
+		OR = {
+			tag = HES
+			has_reform = hessian_militarized_monarchy_reform
+			NOT = {
+				religion = norse_pagan_reformed
+			}
+			NOT = {
+				religion = hellenic_pagan
+			}
+			NOT = {
+				religion = druidic_pagan
+			}
+		}
+	}
+	trigger = {
+		has_reform = hessian_militarized_monarchy_reform
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		absolutism = 50
+	}
+	modifiers = {
+		yearly_army_professionalism = 0.005
+		discipline = 0.05
+		monarch_military_power = 1
+		possible_condottieri = 5
+	}
+	custom_attributes = {
+		enables_patriotism = yes
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+norse_reform = {
+	icon = "commander_king_reform"
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	fixed_rank = 2
+	modifiers = {
+		unjustified_demands = -0.2
+		province_warscore_cost = -0.2
+		monthly_splendor = 2
+	}
+	potential = {
+		religion = norse_pagan_reformed
+	}
+	trigger = {
+		religion = norse_pagan_reformed
+	}
+	ai = {
+		factor = 0.5
+		modifier = {
+			factor = 10
+			religion = norse_pagan_reformed
+		}
+	}
+}
+
+norse_reform_odin = {
+	icon = "rioting_burning_2"
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	fixed_rank = 2
+	modifiers = {
+		war_exhaustion_cost = -0.1
+		war_taxes_cost_modifier = -0.5
+		monarch_military_power = 2
+	}
+	potential = {
+		religion = norse_pagan_reformed
+	}
+	trigger = {
+		religion = norse_pagan_reformed
+		has_personal_deity = odin
+	}
+	ai = {
+		factor = 0.5
+		modifier = {
+			factor = 10
+			religion = norse_pagan_reformed
+		}
+		modifier = {
+			factor = 100
+			has_personal_deity = odin
+		}
+	}
+}
+
+norse_reform_freya = {
+	icon = "paper_money_map"
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	fixed_rank = 2
+	modifiers = {
+		administrative_efficiency = 0.05
+		inflation_action_cost = -0.1
+		monarch_admin_power = 2
+	}
+	potential = {
+		religion = norse_pagan_reformed
+	}
+	trigger = {
+		religion = norse_pagan_reformed
+		has_personal_deity = freya
+	}
+	ai = {
+		factor = 0.5
+		modifier = {
+			factor = 10
+			religion = norse_pagan_reformed
+		}
+		modifier = {
+			factor = 100
+			has_personal_deity = freya
+		}
+	}
+}
+
+norse_reform_tor = {
+	icon = "smugglers_haven"
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	fixed_rank = 2
+	modifiers = {
+		available_province_loot = 0.33
+		army_tradition_decay = -0.01
+		leader_land_shock = 2
+	}
+	potential = {
+		religion = norse_pagan_reformed
+	}
+	trigger = {
+		religion = norse_pagan_reformed
+		has_personal_deity = tor
+	}
+	ai = {
+		factor = 0.5
+		modifier = {
+			factor = 10
+			religion = norse_pagan_reformed
+		}
+		modifier = {
+			factor = 100
+			has_personal_deity = tor
+		}
+	}
+}
+
+norse_reform_tyr = {
+	icon = "paper_with_seal_3"
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	fixed_rank = 2
+	modifiers = {
+		trade_company_governing_cost = -0.33
+		trade_company_investment_cost = -0.1
+		leader_naval_fire = 2
+	}
+	potential = {
+		religion = norse_pagan_reformed
+	}
+	trigger = {
+		religion = norse_pagan_reformed
+		has_personal_deity = tyr
+	}
+	ai = {
+		factor = 0.5
+		modifier = {
+			factor = 10
+			religion = norse_pagan_reformed
+		}
+		modifier = {
+			factor = 100
+			has_personal_deity = tyr
+		}
+	}
+}
+
+norse_reform_njord = {
+	icon = "merchant_ship"
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	fixed_rank = 2
+	modifiers = {
+		naval_forcelimit_modifier = 0.33
+		own_coast_naval_combat_bonus = 1
+		leader_naval_manuever = 1
+	}
+	potential = {
+		religion = norse_pagan_reformed
+	}
+	trigger = {
+		religion = norse_pagan_reformed
+		has_personal_deity = njord
+	}
+	ai = {
+		factor = 0.5
+		modifier = {
+			factor = 10
+			religion = norse_pagan_reformed
+		}
+		modifier = {
+			factor = 100
+			has_personal_deity = njord
+		}
+	}
+}
+
+norse_reform_snotra = {
+	icon = "paper_with_seal"
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	fixed_rank = 2
+	modifiers = {
+		governing_capacity_modifier = 0.33
+		monthly_reform_progress_modifier = 0.25
+		monarch_diplomatic_power = 2
+	}
+	potential = {
+		religion = norse_pagan_reformed
+	}
+	trigger = {
+		religion = norse_pagan_reformed
+		has_personal_deity = snotra
+	}
+	ai = {
+		factor = 0.5
+		modifier = {
+			factor = 10
+			religion = norse_pagan_reformed
+		}
+		modifier = {
+			factor = 100
+			has_personal_deity = snotra
+		}
+	}
+}
+
+rajput_kingdom = {
+	icon = "rajput_kingdom"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "Dharma"
+		OR = {
+			culture_group = western_aryan
+			primary_culture = rajput
+		}
+		NOT = {
+			primary_culture = marathi
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		technology_group = indian
+	}
+	valid_for_nation_designer = yes
+	fixed_rank = 2
+	nation_designer_cost = 10
+	nation_designer_trigger = {
+		OR = {
+			culture_group = western_aryan
+			primary_culture = rajput
+		}
+		NOT = {
+			primary_culture = marathi
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		technology_group = indian
+	}
+	legacy_equivalent = feudal_monarchy
+	modifiers = {
+		army_tradition = 0.25
+	}
+}
+
+gond_kingdom = {
+	icon = "chieftain"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "Dharma"
+		technology_group = indian
+		primary_culture = gondi
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	fixed_rank = 2
+	nation_designer_trigger = {
+		technology_group = indian
+		primary_culture = gondi
+	}
+	legacy_equivalent = tribal_kingdom_legacy
+	modifiers = {
+		defensiveness = 0.2
+	}
+}
+
+k_of_arm = {
+	icon = "king"
+	allow_normal_conversion = yes
+	potential = {
+		AND = {
+			tag = ARM
+			religion_group = christian
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = -10
+	monarchy = yes
+	valid_for_nation_designer = no
+	maintain_dynasty = yes
+	royal_marriage = yes
+	queen = yes
+	rulers_can_be_generals = yes
+	fixed_rank = 2
+	modifiers = {
+		missionaries = 1
+		missionary_maintenance_cost = -0.25
+	}
+}
+
+indian_sultanate_reform = {
+	icon = "indian_sultanate"
+	allow_normal_conversion = yes
+	fixed_rank = 2
+	potential = {
+		OR = {
+			capital_scope = {
+				superregion = india_superregion
+			}
+			culture_group = eastern_aryan
+			culture_group = western_aryan
+			culture_group = dravidian
+			culture_group = hindusthani
+			culture_group = central_indic
+			has_reform = indian_sultanate_reform
+		}
+		religion_group = muslim
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	nation_designer_trigger = {
+		religion_group = muslim
+		capital_scope = {
+			superregion = india_superregion
+		}
+		OR = {
+			culture_group = eastern_aryan
+			culture_group = western_aryan
+			culture_group = dravidian
+			culture_group = hindusthani
+			culture_group = central_indic
+		}
+	}
+	legacy_equivalent = indian_sultanate_legacy
+	modifiers = {
+		tolerance_heathen = 3
+	}
+	government_abilities = {
+		iqta_mechanic
+	}
+}
+
+kingdom_of_sicily_reform = {
+	icon = sicily_kingdom_of_sicily
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	fixed_rank = 2
+	nation_designer_cost = 0
+	potential = {
+		OR = {
+			primary_culture = neapolitan
+			primary_culture = sicilian
+			has_reform = kingdom_of_sicily_reform
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		OR = {
+			primary_culture = neapolitan
+			primary_culture = sicilian
+			has_reform = kingdom_of_sicily_reform
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	modifiers = {
+		max_absolutism = 5
+		global_autonomy = -0.025
+	}
+	# custom_attributes = {
+	# enables_liber_augustalis = yes #-10% Estate Influence while you are over 90% Legitimacy
+	# }
+	ai = {
+		factor = 100
+	}
+}
+
+english_monarchy = {
+	icon = "british_queen"
+	allow_normal_conversion = no
+	potential = {
+		have_had_reform = english_monarchy
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 15
+	fixed_rank = 2
+	nation_designer_trigger = {
+		has_dlc = "Common Sense"
+	}
+	legacy_equivalent = english_monarchy_legacy
+	start_territory_to_estates = 0.3
+	modifiers = {
+		governing_capacity = 50
+		legitimacy = 0.5
+		global_unrest = -1
+		max_absolutism = -30
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+	}
+	custom_attributes = {
+		blocked_call_diet = yes
+	}
+}
+
+prussian_monarchy = {
+	icon = "prussian_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			AND = {
+				tag = PRU
+				NOT = {
+					map_setup = map_setup_random
+				}
+			}
+			AND = {
+				tag = GER
+				have_had_reform = prussian_monarchy
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = prussian_monarchy
+			}
+		}
+	}
+	trigger = {
+		OR = {
+			is_playing_custom_nation = yes
+			religion = protestant
+			religion = reformed
+			religion = hussite
+			religion = anglican
+			religion = cathar
+			religion = fraticelli
+			religion = lollard
+			religion = waldensian
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	fixed_rank = 3
+	legacy_equivalent = prussian_monarchy_legacy
+	modifiers = {
+		war_exhaustion = -0.02
+		global_unrest = -2
+		global_autonomy = -0.075
+		max_absolutism = 10
+		monarch_military_power = 3
+		nobles_loyalty_modifier = 0.1
+		governing_capacity_modifier = -0.5
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Rights of Man"
+		}
+		militarised_society = yes
+	}
+}
+
+mamluk_government = {
+	icon = "mamluk_government"
+	allow_normal_conversion = yes
+	potential = {
+		religion_group = muslim
+		OR = {
+			AND = {
+				tag = MAM
+				NOT = {
+					map_setup = map_setup_random
+				}
+			}
+			have_had_reform = mamluk_government
+		}
+	}
+	legacy_equivalent = mamluk_government_legacy
+	queen = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 60
+	fixed_rank = 2
+	nation_designer_trigger = {
+		religion_group = muslim
+	}
+	modifiers = {
+		num_accepted_cultures = 3
+		#-50% cost to promote cultures
+		global_autonomy = -0.025
+		monarch_admin_power = 2
+		same_culture_advisor_cost = -0.25
+		promote_culture_cost = -0.5
+		governing_capacity = 50
+		nobles_influence_modifier = 0.1
+	}
+	conditional = {
+		government_abilities = {
+			mamluk_mechanic
+		}
+		heir = no
+		foreign_slave_rulers = yes
+	}
+}
+
+kingdom_of_castille_and_leon = {
+	icon = castille_leon
+	allow_normal_conversion = yes
+	fixed_rank = 2
+	potential = {
+		OR = {
+			tag = CAS
+			tag = LON
+			has_reform = kingdom_of_castille_and_leon
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		has_reform = kingdom_of_castille_and_leon
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		production_efficiency = -0.1
+		global_manpower_modifier = 0.05
+		nobles_influence_modifier = 0.05
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+hispanic_kingdom = {
+	icon = spain_charles
+	allow_normal_conversion = yes
+	fixed_rank = 2
+	potential = {
+		OR = {
+			tag = SPA
+			has_reform = hispanic_kingdom
+		}
+	}
+	trigger = {
+		has_reform = hispanic_kingdom
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 25
+	modifiers = {
+		tolerance_own = 1
+		num_accepted_cultures = 3
+		governing_capacity = 150
+	}
+	ai = {
+		factor = 102
+	}
+}
+
+kingdom_of_portugal = {
+	icon = kingdom_of_portugal
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = POR
+			has_reform = kingdom_of_portugal
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		NOT = {
+			is_year = 1481
+		}
+	}
+	valid_for_nation_designer = yes
+	fixed_rank = 2
+	nation_designer_cost = 20
+	modifiers = {
+		min_autonomy = 10
+		papal_influence = 1
+		land_morale = 0.05
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+kingdom_of_portugal_and_azures = {
+	icon = portuguese_thassalocracy
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			tag = POR
+			culture_group = celtic_iberian
+			has_reform = kingdom_of_portugal_and_azures
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		is_year = 1481
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 25
+	fixed_rank = 2
+	modifiers = {
+		global_autonomy = -0.025
+		trade_steering = 0.1
+		navy_tradition = 1
+	}
+	ai = {
+		factor = 101
+	}
+}
+
+gorkha_kingdom_reform = {
+	icon = tribal_federation
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	fixed_rank = 2
+	nation_designer_cost = 10
+	potential = {
+		OR = {
+			has_reform = gorkha_kingdom_reform
+			tag = GRK
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		NOT = {
+			tag = NPL
+		}
+	}
+	modifiers = {
+		war_exhaustion = -0.02
+		army_tradition_decay = -0.01
+		nobles_influence_modifier = -0.05
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+kingdom_of_jerusalem_reform = {
+	icon = holy_war
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	fixed_rank = 2
+	nation_designer_cost = 100
+	has_devotion = yes
+	effect = {
+		add_devotion = 100
+	}
+	potential = {
+		OR = {
+			tag = KOJ
+			has_reform = kingdom_of_jerusalem_reform
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	modifiers = {
+		tolerance_own = 1
+	}
+	custom_attributes = {
+		enables_crusader_order = yes
+		enables_divine_blood = yes
+	}
+	government_abilities = {
+		feudal_theocracy_mechanic
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+solar_kingdom_reform = {
+	icon = asian_scripture
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	fixed_rank = 2
+	nation_designer_cost = 50
+	potential = {
+		NOT = {
+			religion = shinto
+		}
+		NOT = {
+			religion = confucianism
+		}
+		OR = {
+			religion_group = eastern
+			religion_group = dharmic
+			religion_group = muslim
+			religion = dayawism
+		}
+		technology_group = chinese
+	}
+	trigger = {
+		has_reform = solar_kingdom_reform
+	}
+	modifiers = {
+		vassal_forcelimit_bonus = 2
+		governing_capacity = 250
+		diplomatic_upkeep = 1
+	}
+	ai = {
+		factor = 102
+	}
+}
+
+irish_high_king = {
+	icon = "king"
+	allow_normal_conversion = yes
+	potential = {
+		tag = IRE
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = -10
+	monarchy = yes
+	valid_for_nation_designer = no
+	maintain_dynasty = yes
+	royal_marriage = yes
+	queen = yes
+	rulers_can_be_generals = yes
+	fixed_rank = 2
+	modifiers = {
+		production_efficiency = 0.15
+		tolerance_own = 2
+		global_colonial_growth = 15
+	}
+}
+
+high_king_of_ireland_reform = {
+	icon = high_king_of_ireland
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	fixed_rank = 2
+	potential = {
+		OR = {
+			has_reform = high_king_of_ireland_reform
+			tag = IRE
+			NOT = {
+				religion = norse_pagan_reformed
+			}
+			NOT = {
+				religion = hellenic_pagan
+			}
+			NOT = {
+				religion = druidic_pagan
+			}
+		}
+	}
+	trigger = {
+		OR = {
+			has_reform = high_king_of_ireland_reform
+			tag = IRE
+			NOT = {
+				religion = norse_pagan_reformed
+			}
+			NOT = {
+				religion = hellenic_pagan
+			}
+			NOT = {
+				religion = druidic_pagan
+			}
+		}
+	}
+	modifiers = {
+		prestige = 1
+		max_absolutism = 5
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+elective_monarchy = {
+	icon = "elective_monarchy"
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			has_reform = elective_monarchy
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = elective_monarchy
+			}
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	legacy_equivalent = elective_monarchy_legacy
+	lock_level_when_selected = yes
+	fixed_rank = 2
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	nation_designer_trigger = {
+		has_dlc = "Res Publica"
+	}
+	modifiers = {
+		vassal_income = 0.25
+		global_unrest = -1
+		max_absolutism = -30
+		governing_capacity = 100
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+		is_elective = yes
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+elective_monarchy_reform = {
+	icon = "ballot_box"
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	fixed_rank = 2
+	election_on_death = yes
+	has_term_election = yes
+	duration = 100
+	potential = {
+		OR = {
+			have_had_reform = feudalism_reform
+			has_reform = feudalism_reform
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		NOT = {
+			tag = POL
+		}
+	}
+	modifiers = {
+		heir_chance = 1
+	}
+	custom_attributes = {
+		enables_elective_monarchy = yes
+	}
+}
+
+arch_king_reform = {
+	icon = crown_highlighted
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	fixed_rank = 2
+	nation_designer_cost = 0
+	potential = {
+		OR = {
+			primary_culture = danish
+			has_reform = arch_king_reform
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		1 = {
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		12 = {
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		17 = {
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+	}
+	trigger = {
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		1 = {
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		12 = {
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		17 = {
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+	}
+	modifiers = {
+		prestige = 1
+		diplomatic_annexation_cost = -0.05
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+consulate_of_the_sea = {
+	icon = GE_trader
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 50
+	fixed_rank = 2
+	potential = {
+		has_reform = consulate_of_the_sea
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	modifiers = {
+		merchants = 1
+		galley_power = 0.2
+		global_trade_power = 0.15
+		global_sailors_modifier = 0.15
+		naval_forcelimit_modifier = 0.2
+	}
+	ai = {
+		factor = 10
+	}
+}
+
+habsburg_monarchy_reform = {
+	icon = habsburg_monarchy
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 35
+	fixed_rank = 2
+	potential = {
+		OR = {
+			primary_culture = austrian
+			has_reform = arch_duchy_reform
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	trigger = {
+		OR = {
+			AND = {
+				OR = {
+					senior_union_with = BOH
+					owns = 266
+				}
+				OR = {
+					senior_union_with = HUN
+					owns = 153
+				}
+			}
+			has_reform = habsburg_monarchy_reform
+		}
+	}
+	modifiers = {
+		tolerance_own = 1
+		mil_advisor_cost = -0.15
+		governing_capacity = 150
+	}
+	custom_attributes = {
+		enables_religious_domination = yes		#+1 tolerance of the true faith in catholic subjects
+	}
+	ai = {
+		factor = 101
+	}
+}
+
+consulate_of_the_malay = {
+	icon = asian_scripture
+	allow_normal_conversion = yes
+	fixed_rank = 2
+	valid_for_nation_designer = yes
+	nation_designer_cost = 50
+	potential = {
+		has_reform = consulate_of_the_malay
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	modifiers = {
+		tolerance_own = 1
+		naval_morale = 0.1
+		merchants = 1
+	}
+	custom_attributes = {
+		enables_unite_the_malay = yes		#5% Naval Force Limit and Sailors for each Accepted Malay Culture.
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+shogunate = {
+	icon = "shogunate"
+	allow_normal_conversion = yes
+	potential = {
+		NOT = {
+			has_country_flag = formed_japan_flag
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		OR = {
+			AND = {
+				capital_scope = {
+					province_id = 1020
+				}
+				culture_group = japanese_g
+				NOT = {
+					exists = JAP
+				}
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = shogunate
+			}
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 50
+	nation_designer_trigger = {
+		culture_group = japanese_g
+		technology_group = chinese
+		capital_scope = {
+			region = japan_region
+		}
+		owns = 1020
+	}
+	legacy_equivalent = shogunate_legacy
+	fixed_rank = 3
+	maintain_dynasty = yes
+	allow_vassal_war = yes
+	allow_vassal_alliance = yes
+	lock_level_when_selected = yes
+	modifiers = {
+		diplomats = 1
+		envoy_travel_time = -0.25
+		max_absolutism = 5
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+celestial_empire = {
+	icon = "celestial_empire"
+	allow_normal_conversion = no
+	potential = {
+		if = {
+			limit = {
+				has_dlc = "Mandate of Heaven"
+			}
+			is_emperor_of_china = yes
+		}
+		else = {
+			OR = {
+				has_reform = celestial_empire
+				AND = {
+					culture_group = east_asian
+					num_of_cities = 50
+				}
+			}
+		}
+		NOT = {
+			has_global_flag = empire_of_china_dismantled
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	legacy_equivalent = celestial_empire_legacy
+	maintain_dynasty = yes
+	allow_force_tributary = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	lock_level_when_selected = yes
+	nation_designer_trigger = {
+		culture_group = east_asian
+		technology_group = chinese
+		capital_scope = {
+			OR = {
+				region = north_china_region
+				region = xinan_region
+				region = south_china_region
+			}
+		}
+	}
+	factions = {
+		temples
+		enuchs
+		bureaucrats
+	}
+	fixed_rank = 3
+	start_territory_to_estates = 0.9
+	modifiers = {
+		prestige = 0.5
+		church_influence_modifier = -0.1
+		nobles_influence_modifier = -0.1
+		burghers_influence_modifier = -0.1
+		governing_capacity = 300
+	}
+	ai = {
+		factor = 1000		# should always be picked if available
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mandate of Heaven"
+		}
+		has_meritocracy = yes
+		factions = {
+		}
+	}
+}
+
+ottoman_government = {
+	lock_level_when_selected = yes
+	allow_normal_conversion = yes
+	icon = "ottoman_government"
+	potential = {
+		religion_group = muslim
+		OR = {
+			AND = {
+				tag = TUR
+				NOT = {
+					map_setup = map_setup_random
+				}
+			}
+			AND = {
+				tag = RUM
+				NOT = {
+					map_setup = map_setup_random
+				}
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = ottoman_government
+			}
+		}
+	}
+	valid_for_nation_designer = yes
+	fixed_rank = 3
+	nation_designer_cost = 20
+	nation_designer_trigger = {
+		religion_group = muslim
+	}
+	legacy_equivalent = ottoman_government_legacy
+	maintain_dynasty = yes
+	modifiers = {
+		unjustified_demands = -0.1
+		legitimacy = 0.5
+		max_absolutism = 5
+		governing_capacity = 150
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	conditional = {
+		has_pashas = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Rights of Man"
+		}
+		has_harem = yes
+	}
+}
+
+austrian_dual_monarchy = {
+	icon = "austrian_dual_monarchy_reform"
+	allow_normal_conversion = yes
+	legacy_equivalent = austrian_archduchy
+	potential = {
+		#added via script
+		has_dlc = "Emperor"
+		OR = {
+			has_reform = austrian_dual_monarchy
+			have_had_reform = austrian_dual_monarchy
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	fixed_rank = 3
+	nation_designer_trigger = {
+		has_dlc = "Emperor"
+	}
+	modifiers = {
+		num_accepted_cultures = 2
+		global_unrest = -2
+		monarch_diplomatic_power = 2
+		promote_culture_cost = -0.33
+	}
+}
+
+tsardom = {
+	icon = "king"
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = east_slavic
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		OR = {
+			religion = orthodox
+			religion = paulician
+			religion = bogomilist
+			religion = monothelite
+			religion = iconoclast
+		}
+		OR = {
+			AND = {
+				tag = RUS
+				NOT = {
+					map_setup = map_setup_random
+				}
+			}
+			AND = {
+				tag = UKR
+				NOT = {
+					map_setup = map_setup_random
+				}
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = tsardom
+			}
+		}
+	}
+	fixed_rank = 3
+	legacy_equivalent = tsardom_legacy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	nation_designer_trigger = {
+		culture_group = east_slavic
+		OR = {
+			religion = orthodox
+			religion = paulician
+			religion = bogomilist
+			religion = monothelite
+			religion = iconoclast
+		}
+	}
+	modifiers = {
+		global_manpower_modifier = 0.2
+		yearly_absolutism = 0.5
+		global_autonomy = -0.05
+		governing_capacity = 250
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Third Rome"
+		}
+		government_abilities = {
+			russian_mechanic
+		}
+		claim_states = yes
+	}
+}
+
+portuguese_empire_reform = {
+	icon = king
+	allow_normal_conversion = yes
+	potential = {
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		OR = {
+			tag = POR
+			culture_group = celtic_iberian
+			has_reform = portuguese_empire_reform
+		}
+	}
+	trigger = {
+		OR = {
+			has_reform = portuguese_empire_reform
+			AND = {
+				has_reform = kingdom_of_portugal_and_azures
+				absolutism = 50
+			}
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 60
+	fixed_rank = 3
+	modifiers = {
+		trade_efficiency = 0.1
+		num_accepted_cultures = 2
+		trade_company_investment_cost = -0.25
+		navy_tradition = 1
+	}
+	custom_attributes = {
+		enables_kingdom_of_brazil = yes
+	}
+	ai = {
+		factor = 102
+	}
+}
+
+empire_of_japan_reform = {
+	icon = shogunate
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 100
+	potential = {
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		OR = {
+			tag = JAP
+			has_reform = empire_of_japan_reform
+		}
+	}
+	trigger = {
+		OR = {
+			tag = JAP
+			has_reform = empire_of_japan_reform
+		}
+	}
+	legacy_equivalent = shogunate_legacy
+	fixed_rank = 3
+	maintain_dynasty = yes
+	allow_vassal_war = yes
+	allow_vassal_alliance = yes
+	lock_level_when_selected = yes
+	modifiers = {
+		diplomats = 1
+		envoy_travel_time = -0.25
+		max_absolutism = 5
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+serbian_empire_reform = {
+	icon = serbian_empire
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	potential = {
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		OR = {
+			primary_culture = serbian
+			has_reform = serbian_empire_reform
+		}
+	}
+	trigger = {
+		OR = {
+			has_reform = serbian_empire_reform
+		}
+	}
+	fixed_rank = 3
+	modifiers = {
+		max_absolutism = 5
+		unjustified_demands = -0.25
+	}
+	custom_attributes = {
+		enables_royal_mining_monopoly = yes		#0.25 Goods produced and -0.05 Autonomy in all Stated Mining Provinces.
+	}
+	ai = {
+		factor = 101
+	}
+}
+
+tsardom_of_bulgaria_reform = {
+	icon = russian_principality
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	fixed_rank = 3
+	potential = {
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		OR = {
+			primary_culture = bulgarian
+			has_reform = tsardom_of_bulgaria_reform
+		}
+	}
+	trigger = {
+		OR = {
+			primary_culture = bulgarian
+			has_reform = tsardom_of_bulgaria_reform
+		}
+	}
+	modifiers = {
+		max_absolutism = 10
+		yearly_absolutism = 0.5
+		diplomatic_upkeep = 1
+		global_manpower_modifier = 0.1
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+united_holy_roman_empire_reform = {
+	icon = GE_HRE
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 200
+	fixed_rank = 3
+	potential = {
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		OR = {
+			tag = HLR
+			has_reform = united_holy_roman_empire_reform
+		}
+	}
+	trigger = {
+		OR = {
+			tag = HLR
+			has_reform = united_holy_roman_empire_reform
+		}
+	}
+	fixed_rank = 3
+	modifiers = {
+		governing_capacity = 500
+		accept_vassalization_reasons = 50
+		max_absolutism = 15
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+austrian_empire_reform = {
+	icon = austrian_empire
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 65
+	potential = {
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		OR = {
+			primary_culture = austrian
+			has_reform = habsburg_monarchy_reform
+			has_reform = arch_duchy_reform
+		}
+	}
+	trigger = {
+		OR = {
+			AND = {
+				absolutism = 50
+				owns = 266
+				owns = 153
+				total_development = 500
+			}
+			has_reform = austrian_empire_reform
+		}
+	}
+	fixed_rank = 3
+	modifiers = {
+		harsh_treatment_cost = -0.15
+		monarch_diplomatic_power = 1
+		governing_capacity = 250
+		num_accepted_cultures = 3
+	}
+	ai = {
+		factor = 102
+	}
+}
+
+achaemenid_empire_reform = {
+	icon = king
+	allow_normal_conversion = yes
+	fixed_rank = 3
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	maintain_dynasty = yes
+	potential = {
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		AND = {
+			OR = {
+				religion_group = zoroastrian
+				religion = zun_pagan_reformed
+				has_reform = achaemenid_empire_reform
+			}
+			OR = {
+				culture_group = iranian
+				culture_group = east_iranian
+				culture_group = persian
+			}
+		}
+	}
+	trigger = {
+		AND = {
+			OR = {
+				religion_group = zoroastrian
+				religion = zun_pagan_reformed
+				has_reform = achaemenid_empire_reform
+			}
+			OR = {
+				culture_group = iranian
+				culture_group = east_iranian
+				culture_group = persian
+			}
+		}
+	}
+	fixed_rank = 3
+	modifiers = {
+		prestige = 1
+		governing_capacity = 250
+		global_missionary_strength = 0.02
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+edo_empire_reform = {
+	icon = tribal_federation
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	fixed_rank = 3
+	nation_designer_cost = 40
+	potential = {
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		OR = {
+			has_reform = edo_empire_reform
+			tag = BEN
+		}
+	}
+	fixed_rank = 3
+	modifiers = {
+		global_unrest = -2
+		max_absolutism = 5
+		governing_capacity = 250
+	}
+	ai = {
+		factor = 100
+	}
+	#Add -5 Noble Influence
+}
+
+rum_eagle_reform = {
+	icon = mamluk_government
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	fixed_rank = 3
+	maintain_dynasty = yes
+	potential = {
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		has_reform = rum_eagle_reform
+	}
+	trigger = {
+		has_reform = rum_eagle_reform
+	}
+	modifiers = {
+		monarch_admin_power = 2
+		max_absolutism = 5
+		diplomatic_upkeep = 1
+	}
+	custom_attributes = {
+	}
+	conditional = {
+		government_abilities = {
+			iqta_mechanic
+		}
+		heir = no
+		has_pashas = yes
+		foreign_slave_rulers = yes
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+revolutionary_empire_reform = {
+	lock_level_when_selected = yes
+	icon = "rioting_burning_2"
+	allow_normal_conversion = no
+	potential = {
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		has_reform = revolutionary_empire_reform
+	}
+	legacy_equivalent = revolutionary_empire
+	valid_for_new_country = no
+	uses_revolutionary_zeal = yes
+	revolutionary = yes
+	fixed_rank = 3
+	modifiers = {
+		global_manpower_modifier = 0.25
+		land_morale = 0.1
+		global_autonomy = -0.2
+		governing_capacity = 150
+		max_revolutionary_zeal = 50
+	}
+	custom_attributes = {
+		locked_government_type = yes
+	}
+	removed_effect = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_china_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_china_flag
+				restore_country_name = yes
+				override_country_name = CHINA_STRING
+				set_country_flag = is_china_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_turkey_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_turkey_flag
+				restore_country_name = yes
+				override_country_name = TURKEY_STRING
+				set_country_flag = is_turkey_flag
+			}
+			if = {
+				limit = {
+					has_country_flag = is_revolutionary_gurkani_flag
+					is_revolutionary = no
+				}
+				clr_country_flag = is_revolutionary_gurkani_flag
+				restore_country_name = yes
+				override_country_name = GURKANI_EMPIRE_STRING
+				set_country_flag = is_gurkani_flag
+			}
+		}
+	}
+}
+
+#############################################
+################ REPUBLICS ##################
+#############################################
+imperial_veche_republic = {
+	icon = "merchant"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			religion = orthodox
+			religion = paulician
+			religion = iconoclast
+			religion = monotite
+			religion = bogomilist
+		}
+		AND = {
+			total_development = 1000
+			OR = {
+				culture_group = east_slavic
+				culture_group = novgorod_group
+				culture_group = ruthenian_group
+				is_playing_custom_nation = yes
+				have_had_reform = veche_republic
+			}
+		}
+	}
+	legacy_equivalent = veche_republic_legacy
+	nation_designer_trigger = {
+		OR = {
+			culture_group = east_slavic
+			culture_group = novgorod_group
+			culture_group = ruthenian_group
+		}
+	}
+	modifiers = {
+		merchants = 3
+		global_manpower_modifier = 0.2
+		governing_capacity = 150
+		max_absolutism = -20
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 40
+	boost_income = yes
+	fixed_rank = 3
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = {
+				has_dlc = "Mare Nostrum"
+			}
+			NOT = {
+				has_dlc = "Third Rome"
+			}
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = {
+				has_dlc = "Res Publica"
+			}
+			NOT = {
+				has_dlc = "Third Rome"
+			}
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+			NOT = {
+				has_dlc = "Third Rome"
+			}
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Third Rome"
+			NOT = {
+				has_dlc = "Mare Nostrum"
+			}
+			NOT = {
+				has_dlc = "Res Publica"
+			}
+		}
+		government_abilities = {
+			russian_mechanic
+		}
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Third Rome"
+			has_dlc = "Mare Nostrum"
+			NOT = {
+				has_dlc = "Res Publica"
+			}
+		}
+		government_abilities = {
+			russian_mechanic
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Third Rome"
+			NOT = {
+				has_dlc = "Mare Nostrum"
+			}
+			has_dlc = "Res Publica"
+		}
+		government_abilities = {
+			russian_mechanic
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Third Rome"
+			has_dlc = "Mare Nostrum"
+			has_dlc = "Res Publica"
+		}
+		government_abilities = {
+			russian_mechanic
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	duration = 4
+}
+
+peoples_republic = {
+	allow_normal_conversion = no
+	icon = "peasant_republic"
+	potential = {
+		OR = {
+			has_country_flag = great_peasants_war_peasant_republic
+			have_had_reform = peasants_republic
+		}
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 20
+	legacy_equivalent = peasants_republic_legacy
+	modifiers = {
+		production_efficiency = 0.2
+		land_morale = 0.1
+		max_absolutism = -20
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	duration = 6
+	fixed_rank = 3
+}
+
+grk_demo = {
+	icon = "peasants"
+	allow_normal_conversion = yes
+	potential = {
+		culture_group = byzantine
+	}
+	republican_name = yes
+	republic = yes
+	duration = 4
+	legacy_equivalent = oligarchic_republic
+	has_term_election = yes
+	rulers_can_be_generals = yes
+	modifiers = {
+		reelection_cost = -0.25		#Yes this is supposed to increase reelection_cost owo
+		candidate_random_bonus = 2
+		diplomatic_reputation = 1
+		max_absolutism = -40
+	}
+}
+
+cub_peasant_rep = {
+	allow_normal_conversion = yes
+	has_term_election = yes
+	icon = "peasant_republic"
+	potential = {
+		tag = CUB
+	}
+	modifiers = {
+		infantry_power = 0.1
+		may_recruit_female_generals = yes
+		max_absolutism = -40
+	}
+	valid_for_nation_designer = no
+	government_abilities = {
+		russian_mechanic
+	}
+	duration = 6
+}
+
+hat_slave_state = {
+	allow_normal_conversion = yes
+	icon = "peasants"
+	potential = {
+		tag = HAT
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 20
+	modifiers = {
+		num_accepted_cultures = 2
+		envoy_travel_time = -0.2
+		global_tax_modifier = 0.1
+		max_absolutism = -40
+	}
+	duration = 4
+	has_term_election = yes
+	conditional = {
+		government_abilities = {
+			mamluk_mechanic
+		}
+	}
+}
+
+arg_rep = {
+	allow_normal_conversion = yes
+	icon = "states_general"
+	has_term_election = yes
+	potential = {
+		tag = LAP
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 20
+	modifiers = {
+		diplomatic_annexation_cost = -0.1
+		prestige = 0.5
+		advisor_cost = -0.1
+		max_absolutism = -40
+	}
+	states_general_mechanic = {
+		federalists = {
+			global_tax_modifier = 0.1
+			global_trade_goods_size_modifier = 0.1
+		}
+		centralists = {
+			general_cost = -0.2
+			land_morale = 0.1
+		}
+	}
+	duration = 5
+}
+
+peu_rep = {
+	allow_normal_conversion = yes
+	icon = "castle"
+	potential = {
+		tag = PEU
+	}
+	duration = 4
+	modifiers = {
+		governing_capacity_modifier = 0.1
+		global_unrest = -1
+		garrison_size = 0.2
+		max_absolutism = -40
+	}
+}
+
+para_dict = {
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	icon = "parliament_hall"
+	potential = {
+		tag = PRG
+	}
+	valid_for_nation_designer = yes
+	has_term_election = no
+	modifiers = {
+		monarch_military_power = 1
+		governing_capacity_modifier = -0.25
+		global_regiment_recruit_speed = -0.1
+		max_absolutism = -40
+	}
+}
+
+cam_rep = {
+	allow_normal_conversion = yes
+	icon = "states_general"
+	potential = {
+		tag = CAM
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 20
+	modifiers = {
+		core_creation = -0.1
+		development_cost = -0.1
+		max_absolutism = -40
+	}
+	states_general_mechanic = {
+		federalists = {
+			global_tax_modifier = 0.2
+			global_trade_goods_size_modifier = 0.1
+		}
+		centralists = {
+			siege_ability = 0.1
+			discipline = 0.05
+		}
+	}
+	duration = 4
+}
+
+balt_trib_fed = {
+	lock_level_when_selected = yes
+	allow_normal_conversion = no
+	valid_for_nation_designer = no
+	icon = "assembly_hall"
+	duration = 5
+	potential = {
+		tag = BLT
+	}
+	modifiers = {
+	}
+	militarised_society = yes
+}
+
+rep_gran_colo = {
+	lock_level_when_selected = yes
+	allow_normal_conversion = no
+	valid_for_nation_designer = no
+	icon = "assembly_hall"
+	has_term_election = yes
+	duration = 5
+	potential = {
+		tag = COL
+	}
+	modifiers = {
+		leader_land_fire = 1
+		leader_land_shock = 1
+	}
+	militarised_society = yes
+}
+
+phon_city_state = {
+	icon = "free_city"
+	has_term_election = yes
+	duration = 4
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		AND = {
+			culture_group = phoenician_g
+			NOT = {
+				num_of_cities = 10
+			}
+		}
+	}
+	modifiers = {
+		development_cost = -0.1
+		tolerance_heretic = 1
+		tolerance_heathen = 1
+	}
+	fixed_rank = 1
+	custom_attributes = {
+		locked_government_type = yes
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
+	duration = 4
+}
+
+phon_fed = {
+	icon = "vroedschap"
+	has_term_election = yes
+	duration = 4
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		AND = {
+			culture_group = phoenician_g
+			num_of_cities = 10
+		}
+	}
+	modifiers = {
+		development_cost = -0.15
+		reduced_liberty_desire = 25
+		tolerance_heretic = 2
+		tolerance_heathen = 2
+	}
+	fixed_rank = 2
+	custom_attributes = {
+		locked_government_type = yes
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		has_parliament = yes
+		claim_states = yes
+	}
+	duration = 4
+}
+
+phon_empire = {
+	icon = "GE_trader"
+	has_term_election = yes
+	duration = 4
+	allow_normal_conversion = no
+	lock_level_when_selected = yes
+	potential = {
+		AND = {
+			culture_group = phoenician_g
+			num_of_cities = 50
+		}
+	}
+	modifiers = {
+		development_cost = -0.15
+		reduced_liberty_desire = 25
+		tolerance_heretic = 3
+		tolerance_heathen = 3
+		may_perform_slave_raid = yes
+	}
+	fixed_rank = 23
+	custom_attributes = {
+		locked_government_type = yes
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+		has_parliament = yes
+		claim_states = yes
+	}
+	duration = 4
+}
+
+##############################################
+################ THEOCRACIES #################
+##############################################
+druid_soc = {
+	potential = {
+		OR = {
+			culture_group = gaelic
+			culture_group = celtic_iberian
+		}
+		NOT = {
+			tag = ENG
+		}
+		NOT = {
+			tag = GBR
+		}
+		religion = druidic_pagan
+		has_country_flag = druid_embraced
+	}
+	modifiers = {
+		missionary_maintenance_cost = -0.4
+		global_trade_goods_size_modifier = 0.1
+		missionaries = 2
+		manpower_in_true_faith_provinces = 0.25
+		advisor_pool = 1
+	}
+	custom_attributes = {
+		lottery_election = yes
+		election_on_death = yes
+	}
+	heir = no
+	rulers_can_be_generals = yes
+	icon = "monks"
+	allow_normal_conversion = no
+	papacy = yes
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}
+
+fraticelli_papacy_reform = {
+	potential = {
+		tag = URB
+	}
+	modifiers = {
+		prestige_per_development_from_conversion = 0.33
+		tolerance_own = 1
+		church_influence_modifier = 0.2
+	}
+	valid_for_nation_designer = no
+	icon = "papacy"
+	allow_normal_conversion = yes
+	legacy_equivalent = papal_government
+	papacy = yes
+	allow_convert = no
+	lock_level_when_selected = yes
+	fixed_rank = 2
+	custom_attributes = {
+		locked_government_type = yes
+	}
+}

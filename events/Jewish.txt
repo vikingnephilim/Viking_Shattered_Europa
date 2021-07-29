@@ -1,0 +1,2420 @@
+########################################
+# Jewish Incident Events
+########################################
+namespace = jewish_events
+#Pogroms
+country_event = {
+	id = jewish_events.1
+	title = "jewish_events.1.t"
+	desc = "jewish_events.1.d"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			random_province = {
+				limit = {
+					religion_group = jewish
+					NOT = {
+						tolerance_to_this = -2
+					}
+				}
+				save_event_target_as = blood_libel_province
+			}
+			random_province = {
+				limit = {
+					province_id = 110
+					religion_group = jewish
+					NOT = {
+						tolerance_to_this = -2
+					}
+				}
+				save_event_target_as = blood_libel_province
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.1.a"
+		custom_tooltip = jewish_incident_pogroms.tt
+		custom_tooltip = jewish_events.open.tt
+		add_yearly_manpower = -1
+		add_incident_variable_value = {
+			incident = incident_pogroms
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.2
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.1.b"
+		custom_tooltip = jewish_events.isolation.tt
+		custom_tooltip = jewish_incident_pogroms.tt
+		if = {
+			limit = {
+				any_owned_province = {
+					NOT = {
+						religion_group = jewish
+					}
+				}
+			}
+			random_owned_province = {
+				limit = {
+					NOT = {
+						religion_group = jewish
+					}
+				}
+				change_religion = sephardic
+			}
+		}
+		add_stability = -1
+		add_incident_variable_value = {
+			incident = incident_pogroms
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.2
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.2
+	title = "jewish_events.2.t"
+	desc = "jewish_events.2.d"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+				}
+				save_event_target_as = jewish_massacre_province
+				if = {
+					limit = {
+						religion_group = jewish
+					}
+					change_religion = catholic
+				}
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.2.a"
+		custom_tooltip = jewish_events.much.isolation.tt
+		event_target:jewish_massacre_province = {
+			change_religion = sephardic
+			if = {
+				limit = {
+					base_tax = 2
+				}
+				add_base_tax = -1
+			}
+			else_if = {
+				limit = {
+					base_production = 2
+				}
+				add_base_production = -1
+			}
+			else_if = {
+				limit = {
+					base_manpower = 2
+				}
+				add_base_manpower = -1
+			}
+			else = {
+				add_devastation = 100
+			}
+		}
+		add_incident_variable_value = {
+			incident = incident_pogroms
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.3
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.2.b"
+		custom_tooltip = jewish_events.open.tt
+		event_target:jewish_massacre_province = {
+			add_province_modifier = {
+				name = "pogrom_easing_tensions"
+				duration = 3650
+			}
+		}
+		add_incident_variable_value = {
+			incident = incident_pogroms
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.3
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.3
+	title = "jewish_events.3.t"
+	desc = "jewish_events.3.d"
+	picture = ST_PETERS_CHURCH_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jewish_events.3.a"
+		custom_tooltip = jewish_events.isolation.tt
+		add_prestige = 10
+		add_incident_variable_value = {
+			incident = incident_pogroms
+			value = -1
+		}
+		set_country_flag = end_of_pogroms_chain
+	}
+	option = {
+		name = "jewish_events.3.b"
+		custom_tooltip = jewish_events.middle_way.tt
+		add_adm_power = 50
+		set_country_flag = end_of_pogroms_chain
+	}
+	option = {
+		name = "jewish_events.3.c"
+		custom_tooltip = jewish_events.open.tt
+		add_dip_power = 50
+		add_incident_variable_value = {
+			incident = incident_pogroms
+			value = 1
+		}
+		set_country_flag = end_of_pogroms_chain
+	}
+}
+
+#Pogroms - Outcomes
+country_event = {
+	id = jewish_events.4
+	title = "jewish_events.4.t"
+	desc = "jewish_events.4.d"
+	picture = {
+		trigger = {
+			has_dlc = "Emperor"
+		}
+		picture = BAD_POPE_eventPicture
+	}
+	picture = {
+		trigger = {
+			NOT = {
+				has_dlc = "Emperor"
+			}
+		}
+		picture = POPE_PREACHING_eventPicture
+	}
+	trigger = {
+		is_incident_active = incident_pogroms
+		has_country_flag = end_of_pogroms_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_pogroms
+				value = 2
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.4.a"
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				add_isolationism = 1
+				end_incident = incident_pogroms
+			}
+			else = {
+				add_isolationism = 1
+				end_incident = incident_pogroms
+			}
+		}
+		add_country_modifier = {
+			name = "pogroms_legitimized"
+			duration = 18250
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.5
+	title = "jewish_events.5.t"
+	desc = "jewish_events.5.d"
+	picture = {
+		trigger = {
+			has_dlc = "Emperor"
+		}
+		picture = BAD_POPE_eventPicture
+	}
+	picture = {
+		trigger = {
+			NOT = {
+				has_dlc = "Emperor"
+			}
+		}
+		picture = POPE_PREACHING_eventPicture
+	}
+	trigger = {
+		is_incident_active = incident_pogroms
+		has_country_flag = end_of_pogroms_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_pogroms
+				value = 4
+			}
+		}
+		incident_variable_value = {
+			incident = incident_pogroms
+			value = 2
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.5.a"
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				end_incident = incident_pogroms
+			}
+			else = {
+				end_incident = incident_pogroms
+			}
+		}
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		add_country_modifier = {
+			name = "ambiguous_verdict"
+			duration = 18250
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.6
+	title = "jewish_events.6.t"
+	desc = "jewish_events.6.d"
+	picture = POPE_PREACHING_eventPicture
+	trigger = {
+		is_incident_active = incident_pogroms
+		has_country_flag = end_of_pogroms_chain
+		incident_variable_value = {
+			incident = incident_pogroms
+			value = 4
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.6.a"
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				add_isolationism = -1
+				end_incident = incident_pogroms
+			}
+			else = {
+				add_isolationism = -1
+				end_incident = incident_pogroms
+			}
+		}
+		add_country_modifier = {
+			name = "jews_absolved"
+			duration = 18250
+		}
+	}
+}
+
+#Ghettos
+country_event = {
+	id = jewish_events.7
+	title = "jewish_events.7.t"
+	desc = "jewish_events.7.d"
+	picture = CITY_VIEW_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jewish_events.7.a"
+		custom_tooltip = jewish_incident_ghettos.tt
+		custom_tooltip = jewish_events.open.tt
+		reverse_add_opinion = {
+			who = PAP
+			modifier = opinion_displeased
+		}
+		add_incident_variable_value = {
+			incident = incident_ghettos
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.8
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.7.b"
+		custom_tooltip = jewish_incident_ghettos.tt
+		custom_tooltip = jewish_events.isolation.tt
+		add_prestige = -10
+		add_incident_variable_value = {
+			incident = incident_ghettos
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.8
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.8
+	title = "jewish_events.8.t"
+	desc = "jewish_events.8.d"
+	picture = CITY_VIEW_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+				}
+				save_event_target_as = jewish_ghetto_province
+			}
+			random_owned_province = {
+				limit = {
+					is_capital = no
+				}
+				save_event_target_as = jewish_ghetto_province
+			}
+			random_owned_province = {
+				limit = {
+					religion_group = christian
+				}
+				save_event_target_as = jewish_ghetto_province
+			}
+			random_owned_province = {
+				limit = {
+					religion_group = christian
+					is_capital = no
+				}
+				save_event_target_as = jewish_ghetto_province
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.8.a"
+		custom_tooltip = jewish_events.isolation.tt
+		add_prestige = 5
+		event_target:jewish_ghetto_province = {
+			add_unrest = 10
+		}
+		add_incident_variable_value = {
+			incident = incident_ghettos
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.9
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.8.b"
+		custom_tooltip = jewish_events.middle_way.tt
+		event_target:jewish_ghetto_province = {
+			add_province_modifier = {
+				name = "new_ghetto"
+				duration = 3650
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.9
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.8.c"
+		custom_tooltip = jewish_events.open.tt
+		add_prestige = -5
+		event_target:jewish_ghetto_province = {
+			add_province_modifier = {
+				name = "new_ghetto"
+				duration = 3650
+			}
+			add_unrest = -5
+		}
+		add_incident_variable_value = {
+			incident = incident_ghettos
+			value = -1
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.9
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.9
+	title = "jewish_events.9.t"
+	desc = "jewish_events.9.d"
+	picture = CITY_VIEW_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jewish_events.9.a"
+		custom_tooltip = jewish_events.open.tt
+		PAP = {
+			add_casus_belli = {
+				target = ROOT
+				type = cb_insult
+			}
+		}
+		every_neighbor_country = {
+			limit = {
+				NOT = {
+					tag = PAP
+				}
+				religion_group = christian
+				is_subject = no
+			}
+			add_casus_belli = {
+				target = ROOT
+				type = cb_insult
+			}
+		}
+		add_incident_variable_value = {
+			incident = incident_ghettos
+			value = 2
+		}
+		set_country_flag = end_of_ghettos_chain
+	}
+	option = {
+		name = "jewish_events.9.b"
+		custom_tooltip = jewish_events.isolation.tt
+		add_country_modifier = {
+			name = "caps_and_kerchiefs"
+			duration = 1825
+		}
+		add_incident_variable_value = {
+			incident = incident_ghettos
+			value = 1
+		}
+		set_country_flag = end_of_ghettos_chain
+	}
+}
+
+# Ghettos - Outcomes
+country_event = {
+	id = jewish_events.10
+	title = "jewish_events.10.t"
+	desc = "jewish_events.10.d"
+	picture = CITY_VIEW_eventPicture
+	trigger = {
+		is_incident_active = incident_ghettos
+		has_country_flag = end_of_ghettos_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_ghettos
+				value = 3
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.10.a"
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				add_isolationism = 1
+				end_incident = incident_ghettos
+			}
+			else = {
+				add_isolationism = 1
+				end_incident = incident_ghettos
+			}
+		}
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		add_country_modifier = {
+			name = "cum_nimis_absurdum"
+			duration = 18250
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.11
+	title = "jewish_events.11.t"
+	desc = "jewish_events.11.d"
+	picture = CITY_VIEW_eventPicture
+	trigger = {
+		is_incident_active = incident_ghettos
+		has_country_flag = end_of_ghettos_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_ghettos
+				value = 5
+			}
+		}
+		incident_variable_value = {
+			incident = incident_ghettos
+			value = 3
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.11.a"
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				end_incident = incident_ghettos
+			}
+			else = {
+				end_incident = incident_ghettos
+			}
+		}
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		add_country_modifier = {
+			name = "bull_unenforced"
+			duration = 18250
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.12
+	title = "jewish_events.12.t"
+	desc = "jewish_events.12.d"
+	picture = CITY_VIEW_eventPicture
+	trigger = {
+		is_incident_active = incident_ghettos
+		has_country_flag = end_of_ghettos_chain
+		incident_variable_value = {
+			incident = incident_ghettos
+			value = 5
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.12.a"
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				add_isolationism = -1
+				end_incident = incident_ghettos
+			}
+			else = {
+				add_isolationism = -1
+				end_incident = incident_ghettos
+			}
+		}
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		add_country_modifier = {
+			name = "bull_repealed"
+			duration = 18250
+		}
+	}
+}
+
+#Kabbalah
+country_event = {
+	id = jewish_events.13
+	title = "jewish_events.13.t"
+	desc = "jewish_events.13.d"
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jewish_events.13.a"
+		custom_tooltip = jewish_incident_kabbalah.tt
+		custom_tooltip = jewish_events.open.tt
+		add_republican_tradition = 10
+		add_legitimacy = 10
+		add_devotion = 10
+		add_incident_variable_value = {
+			incident = incident_kabbalah
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.14
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.13.b"
+		custom_tooltip = jewish_incident_kabbalah.tt
+		custom_tooltip = jewish_events.isolation.tt
+		add_adm_power = 25
+		add_innovativeness_small_effect = yes
+		add_incident_variable_value = {
+			incident = incident_kabbalah
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.14
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.14
+	title = "jewish_events.14.t"
+	desc = "jewish_events.14.d"
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jewish_events.14.a"
+		custom_tooltip = jewish_events.isolation.tt
+		add_adm_power = 50
+		add_dip_power = 50
+		add_incident_variable_value = {
+			incident = incident_kabbalah
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.15
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.14.b"
+		custom_tooltip = jewish_events.open.tt
+		add_ruler_modifier = {
+			name = "kabbalah_ruler"
+		}
+		add_innovativeness_small_effect = yes
+		add_incident_variable_value = {
+			incident = incident_kabbalah
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.15
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.15
+	title = "jewish_events.15.t"
+	desc = "jewish_events.15.d"
+	picture = BIG_BOOK_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jewish_events.15.a"
+		set_country_flag = end_of_kabbalah_chain
+		custom_tooltip = jewish_events.isolation.tt
+		add_stability = 1
+		add_incident_variable_value = {
+			incident = incident_kabbalah
+			value = -1
+		}
+	}
+	option = {
+		name = "jewish_events.15.b"
+		set_country_flag = end_of_kabbalah_chain
+		custom_tooltip = jewish_events.open.tt
+		random_owned_province = {
+			add_base_tax = 1
+		}
+		add_incident_variable_value = {
+			incident = incident_kabbalah
+			value = 2
+		}
+	}
+}
+
+# Kabbalah - Outcomes
+country_event = {
+	id = jewish_events.16
+	title = "jewish_events.16.t"
+	desc = "jewish_events.16.d"
+	picture = BIG_BOOK_eventPicture
+	trigger = {
+		is_incident_active = incident_kabbalah
+		has_country_flag = end_of_kabbalah_chain
+		incident_variable_value = {
+			incident = incident_kabbalah
+			value = 5
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.16.a"
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				add_isolationism = 1
+				end_incident = incident_kabbalah
+			}
+			else = {
+				add_isolationism = 1
+				end_incident = incident_kabbalah
+			}
+		}
+		add_country_modifier = {
+			name = "embraced_kabbalah"
+			duration = 18250
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.17
+	title = "jewish_events.17.t"
+	desc = "jewish_events.17.d"
+	picture = BIG_BOOK_eventPicture
+	trigger = {
+		is_incident_active = incident_kabbalah
+		has_country_flag = end_of_kabbalah_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_kabbalah
+				value = 5
+			}
+		}
+		incident_variable_value = {
+			incident = incident_kabbalah
+			value = 3
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.17.a"
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				end_incident = incident_kabbalah
+			}
+			else = {
+				end_incident = incident_kabbalah
+			}
+		}
+		add_country_modifier = {
+			name = "syncretic_kabbalah"
+			duration = 18250
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.18
+	title = "jewish_events.18.t"
+	desc = "jewish_events.18.d"
+	picture = BIG_BOOK_eventPicture
+	trigger = {
+		is_incident_active = incident_kabbalah
+		has_country_flag = end_of_kabbalah_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_kabbalah
+				value = 3
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.18.a"
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				add_isolationism = -1
+				end_incident = incident_kabbalah
+			}
+			else = {
+				add_isolationism = -1
+				end_incident = incident_kabbalah
+			}
+		}
+		add_country_modifier = {
+			name = "rejected_kabbalah"
+			duration = 18250
+		}
+	}
+}
+
+#Court Jews
+country_event = {
+	id = jewish_events.19
+	title = "jewish_events.19.t"
+	desc = "jewish_events.19.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jewish_events.19.b"
+		custom_tooltip = jewish_incident_banking.tt
+		custom_tooltip = jewish_events.open.tt
+		add_years_of_income = 0.5
+		add_incident_variable_value = {
+			incident = incident_banking
+			value = 3
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.20
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.19.a"
+		custom_tooltip = jewish_incident_banking.tt
+		custom_tooltip = jewish_events.isolation.tt
+		add_mercantilism = 1
+		add_incident_variable_value = {
+			incident = incident_banking
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.20
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.20
+	title = "jewish_events.20.t"
+	desc = "jewish_events.20.d"
+	picture = ADVISOR_eventPicture
+	immediate = {
+		hidden_effect = {
+			random_country = {
+				limit = {
+					religion_group = christian
+				}
+				save_event_target_as = court_jew_country
+			}
+			random_country = {
+				limit = {
+					is_neighbor_of = ROOT
+					religion_group = christian
+				}
+				save_event_target_as = court_jew_country
+			}
+			random_country = {
+				limit = {
+					is_neighbor_of = ROOT
+					religion_group = christian
+					num_of_loans = 1
+				}
+				save_event_target_as = court_jew_country
+			}
+		}
+	}
+	is_triggered_only = yes
+	option = {
+		name = "jewish_events.20.a"
+		custom_tooltip = jewish_events.open.tt
+		event_target:court_jew_country = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_court_events_interfered
+			}
+		}
+		add_dip_power = 50
+		add_incident_variable_value = {
+			incident = incident_banking
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.21
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.20.b"
+		custom_tooltip = jewish_events.middle_way.tt
+		event_target:court_jew_country = {
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_pleased
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.21
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.20.c"
+		custom_tooltip = jewish_events.isolation.tt
+		event_target:court_jew_country = {
+			add_casus_belli = {
+				target = ROOT
+				type = cb_insult
+			}
+		}
+		define_advisor = {
+			name = "Joseph Oppenheimer"
+			type = master_of_mint
+			skill = 2
+			discount = yes
+		}
+		add_incident_variable_value = {
+			incident = incident_banking
+			value = -1
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.21
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.21
+	title = "jewish_events.21.t"
+	desc = "jewish_events.21.d"
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jewish_events.21.a"
+		set_country_flag = end_of_banking_chain
+		custom_tooltip = jewish_events.middle_way.tt
+		add_country_modifier = {
+			name = "supported_jewish_banks"
+			duration = 3650
+		}
+	}
+	option = {
+		name = "jewish_events.21.b"
+		set_country_flag = end_of_banking_chain
+		custom_tooltip = jewish_events.open.tt
+		every_country = {
+			limit = {
+				religion_group = christian
+				employed_advisor = {
+					religion = sephardic
+				}
+			}
+			add_opinion = {
+				who = ROOT
+				modifier = opinion_grateful
+			}
+		}
+		add_adm_power = 75
+		add_incident_variable_value = {
+			incident = incident_banking
+			value = 1
+		}
+	}
+	option = {
+		name = "jewish_events.21.c"
+		set_country_flag = end_of_banking_chain
+		custom_tooltip = jewish_events.isolation.tt
+		add_mercantilism = 1
+		add_incident_variable_value = {
+			incident = incident_banking
+			value = -1
+		}
+	}
+}
+
+#Banking - Outcomes
+country_event = {
+	id = jewish_events.22
+	title = "jewish_events.22.t"
+	desc = "jewish_events.22.d"
+	picture = COURT_eventPicture
+	trigger = {
+		is_incident_active = incident_banking
+		has_country_flag = end_of_banking_chain
+		incident_variable_value = {
+			incident = incident_banking
+			value = 4
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.22.a"
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				add_isolationism = 1
+				end_incident = incident_banking
+			}
+			else = {
+				add_isolationism = 1
+				end_incident = incident_banking
+			}
+		}
+		add_country_modifier = {
+			name = "banking_collapse"
+			duration = 18250
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.23
+	title = "jewish_events.23.t"
+	desc = "jewish_events.23.d"
+	picture = COURT_eventPicture
+	trigger = {
+		is_incident_active = incident_banking
+		has_country_flag = end_of_banking_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_banking
+				value = 4
+			}
+		}
+		incident_variable_value = {
+			incident = incident_banking
+			value = 2
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.23.a"
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				end_incident = incident_banking
+			}
+			else = {
+				end_incident = incident_banking
+			}
+		}
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		add_country_modifier = {
+			name = "independent_banks"
+			duration = 18250
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.24
+	title = "jewish_events.24.t"
+	desc = "jewish_events.24.d"
+	picture = COURT_eventPicture
+	trigger = {
+		is_incident_active = incident_banking
+		has_country_flag = end_of_banking_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_banking
+				value = 2
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.24.a"
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				add_isolationism = -1
+				end_incident = incident_banking
+			}
+			else = {
+				add_isolationism = -1
+				end_incident = incident_banking
+			}
+		}
+		add_country_modifier = {
+			name = "court_jews"
+			duration = 18250
+		}
+	}
+}
+
+#Sabbateans
+country_event = {
+	id = jewish_events.25
+	title = "jewish_events.25.t"
+	desc = "jewish_events.25.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jewish_events.25.a"
+		custom_tooltip = jewish_incident_sabbateans.tt
+		custom_tooltip = jewish_events.isolation.tt
+		add_stability = -1
+		add_incident_variable_value = {
+			incident = incident_sabbateans
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.26
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.25.b"
+		custom_tooltip = jewish_incident_sabbateans.tt
+		custom_tooltip = jewish_events.open.tt
+		add_prestige = -15
+		add_incident_variable_value = {
+			incident = incident_sabbateans
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.26
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.26
+	title = "jewish_events.26.t"
+	desc = "jewish_events.26.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jewish_events.26.a"
+		custom_tooltip = jewish_events.isolation.tt
+		define_advisor = {
+			name = "Jacob Emden"
+			type = theologian
+			skill = 2
+			discount = yes
+		}
+		add_incident_variable_value = {
+			incident = incident_sabbateans
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.27
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.26.b"
+		custom_tooltip = jewish_events.open.tt
+		define_advisor = {
+			name = "Jonathan Eybeschutz"
+			type = philosopher
+			skill = 2
+			discount = yes
+		}
+		add_incident_variable_value = {
+			incident = incident_sabbateans
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.27
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.27
+	title = "jewish_events.27.t"
+	desc = "jewish_events.27.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jewish_events.27.a"
+		set_country_flag = end_of_sabbateans_chain
+		custom_tooltip = jewish_events.isolation.tt
+		random_owned_province = {
+			spawn_rebels = {
+				type = heretic_rebels
+				size = 1
+			}
+		}
+		add_incident_variable_value = {
+			incident = incident_sabbateans
+			value = -1
+		}
+	}
+	option = {
+		name = "jewish_events.27.b"
+		set_country_flag = end_of_sabbateans_chain
+		custom_tooltip = jewish_events.open.tt
+		add_ruler_modifier = {
+			name = "frankist_ruler"
+		}
+		add_incident_variable_value = {
+			incident = incident_sabbateans
+			value = 1
+		}
+	}
+}
+
+#Sabbateans - Outcome
+country_event = {
+	id = jewish_events.28
+	title = "jewish_events.28.t"
+	desc = "jewish_events.28.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	trigger = {
+		is_incident_active = incident_sabbateans
+		has_country_flag = end_of_sabbateans_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_sabbateans
+				value = 2
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.28.a"
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				add_isolationism = -1
+				end_incident = incident_sabbateans
+			}
+			else = {
+				add_isolationism = -1
+				end_incident = incident_sabbateans
+			}
+		}
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		add_country_modifier = {
+			name = "defeated_sabbateans"
+			duration = 18250
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.29
+	title = "jewish_events.29.t"
+	desc = "jewish_events.29.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	trigger = {
+		is_incident_active = incident_sabbateans
+		has_country_flag = end_of_sabbateans_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_sabbateans
+				value = 4
+			}
+		}
+		incident_variable_value = {
+			incident = incident_sabbateans
+			value = 2
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.29.a"
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				end_incident = incident_sabbateans
+			}
+			else = {
+				end_incident = incident_sabbateans
+			}
+		}
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		add_country_modifier = {
+			name = "underground_sabbateans"
+			duration = 18250
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.30
+	title = "jewish_events.30.t"
+	desc = "jewish_events.30.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	trigger = {
+		is_incident_active = incident_sabbateans
+		has_country_flag = end_of_sabbateans_chain
+		incident_variable_value = {
+			incident = incident_sabbateans
+			value = 4
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.30.a"
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				add_isolationism = 1
+				end_incident = incident_sabbateans
+			}
+			else = {
+				add_isolationism = 1
+				end_incident = incident_sabbateans
+			}
+		}
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		add_country_modifier = {
+			name = "embraced_sabbateans"
+			duration = 18250
+		}
+	}
+}
+
+#Hasidism
+country_event = {
+	id = jewish_events.31
+	title = "jewish_events.31.t"
+	desc = "jewish_events.31.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jewish_events.31.a"
+		custom_tooltip = jewish_incident_hasidism.tt
+		custom_tooltip = jewish_events.open.tt
+		add_legitimacy = -15
+		add_republican_tradition = -15
+		add_devotion = -15
+		add_incident_variable_value = {
+			incident = incident_hasidism
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.32
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.31.b"
+		custom_tooltip = jewish_incident_hasidism.tt
+		custom_tooltip = jewish_events.isolation.tt
+		lose_reforms = 1
+		add_incident_variable_value = {
+			incident = incident_hasidism
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.32
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.32
+	title = "jewish_events.32.t"
+	desc = "jewish_events.32.d"
+	picture = {
+		trigger = {
+			has_dlc = "Emperor"
+		}
+		picture = BONFIRE_OF_THE_VANITIES_eventPicture
+	}
+	picture = {
+		trigger = {
+			NOT = {
+				has_dlc = "Emperor"
+			}
+		}
+		picture = RELIGIOUS_CONVERSION_eventPicture
+	}
+	is_triggered_only = yes
+	option = {
+		name = "jewish_events.32.a"
+		custom_tooltip = jewish_events.isolation.tt
+		add_dip_power = 25
+		random_owned_province = {
+			add_unrest = -5
+		}
+		add_incident_variable_value = {
+			incident = incident_hasidism
+			value = -1
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.33
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.32.b"
+		custom_tooltip = jewish_events.middle_way.tt
+		add_adm_power = 50
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.33
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.32.c"
+		custom_tooltip = jewish_events.open.tt
+		add_mil_power = 75
+		random_owned_province = {
+			add_unrest = 5
+		}
+		add_incident_variable_value = {
+			incident = incident_hasidism
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.33
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.33
+	title = "jewish_events.33.t"
+	desc = "jewish_events.33.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jewish_events.27.a"
+		set_country_flag = end_of_hasidism_chain
+		custom_tooltip = jewish_events.open.tt
+		add_stability = 1
+		add_incident_variable_value = {
+			incident = incident_hasidism
+			value = 2
+		}
+	}
+	option = {
+		name = "jewish_events.33.b"
+		set_country_flag = end_of_hasidism_chain
+		custom_tooltip = jewish_events.isolation.tt
+		add_country_modifier = {
+			name = "shtreimel_and_sheitel"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_hasidism
+			value = 1
+		}
+	}
+}
+
+#Hasidism - Outcome
+country_event = {
+	id = jewish_events.34
+	title = "jewish_events.34.t"
+	desc = "jewish_events.34.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	trigger = {
+		is_incident_active = incident_hasidism
+		has_country_flag = end_of_hasidism_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_hasidism
+				value = 2
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.34.a"
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				add_isolationism = -1
+				end_incident = incident_hasidism
+			}
+			else = {
+				add_isolationism = -1
+				end_incident = incident_hasidism
+			}
+		}
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		add_country_modifier = {
+			name = "hasidic_nation"
+			duration = 18250
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.35
+	title = "jewish_events.35.t"
+	desc = "jewish_events.35.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	trigger = {
+		is_incident_active = incident_hasidism
+		has_country_flag = end_of_hasidism_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_hasidism
+				value = 4
+			}
+		}
+		incident_variable_value = {
+			incident = incident_hasidism
+			value = 2
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.35.a"
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				end_incident = incident_hasidism
+			}
+			else = {
+				end_incident = incident_hasidism
+			}
+		}
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		add_country_modifier = {
+			name = "lasting_schism"
+			duration = 18250
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.36
+	title = "jewish_events.36.t"
+	desc = "jewish_events.36.d"
+	picture = RELIGIOUS_CONVERSION_eventPicture
+	trigger = {
+		is_incident_active = incident_hasidism
+		has_country_flag = end_of_hasidism_chain
+		incident_variable_value = {
+			incident = incident_hasidism
+			value = 4
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.36.a"
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				add_isolationism = 1
+				end_incident = incident_hasidism
+			}
+			else = {
+				add_isolationism = 1
+				end_incident = incident_hasidism
+			}
+		}
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		add_country_modifier = {
+			name = "misnagdic_nation"
+			duration = 18250
+		}
+	}
+}
+
+#Haskalah 
+country_event = {
+	id = jewish_events.37
+	title = "jewish_events.37.t"
+	desc = "jewish_events.37.d"
+	picture = ENLIGHTENMENT_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jewish_events.37.a"
+		custom_tooltip = jewish_incident_haskalah.tt
+		custom_tooltip = jewish_events.open.tt
+		add_innovativeness_small_effect = yes
+		add_adm_power = 50
+		add_incident_variable_value = {
+			incident = incident_haskalah
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.38
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.37.b"
+		custom_tooltip = jewish_incident_haskalah.tt
+		custom_tooltip = jewish_events.middle_way.tt
+		add_innovativeness_small_effect = yes
+		add_adm_power = 25
+		add_mil_power = 25
+		add_incident_variable_value = {
+			incident = incident_haskalah
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.38
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.37.c"
+		custom_tooltip = jewish_incident_haskalah.tt
+		custom_tooltip = jewish_events.isolation.tt
+		add_army_tradition = 5
+		if = {
+			limit = {
+				num_of_ports = 1
+			}
+			add_navy_tradition = 5
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.38
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.38
+	title = "jewish_events.38.t"
+	desc = "jewish_events.38.d"
+	picture = ENLIGHTENMENT_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jewish_events.38.a"
+		custom_tooltip = jewish_events.open.tt
+		add_stability = 1
+		add_incident_variable_value = {
+			incident = incident_haskalah
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.39
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.38.b"
+		custom_tooltip = jewish_events.isolation.tt
+		every_owned_province = {
+			limit = {
+				religion_group = jewish
+			}
+			change_culture = hebrew
+		}
+		change_primary_culture = hebrew
+		add_incident_variable_value = {
+			incident = incident_haskalah
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.39
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.39
+	title = "jewish_events.39.t"
+	desc = "jewish_events.39.d"
+	picture = ENLIGHTENMENT_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "jewish_events.39.a"
+		set_country_flag = end_of_haskalah_chain
+		custom_tooltip = jewish_events.isolation.tt
+		add_prestige = 10
+		add_incident_variable_value = {
+			incident = incident_haskalah
+			value = -1
+		}
+	}
+	option = {
+		name = "jewish_events.39.b"
+		set_country_flag = end_of_haskalah_chain
+		custom_tooltip = jewish_events.open.tt
+		define_advisor = {
+			name = "Moses Mendelssohn"
+			type = philosopher
+			skill = 2
+			discount = yes
+		}
+		add_incident_variable_value = {
+			incident = incident_haskalah
+			value = 1
+		}
+	}
+}
+
+#Haskalah - Outcome
+country_event = {
+	id = jewish_events.40
+	title = "jewish_events.40.t"
+	desc = "jewish_events.40.d"
+	picture = ENLIGHTENMENT_eventPicture
+	trigger = {
+		is_incident_active = incident_haskalah
+		has_country_flag = end_of_haskalah_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_haskalah
+				value = 2
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.40.a"
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				add_isolationism = -1
+				end_incident = incident_haskalah
+			}
+			else = {
+				add_isolationism = -1
+				end_incident = incident_haskalah
+			}
+		}
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		add_country_modifier = {
+			name = "rejected_jewish_enlightenment"
+			duration = 18250
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.41
+	title = "jewish_events.41.t"
+	desc = "jewish_events.41.d"
+	picture = ENLIGHTENMENT_eventPicture
+	trigger = {
+		is_incident_active = incident_haskalah
+		has_country_flag = end_of_haskalah_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_haskalah
+				value = 4
+			}
+		}
+		incident_variable_value = {
+			incident = incident_haskalah
+			value = 2
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.41.a"
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				end_incident = incident_haskalah
+			}
+			else = {
+				end_incident = incident_haskalah
+			}
+		}
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		add_country_modifier = {
+			name = "embraced_jewish_enlightenment"
+			duration = 18250
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.42
+	title = "jewish_events.42.t"
+	desc = "jewish_events.42.d"
+	picture = ENLIGHTENMENT_eventPicture
+	trigger = {
+		is_incident_active = incident_haskalah
+		has_country_flag = end_of_haskalah_chain
+		incident_variable_value = {
+			incident = incident_haskalah
+			value = 4
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.42.a"
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				add_isolationism = 1
+				end_incident = incident_haskalah
+			}
+			else = {
+				add_isolationism = 1
+				end_incident = incident_haskalah
+			}
+		}
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		add_country_modifier = {
+			name = "radical_assimilationism"
+			duration = 18250
+		}
+	}
+}
+
+#Imperial Authority 
+country_event = {
+	id = jewish_events.43
+	title = "jewish_events.43.t"
+	desc = "jewish_events.43.d"
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			random_country = {
+				limit = {
+					num_of_cities = 200
+					OR = {
+						tag = HLR
+						tag = ITA
+						tag = GER
+						tag = ROM
+						tag = FRA
+					}
+				}
+				save_event_target_as = imperial_country
+			}
+			random_country = {
+				limit = {
+					num_of_cities = 200
+					religion_group = christian
+					OR = {
+						tag = HLR
+						tag = ITA
+						tag = GER
+						tag = ROM
+						tag = FRA
+					}
+				}
+				save_event_target_as = imperial_country
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.43.a"
+		custom_tooltip = jewish_incident_imperial_authority.tt
+		custom_tooltip = jewish_events.open.tt
+		add_absolutism = 10
+		add_incident_variable_value = {
+			incident = incident_imperial_authority
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.44
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.43.b"
+		custom_tooltip = jewish_incident_imperial_authority.tt
+		custom_tooltip = jewish_events.isolation.tt
+		event_target:imperial_country = {
+			if = {
+				limit = {
+					NOT = {
+						tag = ROOT
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_pleased
+				}
+			}
+		}
+		add_corruption = -5
+		add_incident_variable_value = {
+			incident = incident_imperial_authority
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.44
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.44
+	title = "jewish_events.44.t"
+	desc = "jewish_events.44.d"
+	picture = REFORM_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			random_country = {
+				limit = {
+					num_of_cities = 200
+					OR = {
+						tag = HLR
+						tag = ITA
+						tag = GER
+						tag = ROM
+						tag = FRA
+					}
+				}
+				save_event_target_as = imperial_country
+			}
+			random_country = {
+				limit = {
+					num_of_cities = 200
+					religion_group = christian
+					OR = {
+						tag = HLR
+						tag = ITA
+						tag = GER
+						tag = ROM
+						tag = FRA
+					}
+				}
+				save_event_target_as = imperial_country
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.44.a"
+		custom_tooltip = jewish_events.isolation.tt
+		add_country_modifier = {
+			name = "separation_of_church_and_state"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_imperial_authority
+			value = 1
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.45
+				days = 1095
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.44.b"
+		custom_tooltip = jewish_events.open.tt
+		add_country_modifier = {
+			name = "jewish_provisos"
+			duration = 3650
+		}
+		add_incident_variable_value = {
+			incident = incident_imperial_authority
+			value = 2
+		}
+		hidden_effect = {
+			country_event = {
+				id = jewish_events.45
+				days = 1095
+			}
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.45
+	title = "jewish_events.45.t"
+	desc = "jewish_events.45.d"
+	picture = RELIGIOUS_TURMOIL_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			random_country = {
+				limit = {
+					num_of_cities = 200
+					OR = {
+						tag = HLR
+						tag = ITA
+						tag = GER
+						tag = ROM
+						tag = FRA
+					}
+				}
+				save_event_target_as = imperial_country
+			}
+			random_country = {
+				limit = {
+					num_of_cities = 200
+					religion_group = christian
+					OR = {
+						tag = HLR
+						tag = ITA
+						tag = GER
+						tag = ROM
+						tag = FRA
+					}
+				}
+				save_event_target_as = imperial_country
+			}
+		}
+	}
+	option = {
+		name = "jewish_events.45.a"
+		set_country_flag = end_of_imperial_authority_chain
+		custom_tooltip = jewish_events.open.tt
+		event_target:imperial_country = {
+			if = {
+				limit = {
+					NOT = {
+						tag = ROOT
+					}
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = opinion_court_events_interfered
+				}
+			}
+		}
+		add_yearly_manpower = -0.25
+		add_years_of_income = -0.25
+		add_incident_variable_value = {
+			incident = incident_imperial_authority
+			value = 1
+		}
+	}
+	option = {
+		name = "jewish_events.45.b"
+		set_country_flag = end_of_imperial_authority_chain
+		custom_tooltip = jewish_events.middle_way.tt
+		add_stability = -1
+	}
+	option = {
+		name = "jewish_events.45.c"
+		set_country_flag = end_of_imperial_authority_chain
+		custom_tooltip = jewish_events.isolation.tt
+		add_prestige = -20
+		add_incident_variable_value = {
+			incident = incident_imperial_authority
+			value = -1
+		}
+	}
+}
+
+#Imperial Authority - Outcome
+country_event = {
+	id = jewish_events.46
+	title = "jewish_events.46.t"
+	desc = "jewish_events.46.d"
+	picture = REFORM_eventPicture
+	trigger = {
+		is_incident_active = incident_imperial_authority
+		has_country_flag = end_of_imperial_authority_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_imperial_authority
+				value = 2
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.46.a"
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				add_isolationism = -1
+				end_incident = incident_imperial_authority
+			}
+			else = {
+				add_isolationism = -1
+				end_incident = incident_imperial_authority
+			}
+		}
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		add_country_modifier = {
+			name = "jewish_reforms_repealed"
+			duration = 18250
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.47
+	title = "jewish_events.47.t"
+	desc = "jewish_events.47.d"
+	picture = REFORM_eventPicture
+	trigger = {
+		is_incident_active = incident_imperial_authority
+		has_country_flag = end_of_imperial_authority_chain
+		NOT = {
+			incident_variable_value = {
+				incident = incident_imperial_authority
+				value = 4
+			}
+		}
+		incident_variable_value = {
+			incident = incident_imperial_authority
+			value = 2
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.47.a"
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				end_incident = incident_imperial_authority
+			}
+			else = {
+				end_incident = incident_imperial_authority
+			}
+		}
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		add_country_modifier = {
+			name = "jewish_rights_unsure"
+			duration = 18250
+		}
+	}
+}
+
+country_event = {
+	id = jewish_events.48
+	title = "jewish_events.48.t"
+	desc = "jewish_events.48.d"
+	picture = REFORM_eventPicture
+	trigger = {
+		is_incident_active = incident_imperial_authority
+		has_country_flag = end_of_imperial_authority_chain
+		incident_variable_value = {
+			incident = incident_imperial_authority
+			value = 4
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "jewish_events.48.a"
+		if = {
+			limit = {
+				NOT = {
+					religion_group = jewish
+				}
+			}
+			hidden_effect = {
+				add_isolationism = 1
+				end_incident = incident_imperial_authority
+			}
+			else = {
+				add_isolationism = 1
+				end_incident = incident_imperial_authority
+			}
+		}
+		set_country_flag = jewish_incident_recent
+		clr_country_flag = active_incident_flag
+		add_country_modifier = {
+			name = "jewish_rights_confirmed"
+			duration = 18250
+		}
+	}
+}

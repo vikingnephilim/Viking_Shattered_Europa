@@ -1,0 +1,127 @@
+# Do not change tags in here without changing every other reference to them.
+# If adding new dieties, make sure they are uniquely named.
+shiva = {
+	# (Diplomatic - War)
+	shock_damage = 0.1
+	manpower_recovery_speed = 0.05
+	allow = {
+		religion = shakti
+	}
+	sprite = 1
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}
+	}
+}
+
+ganesha = {
+	#(Diplomatic - Peace)
+	improve_relation_modifier = 0.1
+	global_missionary_strength = 0.02
+	allow = {
+		religion = shakti
+	}
+	sprite = 2
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_diplomat
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_militarist
+		}
+	}
+}
+
+surya = {
+	#(Economic - Income)
+	production_efficiency = 0.1
+	inflation_reduction = -0.1
+	allow = {
+		religion = shakti
+	}
+	sprite = 3
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}
+		modifier = {
+			factor = 2
+			personality = ai_colonialist
+		}
+	}
+}
+
+ganga = {
+	#(Economic - Savings)
+	interest = -0.25
+	build_time = -0.1
+	allow = {
+		religion = shakti
+	}
+	sprite = 4
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 3
+			personality = ai_capitalist
+		}
+		modifier = {
+			factor = 2
+			personality = ai_colonialist
+		}
+	}
+}
+
+shakti = {
+	#(Military - Offensive)
+	core_creation = -0.1
+	land_morale = 0.05
+	allow = {
+		religion = shakti
+	}
+	sprite = 5
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_militarist
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_diplomat
+		}
+	}
+}
+
+vishnu = {
+	# (Military - Defensive)
+	hostile_attrition = 1
+	defensiveness = 0.2
+	allow = {
+		religion = shakti
+	}
+	sprite = 6
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 2
+			personality = ai_balanced
+		}
+		modifier = {
+			factor = 0.5
+			personality = ai_capitalist
+		}
+	}
+}

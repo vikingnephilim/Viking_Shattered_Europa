@@ -1,0 +1,61 @@
+namespace = country_names
+# Pick a name and capital for Netherlands
+country_event = {
+	id = country_names.1
+	title = country_names.t
+	desc = country_names.desc
+	picture = ANGRY_MOB_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = NED
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = country_names.1.a
+		trigger = {
+			primary_culture = frisian
+		}
+		override_country_name = GRUT_FRYSLAN
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = country_names.1.b
+		trigger = {
+			primary_culture = dutch
+		}
+		override_country_name = NEDERLAND
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = country_names.1.c
+		trigger = {
+			primary_culture = flemish
+		}
+		override_country_name = UNITED_PROVINCES
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = country_names.1.d
+		trigger = {
+			primary_culture = Luxembourgian
+		}
+		override_country_name = GREATER_LUXEMBOURG
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		name = country_names.1.e
+		ai_chance = {
+			factor = 1
+		}
+	}
+}

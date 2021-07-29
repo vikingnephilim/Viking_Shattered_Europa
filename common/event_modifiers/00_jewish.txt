@@ -1,0 +1,301 @@
+#Event Modifiers
+
+estate_burghers_dutch_water_lines_mod = {
+	local_hostile_movement_speed = -0.25
+	local_hostile_attrition = 1
+	local_defensiveness = 0.25
+	local_development_cost = 0.5
+	local_state_maintenance_modifier = 0.25
+}
+
+extensive_holdings = {
+	global_tax_income = 100
+	land_forcelimit = 50
+	global_manpower = 25.0
+}
+
+king_in_denmark = {
+	prestige = 1
+	diplomatic_reputation = 1
+	min_autonomy = 25
+}
+
+king_in_neumarkt = {
+	prestige = -1
+	diplomatic_reputation = -1
+	global_unrest = -1
+}
+
+all_graviates_titles_acquired = {
+    legitimacy = 1
+    prestige = 1
+    governing_capacity = 50
+}
+
+augustinian_modifier = {
+	inflation_reduction = 0.1
+}
+
+cluniac_modifier = {
+	manpower_recovery_speed = 0.1
+}
+
+benedictine_modifier = {
+	improve_relation_modifier = 0.1
+}
+
+estate_holy_orders_monopoly_of_beer_mod = {
+	local_production_efficiency = -10
+}
+
+expelled_jews_mod = {
+	local_development_cost = 1
+	local_tax_modifier = -0.5
+}
+
+fight_for_the_cross_m = {
+	discipline = 0.05
+	land_maintenance_modifier = -0.1
+}
+
+donated_ho = {
+	papal_influence = 0.5
+	religion = yes
+}
+
+translated_bible_m = {
+	global_unrest = -2
+	tolerance_own = 1
+}
+
+reinterpreted_bible_m = {
+	advisor_cost = -0.1
+	advisor_pool = 1
+}
+
+anabaptist_fanatism_m = {
+	global_heretic_missionary_strength = 0.02
+}
+
+anabaptist_universities_m = {
+	technology_cost = -0.1	
+}
+
+privateer_integration = {
+	naval_forcelimit_modifier = 0.2
+}
+
+piracy_rampant_m = {
+	yearly_corruption = 0.01
+	prestige_decay = 0.01
+	privateer_efficiency = 0.33
+	navy_tradition = 1
+}
+
+piracy_controlled_m = {
+	global_ship_trade_power = 0.2
+}
+
+tannin_modifier = {
+	local_production_efficiency = 0.15
+}
+
+newworld_trade_modifier_1 = {
+	province_trade_power_value = 10
+	trade_value = 10
+	picture = "nwt_icon"
+}
+
+newworld_trade_modifier_2 = {
+	province_trade_power_value = 20
+	trade_value = 20
+	picture = "nwt_icon"
+}
+
+newworld_trade_modifier_3 = {
+	province_trade_power_value = 30
+	trade_value = 30
+	picture = "nwt_icon"
+}
+
+hanseatic_city = {
+	province_trade_power_value = 5
+	allowed_num_of_buildings = 1
+	local_autonomy = 0.15
+	picture = "hanseatic_icon"
+}
+
+foreign_trade_modifier = {
+	province_trade_power_value = 30
+	trade_value = 30
+	picture = "incoming_icon"
+}
+
+orsini_admin = {
+	interest = -1
+	global_tax_modifier = 0.1
+}
+
+pogrom_easing_tensions = {
+	local_state_maintenance_modifier = 1
+	local_tax_modifier = -0.75
+	local_missionary_strength = -0.05
+}
+
+pogroms_legitimized = {
+	tolerance_heathen = -1
+	improve_relation_modifier = -0.25
+	global_missionary_strength = 0.01
+}
+
+ambiguous_verdict = {
+	improve_relation_modifier = 0.05
+}
+
+jews_absolved = {
+	tolerance_heathen = 1
+	improve_relation_modifier = 0.25
+	global_missionary_strength = -0.01
+}
+
+new_ghetto = {
+	min_local_autonomy = 25
+	local_defensiveness = -0.25
+	local_religious_unity_contribution = -1
+}
+
+caps_and_kerchiefs = {
+	religious_unity = -0.15
+	tolerance_own = -1
+}
+
+cum_nimis_absurdum = {
+	autonomy_change_time = 0.25
+	stability_cost_modifier = -0.1
+}
+
+bull_unenforced = {
+	autonomy_change_time = -0.05
+}
+
+bull_repealed = {
+	autonomy_change_time = -0.25
+	stability_cost_modifier = 0.1
+}
+
+kabbalah_ruler = {
+	idea_cost = -0.1
+	advisor_cost = -0.1
+}
+
+embraced_kabbalah = {
+	army_tradition_decay = 0.01
+	institution_spread_from_true_faith = 0.15
+}
+
+syncretic_kabbalah = {
+	global_institution_spread = 0.05
+}
+
+rejected_kabbalah = {
+	army_tradition_decay = -0.01
+	institution_spread_from_true_faith = -0.15
+}
+
+supported_jewish_banks = {
+	inflation_reduction = 0.1
+	interest = -1
+}
+
+banking_collapse = {
+	global_foreign_trade_power = 0.1
+	same_culture_advisor_cost = 0.15
+}
+
+independent_banks = {
+	same_culture_advisor_cost = -0.05
+}
+
+court_jews = {
+	global_foreign_trade_power = -0.1
+	same_culture_advisor_cost = -0.15
+}
+
+frankist_ruler = {
+	tolerance_heathen = 3
+	tolerance_own = -3
+}
+
+defeated_sabbateans = {
+	missionaries = 1
+	diplomatic_upkeep = -1
+}
+
+underground_sabbateans = {
+	religious_unity = 0.25
+}
+
+embraced_sabbateans = {
+	missionaries = -1
+	diplomatic_upkeep = 1
+}
+
+shtreimel_and_sheitel = {
+	prestige_decay = -0.01
+	state_maintenance_modifier = -0.1
+}
+
+hasidic_nation = {
+	technology_cost = 0.05
+	culture_conversion_cost = -0.25
+}
+
+lasting_schism = {
+	culture_conversion_cost = 0.10
+}
+
+misnagdic_nation = {
+	technology_cost = -0.05
+	culture_conversion_cost = 0.25
+}
+
+rejected_jewish_enlightenment = {
+	years_of_nationalism = 5
+	global_spy_defence = 0.1
+}
+
+embraced_jewish_enlightenment = {
+	embracement_cost = -0.1
+	advisor_pool = 1
+}
+
+radical_assimilationism = {
+	years_of_nationalism = -5
+	global_spy_defence = -0.1
+}
+
+separation_of_church_and_state = {
+	religious_unity = 0.25
+	republican_tradition = 0.3
+	legitimacy = 1
+	devotion = 1
+}
+
+jewish_provisos = {
+	tolerance_own = 2
+	enemy_core_creation = 0.5
+}
+
+jewish_reforms_repealed = {
+	yearly_absolutism = -0.1
+	yearly_corruption = -0.1
+}
+
+jewish_rights_unsure = {
+	min_autonomy_in_territories = -0.1
+}
+
+jewish_rights_confirmed = {
+	yearly_absolutism = 0.1
+	yearly_corruption = 0.1
+}
