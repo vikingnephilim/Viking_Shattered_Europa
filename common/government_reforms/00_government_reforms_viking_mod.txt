@@ -1612,6 +1612,7 @@ crown_of_saint_wenceslaus = {
 	allow_normal_conversion = yes
 	potential = {
 		OR = {
+			tag = BOH
 			has_reform = crown_of_saint_wenceslaus
 		}
 		NOT = {
@@ -1646,32 +1647,6 @@ crown_of_saint_wenceslaus = {
 				tolerance_heretic = 1
 			}
 		}
-	}
-}
-
-crown_of_saint_wenceslaus_2 = {
-	icon = crown_of_saint_wenceslaus
-	allow_normal_conversion = yes
-	valid_for_nation_designer = yes
-	fixed_rank = 2
-	nation_designer_cost = 20
-	potential = {
-		OR = {
-			tag = BOH
-			has_reform = crown_of_saint_wenceslaus_2
-			NOT = {
-				religion = norse_pagan_reformed
-			}
-			NOT = {
-				religion = hellenic_pagan
-			}
-			NOT = {
-				religion = druidic_pagan
-			}
-		}
-	}
-	modifiers = {
-		legitimacy = 0.5
 	}
 }
 
@@ -1716,9 +1691,6 @@ polish_constitutionalism_reform = {
 		max_absolutism = -10
 	}
 	has_parliament = yes
-	custom_attributes = {
-		enables_national_strenghtening_project = yes		#+15% Manpower, -0.05 monthly devastation and -10 Hostile Movement Speed in provinces with accepted culture.
-	}
 	ai = {
 		factor = 100
 	}

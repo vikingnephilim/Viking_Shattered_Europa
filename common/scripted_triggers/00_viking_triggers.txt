@@ -1,5 +1,4 @@
 ### WAR STUFF
-
 is_chinese = {
 	OR = {
 		primary_culture = miao
@@ -20,9 +19,7 @@ is_chinese = {
 	}
 }
 
-
 ### COLONY STUFF
-
 can_country_flip_to_colonial_culture = {
 	#to
 	is_culture_to_$to$ = {
@@ -57,6 +54,19 @@ is_culture_to_american = {
 	}
 }
 
+is_region_to_american = {
+	OR = {
+		region = great_plains_region
+		region = mississippi_region
+		region = southeast_america_region
+		region = northeast_america_region
+		region = great_lakes_region
+		region = canada_region
+		region = hudson_bay_region
+		region = cascadia_region
+	}
+}
+
 is_culture_to_australian = {
 	#cond
 	OR = {
@@ -65,6 +75,12 @@ is_culture_to_australian = {
 		$cond$ = mercian
 		$cond$ = northumbrian
 		$cond$ = rhodesian
+	}
+}
+
+is_region_to_australian = {
+	OR = {
+		region = australia_region
 	}
 }
 
@@ -79,6 +95,15 @@ is_culture_to_belizean = {
 	}
 }
 
+is_region_to_belizean = {
+	OR = {
+		region = mexico_region
+		region = california_region
+		region = rio_grande_region
+		region = central_america_region
+	}
+}
+
 is_culture_to_jamaican = {
 	#cond
 	OR = {
@@ -90,6 +115,10 @@ is_culture_to_jamaican = {
 	}
 }
 
+is_region_to_jamaican = {
+	region = carribeans_region
+}
+
 is_culture_to_new_zealander = {
 	#cond
 	OR = {
@@ -98,6 +127,14 @@ is_culture_to_new_zealander = {
 		$cond$ = mercian
 		$cond$ = northumbrian
 		$cond$ = rhodesian
+	}
+}
+
+is_region_to_new_zealander = {
+	OR = {
+		area = te_ika_a_maui_hauauru_area
+		area = te_ika_a_maui_waho_area
+		area = te_waipounamu_area
 	}
 }
 
@@ -112,6 +149,10 @@ is_culture_to_patagonian = {
 	}
 }
 
+is_region_to_patagonian = {
+	continent = south_america
+}
+
 is_culture_to_rhodesian = {
 	#cond
 	OR = {
@@ -120,6 +161,10 @@ is_culture_to_rhodesian = {
 		$cond$ = mercian
 		$cond$ = northumbrian
 	}
+}
+
+is_region_to_rhodesian = {
+	region = south_africa_region
 }
 
 ###West Germanic
@@ -133,6 +178,10 @@ is_culture_to_afrikaner = {
 	}
 }
 
+is_region_to_afrikaner = {
+	region = south_africa_region
+}
+
 is_culture_to_amerikaans = {
 	#cond
 	OR = {
@@ -141,6 +190,19 @@ is_culture_to_amerikaans = {
 		$cond$ = flemish
 		$cond$ = frisian
 		$cond$ = luxembourgian
+	}
+}
+
+is_region_to_amerikaans = {
+	OR = {
+		region = great_plains_region
+		region = mississippi_region
+		region = southeast_america_region
+		region = northeast_america_region
+		region = great_lakes_region
+		region = canada_region
+		region = hudson_bay_region
+		region = cascadia_region
 	}
 }
 
@@ -155,6 +217,10 @@ is_culture_to_antilliaans = {
 	}
 }
 
+is_region_to_antilliaans = {
+	region = carribeans_region
+}
+
 is_culture_to_mexicaans = {
 	#cond
 	OR = {
@@ -163,6 +229,15 @@ is_culture_to_mexicaans = {
 		$cond$ = flemish
 		$cond$ = frisian
 		$cond$ = luxembourgian
+	}
+}
+
+is_region_to_mexicaans = {
+	OR = {
+		region = mexico_region
+		region = california_region
+		region = rio_grande_region
+		region = central_america_region
 	}
 }
 
@@ -177,6 +252,29 @@ is_culture_to_surinaams = {
 	}
 }
 
+is_region_to_surinaams = {
+	continent = south_america
+}
+
+is_culture_to_nieuw_zeelands = {
+	#cond
+	OR = {
+		$cond$ = afrikaner
+		$cond$ = dutch
+		$cond$ = flemish
+		$cond$ = frisian
+		$cond$ = luxembourgian
+	}
+}
+
+is_region_to_nieuw_zeelands = {
+	OR = {
+		area = te_ika_a_maui_hauauru_area
+		area = te_ika_a_maui_waho_area
+		area = te_waipounamu_area
+	}
+}
+
 is_culture_to_tasmaans = {
 	#cond
 	OR = {
@@ -188,14 +286,9 @@ is_culture_to_tasmaans = {
 	}
 }
 
-is_culture_to_nieuw_zeelands = {
-	#cond
+is_region_to_tasmaans = {
 	OR = {
-		$cond$ = afrikaner
-		$cond$ = dutch
-		$cond$ = flemish
-		$cond$ = frisian
-		$cond$ = luxembourgian
+		region = australia_region
 	}
 }
 
@@ -212,6 +305,19 @@ is_culture_to_americanos = {
 	}
 }
 
+is_region_to_americanos = {
+	OR = {
+		region = great_plains_region
+		region = mississippi_region
+		region = southeast_america_region
+		region = northeast_america_region
+		region = great_lakes_region
+		region = canada_region
+		region = hudson_bay_region
+		region = cascadia_region
+	}
+}
+
 is_culture_to_australiano = {
 	#cond
 	OR = {
@@ -221,6 +327,12 @@ is_culture_to_australiano = {
 		$cond$ = portoccan
 		$cond$ = portugese
 		$cond$ = sulafricano
+	}
+}
+
+is_region_to_australiano = {
+	OR = {
+		region = australia_region
 	}
 }
 
@@ -236,6 +348,10 @@ is_culture_to_brazilian = {
 	}
 }
 
+is_region_to_brazilian = {
+	continent = south_america
+}
+
 is_culture_to_caraiba = {
 	#cond
 	OR = {
@@ -248,6 +364,10 @@ is_culture_to_caraiba = {
 	}
 }
 
+is_region_to_caraiba = {
+	region = carribeans_region
+}
+
 is_culture_to_mexicano = {
 	#cond
 	OR = {
@@ -257,6 +377,15 @@ is_culture_to_mexicano = {
 		$cond$ = portoccan
 		$cond$ = portugese
 		$cond$ = sulafricano
+	}
+}
+
+is_region_to_mexicano = {
+	OR = {
+		region = mexico_region
+		region = california_region
+		region = rio_grande_region
+		region = central_america_region
 	}
 }
 
@@ -272,6 +401,10 @@ is_culture_to_sulafricano = {
 	}
 }
 
+is_region_to_sulafricano = {
+	region = south_africa_region
+}
+
 is_culture_to_zelador = {
 	#cond
 	OR = {
@@ -281,6 +414,14 @@ is_culture_to_zelador = {
 		$cond$ = portoccan
 		$cond$ = portugese
 		$cond$ = sulafricano
+	}
+}
+
+is_region_to_zelador = {
+	OR = {
+		area = te_ika_a_maui_hauauru_area
+		area = te_ika_a_maui_waho_area
+		area = te_waipounamu_area
 	}
 }
 
@@ -297,6 +438,12 @@ is_culture_to_austral = {
 	}
 }
 
+is_region_to_austral = {
+	OR = {
+		region = australia_region
+	}
+}
+
 is_culture_to_colombian = {
 	#cond
 	OR = {
@@ -307,6 +454,10 @@ is_culture_to_colombian = {
 		$cond$ = valencian
 		$cond$ = sudafricano
 	}
+}
+
+is_region_to_colombian = {
+	continent = south_america
 }
 
 is_culture_to_cuban = {
@@ -321,6 +472,10 @@ is_culture_to_cuban = {
 	}
 }
 
+is_region_to_cuban = {
+	region = carribeans_region
+}
+
 is_culture_to_hispanos = {
 	#cond
 	OR = {
@@ -330,6 +485,19 @@ is_culture_to_hispanos = {
 		$cond$ = leonese
 		$cond$ = valencian
 		$cond$ = sudafricano
+	}
+}
+
+is_region_to_hispanos = {
+	OR = {
+		region = great_plains_region
+		region = mississippi_region
+		region = southeast_america_region
+		region = northeast_america_region
+		region = great_lakes_region
+		region = canada_region
+		region = hudson_bay_region
+		region = cascadia_region
 	}
 }
 
@@ -345,6 +513,15 @@ is_culture_to_mexican = {
 	}
 }
 
+is_region_to_mexican = {
+	OR = {
+		region = mexico_region
+		region = california_region
+		region = rio_grande_region
+		region = central_america_region
+	}
+}
+
 is_culture_to_neozelandes = {
 	#cond
 	OR = {
@@ -354,6 +531,14 @@ is_culture_to_neozelandes = {
 		$cond$ = leonese
 		$cond$ = valencian
 		$cond$ = sudafricano
+	}
+}
+
+is_region_to_neozelandes = {
+	OR = {
+		area = te_ika_a_maui_hauauru_area
+		area = te_ika_a_maui_waho_area
+		area = te_waipounamu_area
 	}
 }
 
@@ -368,199 +553,396 @@ is_culture_to_sudafricano = {
 	}
 }
 
-####REGIONS####
-###British
-is_region_to_american = {
-	OR = {
-		region = great_plains_region
-		region = mississippi_region
-		region = southeast_america_region
-		region = northeast_america_region
-		region = great_lakes_region
-		region = canada_region
-		region = hudson_bay_region
-		region = cascadia_region
-	}
-}
-
-is_region_to_australian = {
-	OR = {
-		region = australia_region
-	}
-}
-
-is_region_to_belizean = {
-	OR = {
-		region = mexico_region
-		region = california_region
-		region = rio_grande_region
-		region = central_america_region
-	}
-}
-
-is_region_to_jamaican = {
-	region = carribeans_region
-}
-
-is_region_to_new_zealander = {
-	OR = {
-		area = te_ika_a_maui_hauauru_area
-		area = te_ika_a_maui_waho_area
-		area = te_waipounamu_area
-	}
-}
-
-is_region_to_patagonian = {
-	continent = south_america
-}
-
-is_region_to_rhodesian = {
-	region = south_africa_region
-}
-
-###West Germanic
-is_region_to_afrikaner = {
-	region = south_africa_region
-}
-
-is_region_to_amerikaans = {
-	OR = {
-		region = great_plains_region
-		region = mississippi_region
-		region = southeast_america_region
-		region = northeast_america_region
-		region = great_lakes_region
-		region = canada_region
-		region = hudson_bay_region
-		region = cascadia_region
-	}
-}
-
-is_region_to_antilliaans = {
-	region = carribeans_region
-}
-
-is_region_to_mexicaans = {
-	OR = {
-		region = mexico_region
-		region = california_region
-		region = rio_grande_region
-		region = central_america_region
-	}
-}
-
-is_region_to_surinaams = {
-	continent = south_america
-}
-
-is_region_to_tasmaans = {
-	OR = {
-		region = australia_region
-	}
-}
-
-is_region_to_nieuw_zeelands = {
-	OR = {
-		area = te_ika_a_maui_hauauru_area
-		area = te_ika_a_maui_waho_area
-		area = te_waipounamu_area
-	}
-}
-
-#Celtic-Iberian
-is_region_to_americanos = {
-	OR = {
-		region = great_plains_region
-		region = mississippi_region
-		region = southeast_america_region
-		region = northeast_america_region
-		region = great_lakes_region
-		region = canada_region
-		region = hudson_bay_region
-		region = cascadia_region
-	}
-}
-
-is_region_to_australiano = {
-	OR = {
-		region = australia_region
-	}
-}
-
-is_region_to_brazilian = {
-	continent = south_america
-}
-
-is_region_to_caraiba = {
-	region = carribeans_region
-}
-
-is_region_to_mexicano = {
-	OR = {
-		region = mexico_region
-		region = california_region
-		region = rio_grande_region
-		region = central_america_region
-	}
-}
-
-is_region_to_sulafricano = {
-	region = south_africa_region
-}
-
-is_region_to_zelador = {
-	OR = {
-		area = te_ika_a_maui_hauauru_area
-		area = te_ika_a_maui_waho_area
-		area = te_waipounamu_area
-	}
-}
-
-#Iberian
-is_region_to_hispanos = {
-	OR = {
-		region = great_plains_region
-		region = mississippi_region
-		region = southeast_america_region
-		region = northeast_america_region
-		region = great_lakes_region
-		region = canada_region
-		region = hudson_bay_region
-		region = cascadia_region
-	}
-}
-
-is_region_to_austral = {
-	OR = {
-		region = australia_region
-	}
-}
-
-is_region_to_colombian = {
-	continent = south_america
-}
-
-is_region_to_cuban = {
-	region = carribeans_region
-}
-
-is_region_to_mexican = {
-	OR = {
-		region = mexico_region
-		region = california_region
-		region = rio_grande_region
-		region = central_america_region
-	}
-}
-
 is_region_to_sudafricano = {
 	region = south_africa_region
 }
 
-is_region_to_neozelandes = {
+###GAELIC
+is_culture_to_anafraic = {
+	#cond
+	OR = {
+		$cond$ = scottish_highlander
+		$cond$ = ulster_scots
+		$cond$ = welsh
+		$cond$ = cornish
+		$cond$ = breton
+		$cond$ = irish
+		$cond$ = scottish
+	}
+}
+
+is_region_to_anafraic = {
+	region = south_africa_region
+}
+
+is_culture_to_astrailianaich = {
+	#cond
+	OR = {
+		$cond$ = scottish_highlander
+		$cond$ = ulster_scots
+		$cond$ = welsh
+		$cond$ = cornish
+		$cond$ = breton
+		$cond$ = irish
+		$cond$ = scottish
+		$cond$ = anafraic
+	}
+}
+
+is_region_to_astralianaich = {
+	OR = {
+		region = australia_region
+	}
+}
+
+is_region_to_ciuban = {
+	region = carribeans_region
+}
+
+is_culture_to_ciuban = {
+	#cond
+	OR = {
+		$cond$ = scottish_highlander
+		$cond$ = ulster_scots
+		$cond$ = welsh
+		$cond$ = cornish
+		$cond$ = breton
+		$cond$ = irish
+		$cond$ = scottish
+		$cond$ = anafraic
+	}
+}
+
+is_culture_to_coloime = {
+	#cond
+	$cond$ = scottish_highlander
+	$cond$ = ulster_scots
+	$cond$ = welsh
+	$cond$ = cornish
+	$cond$ = breton
+	$cond$ = irish
+	$cond$ = scottish
+	$cond$ = anafraic
+}
+
+is_region_to_coloime = {
+	continent = south_america
+}
+
+is_culture_to_newcaledonian = {
+	#cond
+	OR = {
+		$cond$ = scottish_highlander
+		$cond$ = ulster_scots
+		$cond$ = welsh
+		$cond$ = cornish
+		$cond$ = breton
+		$cond$ = irish
+		$cond$ = scottish
+		$cond$ = anafraic
+	}
+}
+
+is_region_to_newcaledonian = {
+	OR = {
+		region = mexico_region
+		region = california_region
+		region = rio_grande_region
+		region = central_america_region
+	}
+}
+
+is_culture_to_novascotian = {
+	#cond
+	OR = {
+		$cond$ = scottish_highlander
+		$cond$ = ulster_scots
+		$cond$ = welsh
+		$cond$ = cornish
+		$cond$ = breton
+		$cond$ = irish
+		$cond$ = scottish
+		$cond$ = anafraic
+	}
+}
+
+is_region_to_novascotian = {
+	OR = {
+		region = great_plains_region
+		region = mississippi_region
+		region = southeast_america_region
+		region = northeast_america_region
+		region = great_lakes_region
+		region = canada_region
+		region = hudson_bay_region
+		region = cascadia_region
+	}
+}
+
+is_culture_to_zealander = {
+	#cond
+	OR = {
+		$cond$ = scottish_highlander
+		$cond$ = ulster_scots
+		$cond$ = welsh
+		$cond$ = cornish
+		$cond$ = breton
+		$cond$ = irish
+		$cond$ = scottish
+		$cond$ = anafraic
+	}
+}
+
+is_region_to_zealander = {
 	OR = {
 		area = te_ika_a_maui_hauauru_area
 		area = te_ika_a_maui_waho_area
 		area = te_waipounamu_area
 	}
+}
+
+###GAELIC
+###North French
+is_region_to_quebecois = {
+	OR = {
+		region = great_plains_region
+		region = mississippi_region
+		region = southeast_america_region
+		region = northeast_america_region
+		region = great_lakes_region
+		region = canada_region
+		region = hudson_bay_region
+		region = cascadia_region
+	}
+}
+
+is_region_to_australien = {
+	OR = {
+		region = australia_region
+	}
+}
+
+is_region_to_amerique = {
+	OR = {
+		region = mexico_region
+		region = california_region
+		region = rio_grande_region
+		region = central_america_region
+	}
+}
+
+is_region_to_hatien = {
+	region = carribeans_region
+}
+
+is_region_to_neozealandais = {
+	OR = {
+		area = te_ika_a_maui_hauauru_area
+		area = te_ika_a_maui_waho_area
+		area = te_waipounamu_area
+	}
+}
+
+is_region_to_argentins = {
+	continent = south_america
+}
+
+is_region_to_villion = {
+	region = south_africa_region
+}
+
+###Central French
+is_region_to_cajun = {
+	OR = {
+		region = great_plains_region
+		region = mississippi_region
+		region = southeast_america_region
+		region = northeast_america_region
+		region = great_lakes_region
+		region = canada_region
+		region = hudson_bay_region
+		region = cascadia_region
+	}
+}
+
+is_region_to_laperouse = {
+	OR = {
+		region = australia_region
+	}
+}
+
+is_region_to_mexique = {
+	OR = {
+		region = mexico_region
+		region = california_region
+		region = rio_grande_region
+		region = central_america_region
+	}
+}
+
+is_region_to_martinique = {
+	region = carribeans_region
+}
+
+is_region_to_pompallier = {
+	OR = {
+		area = te_ika_a_maui_hauauru_area
+		area = te_ika_a_maui_waho_area
+		area = te_waipounamu_area
+	}
+}
+
+is_region_to_guyane = {
+	continent = south_america
+}
+
+is_region_to_malgache = {
+	region = south_africa_region
+}
+
+###South French
+is_region_to_creole = {
+	OR = {
+		region = great_plains_region
+		region = mississippi_region
+		region = southeast_america_region
+		region = northeast_america_region
+		region = great_lakes_region
+		region = canada_region
+		region = hudson_bay_region
+		region = cascadia_region
+	}
+}
+
+is_region_to_baudin = {
+	OR = {
+		region = australia_region
+	}
+}
+
+is_region_to_hondurien = {
+	OR = {
+		region = mexico_region
+		region = california_region
+		region = rio_grande_region
+		region = central_america_region
+	}
+}
+
+is_region_to_saintlucie = {
+	region = carribeans_region
+}
+
+is_region_to_surville = {
+	OR = {
+		area = te_ika_a_maui_hauauru_area
+		area = te_ika_a_maui_waho_area
+		area = te_waipounamu_area
+	}
+}
+
+is_region_to_antarctique = {
+	continent = south_america
+}
+
+is_region_to_quellerie = {
+	region = south_africa_region
+}
+
+###Scandinavian
+is_region_to_amerikanere = {
+	OR = {
+		region = great_plains_region
+		region = mississippi_region
+		region = southeast_america_region
+		region = northeast_america_region
+		region = great_lakes_region
+		region = canada_region
+		region = hudson_bay_region
+		region = cascadia_region
+	}
+}
+
+is_region_to_australier = {
+	OR = {
+		region = australia_region
+	}
+}
+
+is_region_to_meksikansk = {
+	OR = {
+		region = mexico_region
+		region = california_region
+		region = rio_grande_region
+		region = central_america_region
+	}
+}
+
+is_region_to_vastindier = {
+	region = carribeans_region
+}
+
+is_region_to_nyazealandere = {
+	OR = {
+		area = te_ika_a_maui_hauauru_area
+		area = te_ika_a_maui_waho_area
+		area = te_waipounamu_area
+	}
+}
+
+is_region_to_brasilianere = {
+	continent = south_america
+}
+
+is_region_to_sorafrikanere = {
+	region = south_africa_region
+}
+
+###Old Norse
+is_region_to_ameriskt = {
+	OR = {
+		region = great_plains_region
+		region = mississippi_region
+		region = southeast_america_region
+		region = northeast_america_region
+		region = great_lakes_region
+		region = canada_region
+		region = hudson_bay_region
+		region = cascadia_region
+	}
+}
+
+is_region_to_australskur = {
+	OR = {
+		region = australia_region
+	}
+}
+
+is_region_to_mexikana = {
+	OR = {
+		region = mexico_region
+		region = california_region
+		region = rio_grande_region
+		region = central_america_region
+	}
+}
+
+is_region_to_vesturindverskur = {
+	region = carribeans_region
+}
+
+is_region_to_nyrzealander = {
+	OR = {
+		area = te_ika_a_maui_hauauru_area
+		area = te_ika_a_maui_waho_area
+		area = te_waipounamu_area
+	}
+}
+
+is_region_to_ekvadorskt = {
+	continent = south_america
+}
+
+is_region_to_suthurafriskur = {
+	region = south_africa_region
 }
