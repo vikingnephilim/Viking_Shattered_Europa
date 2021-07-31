@@ -1,0 +1,7309 @@
+australia_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = AUS
+	}
+	has_country_shield = yes
+	aus_sea = {
+		icon = mission_colonial
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			transport_fraction = 0.5
+		}
+		effect = {
+			create_admiral = {
+				tradition = 75
+			}
+			add_country_modifier = {
+				name = aus_riding_waves
+				duration = 7300
+			}
+			papua_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			vogelkop_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	aus_navy = {
+		icon = mission_asian_trader
+		position = 3
+		required_missions = {
+			aus_sea
+			aus_northern_island
+		}
+		trigger = {
+			navy_size_percentage = 1
+			OR = {
+				naval_reformer = 2
+				navigator = 2
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Golden Century"
+					has_flagship = no
+					any_owned_province = {
+						has_port = yes
+					}
+				}
+				random_owned_province = {
+					limit = {
+						has_port = yes
+					}
+					create_flagship = {
+						name = "Alcarondas"
+						type = heavy_ship
+					}
+				}
+			}
+			else = {
+				add_navy_tradition = 50
+			}
+			central_java_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_java_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			west_java_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	aus_java = {
+		icon = me_mission_mexico_flow_cocoa
+		position = 5
+		required_missions = {
+			aus_navy
+			aus_sulawesi
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = central_java_area
+				area = east_java_area
+				area = west_java_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			central_java_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_java_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			west_java_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			central_java_area = {
+				add_province_modifier = {
+					name = aus_java_modifier
+					duration = 9125
+				}
+			}
+			east_java_area = {
+				add_province_modifier = {
+					name = aus_java_modifier
+					duration = 9125
+				}
+			}
+			west_java_area = {
+				add_province_modifier = {
+					name = aus_java_modifier
+					duration = 9125
+				}
+			}
+		}
+	}
+	aus_malacca = {
+		icon = me_mission_venice_small_ship_in_port
+		position = 6
+		required_missions = {
+			aus_java
+			aus_borneo
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = AUS_TRADE_TRIGGER
+				num_of_owned_provinces_with = {
+					value = 2
+					province_has_center_of_trade_of_level = 1
+					base_production = 10
+					any_trade_node_member_province = {
+						province_id = 1361
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = AUS_TRADE_CONQUEST
+			hidden_effect = {
+				1361 = {
+					every_trade_node_member_province = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+							}
+							NOT = {
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+				1357 = {
+					every_trade_node_member_province = {
+						limit = {
+							NOT = {
+								owned_by = ROOT
+							}
+							NOT = {
+								is_core = ROOT
+							}
+						}
+						add_permanent_claim = ROOT
+					}
+				}
+			}
+		}
+	}
+}
+
+australia_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = AUS
+	}
+	has_country_shield = yes
+	aus_northern_island = {
+		icon = mission_dominate_home_trade_node
+		position = 2
+		required_missions = {
+			aus_sea
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = papua_area
+				area = vogelkop_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			papua_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			vogelkop_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			sulawesi_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			south_sulawesi_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	aus_sulawesi = {
+		icon = mission_wine_monopolies
+		position = 4
+		required_missions = {
+			aus_navy
+			aus_northern_island
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = sulawesi_area
+				area = south_sulawesi_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			sulawesi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			south_sulawesi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 5
+			sulawesi_area = {
+				add_province_modifier = {
+					name = aus_mangroves_caridnia
+					duration = -1
+				}
+			}
+			south_sulawesi_area = {
+				add_province_modifier = {
+					name = aus_mangroves_caridnia
+					duration = -1
+				}
+			}
+			brunei_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			kalimantan_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			kutai_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	aus_borneo = {
+		icon = me_mission_mexico_navy
+		position = 4
+		required_missions = {
+			aus_sulawesi
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = brunei_area
+				area = kalimantan_area
+				area = kutai_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			brunei_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kalimantan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kutai_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_dip_power = 200
+		}
+	}
+	aus_east_indies = {
+		icon = mission_advance_to_the_dnieper
+		position = 7
+		required_missions = {
+			aus_malacca
+			aus_borneo
+			aus_philippines
+		}
+		trigger = {
+			mercantilism = 33
+			1357 = {
+				is_strongest_trade_power = ROOT
+			}
+			any_country = {
+				1357 = {
+					trade_share = {
+						share = 1
+						country = PREV
+					}
+				}
+				NOT = {
+					naval_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+			1361 = {
+				is_strongest_trade_power = ROOT
+			}
+			any_country = {
+				1361 = {
+					trade_share = {
+						share = 1
+						country = PREV
+					}
+				}
+				NOT = {
+					naval_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+			1397 = {
+				is_strongest_trade_power = ROOT
+			}
+			any_country = {
+				1397 = {
+					trade_share = {
+						share = 1
+						country = PREV
+					}
+				}
+				NOT = {
+					naval_strength = {
+						who = ROOT
+						value = 1
+					}
+				}
+			}
+		}
+		effect = {
+			add_dip_power = 200
+			add_legitimacy_equivalent = {
+				value = 20
+			}
+			custom_tooltip = AUS_MASTER_INDIES
+			hidden_effect = {
+				1357 = {
+					every_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							province_has_center_of_trade_of_level = 1
+						}
+						add_province_modifier = {
+							name = aus_master_east_indies
+							duration = -1
+						}
+					}
+				}
+				1361 = {
+					every_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							province_has_center_of_trade_of_level = 1
+						}
+						add_province_modifier = {
+							name = aus_master_east_indies
+							duration = -1
+						}
+					}
+				}
+				1397 = {
+					every_trade_node_member_province = {
+						limit = {
+							owned_by = ROOT
+							province_has_center_of_trade_of_level = 1
+						}
+						add_province_modifier = {
+							name = aus_master_east_indies
+							duration = -1
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+australia_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = AUS
+	}
+	has_country_shield = yes
+	aus_trade = {
+		icon = mission_trade_company_region_abroad
+		position = 2
+		required_missions = {
+			aus_sea
+			aus_initial_expansion
+		}
+		trigger = {
+			mercantilism = 15
+		}
+		effect = {
+			add_dip_power = 250
+			add_country_modifier = {
+				name = aus_trade_growth
+				duration = 9125
+			}
+		}
+	}
+	aus_naval_preparation = {
+		icon = me_mission_mexico_colonisation
+		position = 4
+		required_missions = {
+			aus_trade
+			aus_nearby_island
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+		}
+		effect = {
+			add_yearly_sailors = 2
+			custom_tooltip = AUS_JARRAH_TOOLTIP
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							has_building = shipyard
+							has_building = grand_shipyard
+						}
+					}
+					add_province_modifier = {
+						name = aus_jarrah
+						duration = 18250
+					}
+				}
+			}
+			polynesia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			eastern_polynesia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			mindanao_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			west_mindanao_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	aus_philippines = {
+		icon = me_mission_mexico_battle1
+		position = 6
+		required_missions = {
+			aus_naval_preparation
+			aus_borneo
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = mindanao_area
+				area = west_mindanao_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			mindanao_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			west_mindanao_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 3
+			add_years_of_income = 2
+			mindanao_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			west_mindanao_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			luzon_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			palawan_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			southern_luzon_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			visayas_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+australia_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = AUS
+	}
+	has_country_shield = yes
+	aus_initial_expansion = {
+		icon = me_mission_mexico_centralisation
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			stability = 1
+			OR = {
+				AND = {
+					manpower_percentage = 1
+					army_size_percentage = 0.5
+				}
+				AND = {
+					manpower_percentage = 0.5
+					army_size_percentage = 1
+				}
+			}
+		}
+		effect = {
+			define_conquistador = {
+				name = "Boongaree"
+				fire = 5
+				shock = 3
+				manuever = 2
+				siege = 0
+				trait = goal_oriented_personality
+			}
+			add_country_modifier = {
+				name = aus_colonial_expansion
+				duration = 9125
+			}
+		}
+	}
+	aus_nearby_island = {
+		icon = mission_portuguese_malacca
+		position = 3
+		required_missions = {
+			aus_initial_expansion
+			aus_trade
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = te_ika_a_maui_hauauru_area
+				area = te_ika_a_maui_waho_area
+				area = te_waipounamu_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			te_ika_a_maui_hauauru_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			te_ika_a_maui_waho_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			te_waipounamu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_mercantilism = 5
+		}
+	}
+	aus_pacific = {
+		icon = me_mission_native_agreement
+		position = 5
+		required_missions = {
+			aus_naval_preparation
+			aus_nearby_island
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = polynesia_area
+				area = eastern_polynesia_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			polynesia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastern_polynesia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_dip_power = 100
+			add_country_modifier = {
+				name = aus_master_ocean
+				duration = -1
+			}
+		}
+	}
+}
+
+australia_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = AUS
+	}
+	has_country_shield = yes
+	aus_capital = {
+		icon = mission_colonial
+		position = 2
+		required_missions = {
+			aus_initial_expansion
+		}
+		provinces_to_highlight = {
+			is_capital_of = ROOT
+			OR = {
+				unrest = 0.1
+				devastation = 1
+			}
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = aus_capital_decided_tooltip
+				has_country_flag = aus_capital_decided
+			}
+			treasury = 100
+			natural_scientist = 2
+			capital_scope = {
+				NOT = {
+					unrest = 0.1
+				}
+				NOT = {
+					devastation = 1
+				}
+			}
+		}
+		effect = {
+			capital_scope = {
+				if = {
+					limit = {
+						has_dlc = "Mandate of Heaven"
+					}
+					add_prosperity = 25
+				}
+				random_list = {
+					33 = {
+						add_base_tax = 4
+					}
+					33 = {
+						add_base_production = 4
+					}
+					33 = {
+						add_base_manpower = 4
+					}
+				}
+			}
+		}
+	}
+	aus_new_zealand = {
+		icon = mission_rb_take_gibraltar
+		position = 4
+		required_missions = {
+			aus_nearby_island
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = te_waipounamu_area
+				area = te_ika_a_maui_hauauru_area
+				area = te_ika_a_maui_waho_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			OR = {
+				AND = {
+					is_institution_enabled = renaissance
+					num_of_owned_provinces_with = {
+						value = 10
+						region = australia_region
+						renaissance = 100
+					}
+				}
+				AND = {
+					is_institution_enabled = printing_press
+					num_of_owned_provinces_with = {
+						value = 10
+						region = australia_region
+						printing_press = 100
+					}
+				}
+			}
+			te_waipounamu_area = {
+				type = all
+				owned_by = ROOT
+			}
+			te_ika_a_maui_waho_area = {
+				type = all
+				owned_by = ROOT
+			}
+			te_ika_a_maui_hauauru_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 50
+			add_dip_power = 50
+			add_mil_power = 50
+			te_waipounamu_area = {
+				add_province_modifier = {
+					name = aus_settling
+					duration = 9125
+				}
+			}
+			te_ika_a_maui_waho_area = {
+				add_province_modifier = {
+					name = aus_settling
+					duration = 9125
+				}
+			}
+			te_ika_a_maui_hauauru_area = {
+				add_province_modifier = {
+					name = aus_settling
+					duration = 9125
+				}
+			}
+		}
+	}
+}
+
+BRZ_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = BRZ
+	}
+	has_country_shield = yes
+	BRZ_north = {
+		icon = mission_iberian_conquistador
+		required_missions = {
+			BRZ_establish_the_bandeirantes
+		}
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = amapa_area
+				area = amazon_area
+				area = grao_para_area
+				area = pontal_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			pontal_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			grao_para_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			amapa_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			amazon_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = BRA_hardy_settlers
+				duration = 10950
+			}
+			748 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			guyana_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_guyana_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			suriname_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	BRZ_north_amazon = {
+		icon = mission_caribbean_cn
+		required_missions = {
+			BRZ_north
+		}
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = suriname_area
+				area = guyana_area
+				area = upper_guyana_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			suriname_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			guyana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			upper_guyana_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_years_of_income = 0.5
+			add_country_modifier = {
+				name = BRZ_northern_reaches
+				duration = 9125
+			}
+		}
+	}
+	BRZ_expanding_the_coast = {
+		icon = mission_aragonese_navy
+		required_missions = {
+			BRZ_encouraging_immigration
+		}
+		position = 6
+		trigger = {
+			num_of_owned_provinces_with = {
+				region = brazil_region
+				has_port = yes
+				OR = {
+					development = 10
+					province_has_center_of_trade_of_level = 2
+				}
+				value = 10
+			}
+		}
+		effect = {
+			add_years_of_income = 0.5
+			add_country_modifier = {
+				name = BRZ_merchants
+				duration = 10950
+			}
+		}
+	}
+	BRZ_mining_company = {
+		icon = mission_african_gold
+		required_missions = {
+			BRZ_import_technology
+		}
+		position = 7
+		trigger = {
+			OR = {
+				has_institution = global_trade
+				236 = {
+					owner = {
+						has_opinion = {
+							who = ROOT
+							value = 125
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			minas_gerais_area = {
+				add_base_tax = 1
+				add_base_production = 1
+			}
+			2894 = {
+				add_province_modifier = {
+					name = BRZ_saint_john
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+BRZ_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = BRZ
+	}
+	has_country_shield = yes
+	BRZ_recover = {
+		icon = mission_colonial
+		required_missions = {
+			BRZ_ipiranga
+		}
+		position = 2
+		trigger = {
+			NOT = {
+				war_exhaustion = 0.1
+			}
+			is_at_war = no
+			is_subject = no
+		}
+		effect = {
+			custom_tooltip = BRZ_EVERY_PROVINCE_A_AUTONOMIC_HEAVEN
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_core = ROOT
+						NOT = {
+							nationalism = 1
+						}
+					}
+					add_local_autonomy = -25
+				}
+			}
+		}
+	}
+	BRZ_northeast = {
+		icon = mission_pacify_the_berbers
+		required_missions = {
+			BRZ_establish_the_bandeirantes
+		}
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = bahia_area
+				area = maranhao_area
+				area = piaui_area
+				area = ceara_area
+				area = pernambuco_area
+				area = sao_francisco_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			bahia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			maranhao_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			piaui_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ceara_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			pernambuco_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sao_francisco_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Brazil_Events.3
+			}			#Extraction of Brazilwood
+			756 = {
+				add_base_tax = 1
+				add_base_production = 1
+			}
+			755 = {
+				add_base_tax = 1
+				add_base_production = 1
+			}
+		}
+	}
+	BRZ_encouraging_immigration = {
+		icon = mission_establish_high_seas_navy
+		required_missions = {
+			BRZ_brazil_united
+		}
+		position = 5
+		trigger = {
+			any_country = {
+				capital_scope = {
+					continent = europe
+				}
+				has_opinion = {
+					who = ROOT
+					value = 125
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Brazil_Events.5
+			}			#First Wave of Immigration
+		}
+	}
+	BRZ_import_technology = {
+		icon = mission_rb_central_belt_coal_mining
+		required_missions = {
+			BRZ_encouraging_immigration
+		}
+		position = 6
+		trigger = {
+			OR = {
+				has_institution = manufactories
+				num_of_owned_provinces_with = {
+					has_manufactory_trigger = yes
+					value = 15
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Brazil_Events.8
+			}			#European Technology
+		}
+	}
+	BRZ_a_lei_aurea = {
+		icon = mission_taula_de_canvi
+		required_missions = {
+			BRZ_restore_order
+		}
+		position = 8
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = BRZ_ABOLISHED_SLAVERY
+				has_country_modifier = "the_abolish_slavery_act"
+			}
+		}
+		effect = {
+			set_country_flag = BRZ_a_lei
+			custom_tooltip = BRZ_NEW_CB
+			add_country_modifier = {
+				name = BRZ_golden_law
+				duration = 10950
+			}
+		}
+	}
+	BRZ_set_the_world_free = {
+		icon = mission_alliances
+		required_missions = {
+			BRZ_a_lei_aurea
+			BRZ_enlightenment
+		}
+		position = 9
+		trigger = {
+			all_country = {
+				OR = {
+					NOT = {
+						technology_group = western
+					}
+					NOT = {
+						slaves = 1
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = BRZ_liberty_and_equality
+				duration = -1
+			}
+		}
+	}
+}
+
+BRZ_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = BRZ
+	}
+	has_country_shield = yes
+	BRZ_ipiranga = {
+		icon = fortress_of_belgrade
+		required_missions = {
+		}
+		position = 1
+		trigger = {
+			is_subject = no
+			stability = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = BRZ_struggle_for_freedom
+				duration = 3650
+			}
+		}
+	}
+	BRZ_establish_the_bandeirantes = {
+		icon = mission_brazilian_bandeirantes
+		required_missions = {
+			BRZ_ipiranga
+		}
+		position = 2
+		trigger = {
+			OR = {
+				expansion_ideas = 2
+				has_adm_advisor = yes
+			}
+		}
+		effect = {
+			set_country_flag = por_bandeirantes_flag
+			custom_tooltip = por_bandeirantes_tooltip
+			brazil_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = BRZ_bandeirantes
+				duration = 7300
+			}
+		}
+	}
+	BRZ_centralwest = {
+		icon = mission_colonise_brazil
+		required_missions = {
+			BRZ_establish_the_bandeirantes
+		}
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = minas_gerais_area
+				area = diamantina_area
+				area = rio_de_janeiro_area
+				area = sao_paolo_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			minas_gerais_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			diamantina_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			rio_de_janeiro_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sao_paolo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Brazil_Events.1
+			}			#Exploring the Interior
+		}
+	}
+	BRZ_brazil_united = {
+		icon = mission_alliances
+		required_missions = {
+			BRZ_centralwest
+			BRZ_north
+			BRZ_northeast
+			BRZ_south
+			BRZ_southeast
+		}
+		position = 4
+		provinces_to_highlight = {
+			region = brazil_region
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			brazil_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			brazil_region = {
+				add_province_modifier = {
+					name = BRZ_unity
+					duration = 10950
+				}
+			}
+		}
+	}
+	BRZ_restore_order = {
+		icon = all_bases_covered
+		required_missions = {
+			BRZ_brazil_united
+		}
+		position = 7
+		provinces_to_highlight = {
+			owned_by = ROOT
+			OR = {
+				unrest = 0.1
+				controlled_by = REB
+			}
+		}
+		trigger = {
+			NOT = {
+				num_of_rebel_controlled_provinces = 1
+			}
+			brazil_region = {
+				type = all
+				owned_by = ROOT
+				NOT = {
+					unrest = 0.1
+				}
+			}
+		}
+		effect = {
+			add_stability_or_adm_power = yes
+			#country_event = { id = ME_Brazil_Events.9 } #Trial of Caralho, changed my mind, maybe in the future
+		}
+	}
+	BRZ_enlightenment = {
+		icon = me_mission_voltaire
+		required_missions = {
+			BRZ_restore_order
+		}
+		position = 8
+		trigger = {
+			has_institution = enlightenment
+		}
+		effect = {
+			add_country_modifier = {
+				name = BRZ_enlightenment
+				duration = 9125
+			}
+		}
+	}
+}
+
+BRZ_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = BRZ
+	}
+	has_country_shield = yes
+	BRZ_independent_ideals = {
+		icon = mission_alliances
+		required_missions = {
+			BRZ_ipiranga
+		}
+		position = 2
+		trigger = {
+			num_of_supported_independencies = {
+				amount = 1
+			}			#yeah, whatcha gonna do
+		}
+		effect = {
+			add_legitimacy_equivalent = {
+				value = 20
+			}
+			add_prestige_or_monarch_power = {
+				amount = 25
+			}
+		}
+	}
+	BRZ_south = {
+		icon = mission_portuguese_oman
+		required_missions = {
+			BRZ_establish_the_bandeirantes
+		}
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = west_sao_paolo_area
+				area = rio_grande_do_sol_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			west_sao_paolo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			rio_grande_do_sol_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			2857 = {
+				if = {
+					limit = {
+						has_building = temple
+					}
+					remove_building = temple
+					add_building = cathedral
+				}
+				else_if = {
+					limit = {
+						has_building = cathedral
+					}
+					add_base_tax = 2
+				}
+				else = {
+					add_building = temple
+				}
+				add_trade_modifier = {
+					who = ROOT
+					duration = -1
+					power = 25
+					key = BRZ_southern_influence
+				}
+			}
+		}
+	}
+	BRZ_forcelimit = {
+		icon = mission_assemble_an_army
+		required_missions = {
+			BRZ_brazil_united
+		}
+		position = 5
+		trigger = {
+			OR = {
+				army_size_percentage = 0.8
+				num_of_hired_mercenary_companies = 1
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					army_size_percentage = 0.8
+				}
+				add_country_modifier = {
+					name = BRZ_national_guard
+					duration = 9125
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = BRZ_foreign_mercenaries
+					duration = 9125
+				}
+			}
+			banda_oriental_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			chaco_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			moxos_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			beni_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			misiones_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			paraguay_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	BRZ_cisplatina = {
+		icon = mission_retake_ceuta
+		required_missions = {
+			BRZ_forcelimit
+		}
+		position = 6
+		provinces_to_highlight = {
+			area = banda_oriental_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			banda_oriental_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = BRZ_hegemony_1
+				duration = -1
+			}
+			cuyo_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			southern_pampas_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			buenos_aires_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	BRZ_buenos_aires = {
+		icon = capture_adriatic_ports
+		required_missions = {
+			BRZ_chaco
+			BRZ_cisplatina
+		}
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				area = buenos_aires_area
+				area = southern_pampas_area
+				area = cuyo_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			buenos_aires_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			southern_pampas_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cuyo_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			778 = {
+				create_or_add_center_of_trade_level = {
+					level = 1
+				}
+			}
+			custom_tooltip = ME_BRZ_STRENGTHEN_PRESTIGE
+			hidden_effect = {
+				remove_country_modifier = BRZ_hegemony_1
+				add_country_modifier = {
+					name = BRZ_hegemony_2
+					duration = -1
+				}
+			}
+			patagonia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			bahia_blanca_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			nehuenken_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			central_chile_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			southern_chile_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			patagonian_andes = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+BRZ_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = BRZ
+	}
+	has_country_shield = yes
+	BRZ_southeast = {
+		icon = mission_raid_on_venice
+		required_missions = {
+			BRZ_establish_the_bandeirantes
+		}
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = goias_area
+				area = ofaie_area
+				area = guapore_area
+				area = mato_grosso_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			goias_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			ofaie_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			guapore_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			mato_grosso_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Brazil_Events.4
+			}			#Brazilian Gold Rush
+			765 = {
+				if = {
+					limit = {
+						NOT = {
+							trade_goods = gold
+						}
+					}
+					change_trade_goods = gold
+				}
+				add_province_modifier = {
+					name = "por_minas_gerais"
+					duration = -1
+				}
+			}
+		}
+	}
+	BRZ_chaco = {
+		icon = mission_cannons_firing
+		required_missions = {
+			BRZ_forcelimit
+			BRZ_southeast
+		}
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				area = chaco_area
+				area = beni_area
+				area = misiones_area
+				area = paraguay_area
+				area = moxos_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			chaco_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			beni_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			misiones_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			paraguay_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			moxos_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			define_advisor = {
+				type = natural_scientist
+				skill = 2
+				culture = ROOT
+				religion = ROOT
+				cost_multiplier = 0.5
+			}
+			upper_peru = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			potosi_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			jujuy_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			tucuman_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_chile_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			antisuyu_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	BRZ_penetrate_andes = {
+		icon = alpine_fortifications
+		required_missions = {
+			BRZ_chaco
+		}
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				area = upper_peru
+				area = potosi_area
+				area = jujuy_area
+				area = tucuman_area
+				area = northern_chile_area
+				area = antisuyu_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			upper_peru = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			potosi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			jujuy_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			tucuman_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			northern_chile_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			antisuyu_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_prestige_or_monarch_power = {
+				amount = 10
+			}
+			if = {
+				limit = {
+					is_expanded_mod_active = {
+						mod = trade_goods
+					}
+				}
+				custom_tooltip = ME_BRZ_GOLD_SILVER_MODIFIER
+				hidden_effect = {
+					upper_peru = {
+						limit = {
+							country_or_non_sovereign_subject_holds = ROOT
+							OR = {
+								trade_goods = gold
+								trade_goods = silver
+							}
+						}
+						add_province_modifier = {
+							name = BRZ_gold_modifier
+							duration = -1
+						}
+					}
+					potosi_area = {
+						limit = {
+							country_or_non_sovereign_subject_holds = ROOT
+							OR = {
+								trade_goods = gold
+								trade_goods = silver
+							}
+						}
+						add_province_modifier = {
+							name = BRZ_gold_modifier
+							duration = -1
+						}
+					}
+					jujuy_area = {
+						limit = {
+							country_or_non_sovereign_subject_holds = ROOT
+							OR = {
+								trade_goods = gold
+								trade_goods = silver
+							}
+						}
+						add_province_modifier = {
+							name = BRZ_gold_modifier
+							duration = -1
+						}
+					}
+					tucuman_area = {
+						limit = {
+							country_or_non_sovereign_subject_holds = ROOT
+							OR = {
+								trade_goods = gold
+								trade_goods = silver
+							}
+						}
+						add_province_modifier = {
+							name = BRZ_gold_modifier
+							duration = -1
+						}
+					}
+					northern_chile_area = {
+						limit = {
+							country_or_non_sovereign_subject_holds = ROOT
+							OR = {
+								trade_goods = gold
+								trade_goods = silver
+							}
+						}
+						add_province_modifier = {
+							name = BRZ_gold_modifier
+							duration = -1
+						}
+					}
+					antisuyu_area = {
+						limit = {
+							country_or_non_sovereign_subject_holds = ROOT
+							OR = {
+								trade_goods = gold
+								trade_goods = silver
+							}
+						}
+						add_province_modifier = {
+							name = BRZ_gold_modifier
+							duration = -1
+						}
+					}
+				}
+			}
+			else = {
+				custom_tooltip = ME_BRZ_GOLD_MODIFIER
+				hidden_effect = {
+					antisuyu_area = {
+						limit = {
+							country_or_non_sovereign_subject_holds = ROOT
+							trade_goods = gold
+						}
+						add_province_modifier = {
+							name = BRZ_gold_modifier
+							duration = -1
+						}
+					}
+					potosi_area = {
+						limit = {
+							country_or_non_sovereign_subject_holds = ROOT
+							trade_goods = gold
+						}
+						add_province_modifier = {
+							name = BRZ_gold_modifier
+							duration = -1
+						}
+					}
+					jujuy_area = {
+						limit = {
+							country_or_non_sovereign_subject_holds = ROOT
+							trade_goods = gold
+						}
+						add_province_modifier = {
+							name = BRZ_gold_modifier
+							duration = -1
+						}
+					}
+					upper_peru = {
+						limit = {
+							country_or_non_sovereign_subject_holds = ROOT
+							trade_goods = gold
+						}
+						add_province_modifier = {
+							name = BRZ_gold_modifier
+							duration = -1
+						}
+					}
+					northern_chile_area = {
+						limit = {
+							country_or_non_sovereign_subject_holds = ROOT
+							trade_goods = gold
+						}
+						add_province_modifier = {
+							name = BRZ_gold_modifier
+							duration = -1
+						}
+					}
+					tucuman_area = {
+						limit = {
+							country_or_non_sovereign_subject_holds = ROOT
+							trade_goods = gold
+						}
+						add_province_modifier = {
+							name = BRZ_gold_modifier
+							duration = -1
+						}
+					}
+				}
+			}
+		}
+	}
+	BRZ_patagonia = {
+		icon = mission_unite_home_region
+		required_missions = {
+			BRZ_buenos_aires
+		}
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				area = patagonia_area
+				area = bahia_blanca_area
+				area = nehuenken_area
+				area = central_chile_area
+				area = southern_chile_area
+				area = patagonian_andes
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			patagonia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			bahia_blanca_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			nehuenken_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			central_chile_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			southern_chile_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			patagonian_andes = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = ME_BRZ_APPEND_10_GLOBAL
+			hidden_effect = {
+				remove_country_modifier = BRZ_hegemony_2
+				add_country_modifier = {
+					name = BRZ_hegemony_3
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+canada_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = CAN
+	}
+	has_country_shield = yes
+	can_organise_militia = {
+		icon = me_mission_canada_militia
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			num_of_infantry = 10
+		}
+		effect = {
+			add_country_modifier = {
+				name = can_militia_organised
+				duration = 3650
+			}
+		}
+	}
+	can_upper_canada = {
+		icon = me_mission_canada_dam
+		position = 2
+		required_missions = {
+			can_organise_militia
+			can_british_north_america
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					area = upper_canada_area
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				AND = {
+					area = upper_ontario_area
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					NOT = {
+						upper_ontario_area = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			upper_canada_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			upper_ontario_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Canada_Events.1
+			}
+			hudson_bay_area = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	can_hudson_bay_company = {
+		icon = me_mission_canada_fur_trade
+		position = 4
+		required_missions = {
+			can_upper_canada
+		}
+		provinces_to_highlight = {
+			province_id = 1005
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			1005 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				trade_goods = fur
+				OR = {
+					region = hudson_bay_region
+					region = canada_region
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Canada_Events.2
+				days = 365
+				tooltip = ME_Canada_Events.2.tooltip
+			}
+			1005 = {
+				add_base_tax = 2
+				add_base_production = 4
+				add_base_manpower = 2
+				add_permanent_province_modifier = {
+					name = can_york_factory
+					duration = -1
+				}
+				create_or_add_center_of_trade_level = {
+					level = 2
+				}
+			}
+			hudson_bay_region = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	can_gateway_west = {
+		icon = me_mission_canada_snow_frontier
+		position = 5
+		required_missions = {
+			can_hudson_bay_company
+		}
+		provinces_to_highlight = {
+			province_id = 1008
+			OR = {
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				has_trade_building_trigger = yes
+				AND = {
+					has_colonist = no
+					NOT = {
+						num_of_times_improved = 3
+					}
+				}
+			}
+		}
+		trigger = {
+			1008 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_trade_building_trigger = yes
+				OR = {
+					has_colonist = yes
+					num_of_times_improved = 3
+				}
+			}
+		}
+		effect = {
+			cascadia_region = {
+				add_province_modifier = {
+					name = can_gateway_west_modifier
+					duration = 18250
+				}
+			}
+		}
+	}
+	can_saskatchewan = {
+		icon = me_mission_canada_cross_snow
+		position = 6
+		required_missions = {
+			can_gateway_west
+			can_fur_trade
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					area = saskatchewan_area
+					NOT = {
+						saskatchewan_area = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+				}
+				AND = {
+					area = assiniboia_area
+					NOT = {
+						assiniboia_area = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+				}
+				AND = {
+					area = prairies_area
+					NOT = {
+						prairies_area = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+					}
+				}
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			saskatchewan_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			assiniboia_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			prairies_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			saskatchewan_area = {
+				add_province_modifier = {
+					name = can_great_plains
+					duration = 10950
+				}
+			}
+			assiniboia_area = {
+				add_province_modifier = {
+					name = can_great_plains
+					duration = 10950
+				}
+			}
+			prairies_area = {
+				add_province_modifier = {
+					name = can_great_plains
+					duration = 10950
+				}
+			}
+		}
+	}
+	can_pacific_railway = {
+		icon = me_mission_canada_steam
+		position = 9
+		required_missions = {
+			can_klondike_gold_rush
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						province_id = 984
+						province_id = 985
+						province_id = 2571
+						province_id = 2582
+						province_id = 2583
+						province_id = 2584
+						province_id = 991
+						province_id = 1001
+						province_id = 2015
+						province_id = 2593
+						province_id = 2597
+						province_id = 2003
+						province_id = 2607
+						province_id = 2018
+					}
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 2569
+						province_id = 2585
+						province_id = 1007
+						province_id = 1008
+						province_id = 2017
+						province_id = 973
+					}
+					OR = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						has_trade_building_trigger = no
+					}
+				}
+			}
+		}
+		trigger = {
+			has_institution = manufactories
+			custom_trigger_tooltip = {
+				tooltip = CAN_RAILWAY_TOOLTIP
+				984 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				985 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2571 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2582 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2583 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2584 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				991 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				1001 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2015 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2593 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2597 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2003 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2607 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				2018 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = CAN_RAILWAY_TRADE_TOOLTIP
+				2569 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_trade_building_trigger = yes
+				}
+				2585 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_trade_building_trigger = yes
+				}
+				1007 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_trade_building_trigger = yes
+				}
+				1008 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_trade_building_trigger = yes
+				}
+				2017 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_trade_building_trigger = yes
+				}
+				973 = {
+					country_or_non_sovereign_subject_holds = ROOT
+					has_trade_building_trigger = yes
+				}
+			}
+			OR = {
+				AND = {
+					1010 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					1011 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					1813 = {
+						country_or_non_sovereign_subject_holds = ROOT
+						custom_trigger_tooltip = {
+							tooltip = CAN_RAILWAY_TRADE_2_TOOLTIP
+							has_trade_building_trigger = yes
+						}
+					}
+				}
+				AND = {
+					2511 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					2598 = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					2005 = {
+						country_or_non_sovereign_subject_holds = ROOT
+						custom_trigger_tooltip = {
+							tooltip = CAN_RAILWAY_TRADE_2_TOOLTIP
+							has_trade_building_trigger = yes
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = CAN_FIRST_INCONTINENTAL_RAIL_TOOLTIP
+			hidden_effect = {
+				984 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				985 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				2571 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				2582 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				2583 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				2584 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				991 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				1001 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				2015 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				2593 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				2597 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				2003 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				2607 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				2018 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+			}
+			if = {
+				limit = {
+					owns = 1010
+					owns = 1011
+					owns = 1813
+					owns = 2511
+					owns = 2005
+					owns = 2598
+				}
+				1010 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				1011 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				1813 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				2511 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				2005 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				2598 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					owns = 1010
+					owns = 1011
+					owns = 1813
+				}
+				1010 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				1011 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				1813 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					owns = 2511
+					owns = 2005
+					owns = 2598
+				}
+				2511 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				2005 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+				2598 = {
+					add_permanent_province_modifier = {
+						name = can_first_intercontinental_rail
+						duration = -1
+					}
+				}
+			}
+			2569 = {
+				add_permanent_province_modifier = {
+					name = can_railroad_towns
+					duration = 18250
+				}
+			}
+			2585 = {
+				add_permanent_province_modifier = {
+					name = can_railroad_towns
+					duration = 18250
+				}
+			}
+			1007 = {
+				add_permanent_province_modifier = {
+					name = can_railroad_towns
+					duration = 18250
+				}
+			}
+			1008 = {
+				add_permanent_province_modifier = {
+					name = can_railroad_towns
+					duration = 18250
+				}
+			}
+			2017 = {
+				add_permanent_province_modifier = {
+					name = can_railroad_towns
+					duration = 18250
+				}
+			}
+			973 = {
+				add_permanent_province_modifier = {
+					name = can_railroad_towns
+					duration = 18250
+				}
+			}
+			if = {
+				limit = {
+					owns = 1813
+				}
+				1813 = {
+					add_permanent_province_modifier = {
+						name = can_railroad_towns
+						duration = 18250
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					owns = 2005
+				}
+				2005 = {
+					add_permanent_province_modifier = {
+						name = can_railroad_towns
+						duration = 18250
+					}
+				}
+			}
+		}
+	}
+	can_rightful_alaska = {
+		icon = me_mission_canada_chalet
+		position = 10
+		required_missions = {
+			can_pacific_railway
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = alaska_area
+				area = east_alaska_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			alaska_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			east_alaska_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 25
+			977 = {
+				add_province_modifier = {
+					name = can_rightful_alaska_modifier
+					duration = 18250
+				}
+			}
+			2612 = {
+				add_province_modifier = {
+					name = can_rightful_alaska_modifier
+					duration = 18250
+				}
+			}
+			978 = {
+				add_province_modifier = {
+					name = can_rightful_alaska_modifier
+					duration = 18250
+				}
+			}
+			2611 = {
+				add_province_modifier = {
+					name = can_rightful_alaska_modifier
+					duration = 18250
+				}
+			}
+			979 = {
+				add_province_modifier = {
+					name = can_rightful_alaska_modifier
+					duration = 18250
+				}
+			}
+		}
+	}
+	can_california_dreaming = {
+		icon = me_mission_mexico_gold_rush
+		position = 12
+		required_missions = {
+			can_rocky_mountains
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 868
+					OR = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						has_trade_building_trigger = no
+					}
+				}
+				AND = {
+					province_id = 2021
+					OR = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						AND = {
+							NOT = {
+								has_building = shipyard
+							}
+							NOT = {
+								has_building = grand_shipyard
+							}
+						}
+					}
+				}
+				AND = {
+					region = california_region
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 10
+								region = california_region
+							}
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				region = california_region
+			}
+			868 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_trade_building_trigger = yes
+			}
+			2021 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+		}
+		effect = {
+			868 = {
+				add_permanent_province_modifier = {
+					name = can_ports_pacific
+					duration = -1
+				}
+			}
+			2021 = {
+				add_permanent_province_modifier = {
+					name = can_ports_pacific
+					duration = -1
+				}
+			}
+			2021 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 10950
+					power = 30
+					key = can_california_dreaming_trade
+				}
+			}
+		}
+	}
+}
+
+canada_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = CAN
+	}
+	has_country_shield = yes
+	can_growing_city_kingston = {
+		icon = me_mission_road_city
+		position = 3
+		required_missions = {
+			can_upper_canada
+		}
+		provinces_to_highlight = {
+			province_id = 989
+			OR = {
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				NOT = {
+					development = 15
+				}
+				AND = {
+					NOT = {
+						has_building = temple
+					}
+					NOT = {
+						has_building = cathedral
+					}
+					NOT = {
+						has_building = barracks
+					}
+					NOT = {
+						has_building = training_fields
+					}
+					NOT = {
+						has_building = fort_15th
+					}
+					NOT = {
+						has_building = fort_16th
+					}
+					NOT = {
+						has_building = fort_17th
+					}
+					NOT = {
+						has_building = fort_18th
+					}
+				}
+			}
+		}
+		trigger = {
+			989 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 15
+				OR = {
+					has_building = temple
+					has_building = cathedral
+					has_building = barracks
+					has_building = training_fields
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					989 = {
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+						OR = {
+							has_building = barracks
+							has_building = training_fields
+							has_building = fort_15th
+							has_building = fort_16th
+							has_building = fort_17th
+							has_building = fort_18th
+						}
+					}
+				}
+				custom_tooltip = CANADA_KINGSTON_TOOLTIP
+				add_country_modifier = {
+					name = can_kingston_rising
+					duration = 9125
+				}
+				set_country_flag = kingston_25_years
+			}
+			else_if = {
+				limit = {
+					989 = {
+						OR = {
+							has_building = temple
+							has_building = cathedral
+						}
+					}
+				}
+				add_country_modifier = {
+					name = can_george_cathedral
+					duration = 9125
+				}
+			}
+			else = {
+				custom_tooltip = CANADA_KINGSTON_TOOLTIP
+				add_country_modifier = {
+					name = can_royal_military_college
+					duration = 9125
+				}
+				set_country_flag = kingston_25_years
+			}
+			989 = {
+				change_province_name = "Kingston"
+				rename_capital = "Kingston"
+				if = {
+					limit = {
+						NOT = {
+							has_building = town_hall
+						}
+					}
+					if = {
+						limit = {
+							has_building = courthouse
+						}
+						remove_building = courthouse
+					}
+					add_building_construction = {
+						building = town_hall
+						speed = 1
+						cost = 0
+					}
+				}
+			}
+		}
+	}
+	can_fur_trade = {
+		icon = me_mission_native_western_trade_01
+		position = 5
+		required_missions = {
+			can_hudson_bay_company
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 15
+				trade_goods = fur
+			}
+		}
+		effect = {
+			change_price = {
+				trade_goods = fur
+				key = can_great_fur_trade
+				value = 0.15
+				duration = 5475
+			}
+			every_known_country = {
+				limit = {
+					NOT = {
+						tag = ROOT
+					}
+					capital_scope = {
+						continent = north_america
+					}
+					technology_group = mesoamerican
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = can_great_fur_trade_opinion
+				}
+			}
+		}
+	}
+	can_mari_usque_mare = {
+		icon = me_mission_canada_a_mari
+		position = 7
+		required_missions = {
+			can_saskatchewan
+			can_forts_canada
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 973
+				province_id = 2569
+			}
+			OR = {
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				is_in_capital_area = no
+			}
+		}
+		trigger = {
+			stability = 0
+			973 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_in_capital_area = yes
+			}
+			2569 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				is_in_capital_area = yes
+			}
+		}
+		effect = {
+			set_country_flag = can_deed_surrender_enable
+			add_prestige = 50
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+			add_country_modifier = {
+				name = can_sea_to_sea
+				duration = 5475
+			}
+		}
+	}
+	can_klondike_gold_rush = {
+		icon = me_mission_inca_people_with_gold
+		position = 8
+		required_missions = {
+			can_mari_usque_mare
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = CAN_GOLD_EVENT_TOOLTIP
+				OR = {
+					has_country_flag = gold_event_fired
+					HBC = {
+						has_country_flag = gold_event_fired
+					}
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 1
+				trade_goods = gold
+				region = cascadia_region
+			}
+			num_of_owned_provinces_with = {
+				value = 5
+				region = cascadia_region
+			}
+		}
+		effect = {
+			set_country_flag = search_for_gold_decision_enabled
+			country_event = {
+				id = ME_Canada_Events.3
+			}
+		}
+	}
+	can_amphibious_ambitions = {
+		icon = me_mission_canada_native_musket
+		position = 9
+		required_missions = {
+			can_eliminate_iroquois
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					region = great_lakes_region
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				AND = {
+					province_id = 915
+					OR = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						NOT = {
+							development = 15
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			915 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 15
+			}
+			great_lakes_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = lake_superior_area
+						area = wisconsin_area
+						area = michigan_area
+					}
+				}
+				add_province_modifier = {
+					name = can_copper_rush
+					duration = 9125
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = lake_superior_area
+						area = wisconsin_area
+						area = michigan_area
+					}
+				}
+				add_province_modifier = {
+					name = can_copper_rush
+					duration = 9125
+				}
+			}
+			random_owned_province = {
+				limit = {
+					OR = {
+						area = lake_superior_area
+						area = wisconsin_area
+						area = michigan_area
+					}
+				}
+				add_province_modifier = {
+					name = can_copper_rush
+					duration = 9125
+				}
+			}
+			915 = {
+				change_province_name = "Chicago"
+				rename_capital = "Chicago"
+				add_province_modifier = {
+					name = can_windy_city
+					duration = 18250
+				}
+			}
+		}
+	}
+	can_rocky_mountains = {
+		icon = me_mission_canada_caravan
+		position = 11
+		required_missions = {
+			can_rightful_alaska
+			can_march_manhattan
+		}
+		provinces_to_highlight = {
+			province_id = 873
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			873 = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			num_of_owned_provinces_with = {
+				value = 50
+				OR = {
+					region = california_region
+					region = cascadia_region
+				}
+			}
+		}
+		effect = {
+			873 = {
+				change_province_name = "Fort Vancouver"
+				rename_capital = "Fort Vancouver"
+				if = {
+					limit = {
+						has_building = fort_15th
+					}
+					remove_building = fort_15th
+					add_building_construction = {
+						building = fort_16th
+						speed = 0.5
+						cost = 0
+					}
+				}
+				else_if = {
+					limit = {
+						has_building = fort_16th
+					}
+					remove_building = fort_16th
+					add_building_construction = {
+						building = fort_17th
+						speed = 0.5
+						cost = 0
+					}
+				}
+				else_if = {
+					limit = {
+						has_building = fort_17th
+					}
+					remove_building = fort_17th
+					add_building_construction = {
+						building = fort_18th
+						speed = 0.5
+						cost = 0
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_building = fort_15th
+						}
+						NOT = {
+							has_building = fort_16th
+						}
+						NOT = {
+							has_building = fort_17th
+						}
+						NOT = {
+							has_building = fort_18th
+						}
+					}
+					add_building_construction = {
+						building = fort_15th
+						speed = 0.5
+						cost = 0
+					}
+				}
+			}
+			cascadia_region = {
+				limit = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				add_province_modifier = {
+					name = can_rocky_mountain_forts
+					duration = 18250
+				}
+			}
+		}
+	}
+}
+
+canada_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = CAN
+	}
+	has_country_shield = yes
+	can_british_north_america = {
+		icon = me_mission_canada_goverance
+		position = 1
+		required_missions = {
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				DIP = 4
+				statesman = 1
+			}
+			OR = {
+				is_subject = no
+				liberty_desire = 50
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				country_event = {
+					id = ME_Canada_Events.4
+				}
+			}
+			else = {
+				add_prestige = 20
+			}
+		}
+	}
+	can_province_canada = {
+		icon = me_mission_canada_diplomacy
+		position = 4
+		required_missions = {
+			can_growing_city_kingston
+			can_cities_quebec
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			OR = {
+				ADM = 3
+				statesman = 1
+			}
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				if = {
+					limit = {
+						liberty_desire = 55
+					}
+					overlord = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
+				}
+				else = {
+					overlord = {
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Canada_Events.9
+			}
+			add_country_modifier = {
+				name = can_growing_nation
+				duration = 5475
+			}
+			add_faction = can_liberal_party
+			add_faction = can_conservative_party
+			add_faction = can_quebecois_party
+			hidden_effect = {
+				add_country_modifier = {
+					name = can_factions_modifier
+					duration = -1
+				}
+			}
+			northeast_america_region = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	can_niagara_lake = {
+		icon = me_mission_canada_niagara_falls
+		position = 5
+		required_missions = {
+			can_province_canada
+		}
+		provinces_to_highlight = {
+			province_id = 987
+			OR = {
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				NOT = {
+					development = 10
+				}
+			}
+		}
+		trigger = {
+			987 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 10
+			}
+		}
+		effect = {
+			987 = {
+				add_province_modifier = {
+					name = can_wine_niagara
+					duration = 27375
+				}
+				build_possible_manufactory_in_province = yes
+			}
+		}
+	}
+	can_forts_canada = {
+		icon = me_mission_medieval_fort
+		position = 6
+		required_missions = {
+			can_niagara_lake
+			can_port_halifax
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 982
+					OR = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						AND = {
+							NOT = {
+								has_building = barracks
+							}
+							NOT = {
+								has_building = training_fields
+							}
+						}
+					}
+				}
+				AND = {
+					province_id = 2670
+					OR = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						NOT = {
+							development = 15
+						}
+						AND = {
+							NOT = {
+								has_building = barracks
+							}
+							NOT = {
+								has_building = training_fields
+							}
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			has_mil_advisor_3 = yes
+			982 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					has_building = barracks
+					has_building = training_fields
+				}
+			}
+			2670 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					OR = {
+						has_building = barracks
+						has_building = training_fields
+					}
+					development = 15
+				}
+			}
+		}
+		effect = {
+			987 = {
+				if = {
+					limit = {
+						has_building = fort_17th
+					}
+					remove_building = fort_17th
+					add_building_construction = {
+						building = fort_18th
+						speed = 0.5
+						cost = 0
+					}
+				}
+				add_province_modifier = {
+					name = can_fortress_louisbourg
+					duration = -1
+				}
+			}
+			2670 = {
+				if = {
+					limit = {
+						has_building = fort_15th
+					}
+					remove_building = fort_15th
+					add_building_construction = {
+						building = fort_16th
+						speed = 0.5
+						cost = 0
+					}
+				}
+				else_if = {
+					limit = {
+						has_building = fort_16th
+					}
+					remove_building = fort_16th
+					add_building_construction = {
+						building = fort_17th
+						speed = 0.5
+						cost = 0
+					}
+				}
+				else_if = {
+					limit = {
+						has_building = fort_17th
+					}
+					remove_building = fort_17th
+					add_building_construction = {
+						building = fort_18th
+						speed = 0.5
+						cost = 0
+					}
+				}
+				else_if = {
+					limit = {
+						NOT = {
+							has_building = fort_15th
+						}
+						NOT = {
+							has_building = fort_16th
+						}
+						NOT = {
+							has_building = fort_17th
+						}
+						NOT = {
+							has_building = fort_18th
+						}
+					}
+					add_building_construction = {
+						building = fort_15th
+						speed = 0.5
+						cost = 0
+					}
+				}
+				add_province_modifier = {
+					name = can_fort_york
+					duration = 18250
+				}
+			}
+		}
+	}
+	can_eliminate_iroquois = {
+		icon = me_mission_native_iroquois
+		position = 8
+		required_missions = {
+			can_mari_usque_mare
+			can_forts_canada
+		}
+		provinces_to_highlight = {
+			area = iroquoisia_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			iroquoisia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 15
+			maine_area = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			great_woods_area = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			south_iroquoisia_area = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			great_lakes_region = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	can_march_manhattan = {
+		icon = mission_colonial
+		position = 10
+		required_missions = {
+			can_amphibious_ambitions
+			can_eliminate_iroquois
+			can_expand_new_england
+		}
+		provinces_to_highlight = {
+			province_id = 965
+			OR = {
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+				NOT = {
+					development = 10
+				}
+				AND = {
+					NOT = {
+						has_building = shipyard
+					}
+					NOT = {
+						has_building = grand_shipyard
+					}
+				}
+			}
+		}
+		trigger = {
+			owns_core_province = 965
+			965 = {
+				development = 10
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+		}
+		effect = {
+			965 = {
+				add_province_modifier = {
+					name = can_massive_urban_development
+					duration = 9125
+				}
+			}
+		}
+	}
+	can_canadian_empire = {
+		icon = me_mission_canada_mapleleaf
+		position = 13
+		required_missions = {
+			can_california_dreaming
+			can_detroit_louisiana
+		}
+		trigger = {
+			stability = 3
+		}
+		effect = {
+			add_country_modifier = {
+				name = can_maple_leaf_forever
+				duration = -1
+			}
+		}
+	}
+}
+
+canada_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = CAN
+	}
+	has_country_shield = yes
+	can_cities_quebec = {
+		icon = mission_colonial
+		position = 3
+		required_missions = {
+			can_lower_canada
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 994
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				AND = {
+					province_id = 993
+					OR = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						NOT = {
+							development = 15
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			owns = 994
+			owns = 993
+			993 = {
+				development = 7
+			}
+		}
+		effect = {
+			993 = {
+				if = {
+					limit = {
+						NOT = {
+							has_building = university
+						}
+					}
+					add_building_construction = {
+						building = university
+						speed = 1
+						cost = 0
+					}
+				}
+				add_province_modifier = {
+					name = can_multicultural_city
+					duration = 27375
+				}
+			}
+			994 = {
+				add_base_tax = 2
+				add_base_production = 2
+				add_base_manpower = 2
+				if = {
+					limit = {
+						NOT = {
+							has_building = fort_17th
+						}
+						NOT = {
+							has_building = fort_18th
+						}
+					}
+					if = {
+						limit = {
+							has_building = fort_15th
+						}
+						remove_building = fort_15th
+					}
+					if = {
+						limit = {
+							has_building = fort_16th
+						}
+						remove_building = fort_16th
+					}
+					add_building_construction = {
+						building = fort_17th
+						speed = 1
+						cost = 0
+					}
+				}
+				add_province_modifier = {
+					name = can_citadel_quebec
+					duration = 18250
+				}
+			}
+		}
+	}
+	can_port_halifax = {
+		icon = mission_colonial
+		position = 5
+		required_missions = {
+			can_cities_quebec
+			can_secure_lawrence
+		}
+		provinces_to_highlight = {
+			province_id = 2569
+			OR = {
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				AND = {
+					NOT = {
+						has_building = shipyard
+					}
+					NOT = {
+						has_building = grand_shipyard
+					}
+				}
+				AND = {
+					NOT = {
+						has_building = workshop
+					}
+					NOT = {
+						has_building = counting_house
+					}
+				}
+			}
+		}
+		trigger = {
+			2569 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Canada_Events.11
+			}
+			2569 = {
+				add_province_modifier = {
+					name = can_port_new_world
+					duration = 18250
+				}
+			}
+		}
+	}
+	can_cuisines_canada = {
+		icon = me_mission_canada_poutine
+		position = 7
+		required_missions = {
+			can_forts_canada
+			can_populating_our_lands
+		}
+		trigger = {
+			num_accepted_cultures = 3
+			if = {
+				limit = {
+					has_dlc = "Mandate of Heaven"
+				}
+				if = {
+					limit = {
+						is_expanded_mod_active = {
+							mod = trade_goods
+						}
+					}
+					OR = {
+						splendor = 300
+						prestige = 50
+						trading_bonus = {
+							trade_goods = maple_syrup
+							value = yes
+						}
+					}
+				}
+				else = {
+					OR = {
+						splendor = 300
+						prestige = 50
+					}
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						is_expanded_mod_active = {
+							mod = trade_goods
+						}
+					}
+					OR = {
+						prestige = 50
+						trading_bonus = {
+							trade_goods = maple_syrup
+							value = yes
+						}
+					}
+				}
+				else = {
+					prestige = 50
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Canada_Events.12
+			}
+			if = {
+				limit = {
+					is_expanded_mod_active = {
+						mod = trade_goods
+					}
+				}
+				change_price = {
+					trade_goods = maple_syrup
+					key = can_cuisines_canada_desc
+					value = 0.25
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = can_cuisines_canada
+				duration = -1
+			}
+		}
+	}
+	can_expand_new_england = {
+		icon = me_mission_iceland_colonize_eastern_america
+		position = 9
+		required_missions = {
+			can_eliminate_iroquois
+			can_cuisines_canada
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = maine_area
+				area = great_woods_area
+				area = south_iroquoisia_area
+			}
+			OR = {
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				unrest = 1
+			}
+		}
+		trigger = {
+			maine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				NOT = {
+					unrest = 1
+				}
+			}
+			great_woods_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				NOT = {
+					unrest = 1
+				}
+			}
+			south_iroquoisia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				NOT = {
+					unrest = 1
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = can_new_england_traditions
+				duration = 18250
+			}
+			massachusetts_bay_area = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	can_quebecois_claims = {
+		icon = me_mission_conquer
+		position = 11
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						area = laurentian_area
+						area = lower_canada_area
+						area = lower_acadia_area
+						area = cote_nord_area
+					}
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				AND = {
+					area = notre_dame_mountains_area
+					OR = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						unrest = 1
+						has_rebel_faction = nationalist_rebels
+					}
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				DIP = 4
+				statesman = 1
+			}
+			notre_dame_mountains_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				NOT = {
+					unrest = 1
+				}
+				NOT = {
+					has_rebel_faction = nationalist_rebels
+				}
+			}
+			laurentian_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lower_canada_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			lower_acadia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			cote_nord_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = CAN_QUEBECOIS_CONTENT_TOOLTIP
+			hidden_effect = {
+				notre_dame_mountains_area = {
+					add_province_modifier = {
+						name = can_quebecois_content
+						duration = -1
+					}
+				}
+				laurentian_area = {
+					add_province_modifier = {
+						name = can_quebecois_content
+						duration = -1
+					}
+				}
+				lower_canada_area = {
+					add_province_modifier = {
+						name = can_quebecois_content
+						duration = -1
+					}
+				}
+				lower_acadia_area = {
+					add_province_modifier = {
+						name = can_quebecois_content
+						duration = -1
+					}
+				}
+				cote_nord_area = {
+					add_province_modifier = {
+						name = can_quebecois_content
+						duration = -1
+					}
+				}
+			}
+			mississippi_region = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			great_lakes_region = {
+				limit = {
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}
+
+canada_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = CAN
+	}
+	has_country_shield = yes
+	can_canadian_tradeship = {
+		icon = me_mission_merchant_navy
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			num_of_light_ship = 10
+		}
+		effect = {
+			if = {
+				limit = {
+					has_dlc = "Golden Century"
+					has_flagship = no
+					any_owned_province = {
+						has_port = yes
+					}
+				}
+				random_owned_province = {
+					limit = {
+						has_port = yes
+					}
+					create_flagship = {
+						name = "HMCS Haida"
+						type = heavy_ship
+					}
+				}
+			}
+			1490 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 5475
+					power = 30
+					key = can_canadian_tradeships
+				}
+			}
+		}
+	}
+	can_lower_canada = {
+		icon = me_mission_canada_native_fireplace
+		position = 2
+		required_missions = {
+			can_british_north_america
+			can_canadian_tradeship
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2580
+				province_id = 2579
+				area = lower_canada_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			owns = 2580
+			owns = 2579
+			lower_canada_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Canada_Events.13
+			}
+			set_country_flag = can_emergin_culture_enable
+			lower_canada_area = {
+				add_province_modifier = {
+					name = can_indigenous_tree_sap
+					duration = 18250
+				}
+			}
+			2580 = {
+				add_province_modifier = {
+					name = can_indigenous_tree_sap
+					duration = 18250
+				}
+			}
+			2579 = {
+				add_province_modifier = {
+					name = can_indigenous_tree_sap
+					duration = 18250
+				}
+			}
+		}
+	}
+	can_secure_lawrence = {
+		icon = me_mission_canada_natives_river
+		position = 4
+		required_missions = {
+			can_lower_canada
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						province_id = 986
+						province_id = 989
+						province_id = 990
+						province_id = 993
+						province_id = 994
+						province_id = 995
+						province_id = 2577
+						province_id = 2576
+						province_id = 2578
+						province_id = 2582
+						province_id = 2583
+						province_id = 2585
+					}
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 980
+						province_id = 981
+						province_id = 2573
+					}
+					OR = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						NOT = {
+							development = 6
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			owns = 986
+			owns = 989
+			owns = 990
+			owns = 993
+			owns = 994
+			owns = 995
+			owns = 2577
+			owns = 2576
+			owns = 2578
+			owns = 2582
+			owns = 2583
+			owns = 2585
+			980 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 6
+			}
+			981 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 6
+			}
+			2573 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				development = 6
+			}
+		}
+		effect = {
+			custom_tooltip = can_secure_lawrence.tt
+			hidden_effect = {
+				986 = {
+					add_province_modifier = {
+						name = can_grand_banks
+						duration = 18250
+					}
+				}
+				989 = {
+					add_province_modifier = {
+						name = can_grand_banks
+						duration = 18250
+					}
+				}
+				990 = {
+					add_province_modifier = {
+						name = can_grand_banks
+						duration = 18250
+					}
+				}
+				993 = {
+					add_province_modifier = {
+						name = can_grand_banks
+						duration = 18250
+					}
+				}
+				994 = {
+					add_province_modifier = {
+						name = can_grand_banks
+						duration = 18250
+					}
+				}
+				995 = {
+					add_province_modifier = {
+						name = can_grand_banks
+						duration = 18250
+					}
+				}
+				2577 = {
+					add_province_modifier = {
+						name = can_grand_banks
+						duration = 18250
+					}
+				}
+				2576 = {
+					add_province_modifier = {
+						name = can_grand_banks
+						duration = 18250
+					}
+				}
+				2578 = {
+					add_province_modifier = {
+						name = can_grand_banks
+						duration = 18250
+					}
+				}
+				2582 = {
+					add_province_modifier = {
+						name = can_grand_banks
+						duration = 18250
+					}
+				}
+				2583 = {
+					add_province_modifier = {
+						name = can_grand_banks
+						duration = 18250
+					}
+				}
+				2585 = {
+					add_province_modifier = {
+						name = can_grand_banks
+						duration = 18250
+					}
+				}
+				980 = {
+					add_province_modifier = {
+						name = can_grand_banks
+						duration = 18250
+					}
+				}
+				981 = {
+					add_province_modifier = {
+						name = can_grand_banks
+						duration = 18250
+					}
+				}
+				2573 = {
+					add_province_modifier = {
+						name = can_grand_banks
+						duration = 18250
+					}
+				}
+			}
+		}
+	}
+	can_populating_our_lands = {
+		icon = me_mission_canada_populatinglands
+		position = 6
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			country_or_non_sovereign_subject_holds = ROOT
+			unrest = 1
+		}
+		trigger = {
+			stability = 2
+			num_of_owned_provinces_with = {
+				value = 60
+				development = 8
+			}
+			all_owned_province = {
+				NOT = {
+					unrest = 1
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Canada_Events.14
+			}
+			add_country_modifier = {
+				name = can_enriching_canadian_land
+				duration = 9125
+			}
+		}
+	}
+	can_development_canada = {
+		icon = me_mission_canada_hunting_return
+		position = 7
+		required_missions = {
+			can_forts_canada
+			can_populating_our_lands
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 25
+				OR = {
+					has_building = workshop
+					has_building = courthouse
+				}
+			}
+			development_in_provinces = {
+				value = 350
+				OR = {
+					has_owner_culture = yes
+					has_owner_accepted_culture = yes
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = can_growing_nation_2
+				duration = 18250
+			}
+		}
+	}
+	can_industrial_revolution = {
+		icon = me_mission_industrial_smoking_chimney
+		position = 8
+		required_missions = {
+			can_development_canada
+		}
+		provinces_to_highlight = {
+		}
+		trigger = {
+			total_development = 500
+			has_institution = enlightenment
+			num_of_owned_manufactory_combined_trigger = {
+				amount = 20
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = can_industrial_revolution
+				duration = -1
+			}
+			hidden_effect = {
+				set_country_flag = can_general_strike_flag
+			}
+		}
+	}
+	can_maple_syrup_monopoly = {
+		icon = me_mission_canada_syrupbarrel
+		position = 10
+		required_missions = {
+			can_expand_new_england
+		}
+		provinces_to_highlight = {
+			area = south_iroquoisia_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			south_iroquoisia_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			if = {
+				limit = {
+					is_expanded_mod_active = {
+						mod = trade_goods
+					}
+				}
+				trading_bonus = {
+					trade_goods = maple_syrup
+					value = yes
+				}
+			}
+			else = {
+				if = {
+					limit = {
+						has_dlc = "Mandate of Heaven"
+					}
+					splendor = 500
+				}
+				else = {
+					prestige = 90
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					is_expanded_mod_active = {
+						mod = trade_goods
+					}
+				}
+				every_owned_province = {
+					limit = {
+						trade_goods = maple_syrup
+					}
+					add_province_modifier = {
+						name = can_maple_syrup_monopoly_modifier
+						duration = -1
+					}
+				}
+			}
+			else = {
+				maine_area = {
+					add_province_modifier = {
+						name = can_maple_syrup_monopoly_modifier_2
+						duration = -1
+					}
+				}
+				great_woods_area = {
+					add_province_modifier = {
+						name = can_maple_syrup_monopoly_modifier_2
+						duration = -1
+					}
+				}
+				south_iroquoisia_area = {
+					add_province_modifier = {
+						name = can_maple_syrup_monopoly_modifier_2
+						duration = -1
+					}
+				}
+			}
+		}
+	}
+	can_detroit_louisiana = {
+		icon = me_mission_native_european_colonist
+		position = 12
+		required_missions = {
+			can_quebecois_claims
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = great_lakes_region
+				region = mississippi_region
+			}
+			OR = {
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				unrest = 1
+			}
+		}
+		trigger = {
+			NOT = {
+				has_country_modifier = can_quebecois_discontent
+			}
+			great_lakes_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				NOT = {
+					unrest = 1
+				}
+			}
+			mississippi_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				NOT = {
+					unrest = 1
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = can_new_france_reclaimed
+				duration = 9125
+			}
+			add_country_modifier = {
+				name = can_road_louisiana
+				duration = -1
+			}
+		}
+	}
+}
+
+colombia_venezuela_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = COL
+			tag = VNZ
+		}
+	}
+	has_country_shield = yes
+	colombia_venezuela_ecuadorian_shrimps = {
+		icon = mission_galleys_in_port
+		required_missions = {
+			colombia_venezuela_somos_libre
+		}
+		position = 2
+		provinces_to_highlight = {
+			area = quito_area
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			quito_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_years_of_income = 1
+		}
+	}
+	colombia_venezuela_fortify_panama = {
+		icon = mission_fortify_rajputana
+		required_missions = {
+			colombia_venezuela_panama_dreaming
+		}
+		position = 3
+		provinces_to_highlight = {
+			province_id = 835
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				AND = {
+					NOT = {
+						has_building = fort_15th
+					}
+					NOT = {
+						has_building = fort_16th
+					}
+					NOT = {
+						has_building = fort_17th
+					}
+					NOT = {
+						has_building = fort_18th
+					}
+				}
+			}
+		}
+		trigger = {
+			owns = 835
+			835 = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+			}
+		}
+		effect = {
+			835 = {
+				if = {
+					limit = {
+						NOT = {
+							has_great_project = {
+								type = panama_canal
+							}
+						}
+						has_construction = panama_canal
+					}
+					add_construction_progress = 0.1
+				}
+				else = {
+					custom_tooltip = COLOMBIA_VENEZUELA_FORTIFY_PANAMA_TT
+				}
+				add_province_modifier = {
+					name = colombia_venezuela_fortify_panama_province_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+colombia_venezuela_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = COL
+			tag = VNZ
+		}
+	}
+	has_country_shield = yes
+	colombia_venezuela_panama_dreaming = {
+		icon = me_mission_venice_small_ship_in_port
+		required_missions = {
+			colombia_venezuela_somos_libre
+		}
+		position = 2
+		provinces_to_highlight = {
+			area = panama_area
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			panama_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = colombia_venezuela_panama_dreaming_modifier
+				duration = 7300
+			}
+		}
+	}
+	colombia_venezuela_push_the_central_american_states = {
+		icon = me_mission_mayas_warrior
+		required_missions = {
+			colombia_venezuela_ecuadorian_shrimps
+		}
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = costa_rica_area
+				area = nicaragua_area
+				area = honduras_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			costa_rica_area = {
+				type = all
+				owned_by = ROOT
+			}
+			nicaragua_area = {
+				type = all
+				owned_by = ROOT
+			}
+			honduras_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_yearly_manpower = 1
+		}
+	}
+}
+
+colombia_venezuela_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = COL
+			tag = VNZ
+		}
+	}
+	has_country_shield = yes
+	colombia_venezuela_somos_libre = {
+		icon = mission_conquer_50_development
+		required_missions = {
+		}
+		position = 1
+		trigger = {
+			is_subject = no
+			total_development = 100
+			custom_trigger_tooltip = {
+				tooltip = COL_VNZ_FORMED_AT_LEAST_1_YEAR_AGO
+				had_country_flag = {
+					flag = changed_from_colonial_nation
+					days = 365
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = colombia_venezuela_somos_libre_modifier
+				duration = -1
+			}
+			quito_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			colombia_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	colombia_venezuela_a_greater_colombia_venezuela = {
+		icon = mission_unite_home_region
+		required_missions = {
+			colombia_venezuela_ecuadorian_shrimps
+			colombia_venezuela_panama_dreaming
+			colombia_venezuela_bogota_rising
+			colombia_venezuela_venezuelan_revolution
+		}
+		position = 3
+		trigger = {
+			is_subject = no
+			stability = 2
+			total_development = 500
+		}
+		effect = {
+			set_country_flag = unlocked_decision_to_form_gran_colombia
+			custom_tooltip = UNLOCKED_DECISION_TO_FORM_GRAN_COLOMBIA_TT
+		}
+	}
+}
+
+colombia_venezuela_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = COL
+			tag = VNZ
+		}
+	}
+	has_country_shield = yes
+	colombia_venezuela_bogota_rising = {
+		icon = mission_develop_the_capital
+		required_missions = {
+			colombia_venezuela_somos_libre
+		}
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = bogota_area
+				area = popayan_area
+				area = coquivacoa_area
+				area = western_llanos
+				area = central_llanos_area
+				area = colombian_amazonas_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			bogota_area = {
+				type = all
+				owned_by = ROOT
+			}
+			popayan_area = {
+				type = all
+				owned_by = ROOT
+			}
+			coquivacoa_area = {
+				type = all
+				owned_by = ROOT
+			}
+			western_llanos = {
+				type = all
+				owned_by = ROOT
+			}
+			central_llanos_area = {
+				type = all
+				owned_by = ROOT
+			}
+			colombian_amazonas_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = tt_replace_modifier_colombia_venezuela_somos_libre_modifier_with_colombia_venezuela_bogota_rising_modifier
+			hidden_effect = {
+				replace_country_modifier = {
+					remove = colombia_venezuela_somos_libre_modifier
+					add = colombia_venezuela_bogota_rising_modifier
+					time = -1
+				}
+			}
+		}
+	}
+	colombia_venezuela_independence_for_suriname_and_guyana = {
+		icon = mission_zambezi_gold
+		required_missions = {
+			colombia_venezuela_bogota_rising
+		}
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = suriname_area
+				area = guyana_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			suriname_area = {
+				type = all
+				owned_by = ROOT
+			}
+			guyana_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = tt_replace_modifier_colombia_venezuela_bogota_rising_modifier_with_colombia_venezuela_independence_for_suriname_and_guyana_modifier
+			hidden_effect = {
+				replace_country_modifier = {
+					remove = colombia_venezuela_bogota_rising_modifier
+					add = colombia_venezuela_independence_for_suriname_and_guyana_modifier
+					time = -1
+				}
+			}
+		}
+	}
+}
+
+colombia_venezuela_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = COL
+			tag = VNZ
+		}
+	}
+	has_country_shield = yes
+	colombia_venezuela_venezuelan_revolution = {
+		icon = mission_assemble_an_army
+		required_missions = {
+			colombia_venezuela_somos_libre
+		}
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				area = venezuela_area
+				area = upper_guyana_area
+				area = eastern_llanos
+				area = maracaibo_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			venezuela_area = {
+				type = all
+				owned_by = ROOT
+			}
+			upper_guyana_area = {
+				type = all
+				owned_by = ROOT
+			}
+			eastern_llanos = {
+				type = all
+				owned_by = ROOT
+			}
+			maracaibo_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			random_province = {
+				limit = {
+					area = upper_guyana_area
+				}
+				change_trade_goods = gems
+				add_province_modifier = {
+					name = colombia_venezuela_venezuelan_revolution_province_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+gran_colombia_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = GRC
+	}
+	has_country_shield = yes
+	gran_colombia_the_natives_of_the_caribbean = {
+		icon = mission_colonize_the_caribbean
+		required_missions = {
+			gran_colombia_unite_the_central_american_states
+		}
+		position = 5
+		provinces_to_highlight = {
+			region = carribeans_region
+			NOT = {
+				owned_by = ROOT
+			}
+			NOT = {
+				province_id = 481
+			}
+		}
+		trigger = {
+			carribeans_region = {
+				type = all
+				OR = {
+					owned_by = ROOT
+					province_id = 481
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Colombia_Venezuela_Gran_Colombia_Events.1
+			}
+		}
+	}
+}
+
+gran_colombia_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = GRC
+	}
+	has_country_shield = yes
+	gran_colombia_unite_the_central_american_states = {
+		icon = mission_cannons_firing
+		required_missions = {
+			colombia_venezuela_push_the_central_american_states
+			colombia_venezuela_a_greater_colombia_venezuela
+		}
+		position = 4
+		provinces_to_highlight = {
+			region = central_america_region
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			central_america_region = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = gran_colombia_unite_the_central_american_states_modifier
+				duration = 5475
+			}
+		}
+	}
+	gran_colombia_fortify_the_northern_border = {
+		icon = mission_fortify_rajputana
+		required_missions = {
+			gran_colombia_unite_the_central_american_states
+		}
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						province_id = 2631
+						province_id = 844
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				AND = {
+					province_id = 4584
+					OR = {
+						NOT = {
+							owned_by = ROOT
+						}
+						AND = {
+							NOT = {
+								has_building = fort_15th
+							}
+							NOT = {
+								has_building = fort_16th
+							}
+							NOT = {
+								has_building = fort_17th
+							}
+							NOT = {
+								has_building = fort_18th
+							}
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			owns = 2631
+			owns = 844
+			owns = 4584
+			4584 = {
+				OR = {
+					has_building = fort_15th
+					has_building = fort_16th
+					has_building = fort_17th
+					has_building = fort_18th
+				}
+			}
+		}
+		effect = {
+			add_army_tradition = 10
+		}
+	}
+}
+
+gran_colombia_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = GRC
+	}
+	has_country_shield = yes
+	gran_colombia_humiliation_of_the_brazilians = {
+		icon = me_mission_portugal_brazil
+		required_missions = {
+			colombia_venezuela_a_greater_colombia_venezuela
+			gran_colombia_the_home_of_the_incas
+		}
+		position = 5
+		provinces_to_highlight = {
+			region = brazil_region
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			brazil_region = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			755 = {
+				create_or_add_center_of_trade_level = {
+					level = 1
+				}
+			}
+		}
+	}
+	gran_colombia_bolivars_ambition = {
+		icon = mission_assemble_an_army
+		required_missions = {
+			gran_colombia_humiliation_of_the_brazilians
+			gran_colombia_free_upper_peru
+		}
+		position = 6
+		provinces_to_highlight = {
+			continent = south_america
+			is_sea = no
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			south_america = {
+				type = all
+				OR = {
+					owned_by = ROOT
+					is_sea = yes
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = gran_colombia_bolivars_ambition_modifier
+				duration = -1
+			}
+		}
+	}
+}
+
+gran_colombia_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = GRC
+	}
+	has_country_shield = yes
+	gran_colombia_the_home_of_the_incas = {
+		icon = me_mission_inca_sapa_inca
+		required_missions = {
+			colombia_venezuela_a_greater_colombia_venezuela
+			colombia_venezuela_independence_for_suriname_and_guyana
+		}
+		position = 4
+		provinces_to_highlight = {
+			region = peru_region
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			peru_region = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					peru_region = {
+						trade_goods = gold
+					}
+				}
+				custom_tooltip = GRAN_COLOMBIA_THE_HOME_OF_THE_INCAS_TT
+				hidden_effect = {
+					peru_region = {
+						limit = {
+							trade_goods = gold
+						}
+						add_base_production = 3
+					}
+				}
+			}
+			else = {
+				random_province = {
+					limit = {
+						region = peru_region
+					}
+					add_base_production = 3
+				}
+				random_province = {
+					limit = {
+						region = peru_region
+					}
+					add_base_production = 3
+				}
+				random_province = {
+					limit = {
+						region = peru_region
+					}
+					add_base_production = 3
+				}
+			}
+		}
+	}
+	gran_colombia_free_upper_peru = {
+		icon = mission_conquer_50_development
+		required_missions = {
+			gran_colombia_the_home_of_the_incas
+		}
+		position = 5
+		provinces_to_highlight = {
+			region = upper_peru_region
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			upper_peru_region = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			custom_tooltip = tt_replace_modifier_colombia_venezuela_independence_for_suriname_and_guyana_modifier_with_gran_colombia_free_upper_peru_modifier
+			hidden_effect = {
+				replace_country_modifier = {
+					remove = colombia_venezuela_independence_for_suriname_and_guyana_modifier
+					add = gran_colombia_free_upper_peru_modifier
+					time = -1
+				}
+			}
+		}
+	}
+}
+
+colombia_venezuela_missions_1_2 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = COL
+			tag = VNZ
+		}
+	}
+	has_country_shield = yes
+	colombia_venezuela_the_riches_of_the_south = {
+		icon = mission_war_chest
+		required_missions = {
+			colombia_venezuela_development_of_south_america
+		}
+		position = 9
+		trigger = {
+			if = {
+				limit = {
+					has_dlc = "Dharma"
+				}
+				num_of_owned_provinces_with = {
+					value = 2
+					region = colombia_region
+					province_has_center_of_trade_of_level = 2
+				}
+			}
+			else = {
+				num_of_owned_provinces_with = {
+					value = 2
+					region = colombia_region
+					province_has_center_of_trade_of_level = 1
+					num_of_times_improved = 5
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = colombia_venezuela_the_riches_of_the_south_modifier
+				duration = 5475
+			}
+		}
+	}
+}
+
+colombia_venezuela_missions_2_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = COL
+			tag = VNZ
+		}
+	}
+	has_country_shield = yes
+	colombia_venezuela_development_of_south_america = {
+		icon = mission_high_income
+		required_missions = {
+			colombia_venezuela_consolidate_our_independence
+		}
+		position = 8
+		trigger = {
+			share_of_starting_income = 2
+		}
+		effect = {
+			add_country_modifier = {
+				name = colombia_venezuela_development_of_south_america_modifier
+				duration = 5475
+			}
+		}
+	}
+	colombia_venezuela_founding_new_towns = {
+		icon = mission_early_game_buildings
+		required_missions = {
+			colombia_venezuela_development_of_south_america
+		}
+		position = 9
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				region = colombia_region
+				num_of_times_improved = 3
+			}
+		}
+		effect = {
+			every_owned_province = {
+				limit = {
+					region = colombia_region
+					num_of_times_improved = 3
+				}
+				add_province_modifier = {
+					name = colombia_venezuela_founding_new_towns_province_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	colombia_venezuela_the_seat_of_power = {
+		icon = mission_empire
+		required_missions = {
+			colombia_venezuela_the_riches_of_the_south
+		}
+		position = 10
+		provinces_to_highlight = {
+			is_capital_of = ROOT
+			NOT = {
+				has_building = courthouse
+			}
+			NOT = {
+				has_building = town_hall
+			}
+		}
+		trigger = {
+			capital_scope = {
+				OR = {
+					has_building = courthouse
+					has_building = town_hall
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				development = 7
+				OR = {
+					has_building = temple
+					has_building = cathedral
+				}
+				OR = {
+					has_building = workshop
+					has_building = counting_house
+				}
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_province_modifier = {
+					name = colombia_venezuela_the_seat_of_power_province_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+colombia_venezuela_missions_3_2 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = COL
+			tag = VNZ
+		}
+	}
+	has_country_shield = yes
+	colombia_venezuela_consolidate_our_independence = {
+		icon = mission_cannons_firing
+		required_missions = {
+		}
+		position = 7
+		provinces_to_highlight = {
+			owned_by = ROOT
+			region = colombia_region
+			unrest = 0.1
+		}
+		trigger = {
+			legitimacy_equivalent = 100
+			stability = 1
+			all_owned_province = {
+				OR = {
+					NOT = {
+						region = colombia_region
+					}
+					NOT = {
+						unrest = 0.1
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = colombia_venezuela_consolidate_our_independence_modifier
+				duration = 7300
+			}
+		}
+	}
+	colombia_venezuela_mission_to_civilize = {
+		icon = mission_rb_control_state_religion
+		required_missions = {
+			colombia_venezuela_consolidate_our_independence
+		}
+		position = 8
+		trigger = {
+			religious_unity = 1
+			OR = {
+				has_idea_group = humanist_ideas
+				custom_trigger_tooltip = {
+					tooltip = COL_VNZ_CONVERTED_AT_LEAST_15_PROVS
+					check_variable = {
+						which = num_converted_religion
+						value = 15
+					}
+				}
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Colombia_Venezuela_Gran_Colombia_Events.2
+			}
+		}
+	}
+	colombia_venezuela_the_two_cultures = {
+		icon = mission_colonial
+		required_missions = {
+			colombia_venezuela_mission_to_civilize
+		}
+		position = 9
+		trigger = {
+			if = {
+				limit = {
+					has_country_flag = colombia_venezuela_to_mend_the_two_cultures_flag
+				}
+				num_of_owned_provinces_with = {
+					value = 45
+					has_owner_culture = yes
+				}
+			}
+			else = {
+				custom_trigger_tooltip = {
+					tooltip = COL_VNZ_CULTURE_CONVERTED_AT_LEAST_20_PROVS
+					check_variable = {
+						which = num_of_culture_converted_provinces
+						value = 20
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = colombia_venezuela_to_mend_the_two_cultures_flag
+				}
+				add_country_modifier = {
+					name = colombia_venezuela_the_two_cultures_modifier_1
+					duration = 10950
+				}
+			}
+			else = {
+				add_country_modifier = {
+					name = colombia_venezuela_the_two_cultures_modifier_2
+					duration = 9125
+				}
+			}
+		}
+	}
+}
+
+colombia_venezuela_missions_4_2 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = COL
+			tag = VNZ
+		}
+	}
+	has_country_shield = yes
+	colombia_venezuela_dealing_with_government_corruption = {
+		icon = mission_african_gold
+		required_missions = {
+			colombia_venezuela_consolidate_our_independence
+		}
+		position = 8
+		trigger = {
+			ADM = 4
+			stability = 1
+			total_development = 400
+			NOT = {
+				corruption = 0.01
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = colombia_venezuela_dealing_with_government_corruption_modifier
+				duration = 7300
+			}
+		}
+	}
+}
+
+gran_colombia_missions_1_2 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = GRC
+	}
+	has_country_shield = yes
+	gran_colombia_fires_of_industry = {
+		icon = me_mission_industrial_smoking_chimney
+		required_missions = {
+			colombia_venezuela_the_riches_of_the_south
+		}
+		position = 10
+		trigger = {
+			num_of_owned_manufactory_combined_trigger = {
+				amount = 25
+			}
+		}
+		effect = {
+			add_years_of_income = 2
+			add_country_modifier = {
+				name = gran_colombia_fires_of_industry_modifier
+				duration = 9125
+			}
+		}
+	}
+}
+
+gran_colombia_missions_3_2 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = GRC
+	}
+	has_country_shield = yes
+	gran_colombia_colombian_emeralds = {
+		icon = mission_have_manufactories
+		required_missions = {
+			colombia_venezuela_founding_new_towns
+		}
+		position = 10
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 5
+				area = upper_guyana_area
+				base_production = 15
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					num_of_owned_provinces_with = {
+						value = 5
+						area = upper_guyana_area
+						base_production = 15
+					}
+				}
+				random_owned_province = {
+					limit = {
+						area = upper_guyana_area
+						base_production = 15
+					}
+					change_trade_goods = gems
+					add_province_modifier = {
+						name = gran_colombia_colombian_emeralds_province_modifier
+						duration = -1
+					}
+				}
+				random_owned_province = {
+					limit = {
+						area = upper_guyana_area
+						base_production = 15
+					}
+					change_trade_goods = gems
+					add_province_modifier = {
+						name = gran_colombia_colombian_emeralds_province_modifier
+						duration = -1
+					}
+				}
+				random_owned_province = {
+					limit = {
+						area = upper_guyana_area
+						base_production = 15
+					}
+					change_trade_goods = gems
+					add_province_modifier = {
+						name = gran_colombia_colombian_emeralds_province_modifier
+						duration = -1
+					}
+				}
+			}
+			else = {
+				tooltip = {
+					random_province = {
+						limit = {
+							area = upper_guyana_area
+						}
+						change_trade_goods = gems
+						add_province_modifier = {
+							name = gran_colombia_colombian_emeralds_province_modifier
+							duration = -1
+						}
+					}
+					random_province = {
+						limit = {
+							area = upper_guyana_area
+						}
+						change_trade_goods = gems
+						add_province_modifier = {
+							name = gran_colombia_colombian_emeralds_province_modifier
+							duration = -1
+						}
+					}
+					random_province = {
+						limit = {
+							area = upper_guyana_area
+						}
+						change_trade_goods = gems
+						add_province_modifier = {
+							name = gran_colombia_colombian_emeralds_province_modifier
+							duration = -1
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+gran_colombia_missions_4_2 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = GRC
+	}
+	has_country_shield = yes
+	gran_colombia_the_bolivar_constitution = {
+		icon = mission_establish_the_prikazy
+		required_missions = {
+			colombia_venezuela_dealing_with_government_corruption
+		}
+		position = 9
+		trigger = {
+			has_institution = enlightenment
+			stability = 1
+			NOT = {
+				unrest = 0
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = gran_colombia_the_bolivar_constitution_modifier
+				duration = -1
+			}
+		}
+	}
+}
+
+colombia_venezuela_missions_2_3 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = COL
+			tag = VNZ
+		}
+	}
+	has_country_shield = yes
+	colombia_venezuela_establishment_of_the_patriot_army = {
+		icon = me_mission_army
+		required_missions = {
+			colombia_venezuela_founding_of_the_colombian_venezulean_army
+		}
+		position = 12
+		trigger = {
+			MIL = 3
+			has_leader_with = {
+				general = yes
+				manuever = 5
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = colombia_venezuela_establishment_of_the_patriot_army_modifier
+				duration = 12775
+			}
+		}
+	}
+}
+
+colombia_venezuela_missions_3_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = COL
+			tag = VNZ
+		}
+	}
+	has_country_shield = yes
+	colombia_venezuela_founding_of_the_colombian_venezulean_army = {
+		icon = mission_assemble_an_army
+		required_missions = {
+		}
+		position = 11
+		trigger = {
+			army_size = 35
+		}
+		effect = {
+			add_country_modifier = {
+				name = colombia_venezuela_founding_of_the_colombian_venezulean_army_modifier
+				duration = 10950
+			}
+		}
+	}
+	colombia_venezuela_the_teachings_of_bolivar = {
+		icon = me_mission_modern_army
+		required_missions = {
+			colombia_venezuela_founding_of_the_colombian_venezulean_army
+		}
+		position = 12
+		trigger = {
+			advisor = army_reformer
+			mil_tech = 14
+		}
+		effect = {
+			add_country_modifier = {
+				name = colombia_venezuela_the_teachings_of_bolivar_modifier
+				duration = 9125
+			}
+		}
+	}
+}
+
+gran_colombia_missions_3_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = GRC
+	}
+	has_country_shield = yes
+	gran_colombia_la_guardia_nacional = {
+		icon = mission_cannons_firing
+		required_missions = {
+			colombia_venezuela_establishment_of_the_patriot_army
+			colombia_venezuela_the_teachings_of_bolivar
+			gran_colombia_the_first_gran_colombian_army
+		}
+		position = 13
+		trigger = {
+			MIL = 4
+			if = {
+				limit = {
+					has_dlc = "Cradle of Civilization"
+				}
+				OR = {
+					army_professionalism = 0.4
+					army_tradition = 50
+				}
+			}
+			else = {
+				army_tradition = 50
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = gran_colombia_la_guardia_nacional_modifier
+				duration = -1
+			}
+		}
+	}
+}
+
+gran_colombia_missions_4_3 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = GRC
+	}
+	has_country_shield = yes
+	gran_colombia_the_first_gran_colombian_army = {
+		icon = me_mission_conquer
+		required_missions = {
+			colombia_venezuela_founding_of_the_colombian_venezulean_army
+		}
+		position = 12
+		trigger = {
+			OR = {
+				barracks = 10
+				training_fields = 10
+			}
+		}
+		effect = {
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_building = barracks
+						has_building = training_fields
+					}
+				}
+				add_base_manpower = 1
+			}
+		}
+	}
+}
+
+texas_missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = TEX
+	}
+	has_country_shield = yes
+	tex_rio_grandean_infrastructure = {
+		icon = invest_in_the_rich_trades
+		position = 2
+		required_missions = {
+			tex_consolidate_authority
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 884
+				province_id = 888
+				province_id = 2499
+				province_id = 2665
+			}
+			OR = {
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				has_owner_religion = no
+				NOT = {
+					development = 10
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				treasurer = 1
+				master_of_mint = 1
+			}
+			884 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_owner_religion = yes
+				development = 10
+			}
+			888 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_owner_religion = yes
+				development = 10
+			}
+			2499 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_owner_religion = yes
+				development = 10
+			}
+			2665 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				has_owner_religion = yes
+				development = 10
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Texas_Events.1
+			}
+			2499 = {
+				create_or_add_center_of_trade_level = {
+					level = 1
+				}
+				if = {
+					limit = {
+						has_building = grand_shipyard
+					}
+					owner = {
+						add_navy_tradition = 15
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							has_building = shipyard
+						}
+						remove_building = shipyard
+					}
+					add_building_construction = {
+						building = grand_shipyard
+						speed = 0.5
+						cost = 0
+					}
+				}
+			}
+		}
+	}
+	tex_augment_rio_grande = {
+		icon = mission_advance_to_the_dnieper
+		position = 5
+		required_missions = {
+			tex_rio_grandean_infrastructure
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 2498
+				province_id = 2499
+				province_id = 2666
+				province_id = 2668
+				province_id = 4628
+			}
+			OR = {
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				AND = {
+					NOT = {
+						has_trade_building_trigger = yes
+					}
+					NOT = {
+						development = 15
+					}
+				}
+			}
+		}
+		trigger = {
+			2498 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					development = 15
+					has_trade_building_trigger = yes
+				}
+			}
+			2499 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					development = 15
+					has_trade_building_trigger = yes
+				}
+			}
+			2666 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					development = 15
+					has_trade_building_trigger = yes
+				}
+			}
+			2668 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					development = 15
+					has_trade_building_trigger = yes
+				}
+			}
+			4628 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				OR = {
+					development = 15
+					has_trade_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			2498 = {
+				add_province_modifier = {
+					name = tex_rio_grandean_navigation
+					duration = -1
+				}
+			}
+			2499 = {
+				add_province_modifier = {
+					name = tex_rio_grandean_navigation
+					duration = -1
+				}
+			}
+			2666 = {
+				add_province_modifier = {
+					name = tex_rio_grandean_navigation
+					duration = -1
+				}
+			}
+			2668 = {
+				add_province_modifier = {
+					name = tex_rio_grandean_navigation
+					duration = -1
+				}
+			}
+			4628 = {
+				change_province_name = "El Paso"
+				rename_capital = "El Paso"
+				add_province_modifier = {
+					name = tex_rio_grandean_navigation
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+texas_missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = TEX
+	}
+	has_country_shield = yes
+	tex_consolidate_authority = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			unrest = 3
+		}
+		trigger = {
+			legitimacy_equivalent = 90
+			all_owned_province = {
+				NOT = {
+					unrest = 3
+				}
+			}
+			NOT = {
+				num_of_rebel_armies = 1
+			}
+			num_of_rebel_controlled_provinces = 0
+		}
+		effect = {
+			add_stability_or_adm_power = yes
+			if = {
+				limit = {
+					government = republic
+				}
+				add_republican_tradition = 5
+			}
+			else = {
+				add_legitimacy_equivalent = {
+					value = 10
+				}
+			}
+			huasteca_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	tex_native_destiny = {
+		icon = mission_iroquois_warriors
+		position = 2
+		required_missions = {
+			tex_consolidate_authority
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			has_owner_accepted_culture = yes
+			unrest = 3
+		}
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = TEXAS_CULTURE_TOOLTIP
+				NOT = {
+					culture_group = andean_group
+				}
+				NOT = {
+					culture_group = apachean
+				}
+				NOT = {
+					culture_group = araucanian
+				}
+				NOT = {
+					culture_group = aridoamerican
+				}
+				NOT = {
+					culture_group = caddoan
+				}
+				NOT = {
+					culture_group = carribean
+				}
+				NOT = {
+					culture_group = central_algonquian
+				}
+				NOT = {
+					culture_group = central_american
+				}
+				NOT = {
+					culture_group = chibchan
+				}
+				NOT = {
+					culture_group = eastern_algonquian
+				}
+				NOT = {
+					culture_group = eskaleut
+				}
+				NOT = {
+					culture_group = iroquoian
+				}
+				NOT = {
+					culture_group = je
+				}
+				NOT = {
+					culture_group = je_tupi
+				}
+				NOT = {
+					culture_group = maranon
+				}
+				NOT = {
+					culture_group = mataco
+				}
+				NOT = {
+					culture_group = maya
+				}
+				NOT = {
+					culture_group = muskogean
+				}
+				NOT = {
+					culture_group = otomanguean
+				}
+				NOT = {
+					culture_group = na_dene
+				}
+				NOT = {
+					culture_group = penutian
+				}
+				NOT = {
+					culture_group = plains_algonquian
+				}
+				NOT = {
+					culture_group = siouan
+				}
+				NOT = {
+					culture_group = sonoran
+				}
+			}
+			all_owned_province = {
+				OR = {
+					has_owner_accepted_culture = no
+					NOT = {
+						unrest = 3
+					}
+				}
+			}
+			NOT = {
+				num_of_rebel_armies = 1
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Texas_Events.3
+			}
+		}
+	}
+}
+
+texas_missions_2_native = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = TEX
+		has_country_flag = tex_native_civilisation_path
+	}
+	has_country_shield = yes
+	tex_native_civilization = {
+		icon = Compulsory_Education
+		position = 3
+		required_missions = {
+			tex_native_destiny
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 3
+				custom_trigger_tooltip = {
+					tooltip = TEXAS_CULTURE_PROVINCES
+					OR = {
+						culture_group = andean_group
+						culture_group = apachean
+						culture_group = araucanian
+						culture_group = aridoamerican
+						culture_group = caddoan
+						culture_group = carribean
+						culture_group = central_algonquian
+						culture_group = central_american
+						culture_group = chibchan
+						culture_group = eastern_algonquian
+						culture_group = eskaleut
+						culture_group = iroquoian
+						culture_group = je
+						culture_group = je_tupi
+						culture_group = maranon
+						culture_group = mataco
+						culture_group = maya
+						culture_group = muskogean
+						culture_group = otomanguean
+						culture_group = na_dene
+						culture_group = penutian
+						culture_group = plains_algonquian
+						culture_group = siouan
+						culture_group = sonoran
+					}
+				}
+				has_building = university
+			}
+			all_owned_province = {
+				OR = {
+					custom_trigger_tooltip = {
+						tooltip = TEXAS_CULTURE_PROVINCES_NOT
+						AND = {
+							NOT = {
+								culture_group = andean_group
+							}
+							NOT = {
+								culture_group = apachean
+							}
+							NOT = {
+								culture_group = araucanian
+							}
+							NOT = {
+								culture_group = aridoamerican
+							}
+							NOT = {
+								culture_group = caddoan
+							}
+							NOT = {
+								culture_group = carribean
+							}
+							NOT = {
+								culture_group = central_algonquian
+							}
+							NOT = {
+								culture_group = central_american
+							}
+							NOT = {
+								culture_group = chibchan
+							}
+							NOT = {
+								culture_group = eastern_algonquian
+							}
+							NOT = {
+								culture_group = eskaleut
+							}
+							NOT = {
+								culture_group = iroquoian
+							}
+							NOT = {
+								culture_group = je
+							}
+							NOT = {
+								culture_group = je_tupi
+							}
+							NOT = {
+								culture_group = maranon
+							}
+							NOT = {
+								culture_group = mataco
+							}
+							NOT = {
+								culture_group = maya
+							}
+							NOT = {
+								culture_group = muskogean
+							}
+							NOT = {
+								culture_group = otomanguean
+							}
+							NOT = {
+								culture_group = na_dene
+							}
+							NOT = {
+								culture_group = penutian
+							}
+							NOT = {
+								culture_group = plains_algonquian
+							}
+							NOT = {
+								culture_group = siouan
+							}
+							NOT = {
+								culture_group = sonoran
+							}
+						}
+					}
+					NOT = {
+						unrest = 5
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = tex_assimilation_natives
+				duration = -1
+			}
+		}
+	}
+	tex_caddoan_agreement = {
+		icon = mission_alliances
+		position = 4
+		required_missions = {
+			tex_native_civilization
+		}
+		provinces_to_highlight = {
+			province_id = 894
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			NOT = {
+				exists = CAD
+			}
+		}
+		trigger = {
+			if = {
+				limit = {
+					exists = CAD
+				}
+				OR = {
+					alliance_with = CAD
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = insulted
+					}
+					has_opinion_modifier = {
+						who = ROOT
+						modifier = scornfully_insulted
+					}
+				}
+			}
+			else = {
+				894 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					exists = CAD
+				}
+				CAD = {
+					country_event = {
+						id = ME_Texas_Events.6
+					}
+				}
+			}
+			else = {
+				mississippi_plain_area = {
+					limit = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					add_permanent_claim = ROOT
+				}
+			}
+			custom_tooltip = TEX_ALLIANCE_CADDO
+		}
+	}
+}
+
+texas_missions_2_tex = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = TEX
+		has_country_flag = tex_texan_exclusive_texas_path
+	}
+	has_country_shield = yes
+	tex_exclusive_texas = {
+		icon = mission_native_reductions
+		position = 3
+		required_missions = {
+			tex_native_destiny
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 10
+				has_owner_culture = yes
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = tex_settle_natives_lands
+				duration = 12775
+			}
+		}
+	}
+	tex_populate_frontier = {
+		icon = mission_expel_the_moriscos
+		position = 4
+		required_missions = {
+			tex_exclusive_texas
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 25
+				OR = {
+					has_owner_accepted_culture = yes
+					has_owner_culture = yes
+				}
+				NOT = {
+					province_is_on_an_island = yes
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = tex_culturally_united_texas
+				duration = 12775
+			}
+		}
+	}
+}
+
+texas_missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = TEX
+	}
+	has_country_shield = yes
+	tex_texas_texans = {
+		icon = contracts_of_correspondence
+		position = 1
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = texas_area
+				area = coastal_prarie_area
+			}
+			OR = {
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
+				has_owner_culture = no
+			}
+		}
+		trigger = {
+			texas_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				has_owner_culture = yes
+			}
+			coastal_prarie_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				has_owner_culture = yes
+			}
+		}
+		effect = {
+			texas_area = {
+				add_province_modifier = {
+					name = tex_purified_texas
+					duration = 10950
+				}
+			}
+			coastal_prarie_area = {
+				add_province_modifier = {
+					name = tex_purified_texas
+					duration = 10950
+				}
+			}
+		}
+	}
+	tex_huasteca_expedition = {
+		icon = mission_mayan_conquest
+		position = 2
+		required_missions = {
+			tex_consolidate_authority
+			tex_texan_fortification
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = huasteca_area
+				area = rio_grande_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			huasteca_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			rio_grande_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			mexico_region = {
+				discover_country = ROOT
+			}
+			add_country_modifier = {
+				name = tex_gulf_trade
+				duration = 10950
+			}
+		}
+	}
+	tex_mexican_heartland = {
+		icon = mission_junnagadh_fort
+		position = 3
+		required_missions = {
+			tex_huasteca_expedition
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = mexico_area
+				area = eastern_mexico_area
+				area = puebla_area
+				area = campeche_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			mexico_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			eastern_mexico_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			puebla_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			campeche_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			central_america_region = {
+				discover_country = ROOT
+			}
+			mexico_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			1551 = {
+				add_trade_modifier = {
+					who = ROOT
+					duration = 14600
+					power = 40
+					key = tex_texan_dominance_mexico
+				}
+			}
+		}
+	}
+	tex_leech_european_trade = {
+		icon = mission_dominate_home_trade_node
+		position = 5
+		required_missions = {
+			tex_mexican_heartland
+			tex_advance_pacific
+		}
+		trigger = {
+			1551 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			2499 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1507 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			2021 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1516 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			1500 = {
+				trade_share = {
+					country = ROOT
+					share = 50
+				}
+			}
+			europe = {
+				trade_share = {
+					country = ROOT
+					share = 10
+				}
+			}
+		}
+		effect = {
+			add_treasury = 1000
+			add_mercantilism = 5
+			every_country = {
+				limit = {
+					capital_scope = {
+						continent = europe
+					}
+					north_america = {
+						trade_share = {
+							country = PREV
+							share = 15
+						}
+					}
+				}
+				north_america = {
+					add_trade_modifier = {
+						who = THIS
+						duration = 10950
+						power = -15
+						key = tex_merchants_outcompeted
+					}
+				}
+			}
+		}
+	}
+	tex_mighty_lone_star = {
+		icon = me_mission_lone_star_state
+		position = 6
+		required_missions = {
+			tex_augment_rio_grande
+			tex_leech_european_trade
+			tex_california_gold_mine
+		}
+		provinces_to_highlight = {
+			OR = {
+				region = rio_grande_region
+				region = california_region
+				region = mexico_region
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			total_development = 1000
+			stability = 3
+			rio_grande_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			california_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			mexico_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Texas_Events.5
+			}
+		}
+	}
+}
+
+texas_missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = TEX
+	}
+	has_country_shield = yes
+	tex_texan_fortification = {
+		icon = mission_konkani_pirates
+		position = 1
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			is_capital_of = ROOT
+			NOT = {
+				fort_level = 3
+			}
+		}
+		trigger = {
+			army_size = 16
+			num_of_allies = 1
+			capital_scope = {
+				fort_level = 3
+			}
+			num_of_owned_provinces_with = {
+				value = 2
+				fort_level = 2
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = tex_diplomatic_enterprise
+				duration = 10950
+			}
+			capital_scope = {
+				add_province_modifier = {
+					name = tex_shining_fort_capital
+					duration = 9125
+				}
+			}
+		}
+	}
+	tex_westward_expansion = {
+		icon = mission_colonial
+		position = 2
+		required_missions = {
+			tex_texan_fortification
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = new_mexico_area
+				area = arizona_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			new_mexico_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			arizona_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = tex_ranches_new_mexico
+				duration = 7300
+			}
+			california_region = {
+				discover_country = ROOT
+			}
+		}
+	}
+	tex_rein_wild_west = {
+		icon = me_mission_rein_in_wild_west
+		position = 3
+		required_missions = {
+			tex_westward_expansion
+			tex_texan_national_army
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = new_mexico_area
+				area = arizona_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			NOT = {
+				average_autonomy = 40
+			}
+			NOT = {
+				average_unrest = 3
+			}
+			new_mexico_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			arizona_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 100
+			if = {
+				limit = {
+					has_country_modifier = tex_autonomous_cowboys
+				}
+				remove_country_modifier = tex_autonomous_cowboys
+			}
+			add_country_modifier = {
+				name = tex_centralization_texas
+				duration = 14600
+			}
+		}
+	}
+	tex_advance_pacific = {
+		icon = mission_colonize_california
+		position = 4
+		required_missions = {
+			tex_rein_wild_west
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = northern_california_area
+				area = california_area
+				area = central_valley_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			northern_california_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			california_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			central_valley_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			country_event = {
+				id = ME_Texas_Events.4
+			}
+		}
+	}
+	tex_california_gold_mine = {
+		icon = mission_zambezi_gold
+		position = 5
+		required_missions = {
+			tex_advance_pacific
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					province_id = 2479
+					OR = {
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
+						NOT = {
+							num_of_times_improved = 5
+						}
+					}
+				}
+				AND = {
+					province_id = 2480
+					OR = {
+						NOT = {
+							num_of_times_improved = 5
+						}
+						NOT = {
+							base_production = 10
+						}
+					}
+				}
+			}
+		}
+		trigger = {
+			2479 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				num_of_times_improved = 5
+			}
+			2480 = {
+				country_or_non_sovereign_subject_holds = ROOT
+				num_of_times_improved = 5
+				base_production = 10
+			}
+		}
+		effect = {
+			2479 = {
+				add_province_modifier = {
+					name = tex_texan_gold_mines
+					duration = -1
+				}
+			}
+			2480 = {
+				create_or_add_center_of_trade_level = {
+					level = 1
+				}
+				add_province_modifier = {
+					name = tex_texan_gold_mines
+					duration = -1
+				}
+			}
+		}
+	}
+}
+
+texas_missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = TEX
+	}
+	has_country_shield = yes
+	tex_texan_national_army = {
+		icon = mission_assemble_an_army
+		position = 2
+		required_missions = {
+			tex_texan_fortification
+		}
+		trigger = {
+			land_forcelimit = 25
+			OR = {
+				army_professionalism = 0.2
+				has_global_modifier_value = {
+					which = discipline
+					value = 0.2
+					extra_shortcut = yes
+				}
+			}
+			OR = {
+				army_organiser = 1
+				army_reformer = 1
+				commandant = 1
+			}
+		}
+		effect = {
+			add_army_tradition = 10
+			add_country_modifier = {
+				name = tex_army_people
+				duration = -1
+			}
+		}
+	}
+	tex_texan_rangers = {
+		icon = me_mission_texan_rangers
+		position = 4
+		required_missions = {
+			tex_rein_wild_west
+			tex_texan_national_army
+		}
+		trigger = {
+			num_of_cavalry = 15
+			num_of_generals = 1
+			cavalry_fraction = 0.15
+		}
+		effect = {
+			change_mil = 1
+			add_country_modifier = {
+				name = tex_professionalize_rangers
+				duration = 12775
+			}
+		}
+	}
+}
