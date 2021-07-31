@@ -701,7 +701,6 @@ is_region_to_zealander = {
 	}
 }
 
-###GAELIC
 ###North French
 is_region_to_quebecois = {
 	OR = {
@@ -715,10 +714,33 @@ is_region_to_quebecois = {
 		region = cascadia_region
 	}
 }
-
+is_culture_to_quebecois ={
+	#cond
+	OR = {
+		$cond$ = picard
+		$cond$ = normand
+		$cond$ = loire
+		$cond$ = wallonian
+		$cond$ = ardennes
+		$cond$ = parisien
+		$cond$ = villion
+	}
+}
 is_region_to_australien = {
 	OR = {
 		region = australia_region
+	}
+}
+is_culture_to_australien ={
+	#cond
+	OR = {
+		$cond$ = picard
+		$cond$ = normand
+		$cond$ = loire
+		$cond$ = wallonian
+		$cond$ = ardennes
+		$cond$ = parisien
+		$cond$ = villion
 	}
 }
 
@@ -730,9 +752,33 @@ is_region_to_amerique = {
 		region = central_america_region
 	}
 }
+is_culture_to_amerique ={
+	#cond
+	OR = {
+		$cond$ = picard
+		$cond$ = normand
+		$cond$ = loire
+		$cond$ = wallonian
+		$cond$ = ardennes
+		$cond$ = parisien
+		$cond$ = villion
+	}
+}
 
 is_region_to_hatien = {
 	region = carribeans_region
+}
+is_culture_to_hatien ={
+	#cond
+	OR = {
+		$cond$ = picard
+		$cond$ = normand
+		$cond$ = loire
+		$cond$ = wallonian
+		$cond$ = ardennes
+		$cond$ = parisien
+		$cond$ = villion
+	}
 }
 
 is_region_to_neozealandais = {
@@ -742,13 +788,50 @@ is_region_to_neozealandais = {
 		area = te_waipounamu_area
 	}
 }
+is_culture_to_neozealandais ={
+	#cond
+	OR = {
+		$cond$ = picard
+		$cond$ = normand
+		$cond$ = loire
+		$cond$ = wallonian
+		$cond$ = ardennes
+		$cond$ = parisien
+		$cond$ = villion
+	}
+}
 
 is_region_to_argentins = {
 	continent = south_america
 }
+is_culture_to_argentins ={
+	#cond
+	OR = {
+		$cond$ = picard
+		$cond$ = normand
+		$cond$ = loire
+		$cond$ = wallonian
+		$cond$ = ardennes
+		$cond$ = parisien
+		$cond$ = villion
+	}
+}
 
 is_region_to_villion = {
 	region = south_africa_region
+}
+is_culture_to_villion ={
+	#cond
+	OR = {
+		OR = {
+			$cond$ = picard
+			$cond$ = normand
+			$cond$ = loire
+			$cond$ = wallonian
+			$cond$ = ardennes
+			$cond$ = parisien
+		}
+	}
 }
 
 ###Central French
@@ -764,10 +847,32 @@ is_region_to_cajun = {
 		region = cascadia_region
 	}
 }
+is_culture_to_cajun ={
+	#cond
+	OR = {
+		$cond$ = orleanais
+		$cond$ = cosmopolitan_french
+		$cond$ = barrois
+		$cond$ = angevin
+		$cond$ = burgundian
+		$cond$ = malgache
+	}
+}
 
 is_region_to_laperouse = {
 	OR = {
 		region = australia_region
+	}
+}
+is_culture_to_laperouse ={
+	#cond
+	OR = {
+		$cond$ = orleanais
+		$cond$ = cosmopolitan_french
+		$cond$ = barrois
+		$cond$ = angevin
+		$cond$ = burgundian
+		$cond$ = malgache
 	}
 }
 
@@ -779,9 +884,31 @@ is_region_to_mexique = {
 		region = central_america_region
 	}
 }
+is_culture_to_mexique ={
+	#cond
+	OR = {
+		$cond$ = orleanais
+		$cond$ = cosmopolitan_french
+		$cond$ = barrois
+		$cond$ = angevin
+		$cond$ = burgundian
+		$cond$ = malgache
+	}
+}
 
 is_region_to_martinique = {
 	region = carribeans_region
+}
+is_culture_to_martinique ={
+	#cond
+	OR = {
+		$cond$ = orleanais
+		$cond$ = cosmopolitan_french
+		$cond$ = barrois
+		$cond$ = angevin
+		$cond$ = burgundian
+		$cond$ = malgache
+	}
 }
 
 is_region_to_pompallier = {
@@ -791,13 +918,45 @@ is_region_to_pompallier = {
 		area = te_waipounamu_area
 	}
 }
+is_culture_to_pompallier ={
+	#cond
+	OR = {
+		$cond$ = orleanais
+		$cond$ = cosmopolitan_french
+		$cond$ = barrois
+		$cond$ = angevin
+		$cond$ = burgundian
+		$cond$ = malgache
+	}
+}
 
 is_region_to_guyane = {
 	continent = south_america
 }
+is_culture_to_guyene ={
+	#cond
+	OR = {
+		$cond$ = orleanais
+		$cond$ = cosmopolitan_french
+		$cond$ = barrois
+		$cond$ = angevin
+		$cond$ = burgundian
+		$cond$ = malgache
+	}
+}
 
 is_region_to_malgache = {
 	region = south_africa_region
+}
+is_culture_to_malgache ={
+	#cond
+	OR = {
+		$cond$ = orleanais
+		$cond$ = cosmopolitan_french
+		$cond$ = barrois
+		$cond$ = angevin
+		$cond$ = burgundian
+	}
 }
 
 ###South French
@@ -813,10 +972,36 @@ is_region_to_creole = {
 		region = cascadia_region
 	}
 }
+is_culture_to_creole ={
+	#cond
+	OR = {
+		$cond$ = pyrenees
+		$cond$ = limousin
+		$cond$ = catalan
+		$cond$ = gascon
+		$cond$ = aquitaine
+		$cond$ = occitain
+		$cond$ = arpitan
+		$cond$ = quellerie
+	}
+}
 
 is_region_to_baudin = {
 	OR = {
 		region = australia_region
+	}
+}
+is_culture_to_baudin ={
+	#cond
+	OR = {
+		$cond$ = pyrenees
+		$cond$ = limousin
+		$cond$ = catalan
+		$cond$ = gascon
+		$cond$ = aquitaine
+		$cond$ = occitain
+		$cond$ = arpitan
+		$cond$ = quellerie
 	}
 }
 
@@ -828,9 +1013,35 @@ is_region_to_hondurien = {
 		region = central_america_region
 	}
 }
+is_culture_to_hondurien ={
+	#cond
+	OR = {
+		$cond$ = pyrenees
+		$cond$ = limousin
+		$cond$ = catalan
+		$cond$ = gascon
+		$cond$ = aquitaine
+		$cond$ = occitain
+		$cond$ = arpitan
+		$cond$ = quellerie
+	}
+}
 
 is_region_to_saintlucie = {
 	region = carribeans_region
+}
+is_culture_to_saintlucie ={
+	#cond
+	OR = {
+		$cond$ = pyrenees
+		$cond$ = limousin
+		$cond$ = catalan
+		$cond$ = gascon
+		$cond$ = aquitaine
+		$cond$ = occitain
+		$cond$ = arpitan
+		$cond$ = quellerie
+	}
 }
 
 is_region_to_surville = {
@@ -840,13 +1051,51 @@ is_region_to_surville = {
 		area = te_waipounamu_area
 	}
 }
+is_culture_to_surville ={
+	#cond
+	OR = {
+		$cond$ = pyrenees
+		$cond$ = limousin
+		$cond$ = catalan
+		$cond$ = gascon
+		$cond$ = aquitaine
+		$cond$ = occitain
+		$cond$ = arpitan
+		$cond$ = quellerie
+	}
+}
 
 is_region_to_antarctique = {
 	continent = south_america
 }
+is_culture_to_antarctique ={
+	#cond
+	OR = {
+		$cond$ = pyrenees
+		$cond$ = limousin
+		$cond$ = catalan
+		$cond$ = gascon
+		$cond$ = aquitaine
+		$cond$ = occitain
+		$cond$ = arpitan
+		$cond$ = quellerie
+	}
+}
 
 is_region_to_quellerie = {
 	region = south_africa_region
+}
+is_culture_to_quellerie ={
+	#cond
+	OR = {
+		$cond$ = pyrenees
+		$cond$ = limousin
+		$cond$ = catalan
+		$cond$ = gascon
+		$cond$ = aquitaine
+		$cond$ = occitain
+		$cond$ = arpitan
+	}
 }
 
 ###Scandinavian
@@ -862,10 +1111,32 @@ is_region_to_amerikanere = {
 		region = cascadia_region
 	}
 }
+is_culture_to_amerikanere ={
+	#cond
+	OR = {
+		$cond$ = scanian
+		$cond$ = danish
+		$cond$ = swedish
+		$cond$ = geats
+		$cond$ = norwegian
+		$cond$ = sorafrikanere
+	}
+}
 
 is_region_to_australier = {
 	OR = {
 		region = australia_region
+	}
+}
+is_culture_to_australier ={
+	#cond
+	OR = {
+		$cond$ = scanian
+		$cond$ = danish
+		$cond$ = swedish
+		$cond$ = geats
+		$cond$ = norwegian
+		$cond$ = sorafrikanere
 	}
 }
 
@@ -877,9 +1148,31 @@ is_region_to_meksikansk = {
 		region = central_america_region
 	}
 }
+is_culture_to_meksikansk ={
+	#cond
+	OR = {
+		$cond$ = scanian
+		$cond$ = danish
+		$cond$ = swedish
+		$cond$ = geats
+		$cond$ = norwegian
+		$cond$ = sorafrikanere
+	}
+}
 
 is_region_to_vastindier = {
 	region = carribeans_region
+}
+is_culture_to_vastindier ={
+	#cond
+	OR = {
+		$cond$ = scanian
+		$cond$ = danish
+		$cond$ = swedish
+		$cond$ = geats
+		$cond$ = norwegian
+		$cond$ = sorafrikanere
+	}
 }
 
 is_region_to_nyazealandere = {
@@ -889,13 +1182,45 @@ is_region_to_nyazealandere = {
 		area = te_waipounamu_area
 	}
 }
+is_culture_to_nyazealandere ={
+	#cond
+	OR = {
+		$cond$ = scanian
+		$cond$ = danish
+		$cond$ = swedish
+		$cond$ = geats
+		$cond$ = norwegian
+		$cond$ = sorafrikanere
+	}
+}
 
 is_region_to_brasilianere = {
 	continent = south_america
 }
+is_culture_to_brasilianere ={
+	#cond
+	OR = {
+		$cond$ = scanian
+		$cond$ = danish
+		$cond$ = swedish
+		$cond$ = geats
+		$cond$ = norwegian
+		$cond$ = sorafrikanere
+	}
+}
 
 is_region_to_sorafrikanere = {
 	region = south_africa_region
+}
+is_culture_to_sorafrikanere = {
+	#cond
+	OR = {
+		$cond$ = scanian
+		$cond$ = danish
+		$cond$ = swedish
+		$cond$ = geats
+		$cond$ = norwegian
+	}
 }
 
 ###Old Norse
@@ -911,10 +1236,31 @@ is_region_to_ameriskt = {
 		region = cascadia_region
 	}
 }
+is_culture_to_ameriskt ={
+	#cond
+	OR = {
+		$cond$ = elfdalian
+		$cond$ = icelandic
+		$cond$ = jan_mayenese
+		$cond$ = faroese
+		$cond$ = suthurafriskur
+	}
+}
 
 is_region_to_australskur = {
 	OR = {
 		region = australia_region
+	}
+}
+is_culture_to_australskur ={
+	#cond
+	OR = {
+		$cond$ = elfdalian
+		$cond$ = icelandic
+		$cond$ = jan_mayenese
+		$cond$ = vinlandic
+		$cond$ = faroese
+		$cond$ = suthurafriskur
 	}
 }
 
@@ -926,9 +1272,31 @@ is_region_to_mexikana = {
 		region = central_america_region
 	}
 }
+is_culture_to_mexicana ={
+	#cond
+	OR = {
+		$cond$ = elfdalian
+		$cond$ = icelandic
+		$cond$ = jan_mayenese
+		$cond$ = vinlandic
+		$cond$ = faroese
+		$cond$ = suthurafriskur
+	}
+}
 
 is_region_to_vesturindverskur = {
 	region = carribeans_region
+}
+is_culture_to_vesturindverskur ={
+	#cond
+	OR = {
+		$cond$ = elfdalian
+		$cond$ = icelandic
+		$cond$ = jan_mayenese
+		$cond$ = vinlandic
+		$cond$ = faroese
+		$cond$ = suthurafriskur
+	}
 }
 
 is_region_to_nyrzealander = {
@@ -938,11 +1306,43 @@ is_region_to_nyrzealander = {
 		area = te_waipounamu_area
 	}
 }
+is_culture_to_nyrzealander ={
+	#cond
+	OR = {
+		$cond$ = elfdalian
+		$cond$ = icelandic
+		$cond$ = jan_mayenese
+		$cond$ = vinlandic
+		$cond$ = faroese
+		$cond$ = suthurafriskur
+	}
+}
 
 is_region_to_ekvadorskt = {
 	continent = south_america
 }
+is_culture_to_ekvadorskt ={
+	#cond
+	OR = {
+		$cond$ = elfdalian
+		$cond$ = icelandic
+		$cond$ = jan_mayenese
+		$cond$ = vinlandic
+		$cond$ = faroese
+		$cond$ = suthurafriskur
+	}
+}
 
 is_region_to_suthurafriskur = {
 	region = south_africa_region
+}
+is_culture_to_suthurafriskur ={
+	#cond
+	OR = {
+		$cond$ = elfdalian
+		$cond$ = icelandic
+		$cond$ = jan_mayenese
+		$cond$ = vinlandic
+		$cond$ = faroese
+	}
 }
