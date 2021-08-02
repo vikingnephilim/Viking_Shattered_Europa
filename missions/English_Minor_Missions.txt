@@ -1,9 +1,7 @@
 eng_british_conquest = {
-
 	slot = 1
 	generic = no
 	ai = yes
-	
 	potential = {
 		OR = {
 			tag = WSX
@@ -12,17 +10,19 @@ eng_british_conquest = {
 			tag = NOL
 			tag = MRC
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	VN_eng_mighty_army = {
 		icon = mission_assemble_an_army
-		required_missions = { }
-		position = 1		
+		required_missions = {
+		}
+		position = 1
 		trigger = {
-			army_size_percentage = 0.5
-			manpower_percentage = 0.5
+			army_size_percentage = 0.33
+			manpower_percentage = 0.33
 		}
 		effect = {
 			if = {
@@ -35,6 +35,14 @@ eng_british_conquest = {
 						exists = MRC
 					}
 				}
+				add_historical_rival = LOD
+				add_historical_rival = EAL
+				add_historical_rival = NOL
+				add_historical_rival = MRC
+				add_historical_rival = CRN
+				add_historical_rival = WLS
+				add_historical_rival = SCO
+				add_historical_rival = HSC
 				add_casus_belli = {
 					target = LOD
 					type = cb_vassalize_mission
@@ -50,6 +58,12 @@ eng_british_conquest = {
 				add_casus_belli = {
 					target = MRC
 					type = cb_vassalize_mission
+				}
+				british_isles_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = WSX
 				}
 			}
 			if = {
@@ -62,6 +76,14 @@ eng_british_conquest = {
 						exists = MRC
 					}
 				}
+				add_historical_rival = WSX
+				add_historical_rival = EAL
+				add_historical_rival = NOL
+				add_historical_rival = MRC
+				add_historical_rival = CRN
+				add_historical_rival = WLS
+				add_historical_rival = SCO
+				add_historical_rival = HSC
 				add_casus_belli = {
 					target = WSX
 					type = cb_vassalize_mission
@@ -77,6 +99,12 @@ eng_british_conquest = {
 				add_casus_belli = {
 					target = MRC
 					type = cb_vassalize_mission
+				}
+				british_isles_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = LOD
 				}
 			}
 			if = {
@@ -89,6 +117,14 @@ eng_british_conquest = {
 						exists = MRC
 					}
 				}
+				add_historical_rival = WSX
+				add_historical_rival = LOD
+				add_historical_rival = NOL
+				add_historical_rival = MRC
+				add_historical_rival = CRN
+				add_historical_rival = WLS
+				add_historical_rival = SCO
+				add_historical_rival = HSC
 				add_casus_belli = {
 					target = LOD
 					type = cb_vassalize_mission
@@ -104,6 +140,12 @@ eng_british_conquest = {
 				add_casus_belli = {
 					target = MRC
 					type = cb_vassalize_mission
+				}
+				british_isles_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = EAL
 				}
 			}
 			if = {
@@ -116,6 +158,14 @@ eng_british_conquest = {
 						exists = MRC
 					}
 				}
+				add_historical_rival = WSX
+				add_historical_rival = LOD
+				add_historical_rival = EAL
+				add_historical_rival = MRC
+				add_historical_rival = CRN
+				add_historical_rival = WLS
+				add_historical_rival = SCO
+				add_historical_rival = HSC
 				add_casus_belli = {
 					target = LOD
 					type = cb_vassalize_mission
@@ -132,6 +182,12 @@ eng_british_conquest = {
 					target = MRC
 					type = cb_vassalize_mission
 				}
+				british_isles_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = NOL
+				}
 			}
 			if = {
 				limit = {
@@ -143,6 +199,14 @@ eng_british_conquest = {
 						exists = WSX
 					}
 				}
+				add_historical_rival = WSX
+				add_historical_rival = LOD
+				add_historical_rival = EAL
+				add_historical_rival = NOL
+				add_historical_rival = CRN
+				add_historical_rival = WLS
+				add_historical_rival = SCO
+				add_historical_rival = HSC
 				add_casus_belli = {
 					target = LOD
 					type = cb_vassalize_mission
@@ -158,6 +222,12 @@ eng_british_conquest = {
 				add_casus_belli = {
 					target = WSX
 					type = cb_vassalize_mission
+				}
+				british_isles_region = {
+					limit = {
+						NOT = { owned_by = ROOT }
+					}
+					add_permanent_claim = MRC
 				}
 			}
 		}

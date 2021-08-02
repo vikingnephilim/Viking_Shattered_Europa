@@ -45,6 +45,15 @@ country_event = {
 				to = australskur
 			}
 		}
+		NOT = {
+			tag = MRL
+		}
+		NOT = {
+			tag = VIN
+		}
+		NOT = {
+			tag = NPH
+		}
 	}
 	mean_time_to_happen = {
 		days = 3650
@@ -371,6 +380,15 @@ country_event = {
 				to = vesturindverskur
 			}
 		}
+		NOT = {
+			tag = MRL
+		}
+		NOT = {
+			tag = VIN
+		}
+		NOT = {
+			tag = NPH
+		}
 	}
 	mean_time_to_happen = {
 		days = 3650
@@ -696,11 +714,20 @@ country_event = {
 				to = hondurien
 			}
 			can_country_flip_to_colonial_culture = {
-				to = mexican
+				to = meksikansk
 			}
 			can_country_flip_to_colonial_culture = {
-				to = mexican
+				to = mexikana
 			}
+		}
+		NOT = {
+			tag = MRL
+		}
+		NOT = {
+			tag = VIN
+		}
+		NOT = {
+			tag = NPH
 		}
 	}
 	mean_time_to_happen = {
@@ -1031,6 +1058,15 @@ country_event = {
 			can_country_flip_to_colonial_culture = {
 				to = nyrzealander
 			}
+		}
+		NOT = {
+			tag = MRL
+		}
+		NOT = {
+			tag = VIN
+		}
+		NOT = {
+			tag = NPH
 		}
 	}
 	mean_time_to_happen = {
@@ -1367,6 +1403,15 @@ country_event = {
 				to = ameriskt
 			}
 		}
+		NOT = {
+			tag = MRL
+		}
+		NOT = {
+			tag = VIN
+		}
+		NOT = {
+			tag = NPH
+		}
 	}
 	mean_time_to_happen = {
 		days = 3650
@@ -1693,6 +1738,15 @@ country_event = {
 		NOT = {
 			has_country_flag = rejected_new_colonial_culture
 		}
+		NOT = {
+			tag = MRL
+		}
+		NOT = {
+			tag = VIN
+		}
+		NOT = {
+			tag = NPH
+		}
 	}
 	mean_time_to_happen = {
 		days = 3650
@@ -1987,6 +2041,15 @@ country_event = {
 		NOT = {
 			has_country_flag = rejected_new_colonial_culture
 		}
+		NOT = {
+			tag = MRL
+		}
+		NOT = {
+			tag = VIN
+		}
+		NOT = {
+			tag = NPH
+		}
 		OR = {
 			can_country_flip_to_colonial_culture = {
 				to = patagonian
@@ -2010,7 +2073,7 @@ country_event = {
 				to = guyane
 			}
 			can_country_flip_to_colonial_culture = {
-				to = colombien
+				to = antarctique
 			}
 			can_country_flip_to_colonial_culture = {
 				to = brasilianere
@@ -2047,7 +2110,7 @@ country_event = {
 				to = guyane
 			}
 			setup_flip_to_colonial_culture = {
-				to = colombien
+				to = antarctique
 			}
 			setup_flip_to_colonial_culture = {
 				to = brasilianere
@@ -2226,27 +2289,27 @@ country_event = {
 		}
 	}
 	option = {
-		# Become Colombien
+		# Become Antarctique
 		name = "culture_shift.EVTOPTA700H"
 		trigger = {
-			has_saved_event_target = flip_to_colombien
+			has_saved_event_target = flip_to_antarctique
 		}
 		flip_to_colonial_culture = {
-			to = colombien
+			to = antarctique
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_colombien
+			has_saved_event_target = flip_to_antarctique
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = colombien
+			to = antarctique
 		}
 	}
 	option = {
@@ -2315,6 +2378,11 @@ country_event = {
 				culture = sudafricano
 				culture = sulafricano
 				culture = anafraic
+				culture = villion
+				culture = malgache
+				culture = quellerie
+				culture = sorafrikanere
+				culture = suthurafriskur
 			}
 			is_subject = no
 			is_at_war = no
@@ -2384,6 +2452,46 @@ country_event = {
 							}
 							PREV = {
 								change_primary_culture = sulafricano
+							}
+						}
+						else_if = {
+							limit = {
+								culture = villion
+							}
+							PREV = {
+								change_primary_culture = villion
+							}
+						}
+						else_if = {
+							limit = {
+								culture = malgache
+							}
+							PREV = {
+								change_primary_culture = malgache
+							}
+						}
+						else_if = {
+							limit = {
+								culture = quellerie
+							}
+							PREV = {
+								change_primary_culture = quellerie
+							}
+						}
+						else_if = {
+							limit = {
+								culture = sorafrikanere
+							}
+							PREV = {
+								change_primary_culture = sorafrikanere
+							}
+						}
+						else_if = {
+							limit = {
+								culture = suthurafriskur
+							}
+							PREV = {
+								change_primary_culture = suthurafriskur
 							}
 						}
 						else = {
