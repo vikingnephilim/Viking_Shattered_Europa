@@ -1,0 +1,320 @@
+south_african_revolt_disaster = {
+	potential = {
+		normal_or_historical_nations = yes
+		NOT = { has_global_flag = south_african_revolt }
+		num_of_owned_provinces_with = {
+			value = 5
+			region = south_africa_region
+			OR = {
+				culture = afrikaner
+				culture = rhodesian
+				culture = anafraic
+				culture = sorafrikanere
+				culture = suthurafriskur
+				culture = sudafricano
+				culture = sulafricano
+				culture = villion
+				culture = malgache
+				culture = quellerie
+			}
+		}
+		NOT = {
+			OR = {
+				primary_culture = afrikaner
+				primary_culture = rhodesian
+				primary_culture = anafraic
+				primary_culture = sorafrikanere
+				primary_culture = suthurafriskur
+				primary_culture = sudafricano
+				primary_culture = sulafricano
+				primary_culture = villion
+				primary_culture = malgache
+				primary_culture = quellerie
+			}
+		}
+		NOT = { exists = SAA }
+		NOT = { capital_scope = { region = south_africa_region } }
+		is_free_or_tributary_trigger = yes
+		num_of_cities = 6
+	}
+	can_start = {
+		OR = {
+			AND = {
+				south_africa_region = {
+					owned_by = ROOT
+				}
+				NOT = { full_idea_group = humanist_ideas }
+			}
+			custom_trigger_tooltip = {
+				tooltip = south_african_revolt_disaster_tt
+				AND = {
+					any_owned_province = {
+						culture = afrikaner
+					}
+					NOT = { accepted_culture = afrikaner }
+				}
+				AND = {
+					any_owned_province = {
+						culture = rhodesian
+					}
+					NOT = { accepted_culture = rhodesian }
+				}
+				AND = {
+					any_owned_province = {
+						culture = anafraic
+					}
+					NOT = { accepted_culture = anafraic }
+				}
+				AND = {
+					any_owned_province = {
+						culture = sorafrikanere
+					}
+					NOT = { accepted_culture = sorafrikanere }
+				}
+				AND = {
+					any_owned_province = {
+						culture = suthurafriskur
+					}
+					NOT = { accepted_culture = suthurafriskur }
+				}
+				AND = {
+					any_owned_province = {
+						culture = sudafricano
+					}
+					NOT = { accepted_culture = sudafricano }
+				}
+				AND = {
+					any_owned_province = {
+						culture = sulafricano
+					}
+					NOT = { accepted_culture = sulafricano }
+				}
+				AND = {
+					any_owned_province = {
+						culture = villion
+					}
+					NOT = { accepted_culture = villion }
+				}
+				AND = {
+					any_owned_province = {
+						culture = malgache
+					}
+					NOT = { accepted_culture = malgache }
+				}
+				AND = {
+					any_owned_province = {
+						culture = quellerie
+					}
+					NOT = { accepted_culture = quellerie }
+				}
+			}
+		}
+	}
+	can_stop = {
+		OR = {
+			has_any_disaster = yes
+			exists = SAA
+			is_year = 1750
+		}
+	}
+	progress = {
+		# progress happens as a result of tensions that actually exist in your country
+		modifier = {
+			factor = 1
+			any_owned_province = {
+				region = south_africa_region
+				NOT = { province_religion = ROOT }
+			}
+			NOT = {
+				num_of_owned_provinces_with = {
+					value = 3
+					region = south_africa_region
+					NOT = { province_religion = ROOT }
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				value = 3
+				region = south_africa_region
+				NOT = { province_religion = ROOT }
+			}
+			NOT = {
+				num_of_owned_provinces_with = {
+					value = 5
+					region = south_africa_region
+					NOT = { province_religion = ROOT }
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			num_of_owned_provinces_with = {
+				value = 5
+				region = south_africa_region
+				NOT = { province_religion = ROOT }
+			}
+		}
+		modifier = {
+			factor = 1
+			any_owned_province = {
+				region = south_africa_region
+				unrest = 3
+			}
+			NOT = {
+				num_of_owned_provinces_with = {
+					value = 3
+					region = south_africa_region
+					unrest = 3
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			num_of_owned_provinces_with = {
+				value = 3
+				region = south_africa_region
+				unrest = 3
+			}
+			NOT = {
+				num_of_owned_provinces_with = {
+					value = 5
+					region = south_africa_region
+					unrest = 3
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			num_of_owned_provinces_with = {
+				value = 5
+				region = south_africa_region
+				unrest = 3
+			}
+		}
+		modifier = {
+			factor = 2
+			any_owned_province = {
+				culture = afrikaner
+			}
+			NOT = { accepted_culture = afrikaner }
+		}
+		modifier = {
+			factor = 2
+			any_owned_province = {
+				culture = rhodesian
+			}
+			NOT = { accepted_culture = rhodesian }
+		}
+		modifier = {
+			factor = 2
+			any_owned_province = {
+				culture = anafraic
+			}
+			NOT = { accepted_culture = anafraic }
+		}
+		modifier = {
+			factor = 2
+			any_owned_province = {
+				culture = sorafrikanere
+			}
+			NOT = { accepted_culture = sorafrikanere }
+		}
+		modifier = {
+			factor = 2
+			any_owned_province = {
+				culture = suthurafriskur
+			}
+			NOT = { accepted_culture = suthurafriskur }
+		}
+		modifier = {
+			factor = 2
+			any_owned_province = {
+				culture = sudafricano
+			}
+			NOT = { accepted_culture = sudafricano }
+		}
+		modifier = {
+			factor = 2
+			any_owned_province = {
+				culture = sulafricano
+			}
+			NOT = { accepted_culture = sulafricano }
+		}
+		modifier = {
+			factor = 2
+			any_owned_province = {
+				culture = villion
+			}
+			NOT = { accepted_culture = villion }
+		}
+		modifier = {
+			factor = 2
+			any_owned_province = {
+				culture = malgache
+			}
+			NOT = { accepted_culture = malgache }
+		}
+		modifier = {
+			factor = 2
+			any_owned_province = {
+				culture = quellerie
+			}
+			NOT = { accepted_culture = quellerie }
+		}
+		modifier = {
+			factor = 2
+			NOT = { stability = 3 }
+		}
+	}
+	can_end = {
+		OR = {
+			exists = SAA
+			AND = {
+				custom_trigger_tooltip = {
+					tooltip = had_disaster_for_x_years_south_african
+					had_global_flag = {
+						flag = south_african_revolt
+						days = 7300 # 20 years
+					}
+				}
+				NOT = { num_of_rebel_armies = 1 }
+				NOT = { num_of_rebel_controlled_provinces = 1 }
+				stability = 1
+			}
+			NOT = {
+				num_of_owned_provinces_with = {
+					value = 5
+					region = south_africa_region
+					OR = {
+						culture = afrikaner
+						culture = rhodesian
+						culture = anafraic
+						culture = sorafrikanere
+						culture = suthurafriskur
+						culture = sudafricano
+						culture = sulafricano
+						culture = villion
+						culture = malgache
+						culture = quellerie
+					}
+				}
+			}
+		}
+	}
+	modifier = {
+		stability_cost_modifier = 0.50
+	}
+	on_start = disaster_events_viking.1
+	on_end = disaster_events_viking.7
+	on_monthly = {
+		events = {
+			disaster_events_viking.2 # netherlands declare independence
+		}
+		random_events = {
+			100 = 0
+			5 = disaster_events_viking.6 # random rebels spawn
+		}
+			}
+}

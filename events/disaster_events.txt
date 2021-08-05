@@ -1,0 +1,508 @@
+namespace = disaster_events_viking
+country_event = {
+	# changed from province to country event
+	id = disaster_events_viking.1
+	title = "disaster_events_viking.EVTNAME1"
+	desc = "disaster_events_viking.EVTDESC1"
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		set_global_flag = south_african_revolt
+		set_country_flag = south_african_revolt_target		# used in incident
+	}
+	option = {
+		name = "disaster_events_viking.EVTOPTA1"
+		add_stability = -2
+		random_owned_province = {
+			limit = {
+				region = south_africa_region
+				OR = {
+					culture = afrikaner
+					culture = rhodesian
+					culture = anafraic
+					culture = sorafrikanere
+					culture = suthurafriskur
+					culture = sudafricano
+					culture = sulafricano
+					culture = villion
+					culture = malgache
+					culture = quellerie
+				}
+			}
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3
+				friend = SAA
+			}
+			set_province_flag = saa_rebels_start_flag
+		}
+		random_owned_province = {
+			limit = {
+				NOT = {
+					has_province_flag = saa_rebels_start_flag
+				}
+				region = south_africa_region
+				OR = {
+					culture = afrikaner
+					culture = rhodesian
+					culture = anafraic
+					culture = sorafrikanere
+					culture = suthurafriskur
+					culture = sudafricano
+					culture = sulafricano
+					culture = villion
+					culture = malgache
+					culture = quellerie
+				}
+			}
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 3
+				friend = SAA
+			}
+			set_province_flag = saa_rebels_start_flag
+			set_province_flag = south_african_revolt
+		}
+		custom_tooltip = south_african_revolt_tt
+		hidden_effect = {
+			south_africa_region = {
+				limit = {
+					owned_by = ROOT
+					OR = {
+						culture = afrikaner
+						culture = rhodesian
+						culture = anafraic
+						culture = sorafrikanere
+						culture = suthurafriskur
+						culture = sudafricano
+						culture = sulafricano
+						culture = villion
+						culture = malgache
+						culture = quellerie
+						NOT = {
+							religion = ROOT
+						}
+					}
+				}
+				add_province_modifier = {
+					name = "south_african_revolt_modifier"
+					duration = -1					# removed via the on_end event
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = disaster_events_viking.2
+	title = "disaster_events_viking.EVTNAME2"
+	desc = "disaster_events_viking.EVTDESC2"
+	picture = ANGRY_MOB_eventPicture
+	major = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		NOT = {
+			exists = SAA
+		}
+		is_free_or_tributary_trigger = yes
+		num_of_owned_provinces_with = {
+			value = 5
+			OR = {
+				controlled_by = REB
+				local_autonomy = 90
+			}
+			OR = {
+				culture = afrikaner
+				culture = rhodesian
+				culture = anafraic
+				culture = sorafrikanere
+				culture = suthurafriskur
+				culture = sudafricano
+				culture = sulafricano
+				culture = villion
+				culture = malgache
+				culture = quellerie
+			}
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			every_owned_province = {
+				limit = {
+					region = south_africa_region
+					OR = {
+						culture = afrikaner
+						culture = rhodesian
+						culture = anafraic
+						culture = sorafrikanere
+						culture = suthurafriskur
+						culture = sudafricano
+						culture = sulafricano
+						culture = villion
+						culture = malgache
+						culture = quellerie
+						is_core = SAA
+					}
+					is_capital = no
+				}
+				discover_country = SAA
+				add_core = SAA
+				clear_rebels = yes
+			}
+			release = SAA
+			SAA = {
+				change_government = republic
+				add_government_reform = afrikaner_parliament_reform
+			}
+			every_owned_province = {
+				limit = {
+					region = south_africa_region
+				}
+				add_claim = SAA
+			}
+		}
+	}
+	option = {
+		name = "disaster_events_viking.EVTOPTA2"
+		SAA = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_independence_war
+			}
+		}
+		hidden_effect = {
+			SAA = {
+				country_event = {
+					id = disaster_events_viking.3
+					days = 1
+				}
+			}
+			every_country = {
+				limit = {
+					NOT = {
+						tag = ROOT
+					}
+					NOT = {
+						tag = SAA
+					}
+					any_owned_province = {
+						region = south_africa_region
+					}
+				}
+				country_event = {
+					id = disaster_events_viking.4
+					days = 10
+				}
+			}
+			# Send messages to rivals allowing them to join
+			every_enemy_country = {
+				country_event = {
+					id = disaster_events_viking.5
+					days = 1
+				}
+			}
+		}
+	}
+}
+
+# South African Mobilization
+country_event = {
+	id = disaster_events_viking.3
+	title = "disaster_events_viking.EVTNAME3"
+	desc = "disaster_events_viking.EVTDESC3"
+	picture = MILITARY_CAMP_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "EXCELLENT"
+		SAA = {
+			capital_scope = {
+				hidden_effect = {
+					remove_accepted_culture = SAA
+					if = {
+						limit = {
+							culture = afrikaner
+						}
+						PREV = {
+							change_primary_culture = afrikaner
+						}
+					}
+					else_if = {
+						limit = {
+							culture = rhodesian
+						}
+						PREV = {
+							change_primary_culture = rhodesian
+						}
+					}
+					else_if = {
+						limit = {
+							culture = sudafricano
+						}
+						PREV = {
+							change_primary_culture = sudafricano
+						}
+					}
+					else_if = {
+						limit = {
+							culture = sulafricano
+						}
+						PREV = {
+							change_primary_culture = sulafricano
+						}
+					}
+					else_if = {
+						limit = {
+							culture = villion
+						}
+						PREV = {
+							change_primary_culture = villion
+						}
+					}
+					else_if = {
+						limit = {
+							culture = malgache
+						}
+						PREV = {
+							change_primary_culture = malgache
+						}
+					}
+					else_if = {
+						limit = {
+							culture = quellerie
+						}
+						PREV = {
+							change_primary_culture = quellerie
+						}
+					}
+					else_if = {
+						limit = {
+							culture = sorafrikanere
+						}
+						PREV = {
+							change_primary_culture = sorafrikanere
+						}
+					}
+					else_if = {
+						limit = {
+							culture = suthurafriskur
+						}
+						PREV = {
+							change_primary_culture = suthurafriskur
+						}
+					}
+					else = {
+						limit = {
+							culture = anafraic
+						}
+						PREV = {
+							change_primary_culture = anafraic
+						}
+					}
+				}
+				random_owned_province = {
+					build_to_forcelimit = {
+						infantry = 0.6
+						cavalry = 0.2
+						artillery = 0.2
+					}
+				}
+				random_owned_province = {
+					limit = {
+						has_port = yes
+					}
+					build_to_forcelimit = {
+						heavy_ship = 0.5
+						light_ship = 0.3
+						transport = 0.2
+					}
+				}
+			}
+		}
+	}
+}
+
+# South African Claims
+country_event = {
+	id = disaster_events_viking.4
+	title = "disaster_events_viking.EVTNAME4"
+	desc = "disaster_events_viking.EVTDESC4"
+	picture = DIPLOMACY_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "disaster_events_viking.EVTOPTA4"
+		every_owned_province = {
+			limit = {
+				region = south_africa_region
+			}
+			add_claim = SAA
+		}
+	}
+}
+
+country_event = {
+	id = disaster_events_viking.5
+	title = "disaster_events_viking.EVTNAME5"
+	desc = "disaster_events_viking.EVTDESC5"
+	picture = BATTLE_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "disaster_events_viking.EVTOPTA5"
+		create_alliance = SAA
+		join_all_offensive_wars_of = SAA
+		set_ai_attitude = {
+			who = SAA
+			attitude = attitude_friendly
+		}
+		SAA = {
+			add_opinion = {
+				who = ROOT
+				modifier = supported_independence
+			}
+		}
+	}
+}
+
+# Random rebels event for disaster
+# PROVINCENAME Revolts!
+country_event = {
+	id = disaster_events_viking.6
+	title = "disaster_events_viking.EVTNAME6"
+	desc = "disaster_events_viking.EVTDESC6"
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	trigger = {
+		any_owned_province = {
+			region = south_africa_region
+			NOT = {
+				controlled_by = REB
+			}
+			NOT = {
+				has_province_flag = south_african_revolt
+			}
+			NOT = {
+				has_province_flag = no_south_african_revolt
+			}
+			OR = {
+				culture = afrikaner
+				culture = rhodesian
+				culture = anafraic
+				culture = sorafrikanere
+				culture = suthurafriskur
+				culture = sudafricano
+				culture = sulafricano
+				culture = villion
+				culture = malgache
+				culture = quellerie
+			}
+		}
+	}
+	immediate = {
+		hidden_effect = {
+			random_owned_province = {
+				limit = {
+					region = south_africa_region
+					NOT = {
+						controlled_by = REB
+					}
+					NOT = {
+						has_province_flag = south_african_revolt
+					}
+					NOT = {
+						has_province_flag = no_south_african_revolt
+					}
+					OR = {
+						culture = afrikaner
+						culture = rhodesian
+						culture = anafraic
+						culture = sorafrikanere
+						culture = suthurafriskur
+						culture = sudafricano
+						culture = sulafricano
+						culture = villion
+						culture = malgache
+						culture = quellerie
+					}
+				}
+				save_event_target_as = south_african_rebels_target
+			}
+		}
+	}
+	option = {
+		name = "disaster_events_viking.EVTOPTA6"
+		ai_chance = {
+			factor = 100
+		}
+		event_target:south_african_rebels_target = {
+			set_province_flag = south_african_revolt
+			spawn_rebels = {
+				type = nationalist_rebels
+				size = 1
+				friend = SAA
+			}
+		}
+	}
+	option = {
+		name = "disaster_events_viking.EVTOPTB6"
+		ai_chance = {
+			factor = 0
+		}
+		event_target:south_african_rebels_target = {
+			add_local_autonomy = 100
+			set_province_flag = no_south_african_revolt
+		}
+	}
+}
+
+# on disaster end event
+country_event = {
+	id = disaster_events_viking.7
+	title = "disaster_events_viking.7.t"
+	desc = {
+		trigger = {
+			NOT = {
+				exists = SAA
+			}
+		}
+		desc = "disaster_events_viking.7.d"		# everything went pretty well
+	}
+	desc = {
+		trigger = {
+			exists = SAA
+		}
+		desc = "disaster_events_viking.7.d2"		# oh no the dutch are revolting
+	}
+	picture = ANGRY_MOB_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		hidden_effect = {
+			set_country_flag = had_south_african_revolt
+			every_owned_province = {
+				limit = {
+					has_province_modifier = south_african_revolt_modifier
+				}
+				remove_province_modifier = south_african_revolt_modifier
+			}
+		}
+	}
+	option = {
+		name = disaster_events_viking.7.a
+		trigger = {
+			exists = SAA
+		}
+	}
+	option = {
+		name = disaster_events_viking.7.b
+		trigger = {
+			NOT = {
+				exists = SAA
+			}
+		}
+		south_africa_region = {
+			limit = {
+				owned_by = ROOT
+			}
+			add_local_autonomy = -25
+		}
+	}
+}
