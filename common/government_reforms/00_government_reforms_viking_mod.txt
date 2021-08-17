@@ -96,7 +96,6 @@ french_feudalism = {
 			OR = {
 				culture_group = french
 				culture_group = south_french
-				culture_group = north_french
 				has_reform = french_absolutism
 				has_reform = ancien_regime_reform
 			}
@@ -121,7 +120,6 @@ french_feudalism = {
 			OR = {
 				culture_group = french
 				culture_group = south_french
-				culture_group = north_french
 				has_reform = french_absolutism
 				has_reform = ancien_regime_reform
 			}
@@ -160,7 +158,6 @@ ancien_regime_reform = {
 		OR = {
 			culture_group = french
 			culture_group = south_french
-			culture_group = north_french
 			has_reform = french_absolutism
 		}
 		NOT = {
@@ -177,7 +174,6 @@ ancien_regime_reform = {
 		OR = {
 			culture_group = french
 			culture_group = south_french
-			culture_group = north_french
 			has_reform = french_absolutism
 		}
 		NOT = {
@@ -210,7 +206,6 @@ french_absolutism = {
 		OR = {
 			culture_group = french
 			culture_group = south_french
-			culture_group = north_french
 			has_reform = ancien_regime_reform
 		}
 		NOT = {
@@ -227,7 +222,6 @@ french_absolutism = {
 		OR = {
 			culture_group = french
 			culture_group = south_french
-			culture_group = north_french
 			has_reform = ancien_regime_reform
 		}
 		NOT = {
@@ -379,7 +373,7 @@ baltic_tribal_fed = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = -10
 	monarchy = yes
-	fixed_rank = 2
+	fixed_rank = 3
 	valid_for_nation_designer = no
 	maintain_dynasty = yes
 	royal_marriage = yes
@@ -898,7 +892,7 @@ beylik = {
 	icon = beylik
 	allow_normal_conversion = yes
 	potential = {
-		primary_culture = turkish
+		culture_group = turkish_g
 		NOT = {
 			tag = TUR
 		}
@@ -951,7 +945,6 @@ theocratic_autocracy = {
 	allow_normal_conversion = no
 	potential = {
 		OR = {
-			has_reform = theocratic_autocracy
 			tag = BYZ
 			tag = ROM
 			tag = ERM
@@ -966,7 +959,6 @@ theocratic_autocracy = {
 	}
 	trigger = {
 		OR = {
-			has_reform = theocratic_autocracy
 			tag = BYZ
 			tag = ROM
 			tag = ERM
@@ -987,7 +979,37 @@ theocratic_autocracy = {
 		governing_capacity = 150
 	}
 	custom_attributes = {
-		enables_roman_empire = yes		#Co-Emperor Mechanic
+		is_elective = yes
+	}
+}
+
+expanded_devshirme_reform = {
+	icon = Turkish_iqta
+	allow_normal_conversion = yes
+	potential = {
+		OR = {
+			culture_group = turkish_g
+			has_reform = expanded_devshirme_reform
+		}
+		NOT = { religion = norse_pagan_reformed }
+	}
+	trigger = {
+		OR = {
+			culture_group = turkish_g
+			has_reform = expanded_devshirme_reform
+		}
+		NOT = { religion = norse_pagan_reformed }
+	}
+	modifiers = {
+		manpower_recovery_speed = 0.10
+	}
+	government_abilities = { iqta_mechanic }
+	custom_attributes = {
+		has_pashas = yes
+		maintain_dynasty = yes
+	}
+	ai = {
+		factor = 100
 	}
 }
 
@@ -1664,23 +1686,6 @@ polish_constitutionalism_reform = {
 	fixed_rank = 2
 	nation_designer_cost = 100
 	potential = {
-		OR = {
-			tag = POL
-			tag = PLC
-			has_reform = polish_constitutionalism_reform
-			NOT = {
-				religion = norse_pagan_reformed
-			}
-			NOT = {
-				religion = hellenic_pagan
-			}
-			NOT = {
-				religion = druidic_pagan
-			}
-		}
-	}
-	trigger = {
-		has_reform = polish_constitutionalism_reform
 		NOT = {
 			religion = norse_pagan_reformed
 		}
@@ -1689,6 +1694,27 @@ polish_constitutionalism_reform = {
 		}
 		NOT = {
 			religion = druidic_pagan
+		}
+		OR = {
+			tag = POL
+			tag = PLC
+			has_reform = polish_constitutionalism_reform
+		}
+	}
+	trigger = {
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
+		OR = {
+			tag = POL
+			tag = PLC
+			has_reform = polish_constitutionalism_reform
 		}
 	}
 	modifiers = {
@@ -1712,19 +1738,7 @@ hessian_modern_militarized_monarchy_reform = {
 		OR = {
 			tag = HES
 			has_reform = hessian_militarized_monarchy_reform
-			NOT = {
-				religion = norse_pagan_reformed
-			}
-			NOT = {
-				religion = hellenic_pagan
-			}
-			NOT = {
-				religion = druidic_pagan
-			}
 		}
-	}
-	trigger = {
-		has_reform = hessian_militarized_monarchy_reform
 		NOT = {
 			religion = norse_pagan_reformed
 		}
@@ -1734,7 +1748,19 @@ hessian_modern_militarized_monarchy_reform = {
 		NOT = {
 			religion = druidic_pagan
 		}
+	}
+	trigger = {
+		has_reform = hessian_militarized_monarchy_reform
 		absolutism = 50
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
 	}
 	modifiers = {
 		yearly_army_professionalism = 0.005
@@ -3794,6 +3820,11 @@ grk_demo = {
 		diplomatic_reputation = 1
 		max_absolutism = -40
 	}
+	custom_attributes = {
+		has_parliament = yes
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = no
+	}
 }
 
 cub_peasant_rep = {
@@ -4058,7 +4089,6 @@ druid_soc = {
 			tag = GBR
 		}
 		religion = druidic_pagan
-		has_country_flag = druid_embraced
 	}
 	modifiers = {
 		missionary_maintenance_cost = -0.4

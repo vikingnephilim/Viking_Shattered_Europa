@@ -1,11 +1,7 @@
 # Do not change tags in here without changing every other reference to them.
 # If adding new technology, make sure they are uniquely named.
-
-
 # Groups must be defined BEFORE tables.
-
 #Nation Designer Cost is set to match triggers for starting institutions.
-
 groups = {
 	western = {
 		start_level = 3
@@ -26,7 +22,7 @@ groups = {
 	}
 	eastern = {
 		start_level = 3
-		start_cost_modifier = 0.20
+		start_cost_modifier = 0.2
 		nation_designer_cost = {
 			trigger = {
 				capital_scope = {
@@ -60,7 +56,7 @@ groups = {
 	}
 	muslim = {
 		start_level = 3
-		start_cost_modifier = 0.40
+		start_cost_modifier = 0.4
 		nation_designer_cost = {
 			trigger = {
 				capital_scope = {
@@ -126,7 +122,8 @@ groups = {
 			has_reform = steppe_horde
 		}
 	}
-	sub_saharan = { #West African
+	sub_saharan = {
+		#West African
 		start_level = 2
 		start_cost_modifier = 0.6
 	}
@@ -150,7 +147,7 @@ groups = {
 		start_cost_modifier = 1.5
 		nation_designer_unit_type = south_american
 		is_primitive = yes
-	}	
+	}
 	aboriginal_tech = {
 		start_level = 1
 		start_cost_modifier = 2.5
@@ -167,7 +164,6 @@ groups = {
 			value = 50
 		}
 	}
-	
 	high_american = {
 		start_level = 3
 		start_cost_modifier = 0

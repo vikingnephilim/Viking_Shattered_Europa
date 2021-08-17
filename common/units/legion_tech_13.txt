@@ -1,0 +1,22 @@
+# Legionaire
+
+type = infantry
+
+maneuver = 1
+offensive_fire = 3
+defensive_fire = 3
+offensive_shock = 1
+defensive_shock = 2
+offensive_morale = 3
+defensive_morale = 4
+
+unitsize = 1
+manpower = 1
+
+# Optional, displays the unit as an option when the triggers are met.
+trigger = {
+    AND = {
+		full_idea_group = quality_ideas
+		full_idea_group = humanist_ideas
+	}
+}

@@ -2087,10 +2087,7 @@ BRZ_missions_5 = {
 					upper_peru = {
 						limit = {
 							country_or_non_sovereign_subject_holds = ROOT
-							OR = {
 								trade_goods = gold
-								trade_goods = silver
-							}
 						}
 						add_province_modifier = {
 							name = BRZ_gold_modifier
@@ -2100,10 +2097,7 @@ BRZ_missions_5 = {
 					potosi_area = {
 						limit = {
 							country_or_non_sovereign_subject_holds = ROOT
-							OR = {
 								trade_goods = gold
-								trade_goods = silver
-							}
 						}
 						add_province_modifier = {
 							name = BRZ_gold_modifier
@@ -2113,10 +2107,7 @@ BRZ_missions_5 = {
 					jujuy_area = {
 						limit = {
 							country_or_non_sovereign_subject_holds = ROOT
-							OR = {
 								trade_goods = gold
-								trade_goods = silver
-							}
 						}
 						add_province_modifier = {
 							name = BRZ_gold_modifier
@@ -2126,10 +2117,7 @@ BRZ_missions_5 = {
 					tucuman_area = {
 						limit = {
 							country_or_non_sovereign_subject_holds = ROOT
-							OR = {
 								trade_goods = gold
-								trade_goods = silver
-							}
 						}
 						add_province_modifier = {
 							name = BRZ_gold_modifier
@@ -2139,10 +2127,7 @@ BRZ_missions_5 = {
 					northern_chile_area = {
 						limit = {
 							country_or_non_sovereign_subject_holds = ROOT
-							OR = {
 								trade_goods = gold
-								trade_goods = silver
-							}
 						}
 						add_province_modifier = {
 							name = BRZ_gold_modifier
@@ -2152,10 +2137,7 @@ BRZ_missions_5 = {
 					antisuyu_area = {
 						limit = {
 							country_or_non_sovereign_subject_holds = ROOT
-							OR = {
 								trade_goods = gold
-								trade_goods = silver
-							}
 						}
 						add_province_modifier = {
 							name = BRZ_gold_modifier
@@ -3307,9 +3289,6 @@ canada_missions_2 = {
 				tooltip = CAN_GOLD_EVENT_TOOLTIP
 				OR = {
 					has_country_flag = gold_event_fired
-					HBC = {
-						has_country_flag = gold_event_fired
-					}
 				}
 			}
 			num_of_owned_provinces_with = {
@@ -4112,10 +4091,6 @@ canada_missions_4 = {
 					OR = {
 						splendor = 300
 						prestige = 50
-						trading_bonus = {
-							trade_goods = maple_syrup
-							value = yes
-						}
 					}
 				}
 				else = {
@@ -4134,10 +4109,6 @@ canada_missions_4 = {
 					}
 					OR = {
 						prestige = 50
-						trading_bonus = {
-							trade_goods = maple_syrup
-							value = yes
-						}
 					}
 				}
 				else = {
@@ -4148,19 +4119,6 @@ canada_missions_4 = {
 		effect = {
 			country_event = {
 				id = ME_Canada_Events.12
-			}
-			if = {
-				limit = {
-					is_expanded_mod_active = {
-						mod = trade_goods
-					}
-				}
-				change_price = {
-					trade_goods = maple_syrup
-					key = can_cuisines_canada_desc
-					value = 0.25
-					duration = -1
-				}
 			}
 			add_country_modifier = {
 				name = can_cuisines_canada
@@ -4721,10 +4679,6 @@ canada_missions_5 = {
 						mod = trade_goods
 					}
 				}
-				trading_bonus = {
-					trade_goods = maple_syrup
-					value = yes
-				}
 			}
 			else = {
 				if = {
@@ -4746,9 +4700,6 @@ canada_missions_5 = {
 					}
 				}
 				every_owned_province = {
-					limit = {
-						trade_goods = maple_syrup
-					}
 					add_province_modifier = {
 						name = can_maple_syrup_monopoly_modifier
 						duration = -1
@@ -5244,7 +5195,7 @@ gran_colombia_missions_1 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = GRC
+		tag = COL
 	}
 	has_country_shield = yes
 	gran_colombia_the_natives_of_the_caribbean = {
@@ -5284,7 +5235,7 @@ gran_colombia_missions_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = GRC
+		tag = COL
 	}
 	has_country_shield = yes
 	gran_colombia_unite_the_central_american_states = {
@@ -5378,7 +5329,7 @@ gran_colombia_missions_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = GRC
+		tag = COL
 	}
 	has_country_shield = yes
 	gran_colombia_humiliation_of_the_brazilians = {
@@ -5445,7 +5396,7 @@ gran_colombia_missions_4 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = GRC
+		tag = COL
 	}
 	has_country_shield = yes
 	gran_colombia_the_home_of_the_incas = {
@@ -5834,7 +5785,7 @@ gran_colombia_missions_1_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = GRC
+		tag = COL
 	}
 	has_country_shield = yes
 	gran_colombia_fires_of_industry = {
@@ -5863,7 +5814,7 @@ gran_colombia_missions_3_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = GRC
+		tag = COL
 	}
 	has_country_shield = yes
 	gran_colombia_colombian_emeralds = {
@@ -5965,7 +5916,7 @@ gran_colombia_missions_4_2 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = GRC
+		tag = COL
 	}
 	has_country_shield = yes
 	gran_colombia_the_bolivar_constitution = {
@@ -6073,7 +6024,7 @@ gran_colombia_missions_3_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = GRC
+		tag = COL
 	}
 	has_country_shield = yes
 	gran_colombia_la_guardia_nacional = {
@@ -6113,7 +6064,7 @@ gran_colombia_missions_4_3 = {
 	generic = no
 	ai = yes
 	potential = {
-		tag = GRC
+		tag = COL
 	}
 	has_country_shield = yes
 	gran_colombia_the_first_gran_colombian_army = {

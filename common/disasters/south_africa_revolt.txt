@@ -6,30 +6,32 @@ south_african_revolt_disaster = {
 			value = 5
 			region = south_africa_region
 			OR = {
-				culture = afrikaner
-				culture = rhodesian
-				culture = anafraic
-				culture = sorafrikanere
-				culture = suthurafriskur
-				culture = sudafricano
-				culture = sulafricano
-				culture = villion
-				culture = malgache
-				culture = quellerie
+				culture = west_germanic_south_african
+				culture = british_south_african
+				culture = south_french_south_african
+				culture = french_south_african
+				culture = iberian_south_african
+				culture = celtic_iberian_south_african
+				culture = latin_south_african
+				culture = celtic_south_african
+				culture = scandinavian_south_african
+				culture = old_norse_south_african
+				culture = maghrebi_south_african
 			}
 		}
 		NOT = {
 			OR = {
-				primary_culture = afrikaner
-				primary_culture = rhodesian
-				primary_culture = anafraic
-				primary_culture = sorafrikanere
-				primary_culture = suthurafriskur
-				primary_culture = sudafricano
-				primary_culture = sulafricano
-				primary_culture = villion
-				primary_culture = malgache
-				primary_culture = quellerie
+				primary_culture = west_germanic_south_african
+				primary_culture = british_south_african
+				primary_culture = south_french_south_african
+				primary_culture = french_south_african
+				primary_culture = iberian_south_african
+				primary_culture = celtic_iberian_south_african
+				primary_culture = latin_south_african
+				primary_culture = celtic_south_african
+				primary_culture = scandinavian_south_african
+				primary_culture = old_norse_south_african
+				primary_culture = maghrebi_south_african
 			}
 		}
 		NOT = { exists = SAA }
@@ -49,63 +51,69 @@ south_african_revolt_disaster = {
 				tooltip = south_african_revolt_disaster_tt
 				AND = {
 					any_owned_province = {
-						culture = afrikaner
+						culture = west_germanic_south_african
 					}
-					NOT = { accepted_culture = afrikaner }
+					NOT = { accepted_culture = west_germanic_south_african }
 				}
 				AND = {
 					any_owned_province = {
-						culture = rhodesian
+						culture = british_south_african
 					}
-					NOT = { accepted_culture = rhodesian }
+					NOT = { accepted_culture = british_south_african }
 				}
 				AND = {
 					any_owned_province = {
-						culture = anafraic
+						culture = south_french_south_african
 					}
-					NOT = { accepted_culture = anafraic }
+					NOT = { accepted_culture = south_french_south_african }
 				}
 				AND = {
 					any_owned_province = {
-						culture = sorafrikanere
+						culture = french_south_african
 					}
-					NOT = { accepted_culture = sorafrikanere }
+					NOT = { accepted_culture = french_south_african }
 				}
 				AND = {
 					any_owned_province = {
-						culture = suthurafriskur
+						culture = iberian_south_african
 					}
-					NOT = { accepted_culture = suthurafriskur }
+					NOT = { accepted_culture = iberian_south_african }
 				}
 				AND = {
 					any_owned_province = {
-						culture = sudafricano
+						culture = celtic_iberian_south_african
 					}
-					NOT = { accepted_culture = sudafricano }
+					NOT = { accepted_culture = celtic_iberian_south_african }
 				}
 				AND = {
 					any_owned_province = {
-						culture = sulafricano
+						culture = latin_south_african
 					}
-					NOT = { accepted_culture = sulafricano }
+					NOT = { accepted_culture = latin_south_african }
 				}
 				AND = {
 					any_owned_province = {
-						culture = villion
+						culture = celtic_south_african
 					}
-					NOT = { accepted_culture = villion }
+					NOT = { accepted_culture = celtic_south_african }
 				}
 				AND = {
 					any_owned_province = {
-						culture = malgache
+						culture = scandinavian_south_african
 					}
-					NOT = { accepted_culture = malgache }
+					NOT = { accepted_culture = scandinavian_south_african }
 				}
 				AND = {
 					any_owned_province = {
-						culture = quellerie
+						culture = old_norse_south_african
 					}
-					NOT = { accepted_culture = quellerie }
+					NOT = { accepted_culture = old_norse_south_african }
+				}
+				AND = {
+					any_owned_province = {
+						culture = maghrebi_south_african
+					}
+					NOT = { accepted_culture =maghrebi_south_african }
 				}
 			}
 		}
@@ -196,72 +204,79 @@ south_african_revolt_disaster = {
 		modifier = {
 			factor = 2
 			any_owned_province = {
-				culture = afrikaner
+				culture = west_germanic_south_african
 			}
-			NOT = { accepted_culture = afrikaner }
+			NOT = { accepted_culture = west_germanic_south_african }
 		}
 		modifier = {
 			factor = 2
 			any_owned_province = {
-				culture = rhodesian
+				culture = british_south_african
 			}
-			NOT = { accepted_culture = rhodesian }
+			NOT = { accepted_culture = british_south_african }
 		}
 		modifier = {
 			factor = 2
 			any_owned_province = {
-				culture = anafraic
+				culture = south_french_south_african
 			}
-			NOT = { accepted_culture = anafraic }
+			NOT = { accepted_culture = south_french_south_african }
 		}
 		modifier = {
 			factor = 2
 			any_owned_province = {
-				culture = sorafrikanere
+				culture = french_south_african
 			}
-			NOT = { accepted_culture = sorafrikanere }
+			NOT = { accepted_culture = french_south_african }
 		}
 		modifier = {
 			factor = 2
 			any_owned_province = {
-				culture = suthurafriskur
+				culture = iberian_south_african
 			}
-			NOT = { accepted_culture = suthurafriskur }
+			NOT = { accepted_culture = iberian_south_african }
 		}
 		modifier = {
 			factor = 2
 			any_owned_province = {
-				culture = sudafricano
+				culture = celtic_iberian_south_african
 			}
-			NOT = { accepted_culture = sudafricano }
+			NOT = { accepted_culture = celtic_iberian_south_african }
 		}
 		modifier = {
 			factor = 2
 			any_owned_province = {
-				culture = sulafricano
+				culture = latin_south_african
 			}
-			NOT = { accepted_culture = sulafricano }
+			NOT = { accepted_culture = latin_south_african }
 		}
 		modifier = {
 			factor = 2
 			any_owned_province = {
-				culture = villion
+				culture = celtic_south_african
 			}
-			NOT = { accepted_culture = villion }
+			NOT = { accepted_culture = celtic_south_african }
 		}
 		modifier = {
 			factor = 2
 			any_owned_province = {
-				culture = malgache
+				culture = scandinavian_south_african
 			}
-			NOT = { accepted_culture = malgache }
+			NOT = { accepted_culture = scandinavian_south_african }
 		}
 		modifier = {
 			factor = 2
 			any_owned_province = {
-				culture = quellerie
+				culture = old_norse_south_african
 			}
-			NOT = { accepted_culture = quellerie }
+			NOT = { accepted_culture = old_norse_south_african }
+		}
+		modifier = {
+			factor = 2
+			any_owned_province = {
+				culture = maghrebi_south_african
+			}
+			NOT = { accepted_culture = maghrebi_south_african }
 		}
 		modifier = {
 			factor = 2
@@ -288,16 +303,17 @@ south_african_revolt_disaster = {
 					value = 5
 					region = south_africa_region
 					OR = {
-						culture = afrikaner
-						culture = rhodesian
-						culture = anafraic
-						culture = sorafrikanere
-						culture = suthurafriskur
-						culture = sudafricano
-						culture = sulafricano
-						culture = villion
-						culture = malgache
-						culture = quellerie
+						culture = west_germanic_south_african
+						culture = british_south_african
+						culture = south_french_south_african
+						culture = french_south_african
+						culture = iberian_south_african
+						culture = celtic_iberian_south_african
+						culture = latin_south_african
+						culture = celtic_south_african
+						culture = scandinavian_south_african
+						culture = old_norse_south_african
+						culture = maghrebi_south_african
 					}
 				}
 			}

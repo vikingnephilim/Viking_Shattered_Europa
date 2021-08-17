@@ -17,16 +17,17 @@ country_event = {
 			limit = {
 				region = south_africa_region
 				OR = {
-					culture = afrikaner
-					culture = rhodesian
-					culture = anafraic
-					culture = sorafrikanere
-					culture = suthurafriskur
-					culture = sudafricano
-					culture = sulafricano
-					culture = villion
-					culture = malgache
-					culture = quellerie
+					culture = west_germanic_south_african
+					culture = british_south_african
+					culture = south_french_south_african
+					culture = french_south_african
+					culture = iberian_south_african
+					culture = celtic_iberian_south_african
+					culture = latin_south_african
+					culture = celtic_south_african
+					culture = scandinavian_south_african
+					culture = old_norse_south_african
+					culture = maghrebi_south_african
 				}
 			}
 			spawn_rebels = {
@@ -43,16 +44,17 @@ country_event = {
 				}
 				region = south_africa_region
 				OR = {
-					culture = afrikaner
-					culture = rhodesian
-					culture = anafraic
-					culture = sorafrikanere
-					culture = suthurafriskur
-					culture = sudafricano
-					culture = sulafricano
-					culture = villion
-					culture = malgache
-					culture = quellerie
+					culture = west_germanic_south_african
+					culture = british_south_african
+					culture = south_french_south_african
+					culture = french_south_african
+					culture = iberian_south_african
+					culture = celtic_iberian_south_african
+					culture = latin_south_african
+					culture = celtic_south_african
+					culture = scandinavian_south_african
+					culture = old_norse_south_african
+					culture = maghrebi_south_african
 				}
 			}
 			spawn_rebels = {
@@ -69,16 +71,17 @@ country_event = {
 				limit = {
 					owned_by = ROOT
 					OR = {
-						culture = afrikaner
-						culture = rhodesian
-						culture = anafraic
-						culture = sorafrikanere
-						culture = suthurafriskur
-						culture = sudafricano
-						culture = sulafricano
-						culture = villion
-						culture = malgache
-						culture = quellerie
+						culture = west_germanic_south_african
+						culture = british_south_african
+						culture = south_french_south_african
+						culture = french_south_african
+						culture = iberian_south_african
+						culture = celtic_iberian_south_african
+						culture = latin_south_african
+						culture = celtic_south_african
+						culture = scandinavian_south_african
+						culture = old_norse_south_african
+						culture = maghrebi_south_african
 						NOT = {
 							religion = ROOT
 						}
@@ -113,16 +116,17 @@ country_event = {
 				local_autonomy = 90
 			}
 			OR = {
-				culture = afrikaner
-				culture = rhodesian
-				culture = anafraic
-				culture = sorafrikanere
-				culture = suthurafriskur
-				culture = sudafricano
-				culture = sulafricano
-				culture = villion
-				culture = malgache
-				culture = quellerie
+				culture = west_germanic_south_african
+				culture = british_south_african
+				culture = south_french_south_african
+				culture = french_south_african
+				culture = iberian_south_african
+				culture = celtic_iberian_south_african
+				culture = latin_south_african
+				culture = celtic_south_african
+				culture = scandinavian_south_african
+				culture = old_norse_south_african
+				culture = maghrebi_south_african
 			}
 		}
 	}
@@ -132,16 +136,17 @@ country_event = {
 				limit = {
 					region = south_africa_region
 					OR = {
-						culture = afrikaner
-						culture = rhodesian
-						culture = anafraic
-						culture = sorafrikanere
-						culture = suthurafriskur
-						culture = sudafricano
-						culture = sulafricano
-						culture = villion
-						culture = malgache
-						culture = quellerie
+						culture = west_germanic_south_african
+						culture = british_south_african
+						culture = south_french_south_african
+						culture = french_south_african
+						culture = iberian_south_african
+						culture = celtic_iberian_south_african
+						culture = latin_south_african
+						culture = celtic_south_african
+						culture = scandinavian_south_african
+						culture = old_norse_south_african
+						culture = maghrebi_south_african
 						is_core = SAA
 					}
 					is_capital = no
@@ -153,7 +158,7 @@ country_event = {
 			release = SAA
 			SAA = {
 				change_government = republic
-				add_government_reform = afrikaner_parliament_reform
+				add_government_reform = south_african_parliament_reform
 			}
 			every_owned_province = {
 				limit = {
@@ -221,82 +226,90 @@ country_event = {
 					remove_accepted_culture = SAA
 					if = {
 						limit = {
-							culture = afrikaner
+							culture = west_germanic_south_african
 						}
 						PREV = {
-							change_primary_culture = afrikaner
+							change_primary_culture = west_germanic_south_african
 						}
 					}
 					else_if = {
 						limit = {
-							culture = rhodesian
+							culture = british_south_african
 						}
 						PREV = {
-							change_primary_culture = rhodesian
+							change_primary_culture = british_south_african
 						}
 					}
 					else_if = {
 						limit = {
-							culture = sudafricano
+							culture = south_french_south_african
 						}
 						PREV = {
-							change_primary_culture = sudafricano
+							change_primary_culture = south_french_south_african
 						}
 					}
 					else_if = {
 						limit = {
-							culture = sulafricano
+							culture = french_south_african
 						}
 						PREV = {
-							change_primary_culture = sulafricano
+							change_primary_culture = french_south_african
 						}
 					}
 					else_if = {
 						limit = {
-							culture = villion
+							culture = iberian_south_african
 						}
 						PREV = {
-							change_primary_culture = villion
+							change_primary_culture = iberian_south_african
 						}
 					}
 					else_if = {
 						limit = {
-							culture = malgache
+							culture = celtic_iberian_south_african
 						}
 						PREV = {
-							change_primary_culture = malgache
+							change_primary_culture = celtic_iberian_south_african
 						}
 					}
 					else_if = {
 						limit = {
-							culture = quellerie
+							culture = latin_south_african
 						}
 						PREV = {
-							change_primary_culture = quellerie
+							change_primary_culture = latin_south_african
 						}
 					}
 					else_if = {
 						limit = {
-							culture = sorafrikanere
+							culture = celtic_south_african
 						}
 						PREV = {
-							change_primary_culture = sorafrikanere
+							change_primary_culture = celtic_south_african
 						}
 					}
 					else_if = {
 						limit = {
-							culture = suthurafriskur
+							culture = scandinavian_south_african
 						}
 						PREV = {
-							change_primary_culture = suthurafriskur
+							change_primary_culture = scandinavian_south_african
+						}
+					}
+					else_if = {
+						limit = {
+							culture = old_norse_south_african
+						}
+						PREV = {
+							change_primary_culture = old_norse_south_african
 						}
 					}
 					else = {
 						limit = {
-							culture = anafraic
+							culture = maghrebi_south_african
 						}
 						PREV = {
-							change_primary_culture = anafraic
+							change_primary_culture = maghrebi_south_african
 						}
 					}
 				}
@@ -384,16 +397,17 @@ country_event = {
 				has_province_flag = no_south_african_revolt
 			}
 			OR = {
-				culture = afrikaner
-				culture = rhodesian
-				culture = anafraic
-				culture = sorafrikanere
-				culture = suthurafriskur
-				culture = sudafricano
-				culture = sulafricano
-				culture = villion
-				culture = malgache
-				culture = quellerie
+				culture = west_germanic_south_african
+				culture = british_south_african
+				culture = south_french_south_african
+				culture = french_south_african
+				culture = iberian_south_african
+				culture = celtic_iberian_south_african
+				culture = latin_south_african
+				culture = celtic_south_african
+				culture = scandinavian_south_african
+				culture = old_norse_south_african
+				culture = maghrebi_south_african
 			}
 		}
 	}
@@ -412,16 +426,17 @@ country_event = {
 						has_province_flag = no_south_african_revolt
 					}
 					OR = {
-						culture = afrikaner
-						culture = rhodesian
-						culture = anafraic
-						culture = sorafrikanere
-						culture = suthurafriskur
-						culture = sudafricano
-						culture = sulafricano
-						culture = villion
-						culture = malgache
-						culture = quellerie
+						culture = west_germanic_south_african
+						culture = british_south_african
+						culture = south_french_south_african
+						culture = french_south_african
+						culture = iberian_south_african
+						culture = celtic_iberian_south_african
+						culture = latin_south_african
+						culture = celtic_south_african
+						culture = scandinavian_south_african
+						culture = old_norse_south_african
+						culture = maghrebi_south_african
 					}
 				}
 				save_event_target_as = south_african_rebels_target

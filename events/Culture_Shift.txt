@@ -1,6 +1,5 @@
 namespace = culture_shift
-####AUSTRALIA####
-#Australian - #Event ID: 1
+#####AUSTRALIA#####Event ID: 100
 country_event = {
 	id = culture_shift.100
 	title = "culture_shift.EVTNAME100"
@@ -15,34 +14,37 @@ country_event = {
 		}
 		OR = {
 			can_country_flip_to_colonial_culture = {
-				to = australian
+				to = british_australian
 			}
 			can_country_flip_to_colonial_culture = {
-				to = tasmaans
+				to = west_germanic_australian
 			}
 			can_country_flip_to_colonial_culture = {
-				to = australiano
+				to = celtic_iberian_australian
 			}
 			can_country_flip_to_colonial_culture = {
-				to = austral
+				to = iberian_australian
 			}
 			can_country_flip_to_colonial_culture = {
-				to = astrailianaich
+				to = celtic_australian
 			}
 			can_country_flip_to_colonial_culture = {
-				to = australien
+				to = french_australian
 			}
 			can_country_flip_to_colonial_culture = {
-				to = laperouse
+				to = latin_australian
 			}
 			can_country_flip_to_colonial_culture = {
-				to = baudin
+				to = south_french_australian
 			}
 			can_country_flip_to_colonial_culture = {
-				to = australier
+				to = scandinavian_australian
 			}
 			can_country_flip_to_colonial_culture = {
-				to = australskur
+				to = old_norse_australian
+			}
+			can_country_flip_to_colonial_culture = {
+				to = maghrebi_australian
 			}
 		}
 		NOT = {
@@ -61,45 +63,45 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			setup_flip_to_colonial_culture = {
-				to = australian
+				to = british_australian
 			}
 			setup_flip_to_colonial_culture = {
-				to = tasmaans
+				to = west_germanic_australian
 			}
 			setup_flip_to_colonial_culture = {
-				to = australiano
+				to = celtic_iberian_australian
 			}
 			setup_flip_to_colonial_culture = {
-				to = austral
+				to = iberian_australian
 			}
 			setup_flip_to_colonial_culture = {
-				to = austrailianaich
+				to = celtic_australian
 			}
 			setup_flip_to_colonial_culture = {
-				to = australien
+				to = french_australian
 			}
 			setup_flip_to_colonial_culture = {
-				to = laperouse
+				to = latin_australian
 			}
 			setup_flip_to_colonial_culture = {
-				to = baudin
+				to = south_french_australian
 			}
 			setup_flip_to_colonial_culture = {
-				to = australier
+				to = scandinavian_australian
 			}
 			setup_flip_to_colonial_culture = {
-				to = australskur
+				to = old_norse_australian
 			}
 		}
 	}
 	option = {
-		# Become Australian
+		# Become British_australian
 		name = "culture_shift.EVTOPTA100A"
 		trigger = {
 			has_saved_event_target = flip_to_australian
 		}
 		flip_to_colonial_culture = {
-			to = australian
+			to = british_australian
 		}
 	}
 	option = {
@@ -113,65 +115,65 @@ country_event = {
 			}
 		}
 		refuse_colonial_culture = {
-			to = australian
+			to = british_australian
 		}
 	}
 	option = {
-		# Become Tasmaans
+		# Become West_germanic_australian
 		name = "culture_shift.EVTOPTA100B"
 		trigger = {
-			has_saved_event_target = flip_to_tasmaans
+			has_saved_event_target = flip_to_west_germanic_australian
 		}
 		flip_to_colonial_culture = {
-			to = tasmaans
+			to = west_germanic_australian
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_tasmaans
+			has_saved_event_target = flip_to_west_germanic_australian
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = tasmaans
+			to = west_germanic_australian
 		}
 	}
 	option = {
-		# Become Australiano
+		# Become Celtic_iberian_australian
 		name = "culture_shift.EVTOPTA100C"
 		trigger = {
-			has_saved_event_target = flip_to_australiano
+			has_saved_event_target = flip_to_celtic_iberian_australian
 		}
 		flip_to_colonial_culture = {
-			to = australiano
+			to = celtic_iberian_australian
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_australiano
+			has_saved_event_target = flip_to_celtic_iberian_australian
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = australiano
+			to = celtic_iberian_australian
 		}
 	}
 	option = {
 		# Become Austral
 		name = "culture_shift.EVTOPTA100D"
 		trigger = {
-			has_saved_event_target = flip_to_austral
+			has_saved_event_target = flip_to_iberian_australian
 		}
 		flip_to_colonial_culture = {
-			to = austral
+			to = iberian_australian
 		}
 	}
 	option = {
@@ -185,157 +187,180 @@ country_event = {
 			}
 		}
 		refuse_colonial_culture = {
-			to = austral
+			to = iberian_australian
 		}
 	}
 	option = {
-		# Become Austrailianaich
+		# Become Celtic_australian
 		name = "culture_shift.EVTOPTA100E"
 		trigger = {
-			has_saved_event_target = flip_to_austrailianaich
+			has_saved_event_target = flip_to_celtic_australian
 		}
 		flip_to_colonial_culture = {
-			to = austrailianaich
+			to = celtic_australian
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_austrailianaich
+			has_saved_event_target = flip_to_celtic_australian
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = austrailianaich
+			to = celtic_australian
 		}
 	}
 	option = {
-		# Become Australien
+		# Become French_australian
 		name = "culture_shift.EVTOPTA100F"
 		trigger = {
-			has_saved_event_target = flip_to_australien
+			has_saved_event_target = flip_to_french_australian
 		}
 		flip_to_colonial_culture = {
-			to = australien
+			to = french_australian
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_australien
+			has_saved_event_target = flip_to_french_australian
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = australien
+			to = french_australian
 		}
 	}
 	option = {
-		# Become Laperouse
+		# Become Latin_australian
 		name = "culture_shift.EVTOPTA100G"
 		trigger = {
-			has_saved_event_target = flip_to_laperouse
+			has_saved_event_target = flip_to_latin_australian
 		}
 		flip_to_colonial_culture = {
-			to = laperouse
+			to = latin_australian
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_laperouse
+			has_saved_event_target = flip_to_latin_australian
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = laperouse
+			to = latin_australian
 		}
 	}
 	option = {
-		# Become Baudin
+		# Become South_french_australian
 		name = "culture_shift.EVTOPTA100H"
 		trigger = {
-			has_saved_event_target = flip_to_baudin
+			has_saved_event_target = flip_to_south_french_australian
 		}
 		flip_to_colonial_culture = {
-			to = baudin
+			to = south_french_australian
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_baudin
+			has_saved_event_target = flip_to_south_french_australian
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = baudin
+			to = south_french_australian
 		}
 	}
 	option = {
-		# Become Australier
+		# Become Scandinavian_australian
 		name = "culture_shift.EVTOPTA100I"
 		trigger = {
-			has_saved_event_target = flip_to_australier
+			has_saved_event_target = flip_to_scandinavian_australian
 		}
 		flip_to_colonial_culture = {
-			to = australier
+			to = scandinavian_australian
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_australier
+			has_saved_event_target = flip_to_scandinavian_australian
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = australier
+			to = scandinavian_australian
 		}
 	}
 	option = {
-		# Become Australskur
+		# Become Old_norse_australian
 		name = "culture_shift.EVTOPTA100J"
 		trigger = {
-			has_saved_event_target = flip_to_australskur
+			has_saved_event_target = flip_to_old_norse_australian
 		}
 		flip_to_colonial_culture = {
-			to = australskur
+			to = old_norse_australian
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_australskur
+			has_saved_event_target = flip_to_old_norse_australian
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = australskur
+			to = old_norse_australian
+		}
+	}
+	option = {
+		# Become maghrebi_australian
+		name = "culture_shift.EVTOPTA100K"
+		trigger = {
+			has_saved_event_target = flip_to_maghrebi_australian
+		}
+		flip_to_colonial_culture = {
+			to = maghrebi_australian
+		}
+	}
+	option = {
+		# Resist cultural change
+		name = "culture_shift.EVTOPTB0"
+		trigger = {
+			has_saved_event_target = flip_to_maghrebi_australian
+			ai = no
+			NOT = {
+				has_country_flag = embraced_new_colonial_culture
+			}
+		}
+		refuse_colonial_culture = {
+			to =maghrebi_australian
 		}
 	}
 }
 
-####CARIBBEAN####
-#Caribbean - #Event ID: 2
+#####CARIBBEAN#####Event ID: 200
 country_event = {
 	id = culture_shift.200
 	title = "culture_shift.EVTNAME200"
@@ -350,34 +375,37 @@ country_event = {
 		}
 		OR = {
 			can_country_flip_to_colonial_culture = {
-				to = jamaican
+				to = british_west_indies
 			}
 			can_country_flip_to_colonial_culture = {
-				to = antilliaans
+				to = west_germanic_west_indies
 			}
 			can_country_flip_to_colonial_culture = {
-				to = caraiba
+				to = celtic_iberian_west_indies
 			}
 			can_country_flip_to_colonial_culture = {
-				to = cuban
+				to = iberian_west_indies
 			}
 			can_country_flip_to_colonial_culture = {
-				to = ciuban
+				to = celtic_west_indies
 			}
 			can_country_flip_to_colonial_culture = {
-				to = hatien
+				to = latin_west_indies
 			}
 			can_country_flip_to_colonial_culture = {
-				to = martinique
+				to = french_west_indies
 			}
 			can_country_flip_to_colonial_culture = {
-				to = saintlucie
+				to = south_french_west_indies
 			}
 			can_country_flip_to_colonial_culture = {
-				to = vastindier
+				to = scandinavian_west_indies
 			}
 			can_country_flip_to_colonial_culture = {
-				to = vesturindverskur
+				to = old_norse_west_indies
+			}
+			can_country_flip_to_colonial_culture = {
+				to = maghrebi_west_indies
 			}
 		}
 		NOT = {
@@ -396,281 +424,304 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			setup_flip_to_colonial_culture = {
-				to = jamaican
+				to = british_west_indies
 			}
 			setup_flip_to_colonial_culture = {
-				to = antilliaans
+				to = west_germanic_west_indies
 			}
 			setup_flip_to_colonial_culture = {
-				to = caraiba
+				to = celtic_iberian_west_indies
 			}
 			setup_flip_to_colonial_culture = {
-				to = cuban
+				to = iberian_west_indies
 			}
 			setup_flip_to_colonial_culture = {
-				to = ciuban
+				to = celtic_west_indies
 			}
 			setup_flip_to_colonial_culture = {
-				to = hatien
+				to = latin_west_indies
 			}
 			setup_flip_to_colonial_culture = {
-				to = martinique
+				to = french_west_indies
 			}
 			setup_flip_to_colonial_culture = {
-				to = saintlucie
+				to = south_french_west_indies
 			}
 			setup_flip_to_colonial_culture = {
-				to = vastindier
+				to = scandinavian_west_indies
 			}
 			setup_flip_to_colonial_culture = {
-				to = vesturindverskur
+				to = old_norse_west_indies
 			}
 		}
 	}
 	option = {
-		# Become Jamaican
+		# Become British_west_indies
 		name = "culture_shift.EVTOPTA200A"
 		trigger = {
-			has_saved_event_target = flip_to_jamaican
+			has_saved_event_target = flip_to_british_west_indies
 		}
 		flip_to_colonial_culture = {
-			to = jamaican
+			to = british_west_indies
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_jamaican
+			has_saved_event_target = flip_to_british_west_indies
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = jamaican
+			to = british_west_indies
 		}
 	}
 	option = {
-		# Become Antilliaans
+		# Become West_germanic_west_indies
 		name = "culture_shift.EVTOPTA200B"
 		trigger = {
-			has_saved_event_target = flip_to_antilliaans
+			has_saved_event_target = flip_to_west_germanic_west_indies
 		}
 		flip_to_colonial_culture = {
-			to = antilliaans
+			to = west_germanic_west_indies
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_antilliaans
+			has_saved_event_target = flip_to_west_germanic_west_indies
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = jamaican
+			to = west_germanic_west_indies
 		}
 	}
 	option = {
-		# Become Caraiba
+		# Become Celtic_iberian_west_indies
 		name = "culture_shift.EVTOPTA200C"
 		trigger = {
-			has_saved_event_target = flip_to_caraiba
+			has_saved_event_target = flip_to_celtic_iberian_west_indies
 		}
 		flip_to_colonial_culture = {
-			to = caraiba
+			to = celtic_iberian_west_indies
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_caraiba
+			has_saved_event_target = flip_to_celtic_iberian_west_indies
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = caraiba
+			to = celtic_iberian_west_indies
 		}
 	}
 	option = {
-		# Become Cuban
+		# Become Iberian_west_indies
 		name = "culture_shift.EVTOPTA200D"
 		trigger = {
-			has_saved_event_target = flip_to_cuban
+			has_saved_event_target = flip_to_iberian_west_indies
 		}
 		flip_to_colonial_culture = {
-			to = cuban
+			to = iberian_west_indies
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_cuban
+			has_saved_event_target = flip_to_iberian_west_indies
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = cuban
+			to = iberian_west_indies
 		}
 	}
 	option = {
-		# Become Ciuban
+		# Become Celtic_west_indies
 		name = "culture_shift.EVTOPTA200E"
 		trigger = {
-			has_saved_event_target = flip_to_ciuban
+			has_saved_event_target = flip_to_celtic_west_indies
 		}
 		flip_to_colonial_culture = {
-			to = ciuban
+			to = celtic_west_indies
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_ciuban
+			has_saved_event_target = flip_to_celtic_west_indies
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = ciuban
+			to = celtic_west_indies
 		}
 	}
 	option = {
-		# Become Hatien
+		# Become Latin_west_indies
 		name = "culture_shift.EVTOPTA200F"
 		trigger = {
-			has_saved_event_target = flip_to_hatien
+			has_saved_event_target = flip_to_latin_west_indies
 		}
 		flip_to_colonial_culture = {
-			to = hatien
+			to = latin_west_indies
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_hatien
+			has_saved_event_target = flip_to_latin_west_indies
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = hatien
+			to = latin_west_indies
 		}
 	}
 	option = {
-		# Become Martinique
+		# Become French_west_indies
 		name = "culture_shift.EVTOPTA200G"
 		trigger = {
-			has_saved_event_target = flip_to_martinique
+			has_saved_event_target = flip_to_french_west_indies
 		}
 		flip_to_colonial_culture = {
-			to = martinique
+			to = french_west_indies
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_martinique
+			has_saved_event_target = flip_to_french_west_indies
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = martinique
+			to = french_west_indies
 		}
 	}
 	option = {
 		# Become Saint Lucie
 		name = "culture_shift.EVTOPTA200H"
 		trigger = {
-			has_saved_event_target = flip_to_saintlucie
+			has_saved_event_target = flip_to_south_french_west_indies
 		}
 		flip_to_colonial_culture = {
-			to = saintlucie
+			to = south_french_west_indies
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_saintlucie
+			has_saved_event_target = flip_to_south_french_west_indies
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = saintlucie
+			to = south_french_west_indies
 		}
 	}
 	option = {
-		# Become Vastindier
+		# Become Scandinavian_west_indies
 		name = "culture_shift.EVTOPTA200I"
 		trigger = {
-			has_saved_event_target = flip_to_vastindier
+			has_saved_event_target = flip_to_scandinavian_west_indies
 		}
 		flip_to_colonial_culture = {
-			to = vastindier
+			to = scandinavian_west_indies
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_vastindier
+			has_saved_event_target = flip_to_scandinavian_west_indies
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = vastindier
+			to = scandinavian_west_indies
 		}
 	}
 	option = {
 		# Become Vestur Indverskur
 		name = "culture_shift.EVTOPTA200J"
 		trigger = {
-			has_saved_event_target = flip_to_vesturindverskur
+			has_saved_event_target = flip_to_old_norse_west_indies
 		}
 		flip_to_colonial_culture = {
-			to = vesturindverskur
+			to = old_norse_west_indies
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_vesturindverskur
+			has_saved_event_target = flip_to_old_norse_west_indies
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = vesturindverskur
+			to = old_norse_west_indies
+		}
+	}
+	option = {
+		# Become maghrebi west indies
+		name = "culture_shift.EVTOPTA200K"
+		trigger = {
+			has_saved_event_target = flip_to_maghrebi_west_indies
+		}
+		flip_to_colonial_culture = {
+			to = maghrebi_west_indies
+		}
+	}
+	option = {
+		# Resist cultural change
+		name = "culture_shift.EVTOPTB0"
+		trigger = {
+			has_saved_event_target = flip_to_maghrebi_west_indies
+			ai = no
+			NOT = {
+				has_country_flag = embraced_new_colonial_culture
+			}
+		}
+		refuse_colonial_culture = {
+			to = maghrebi_west_indies
 		}
 	}
 }
 
-####CENTRAL AMERICA####
-#Central America - #Event ID: 3
+#####CENTRAL AMERICA#####Event ID: 300
 country_event = {
 	id = culture_shift.300
 	title = "culture_shift.EVTNAME300"
@@ -690,34 +741,37 @@ country_event = {
 		}
 		OR = {
 			can_country_flip_to_colonial_culture = {
-				to = belizean
+				to = british_central_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = mexicaans
+				to = west_germanic_central_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = mexicano
+				to = celtic_iberian_central_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = mexican
+				to = iberian_central_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = newcaledonian
+				to = celtic_central_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = amerique
+				to = latin_central_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = mexique
+				to = french_central_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = hondurien
+				to = south_french_central_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = meksikansk
+				to = scandinavian_central_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = mexikana
+				to = old_norse_central_american
+			}
+			can_country_flip_to_colonial_culture = {
+				to = maghrebi_central_american
 			}
 		}
 		NOT = {
@@ -736,285 +790,308 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			setup_flip_to_colonial_culture = {
-				to = belizean
+				to = british_central_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = mexicaans
+				to = west_germanic_central_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = mexicano
+				to = celtic_iberian_central_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = mexican
+				to = iberian_central_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = newcaledonian
+				to = celtic_central_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = amerique
+				to = latin_central_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = mexique
+				to = french_central_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = hondurien
+				to = south_french_central_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = meksikansk
+				to = scandinavian_central_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = mexikana
+				to = old_norse_central_american
 			}
 		}
 	}
 	option = {
-		# Become Belizean
+		# Become British_central_american
 		name = "culture_shift.EVTOPTA300A"
 		trigger = {
-			has_saved_event_target = flip_to_belizean
+			has_saved_event_target = flip_to_british_central_american
 		}
 		flip_to_colonial_culture = {
-			to = belizean
+			to = british_central_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_belizean
+			has_saved_event_target = flip_to_british_central_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = belizean
+			to = british_central_american
 		}
 	}
 	option = {
-		# Become Mexicaans
+		# Become West_germanic_central_american
 		name = "culture_shift.EVTOPTA300B"
 		trigger = {
-			has_saved_event_target = flip_to_mexicaans
+			has_saved_event_target = flip_to_west_germanic_central_american
 		}
 		flip_to_colonial_culture = {
-			to = mexicaans
+			to = west_germanic_central_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_mexicaans
+			has_saved_event_target = flip_to_west_germanic_central_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = mexicaans
+			to = west_germanic_central_american
 		}
 	}
 	option = {
-		# Become Mexicano
+		# Become Celtic_iberian_central_american
 		name = "culture_shift.EVTOPTA300C"
 		trigger = {
-			has_saved_event_target = flip_to_mexicano
+			has_saved_event_target = flip_to_celtic_iberian_central_american
 		}
 		flip_to_colonial_culture = {
-			to = mexicano
+			to = celtic_iberian_central_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_mexicano
+			has_saved_event_target = flip_to_celtic_iberian_central_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = mexicano
+			to = celtic_iberian_central_american
 		}
 	}
 	option = {
-		# Become Mexican
+		# Become Iberian_central_american
 		name = "culture_shift.EVTOPTA300D"
 		trigger = {
-			has_saved_event_target = flip_to_mexican
+			has_saved_event_target = flip_to_iberian_central_american
 		}
 		flip_to_colonial_culture = {
-			to = mexican
+			to = iberian_central_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_mexican
+			has_saved_event_target = flip_to_iberian_central_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = mexican
+			to = iberian_central_american
 		}
 	}
 	option = {
 		# Become New Caledonian
 		name = "culture_shift.EVTOPTA300E"
 		trigger = {
-			has_saved_event_target = flip_to_newcaledonian
+			has_saved_event_target = flip_to_celtic_central_american
 		}
 		flip_to_colonial_culture = {
-			to = newcaledonian
+			to = celtic_central_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_newcaledonian
+			has_saved_event_target = flip_to_celtic_central_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = newcaledonian
+			to = celtic_central_american
 		}
 	}
 	option = {
-		# Become Amerique
+		# Become Latin_central_american
 		name = "culture_shift.EVTOPTA300F"
 		trigger = {
-			has_saved_event_target = flip_to_amerique
+			has_saved_event_target = flip_to_latin_central_american
 		}
 		flip_to_colonial_culture = {
-			to = amerique
+			to = latin_central_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_amerique
+			has_saved_event_target = flip_to_latin_central_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = amerique
+			to = latin_central_american
 		}
 	}
 	option = {
-		# Become Mexique
+		# Become French_central_american
 		name = "culture_shift.EVTOPTA300G"
 		trigger = {
-			has_saved_event_target = flip_to_mexique
+			has_saved_event_target = flip_to_french_central_american
 		}
 		flip_to_colonial_culture = {
-			to = mexique
+			to = french_central_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_mexique
+			has_saved_event_target = flip_to_french_central_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = mexique
+			to = french_central_american
 		}
 	}
 	option = {
-		# Become Hondurien
+		# Become South_french_central_american
 		name = "culture_shift.EVTOPTA300H"
 		trigger = {
-			has_saved_event_target = flip_to_hondurien
+			has_saved_event_target = flip_to_south_french_central_american
 		}
 		flip_to_colonial_culture = {
-			to = hondurien
+			to = south_french_central_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_hondurien
+			has_saved_event_target = flip_to_south_french_central_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = hondurien
+			to = south_french_central_american
 		}
 	}
 	option = {
-		# Become Meksikansk
+		# Become Scandinavian_central_american
 		name = "culture_shift.EVTOPTA300I"
 		trigger = {
-			has_saved_event_target = flip_to_meksikansk
+			has_saved_event_target = flip_to_scandinavian_central_american
 		}
 		flip_to_colonial_culture = {
-			to = meksikansk
+			to = scandinavian_central_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_meksikansk
+			has_saved_event_target = flip_to_scandinavian_central_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = meksikansk
+			to = scandinavian_central_american
 		}
 	}
 	option = {
-		# Become Mexikana
+		# Become Old_norse_central_american
 		name = "culture_shift.EVTOPTA300J"
 		trigger = {
-			has_saved_event_target = flip_to_mexikana
+			has_saved_event_target = flip_to_old_norse_central_american
 		}
 		flip_to_colonial_culture = {
-			to = mexikana
+			to = old_norse_central_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_mexikana
+			has_saved_event_target = flip_to_old_norse_central_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = mexikana
+			to = old_norse_central_american
+		}
+	}
+	option = {
+		# Become maghrebi_central_american
+		name = "culture_shift.EVTOPTA300K"
+		trigger = {
+			has_saved_event_target = flip_to_maghrebi_central_american
+		}
+		flip_to_colonial_culture = {
+			to = maghrebi_central_american
+		}
+	}
+	option = {
+		# Resist cultural change
+		name = "culture_shift.EVTOPTB0"
+		trigger = {
+			has_saved_event_target = flip_to_maghrebi_central_american
+			ai = no
+			NOT = {
+				has_country_flag = embraced_new_colonial_culture
+			}
+		}
+		refuse_colonial_culture = {
+			to = maghrebi_central_american
 		}
 	}
 }
 
-####NEW ZEALAND####
-#New Zealander - #Event ID: 4
+#####NEW ZEALAND#####Event ID: 400
 country_event = {
-	id = culture_shift.4
-	title = "culture_shift.EVTNAME4"
-	desc = "culture_shift.EVTDESC4"
+	id = culture_shift.400
+	title = "culture_shift.EVTNAME400"
+	desc = "culture_shift.EVTDESC400"
 	picture = COLONIZATION_eventPicture
 	trigger = {
 		capital_scope = {
@@ -1029,34 +1106,37 @@ country_event = {
 		}
 		OR = {
 			can_country_flip_to_colonial_culture = {
-				to = new_zealander
+				to = british_new_zealander
 			}
 			can_country_flip_to_colonial_culture = {
-				to = nieuw_zeelands
+				to = west_germanic_new_zealander
 			}
 			can_country_flip_to_colonial_culture = {
-				to = zelador
+				to = celtic_iberian_new_zealander
 			}
 			can_country_flip_to_colonial_culture = {
-				to = neozelandes
+				to = iberian_new_zealander
 			}
 			can_country_flip_to_colonial_culture = {
-				to = zealander
+				to = celtic_new_zealander
 			}
 			can_country_flip_to_colonial_culture = {
-				to = neozelandais
+				to = latin_new_zealander
 			}
 			can_country_flip_to_colonial_culture = {
-				to = pompallier
+				to = french_new_zealander
 			}
 			can_country_flip_to_colonial_culture = {
-				to = surville
+				to = south_french_new_zealander
 			}
 			can_country_flip_to_colonial_culture = {
-				to = nyazealandare
+				to = scandinavian_new_zealander
 			}
 			can_country_flip_to_colonial_culture = {
-				to = nyrzealander
+				to = old_norse_new_zealander
+			}
+			can_country_flip_to_colonial_culture = {
+				to = maghrebi_new_zealander
 			}
 		}
 		NOT = {
@@ -1075,141 +1155,141 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			setup_flip_to_colonial_culture = {
-				to = new_zealander
+				to = british_new_zealander
 			}
 			setup_flip_to_colonial_culture = {
-				to = nieuw_zeelands
+				to = west_germanic_new_zealander
 			}
 			setup_flip_to_colonial_culture = {
-				to = zelador
+				to = celtic_iberian_new_zealander
 			}
 			setup_flip_to_colonial_culture = {
-				to = neozelandes
+				to = iberian_new_zealander
 			}
 			setup_flip_to_colonial_culture = {
-				to = zealander
+				to = celtic_new_zealander
 			}
 			setup_flip_to_colonial_culture = {
-				to = neozelandais
+				to = latin_new_zealander
 			}
 			setup_flip_to_colonial_culture = {
-				to = pompallier
+				to = french_new_zealander
 			}
 			setup_flip_to_colonial_culture = {
-				to = surville
+				to = south_french_new_zealander
 			}
 			setup_flip_to_colonial_culture = {
-				to = nyazealandare
+				to = scandinavian_new_zealander
 			}
 			setup_flip_to_colonial_culture = {
-				to = nyrzealander
+				to = old_norse_new_zealander
 			}
 		}
 	}
 	option = {
-		# Become New Zealander
+		# Become New Celtic_new_zealander
 		name = "culture_shift.EVTOPTA400A"
 		trigger = {
-			has_saved_event_target = flip_to_new_zealander
+			has_saved_event_target = flip_to_british_new_zealander
 		}
 		flip_to_colonial_culture = {
-			to = new_zealander
+			to = british_new_zealander
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_new_zealander
+			has_saved_event_target = flip_to_british_new_zealander
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = new_zealander
+			to = british_new_zealander
 		}
 	}
 	option = {
 		# Become Nieuw Zeelands
 		name = "culture_shift.EVTOPTA400B"
 		trigger = {
-			has_saved_event_target = flip_to_nieuw_zeelands
+			has_saved_event_target = flip_to_west_germanic_new_zealander
 		}
 		flip_to_colonial_culture = {
-			to = nieuw_zeelands
+			to = west_germanic_new_zealander
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_nieuw_zeelands
+			has_saved_event_target = flip_to_west_germanic_new_zealander
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = nieuw_zeelands
+			to = west_germanic_new_zealander
 		}
 	}
 	option = {
-		# Become Zelador
+		# Become Celtic_iberian_new_zealander
 		name = "culture_shift.EVTOPTA400C"
 		trigger = {
-			has_saved_event_target = flip_to_zelador
+			has_saved_event_target = flip_to_celtic_iberian_new_zealander
 		}
 		flip_to_colonial_culture = {
-			to = zelador
+			to = celtic_iberian_new_zealander
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_zelador
+			has_saved_event_target = flip_to_celtic_iberian_new_zealander
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = zelador
+			to = celtic_iberian_new_zealander
 		}
 	}
 	option = {
-		# Become Neozelandes
+		# Become Iberian_new_zealander
 		name = "culture_shift.EVTOPTA400D"
 		trigger = {
-			has_saved_event_target = flip_to_neozelandes
+			has_saved_event_target = flip_to_iberian_new_zealander
 		}
 		flip_to_colonial_culture = {
-			to = neozelandes
+			to = iberian_new_zealander
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_neozelandes
+			has_saved_event_target = flip_to_iberian_new_zealander
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = neozelandes
+			to = iberian_new_zealander
 		}
 	}
 	option = {
-		# Become Zealander
+		# Become Celtic_new_zealander
 		name = "culture_shift.EVTOPTA400E"
 		trigger = {
 			has_saved_event_target = flip_to_zealander
 		}
 		flip_to_colonial_culture = {
-			to = zealander
+			to = celtic_new_zealander
 		}
 	}
 	option = {
@@ -1223,133 +1303,156 @@ country_event = {
 			}
 		}
 		refuse_colonial_culture = {
-			to = zealander
+			to = celtic_new_zealander
 		}
 	}
 	option = {
-		# Become Neozelandais
+		# Become Latin_new_zealander
 		name = "culture_shift.EVTOPTA400F"
 		trigger = {
-			has_saved_event_target = flip_to_neozelandais
+			has_saved_event_target = flip_to_latin_new_zealander
 		}
 		flip_to_colonial_culture = {
-			to = neozelandais
+			to = latin_new_zealander
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_neozelandais
+			has_saved_event_target = flip_to_latin_new_zealander
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = neozelandais
+			to = latin_new_zealander
 		}
 	}
 	option = {
-		# Become Pompallier
+		# Become French_new_zealander
 		name = "culture_shift.EVTOPTA400G"
 		trigger = {
-			has_saved_event_target = flip_to_pompallier
+			has_saved_event_target = flip_to_french_new_zealander
 		}
 		flip_to_colonial_culture = {
-			to = pompallier
+			to = french_new_zealander
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_pompallier
+			has_saved_event_target = flip_to_french_new_zealander
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = pompallier
+			to = french_new_zealander
 		}
 	}
 	option = {
-		# Become Surville
+		# Become South_french_new_zealander
 		name = "culture_shift.EVTOPTA400H"
 		trigger = {
-			has_saved_event_target = flip_to_surville
+			has_saved_event_target = flip_to_south_french_new_zealander
 		}
 		flip_to_colonial_culture = {
-			to = surville
+			to = south_french_new_zealander
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_surville
+			has_saved_event_target = flip_to_south_french_new_zealander
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = surville
+			to = south_french_new_zealander
 		}
 	}
 	option = {
 		# Become Nya Zealandare
 		name = "culture_shift.EVTOPTA400I"
 		trigger = {
-			has_saved_event_target = flip_to_nyazealandare
+			has_saved_event_target = flip_to_scandinavian_new_zealander
 		}
 		flip_to_colonial_culture = {
-			to = nyazealandare
+			to = scandinavian_new_zealander
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_nyazealandare
+			has_saved_event_target = flip_to_scandinavian_new_zealander
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = nyazealandare
+			to = scandinavian_new_zealander
 		}
 	}
 	option = {
-		# Become Nyr Zealander
+		# Become Nyr Celtic_new_zealander
 		name = "culture_shift.EVTOPTA400J"
 		trigger = {
-			has_saved_event_target = flip_to_nyrzealander
+			has_saved_event_target = flip_to_old_norse_new_zealander
 		}
 		flip_to_colonial_culture = {
-			to = nyrzealander
+			to = old_norse_new_zealander
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_nyrzealander
+			has_saved_event_target = flip_to_old_norse_new_zealander
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = nyrzealander
+			to = old_norse_new_zealander
+		}
+	}
+	option = {
+		# Become maghrebi_new_zealander
+		name = "culture_shift.EVTOPTA400K"
+		trigger = {
+			has_saved_event_target = flip_to_maghrebi_new_zealander
+		}
+		flip_to_colonial_culture = {
+			to = maghrebi_new_zealander
+		}
+	}
+	option = {
+		# Resist cultural change
+		name = "culture_shift.EVTOPTB0"
+		trigger = {
+			has_saved_event_target = flip_to_maghrebi_new_zealander
+			ai = no
+			NOT = {
+				has_country_flag = embraced_new_colonial_culture
+			}
+		}
+		refuse_colonial_culture = {
+			to = maghrebi_new_zealander
 		}
 	}
 }
 
-####NORTH AMERICA####
-#North American - #Event ID: 5
+#####NORTH AMERICA#####Event ID: 500
 country_event = {
 	id = culture_shift.500
 	title = "culture_shift.EVTNAME500"
@@ -1373,34 +1476,37 @@ country_event = {
 		}
 		OR = {
 			can_country_flip_to_colonial_culture = {
-				to = american
+				to = british_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = amerikaans
+				to = west_germanic_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = americanos
+				to = celtic_iberian_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = hispanos
+				to = iberian_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = novascotian
+				to = celtic_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = quebecois
+				to = latin_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = cajun
+				to = french_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = creole
+				to = south_french_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = amerikanere
+				to = scandinavian_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = ameriskt
+				to = old_norse_american
+			}
+			can_country_flip_to_colonial_culture = {
+				to = maghrebi_american
 			}
 		}
 		NOT = {
@@ -1419,281 +1525,304 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			setup_flip_to_colonial_culture = {
-				to = american
+				to = british_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = amerikaans
+				to = west_germanic_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = americanos
+				to = celtic_iberian_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = hispanos
+				to = iberian_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = novascotian
+				to = celtic_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = quebecois
+				to = latin_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = cajun
+				to = french_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = creole
+				to = south_french_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = amerikanere
+				to = scandinavian_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = ameriskt
+				to = old_norse_american
 			}
 		}
 	}
 	option = {
-		# Become American
+		# Become British_american
 		name = "culture_shift.EVTOPTA500A"
 		trigger = {
-			has_saved_event_target = flip_to_american
+			has_saved_event_target = flip_to_british_american
 		}
 		flip_to_colonial_culture = {
-			to = american
+			to = british_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_american
+			has_saved_event_target = flip_to_british_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = american
+			to = british_american
 		}
 	}
 	option = {
-		# Become Amerikaans
+		# Become West_germanic_american
 		name = "culture_shift.EVTOPTA500B"
 		trigger = {
-			has_saved_event_target = flip_to_amerikaans
+			has_saved_event_target = flip_to_west_germanic_american
 		}
 		flip_to_colonial_culture = {
-			to = amerikaans
+			to = west_germanic_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_amerikaans
+			has_saved_event_target = flip_to_west_germanic_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = amerikaans
+			to = west_germanic_american
 		}
 	}
 	option = {
-		# Become Americanos
+		# Become Celtic_iberian_american
 		name = "culture_shift.EVTOPTA500C"
 		trigger = {
-			has_saved_event_target = flip_to_americanos
+			has_saved_event_target = flip_to_celtic_iberian_american
 		}
 		flip_to_colonial_culture = {
-			to = americanos
+			to = celtic_iberian_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_americanos
+			has_saved_event_target = flip_to_celtic_iberian_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = americanos
+			to = celtic_iberian_american
 		}
 	}
 	option = {
-		# Become Hispanos
+		# Become Iberian_american
 		name = "culture_shift.EVTOPTA500D"
 		trigger = {
-			has_saved_event_target = flip_to_hispanos
+			has_saved_event_target = flip_to_iberian_american
 		}
 		flip_to_colonial_culture = {
-			to = hispanos
+			to = iberian_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_hispanos
+			has_saved_event_target = flip_to_iberian_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = hispanos
+			to = iberian_american
 		}
 	}
 	option = {
 		# Become Nova Scotian
 		name = "culture_shift.EVTOPTA500E"
 		trigger = {
-			has_saved_event_target = flip_to_novascotian
+			has_saved_event_target = flip_to_celtic_american
 		}
 		flip_to_colonial_culture = {
-			to = novascotian
+			to = celtic_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_novascotian
+			has_saved_event_target = flip_to_celtic_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = novascotian
+			to = celtic_american
 		}
 	}
 	option = {
-		# Become Quebecois
+		# Become Latin_american
 		name = "culture_shift.EVTOPTA500F"
 		trigger = {
-			has_saved_event_target = flip_to_quebecois
+			has_saved_event_target = flip_to_latin_american
 		}
 		flip_to_colonial_culture = {
-			to = quebecois
+			to = latin_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_quebecois
+			has_saved_event_target = flip_to_latin_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = quebecois
+			to = latin_american
 		}
 	}
 	option = {
-		# Become Cajun
+		# Become French_american
 		name = "culture_shift.EVTOPTA500G"
 		trigger = {
-			has_saved_event_target = flip_to_cajun
+			has_saved_event_target = flip_to_french_american
 		}
 		flip_to_colonial_culture = {
-			to = cajun
+			to = french_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_cajun
+			has_saved_event_target = flip_to_french_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = cajun
+			to = french_american
 		}
 	}
 	option = {
-		# Become Creole
+		# Become South_french_american
 		name = "culture_shift.EVTOPTA500H"
 		trigger = {
-			has_saved_event_target = flip_to_creole
+			has_saved_event_target = flip_to_south_french_american
 		}
 		flip_to_colonial_culture = {
-			to = creole
+			to = south_french_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_creole
+			has_saved_event_target = flip_to_south_french_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = creole
+			to = south_french_american
 		}
 	}
 	option = {
-		# Become Amerikanere
+		# Become Scandinavian_american
 		name = "culture_shift.EVTOPTA500I"
 		trigger = {
-			has_saved_event_target = flip_to_amerikanere
+			has_saved_event_target = flip_to_scandinavian_american
 		}
 		flip_to_colonial_culture = {
-			to = amerikanere
+			to = scandinavian_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_amerikanere
+			has_saved_event_target = flip_to_scandinavian_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = amerikanere
+			to = scandinavian_american
 		}
 	}
 	option = {
-		# Become Ameriskt
+		# Become Old_norse_american
 		name = "culture_shift.EVTOPTA500J"
 		trigger = {
-			has_saved_event_target = flip_to_ameriskt
+			has_saved_event_target = flip_to_old_norse_american
 		}
 		flip_to_colonial_culture = {
-			to = ameriskt
+			to = old_norse_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_ameriskt
+			has_saved_event_target = flip_to_old_norse_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = ameriskt
+			to = old_norse_american
+		}
+	}
+	option = {
+		# Become maghrebi_american
+		name = "culture_shift.EVTOPTA500K"
+		trigger = {
+			has_saved_event_target = flip_to_maghrebi_american
+		}
+		flip_to_colonial_culture = {
+			to = maghrebi_american
+		}
+	}
+	option = {
+		# Resist cultural change
+		name = "culture_shift.EVTOPTB0"
+		trigger = {
+			has_saved_event_target = flip_to_maghrebi_american
+			ai = no
+			NOT = {
+				has_country_flag = embraced_new_colonial_culture
+			}
+		}
+		refuse_colonial_culture = {
+			to = maghrebi_american
 		}
 	}
 }
 
-####SOUTH AFRICA####
-#South Africa- #Event ID: 6
+#####SOUTH AFRICA#####Event ID: 600
 country_event = {
 	id = culture_shift.600
 	title = "culture_shift.EVTNAME600"
@@ -1705,34 +1834,37 @@ country_event = {
 		}
 		OR = {
 			can_country_flip_to_colonial_culture = {
-				to = rhodesian
+				to = british_south_african
 			}
 			can_country_flip_to_colonial_culture = {
-				to = afrikaner
+				to = west_germanic_south_african
 			}
 			can_country_flip_to_colonial_culture = {
-				to = sulafricano
+				to = celtic_iberian_south_african
 			}
 			can_country_flip_to_colonial_culture = {
-				to = sudafricano
+				to = iberian_south_african
 			}
 			can_country_flip_to_colonial_culture = {
-				to = anafraic
+				to = celtic_south_african
 			}
 			can_country_flip_to_colonial_culture = {
-				to = villion
+				to = latin_south_african
 			}
 			can_country_flip_to_colonial_culture = {
-				to = malgache
+				to = french_south_african
 			}
 			can_country_flip_to_colonial_culture = {
-				to = surville
+				to = south_french_south_african
 			}
 			can_country_flip_to_colonial_culture = {
-				to = sorafrikanere
+				to = scandinavian_south_african
 			}
 			can_country_flip_to_colonial_culture = {
-				to = suthurafriskur
+				to = old_norse_south_african
+			}
+			can_country_flip_to_colonial_culture = {
+				to = maghrebi_south_african
 			}
 		}
 		NOT = {
@@ -1754,281 +1886,304 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			setup_flip_to_colonial_culture = {
-				to = rhodesian
+				to = british_south_african
 			}
 			setup_flip_to_colonial_culture = {
-				to = afrikaner
+				to = west_germanic_south_african
 			}
 			setup_flip_to_colonial_culture = {
-				to = sulafricano
+				to = celtic_iberian_south_african
 			}
 			setup_flip_to_colonial_culture = {
-				to = sudafricano
+				to = iberian_south_african
 			}
 			setup_flip_to_colonial_culture = {
-				to = anafraic
+				to = celtic_south_african
 			}
 			setup_flip_to_colonial_culture = {
-				to = villion
+				to = latin_south_african
 			}
 			setup_flip_to_colonial_culture = {
-				to = malgache
+				to = french_south_african
 			}
 			setup_flip_to_colonial_culture = {
-				to = surville
+				to = south_french_south_african
 			}
 			setup_flip_to_colonial_culture = {
-				to = sorafrikanere
+				to = scandinavian_south_african
 			}
 			setup_flip_to_colonial_culture = {
-				to = suthurafriskur
+				to = old_norse_south_african
 			}
 		}
 	}
 	option = {
-		# Become Rhodesian
+		# Become British_south_african
 		name = "culture_shift.EVTOPTA600A"
 		trigger = {
-			has_saved_event_target = flip_to_rhodesian
+			has_saved_event_target = flip_to_british_south_african
 		}
 		accept_to_colonial_culture = {
-			to = rhodesian
+			to = british_south_african
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_rhodesian
+			has_saved_event_target = flip_to_british_south_african
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = rhodesian
+			to = british_south_african
 		}
 	}
 	option = {
-		# Become Afrikaner
+		# Become West_germanic_south_african
 		name = "culture_shift.EVTOPTA600B"
 		trigger = {
-			has_saved_event_target = flip_to_afrikaner
+			has_saved_event_target = flip_to_west_germanic_south_african
 		}
 		accept_to_colonial_culture = {
-			to = afrikaner
+			to = west_germanic_south_african
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_afrikaner
+			has_saved_event_target = flip_to_west_germanic_south_african
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = afrikaner
+			to = west_germanic_south_african
 		}
 	}
 	option = {
 		# Become Sul-Africano
 		name = "culture_shift.EVTOPTA600C"
 		trigger = {
-			has_saved_event_target = flip_to_sulafricano
+			has_saved_event_target = flip_to_celtic_iberian_south_african
 		}
 		accept_to_colonial_culture = {
-			to = sulafricano
+			to = celtic_iberian_south_african
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_sulafricano
+			has_saved_event_target = flip_to_celtic_iberian_south_african
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = sulafricano
+			to = celtic_iberian_south_african
 		}
 	}
 	option = {
-		# Become Sudafricano
+		# Become Iberian_south_african
 		name = "culture_shift.EVTOPTA600D"
 		trigger = {
-			has_saved_event_target = flip_to_sudafricano
+			has_saved_event_target = flip_to_iberian_south_african
 		}
 		accept_to_colonial_culture = {
-			to = sudafricano
+			to = iberian_south_african
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_sudafricano
+			has_saved_event_target = flip_to_iberian_south_african
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = sudafricano
+			to = iberian_south_african
 		}
 	}
 	option = {
 		# Become An Afraic
 		name = "culture_shift.EVTOPTA600E"
 		trigger = {
-			has_saved_event_target = flip_to_anafraic
+			has_saved_event_target = flip_to_celtic_south_african
 		}
 		accept_to_colonial_culture = {
-			to = anafraic
+			to = celtic_south_african
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_anafraic
+			has_saved_event_target = flip_to_celtic_south_african
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = anafraic
+			to = celtic_south_african
 		}
 	}
 	option = {
-		# Become Villion
+		# Become Latin_south_african
 		name = "culture_shift.EVTOPTA600F"
 		trigger = {
-			has_saved_event_target = flip_to_villion
+			has_saved_event_target = flip_to_latin_south_african
 		}
 		accept_to_colonial_culture = {
-			to = villion
+			to = latin_south_african
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_villion
+			has_saved_event_target = flip_to_latin_south_african
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = villion
+			to = latin_south_african
 		}
 	}
 	option = {
-		# Become Malgache
+		# Become French_south_african
 		name = "culture_shift.EVTOPTA600G"
 		trigger = {
-			has_saved_event_target = flip_to_malgache
+			has_saved_event_target = flip_to_french_south_african
 		}
 		accept_to_colonial_culture = {
-			to = malgache
+			to = french_south_african
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_malgache
+			has_saved_event_target = flip_to_french_south_african
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = malgache
+			to = french_south_african
 		}
 	}
 	option = {
-		# Become Surville
+		# Become South_french_south_african
 		name = "culture_shift.EVTOPTA600H"
 		trigger = {
-			has_saved_event_target = flip_to_surville
+			has_saved_event_target = flip_to_south_french_south_african
 		}
 		accept_to_colonial_culture = {
-			to = surville
+			to = south_french_south_african
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_surville
+			has_saved_event_target = flip_to_south_french_south_african
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = surville
+			to = south_french_south_african
 		}
 	}
 	option = {
-		# Become Sor-Afrikanere
+		# Become scandinavian_south_african
 		name = "culture_shift.EVTOPTA600I"
 		trigger = {
-			has_saved_event_target = flip_to_sorafrikanere
+			has_saved_event_target = flip_to_scandinavian_south_african
 		}
 		accept_to_colonial_culture = {
-			to = sorafrikanere
+			to = scandinavian_south_african
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_sorafrikanere
+			has_saved_event_target = flip_to_scandinavian_south_african
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = sorafrikanere
+			to = scandinavian_south_african
 		}
 	}
 	option = {
 		# Become Suthur Afriskur
 		name = "culture_shift.EVTOPTA600J"
 		trigger = {
-			has_saved_event_target = flip_to_suthurafriskur
+			has_saved_event_target = flip_to_old_norse_south_african
 		}
 		accept_to_colonial_culture = {
-			to = suthurafriskur
+			to = old_norse_south_african
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_suthurafriskur
+			has_saved_event_target = flip_to_old_norse_south_african
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = suthurafriskur
+			to = old_norse_south_african
+		}
+	}
+	option = {
+		# Become maghrebi south african
+		name = "culture_shift.EVTOPTA600K"
+		trigger = {
+			has_saved_event_target = flip_to_maghrebi_south_african
+		}
+		accept_to_colonial_culture = {
+			to = maghrebi_south_african
+		}
+	}
+	option = {
+		# Resist cultural change
+		name = "culture_shift.EVTOPTB0"
+		trigger = {
+			has_saved_event_target = flip_to_maghrebi_south_african
+			ai = no
+			NOT = {
+				has_country_flag = embraced_new_colonial_culture
+			}
+		}
+		refuse_colonial_culture = {
+			to = maghrebi_south_african
 		}
 	}
 }
 
-####SOUTH AMERICA####
-#South America - #Event ID: 7
+#####SOUTH AMERICA#####Event ID: 700
 country_event = {
 	id = culture_shift.700
 	title = "culture_shift.EVTNAME700"
@@ -2052,34 +2207,37 @@ country_event = {
 		}
 		OR = {
 			can_country_flip_to_colonial_culture = {
-				to = patagonian
+				to = british_south_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = surinaams
+				to = west_germanic_south_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = brazilian
+				to = celtic_iberian_south_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = colombian
+				to = iberian_south_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = coloime
+				to = celtic_south_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = argentins
+				to = latin_south_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = guyane
+				to = french_south_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = antarctique
+				to = south_french_south_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = brasilianere
+				to = scandinavian_south_american
 			}
 			can_country_flip_to_colonial_culture = {
-				to = ekvadorskt
+				to = old_norse_south_american
+			}
+			can_country_flip_to_colonial_culture = {
+				to = maghrebi_south_american
 			}
 		}
 	}
@@ -2089,280 +2247,304 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			setup_flip_to_colonial_culture = {
-				to = patagonian
+				to = british_south_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = surinaams
+				to = west_germanic_south_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = brazilian
+				to = celtic_iberian_south_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = colombian
+				to = iberian_south_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = coloime
+				to = celtic_south_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = argentins
+				to = latin_south_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = guyane
+				to = french_south_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = antarctique
+				to = south_french_south_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = brasilianere
+				to = scandinavian_south_american
 			}
 			setup_flip_to_colonial_culture = {
-				to = ekvadorskt
+				to = old_norse_south_american
 			}
 		}
 	}
 	option = {
-		# Become Patagonian
+		# Become British_south_american
 		name = "culture_shift.EVTOPTA700A"
 		trigger = {
-			has_saved_event_target = flip_to_patagonian
+			has_saved_event_target = flip_to_british_south_american
 		}
 		flip_to_colonial_culture = {
-			to = patagonian
+			to = british_south_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_patagonian
+			has_saved_event_target = flip_to_british_south_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = patagonian
+			to = british_south_american
 		}
 	}
 	option = {
-		# Become Surinaams
+		# Become West_germanic_south_american
 		name = "culture_shift.EVTOPTA700B"
 		trigger = {
-			has_saved_event_target = flip_to_surinaams
+			has_saved_event_target = flip_to_west_germanic_south_american
 		}
 		flip_to_colonial_culture = {
-			to = surinaams
+			to = west_germanic_south_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_surinaams
+			has_saved_event_target = flip_to_west_germanic_south_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = surinaams
+			to = west_germanic_south_american
 		}
 	}
 	option = {
-		# Become Brazilian
+		# Become Celtic_iberian_south_american
 		name = "culture_shift.EVTOPTA700C"
 		trigger = {
-			has_saved_event_target = flip_to_brazilian
+			has_saved_event_target = flip_to_celtic_iberian_south_american
 		}
 		flip_to_colonial_culture = {
-			to = brazilian
+			to = celtic_iberian_south_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_brazilian
+			has_saved_event_target = flip_to_celtic_iberian_south_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = brazilian
+			to = celtic_iberian_south_american
 		}
 	}
 	option = {
-		# Become Colombian
+		# Become Iberian_south_american
 		name = "culture_shift.EVTOPTA700D"
 		trigger = {
-			has_saved_event_target = flip_to_colombian
+			has_saved_event_target = flip_to_iberian_south_american
 		}
 		flip_to_colonial_culture = {
-			to = colombian
+			to = iberian_south_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_colombian
+			has_saved_event_target = flip_to_iberian_south_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = colombian
+			to = iberian_south_american
 		}
 	}
 	option = {
-		# Become Coloime
+		# Become Celtic_south_american
 		name = "culture_shift.EVTOPTA700E"
 		trigger = {
-			has_saved_event_target = flip_to_coloime
+			has_saved_event_target = flip_to_celtic_south_american
 		}
 		flip_to_colonial_culture = {
-			to = coloime
+			to = celtic_south_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_coloime
+			has_saved_event_target = flip_to_celtic_south_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = coloime
+			to = celtic_south_american
 		}
 	}
 	option = {
-		# Become Argentins
+		# Become Latin_south_american
 		name = "culture_shift.EVTOPTA700F"
 		trigger = {
-			has_saved_event_target = flip_to_argentins
+			has_saved_event_target = flip_to_latin_south_american
 		}
 		flip_to_colonial_culture = {
-			to = argentins
+			to = latin_south_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_argentins
+			has_saved_event_target = flip_to_latin_south_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = argentins
+			to = latin_south_american
 		}
 	}
 	option = {
-		# Become Guyane
+		# Become French_south_american
 		name = "culture_shift.EVTOPTA700G"
 		trigger = {
-			has_saved_event_target = flip_to_guyane
+			has_saved_event_target = flip_to_french_south_american
 		}
 		flip_to_colonial_culture = {
-			to = guyane
+			to = french_south_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_guyane
+			has_saved_event_target = flip_to_french_south_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = guyane
+			to = french_south_american
 		}
 	}
 	option = {
-		# Become Antarctique
+		# Become South_french_south_american
 		name = "culture_shift.EVTOPTA700H"
 		trigger = {
-			has_saved_event_target = flip_to_antarctique
+			has_saved_event_target = flip_to_south_french_south_american
 		}
 		flip_to_colonial_culture = {
-			to = antarctique
+			to = south_french_south_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_antarctique
+			has_saved_event_target = flip_to_south_french_south_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = antarctique
+			to = south_french_south_american
 		}
 	}
 	option = {
-		# Become Brasilianere
+		# Become Scandinavian_south_american
 		name = "culture_shift.EVTOPTA700I"
 		trigger = {
-			has_saved_event_target = flip_to_brasilianere
+			has_saved_event_target = flip_to_scandinavian_south_american
 		}
 		flip_to_colonial_culture = {
-			to = brasilianere
+			to = scandinavian_south_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_brasilianere
+			has_saved_event_target = flip_to_scandinavian_south_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = brasilianere
+			to = scandinavian_south_american
 		}
 	}
 	option = {
-		# Become Ekvadorskt
-		name = "culture_shift.EVTOPTA700I"
+		# Become Old_norse_south_american
+		name = "culture_shift.EVTOPTA700J"
 		trigger = {
-			has_saved_event_target = flip_to_ekvadorskt
+			has_saved_event_target = flip_to_old_norse_south_american
 		}
 		flip_to_colonial_culture = {
-			to = ekvadorskt
+			to = old_norse_south_american
 		}
 	}
 	option = {
 		# Resist cultural change
 		name = "culture_shift.EVTOPTB0"
 		trigger = {
-			has_saved_event_target = flip_to_ekvadorskt
+			has_saved_event_target = flip_to_old_norse_south_american
 			ai = no
 			NOT = {
 				has_country_flag = embraced_new_colonial_culture
 			}
 		}
 		refuse_colonial_culture = {
-			to = ekvadorskt
+			to = old_norse_south_american
+		}
+	}
+	option = {
+		# Become maghrebi_south_american
+		name = "culture_shift.EVTOPTA700K"
+		trigger = {
+			has_saved_event_target = flip_to_maghrebi_south_american
+		}
+		flip_to_colonial_culture = {
+			to = maghrebi_south_american
+		}
+	}
+	option = {
+		# Resist cultural change
+		name = "culture_shift.EVTOPTB0"
+		trigger = {
+			has_saved_event_target = flip_to_maghrebi_south_american
+			ai = no
+			NOT = {
+				has_country_flag = embraced_new_colonial_culture
+			}
+		}
+		refuse_colonial_culture = {
+			to = maghrebi_south_american
 		}
 	}
 }
 
-#South Africa - Nation Forms
+#####South Africa - Nation Forms#####Event ID: 10002
 country_event = {
 	id = culture_shift.10002
 	title = "culture_shift.EVTNAME10002"
@@ -2370,24 +2552,25 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	fire_only_once = yes
 	trigger = {
+		is_subject = no
+		is_at_war = no
+		NOT = {
+			exists = SAA
+		}
 		any_owned_province = {
 			region = south_africa_region
 			OR = {
-				culture = afrikaner
-				culture = rhodesian
-				culture = sudafricano
-				culture = sulafricano
-				culture = anafraic
-				culture = villion
-				culture = malgache
-				culture = quellerie
-				culture = sorafrikanere
-				culture = suthurafriskur
-			}
-			is_subject = no
-			is_at_war = no
-			NOT = {
-				exists = SAA
+				culture = west_germanic_south_african
+				culture = british_south_african
+				culture = iberian_south_african
+				culture = celtic_iberian_south_african
+				culture = celtic_south_african
+				culture = latin_south_african
+				culture = french_south_african
+				culture = south_french_south_african
+				culture = scandinavian_south_african
+				culture = old_norse_south_african
+				culture = maghrebi_south_african
 			}
 		}
 	}
@@ -2415,7 +2598,7 @@ country_event = {
 					change_government = republic
 					change_religion = catholic
 					remove_accepted_culture = SAA
-					add_government_reform = afrikaner_parliament_reform
+					add_government_reform = south_african_parliament_reform
 					adopt_reform_progress = ROOT
 					capital_scope = {
 						build_to_forcelimit = {
@@ -2425,82 +2608,27 @@ country_event = {
 						}
 						if = {
 							limit = {
-								culture = afrikaner
+								capital_scope = {
+									OR = {
+										culture = west_germanic_south_african
+										culture = british_south_african
+										culture = iberian_south_african
+										culture = celtic_iberian_south_african
+										culture = celtic_south_african
+										culture = latin_south_african
+										culture = french_south_african
+										culture = south_french_south_african
+										culture = scandinavian_south_african
+										culture = old_norse_south_african
+										culture = maghrebi_south_african
+									}
+								}
 							}
-							PREV = {
-								change_primary_culture = afrikaner
-							}
-						}
-						else_if = {
-							limit = {
-								culture = rhodesian
-							}
-							PREV = {
-								change_primary_culture = rhodesian
-							}
-						}
-						else_if = {
-							limit = {
-								culture = sudafricano
-							}
-							PREV = {
-								change_primary_culture = sudafricano
-							}
-						}
-						else_if = {
-							limit = {
-								culture = sulafricano
-							}
-							PREV = {
-								change_primary_culture = sulafricano
-							}
-						}
-						else_if = {
-							limit = {
-								culture = villion
-							}
-							PREV = {
-								change_primary_culture = villion
-							}
-						}
-						else_if = {
-							limit = {
-								culture = malgache
-							}
-							PREV = {
-								change_primary_culture = malgache
-							}
-						}
-						else_if = {
-							limit = {
-								culture = quellerie
-							}
-							PREV = {
-								change_primary_culture = quellerie
-							}
-						}
-						else_if = {
-							limit = {
-								culture = sorafrikanere
-							}
-							PREV = {
-								change_primary_culture = sorafrikanere
-							}
-						}
-						else_if = {
-							limit = {
-								culture = suthurafriskur
-							}
-							PREV = {
-								change_primary_culture = suthurafriskur
-							}
+							change_primary_culture = capital
 						}
 						else = {
-							limit = {
-								culture = anafraic
-							}
 							PREV = {
-								change_primary_culture = anafraic
+								add_prestige = 50
 							}
 						}
 					}

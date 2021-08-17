@@ -18,7 +18,43 @@ is_chinese = {
 		primary_culture = shandong_culture
 	}
 }
-
+is_expanded_mod_active = {
+	OR = {
+		has_global_flag = $mod$_expanded_mod_active
+		has_global_flag = $mod$_exapanded_mod_active
+	}
+}
+num_of_supported_independencies = {
+	if = {
+		limit = {
+			OR = {
+				has_dlc = "El Dorado"
+				has_dlc = "Conquest of Paradise"
+			}
+		}
+		calc_true_if = {
+			all_country = {
+				PREV = {
+					is_supporting_independence_of = PREV
+				}
+			}
+			amount = $amount$
+			desc = NUM_OF_SUPPORTED_INDEPENDENCIES_TT
+		}
+	}
+	else = {
+		num_of_allies = $amount$
+	}
+}
+can_create_subject_type = {
+	always = no
+	hidden_trigger = {
+		can_be_overlord = $subject_type$
+		$subject$ = {
+			always = no
+		}
+	}
+}
 ### COLONY STUFF
 can_country_flip_to_colonial_culture = {
 	#to
@@ -43,18 +79,18 @@ can_province_flip_to_colonial_culture = {
 
 ####CULTURES####
 ###British
-is_culture_to_american = {
+is_culture_to_british_american = {
 	#cond
 	OR = {
 		$cond$ = anglosaxon
 		$cond$ = english
 		$cond$ = mercian
 		$cond$ = northumbrian
-		$cond$ = rhodesian
+		$cond$ = british_south_african
 	}
 }
 
-is_region_to_american = {
+is_region_to_british_american = {
 	OR = {
 		region = great_plains_region
 		region = mississippi_region
@@ -67,35 +103,35 @@ is_region_to_american = {
 	}
 }
 
-is_culture_to_australian = {
+is_culture_to_british_australian = {
 	#cond
 	OR = {
 		$cond$ = anglosaxon
 		$cond$ = english
 		$cond$ = mercian
 		$cond$ = northumbrian
-		$cond$ = rhodesian
+		$cond$ = british_south_african
 	}
 }
 
-is_region_to_australian = {
+is_region_to_british_australian = {
 	OR = {
 		region = australia_region
 	}
 }
 
-is_culture_to_belizean = {
+is_culture_to_british_central_american = {
 	#cond
 	OR = {
 		$cond$ = anglosaxon
 		$cond$ = english
 		$cond$ = mercian
 		$cond$ = northumbrian
-		$cond$ = rhodesian
+		$cond$ = british_south_african
 	}
 }
 
-is_region_to_belizean = {
+is_region_to_british_central_american = {
 	OR = {
 		region = mexico_region
 		region = california_region
@@ -104,33 +140,33 @@ is_region_to_belizean = {
 	}
 }
 
-is_culture_to_jamaican = {
+is_culture_to_british_west_indies = {
 	#cond
 	OR = {
 		$cond$ = anglosaxon
 		$cond$ = english
 		$cond$ = mercian
 		$cond$ = northumbrian
-		$cond$ = rhodesian
+		$cond$ = british_south_african
 	}
 }
 
-is_region_to_jamaican = {
+is_region_to_british_west_indies = {
 	region = carribeans_region
 }
 
-is_culture_to_new_zealander = {
+is_culture_to_british_new_zealander = {
 	#cond
 	OR = {
 		$cond$ = anglosaxon
 		$cond$ = english
 		$cond$ = mercian
 		$cond$ = northumbrian
-		$cond$ = rhodesian
+		$cond$ = british_south_african
 	}
 }
 
-is_region_to_new_zealander = {
+is_region_to_british_new_zealander = {
 	OR = {
 		area = te_ika_a_maui_hauauru_area
 		area = te_ika_a_maui_waho_area
@@ -138,22 +174,22 @@ is_region_to_new_zealander = {
 	}
 }
 
-is_culture_to_patagonian = {
+is_culture_to_british_south_american = {
 	#cond
 	OR = {
 		$cond$ = anglosaxon
 		$cond$ = english
 		$cond$ = mercian
 		$cond$ = northumbrian
-		$cond$ = rhodesian
+		$cond$ = british_south_african
 	}
 }
 
-is_region_to_patagonian = {
+is_region_to_british_south_american = {
 	continent = south_america
 }
 
-is_culture_to_rhodesian = {
+is_culture_to_british_south_african = {
 	#cond
 	OR = {
 		$cond$ = anglosaxon
@@ -163,12 +199,12 @@ is_culture_to_rhodesian = {
 	}
 }
 
-is_region_to_rhodesian = {
+is_region_to_british_south_african = {
 	region = south_africa_region
 }
 
 ###West Germanic
-is_culture_to_afrikaner = {
+is_culture_to_west_germanic_south_african = {
 	#cond
 	OR = {
 		$cond$ = dutch
@@ -178,14 +214,14 @@ is_culture_to_afrikaner = {
 	}
 }
 
-is_region_to_afrikaner = {
+is_region_to_west_germanic_south_african = {
 	region = south_africa_region
 }
 
-is_culture_to_amerikaans = {
+is_culture_to_west_germanic_american = {
 	#cond
 	OR = {
-		$cond$ = afrikaner
+		$cond$ = west_germanic_south_african
 		$cond$ = dutch
 		$cond$ = flemish
 		$cond$ = frisian
@@ -193,7 +229,7 @@ is_culture_to_amerikaans = {
 	}
 }
 
-is_region_to_amerikaans = {
+is_region_to_west_germanic_american = {
 	OR = {
 		region = great_plains_region
 		region = mississippi_region
@@ -206,10 +242,10 @@ is_region_to_amerikaans = {
 	}
 }
 
-is_culture_to_antilliaans = {
+is_culture_to_west_germanic_west_indies = {
 	#cond
 	OR = {
-		$cond$ = afrikaner
+		$cond$ = west_germanic_south_african
 		$cond$ = dutch
 		$cond$ = flemish
 		$cond$ = frisian
@@ -217,14 +253,14 @@ is_culture_to_antilliaans = {
 	}
 }
 
-is_region_to_antilliaans = {
+is_region_to_west_germanic_west_indies = {
 	region = carribeans_region
 }
 
-is_culture_to_mexicaans = {
+is_culture_to_west_germanic_central_american = {
 	#cond
 	OR = {
-		$cond$ = afrikaner
+		$cond$ = west_germanic_south_african
 		$cond$ = dutch
 		$cond$ = flemish
 		$cond$ = frisian
@@ -232,7 +268,7 @@ is_culture_to_mexicaans = {
 	}
 }
 
-is_region_to_mexicaans = {
+is_region_to_west_germanic_central_american = {
 	OR = {
 		region = mexico_region
 		region = california_region
@@ -241,10 +277,10 @@ is_region_to_mexicaans = {
 	}
 }
 
-is_culture_to_surinaams = {
+is_culture_to_west_germanic_south_american = {
 	#cond
 	OR = {
-		$cond$ = afrikaner
+		$cond$ = west_germanic_south_african
 		$cond$ = dutch
 		$cond$ = flemish
 		$cond$ = frisian
@@ -252,14 +288,14 @@ is_culture_to_surinaams = {
 	}
 }
 
-is_region_to_surinaams = {
+is_region_to_west_germanic_south_american = {
 	continent = south_america
 }
 
-is_culture_to_nieuw_zeelands = {
+is_culture_to_west_germanic_new_zealander = {
 	#cond
 	OR = {
-		$cond$ = afrikaner
+		$cond$ = west_germanic_south_african
 		$cond$ = dutch
 		$cond$ = flemish
 		$cond$ = frisian
@@ -267,7 +303,7 @@ is_culture_to_nieuw_zeelands = {
 	}
 }
 
-is_region_to_nieuw_zeelands = {
+is_region_to_west_germanic_new_zealander = {
 	OR = {
 		area = te_ika_a_maui_hauauru_area
 		area = te_ika_a_maui_waho_area
@@ -275,10 +311,10 @@ is_region_to_nieuw_zeelands = {
 	}
 }
 
-is_culture_to_tasmaans = {
+is_culture_to_west_germanic_australian = {
 	#cond
 	OR = {
-		$cond$ = afrikaner
+		$cond$ = west_germanic_south_african
 		$cond$ = dutch
 		$cond$ = flemish
 		$cond$ = frisian
@@ -286,14 +322,14 @@ is_culture_to_tasmaans = {
 	}
 }
 
-is_region_to_tasmaans = {
+is_region_to_west_germanic_australian = {
 	OR = {
 		region = australia_region
 	}
 }
 
 ###Celtic Iberian
-is_culture_to_americanos = {
+is_culture_to_celtic_iberian_american = {
 	#cond
 	OR = {
 		$cond$ = algarve
@@ -301,11 +337,11 @@ is_culture_to_americanos = {
 		$cond$ = galician
 		$cond$ = portoccan
 		$cond$ = portugese
-		$cond$ = sulafricano
+		$cond$ = celtic_iberian_south_african
 	}
 }
 
-is_region_to_americanos = {
+is_region_to_celtic_iberian_american = {
 	OR = {
 		region = great_plains_region
 		region = mississippi_region
@@ -318,7 +354,7 @@ is_region_to_americanos = {
 	}
 }
 
-is_culture_to_australiano = {
+is_culture_to_celtic_iberian_australian = {
 	#cond
 	OR = {
 		$cond$ = algarve
@@ -326,17 +362,17 @@ is_culture_to_australiano = {
 		$cond$ = galician
 		$cond$ = portoccan
 		$cond$ = portugese
-		$cond$ = sulafricano
+		$cond$ = celtic_iberian_south_african
 	}
 }
 
-is_region_to_australiano = {
+is_region_to_celtic_iberian_australian = {
 	OR = {
 		region = australia_region
 	}
 }
 
-is_culture_to_brazilian = {
+is_culture_to_celtic_iberian_south_american = {
 	#cond
 	OR = {
 		$cond$ = algarve
@@ -344,15 +380,15 @@ is_culture_to_brazilian = {
 		$cond$ = galician
 		$cond$ = portoccan
 		$cond$ = portugese
-		$cond$ = sulafricano
+		$cond$ = celtic_iberian_south_african
 	}
 }
 
-is_region_to_brazilian = {
+is_region_to_celtic_iberian_south_american = {
 	continent = south_america
 }
 
-is_culture_to_caraiba = {
+is_culture_to_celtic_iberian_west_indies = {
 	#cond
 	OR = {
 		$cond$ = algarve
@@ -360,15 +396,15 @@ is_culture_to_caraiba = {
 		$cond$ = galician
 		$cond$ = portoccan
 		$cond$ = portugese
-		$cond$ = sulafricano
+		$cond$ = celtic_iberian_south_african
 	}
 }
 
-is_region_to_caraiba = {
+is_region_to_celtic_iberian_west_indies = {
 	region = carribeans_region
 }
 
-is_culture_to_mexicano = {
+is_culture_to_celtic_iberian_central_american = {
 	#cond
 	OR = {
 		$cond$ = algarve
@@ -376,11 +412,11 @@ is_culture_to_mexicano = {
 		$cond$ = galician
 		$cond$ = portoccan
 		$cond$ = portugese
-		$cond$ = sulafricano
+		$cond$ = celtic_iberian_south_african
 	}
 }
 
-is_region_to_mexicano = {
+is_region_to_celtic_iberian_central_american = {
 	OR = {
 		region = mexico_region
 		region = california_region
@@ -389,7 +425,7 @@ is_region_to_mexicano = {
 	}
 }
 
-is_culture_to_sulafricano = {
+is_culture_to_celtic_iberian_south_african = {
 	#cond
 	OR = {
 		$cond$ = algarve
@@ -397,15 +433,15 @@ is_culture_to_sulafricano = {
 		$cond$ = galician
 		$cond$ = portoccan
 		$cond$ = portugese
-		$cond$ = sulafricano
+		$cond$ = celtic_iberian_south_african
 	}
 }
 
-is_region_to_sulafricano = {
+is_region_to_celtic_iberian_south_african = {
 	region = south_africa_region
 }
 
-is_culture_to_zelador = {
+is_culture_to_celtic_iberian_new_zealander = {
 	#cond
 	OR = {
 		$cond$ = algarve
@@ -413,11 +449,11 @@ is_culture_to_zelador = {
 		$cond$ = galician
 		$cond$ = portoccan
 		$cond$ = portugese
-		$cond$ = sulafricano
+		$cond$ = celtic_iberian_south_african
 	}
 }
 
-is_region_to_zelador = {
+is_region_to_celtic_iberian_new_zealander = {
 	OR = {
 		area = te_ika_a_maui_hauauru_area
 		area = te_ika_a_maui_waho_area
@@ -426,7 +462,7 @@ is_region_to_zelador = {
 }
 
 ###Iberian
-is_culture_to_austral = {
+is_culture_to_iberian_australian = {
 	#cond
 	OR = {
 		$cond$ = aragonese
@@ -434,17 +470,17 @@ is_culture_to_austral = {
 		$cond$ = castillian
 		$cond$ = leonese
 		$cond$ = valencian
-		$cond$ = sudafricano
+		$cond$ = iberian_south_african
 	}
 }
 
-is_region_to_austral = {
+is_region_to_iberian_australian = {
 	OR = {
 		region = australia_region
 	}
 }
 
-is_culture_to_colombian = {
+is_culture_to_iberian_south_american = {
 	#cond
 	OR = {
 		$cond$ = aragonese
@@ -452,15 +488,15 @@ is_culture_to_colombian = {
 		$cond$ = castillian
 		$cond$ = leonese
 		$cond$ = valencian
-		$cond$ = sudafricano
+		$cond$ = iberian_south_african
 	}
 }
 
-is_region_to_colombian = {
+is_region_to_iberian_south_american = {
 	continent = south_america
 }
 
-is_culture_to_cuban = {
+is_culture_to_iberian_west_indies = {
 	#cond
 	OR = {
 		$cond$ = aragonese
@@ -468,15 +504,15 @@ is_culture_to_cuban = {
 		$cond$ = castillian
 		$cond$ = leonese
 		$cond$ = valencian
-		$cond$ = sudafricano
+		$cond$ = iberian_south_african
 	}
 }
 
-is_region_to_cuban = {
+is_region_to_iberian_west_indies = {
 	region = carribeans_region
 }
 
-is_culture_to_hispanos = {
+is_culture_to_iberian_american = {
 	#cond
 	OR = {
 		$cond$ = aragonese
@@ -484,11 +520,11 @@ is_culture_to_hispanos = {
 		$cond$ = castillian
 		$cond$ = leonese
 		$cond$ = valencian
-		$cond$ = sudafricano
+		$cond$ = iberian_south_african
 	}
 }
 
-is_region_to_hispanos = {
+is_region_to_iberian_american = {
 	OR = {
 		region = great_plains_region
 		region = mississippi_region
@@ -501,7 +537,7 @@ is_region_to_hispanos = {
 	}
 }
 
-is_culture_to_mexican = {
+is_culture_to_iberian_central_american = {
 	#cond
 	OR = {
 		$cond$ = aragonese
@@ -509,11 +545,11 @@ is_culture_to_mexican = {
 		$cond$ = castillian
 		$cond$ = leonese
 		$cond$ = valencian
-		$cond$ = sudafricano
+		$cond$ = iberian_south_african
 	}
 }
 
-is_region_to_mexican = {
+is_region_to_iberian_central_american = {
 	OR = {
 		region = mexico_region
 		region = california_region
@@ -522,7 +558,7 @@ is_region_to_mexican = {
 	}
 }
 
-is_culture_to_neozelandes = {
+is_culture_to_iberian_new_zealander = {
 	#cond
 	OR = {
 		$cond$ = aragonese
@@ -530,11 +566,11 @@ is_culture_to_neozelandes = {
 		$cond$ = castillian
 		$cond$ = leonese
 		$cond$ = valencian
-		$cond$ = sudafricano
+		$cond$ = iberian_south_african
 	}
 }
 
-is_region_to_neozelandes = {
+is_region_to_iberian_new_zealander = {
 	OR = {
 		area = te_ika_a_maui_hauauru_area
 		area = te_ika_a_maui_waho_area
@@ -542,7 +578,7 @@ is_region_to_neozelandes = {
 	}
 }
 
-is_culture_to_sudafricano = {
+is_culture_to_iberian_south_african = {
 	#cond
 	OR = {
 		$cond$ = aragonese
@@ -553,12 +589,12 @@ is_culture_to_sudafricano = {
 	}
 }
 
-is_region_to_sudafricano = {
+is_region_to_iberian_south_african = {
 	region = south_africa_region
 }
 
 ###GAELIC
-is_culture_to_anafraic = {
+is_culture_to_celtic_south_african = {
 	#cond
 	OR = {
 		$cond$ = highland_scottish
@@ -571,11 +607,11 @@ is_culture_to_anafraic = {
 	}
 }
 
-is_region_to_anafraic = {
+is_region_to_celtic_south_african = {
 	region = south_africa_region
 }
 
-is_culture_to_astrailianaich = {
+is_culture_to_celtic_australian = {
 	#cond
 	OR = {
 		$cond$ = highland_scottish
@@ -585,21 +621,21 @@ is_culture_to_astrailianaich = {
 		$cond$ = breton
 		$cond$ = irish
 		$cond$ = scottish
-		$cond$ = anafraic
+		$cond$ = celtic_south_african
 	}
 }
 
-is_region_to_astralianaich = {
+is_region_to_celtic_australian = {
 	OR = {
 		region = australia_region
 	}
 }
 
-is_region_to_ciuban = {
+is_region_to_celtic_west_indies = {
 	region = carribeans_region
 }
 
-is_culture_to_ciuban = {
+is_culture_to_celtic_west_indies = {
 	#cond
 	OR = {
 		$cond$ = highland_scottish
@@ -609,27 +645,29 @@ is_culture_to_ciuban = {
 		$cond$ = breton
 		$cond$ = irish
 		$cond$ = scottish
-		$cond$ = anafraic
+		$cond$ = celtic_south_african
 	}
 }
 
-is_culture_to_coloime = {
+is_culture_to_celtic_south_american = {
 	#cond
-	$cond$ = highland_scottish
-	$cond$ = ulster_scottish
-	$cond$ = welsh
-	$cond$ = cornish
-	$cond$ = breton
-	$cond$ = irish
-	$cond$ = scottish
-	$cond$ = anafraic
+	OR = {
+		$cond$ = breton
+		$cond$ = cornish
+		$cond$ = highland_scottish
+		$cond$ = irish
+		$cond$ = scottish
+		$cond$ = ulster_scottish
+		$cond$ = welsh
+		$cond$ = celtic_south_african
+	}
 }
 
-is_region_to_coloime = {
+is_region_to_celtic_south_american = {
 	continent = south_america
 }
 
-is_culture_to_newcaledonian = {
+is_culture_to_celtic_central_american = {
 	#cond
 	OR = {
 		$cond$ = highland_scottish
@@ -639,11 +677,11 @@ is_culture_to_newcaledonian = {
 		$cond$ = breton
 		$cond$ = irish
 		$cond$ = scottish
-		$cond$ = anafraic
+		$cond$ = celtic_south_african
 	}
 }
 
-is_region_to_newcaledonian = {
+is_region_to_celtic_central_american = {
 	OR = {
 		region = mexico_region
 		region = california_region
@@ -652,7 +690,7 @@ is_region_to_newcaledonian = {
 	}
 }
 
-is_culture_to_novascotian = {
+is_culture_to_celtic_american = {
 	#cond
 	OR = {
 		$cond$ = highland_scottish
@@ -662,11 +700,11 @@ is_culture_to_novascotian = {
 		$cond$ = breton
 		$cond$ = irish
 		$cond$ = scottish
-		$cond$ = anafraic
+		$cond$ = celtic_south_african
 	}
 }
 
-is_region_to_novascotian = {
+is_region_to_celtic_american = {
 	OR = {
 		region = great_plains_region
 		region = mississippi_region
@@ -679,7 +717,7 @@ is_region_to_novascotian = {
 	}
 }
 
-is_culture_to_zealander = {
+is_culture_to_celtic_new_zealander = {
 	#cond
 	OR = {
 		$cond$ = highland_scottish
@@ -689,11 +727,11 @@ is_culture_to_zealander = {
 		$cond$ = breton
 		$cond$ = irish
 		$cond$ = scottish
-		$cond$ = anafraic
+		$cond$ = celtic_south_african
 	}
 }
 
-is_region_to_zealander = {
+is_region_to_celtic_new_zealander = {
 	OR = {
 		area = te_ika_a_maui_hauauru_area
 		area = te_ika_a_maui_waho_area
@@ -701,8 +739,8 @@ is_region_to_zealander = {
 	}
 }
 
-###North French
-is_region_to_quebecois = {
+###Latin
+is_region_to_latin_american = {
 	OR = {
 		region = great_plains_region
 		region = mississippi_region
@@ -714,37 +752,39 @@ is_region_to_quebecois = {
 		region = cascadia_region
 	}
 }
-is_culture_to_quebecois ={
+is_culture_to_latin_american ={
 	#cond
 	OR = {
-		$cond$ = picard
-		$cond$ = normand
-		$cond$ = loire
-		$cond$ = wallonian
-		$cond$ = ardennes
-		$cond$ = parisien
-		$cond$ = villion
+		$cond$ = lombard
+		$cond$ = ligurian
+		$cond$ = venetian
+		$cond$ = tuscan
+		$cond$ = romagnan
+		$cond$ = roman
+		$cond$ = corsican
+		$cond$ = latin_south_african
 	}
 }
-is_region_to_australien = {
+
+is_region_to_latin_australian = {
 	OR = {
 		region = australia_region
 	}
 }
-is_culture_to_australien ={
+is_culture_to_latin_australian ={
 	#cond
 	OR = {
-		$cond$ = picard
-		$cond$ = normand
-		$cond$ = loire
-		$cond$ = wallonian
-		$cond$ = ardennes
-		$cond$ = parisien
-		$cond$ = villion
+		$cond$ = lombard
+		$cond$ = ligurian
+		$cond$ = venetian
+		$cond$ = tuscan
+		$cond$ = romagnan
+		$cond$ = roman
+		$cond$ = corsican
+		$cond$ = latin_south_african
 	}
 }
-
-is_region_to_amerique = {
+is_region_to_latin_central_american = {
 	OR = {
 		region = mexico_region
 		region = california_region
@@ -752,90 +792,93 @@ is_region_to_amerique = {
 		region = central_america_region
 	}
 }
-is_culture_to_amerique ={
+is_culture_to_latin_central_american ={
 	#cond
 	OR = {
-		$cond$ = picard
-		$cond$ = normand
-		$cond$ = loire
-		$cond$ = wallonian
-		$cond$ = ardennes
-		$cond$ = parisien
-		$cond$ = villion
+		$cond$ = lombard
+		$cond$ = ligurian
+		$cond$ = venetian
+		$cond$ = tuscan
+		$cond$ = romagnan
+		$cond$ = roman
+		$cond$ = corsican
+		$cond$ = latin_south_african
 	}
 }
 
-is_region_to_hatien = {
+is_region_to_latin_west_indies = {
 	region = carribeans_region
 }
-is_culture_to_hatien ={
+is_culture_to_latin_west_indies ={
 	#cond
 	OR = {
-		$cond$ = picard
-		$cond$ = normand
-		$cond$ = loire
-		$cond$ = wallonian
-		$cond$ = ardennes
-		$cond$ = parisien
-		$cond$ = villion
+		$cond$ = lombard
+		$cond$ = ligurian
+		$cond$ = venetian
+		$cond$ = tuscan
+		$cond$ = romagnan
+		$cond$ = roman
+		$cond$ = corsican
+		$cond$ = latin_south_african
 	}
 }
 
-is_region_to_neozealandais = {
+is_region_to_latin_new_zealander = {
 	OR = {
 		area = te_ika_a_maui_hauauru_area
 		area = te_ika_a_maui_waho_area
 		area = te_waipounamu_area
 	}
 }
-is_culture_to_neozealandais ={
+is_culture_to_latin_new_zealander ={
 	#cond
 	OR = {
-		$cond$ = picard
-		$cond$ = normand
-		$cond$ = loire
-		$cond$ = wallonian
-		$cond$ = ardennes
-		$cond$ = parisien
-		$cond$ = villion
+		$cond$ = lombard
+		$cond$ = ligurian
+		$cond$ = venetian
+		$cond$ = tuscan
+		$cond$ = romagnan
+		$cond$ = roman
+		$cond$ = corsican
+		$cond$ = latin_south_african
 	}
 }
 
-is_region_to_argentins = {
+is_region_to_latin_south_american = {
 	continent = south_america
 }
-is_culture_to_argentins ={
+is_culture_to_latin_south_american ={
 	#cond
 	OR = {
-		$cond$ = picard
-		$cond$ = normand
-		$cond$ = loire
-		$cond$ = wallonian
-		$cond$ = ardennes
-		$cond$ = parisien
-		$cond$ = villion
+		$cond$ = lombard
+		$cond$ = ligurian
+		$cond$ = venetian
+		$cond$ = tuscan
+		$cond$ = romagnan
+		$cond$ = roman
+		$cond$ = corsican
+		$cond$ = latin_south_african
 	}
 }
 
-is_region_to_villion = {
+is_region_to_latin_south_african = {
 	region = south_africa_region
 }
-is_culture_to_villion ={
+is_culture_to_latin_south_african ={
 	#cond
 	OR = {
-		OR = {
-			$cond$ = picard
-			$cond$ = normand
-			$cond$ = loire
-			$cond$ = wallonian
-			$cond$ = ardennes
-			$cond$ = parisien
-		}
+		$cond$ = lombard
+		$cond$ = ligurian
+		$cond$ = venetian
+		$cond$ = tuscan
+		$cond$ = romagnan
+		$cond$ = roman
+		$cond$ = corsican
 	}
 }
 
 ###Central French
-is_region_to_cajun = {
+is_region_to_french_american = {
 	OR = {
 		region = great_plains_region
 		region = mississippi_region
@@ -847,36 +890,44 @@ is_region_to_cajun = {
 		region = cascadia_region
 	}
 }
-is_culture_to_cajun ={
+is_culture_to_french_american ={
 	#cond
 	OR = {
+		$cond$ = picard
+		$cond$ = normand
+		$cond$ = loire
+		$cond$ = wallonian
+		$cond$ = ardennes
+		$cond$ = parisien
 		$cond$ = orleanais
 		$cond$ = cosmopolitan_french
-		$cond$ = barrois
 		$cond$ = angevin
-		$cond$ = burgundian
-		$cond$ = malgache
+		$cond$ = french_south_african
 	}
 }
 
-is_region_to_laperouse = {
+is_region_to_french_australian = {
 	OR = {
 		region = australia_region
 	}
 }
-is_culture_to_laperouse ={
+is_culture_to_french_australian ={
 	#cond
 	OR = {
+		$cond$ = picard
+		$cond$ = normand
+		$cond$ = loire
+		$cond$ = wallonian
+		$cond$ = ardennes
+		$cond$ = parisien
 		$cond$ = orleanais
 		$cond$ = cosmopolitan_french
-		$cond$ = barrois
 		$cond$ = angevin
-		$cond$ = burgundian
-		$cond$ = malgache
+		$cond$ = french_south_african
 	}
 }
 
-is_region_to_mexique = {
+is_region_to_french_central_american = {
 	OR = {
 		region = mexico_region
 		region = california_region
@@ -884,83 +935,103 @@ is_region_to_mexique = {
 		region = central_america_region
 	}
 }
-is_culture_to_mexique ={
+is_culture_to_french_central_american ={
 	#cond
 	OR = {
+		$cond$ = picard
+		$cond$ = normand
+		$cond$ = loire
+		$cond$ = wallonian
+		$cond$ = ardennes
+		$cond$ = parisien
 		$cond$ = orleanais
 		$cond$ = cosmopolitan_french
-		$cond$ = barrois
 		$cond$ = angevin
-		$cond$ = burgundian
-		$cond$ = malgache
+		$cond$ = french_south_african
 	}
 }
 
-is_region_to_martinique = {
+is_region_to_french_west_indies = {
 	region = carribeans_region
 }
-is_culture_to_martinique ={
+is_culture_to_french_west_indies ={
 	#cond
 	OR = {
+		$cond$ = picard
+		$cond$ = normand
+		$cond$ = loire
+		$cond$ = wallonian
+		$cond$ = ardennes
+		$cond$ = parisien
 		$cond$ = orleanais
 		$cond$ = cosmopolitan_french
-		$cond$ = barrois
 		$cond$ = angevin
-		$cond$ = burgundian
-		$cond$ = malgache
+		$cond$ = french_south_african
 	}
 }
 
-is_region_to_pompallier = {
+is_region_to_french_new_zealander = {
 	OR = {
 		area = te_ika_a_maui_hauauru_area
 		area = te_ika_a_maui_waho_area
 		area = te_waipounamu_area
 	}
 }
-is_culture_to_pompallier ={
+is_culture_to_french_new_zealander ={
 	#cond
 	OR = {
+		$cond$ = picard
+		$cond$ = normand
+		$cond$ = loire
+		$cond$ = wallonian
+		$cond$ = ardennes
+		$cond$ = parisien
 		$cond$ = orleanais
 		$cond$ = cosmopolitan_french
-		$cond$ = barrois
 		$cond$ = angevin
-		$cond$ = burgundian
-		$cond$ = malgache
+		$cond$ = french_south_african
 	}
 }
 
-is_region_to_guyane = {
+is_region_to_french_south_american = {
 	continent = south_america
 }
-is_culture_to_guyane ={
+is_culture_to_french_south_american ={
 	#cond
 	OR = {
+		$cond$ = picard
+		$cond$ = normand
+		$cond$ = loire
+		$cond$ = wallonian
+		$cond$ = ardennes
+		$cond$ = parisien
 		$cond$ = orleanais
 		$cond$ = cosmopolitan_french
-		$cond$ = barrois
 		$cond$ = angevin
-		$cond$ = burgundian
-		$cond$ = malgache
+		$cond$ = french_south_african
 	}
 }
 
-is_region_to_malgache = {
+is_region_to_french_south_african = {
 	region = south_africa_region
 }
-is_culture_to_malgache ={
+is_culture_to_french_south_african ={
 	#cond
 	OR = {
+		$cond$ = picard
+		$cond$ = normand
+		$cond$ = loire
+		$cond$ = wallonian
+		$cond$ = ardennes
+		$cond$ = parisien
 		$cond$ = orleanais
 		$cond$ = cosmopolitan_french
-		$cond$ = barrois
 		$cond$ = angevin
-		$cond$ = burgundian
 	}
 }
 
 ###South French
-is_region_to_creole = {
+is_region_to_south_french_american = {
 	OR = {
 		region = great_plains_region
 		region = mississippi_region
@@ -972,7 +1043,7 @@ is_region_to_creole = {
 		region = cascadia_region
 	}
 }
-is_culture_to_creole ={
+is_culture_to_south_french_american ={
 	#cond
 	OR = {
 		$cond$ = pyrenees
@@ -982,16 +1053,19 @@ is_culture_to_creole ={
 		$cond$ = aquitaine
 		$cond$ = occitain
 		$cond$ = arpitan
-		$cond$ = quellerie
+		$cond$ = burgundian
+		$cond$ = barrois
+		$cond$ = piedmontese
+		$cond$ = south_french_south_african
 	}
 }
 
-is_region_to_baudin = {
+is_region_to_south_french_australian = {
 	OR = {
 		region = australia_region
 	}
 }
-is_culture_to_baudin ={
+is_culture_to_south_french_australian ={
 	#cond
 	OR = {
 		$cond$ = pyrenees
@@ -1001,11 +1075,11 @@ is_culture_to_baudin ={
 		$cond$ = aquitaine
 		$cond$ = occitain
 		$cond$ = arpitan
-		$cond$ = quellerie
+		$cond$ = south_french_south_african
 	}
 }
 
-is_region_to_hondurien = {
+is_region_to_south_french_central_american = {
 	OR = {
 		region = mexico_region
 		region = california_region
@@ -1013,7 +1087,7 @@ is_region_to_hondurien = {
 		region = central_america_region
 	}
 }
-is_culture_to_hondurien ={
+is_culture_to_south_french_central_american ={
 	#cond
 	OR = {
 		$cond$ = pyrenees
@@ -1023,14 +1097,14 @@ is_culture_to_hondurien ={
 		$cond$ = aquitaine
 		$cond$ = occitain
 		$cond$ = arpitan
-		$cond$ = quellerie
+		$cond$ = south_french_south_african
 	}
 }
 
-is_region_to_saintlucie = {
+is_region_to_south_french_west_indies = {
 	region = carribeans_region
 }
-is_culture_to_saintlucie ={
+is_culture_to_south_french_west_indies ={
 	#cond
 	OR = {
 		$cond$ = pyrenees
@@ -1040,18 +1114,18 @@ is_culture_to_saintlucie ={
 		$cond$ = aquitaine
 		$cond$ = occitain
 		$cond$ = arpitan
-		$cond$ = quellerie
+		$cond$ = south_french_south_african
 	}
 }
 
-is_region_to_surville = {
+is_region_to_south_french_new_zealander = {
 	OR = {
 		area = te_ika_a_maui_hauauru_area
 		area = te_ika_a_maui_waho_area
 		area = te_waipounamu_area
 	}
 }
-is_culture_to_surville ={
+is_culture_to_south_french_new_zealander ={
 	#cond
 	OR = {
 		$cond$ = pyrenees
@@ -1061,14 +1135,14 @@ is_culture_to_surville ={
 		$cond$ = aquitaine
 		$cond$ = occitain
 		$cond$ = arpitan
-		$cond$ = quellerie
+		$cond$ = south_french_south_african
 	}
 }
 
-is_region_to_antarctique = {
+is_region_to_south_french_south_american = {
 	continent = south_america
 }
-is_culture_to_antarctique ={
+is_culture_to_south_french_south_american ={
 	#cond
 	OR = {
 		$cond$ = pyrenees
@@ -1078,14 +1152,14 @@ is_culture_to_antarctique ={
 		$cond$ = aquitaine
 		$cond$ = occitain
 		$cond$ = arpitan
-		$cond$ = quellerie
+		$cond$ = south_french_south_african
 	}
 }
 
-is_region_to_quellerie = {
+is_region_to_south_french_south_african = {
 	region = south_africa_region
 }
-is_culture_to_quellerie ={
+is_culture_to_south_french_south_african ={
 	#cond
 	OR = {
 		$cond$ = pyrenees
@@ -1099,7 +1173,7 @@ is_culture_to_quellerie ={
 }
 
 ###Scandinavian
-is_region_to_amerikanere = {
+is_region_to_scandinavian_american = {
 	OR = {
 		region = great_plains_region
 		region = mississippi_region
@@ -1111,7 +1185,7 @@ is_region_to_amerikanere = {
 		region = cascadia_region
 	}
 }
-is_culture_to_amerikanere ={
+is_culture_to_scandinavian_american ={
 	#cond
 	OR = {
 		$cond$ = scanian
@@ -1119,16 +1193,16 @@ is_culture_to_amerikanere ={
 		$cond$ = swedish
 		$cond$ = geats
 		$cond$ = norwegian
-		$cond$ = sorafrikanere
+		$cond$ = scandinavian_south_african
 	}
 }
 
-is_region_to_australier = {
+is_region_to_scandinavian_australian = {
 	OR = {
 		region = australia_region
 	}
 }
-is_culture_to_australier ={
+is_culture_to_scandinavian_australian ={
 	#cond
 	OR = {
 		$cond$ = scanian
@@ -1136,11 +1210,11 @@ is_culture_to_australier ={
 		$cond$ = swedish
 		$cond$ = geats
 		$cond$ = norwegian
-		$cond$ = sorafrikanere
+		$cond$ = scandinavian_south_african
 	}
 }
 
-is_region_to_meksikansk = {
+is_region_to_scandinavian_central_american = {
 	OR = {
 		region = mexico_region
 		region = california_region
@@ -1148,7 +1222,7 @@ is_region_to_meksikansk = {
 		region = central_america_region
 	}
 }
-is_culture_to_meksikansk ={
+is_culture_to_scandinavian_central_american ={
 	#cond
 	OR = {
 		$cond$ = scanian
@@ -1156,14 +1230,14 @@ is_culture_to_meksikansk ={
 		$cond$ = swedish
 		$cond$ = geats
 		$cond$ = norwegian
-		$cond$ = sorafrikanere
+		$cond$ = scandinavian_south_african
 	}
 }
 
-is_region_to_vastindier = {
+is_region_to_scandinavian_west_indies = {
 	region = carribeans_region
 }
-is_culture_to_vastindier ={
+is_culture_to_scandinavian_west_indies ={
 	#cond
 	OR = {
 		$cond$ = scanian
@@ -1171,18 +1245,18 @@ is_culture_to_vastindier ={
 		$cond$ = swedish
 		$cond$ = geats
 		$cond$ = norwegian
-		$cond$ = sorafrikanere
+		$cond$ = scandinavian_south_african
 	}
 }
 
-is_region_to_nyazealandere = {
+is_region_to_scandinavian_new_zealander = {
 	OR = {
 		area = te_ika_a_maui_hauauru_area
 		area = te_ika_a_maui_waho_area
 		area = te_waipounamu_area
 	}
 }
-is_culture_to_nyazealandere ={
+is_culture_to_scandinavian_new_zealander ={
 	#cond
 	OR = {
 		$cond$ = scanian
@@ -1190,14 +1264,14 @@ is_culture_to_nyazealandere ={
 		$cond$ = swedish
 		$cond$ = geats
 		$cond$ = norwegian
-		$cond$ = sorafrikanere
+		$cond$ = scandinavian_south_african
 	}
 }
 
-is_region_to_brasilianere = {
+is_region_to_scandinavian_south_american = {
 	continent = south_america
 }
-is_culture_to_brasilianere ={
+is_culture_to_scandinavian_south_american ={
 	#cond
 	OR = {
 		$cond$ = scanian
@@ -1205,14 +1279,14 @@ is_culture_to_brasilianere ={
 		$cond$ = swedish
 		$cond$ = geats
 		$cond$ = norwegian
-		$cond$ = sorafrikanere
+		$cond$ = scandinavian_south_african
 	}
 }
 
-is_region_to_sorafrikanere = {
+is_region_to_scandinavian_south_african = {
 	region = south_africa_region
 }
-is_culture_to_sorafrikanere = {
+is_culture_to_scandinavian_south_african = {
 	#cond
 	OR = {
 		$cond$ = scanian
@@ -1224,7 +1298,7 @@ is_culture_to_sorafrikanere = {
 }
 
 ###Old Norse
-is_region_to_ameriskt = {
+is_region_to_old_norse_american = {
 	OR = {
 		region = great_plains_region
 		region = mississippi_region
@@ -1236,23 +1310,23 @@ is_region_to_ameriskt = {
 		region = cascadia_region
 	}
 }
-is_culture_to_ameriskt ={
+is_culture_to_old_norse_american ={
 	#cond
 	OR = {
 		$cond$ = elfdalian
 		$cond$ = icelandic
 		$cond$ = jan_mayenese
 		$cond$ = faroese
-		$cond$ = suthurafriskur
+		$cond$ = old_norse_south_african
 	}
 }
 
-is_region_to_australskur = {
+is_region_to_old_norse_australian = {
 	OR = {
 		region = australia_region
 	}
 }
-is_culture_to_australskur ={
+is_culture_to_old_norse_australian ={
 	#cond
 	OR = {
 		$cond$ = elfdalian
@@ -1260,11 +1334,11 @@ is_culture_to_australskur ={
 		$cond$ = jan_mayenese
 		$cond$ = vinlandic
 		$cond$ = faroese
-		$cond$ = suthurafriskur
+		$cond$ = old_norse_south_african
 	}
 }
 
-is_region_to_mexikana = {
+is_region_to_old_norse_central_american = {
 	OR = {
 		region = mexico_region
 		region = california_region
@@ -1272,7 +1346,7 @@ is_region_to_mexikana = {
 		region = central_america_region
 	}
 }
-is_culture_to_mexicana ={
+is_culture_to_old_norse_central_american ={
 	#cond
 	OR = {
 		$cond$ = elfdalian
@@ -1280,14 +1354,14 @@ is_culture_to_mexicana ={
 		$cond$ = jan_mayenese
 		$cond$ = vinlandic
 		$cond$ = faroese
-		$cond$ = suthurafriskur
+		$cond$ = old_norse_south_african
 	}
 }
 
-is_region_to_vesturindverskur = {
+is_region_to_old_norse_west_indies = {
 	region = carribeans_region
 }
-is_culture_to_vesturindverskur ={
+is_culture_to_old_norse_west_indies ={
 	#cond
 	OR = {
 		$cond$ = elfdalian
@@ -1295,18 +1369,18 @@ is_culture_to_vesturindverskur ={
 		$cond$ = jan_mayenese
 		$cond$ = vinlandic
 		$cond$ = faroese
-		$cond$ = suthurafriskur
+		$cond$ = old_norse_south_african
 	}
 }
 
-is_region_to_nyrzealander = {
+is_region_to_old_norse_new_zealander = {
 	OR = {
 		area = te_ika_a_maui_hauauru_area
 		area = te_ika_a_maui_waho_area
 		area = te_waipounamu_area
 	}
 }
-is_culture_to_nyrzealander ={
+is_culture_to_old_norse_new_zealander ={
 	#cond
 	OR = {
 		$cond$ = elfdalian
@@ -1314,14 +1388,14 @@ is_culture_to_nyrzealander ={
 		$cond$ = jan_mayenese
 		$cond$ = vinlandic
 		$cond$ = faroese
-		$cond$ = suthurafriskur
+		$cond$ = old_norse_south_african
 	}
 }
 
-is_region_to_ekvadorskt = {
+is_region_to_old_norse_south_american = {
 	continent = south_america
 }
-is_culture_to_ekvadorskt ={
+is_culture_to_old_norse_south_american ={
 	#cond
 	OR = {
 		$cond$ = elfdalian
@@ -1329,14 +1403,14 @@ is_culture_to_ekvadorskt ={
 		$cond$ = jan_mayenese
 		$cond$ = vinlandic
 		$cond$ = faroese
-		$cond$ = suthurafriskur
+		$cond$ = old_norse_south_african
 	}
 }
 
-is_region_to_suthurafriskur = {
+is_region_to_old_norse_south_african = {
 	region = south_africa_region
 }
-is_culture_to_suthurafriskur ={
+is_culture_to_old_norse_south_african ={
 	#cond
 	OR = {
 		$cond$ = elfdalian
@@ -1344,5 +1418,138 @@ is_culture_to_suthurafriskur ={
 		$cond$ = jan_mayenese
 		$cond$ = vinlandic
 		$cond$ = faroese
+	}
+}
+
+
+###Maghrebi
+is_region_to_maghrebi_american = {
+	OR = {
+		region = great_plains_region
+		region = mississippi_region
+		region = southeast_america_region
+		region = northeast_america_region
+		region = great_lakes_region
+		region = canada_region
+		region = hudson_bay_region
+		region = cascadia_region
+	}
+}
+is_culture_to_maghrebi_american ={
+	#cond
+	OR = {
+		$cond$ = moroccan
+		$cond$ = tunisian
+		$cond$ = algerian
+		$cond$ = qurtuban
+		$cond$ = andalucian
+		$cond$ = berber
+		$cond$ = maghrebi_south_african
+	}
+}
+
+is_region_to_maghrebi_australian = {
+	OR = {
+		region = australia_region
+	}
+}
+is_culture_to_maghrebi_australian ={
+	#cond
+	OR = {
+		$cond$ = moroccan
+		$cond$ = tunisian
+		$cond$ = algerian
+		$cond$ = qurtuban
+		$cond$ = andalucian
+		$cond$ = berber
+		$cond$ = maghrebi_south_african
+	}
+}
+
+is_region_to_maghrebi_central_american = {
+	OR = {
+		region = mexico_region
+		region = california_region
+		region = rio_grande_region
+		region = central_america_region
+	}
+}
+is_culture_to_maghrebi_central_american ={
+	#cond
+	OR = {
+		$cond$ = moroccan
+		$cond$ = tunisian
+		$cond$ = algerian
+		$cond$ = qurtuban
+		$cond$ = andalucian
+		$cond$ = berber
+		$cond$ = maghrebi_south_african
+	}
+}
+
+is_region_to_maghrebi_west_indies = {
+	region = carribeans_region
+}
+is_culture_to_maghrebi_west_indies ={
+	#cond
+	OR = {
+		$cond$ = moroccan
+		$cond$ = tunisian
+		$cond$ = algerian
+		$cond$ = qurtuban
+		$cond$ = andalucian
+		$cond$ = berber
+		$cond$ = maghrebi_south_african
+	}
+}
+
+is_region_to_maghrebi_new_zealander = {
+	OR = {
+		area = te_ika_a_maui_hauauru_area
+		area = te_ika_a_maui_waho_area
+		area = te_waipounamu_area
+	}
+}
+is_culture_to_maghrebi_new_zealander ={
+	#cond
+	OR = {
+		$cond$ = moroccan
+		$cond$ = tunisian
+		$cond$ = algerian
+		$cond$ = qurtuban
+		$cond$ = andalucian
+		$cond$ = berber
+		$cond$ = maghrebi_south_african
+	}
+}
+
+is_region_to_maghrebi_south_american = {
+	continent = south_america
+}
+is_culture_to_maghrebi_south_american ={
+	#cond
+	OR = {
+		$cond$ = moroccan
+		$cond$ = tunisian
+		$cond$ = algerian
+		$cond$ = qurtuban
+		$cond$ = andalucian
+		$cond$ = berber
+		$cond$ = maghrebi_south_african
+	}
+}
+
+is_region_to_maghrebi_south_african = {
+	region = south_africa_region
+}
+is_culture_to_maghrebi_south_african ={
+	#cond
+	OR = {
+		$cond$ = moroccan
+		$cond$ = tunisian
+		$cond$ = algerian
+		$cond$ = qurtuban
+		$cond$ = andalucian
+		$cond$ = berber
 	}
 }

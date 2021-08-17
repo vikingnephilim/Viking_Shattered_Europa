@@ -89,16 +89,16 @@ country_decisions = {
 			if = {
 				limit = {
 					culture_group = british
-					NOT = { primary_culture = american }
+					NOT = { primary_culture = british_american }
 				}
-				change_primary_culture = american
+				change_primary_culture = british_american
 			}
 			if = {
 				limit = {
 					culture_group = iberian
-					NOT = { primary_culture = mexican }
+					NOT = { primary_culture = iberian_central_american }
 				}
-				change_primary_culture = mexican
+				change_primary_culture = iberian_central_american
 			}
 			colonial_california = {
 				limit = {

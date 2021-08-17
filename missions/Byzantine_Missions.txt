@@ -35,12 +35,20 @@ GRE_missions_1 = {
 		}
 		position = 1
 		trigger = {
-			adm =3
+			adm = 3
 		}
 		effect = {
-			add_adm_power = 200
-			change_government = republic
-			add_government_reform = grk_demo
+			if = {
+				limit = {
+					TAG = BYZ
+				}
+				add_adm_power = 200
+			}
+			else = {
+				add_adm_power = 200
+				change_government = republic
+				add_government_reform = grk_demo
+			}
 		}
 	}
 	epi_thessaly = {
@@ -526,30 +534,30 @@ GRE_missions_2 = {
 	generic = no
 	ai = yes
 	potential = {
-			culture_group = byzantine
-			NOT = {
-				tag = RUM
-				tag = AYD
-				was_tag = AYD
-				tag = CND
-				was_tag = CND
-				tag = DUL
-				was_tag = DUL
-				tag = ERE
-				was_tag = ERE
-				tag = GRM
-				was_tag = GRM
-				tag = KAR
-				was_tag = KAR
-				tag = MEN
-				was_tag = MEN
-				tag = OSM
-				was_tag = OSM
-				tag = RAM
-				was_tag = RAM
-				tag = SRU
-				was_tag = SRU
-			}
+		culture_group = byzantine
+		NOT = {
+			tag = RUM
+			tag = AYD
+			was_tag = AYD
+			tag = CND
+			was_tag = CND
+			tag = DUL
+			was_tag = DUL
+			tag = ERE
+			was_tag = ERE
+			tag = GRM
+			was_tag = GRM
+			tag = KAR
+			was_tag = KAR
+			tag = MEN
+			was_tag = MEN
+			tag = OSM
+			was_tag = OSM
+			tag = RAM
+			was_tag = RAM
+			tag = SRU
+			was_tag = SRU
+		}
 	}
 	has_country_shield = yes
 	NAX_troubling_tides = {
@@ -950,7 +958,7 @@ GRE_missions_2 = {
 	epi_bulgaria = {
 		icon = mission_cossack_cavalry
 		required_missions = {
-				}
+		}
 		position = 11
 		provinces_to_highlight = {
 			OR = {
@@ -1027,30 +1035,30 @@ GRE_missions_3 = {
 	generic = no
 	ai = yes
 	potential = {
-			culture_group = byzantine
-			NOT = {
-				tag = RUM
-				tag = AYD
-				was_tag = AYD
-				tag = CND
-				was_tag = CND
-				tag = DUL
-				was_tag = DUL
-				tag = ERE
-				was_tag = ERE
-				tag = GRM
-				was_tag = GRM
-				tag = KAR
-				was_tag = KAR
-				tag = MEN
-				was_tag = MEN
-				tag = OSM
-				was_tag = OSM
-				tag = RAM
-				was_tag = RAM
-				tag = SRU
-				was_tag = SRU
-			}
+		culture_group = byzantine
+		NOT = {
+			tag = RUM
+			tag = AYD
+			was_tag = AYD
+			tag = CND
+			was_tag = CND
+			tag = DUL
+			was_tag = DUL
+			tag = ERE
+			was_tag = ERE
+			tag = GRM
+			was_tag = GRM
+			tag = KAR
+			was_tag = KAR
+			tag = MEN
+			was_tag = MEN
+			tag = OSM
+			was_tag = OSM
+			tag = RAM
+			was_tag = RAM
+			tag = SRU
+			was_tag = SRU
+		}
 	}
 	has_country_shield = yes
 	gre_pride = {
