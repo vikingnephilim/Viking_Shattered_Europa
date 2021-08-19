@@ -1,0 +1,1356 @@
+##############################
+####FIRST ROW OF MISSIONS####
+##############################
+hawaii_mil_missions = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		culture_group = pacific
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	hawaii_gain_mana = {
+		position = 1
+		icon = mission_mana
+		required_missions = {
+		}
+		trigger = {
+			OR = {
+				ADM = 6
+				DIP = 6
+				MIL = 6
+			}
+		}
+		effect = {
+			add_treasury = 200
+		}
+	}
+	hawaii_please_kau = {
+		position = 2
+		icon = mission_haka
+		required_missions = {
+			hawaii_gain_mana
+		}
+		trigger = {
+			num_of_generals = 2
+		}
+		effect = {
+			add_army_tradition = 15
+		}
+	}
+	hawaii_prove_prowess = {
+		icon = mission_maori_warriors
+		position = 3
+		required_missions = {
+			hawaii_please_kau
+		}
+		trigger = {
+			MIL_power = 600
+			infantry_fraction = 0.6
+			heavy_ship_fraction = 0.33
+		}
+		effect = {
+			add_army_tradition = 20
+			add_navy_tradition = 20
+		}
+	}
+	hawaii_gunpowder_warfare = {
+		icon = mission_iroquois_warriors
+		position = 4
+		required_missions = {
+			hawaii_prove_prowess
+		}
+		trigger = {
+			mil_tech = 8
+			artillery_fraction = 0.1
+		}
+		effect = {
+			add_yearly_manpower = 0.5
+		}
+	}
+	hawaii_muskets = {
+		icon = mission_gunpowder_warfare
+		position = 5
+		required_missions = {
+			hawaii_gunpowder_warfare
+		}
+		trigger = {
+			mil_tech = 12
+			artillery_fraction = 0.4
+			army_size_percentage = 0.9
+			army_tradition = 50
+		}
+		effect = {
+			create_general = {
+				tradition = 80
+			}
+		}
+	}
+	maori_haka = {
+		icon = mission_oceania_assemble_an_army
+		position = 6
+		required_missions = {
+			hawaii_muskets
+		}
+		trigger = {
+			num_of_generals_with_traits = 1
+			num_of_admirals_with_traits = 1
+			army_size_percentage = 0.75
+			navy_size_percentage = 0.75
+		}
+		effect = {
+			create_general = {
+				tradition = 100
+			}
+			create_admiral = {
+				tradition = 100
+			}
+			random_known_country = {
+				limit = {
+					is_rival = ROOT
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Mandate of Heaven"
+						}
+					}
+					add_casus_belli = {
+						target = FROM
+						type = cb_vassalize_mission
+						months = 300
+					}
+				}
+				else = {
+					add_casus_belli = {
+						target = FROM
+						type = cb_force_tributary_mission
+						months = 300
+					}
+				}
+			}
+		}
+	}
+	maori_riri = {
+		icon = mission_oceania_build_army_mission
+		position = 7
+		required_missions = {
+			maori_haka
+		}
+		provinces_to_highlight = {
+			owner = {
+				ROOT = {
+					is_rival = PREV
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				all_rival_country = {
+					NOT = {
+						army_strength = {
+							who = ROOT
+							value = 0.5
+						}
+					}
+				}
+				AND = {
+					te_ika_a_maui_hauauru_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					te_ika_a_maui_waho_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					te_waipounamu_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					army_size_percentage = 1
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					any_known_country = {
+						is_rival = ROOT
+					}
+				}
+				random_known_country = {
+					limit = {
+						is_rival = ROOT
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_dlc = "Mandate of Heaven"
+							}
+						}
+						reverse_add_casus_belli = {
+							target = ROOT
+							type = cb_vassalize_mission
+							months = 300
+						}
+					}
+					else = {
+						reverse_add_casus_belli = {
+							target = ROOT
+							type = cb_force_tributary_mission
+							months = 300
+						}
+					}
+				}
+			}
+			else = {
+				add_yearly_manpower = 0.5
+				add_yearly_sailors = 0.5
+			}
+		}
+	}
+	maori_ka_mate = {
+		icon = mission_gain_mana
+		position = 8
+		required_missions = {
+			maori_riri
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = te_ika_a_maui_hauauru_area
+				area = te_ika_a_maui_waho_area
+			}
+		}
+		trigger = {
+			OR = {
+				is_at_war = yes
+				had_recent_war = 10
+			}
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 2
+				OR = {
+					area = te_ika_a_maui_hauauru_area
+					area = te_ika_a_maui_waho_area
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						stability = 3
+					}
+				}
+				add_stability = 1
+				add_adm_power = 50
+				add_dip_power = 50
+				add_mil_power = 50
+			}
+			else = {
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+			}
+		}
+	}
+	maori_colonize_southern_island = {
+		icon = mission_invade_island
+		position = 9
+		required_missions = {
+			maori_ka_mate
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = te_ika_a_maui_hauauru_area
+				area = te_ika_a_maui_waho_area
+				area = te_waipounamu_area
+			}
+		}
+		trigger = {
+			OR = {
+				AND = {
+					te_ika_a_maui_hauauru_area = {
+						type = all
+						country_or_subject_holds = ROOT
+					}
+					te_ika_a_maui_waho_area = {
+						type = all
+						country_or_subject_holds = ROOT
+					}
+				}
+				AND = {
+					te_waipounamu_area = {
+						country_or_subject_holds = ROOT
+					}
+					OR = {
+						treasury = 1000
+						AND = {
+							adm = 4
+							dip = 4
+							mil = 4
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			every_province = {
+				limit = {
+					area = te_waipounamu_area
+					is_empty = yes
+				}
+				cede_province = ROOT
+			}
+		}
+	}
+}
+
+##############################
+####SECOND ROW OF MISSIONS####
+##############################
+hawaii_unify_haw = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		culture_group = pacific
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	hawaii_develop_self = {
+		icon = mission_develop_the_capital
+		position = 1
+		trigger = {
+			total_development = 30
+		}
+		effect = {
+			add_center_of_trade_level = 1
+		}
+	}
+	hawaii_consolidate = {
+		icon = mission_invade_island
+		position = 2
+		required_missions = {
+			hawaii_develop_self
+		}
+		trigger = {
+			capital_scope = {
+				area_for_scope_province = {
+					type = all
+					owned_by = ROOT					#Subjects won't count, empty provinces will need to be colonized.
+				}
+			}
+		}
+		effect = {
+			random_province = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_base_tax = 1
+			}
+		}
+	}
+	hawaii_unite_mainland = {
+		icon = mission_unite_home_region
+		position = 3
+		required_missions = {
+			hawaii_consolidate
+		}
+		trigger = {
+			polynesian_triangle_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			random_province = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_base_tax = 1
+			}
+		}
+	}
+	hawaii_ahupuaa_system = {
+		icon = mission_oceania_royal_marriage
+		position = 4
+		required_missions = {
+			hawaii_unite_mainland
+		}
+		trigger = {
+			if = {
+				limit = {
+					has_any_estates = yes
+				}
+				crown_land_share = 30
+				if = {
+					limit = {
+						has_estate = estate_burghers
+					}
+					estate_loyalty = {
+						estate = estate_burghers
+						loyalty = 60
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_church
+					}
+					estate_loyalty = {
+						estate = estate_church
+						loyalty = 60
+					}
+				}
+				if = {
+					limit = {
+						has_estate = estate_nobles
+					}
+					estate_loyalty = {
+						estate = estate_nobles
+						loyalty = 60
+					}
+				}
+			}
+			else = {
+				stability = 2
+				total_development = 30
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						stability = 3
+					}
+				}
+				add_stability = 1
+				add_adm_power = 50
+				add_dip_power = 50
+				add_mil_power = 50
+			}
+			else = {
+				add_adm_power = 100
+				add_dip_power = 100
+				add_mil_power = 100
+			}
+		}
+	}
+	hawaii_please_the_kaha = {
+		icon = mission_oceania_build_army_mission
+		position = 5
+		required_missions = {
+			hawaii_ahupuaa_system
+		}
+		trigger = {
+			num_of_generals_with_traits = 1
+		}
+		effect = {
+			add_army_tradition = 15
+		}
+	}
+	hawaii_lift_naha = {
+		icon = mission_oceania_dev_capital
+		position = 6
+		required_missions = {
+			hawaii_please_the_kaha
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1240
+				owner = {
+					ROOT = {
+						is_rival = PREV
+					}
+				}
+			}
+		}
+		trigger = {
+			1240 = {
+				country_or_subject_holds = ROOT
+			}
+			OR = {
+				calc_true_if = {
+					amount = 2
+					all_province = {
+						area = northern_polynesia_area
+						owned_by = ROOT
+					}
+				}
+				all_rival_country = {
+					NOT = {
+						army_strength = {
+							who = ROOT
+							value = 0.5
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			northern_polynesia_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	samoa_culture = {
+		icon = mission_polynesian_grand_navy
+		position = 7
+		required_missions = {
+			hawaii_lift_naha
+		}
+		provinces_to_highlight = {
+			region = oceanea_region
+			is_city = yes
+		}
+		trigger = {
+			any_country = {
+				capital_scope = {
+					region = oceanea_region
+				}
+				NOT = {
+					prestige = SAM
+				}
+			}
+			OR = {
+				artist = 2
+				natural_scientist = 2
+				philosopher = 2
+			}
+		}
+		effect = {
+			add_adm_power = 200
+			add_dip_power = 200
+			add_mil_power = 200
+		}
+	}
+	samoa_army = {
+		icon = mission_oceania_build_army_mission
+		position = 8
+		required_missions = {
+			samoa_culture
+		}
+		provinces_to_highlight = {
+			province_id = 1989
+		}
+		trigger = {
+			1989 = {
+				OR = {
+					owner = {
+						is_subject_of = ROOT
+					}
+					owned_by = ROOT
+				}
+			}
+			army_size = 10
+		}
+		effect = {
+			every_known_country = {
+				limit = {
+					OR = {
+						primary_culture = maori
+						primary_culture = melanesian
+						primary_culture = polynesian
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "Mandate of Heaven"
+						}
+					}
+					reverse_add_casus_belli = {
+						target = ROOT
+						type = cb_vassalize_mission
+						months = 300
+					}
+				}
+				else = {
+					reverse_add_casus_belli = {
+						target = ROOT
+						type = cb_force_tributary_mission
+						months = 300
+					}
+				}
+			}
+		}
+	}
+	samoa_tonga = {
+		icon = mission_oceania_royal_marriage
+		position = 9
+		required_missions = {
+			samoa_army
+		}
+		provinces_to_highlight = {
+			province_id = 1989
+		}
+		trigger = {
+			OR = {
+				AND = {
+					TOG = {
+						exists = no
+					}
+					1989 = {
+						owned_by = ROOT
+					}
+				}
+				TOG = {
+					exists = yes
+					is_subject_of = ROOT
+				}
+				AND = {
+					marriage_with = TOG
+					prestige = TOG
+					legitimacy = TOG
+					army_strength = {
+						who = TOG
+						value = 0.5
+					}
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							TOG = {
+								exists = no
+							}
+							1989 = {
+								owned_by = ROOT
+							}
+						}
+						TOG = {
+							exists = yes
+							is_subject_of = ROOT
+						}
+					}
+				}
+				add_prestige = 25
+			}
+			else = {
+				add_prestige = 10
+				add_casus_belli = {
+					target = TOG
+					type = cb_force_tributary_mission
+					months = 300
+				}
+			}
+		}
+	}
+}
+
+#############################
+####THIRD ROW OF MISSIONS####
+#############################
+hawaii_naha_missions = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		culture_group = pacific
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	hawaii_shogunate_mission = {
+		icon = mission_japanese_fort
+		position = 1
+		trigger = {
+			hokkaido_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			japan_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	hawaii_claim_outer = {
+		icon = mission_conquer_kanem_bornu
+		position = 2
+		required_missions = {
+			hawaii_shogunate_mission
+		}
+		trigger = {
+			1020 = {
+				owned_by = root
+			}
+		}
+		effect = {
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
+		}
+	}
+	hawaii_lifted_naha = {
+		icon = mission_mana
+		position = 3
+		required_missions = {
+			hawaii_claim_outer
+		}
+		trigger = {
+			total_development = 200
+		}
+		effect = {
+			add_prestige = 50
+		}
+	}
+	fiji_drua_builders = {
+		icon = mission_polynesian_navy_build
+		position = 4
+		required_missions = {
+			hawaii_lifted_naha
+		}
+		provinces_to_highlight = {
+			owned_by = ROOT
+			has_port = yes
+			NOT = {
+				OR = {
+					has_building = shipyard
+					has_building = grand_shipyard
+				}
+			}
+			num_free_building_slots = 1
+		}
+		trigger = {
+			OR = {
+				AND = {
+					shipyard = 1
+					num_of_light_ship = 5
+				}
+				num_of_light_ship = 15
+			}
+		}
+		effect = {
+			add_treasury = 50
+		}
+	}
+	fiji_vunivalu = {
+		icon = mission_oceania_build_army_mission
+		position = 5
+		required_missions = {
+			fiji_drua_builders
+		}
+		trigger = {
+			army_tradition = 35
+		}
+		effect = {
+			add_yearly_manpower = 0.75
+		}
+	}
+	fiji_island_lords = {
+		icon = mission_oceania_dev_capital
+		position = 6
+		required_missions = {
+			fiji_vunivalu
+		}
+		provinces_to_highlight = {
+			owner = {
+				ROOT = {
+					is_rival = PREV
+				}
+			}
+		}
+		trigger = {
+			OR = {
+				AND = {
+					fiji_area = {
+						type = all
+						country_or_non_sovereign_subject_holds = ROOT
+					}
+					army_size_percentage = 1
+				}
+				AND = {
+					OR = {
+						any_rival_country = {
+							is_threat = ROOT
+						}
+						any_rival_country = {
+							NOT = {
+								land_morale = ROOT
+							}
+						}
+					}
+					all_rival_country = {
+						NOT = {
+							army_strength = {
+								who = ROOT
+								value = 0.5
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			fiji_area = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	fiji_one_nation = {
+		icon = mission_oceania_build_army_mission
+		position = 7
+		required_missions = {
+			fiji_island_lords
+		}
+		provinces_to_highlight = {
+			area = fiji_area
+		}
+		trigger = {
+			fiji_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_estate_loyalty = {
+				estate = estate_burghers
+				loyalty = 10
+			}
+			add_estate_loyalty = {
+				estate = estate_church
+				loyalty = 10
+			}
+			add_estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 10
+			}
+			add_country_modifier = {
+				name = "expansionist_country"
+				duration = 9125				#25 years
+			}
+		}
+	}
+	samoa_empire = {
+		icon = mission_polynesian_navy_build
+		position = 8
+		required_missions = {
+			fiji_one_nation
+		}
+		provinces_to_highlight = {
+			region = oceanea_region
+			is_city = yes
+		}
+		trigger = {
+			OR = {
+				tributary_state = 3
+				vassal = 2
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "polynesian_supremacy"
+				duration = 3650
+			}
+		}
+	}
+	tonga_supremacy = {
+		icon = mission_oceania_dev_capital
+		position = 9
+		required_missions = {
+			samoa_empire
+		}
+		provinces_to_highlight = {
+			region = oceanea_region
+			is_city = yes
+		}
+		trigger = {
+			OR = {
+				tributary_state = 9
+				vassal = 6
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "polynesian_supremacy"
+				duration = -1
+			}
+		}
+	}
+}
+
+##############################
+####FOURTH ROW OF MISSIONS####
+##############################
+hawaii_american_colony_missions = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		culture_group = pacific
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	hawaii_discover_america = {
+		icon = mission_colonize_the_caribbean
+		position = 1
+		trigger = {
+			OR = {
+				north_america = {
+					has_discovered = ROOT
+				}
+				south_america = {
+					has_discovered = ROOT
+				}
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = hawaiian_discovery_of_america
+				duration = 3650
+			}
+		}
+	}
+	hawaii_andes_kahuna = {
+		icon = mission_mana
+		position = 2
+		required_missions = {
+			hawaii_discover_america
+		}
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					colonial_region = colonial_peru
+					religion = ROOT
+				}
+				amount = 9
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = hawaiian_new_world_missionaries
+				duration = 5475
+			}
+			#add claim on coastal peru and panama
+		}
+	}
+	hawaii_panama_dominance = {
+		icon = mission_colonise_brazil
+		position = 3
+		required_missions = {
+			hawaii_andes_kahuna
+		}
+		trigger = {
+			835 = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			brazil_region = {
+				discover_country = ROOT
+			}
+		}
+	}
+	hawaii_further_east_mission = {
+		icon = mission_colonize_the_west
+		position = 4
+		required_missions = {
+			hawaii_panama_dominance
+		}
+		trigger = {
+			venezuela_area = {
+				owned_by = ROOT
+			}
+			835 = {
+				is_strongest_trade_power = ROOT
+			}
+		}
+		effect = {
+			colombia_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	hawaii_expand_triangle = {
+		icon = mission_war_chest
+		position = 5
+		required_missions = {
+			hawaii_further_east_mission
+		}
+		trigger = {
+			835 = {
+				is_strongest_trade_power = ROOT
+			}
+			2021 = {
+				is_strongest_trade_power = ROOT
+			}
+			1551 = {
+				is_strongest_trade_power = ROOT
+			}
+			capital_scope = {
+				region = oceanea_region
+			}
+		}
+		effect = {
+			capital_scope = {
+				add_province_modifier = {
+					name = hawaii_centre_of_trade_modifier
+					duration = -1
+				}
+			}
+		}
+	}
+	hawaii_hub_of_trade_mission = {
+		icon = mission_the_triangle_trade
+		position = 6
+		required_missions = {
+			hawaii_expand_triangle
+		}
+		trigger = {
+			oceanea_region = {
+				owned_by = ROOT
+				has_institution = global_trade
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = hawaii_global_trader
+				duration = -1
+			}
+		}
+	}
+	hawaii_worlds_desire_mission = {
+		icon = mission_war_chest
+		position = 7
+		required_missions = {
+			hawaii_hub_of_trade_mission
+		}
+		trigger = {
+			treasury = 15000
+		}
+		effect = {
+			oceanea_region = {
+				limit = {
+					owned_by = ROOT
+				}
+				add_base_manpower = 1
+				add_base_production = 2
+				add_base_tax = 1
+			}
+		}
+	}
+	tonga_fijian_tributes = {
+		icon = mission_gain_mana
+		position = 8
+		required_missions = {
+			hawaii_worlds_desire_mission
+		}
+		provinces_to_highlight = {
+			province_id = 1243
+		}
+		trigger = {
+			army_size_percentage = 0.95
+			army_tradition = 75
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = tributes_from_polynesia
+				duration = -1
+			}
+		}
+	}
+	tonga_tui_tonga = {
+		icon = mission_polynesian_navy_build
+		position = 9
+		required_missions = {
+			tonga_fijian_tributes
+		}
+		provinces_to_highlight = {
+			area = fiji_area
+		}
+		trigger = {
+			fiji_area = {
+				type = all
+				OR = {
+					owner = {
+						is_subject_of = ROOT
+					}
+					owned_by = ROOT
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = tui_tonga_heritage
+				duration = -1
+			}
+		}
+	}
+}
+
+##############################
+####FIFTH ROW OF MISSIONS####
+##############################
+hawaii_american_colony_second_row_missions = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		culture_group = pacific
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	hawaii_california_mission = {
+		icon = mission_colonize_california
+		position = 1
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					colonial_region = colonial_california
+					OR = {
+						owned_by = ROOT
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+				}
+				amount = 10
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_country_modifier = {
+				name = colonial_enthusiasm
+				duration = 3650
+			}
+			#give claims on mexican coast
+		}
+	}
+	hawaii_mexican_mission = {
+		icon = mission_colonize_the_caribbean
+		position = 2
+		required_missions = {
+			hawaii_california_mission
+		}
+		trigger = {
+			calc_true_if = {
+				all_province = {
+					colonial_region = colonial_mexico
+					OR = {
+						owned_by = ROOT
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+				}
+				amount = 10
+			}
+		}
+		effect = {
+			mexico_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						owner_is_colonial_nation = no
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	hawaii_golden_coast_mission = {
+		icon = mission_colonize_california
+		position = 3
+		required_missions = {
+			hawaii_mexican_mission
+		}
+		trigger = {
+			2021 = {
+				owned_by = ROOT
+			}
+			calc_true_if = {
+				all_province = {
+					OR = {
+						colonial_region = colonial_california
+						colonial_region = colonial_mexico
+					}
+					trade_goods = gold
+					OR = {
+						owned_by = ROOT
+						owner = {
+							is_subject_of = ROOT
+						}
+					}
+				}
+				amount = 10
+			}
+		}
+		effect = {
+			2021 = {
+				change_trade_goods = gold
+				add_province_modifier = {
+					name = golden_coast_hawaii
+					duration = -1
+				}
+			}
+		}
+	}
+	hawaii_triangle_prosperity_mission = {
+		icon = mission_the_triangle_trade
+		position = 4
+		required_missions = {
+			hawaii_golden_coast_mission
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 35
+				OR = {
+					colonial_region = colonial_california
+					colonial_region = colonial_mexico
+					colonial_region = colonial_alaska
+				}
+				is_city = yes
+			}
+		}
+		effect = {
+			cuba_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	hawaii_caribbean_mission = {
+		icon = mission_colonize_the_caribbean
+		position = 5
+		required_missions = {
+			hawaii_triangle_prosperity_mission
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				value = 3
+				OR = {
+					area = cuba_area
+				}
+				is_city = yes
+			}
+			1516 = {
+				trade_share = {
+					country = ROOT
+					share = 15
+				}
+			}
+		}
+		effect = {
+			carribeans_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	hawaii_atlantic_ambitions_mission = {
+		icon = mission_rb_the_thirteen_colonies
+		position = 6
+		required_missions = {
+			hawaii_caribbean_mission
+		}
+		trigger = {
+			carribeans_region = {
+				type = all
+				owned_by = ROOT
+			}
+			europe = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			macaronesia_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			iceland_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			subarctic_islands_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	hawaii_european_colonise_mission = {
+		icon = mission_haka
+		position = 7
+		required_missions = {
+			hawaii_atlantic_ambitions_mission
+		}
+		trigger = {
+			macaronesia_area = {
+				type = all
+				owned_by = ROOT
+			}
+			subarctic_islands_area = {
+				type = all
+				owned_by = ROOT
+			}
+			iceland_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			british_isles_region = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	hawaii_alii_britani_mission = {
+		icon = mission_rb_invade_england
+		position = 8
+		required_missions = {
+			hawaii_european_colonise_mission
+		}
+		trigger = {
+			british_isles_region = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			europe_superregion = {
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+}

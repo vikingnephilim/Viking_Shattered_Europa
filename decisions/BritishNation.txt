@@ -1,25 +1,46 @@
 country_decisions = {
-
 	british_nation = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
-			NOT = { has_country_flag = formed_great_britain_flag }
+			NOT = {
+				has_country_flag = formed_great_britain_flag
+			}
 			was_never_end_game_tag_trigger = yes
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = { exists = GBR }
-			NOT = { exists = WSX }
-			NOT = { exists = LOD }
-			NOT = { exists = WLS }
-			NOT = { exists = NOL }
-			NOT = { exists = EAL }
-			NOT = { exists = SCO }
-			NOT = { tag = PAP }
-			NOT = { tag = HLR }
-			NOT = { tag = BHR }
+			NOT = {
+				exists = GBR
+			}
+			NOT = {
+				exists = WSX
+			}
+			NOT = {
+				exists = LOD
+			}
+			NOT = {
+				exists = WLS
+			}
+			NOT = {
+				exists = NOL
+			}
+			NOT = {
+				exists = EAL
+			}
+			NOT = {
+				exists = SCO
+			}
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				tag = HLR
+			}
+			NOT = {
+				tag = BHR
+			}
 			culture_group = british
 			OR = {
 				ai = no
@@ -39,15 +60,19 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 236		# London
-				province_id = 237		# Oxfordshire
-				province_id = 234		# Wessex
-				province_id = 248		# Lothian
-				province_id = 251		# Aberdeen
+				province_id = 236				# London
+				province_id = 237				# Oxfordshire
+				province_id = 234				# Wessex
+				province_id = 248				# Lothian
+				province_id = 251				# Aberdeen
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		allow = {
@@ -55,12 +80,13 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
-			owns_core_province = 237		# Oxfordshire
-			owns_core_province = 234		# Wessex
-			owns_core_province = 248		# Lothian
-			owns_core_province = 251		# Aberdeen
-			owns_core_province = 236		# London
-			236 = {							# London
+			owns_core_province = 237			# Oxfordshire
+			owns_core_province = 234			# Wessex
+			owns_core_province = 248			# Lothian
+			owns_core_province = 251			# Aberdeen
+			owns_core_province = 236			# London
+			236 = {
+				# London
 				is_state = yes
 			}
 		}
@@ -78,7 +104,7 @@ country_decisions = {
 					}
 					complete_mission = eng_mighty_army
 					complete_mission = conquer_scotland
-				}	
+				}
 			}
 			hidden_effect = {
 				if = {
@@ -88,20 +114,24 @@ country_decisions = {
 					complete_mission = eng_mighty_army
 					complete_mission = conquer_scotland
 					complete_mission = conquer_ireland
-				}	
+				}
 			}
 			change_tag = GBR
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {
-					NOT = { government_rank = 2 }
+					NOT = {
+						government_rank = 2
+					}
 				}
 				set_government_rank = 2
 			}
 			british_isles_region = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = GBR
 			}
@@ -125,8 +155,12 @@ country_decisions = {
 				1979 = {
 					add_permanent_claim = GBR
 				}
-				370 = { add_claim = GBR }
-				371 = { add_claim = GBR }
+				370 = {
+					add_claim = GBR
+				}
+				371 = {
+					add_claim = GBR
+				}
 			}
 			if = {
 				limit = {
@@ -135,15 +169,23 @@ country_decisions = {
 				}
 				west_bengal_area = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							owned_by = ROOT
+						}
 					}
 					add_permanent_claim = GBR
 				}
 			}
 			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}				#Swap Ideas
 			}
 		}
 		ai_will_do = {
@@ -151,13 +193,14 @@ country_decisions = {
 		}
 		ai_importance = 400
 	}
-	
 	british_nation_diplomatically = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { exists = GBR }
+			NOT = {
+				exists = GBR
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -169,9 +212,15 @@ country_decisions = {
 						ai = no
 						AND = {
 							ai = yes
-							SCO = {	is_subject_of = ENG	}
+							SCO = {
+								is_subject_of = ENG
+							}
 							#This overlaps with allow for AI, is meant to negate do_not_integrate
-							SCO = { NOT = { num_of_cities = 15 } } #Keep this number the same as in allow
+							SCO = {
+								NOT = {
+									num_of_cities = 15
+								}
+							}							#Keep this number the same as in allow
 						}
 					}
 				}
@@ -181,9 +230,15 @@ country_decisions = {
 						ai = no
 						AND = {
 							ai = yes
-							ENG = {	is_subject_of = SCO	}
+							ENG = {
+								is_subject_of = SCO
+							}
 							#This overlaps with allow for AI, is meant to negate do_not_integrate
-							ENG = { NOT = { num_of_cities = 41 } } #Keep this number the same as in allow
+							ENG = {
+								NOT = {
+									num_of_cities = 41
+								}
+							}							#Keep this number the same as in allow
 						}
 					}
 				}
@@ -199,18 +254,34 @@ country_decisions = {
 				AND = {
 					tag = ENG
 					OR = {
-						SCO = {	junior_union_with = ENG	}
-						SCO = {	is_subject_of = ENG	}
+						SCO = {
+							junior_union_with = ENG
+						}
+						SCO = {
+							is_subject_of = ENG
+						}
 					}
-					SCO = { NOT = { num_of_cities = 15 } } #Keep this number the same as in potential
+					SCO = {
+						NOT = {
+							num_of_cities = 15
+						}
+					}					#Keep this number the same as in potential
 				}
 				AND = {
 					tag = SCO
 					OR = {
-						ENG = {	junior_union_with = SCO	}
-						ENG = {	is_subject_of = SCO	}
+						ENG = {
+							junior_union_with = SCO
+						}
+						ENG = {
+							is_subject_of = SCO
+						}
 					}
-					ENG = { NOT = { num_of_cities = 41 } } #Keep this number the same as in potential
+					ENG = {
+						NOT = {
+							num_of_cities = 41
+						}
+					}					#Keep this number the same as in potential
 				}
 			}
 		}
@@ -241,32 +312,39 @@ country_decisions = {
 					complete_mission = eng_mighty_army
 					complete_mission = conquer_scotland
 					complete_mission = eng_rb_war_of_roses
-				}	
+				}
 			}
 			change_tag = GBR
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {
-					NOT = { government_rank = 2 }
+					NOT = {
+						government_rank = 2
+					}
 				}
 				set_government_rank = 2
 			}
 			british_isles_region = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = GBR
 			}
 			add_prestige = 25
-			
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
 			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}				#Swap Ideas
 			}
 		}
 		ai_will_do = {
@@ -276,5 +354,4 @@ country_decisions = {
 		do_not_integrate = ENG
 		do_not_integrate = SCO
 	}
-
 }

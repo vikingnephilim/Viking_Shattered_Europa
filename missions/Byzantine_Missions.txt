@@ -936,15 +936,8 @@ GRE_missions_2 = {
 		position = 10
 		icon = mission_alliances
 		trigger = {
-			faction_in_power = gl_democrats
-			custom_trigger_tooltip = {
-				tooltip = "democracy.tooltip"
-				NOT = {
-					has_country_flag = oligarchy
-				}
-				NOT = {
-					has_country_flag = aristocracy
-				}
+			random_ally = {
+				consort_culture = ROOT
 			}
 		}
 		effect = {
