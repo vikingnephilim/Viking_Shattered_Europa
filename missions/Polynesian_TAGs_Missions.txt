@@ -327,7 +327,7 @@ hawaii_unify_haw = {
 			total_development = 30
 		}
 		effect = {
-			add_center_of_trade_level = 1
+			add_stability = 1
 		}
 	}
 	hawaii_consolidate = {
@@ -552,7 +552,7 @@ hawaii_unify_haw = {
 					OR = {
 						primary_culture = maori
 						primary_culture = melanesian
-						primary_culture = polynesian
+						primary_culture = polynesian_c
 					}
 				}
 				if = {
@@ -1162,8 +1162,10 @@ hawaii_american_colony_second_row_missions = {
 			mexico_region = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
 						owner_is_colonial_nation = no
+					}
+					NOT = {
+						owned_by = ROOT
 					}
 				}
 				add_permanent_claim = ROOT

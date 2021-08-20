@@ -18,9 +18,11 @@ carolus_rex_monument = {
 	#can we build it?
 	build_trigger = {
 		OR = {
-			tag = SVJ
-			tag = SWE
-			tag = SCA
+			owner = {
+				tag = SVJ
+				tag = SWE
+				tag = SCA
+			}
 		}
 		AND = {
 			owns_all_provinces = {
@@ -326,8 +328,10 @@ round_temple = {
 	#can we build it?
 	build_trigger = {
 		OR = {
-			tag = KHA
-			tag = MGE
+			owner = {
+				tag = KHA
+				tag = MGE
+			}
 		}
 		AND = {
 			owns_all_provinces = {

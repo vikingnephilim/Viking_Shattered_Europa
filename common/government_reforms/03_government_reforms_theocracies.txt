@@ -7,9 +7,8 @@ theocracy_mechanic = {
 	different_religion_group_acceptance = -50
 	religion = yes
 	heir = yes
-	basic_reform = yes # = invisible/does not take up a slot
+	basic_reform = yes	# = invisible/does not take up a slot
 	valid_for_nation_designer = no
-
 	modifiers = {
 		brahmins_hindu_influence_modifier = 0.1
 		church_loyalty_modifier = 0.1
@@ -20,7 +19,9 @@ theocracy_mechanic = {
 #Leadership
 leading_clergy_reform = {
 	potential = {
-		NOT = { tag = PAP }
+		NOT = {
+			tag = PAP
+		}
 	}
 	allow_normal_conversion = yes
 	legacy_equivalent = theocratic_government
@@ -34,7 +35,9 @@ leading_clergy_reform = {
 
 monastic_order_reform = {
 	potential = {
-		NOT = { tag = PAP }
+		NOT = {
+			tag = PAP
+		}
 	}
 	modifiers = {
 		fort_maintenance_modifier = -0.2
@@ -54,7 +57,6 @@ papacy_reform = {
 	potential = {
 		tag = PAP
 	}
-
 	modifiers = {
 		prestige_per_development_from_conversion = 0.33
 		tolerance_own = 1
@@ -68,14 +70,12 @@ papacy_reform = {
 	allow_convert = no
 	lock_level_when_selected = yes
 	fixed_rank = 2
-
 	custom_attributes = {
 		locked_government_type = yes
 	}
 }
 
 #Internal vs External Mission
-
 internal_mission_reform = {
 	icon = "clergyman"
 	allow_normal_conversion = yes
@@ -129,7 +129,6 @@ mission_to_kill_pirates_reform = {
 }
 
 #Divine Cause
-
 safeguard_holy_sites_reform = {
 	icon = "church"
 	allow_normal_conversion = yes
@@ -168,7 +167,7 @@ kingdom_of_god_reform = {
 		prestige = 1
 		devotion = 1
 		appoint_cardinal_cost = -0.3
-		papal_influence_from_cardinals = 1.0
+		papal_influence_from_cardinals = 1
 	}
 	allow_normal_conversion = yes
 	lock_level_when_selected = yes
@@ -176,7 +175,6 @@ kingdom_of_god_reform = {
 }
 
 #Clergy in Administration
-
 subservient_administrators_reform = {
 	icon = "paper_with_seal"
 	allow_normal_conversion = yes
@@ -254,7 +252,7 @@ monastic_breweries_reform = {
 					limit = {
 						trade_goods = wine
 					}
-					add_province_modifier = { 
+					add_province_modifier = {
 						name = wine_bonus_prod
 						duration = -1
 						hidden = yes
@@ -264,7 +262,7 @@ monastic_breweries_reform = {
 					limit = {
 						trade_goods = grain
 					}
-					add_province_modifier = { 
+					add_province_modifier = {
 						name = grain_bonus_prod
 						duration = -1
 						hidden = yes
@@ -330,7 +328,6 @@ guru_advisors_reform = {
 }
 
 #Secularization
-
 maintain_religious_head_reform = {
 	icon = "nobleman"
 	allow_normal_conversion = yes
@@ -354,11 +351,9 @@ battle_pope_reform = {
 	potential = {
 		has_reform = papacy_reform
 	}
-
 	rulers_can_be_generals = yes
-
 	modifiers = {
-		manpower_in_true_faith_provinces = 0.10
+		manpower_in_true_faith_provinces = 0.1
 		leader_land_fire = 1
 	}
 	ai = {
@@ -403,7 +398,9 @@ crown_leader_reform = {
 	icon = "crown_highlighted"
 	allow_normal_conversion = yes
 	trigger = {
-		NOT = { has_government_attribute_short_desc = locked_government_type }
+		NOT = {
+			has_government_attribute_short_desc = locked_government_type
+		}
 	}
 	effect = {
 		set_country_flag = populists_in_government
@@ -419,7 +416,9 @@ proclaim_republic_reform = {
 	icon = "parliament_highlighted"
 	allow_normal_conversion = yes
 	trigger = {
-		NOT = { has_government_attribute_short_desc = locked_government_type }
+		NOT = {
+			has_government_attribute_short_desc = locked_government_type
+		}
 	}
 	effect = {
 		set_country_flag = populists_in_government
@@ -432,28 +431,26 @@ proclaim_republic_reform = {
 }
 
 #Separation of Powers
-
 clerical_commission_reform = {
 	icon = "clergyman"
 	allow_normal_conversion = yes
 	modifiers = {
 		global_unrest = -1
-		diplomatic_upkeep = 1	
+		diplomatic_upkeep = 1
 	}
-	
 	potential = {
-		NOT = { 
+		NOT = {
 			OR = {
 				has_reform = monastic_order_reform
 				tag = KOJ
 			}
 		}
 	}
-	
 	trigger = {
-		NOT = { has_reform = monastic_order_reform }
+		NOT = {
+			has_reform = monastic_order_reform
+		}
 	}
-	
 	ai = {
 		factor = 1
 	}
@@ -465,15 +462,16 @@ divine_guidance_reform = {
 	modifiers = {
 		max_absolutism = 20
 	}
-	
 	potential = {
-		NOT = { has_reform = monastic_order_reform }
+		NOT = {
+			has_reform = monastic_order_reform
+		}
 	}
-	
 	trigger = {
-		NOT = { has_reform = monastic_order_reform }
+		NOT = {
+			has_reform = monastic_order_reform
+		}
 	}
-	
 	ai = {
 		factor = 1
 	}
@@ -484,29 +482,36 @@ theocratic_democracy_reform = {
 	modifiers = {
 		global_unrest = -1
 	}
-	
 	potential = {
-		NOT = { 
+		NOT = {
 			OR = {
 				has_reform = monastic_order_reform
 				tag = KOJ
 			}
 		}
 	}
-	
 	trigger = {
-		NOT = { has_reform = monastic_order_reform }
+		NOT = {
+			has_reform = monastic_order_reform
+		}
 		if = {
-			limit = { has_dlc = "Common Sense" }
+			limit = {
+				has_dlc = "Common Sense"
+			}
 			OR = {
-				NOT = { has_estate = estate_nobles }
-				crown_stronger_than_estate = { estate = estate_nobles }
+				NOT = {
+					has_estate = estate_nobles
+				}
+				crown_stronger_than_estate = {
+					estate = estate_nobles
+				}
 			}
 		}
 	}
-
 	conditional = {
-		allow = { has_dlc = "Common Sense" }
+		allow = {
+			has_dlc = "Common Sense"
+		}
 		has_parliament = yes
 	}
 	custom_attributes = {
@@ -516,11 +521,15 @@ theocratic_democracy_reform = {
 		factor = 1
 		modifier = {
 			factor = 0.5
-			NOT = { technology_group = western }
+			NOT = {
+				technology_group = western
+			}
 		}
 		modifier = {
 			factor = 0.5
-			NOT = { technology_group = western }
+			NOT = {
+				technology_group = western
+			}
 			NOT = {
 				any_neighbor_country = {
 					technology_group = western
@@ -545,30 +554,35 @@ regionally_elected_commanders = {
 	modifiers = {
 		global_unrest = -1
 	}
-	
 	potential = {
 		OR = {
 			has_reform = monastic_order_reform
 			tag = KOJ
 		}
 	}
-	
 	trigger = {
 		OR = {
 			has_reform = monastic_order_reform
 			tag = KOJ
 		}
 		if = {
-			limit = { has_dlc = "Common Sense" }
+			limit = {
+				has_dlc = "Common Sense"
+			}
 			OR = {
-				NOT = { has_estate = estate_nobles }
-				crown_stronger_than_estate = { estate = estate_nobles }
+				NOT = {
+					has_estate = estate_nobles
+				}
+				crown_stronger_than_estate = {
+					estate = estate_nobles
+				}
 			}
 		}
 	}
-
 	conditional = {
-		allow = { has_dlc = "Common Sense" }
+		allow = {
+			has_dlc = "Common Sense"
+		}
 		has_parliament = yes
 	}
 	custom_attributes = {
@@ -578,11 +592,15 @@ regionally_elected_commanders = {
 		factor = 1
 		modifier = {
 			factor = 0.5
-			NOT = { technology_group = western }
+			NOT = {
+				technology_group = western
+			}
 		}
 		modifier = {
 			factor = 0.5
-			NOT = { technology_group = western }
+			NOT = {
+				technology_group = western
+			}
 			NOT = {
 				any_neighbor_country = {
 					technology_group = western
@@ -608,23 +626,22 @@ monastic_elections_reform = {
 		stability_cost_modifier = -0.1
 		max_absolutism = 20
 	}
-	
 	potential = {
 		OR = {
 			has_reform = monastic_order_reform
 			tag = KOJ
 		}
 	}
-	
 	trigger = {
 		OR = {
 			has_reform = monastic_order_reform
 			tag = KOJ
 		}
 	}
-	
 	conditional = {
-		allow = { has_dlc = "Res Publica" }
+		allow = {
+			has_dlc = "Res Publica"
+		}
 		heir = no
 		election_on_death = yes
 		states_general_mechanic = {
@@ -633,7 +650,6 @@ monastic_elections_reform = {
 				warscore_cost_vs_other_religion = -0.15
 				army_tradition_from_battle = 0.5
 			}
-
 			theocrats = {
 				tolerance_own = 2
 				global_missionary_strength = 0.02
@@ -641,7 +657,6 @@ monastic_elections_reform = {
 			}
 		}
 	}
-	
 	ai = {
 		factor = 1
 	}
@@ -723,11 +738,22 @@ admiral_king_reform = {
 }
 
 #The Nature of Our Faith
-
 church_and_state_reform = {
 	potential = {
 		NOT = {
-			religion_group = pagan
+			religion_group = european_pagan
+		}
+		NOT = {
+			religion_group = asian_pagan
+		}
+		NOT = {
+			religion_group = american_pagan
+		}
+		NOT = {
+			religion_group = ancient_pagan
+		}
+		NOT = {
+			religion_group = african_pagan
 		}
 	}
 	icon = "church_and_state_reform"
@@ -743,7 +769,19 @@ church_and_state_reform = {
 god_and_man_reform = {
 	potential = {
 		NOT = {
-			religion_group = pagan
+			religion_group = european_pagan
+		}
+		NOT = {
+			religion_group = asian_pagan
+		}
+		NOT = {
+			religion_group = american_pagan
+		}
+		NOT = {
+			religion_group = ancient_pagan
+		}
+		NOT = {
+			religion_group = african_pagan
 		}
 	}
 	icon = "religious_leader"
@@ -762,7 +800,11 @@ religious_harmony_reform = {
 	allow_normal_conversion = yes
 	trigger = {
 		OR = {
-			religion_group = pagan
+			religion_group = european_pagan
+			religion_group = asian_pagan
+			religion_group = american_pagan
+			religion_group = ancient_pagan
+			religion_group = african_pagan
 			has_idea_group = humanist_ideas
 		}
 	}
@@ -778,12 +820,23 @@ organising_our_religion_reform = {
 	icon = "organising_our_religion_reform"
 	allow_normal_conversion = yes
 	potential = {
-		religion_group = pagan
+		OR = {
+			religion_group = european_pagan
+			religion_group = asian_pagan
+			religion_group = american_pagan
+			religion_group = ancient_pagan
+			religion_group = african_pagan
+		}
 	}
 	trigger = {
-		religion_group = pagan
+		OR = {
+			religion_group = european_pagan
+			religion_group = asian_pagan
+			religion_group = american_pagan
+			religion_group = ancient_pagan
+			religion_group = african_pagan
+		}
 	}
-	
 	modifiers = {
 		yearly_absolutism = 1
 		devotion = 1
@@ -794,18 +847,41 @@ organising_our_religion_reform = {
 }
 
 #Global Religion
-
 religion_in_one_country_reform = {
 	icon = "rioting_burning_2"
 	allow_normal_conversion = yes
 	potential = {
 		NOT = {
-			religion_group = pagan
+			religion_group = european_pagan
+		}
+		NOT = {
+			religion_group = asian_pagan
+		}
+		NOT = {
+			religion_group = american_pagan
+		}
+		NOT = {
+			religion_group = ancient_pagan
+		}
+		NOT = {
+			religion_group = african_pagan
 		}
 	}
 	trigger = {
 		NOT = {
-			religion_group = pagan
+			religion_group = european_pagan
+		}
+		NOT = {
+			religion_group = asian_pagan
+		}
+		NOT = {
+			religion_group = american_pagan
+		}
+		NOT = {
+			religion_group = ancient_pagan
+		}
+		NOT = {
+			religion_group = african_pagan
 		}
 	}
 	modifiers = {
@@ -821,15 +897,47 @@ religious_permanent_revolution_reform = {
 	allow_normal_conversion = yes
 	force_conversion_gives_global_holy_war_released_modifier = yes
 	potential = {
-		NOT = {
-			religion = confucianism
-			religion_group = pagan
+		AND = {
+			NOT = {
+				religion_group = european_pagan
+			}
+			NOT = {
+				religion_group = asian_pagan
+			}
+			NOT = {
+				religion_group = american_pagan
+			}
+			NOT = {
+				religion_group = ancient_pagan
+			}
+			NOT = {
+				religion_group = african_pagan
+			}
+			NOT = {
+				religion = confucianism
+			}
 		}
 	}
 	trigger = {
-		NOT = {
-			religion = confucianism
-			religion_group = pagan
+		AND = {
+			NOT = {
+				religion_group = european_pagan
+			}
+			NOT = {
+				religion_group = asian_pagan
+			}
+			NOT = {
+				religion_group = american_pagan
+			}
+			NOT = {
+				religion_group = ancient_pagan
+			}
+			NOT = {
+				religion_group = african_pagan
+			}
+			NOT = {
+				religion = confucianism
+			}
 		}
 	}
 	effect = {
@@ -850,7 +958,7 @@ many_fingers_of_god_reform = {
 		has_idea_group = humanist_ideas
 	}
 	modifiers = {
-		tolerance_heretic = 2	
+		tolerance_heretic = 2
 		tolerance_heathen = 2
 	}
 	ai = {
@@ -862,12 +970,23 @@ priestly_autonomy_reform = {
 	icon = "strength_of_the_khalsa"
 	allow_normal_conversion = yes
 	potential = {
-		religion_group = pagan
+		OR = {
+			religion_group = european_pagan
+			religion_group = asian_pagan
+			religion_group = american_pagan
+			religion_group = ancient_pagan
+			religion_group = african_pagan
+		}
 	}
 	trigger = {
-		religion_group = pagan
+		OR = {
+			religion_group = european_pagan
+			religion_group = asian_pagan
+			religion_group = american_pagan
+			religion_group = ancient_pagan
+			religion_group = african_pagan
+		}
 	}
-	
 	modifiers = {
 		governing_capacity = 250
 	}
@@ -880,10 +999,22 @@ proclaim_religious_head_reform = {
 	icon = "shaman"
 	allow_normal_conversion = yes
 	potential = {
-		religion_group = pagan
+		OR = {
+			religion_group = european_pagan
+			religion_group = asian_pagan
+			religion_group = american_pagan
+			religion_group = ancient_pagan
+			religion_group = african_pagan
+		}
 	}
 	trigger = {
-		religion_group = pagan
+		OR = {
+			religion_group = european_pagan
+			religion_group = asian_pagan
+			religion_group = american_pagan
+			religion_group = ancient_pagan
+			religion_group = african_pagan
+		}
 		custom_trigger_tooltip = {
 			tooltip = no_other_head_tt
 			NOT = {

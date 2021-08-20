@@ -73,6 +73,8 @@ consolidate_expand_russia_missions = {
 					4148 = {
 						NOT = {
 							is_permanent_claim = ROOT
+						}
+						NOT = {
 							is_core = ROOT
 						}
 					}
@@ -86,6 +88,8 @@ consolidate_expand_russia_missions = {
 					1777 = {
 						NOT = {
 							is_permanent_claim = ROOT
+						}
+						NOT = {
 							is_core = ROOT
 						}
 					}
@@ -99,6 +103,8 @@ consolidate_expand_russia_missions = {
 					33 = {
 						NOT = {
 							is_permanent_claim = ROOT
+						}
+						NOT = {
 							is_core = ROOT
 						}
 					}
@@ -112,6 +118,8 @@ consolidate_expand_russia_missions = {
 					limit = {
 						NOT = {
 							is_permanent_claim = ROOT
+						}
+						NOT = {
 							is_core = ROOT
 						}
 					}
@@ -123,6 +131,8 @@ consolidate_expand_russia_missions = {
 					limit = {
 						NOT = {
 							is_permanent_claim = ROOT
+						}
+						NOT = {
 							is_core = ROOT
 						}
 					}
@@ -785,7 +795,9 @@ russia_siberian_missions_slot = {
 			if = {
 				limit = {
 					NOT = {
-						tag = RUS
+						has_dlc = "Third Rome"
+					}
+					NOT = {
 						has_dlc = "Third Rome"
 					}
 				}

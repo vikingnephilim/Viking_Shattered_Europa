@@ -2978,7 +2978,13 @@ country_event = {
 	option = {
 		name = "EVTOPTF5060"		# Sacrifice a human heart to appease the comet!
 		trigger = {
-			religion_group = pagan
+			OR = {
+				religion_group = ancient_pagan
+				religion_group = african_pagan
+				religion_group = european_pagan
+				religion_group = asian_pagan
+				religion_group = american_pagan
+			}
 		}
 		if = {
 			limit = {
@@ -3015,9 +3021,11 @@ country_event = {
 	option = {
 		name = "EVTOPTH5060"		# Oh comet, devil's kith and kin...
 		trigger = {
-			NOT = {
-				religion_group = pagan
-			}
+			NOT = {	religion_group = ancient_pagan	}
+			NOT = {	religion_group = african_pagan	}
+			NOT = {	religion_group = european_pagan	}
+			NOT = {	religion_group = asian_pagan }
+			NOT = {	religion_group = american_pagan	}
 		}
 		if = {
 			limit = {
@@ -10955,9 +10963,8 @@ country_event = {
 		}
 		OR = {
 			bengal_region = {
-				NOT = {
-					is_core = ROOT
-					owned_by = ROOT
+				NOT = { is_core = ROOT }
+				NOT = { owned_by = ROOT }
 					owner = {
 						has_country_modifier = dutch_india_trade_co
 						has_country_flag = trade_company
@@ -10997,7 +11004,6 @@ country_event = {
 				}
 			}
 		}
-	}
 	mean_time_to_happen = {
 		days = 1
 	}
@@ -13492,9 +13498,11 @@ country_event = {
 	picture = TRADE_GOODS_METALS_AND_MINING_EQUIPENT_eventPicture
 	trigger = {
 		gold = 1
-		NOT = {
-			religion_group = pagan
-		}
+		NOT = {	religion_group = ancient_pagan	}
+		NOT = {	religion_group = african_pagan	}
+		NOT = {	religion_group = european_pagan	}
+		NOT = {	religion_group = asian_pagan }
+		NOT = {	religion_group = american_pagan	}
 	}
 	is_triggered_only = yes
 	mean_time_to_happen = {

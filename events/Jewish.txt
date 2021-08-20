@@ -13,7 +13,13 @@ country_event = {
 		hidden_effect = {
 			random_province = {
 				limit = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 					NOT = {
 						tolerance_to_this = -2
 					}
@@ -23,7 +29,13 @@ country_event = {
 			random_province = {
 				limit = {
 					province_id = 110
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 					NOT = {
 						tolerance_to_this = -2
 					}
@@ -56,14 +68,26 @@ country_event = {
 			limit = {
 				any_owned_province = {
 					NOT = {
-						religion_group = jewish
+						OR = {
+							religion = sephardic
+							religion = karaite_faith
+							religion = haymanot_faith
+							religion = hasidic_faith
+							religion = samaritan_faith
+						}
 					}
 				}
 			}
 			random_owned_province = {
 				limit = {
 					NOT = {
-						religion_group = jewish
+						OR = {
+							religion = sephardic
+							religion = karaite_faith
+							religion = haymanot_faith
+							religion = hasidic_faith
+							religion = samaritan_faith
+						}
 					}
 				}
 				change_religion = sephardic
@@ -97,7 +121,13 @@ country_event = {
 				save_event_target_as = jewish_massacre_province
 				if = {
 					limit = {
-						religion_group = jewish
+						OR = {
+							religion = sephardic
+							religion = karaite_faith
+							religion = haymanot_faith
+							religion = hasidic_faith
+							religion = samaritan_faith
+						}
 					}
 					change_religion = catholic
 				}
@@ -237,7 +267,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -296,7 +332,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -338,7 +380,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -566,7 +614,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -614,7 +668,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -654,7 +714,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -815,7 +881,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -863,7 +935,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -905,7 +983,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -1134,7 +1218,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -1180,7 +1270,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -1224,7 +1320,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -1391,7 +1493,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -1439,7 +1547,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -1479,7 +1593,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -1666,7 +1786,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -1714,7 +1840,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -1754,7 +1886,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -1863,7 +2001,14 @@ country_event = {
 		custom_tooltip = jewish_events.isolation.tt
 		every_owned_province = {
 			limit = {
-				religion_group = jewish
+				
+				OR = {
+					religion = sephardic
+					religion = karaite_faith
+					religion = haymanot_faith
+					religion = hasidic_faith
+					religion = samaritan_faith
+				}
 			}
 			change_culture = hebrew
 		}
@@ -1938,7 +2083,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -1986,7 +2137,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -2026,7 +2183,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -2310,7 +2473,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -2358,7 +2527,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {
@@ -2398,7 +2573,13 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					religion_group = jewish
+					OR = {
+						religion = sephardic
+						religion = karaite_faith
+						religion = haymanot_faith
+						religion = hasidic_faith
+						religion = samaritan_faith
+					}
 				}
 			}
 			hidden_effect = {

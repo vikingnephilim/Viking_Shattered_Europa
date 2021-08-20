@@ -134,13 +134,11 @@ defined_text = {
         localisation_key = string_bey
         trigger = {
 			religion_group = muslim
-			NOT = {
-				culture_group = eastern_aryan
-				culture_group = hindusthani
-				culture_group = western_aryan
-				culture_group = dravidian
-				culture_group = central_indic
-			}
+			NOT = {	culture_group = eastern_aryan }
+			NOT = {culture_group = hindusthani }
+			NOT = {culture_group = western_aryan }
+			NOT = {culture_group = dravidian }
+			NOT = {culture_group = central_indic }
         }
 	}
 	text = {
@@ -198,17 +196,16 @@ defined_text = {
         localisation_key = string_official
         trigger = {
 			NOT = { religion_group = muslim }
-			NOT = {
-				culture_group = east_asian
-				culture_group = eastern_aryan
-				culture_group = hindusthani
-				culture_group = western_aryan
-				culture_group = dravidian
-				culture_group = central_indic
-				culture_group = south_slavic
-				culture_group = british
-				culture_group = french
-				culture_group = germanic
+			NOT = { culture_group = east_asian }
+			NOT = { culture_group = eastern_aryan }
+			NOT = { culture_group = hindusthani }
+			NOT = { culture_group = western_aryan }
+			NOT = { culture_group = dravidian }
+			NOT = { culture_group = central_indic }
+			NOT = { culture_group = south_slavic }
+			NOT = { culture_group = british }
+			NOT = { culture_group = french }
+			NOT = { culture_group = germanic }
 			}
         }
 	}

@@ -106,9 +106,13 @@ feudal_monarchy = {
 		factor = 2
 		modifier = {
 			factor = 0
-			NOT = {
-				has_idea_group = aristocracy_ideas
-				has_reform = feudal_monarchy
+			AND = {
+				NOT = {
+					has_reform = feudal_monarchy
+				}
+				NOT = {
+					has_idea_group = aristocracy_ideas
+				}
 			}
 		}
 	}
@@ -782,17 +786,15 @@ administrative_republic = {
 		factor = 1
 		modifier = {
 			factor = 0
+			NOT = { has_reform = merchant_republic }
 			NOT = {
-				AND = {
-					has_reform = merchant_republic
-					capital_scope = { has_port = no }
-				}
-				AND = {
-					has_reform = republican_dictatorship
-					NOT = { dip = 4 }
-					NOT = { adm = 4 }
-					NOT = { mil = 4 }
-				}
+				capital_scope = { has_port = no }
+			}
+			AND = {
+				has_reform = republican_dictatorship
+				NOT = { dip = 4 }
+				NOT = { adm = 4 }
+				NOT = { mil = 4 }
 			}
 		}
 	}

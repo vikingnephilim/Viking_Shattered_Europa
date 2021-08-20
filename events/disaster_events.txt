@@ -223,7 +223,6 @@ country_event = {
 		SAA = {
 			capital_scope = {
 				hidden_effect = {
-					remove_accepted_culture = SAA
 					if = {
 						limit = {
 							culture = west_germanic_south_african
@@ -304,13 +303,18 @@ country_event = {
 							change_primary_culture = old_norse_south_african
 						}
 					}
-					else = {
+					else_if = {
 						limit = {
 							culture = maghrebi_south_african
 						}
 						PREV = {
 							change_primary_culture = maghrebi_south_african
 						}
+					}
+					else = {
+						add_base_tax = 1
+						add_base_production = 1
+						add_base_manpower = 1
 					}
 				}
 				random_owned_province = {

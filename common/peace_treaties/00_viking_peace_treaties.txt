@@ -755,7 +755,7 @@ viking_hre_religious_commotion = {
 			set_hre_religion = waldensian
 			set_hre_heretic_religion = protestant
 		}
-		else = {
+		else_if= {
 			limit = {
 				religion = waldensian
 				FROM = {
@@ -764,6 +764,9 @@ viking_hre_religious_commotion = {
 			}
 			set_hre_religion = waldensian
 			set_hre_heretic_religion = reformed
+		}
+		else = {
+			add_prestige = 100
 		}
 	}
 	ai_weight = {

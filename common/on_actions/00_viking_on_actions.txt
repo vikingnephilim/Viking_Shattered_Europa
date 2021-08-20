@@ -1,0 +1,39 @@
+#When adding effects directly in on_actions always consider if it would be best to do so through a scripted effect. on_actions with a lot of script in them are harder to get an overview of.
+on_harmonized_zen = {
+	events = {
+		confucian_events.22
+	}
+}
+on_harmonized_tantra = {
+	events = {
+		confucian_events.23
+	}
+}
+on_harmonized_taoism = {
+	events = {
+		confucian_events.24
+	}
+}
+on_harmonized_confucianism = {
+	events = {
+		confucian_events.25
+	}
+}
+# country
+on_general_recruited = {
+	add_army_professionalism = 0.01
+	add_army_tradition = 1
+}
+# country
+on_admiral_recruited = {
+	add_navy_tradition = 1
+}
+# country
+on_conquistador_recruited = {
+	add_army_professionalism = 0.01
+	add_army_tradition = 1
+}
+# country
+on_explorer_recruited = {
+	add_navy_tradition = 1
+}

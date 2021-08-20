@@ -1639,6 +1639,7 @@ arch_duchy_reform = {
 crown_of_saint_wenceslaus = {
 	icon = crown_of_saint_wenceslaus
 	allow_normal_conversion = yes
+	fixed_rank = 2
 	potential = {
 		OR = {
 			tag = BOH
@@ -1661,7 +1662,6 @@ crown_of_saint_wenceslaus = {
 		allow = {
 			has_dlc = "Res Publica"
 		}
-		fixed_rank = 2
 		queen = yes
 		heir = no
 		duration = 100
@@ -1684,6 +1684,7 @@ polish_constitutionalism_reform = {
 	allow_normal_conversion = yes
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
+	has_parliament = yes
 	fixed_rank = 2
 	nation_designer_cost = 100
 	potential = {
@@ -1723,7 +1724,6 @@ polish_constitutionalism_reform = {
 		administrative_efficiency = 0.05
 		max_absolutism = -10
 	}
-	has_parliament = yes
 	ai = {
 		factor = 100
 	}
@@ -1973,7 +1973,7 @@ norse_reform_snotra = {
 	fixed_rank = 2
 	modifiers = {
 		governing_capacity_modifier = 0.33
-		monthly_reform_progress_modifier = 0.25
+		institution_spread_from_true_faith = 0.25
 		monarch_diplomatic_power = 2
 	}
 	potential = {
@@ -3459,28 +3459,28 @@ achaemenid_empire_reform = {
 		}
 		AND = {
 			OR = {
-				religion_group = zoroastrian
+				religion_group = zoroastrian_group
 				religion = zun_pagan_reformed
 				has_reform = achaemenid_empire_reform
 			}
 			OR = {
 				culture_group = iranian
 				culture_group = east_iranian
-				culture_group = persian
+				culture_group = west_persian
 			}
 		}
 	}
 	trigger = {
 		AND = {
 			OR = {
-				religion_group = zoroastrian
+				religion_group = zoroastrian_group
 				religion = zun_pagan_reformed
 				has_reform = achaemenid_empire_reform
 			}
 			OR = {
 				culture_group = iranian
 				culture_group = east_iranian
-				culture_group = persian
+				culture_group = west_persian
 			}
 		}
 	}
@@ -3648,7 +3648,7 @@ imperial_veche_republic = {
 			religion = orthodox
 			religion = paulician
 			religion = iconoclast
-			religion = monotite
+			religion = monothelite
 			religion = bogomilist
 		}
 		AND = {
@@ -4063,7 +4063,7 @@ phon_empire = {
 		tolerance_heathen = 3
 		may_perform_slave_raid = yes
 	}
-	fixed_rank = 23
+	fixed_rank = 3
 	custom_attributes = {
 		locked_government_type = yes
 		enables_plutocratic_idea_group = yes

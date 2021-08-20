@@ -4,29 +4,28 @@ GRE_missions_1 = {
 	ai = yes
 	potential = {
 		culture_group = byzantine
-		NOT = {
-			tag = RUM
-			tag = AYD
-			was_tag = AYD
-			tag = CND
-			was_tag = CND
-			tag = DUL
-			was_tag = DUL
-			tag = ERE
-			was_tag = ERE
-			tag = GRM
-			was_tag = GRM
-			tag = KAR
-			was_tag = KAR
-			tag = MEN
-			was_tag = MEN
-			tag = OSM
-			was_tag = OSM
-			tag = RAM
-			was_tag = RAM
-			tag = SRU
-			was_tag = SRU
-		}
+		NOT = { tag = RUM }
+		NOT = { was_tag = RUM }
+		NOT = { tag = AYD }
+		NOT = { was_tag = AYD }
+		NOT = { tag = CND }
+		NOT = { was_tag = CND }
+		NOT = { tag = DUL }
+		NOT = { was_tag = DUL }
+		NOT = { tag = ERE }
+		NOT = { was_tag = ERE }
+		NOT = { tag = GRM }
+		NOT = { was_tag = GRM }
+		NOT = { tag = KAR }
+		NOT = { was_tag = KAR }
+		NOT = { tag = MEN }
+		NOT = { was_tag = MEN }
+		NOT = { tag = OSM }
+		NOT = { was_tag = OSM }
+		NOT = { tag = RAM }
+		NOT = { was_tag = RAM }
+		NOT = { tag = SRU }
+		NOT = { was_tag = SRU }
 	}
 	has_country_shield = yes
 	become_a_league = {
@@ -239,7 +238,6 @@ GRE_missions_1 = {
 			}
 		}
 		effect = {
-			complete_mission = epi_morea
 			capital_scope = {
 				add_base_tax = 1
 				add_base_production = 1
@@ -429,7 +427,7 @@ GRE_missions_1 = {
 	NAX_initial_fortifications = {
 		icon = mission_portuguese_oman
 		required_missions = {
-			CEP_nax_minor_asia
+			epi_anatolia
 		}
 		position = 9
 		provinces_to_highlight = {
@@ -535,29 +533,28 @@ GRE_missions_2 = {
 	ai = yes
 	potential = {
 		culture_group = byzantine
-		NOT = {
-			tag = RUM
-			tag = AYD
-			was_tag = AYD
-			tag = CND
-			was_tag = CND
-			tag = DUL
-			was_tag = DUL
-			tag = ERE
-			was_tag = ERE
-			tag = GRM
-			was_tag = GRM
-			tag = KAR
-			was_tag = KAR
-			tag = MEN
-			was_tag = MEN
-			tag = OSM
-			was_tag = OSM
-			tag = RAM
-			was_tag = RAM
-			tag = SRU
-			was_tag = SRU
-		}
+		NOT = { tag = RUM }
+		NOT = { was_tag = RUM }
+		NOT = { tag = AYD }
+		NOT = { was_tag = AYD }
+		NOT = { tag = CND }
+		NOT = { was_tag = CND }
+		NOT = { tag = DUL }
+		NOT = { was_tag = DUL }
+		NOT = { tag = ERE }
+		NOT = { was_tag = ERE }
+		NOT = { tag = GRM }
+		NOT = { was_tag = GRM }
+		NOT = { tag = KAR }
+		NOT = { was_tag = KAR }
+		NOT = { tag = MEN }
+		NOT = { was_tag = MEN }
+		NOT = { tag = OSM }
+		NOT = { was_tag = OSM }
+		NOT = { tag = RAM }
+		NOT = { was_tag = RAM }
+		NOT = { tag = SRU }
+		NOT = { was_tag = SRU }
 	}
 	has_country_shield = yes
 	NAX_troubling_tides = {
@@ -1029,29 +1026,28 @@ GRE_missions_3 = {
 	ai = yes
 	potential = {
 		culture_group = byzantine
-		NOT = {
-			tag = RUM
-			tag = AYD
-			was_tag = AYD
-			tag = CND
-			was_tag = CND
-			tag = DUL
-			was_tag = DUL
-			tag = ERE
-			was_tag = ERE
-			tag = GRM
-			was_tag = GRM
-			tag = KAR
-			was_tag = KAR
-			tag = MEN
-			was_tag = MEN
-			tag = OSM
-			was_tag = OSM
-			tag = RAM
-			was_tag = RAM
-			tag = SRU
-			was_tag = SRU
-		}
+		NOT = { tag = RUM }
+		NOT = { was_tag = RUM }
+		NOT = { tag = AYD }
+		NOT = { was_tag = AYD }
+		NOT = { tag = CND }
+		NOT = { was_tag = CND }
+		NOT = { tag = DUL }
+		NOT = { was_tag = DUL }
+		NOT = { tag = ERE }
+		NOT = { was_tag = ERE }
+		NOT = { tag = GRM }
+		NOT = { was_tag = GRM }
+		NOT = { tag = KAR }
+		NOT = { was_tag = KAR }
+		NOT = { tag = MEN }
+		NOT = { was_tag = MEN }
+		NOT = { tag = OSM }
+		NOT = { was_tag = OSM }
+		NOT = { tag = RAM }
+		NOT = { was_tag = RAM }
+		NOT = { tag = SRU }
+		NOT = { was_tag = SRU }
 	}
 	has_country_shield = yes
 	gre_pride = {
@@ -1511,7 +1507,7 @@ GRE_missions_3 = {
 		}
 		effect = {
 			change_government = republic
-			add_government_reform = greek_league_reform
+			add_government_reform = grk_demo
 			add_country_modifier = {
 				name = became_a_league_gre
 				duration = 3650

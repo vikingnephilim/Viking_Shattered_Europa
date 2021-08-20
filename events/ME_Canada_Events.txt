@@ -238,7 +238,7 @@ country_event = {
 		}
 		add_prestige = -20
 		create_subject = {
-			subject_type = autonomous_dominion
+			subject_type = vassal
 			subject = FROM
 		}
 	}
@@ -4906,10 +4906,7 @@ country_event = {
 	picture = CITY_DEVELOPMENT_eventPicture
 	hidden = yes
 	trigger = {
-		faction_influence = {
-			faction = can_quebecois_party
-			influence = 30
-		}
+		prestige = 75
 		AND = {
 			NOT = {
 				has_country_flag = canada_quebecois_party_1
