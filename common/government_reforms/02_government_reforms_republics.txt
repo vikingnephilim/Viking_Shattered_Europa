@@ -101,19 +101,25 @@ south_african_parliament_reform = {
 		max_absolutism = -20
 	}
 	conditional = {
-		has_parliament = yes
+		allow = {
+			has_dlc = "Res Publica"
+		}
+		states_general_mechanic = {
+			conservatives = {
+				native_uprising_chance = -0.5
+				harsh_treatment_cost = -0.2
+				stability_cost_modifier = -0.1
+			}
+			liberalists = {
+				promote_culture_cost = -0.25
+				core_creation = -0.1
+				state_maintenance_modifier = -0.25
+			}
+		}
 	}
-	states_general_mechanic = {
-		conservatives = {
-			native_uprising_chance = -0.5
-			harsh_treatment_cost = -0.2
-			stability_cost_modifier = -0.1
-		}
-		liberalists = {
-			promote_culture_cost = -0.25
-			core_creation = -0.1
-			state_maintenance_modifier = -0.25
-		}
+	conditional = {
+		allow = { has_dlc = "Common Sense" }
+		has_parliament = yes
 	}
 	custom_attributes = {
 		locked_government_type = yes

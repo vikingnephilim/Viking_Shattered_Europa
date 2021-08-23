@@ -89,7 +89,7 @@ hawaii_mil_missions = {
 		}
 	}
 	maori_haka = {
-		icon = mission_oceania_assemble_an_army
+		icon = oceania_assemble_an_army
 		position = 6
 		required_missions = {
 			hawaii_muskets
@@ -111,30 +111,11 @@ hawaii_mil_missions = {
 				limit = {
 					is_rival = ROOT
 				}
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Mandate of Heaven"
-						}
-					}
-					add_casus_belli = {
-						target = FROM
-						type = cb_vassalize_mission
-						months = 300
-					}
-				}
-				else = {
-					add_casus_belli = {
-						target = FROM
-						type = cb_force_tributary_mission
-						months = 300
-					}
-				}
 			}
 		}
 	}
 	maori_riri = {
-		icon = mission_oceania_build_army_mission
+		icon = oceania_build_army_mission
 		position = 7
 		required_missions = {
 			maori_haka
@@ -184,25 +165,6 @@ hawaii_mil_missions = {
 					limit = {
 						is_rival = ROOT
 					}
-					if = {
-						limit = {
-							NOT = {
-								has_dlc = "Mandate of Heaven"
-							}
-						}
-						reverse_add_casus_belli = {
-							target = ROOT
-							type = cb_vassalize_mission
-							months = 300
-						}
-					}
-					else = {
-						reverse_add_casus_belli = {
-							target = ROOT
-							type = cb_force_tributary_mission
-							months = 300
-						}
-					}
 				}
 			}
 			else = {
@@ -212,7 +174,7 @@ hawaii_mil_missions = {
 		}
 	}
 	maori_ka_mate = {
-		icon = mission_gain_mana
+		icon = mission_mana
 		position = 8
 		required_missions = {
 			maori_riri
@@ -375,7 +337,7 @@ hawaii_unify_haw = {
 		}
 	}
 	hawaii_ahupuaa_system = {
-		icon = mission_oceania_royal_marriage
+		icon = oceania_royal_marriage
 		position = 4
 		required_missions = {
 			hawaii_unite_mainland
@@ -439,7 +401,7 @@ hawaii_unify_haw = {
 		}
 	}
 	hawaii_please_the_kaha = {
-		icon = mission_oceania_build_army_mission
+		icon = oceania_build_army_mission
 		position = 5
 		required_missions = {
 			hawaii_ahupuaa_system
@@ -452,7 +414,7 @@ hawaii_unify_haw = {
 		}
 	}
 	hawaii_lift_naha = {
-		icon = mission_oceania_dev_capital
+		icon = oceania_dev_capital
 		position = 6
 		required_missions = {
 			hawaii_please_the_kaha
@@ -496,7 +458,7 @@ hawaii_unify_haw = {
 		}
 	}
 	samoa_culture = {
-		icon = mission_polynesian_grand_navy
+		icon = polynesian_grand_navy
 		position = 7
 		required_missions = {
 			hawaii_lift_naha
@@ -527,7 +489,7 @@ hawaii_unify_haw = {
 		}
 	}
 	samoa_army = {
-		icon = mission_oceania_build_army_mission
+		icon = oceania_build_army_mission
 		position = 8
 		required_missions = {
 			samoa_culture
@@ -555,30 +517,11 @@ hawaii_unify_haw = {
 						primary_culture = polynesian_c
 					}
 				}
-				if = {
-					limit = {
-						NOT = {
-							has_dlc = "Mandate of Heaven"
-						}
-					}
-					reverse_add_casus_belli = {
-						target = ROOT
-						type = cb_vassalize_mission
-						months = 300
-					}
-				}
-				else = {
-					reverse_add_casus_belli = {
-						target = ROOT
-						type = cb_force_tributary_mission
-						months = 300
-					}
-				}
 			}
 		}
 	}
 	samoa_tonga = {
-		icon = mission_oceania_royal_marriage
+		icon = oceania_royal_marriage
 		position = 9
 		required_missions = {
 			samoa_army
@@ -612,33 +555,7 @@ hawaii_unify_haw = {
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					OR = {
-						AND = {
-							TOG = {
-								exists = no
-							}
-							1989 = {
-								owned_by = ROOT
-							}
-						}
-						TOG = {
-							exists = yes
-							is_subject_of = ROOT
-						}
-					}
-				}
 				add_prestige = 25
-			}
-			else = {
-				add_prestige = 10
-				add_casus_belli = {
-					target = TOG
-					type = cb_force_tributary_mission
-					months = 300
-				}
-			}
 		}
 	}
 }
@@ -707,7 +624,7 @@ hawaii_naha_missions = {
 		}
 	}
 	fiji_drua_builders = {
-		icon = mission_polynesian_navy_build
+		icon = polynesian_navy_build
 		position = 4
 		required_missions = {
 			hawaii_lifted_naha
@@ -737,7 +654,7 @@ hawaii_naha_missions = {
 		}
 	}
 	fiji_vunivalu = {
-		icon = mission_oceania_build_army_mission
+		icon = oceania_build_army_mission
 		position = 5
 		required_missions = {
 			fiji_drua_builders
@@ -750,7 +667,7 @@ hawaii_naha_missions = {
 		}
 	}
 	fiji_island_lords = {
-		icon = mission_oceania_dev_capital
+		icon = oceania_dev_capital
 		position = 6
 		required_missions = {
 			fiji_vunivalu
@@ -800,7 +717,7 @@ hawaii_naha_missions = {
 		}
 	}
 	fiji_one_nation = {
-		icon = mission_oceania_build_army_mission
+		icon = oceania_build_army_mission
 		position = 7
 		required_missions = {
 			fiji_island_lords
@@ -834,7 +751,7 @@ hawaii_naha_missions = {
 		}
 	}
 	samoa_empire = {
-		icon = mission_polynesian_navy_build
+		icon = polynesian_navy_build
 		position = 8
 		required_missions = {
 			fiji_one_nation
@@ -857,7 +774,7 @@ hawaii_naha_missions = {
 		}
 	}
 	tonga_supremacy = {
-		icon = mission_oceania_dev_capital
+		icon = oceania_dev_capital
 		position = 9
 		required_missions = {
 			samoa_empire
@@ -1019,6 +936,8 @@ hawaii_american_colony_missions = {
 		trigger = {
 			oceanea_region = {
 				owned_by = ROOT
+			}
+			ROOT = {
 				has_institution = global_trade
 			}
 		}
@@ -1050,7 +969,7 @@ hawaii_american_colony_missions = {
 		}
 	}
 	tonga_fijian_tributes = {
-		icon = mission_gain_mana
+		icon = mission_mana
 		position = 8
 		required_missions = {
 			hawaii_worlds_desire_mission
@@ -1071,7 +990,7 @@ hawaii_american_colony_missions = {
 		}
 	}
 	tonga_tui_tonga = {
-		icon = mission_polynesian_navy_build
+		icon = polynesian_navy_build
 		position = 9
 		required_missions = {
 			tonga_fijian_tributes

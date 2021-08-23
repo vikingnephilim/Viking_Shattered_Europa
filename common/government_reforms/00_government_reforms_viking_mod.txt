@@ -48,30 +48,53 @@ irish_clan = {
 	icon = "king"
 	allow_normal_conversion = yes
 	potential = {
-		AND = {
-			OR = {
-				tag = MCM
-				tag = LEI
-				tag = DMS
-				tag = ORD
-				tag = ULS
-				tag = TYR
-				tag = TRY
-				tag = SLN
-				tag = CNN
-				tag = KID
-				tag = MNS
-				tag = FLY
-			}
-			NOT = {
-				tag = IRE
-			}
-			NOT = {
-				religion = norse_pagan_reformed
-			}
-			NOT = {
-				religion = hellenic_pagan
-			}
+		OR = {
+			tag = MCM
+			tag = LEI
+			tag = DMS
+			tag = ORD
+			tag = ULS
+			tag = TYR
+			tag = TRY
+			tag = SLN
+			tag = CNN
+			tag = KID
+			tag = MNS
+			tag = FLY
+		}
+		NOT = {
+			tag = IRE
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+	}	
+	trigger = {
+		OR = {
+			tag = MCM
+			tag = LEI
+			tag = DMS
+			tag = ORD
+			tag = ULS
+			tag = TYR
+			tag = TRY
+			tag = SLN
+			tag = CNN
+			tag = KID
+			tag = MNS
+			tag = FLY
+		}
+		NOT = {
+			tag = IRE
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
 		}
 	}
 	valid_for_nation_designer = yes
@@ -355,9 +378,9 @@ baltic_tribal_fed = {
 	allow_normal_conversion = yes
 	potential = {
 		OR = {
-		religion = baltic_pagan_reformed
-		religion = slavic_pagan_reformed
-		religion = finnish_pagan_reformed
+			religion = baltic_pagan_reformed
+			religion = slavic_pagan_reformed
+			religion = finnish_pagan_reformed
 		}
 		tag = BLT
 		NOT = {
@@ -992,19 +1015,25 @@ expanded_devshirme_reform = {
 			culture_group = turkish_g
 			has_reform = expanded_devshirme_reform
 		}
-		NOT = { religion = norse_pagan_reformed }
+		NOT = {
+			religion = norse_pagan_reformed
+		}
 	}
 	trigger = {
 		OR = {
 			culture_group = turkish_g
 			has_reform = expanded_devshirme_reform
 		}
-		NOT = { religion = norse_pagan_reformed }
+		NOT = {
+			religion = norse_pagan_reformed
+		}
 	}
 	modifiers = {
-		manpower_recovery_speed = 0.10
+		manpower_recovery_speed = 0.1
 	}
-	government_abilities = { iqta_mechanic }
+	government_abilities = {
+		iqta_mechanic
+	}
 	custom_attributes = {
 		has_pashas = yes
 		maintain_dynasty = yes
@@ -1684,7 +1713,6 @@ polish_constitutionalism_reform = {
 	allow_normal_conversion = yes
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
-	has_parliament = yes
 	fixed_rank = 2
 	nation_designer_cost = 100
 	potential = {
@@ -1723,6 +1751,12 @@ polish_constitutionalism_reform = {
 		monarch_admin_power = 1
 		administrative_efficiency = 0.05
 		max_absolutism = -10
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
 	}
 	ai = {
 		factor = 100
@@ -2323,6 +2357,9 @@ mamluk_government = {
 		nobles_influence_modifier = 0.1
 	}
 	conditional = {
+		allow = {
+			has_dlc = "Cradle of Civilization"
+		}
 		government_abilities = {
 			mamluk_mechanic
 		}
@@ -3076,6 +3113,9 @@ ottoman_government = {
 		locked_government_type = yes
 	}
 	conditional = {
+		allow = {
+			has_dlc = "Cradle of Civilization"
+		}
 		has_pashas = yes
 	}
 	conditional = {
@@ -3558,11 +3598,19 @@ rum_eagle_reform = {
 	custom_attributes = {
 	}
 	conditional = {
+		allow = {
+			has_dlc = "Cradle of Civilization"
+		}
 		government_abilities = {
 			iqta_mechanic
 		}
 		heir = no
 		has_pashas = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Cradle of Civilization"
+		}
 		foreign_slave_rulers = yes
 	}
 	ai = {
@@ -3864,9 +3912,14 @@ hat_slave_state = {
 	duration = 4
 	has_term_election = yes
 	conditional = {
+		allow = {
+			has_dlc = "Cradle of Civilization"
+		}
 		government_abilities = {
 			mamluk_mechanic
 		}
+		heir = no
+		foreign_slave_rulers = yes
 	}
 }
 
@@ -3885,14 +3938,23 @@ arg_rep = {
 		advisor_cost = -0.1
 		max_absolutism = -40
 	}
-	states_general_mechanic = {
-		federalists = {
-			global_tax_modifier = 0.1
-			global_trade_goods_size_modifier = 0.1
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
 		}
-		centralists = {
-			general_cost = -0.2
-			land_morale = 0.1
+		queen = no
+		heir = no
+		duration = 4
+		has_term_election = yes
+		states_general_mechanic = {
+			federalists = {
+				global_tax_modifier = 0.1
+				global_trade_goods_size_modifier = 0.1
+			}
+			centralists = {
+				general_cost = -0.2
+				land_morale = 0.1
+			}
 		}
 	}
 	duration = 5
@@ -3943,14 +4005,23 @@ cam_rep = {
 		development_cost = -0.1
 		max_absolutism = -40
 	}
-	states_general_mechanic = {
-		federalists = {
-			global_tax_modifier = 0.2
-			global_trade_goods_size_modifier = 0.1
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
 		}
-		centralists = {
-			siege_ability = 0.1
-			discipline = 0.05
+		queen = no
+		heir = no
+		duration = 4
+		has_term_election = yes
+		states_general_mechanic = {
+			federalists = {
+				global_tax_modifier = 0.2
+				global_trade_goods_size_modifier = 0.1
+			}
+			centralists = {
+				siege_ability = 0.1
+				discipline = 0.05
+			}
 		}
 	}
 	duration = 4
@@ -3967,7 +4038,12 @@ balt_trib_fed = {
 	}
 	modifiers = {
 	}
-	militarised_society = yes
+	conditional = {
+		allow = {
+			has_dlc = "Rights of Man"
+		}
+		militarised_society = yes
+	}
 }
 
 rep_gran_colo = {
@@ -3984,7 +4060,12 @@ rep_gran_colo = {
 		leader_land_fire = 1
 		leader_land_shock = 1
 	}
-	militarised_society = yes
+	conditional = {
+		allow = {
+			has_dlc = "Rights of Man"
+		}
+		militarised_society = yes
+	}
 }
 
 phon_city_state = {
@@ -4061,7 +4142,6 @@ phon_empire = {
 		reduced_liberty_desire = 25
 		tolerance_heretic = 3
 		tolerance_heathen = 3
-		may_perform_slave_raid = yes
 	}
 	fixed_rank = 3
 	custom_attributes = {

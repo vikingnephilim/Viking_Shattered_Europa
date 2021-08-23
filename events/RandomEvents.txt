@@ -3021,11 +3021,21 @@ country_event = {
 	option = {
 		name = "EVTOPTH5060"		# Oh comet, devil's kith and kin...
 		trigger = {
-			NOT = {	religion_group = ancient_pagan	}
-			NOT = {	religion_group = african_pagan	}
-			NOT = {	religion_group = european_pagan	}
-			NOT = {	religion_group = asian_pagan }
-			NOT = {	religion_group = american_pagan	}
+			NOT = {
+				religion_group = ancient_pagan
+			}
+			NOT = {
+				religion_group = african_pagan
+			}
+			NOT = {
+				religion_group = european_pagan
+			}
+			NOT = {
+				religion_group = asian_pagan
+			}
+			NOT = {
+				religion_group = american_pagan
+			}
 		}
 		if = {
 			limit = {
@@ -10963,47 +10973,59 @@ country_event = {
 		}
 		OR = {
 			bengal_region = {
-				NOT = { is_core = ROOT }
-				NOT = { owned_by = ROOT }
-					owner = {
-						has_country_modifier = dutch_india_trade_co
-						has_country_flag = trade_company
-					}
-				}
-				any_neighbor_province = {
-					owned_by = ROOT
-					is_core = ROOT
-				}
-			}
-			coromandel_region = {
 				NOT = {
 					is_core = ROOT
-					owned_by = ROOT
-					owner = {
-						has_country_modifier = dutch_india_trade_co
-						has_country_flag = trade_company
-					}
 				}
-				any_neighbor_province = {
+				NOT = {
 					owned_by = ROOT
-					is_core = ROOT
+				}
+				owner = {
+					has_country_modifier = dutch_india_trade_co
+					has_country_flag = trade_company
 				}
 			}
-			west_india_region = {
-				NOT = {
-					is_core = ROOT
-					owned_by = ROOT
-					owner = {
-						has_country_modifier = dutch_india_trade_co
-						has_country_flag = trade_company
-					}
-				}
-				any_neighbor_province = {
-					owned_by = ROOT
-					is_core = ROOT
-				}
+			any_neighbor_province = {
+				owned_by = ROOT
+				is_core = ROOT
 			}
 		}
+		coromandel_region = {
+			NOT = {
+				is_core = ROOT
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+			NOT = {
+				owner = {
+					has_country_modifier = dutch_india_trade_co
+					has_country_flag = trade_company
+				}
+			}
+			any_neighbor_province = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+		west_india_region = {
+			NOT = {
+				is_core = ROOT
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+			NOT = {
+				owner = {
+					has_country_modifier = dutch_india_trade_co
+					has_country_flag = trade_company
+				}
+			}
+			any_neighbor_province = {
+				owned_by = ROOT
+				is_core = ROOT
+			}
+		}
+	}
 	mean_time_to_happen = {
 		days = 1
 	}
@@ -11022,7 +11044,11 @@ country_event = {
 				}
 				NOT = {
 					is_core = ROOT
+				}
+				NOT = {
 					owned_by = ROOT
+				}
+				NOT = {
 					owner = {
 						has_country_modifier = dutch_india_trade_co
 						has_country_flag = trade_company
@@ -12570,6 +12596,8 @@ country_event = {
 			num_of_cities = 4
 			NOT = {
 				alliance_with = ROOT
+			}
+			NOT = {
 				war_with = ROOT
 			}
 		}
@@ -13498,11 +13526,21 @@ country_event = {
 	picture = TRADE_GOODS_METALS_AND_MINING_EQUIPENT_eventPicture
 	trigger = {
 		gold = 1
-		NOT = {	religion_group = ancient_pagan	}
-		NOT = {	religion_group = african_pagan	}
-		NOT = {	religion_group = european_pagan	}
-		NOT = {	religion_group = asian_pagan }
-		NOT = {	religion_group = american_pagan	}
+		NOT = {
+			religion_group = ancient_pagan
+		}
+		NOT = {
+			religion_group = african_pagan
+		}
+		NOT = {
+			religion_group = european_pagan
+		}
+		NOT = {
+			religion_group = asian_pagan
+		}
+		NOT = {
+			religion_group = american_pagan
+		}
 	}
 	is_triggered_only = yes
 	mean_time_to_happen = {
@@ -14021,5 +14059,6 @@ country_event = {
 		}
 	}
 }
+
 # Culture ties weakened
 # Mangled by Daniel Tolman for 1.28

@@ -2,7 +2,6 @@
 #When adding new custom loc keys, add them to the appropriate category (or add a new one) and describe them. Name the strings "String_X" where x is its content.
 # To not display anything, you can use 'localisation_key = ""'
 # Please add one example sentence for each key.
-
 #As this list grow organize with categories.
 #Current loc keys in this file:
 #GetTributaryOverlord
@@ -10,116 +9,121 @@
 #GetLocalPowerStructure
 #GetGovernmentSupporters
 #GetNoblesReplacementForOtherGovernments
-
-
 ### Titular for Overlord
 #Ex: "On a mission to visit the [Son of Heaven]"
 defined_text = {
-    name = GetTributaryOverlord
-
-    text = {
-        localisation_key = string_son_of_heaven
-        trigger = {
-			is_emperor_of_china = yes
-            is_female = no
-        }
-    }
-    text = {
-        localisation_key = string_daughter_of_heaven
-        trigger = {
-			is_emperor_of_china = yes
-            is_female = yes
-        }
-    }
+	name = GetTributaryOverlord
 	text = {
-        localisation_key = string_tributary_overlord_title
-        trigger = {
+		localisation_key = string_son_of_heaven
+		trigger = {
+			is_emperor_of_china = yes
+			is_female = no
+		}
+	}
+	text = {
+		localisation_key = string_daughter_of_heaven
+		trigger = {
+			is_emperor_of_china = yes
+			is_female = yes
+		}
+	}
+	text = {
+		localisation_key = string_tributary_overlord_title
+		trigger = {
 			is_emperor_of_china = no
-        }
+		}
 	}
 }
 
 #Old Era
 #Ex: "A [Medieval] Manuscript"
 defined_text = {
-    name = GetOldEra
-
-    text = {
-        localisation_key = string_song_era
-        trigger = {
+	name = GetOldEra
+	text = {
+		localisation_key = string_song_era
+		trigger = {
 			capital_scope = {
 				superregion = china_superregion
 			}
-        }
-    }
+		}
+	}
 	text = {
-        localisation_key = string_goguryeo_era
-        trigger = {
+		localisation_key = string_goguryeo_era
+		trigger = {
 			capital_scope = {
 				region = korea_region
 			}
-        }
-    }
-    text = {
-        localisation_key = string_middle_ages
-        trigger = {
+		}
+	}
+	text = {
+		localisation_key = string_middle_ages
+		trigger = {
 			capital_scope = {
 				continent = europe
 			}
-        }
-    }
+		}
+	}
 	text = {
-        localisation_key = string_classical
-        trigger = {
+		localisation_key = string_classical
+		trigger = {
 			capital_scope = {
 				continent = europe
 			}
-        }
-    }
+		}
+	}
 	text = {
-        localisation_key = string_pre_islamic
-        trigger = {
+		localisation_key = string_pre_islamic
+		trigger = {
 			capital_scope = {
 				religion_group = muslim
 			}
-        }
+		}
 	}
 	text = {
-        localisation_key = string_vedic
-        trigger = {
+		localisation_key = string_vedic
+		trigger = {
 			capital_scope = {
 				religion_group = dharmic
 			}
-        }
+		}
 	}
 	text = {
-        localisation_key = string_ancient_era
-        trigger = {
-				capital_scope = {
-					NOT = { continent = europe }
-					NOT = { superregion = china_superregion }
-					NOT = { region = korea_region }
-					NOT = { religion_group = muslim }
-					NOT = { religion_group = dharmic }
+		localisation_key = string_ancient_era
+		trigger = {
+			capital_scope = {
+				NOT = {
+					continent = europe
 				}
-        }
+				NOT = {
+					superregion = china_superregion
+				}
+				NOT = {
+					region = korea_region
+				}
+				NOT = {
+					religion_group = muslim
+				}
+				NOT = {
+					religion_group = dharmic
+				}
+			}
+		}
 	}
 }
 
 #Low Level Official
 #Ex: "A local [Mandarin] immediately reacted to the..."
 defined_text = {
-    name = GetLowLevelOfficialForCountry
-
-    text = {
-        localisation_key = string_mandarin
-        trigger = {
-			culture_group = east_asian #Chinese
-        }
-    }
-    text = {
-        localisation_key = string_zamindar
-        trigger = {
+	name = GetLowLevelOfficialForCountry
+	text = {
+		localisation_key = string_mandarin
+		trigger = {
+			culture_group = east_asian			#Chinese
+		}
+	}
+	text = {
+		localisation_key = string_zamindar
+		trigger = {
 			religion_group = muslim
 			OR = {
 				culture_group = eastern_aryan
@@ -128,37 +132,51 @@ defined_text = {
 				culture_group = dravidian
 				culture_group = central_indic
 			}
-        }
-    }
+		}
+	}
 	text = {
-        localisation_key = string_bey
-        trigger = {
+		localisation_key = string_bey
+		trigger = {
 			religion_group = muslim
-			NOT = {	culture_group = eastern_aryan }
-			NOT = {culture_group = hindusthani }
-			NOT = {culture_group = western_aryan }
-			NOT = {culture_group = dravidian }
-			NOT = {culture_group = central_indic }
-        }
+			NOT = {
+				culture_group = eastern_aryan
+			}
+			NOT = {
+				culture_group = hindusthani
+			}
+			NOT = {
+				culture_group = western_aryan
+			}
+			NOT = {
+				culture_group = dravidian
+			}
+			NOT = {
+				culture_group = central_indic
+			}
+		}
 	}
 	text = {
-        localisation_key = string_polygar
-        trigger = {
-			NOT = { religion_group = muslim }
+		localisation_key = string_polygar
+		trigger = {
+			NOT = {
+				religion_group = muslim
+			}
 			culture_group = dravidian
-        }
+		}
 	}
 	text = {
-        localisation_key = string_thakur
-        trigger = {
-			NOT = { religion_group = muslim }
+		localisation_key = string_thakur
+		trigger = {
+			NOT = {
+				religion_group = muslim
+			}
 			OR = {
 				culture_group = eastern_aryan
 				culture_group = hindusthani
 				culture_group = western_aryan
 				culture_group = central_indic
 			}
-        }
+		}
 	}
 	text = {
 		localisation_key = string_zupan
@@ -193,46 +211,68 @@ defined_text = {
 		}
 	}
 	text = {
-        localisation_key = string_official
-        trigger = {
-			NOT = { religion_group = muslim }
-			NOT = { culture_group = east_asian }
-			NOT = { culture_group = eastern_aryan }
-			NOT = { culture_group = hindusthani }
-			NOT = { culture_group = western_aryan }
-			NOT = { culture_group = dravidian }
-			NOT = { culture_group = central_indic }
-			NOT = { culture_group = south_slavic }
-			NOT = { culture_group = british }
-			NOT = { culture_group = french }
-			NOT = { culture_group = germanic }
+		localisation_key = string_official
+		trigger = {
+			NOT = {
+				religion_group = muslim
 			}
-        }
+			NOT = {
+				culture_group = east_asian
+			}
+			NOT = {
+				culture_group = eastern_aryan
+			}
+			NOT = {
+				culture_group = hindusthani
+			}
+			NOT = {
+				culture_group = western_aryan
+			}
+			NOT = {
+				culture_group = dravidian
+			}
+			NOT = {
+				culture_group = central_indic
+			}
+			NOT = {
+				culture_group = south_slavic
+			}
+			NOT = {
+				culture_group = british
+			}
+			NOT = {
+				culture_group = french
+			}
+			NOT = {
+				culture_group = germanic
+			}
+		}
 	}
 }
 
 #A local power structure, such as a court or local parliament
 #Ex: "The [Court] refused our request to hand over the culprits"
 defined_text = {
-    name = GetLocalPowerStructure
-
-    text = {
-        localisation_key = string_court
+	name = GetLocalPowerStructure
+	text = {
+		localisation_key = string_court
 		trigger = {
 			religion_group = christian
 		}
-    }
+	}
 	text = {
-        localisation_key = string_junta
+		localisation_key = string_junta
 		trigger = {
 			is_year = 1700
 			culture_group = iberian
 		}
-    }
+	}
 	text = {
-		 localisation_key = string_court
+		localisation_key = string_court
 		trigger = {
-			NOT = { religion_group = christian }
+			NOT = {
+				religion_group = christian
+			}
 		}
 	}
 }
@@ -240,50 +280,49 @@ defined_text = {
 #Supporters of the Ruler, be he a Khan, King or President
 #Ex: "The [Royalists] have come to our aid"
 defined_text = {
-    name = GetGovernmentSupporters
-
-    text = {
-        localisation_key = string_royalist
+	name = GetGovernmentSupporters
+	text = {
+		localisation_key = string_royalist
 		trigger = {
 			government = monarchy
 		}
-    }
+	}
 	text = {
-        localisation_key = string_khanzada
+		localisation_key = string_khanzada
 		trigger = {
 			has_reform = steppe_horde
 		}
-    }
+	}
 	text = {
-        localisation_key = string_royalist
+		localisation_key = string_royalist
 		trigger = {
 			government = tribal
 		}
-    }
+	}
 	text = {
-		 localisation_key = string_republican
+		localisation_key = string_republican
 		trigger = {
 			government = republic
 		}
 	}
 	text = {
-		 localisation_key = string_clergy
+		localisation_key = string_clergy
 		trigger = {
 			government = theocracy
 		}
 	}
 }
 
-
 #When you need to refer to a ruling social class but cannot be sure you're dealing with a monarchy.
 #Ex: "The [Nobles] are Concerned"
 defined_text = {
 	name = GetNoblesReplacementForOtherGovernments
-
 	text = {
 		localisation_key = string_nobles
 		trigger = {
-			NOT = { government = republic }
+			NOT = {
+				government = republic
+			}
 		}
 	}
 	text = {
@@ -298,11 +337,12 @@ defined_text = {
 #Ex: "The [Nobles] are Concerned"
 defined_text = {
 	name = GetRoyalOrState
-
 	text = {
 		localisation_key = string_royal
 		trigger = {
-			NOT = { government = republic }
+			NOT = {
+				government = republic
+			}
 		}
 	}
 	text = {
@@ -318,12 +358,13 @@ defined_text = {
 #Ex: "The [Crown] of X"
 defined_text = {
 	name = GetStateForm
-
 	text = {
 		localisation_key = string_crown
 		trigger = {
 			government = monarchy
-			NOT = { tag = TUR }
+			NOT = {
+				tag = TUR
+			}
 		}
 	}
 	text = {
@@ -339,7 +380,8 @@ defined_text = {
 			government = republic
 		}
 	}
-	text = { #fallback
+	text = {
+		#fallback
 		localisation_key = string_govtname
 		trigger = {
 			NOT = {
@@ -354,7 +396,6 @@ defined_text = {
 #Ex: "The [Stroganov] Family is offering to fund colonizationin Siberia"
 defined_text = {
 	name = GetInfluentialRussians
-
 	text = {
 		localisation_key = string_stroganov
 		trigger = {
@@ -399,7 +440,9 @@ defined_text = {
 	text = {
 		localisation_key = string_romanov
 		trigger = {
-			NOT = { dynasty = Romanov }
+			NOT = {
+				dynasty = Romanov
+			}
 		}
 	}
 	text = {
@@ -477,7 +520,6 @@ defined_text = {
 defined_text = {
 	name = GetReligiousScholars
 	random = no
-	
 	text = {
 		localisation_key = ismaili_school
 		trigger = {
@@ -527,28 +569,29 @@ defined_text = {
 #Keys for:
 #Cloth, Silk, Spices, Tropical Wood, Cloth, Gems, Gold, Paper, Glass, Ivory, Chinaware and Incense
 defined_text = {
-	name = GetFancyTradeGood #province scope
+	name = GetFancyTradeGood	#province scope
 	random = no
-
-	
 	#Gems
 	text = {
 		localisation_key = string_mother_of_pearl
-		trigger = { #Province Scope
+		trigger = {
+			#Province Scope
 			trade_goods = gems
 			province_id = 400
 		}
 	}
 	text = {
 		localisation_key = string_cowries
-		trigger = { #Province Scope
+		trigger = {
+			#Province Scope
 			trade_goods = gems
 			province_id = 1248
 		}
 	}
 	text = {
 		localisation_key = string_sapphires
-		trigger = { #Province Scope
+		trigger = {
+			#Province Scope
 			trade_goods = gems
 			region = colombia_region
 			has_port = no
@@ -556,14 +599,16 @@ defined_text = {
 	}
 	text = {
 		localisation_key = string_turquoise
-		trigger = { #province scope
+		trigger = {
+			#province scope
 			trade_goods = gems
 			province_id = 2216
 		}
 	}
 	text = {
 		localisation_key = string_rubies
-		trigger = { #province scope
+		trigger = {
+			#province scope
 			trade_goods = gems
 			OR = {
 				region = indo_china_region
@@ -575,7 +620,8 @@ defined_text = {
 	}
 	text = {
 		localisation_key = string_jade
-		trigger = { #province scope
+		trigger = {
+			#province scope
 			trade_goods = gems
 			OR = {
 				superregion = china_superregion
@@ -585,7 +631,8 @@ defined_text = {
 	}
 	text = {
 		localisation_key = string_amber
-		trigger = { #province scope
+		trigger = {
+			#province scope
 			trade_goods = gems
 			OR = {
 				continent = europe
@@ -596,7 +643,8 @@ defined_text = {
 	}
 	text = {
 		localisation_key = string_pearls
-		trigger = { #Province Scope
+		trigger = {
+			#Province Scope
 			trade_goods = gems
 			OR = {
 				region = arabia_region
@@ -617,7 +665,6 @@ defined_text = {
 			superregion = india_superregion
 		}
 	}
-	
 	#Gold
 	text = {
 		localisation_key = string_imperial_eggs
@@ -630,7 +677,6 @@ defined_text = {
 			}
 		}
 	}
-
 	#Paper
 	text = {
 		localisation_key = string_miniatures
@@ -669,10 +715,11 @@ defined_text = {
 			trade_goods = paper
 			continent = europe
 			religion_group = christian
-			NOT = { is_year = 1500 }
+			NOT = {
+				is_year = 1500
+			}
 		}
 	}
-	
 	#Cloth
 	text = {
 		localisation_key = string_fustians
@@ -705,7 +752,6 @@ defined_text = {
 			trade_goods = cloth
 		}
 	}
-	
 	#Silk
 	text = {
 		localisation_key = string_taffeta
@@ -714,7 +760,6 @@ defined_text = {
 			trade_goods = silk
 		}
 	}
-	
 	#Incense
 	text = {
 		localisation_key = string_frankincense
@@ -723,7 +768,6 @@ defined_text = {
 			trade_goods = incense
 		}
 	}
-	
 	#Spices
 	text = {
 		localisation_key = string_cardamom
@@ -788,9 +832,7 @@ defined_text = {
 			area = spice_islands_area
 		}
 	}
-	
 	#Fallbacks for Cloth, Silk, Spices, Tropical Wood, Cloth, Gems, Gold, Paper, Glass, Ivory, Chinaware and Incense
-	
 	text = {
 		localisation_key = string_perfume
 		trigger = {
@@ -827,10 +869,10 @@ defined_text = {
 			trade_goods = tropical_wood
 		}
 	}
-	
 	text = {
-		localisation_key = string_jewellery 
-		trigger = { #province scope
+		localisation_key = string_jewellery
+		trigger = {
+			#province scope
 			OR = {
 				trade_goods = gems
 				trade_goods = gold
@@ -863,28 +905,29 @@ defined_text = {
 #Keys for:
 #Cloth, Silk, Spices, Tropical Wood, Cloth, Gems, Gold, Paper, Glass, Ivory, Chinaware and Incense
 defined_text = {
-	name = GetFancyTradeGood_LOW #province scope
+	name = GetFancyTradeGood_LOW	#province scope
 	random = no
-
-	
 	#Gems
 	text = {
 		localisation_key = string_l_mother_of_pearl
-		trigger = { #Province Scope
+		trigger = {
+			#Province Scope
 			trade_goods = gems
 			province_id = 400
 		}
 	}
 	text = {
 		localisation_key = string_l_cowries
-		trigger = { #Province Scope
+		trigger = {
+			#Province Scope
 			trade_goods = gems
 			province_id = 1248
 		}
 	}
 	text = {
 		localisation_key = string_l_sapphires
-		trigger = { #Province Scope
+		trigger = {
+			#Province Scope
 			trade_goods = gems
 			region = colombia_region
 			has_port = no
@@ -892,14 +935,16 @@ defined_text = {
 	}
 	text = {
 		localisation_key = string_l_turquoise
-		trigger = { #province scope
+		trigger = {
+			#province scope
 			trade_goods = gems
 			province_id = 2216
 		}
 	}
 	text = {
 		localisation_key = string_l_rubies
-		trigger = { #province scope
+		trigger = {
+			#province scope
 			trade_goods = gems
 			OR = {
 				region = indo_china_region
@@ -911,7 +956,8 @@ defined_text = {
 	}
 	text = {
 		localisation_key = string_l_jade
-		trigger = { #province scope
+		trigger = {
+			#province scope
 			trade_goods = gems
 			OR = {
 				superregion = china_superregion
@@ -921,7 +967,8 @@ defined_text = {
 	}
 	text = {
 		localisation_key = string_l_amber
-		trigger = { #province scope
+		trigger = {
+			#province scope
 			trade_goods = gems
 			OR = {
 				continent = europe
@@ -932,7 +979,8 @@ defined_text = {
 	}
 	text = {
 		localisation_key = string_l_pearls
-		trigger = { #Province Scope
+		trigger = {
+			#Province Scope
 			trade_goods = gems
 			OR = {
 				region = arabia_region
@@ -953,7 +1001,6 @@ defined_text = {
 			superregion = india_superregion
 		}
 	}
-	
 	#Gold
 	text = {
 		localisation_key = string_l_imperial_eggs
@@ -966,7 +1013,6 @@ defined_text = {
 			}
 		}
 	}
-
 	#Paper
 	text = {
 		localisation_key = string_l_miniatures
@@ -1005,10 +1051,11 @@ defined_text = {
 			trade_goods = paper
 			continent = europe
 			religion_group = christian
-			NOT = { is_year = 1500 }
+			NOT = {
+				is_year = 1500
+			}
 		}
 	}
-	
 	#Cloth
 	text = {
 		localisation_key = string_l_fustians
@@ -1041,7 +1088,6 @@ defined_text = {
 			trade_goods = cloth
 		}
 	}
-	
 	#Silk
 	text = {
 		localisation_key = string_l_taffeta
@@ -1050,7 +1096,6 @@ defined_text = {
 			trade_goods = silk
 		}
 	}
-	
 	#Incense
 	text = {
 		localisation_key = string_l_frankincense
@@ -1059,7 +1104,6 @@ defined_text = {
 			trade_goods = incense
 		}
 	}
-	
 	#Spices
 	text = {
 		localisation_key = string_l_cardamom
@@ -1124,9 +1168,7 @@ defined_text = {
 			area = spice_islands_area
 		}
 	}
-	
 	#Fallbacks for Cloth, Silk, Spices, Tropical Wood, Cloth, Gems, Gold, Paper, Glass, Ivory, Chinaware and Incense
-	
 	text = {
 		localisation_key = string_l_perfume
 		trigger = {
@@ -1163,10 +1205,10 @@ defined_text = {
 			trade_goods = tropical_wood
 		}
 	}
-	
 	text = {
-		localisation_key = string_l_jewellery 
-		trigger = { #province scope
+		localisation_key = string_l_jewellery
+		trigger = {
+			#province scope
 			OR = {
 				trade_goods = gems
 				trade_goods = gold
@@ -1258,7 +1300,6 @@ defined_text = {
 #Ex: "We have recieved a gift of valuable [gold dust]"
 defined_text = {
 	name = GetRandom_Siberian_Resource
-
 	text = {
 		localisation_key = string_gold_dust
 		trigger = {
@@ -1311,52 +1352,46 @@ defined_text = {
 
 #Definite Article before name? (ie for country names in plural form)
 defined_text = {
-    name = GetDefiniteArticleBeforePluralCountry
+	name = GetDefiniteArticleBeforePluralCountry
 	random = no
-	
 	text = {
-		
-        localisation_key = string_definite_article_before_country
-        trigger = {
+		localisation_key = string_definite_article_before_country
+		trigger = {
 			tag_with_plural_name_trigger = yes
-        }
-    }
-    text = {
-        localisation_key = string_empty
-        trigger = {
+		}
+	}
+	text = {
+		localisation_key = string_empty
+		trigger = {
 			always = yes
-        }
-    }
+		}
+	}
 }
 
 #Hiding regency council in titles
-
 defined_text = {
-    name = GetRulerOrRegency
+	name = GetRulerOrRegency
 	random = no
-	
 	text = {
-        localisation_key = string_ruler_name_really
-        trigger = {
+		localisation_key = string_ruler_name_really
+		trigger = {
 			has_regency = no
-        }
-    }
-    text = {
-        localisation_key = string_regency_council
-        trigger = {
+		}
+	}
+	text = {
+		localisation_key = string_regency_council
+		trigger = {
 			has_regency = yes
-        }
-    }
+		}
+	}
 }
 
 #RB Symposium
-
 defined_text = {
-    name = OxOrBridgeTitle
+	name = OxOrBridgeTitle
 	random = no
-	
 	text = {
-    localisation_key = flavor_eng.9880.t1
+		localisation_key = flavor_eng.9880.t1
 		trigger = {
 			OR = {
 				AND = {
@@ -1387,7 +1422,7 @@ defined_text = {
 		}
 	}
 	text = {
-    localisation_key = flavor_eng.9880.t2
+		localisation_key = flavor_eng.9880.t2
 		trigger = {
 			check_variable = {
 				which = oxbridge_symposium
@@ -1398,11 +1433,10 @@ defined_text = {
 }
 
 defined_text = {
-    name = OxOrBridgeLocation
+	name = OxOrBridgeLocation
 	random = no
-	
 	text = {
-    localisation_key = flavor_eng.9880.loc0
+		localisation_key = flavor_eng.9880.loc0
 		trigger = {
 			check_variable = {
 				which = oxbridge_symposium
@@ -1417,7 +1451,7 @@ defined_text = {
 		}
 	}
 	text = {
-    localisation_key = flavor_eng.9880.loc1
+		localisation_key = flavor_eng.9880.loc1
 		trigger = {
 			check_variable = {
 				which = oxbridge_symposium
@@ -1432,7 +1466,7 @@ defined_text = {
 		}
 	}
 	text = {
-    localisation_key = flavor_eng.9880.loc2
+		localisation_key = flavor_eng.9880.loc2
 		trigger = {
 			check_variable = {
 				which = oxbridge_symposium
@@ -1449,11 +1483,10 @@ defined_text = {
 }
 
 defined_text = {
-    name = OxOrBridgeSubject
+	name = OxOrBridgeSubject
 	random = no
-	
 	text = {
-    localisation_key = flavor_eng.9880.sub1
+		localisation_key = flavor_eng.9880.sub1
 		trigger = {
 			check_variable = {
 				which = oxbridge_subject
@@ -1468,7 +1501,7 @@ defined_text = {
 		}
 	}
 	text = {
-    localisation_key = flavor_eng.9880.sub2
+		localisation_key = flavor_eng.9880.sub2
 		trigger = {
 			check_variable = {
 				which = oxbridge_subject
@@ -1483,7 +1516,7 @@ defined_text = {
 		}
 	}
 	text = {
-    localisation_key = flavor_eng.9880.sub3
+		localisation_key = flavor_eng.9880.sub3
 		trigger = {
 			check_variable = {
 				which = oxbridge_subject
@@ -1498,7 +1531,7 @@ defined_text = {
 		}
 	}
 	text = {
-    localisation_key = flavor_eng.9880.sub4
+		localisation_key = flavor_eng.9880.sub4
 		trigger = {
 			check_variable = {
 				which = oxbridge_subject
@@ -1513,7 +1546,7 @@ defined_text = {
 		}
 	}
 	text = {
-    localisation_key = flavor_eng.9880.sub5
+		localisation_key = flavor_eng.9880.sub5
 		trigger = {
 			check_variable = {
 				which = oxbridge_subject
@@ -1523,12 +1556,10 @@ defined_text = {
 	}
 }
 
-
 #Makes the country name usable (grammatically) in normal text. So examples of what comes out are "France", "the Ottoman Sultanate", "the Ming Empire" and "the Iroquoi Tribe" (I am open to suggestions on the last) rather than "France", "Ottomans", "Ming" and "Iroquoi"
 defined_text = {
 	name = GetUsableName
 	random = no
-	
 	text = {
 		localisation_key = plural_country_name
 		trigger = {
@@ -1544,12 +1575,24 @@ defined_text = {
 				#Ottomans, Timurids, Mamluks etc
 				tag_with_plural_name_trigger = yes
 			}
-			NOT = { has_country_flag = is_revolutionary_china_flag }
-			NOT = { has_country_flag = is_china_flag }
-			NOT = { has_country_flag = is_revolutionary_turkey_flag }
-			NOT = { has_country_flag = is_turkey_flag }
-			NOT = { has_country_flag = is_revolutionary_gurkani_flag }
-			NOT = { has_country_flag = is_gurkani_flag }
+			NOT = {
+				has_country_flag = is_revolutionary_china_flag
+			}
+			NOT = {
+				has_country_flag = is_china_flag
+			}
+			NOT = {
+				has_country_flag = is_revolutionary_turkey_flag
+			}
+			NOT = {
+				has_country_flag = is_turkey_flag
+			}
+			NOT = {
+				has_country_flag = is_revolutionary_gurkani_flag
+			}
+			NOT = {
+				has_country_flag = is_gurkani_flag
+			}
 		}
 	}
 	text = {
@@ -1592,7 +1635,6 @@ defined_text = {
 defined_text = {
 	name = GetUsableNameCap
 	random = no
-	
 	text = {
 		localisation_key = plural_country_name_CAP
 		trigger = {
@@ -1608,12 +1650,24 @@ defined_text = {
 				#Ottomans, Timurids, Mamluks etc
 				tag_with_plural_name_trigger = yes
 			}
-			NOT = { has_country_flag = is_revolutionary_china_flag }
-			NOT = { has_country_flag = is_china_flag }
-			NOT = { has_country_flag = is_revolutionary_turkey_flag }
-			NOT = { has_country_flag = is_turkey_flag }
-			NOT = { has_country_flag = is_revolutionary_gurkani_flag }
-			NOT = { has_country_flag = is_gurkani_flag }
+			NOT = {
+				has_country_flag = is_revolutionary_china_flag
+			}
+			NOT = {
+				has_country_flag = is_china_flag
+			}
+			NOT = {
+				has_country_flag = is_revolutionary_turkey_flag
+			}
+			NOT = {
+				has_country_flag = is_turkey_flag
+			}
+			NOT = {
+				has_country_flag = is_revolutionary_gurkani_flag
+			}
+			NOT = {
+				has_country_flag = is_gurkani_flag
+			}
 		}
 	}
 	text = {
@@ -1652,17 +1706,19 @@ defined_text = {
 	}
 }
 
-
 #When you need to refer to a ruling social class but cannot be sure you're dealing with a monarchy.
 #Ex: "Several [noblemen] / [politicians] / [clergymen]"
 defined_text = {
 	name = GetNoblemenPoliticians
-
 	text = {
 		localisation_key = string_noblemen
 		trigger = {
-			NOT = { government = republic }
-			NOT = { government = theocracy }
+			NOT = {
+				government = republic
+			}
+			NOT = {
+				government = theocracy
+			}
 			NOT = {
 				has_parliament = yes
 			}
@@ -1678,7 +1734,7 @@ defined_text = {
 		}
 	}
 	text = {
-		 localisation_key = string_clergymen
+		localisation_key = string_clergymen
 		trigger = {
 			government = theocracy
 			NOT = {
@@ -1692,12 +1748,15 @@ defined_text = {
 #Ex: "Several [members of the nobility] / [politicians] / [members of the clergy]"
 defined_text = {
 	name = GetNobilityPoliticians
-
 	text = {
 		localisation_key = string_members_nobility
 		trigger = {
-			NOT = { government = republic }
-			NOT = { government = theocracy }
+			NOT = {
+				government = republic
+			}
+			NOT = {
+				government = theocracy
+			}
 			NOT = {
 				has_parliament = yes
 			}
@@ -1713,7 +1772,7 @@ defined_text = {
 		}
 	}
 	text = {
-		 localisation_key = string_clergy_members
+		localisation_key = string_clergy_members
 		trigger = {
 			government = theocracy
 			NOT = {
@@ -1723,16 +1782,16 @@ defined_text = {
 	}
 }
 
-
 #Because "the Papal Pope" would be a new kind of stupid, also covers regency councils
 #Ex: The [English King] / The [Pope] / The [English Regency Council]
 defined_text = {
 	name = GetRulerAdjAndTitle
-
 	text = {
 		localisation_key = string_ruler_adj_and_title
 		trigger = {
-			NOT = { tag = PAP }
+			NOT = {
+				tag = PAP
+			}
 			has_regency = no
 		}
 	}
@@ -1750,12 +1809,10 @@ defined_text = {
 	}
 }
 
-
 #Gets ruler title or regency council (not strictly speaking necessary as it will still find "king" even if said king is 1 year old)
 #Ex: The [King] / The [Regency Council]
 defined_text = {
 	name = GetRulerTitleOrRegency
-
 	text = {
 		localisation_key = string_ruler_title
 		trigger = {
@@ -1770,12 +1827,10 @@ defined_text = {
 	}
 }
 
-
 #If you want to refer to the ruler by name but are not sure whether there may be a regency
 #Ex: [King James] / [the Regency Council]
 defined_text = {
 	name = GetRulerTitleAndNameOrRegency
-
 	text = {
 		localisation_key = string_ruler_title_and_name
 		trigger = {
@@ -1794,7 +1849,6 @@ defined_text = {
 #Ex: [King James] / [The Regency Council]
 defined_text = {
 	name = GetRulerTitleAndNameOrRegencyCap
-
 	text = {
 		localisation_key = string_ruler_title_and_name
 		trigger = {
@@ -1809,12 +1863,9 @@ defined_text = {
 	}
 }
 
-
-
 #For Korean DHE event - didn't fancy writing it out 6 times. Basically prints the relevant estate, except that $ESTATE_NOBLES$ etc does not work.
 defined_text = {
 	name = GetKorDHEEstate1
-
 	text = {
 		localisation_key = string_neoconfucians
 		trigger = {
@@ -1838,7 +1889,6 @@ defined_text = {
 #For Korean DHE event - didn't fancy writing it out 6 times. Basically prints the relevant estate, except that $ESTATE_NOBLES$ etc does not work.
 defined_text = {
 	name = GetKorDHEEstate2
-
 	text = {
 		localisation_key = string_neoconfucians
 		trigger = {
@@ -1862,7 +1912,6 @@ defined_text = {
 #For Korean DHE event - prints a reason for the struggle. "the respective factions are accusing each other of high treason, apparently after <insert reason> escalated to the point where royal authority"
 defined_text = {
 	name = GetKorFactionReason
-
 	text = {
 		localisation_key = KOR_faction_reason_1
 	}
@@ -1877,11 +1926,9 @@ defined_text = {
 	}
 }
 
-
 #Used to create a dynamic mission title for emp_sax_spread_wettins_title and emp_hab_spread_dynasties_title
 defined_text = {
 	name = GetSpreadDynastyOrFallbackMissionTitle
-
 	text = {
 		localisation_key = emp_mission_spread_dynasty_title
 		trigger = {
@@ -1893,8 +1940,12 @@ defined_text = {
 		localisation_key = emp_mission_spread_nodynasty_title
 		trigger = {
 			OR = {
-				NOT = { government = monarchy }
-				NOT = { has_government_attribute = heir }
+				NOT = {
+					government = monarchy
+				}
+				NOT = {
+					has_government_attribute = heir
+				}
 			}
 		}
 	}
@@ -1903,7 +1954,6 @@ defined_text = {
 #Used to create a dynamic mission title for emp_sax_spread_wettins_title and emp_hab_spread_dynasties_title
 defined_text = {
 	name = GetSAXSpreadDynastyOrFallbackMissionDesc
-
 	text = {
 		localisation_key = emp_sax_mission_spread_dynasty_desc
 		trigger = {
@@ -1915,8 +1965,12 @@ defined_text = {
 		localisation_key = emp_sax_mission_spread_nodynasty_desc
 		trigger = {
 			OR = {
-				NOT = { government = monarchy }
-				NOT = { has_government_attribute = heir }
+				NOT = {
+					government = monarchy
+				}
+				NOT = {
+					has_government_attribute = heir
+				}
 			}
 		}
 	}
@@ -1925,7 +1979,6 @@ defined_text = {
 #Used to create a dynamic mission title for emp_hab_power_to_habsburg_title
 defined_text = {
 	name = GetGloryToDynastyOrFallbackMissionTitle
-
 	text = {
 		localisation_key = emp_mission_power_to_dynasty_title
 		trigger = {
@@ -1937,8 +1990,12 @@ defined_text = {
 		localisation_key = emp_mission_power_to_country_title
 		trigger = {
 			OR = {
-				NOT = { government = monarchy }
-				NOT = { has_government_attribute = heir }
+				NOT = {
+					government = monarchy
+				}
+				NOT = {
+					has_government_attribute = heir
+				}
 			}
 		}
 	}
@@ -1947,7 +2004,6 @@ defined_text = {
 #Used to create a dynamic mission description emp_hab_spread_dynasties_desc
 defined_text = {
 	name = GetHABDynastyOrFallbackMissionDesc
-
 	text = {
 		localisation_key = emp_hab_spread_dynasties_has_dynasty_desc
 		trigger = {
@@ -1959,8 +2015,12 @@ defined_text = {
 		localisation_key = emp_hab_spread_dynasties_nodynasty_desc
 		trigger = {
 			OR = {
-				NOT = { government = monarchy }
-				NOT = { has_government_attribute = heir }
+				NOT = {
+					government = monarchy
+				}
+				NOT = {
+					has_government_attribute = heir
+				}
 			}
 		}
 	}
@@ -1969,11 +2029,12 @@ defined_text = {
 #Used to create a dynamic mission title for emp_mlo_university_rules_title
 defined_text = {
 	name = GetMLOMissionUniversityRulesTitle
-
 	text = {
 		localisation_key = emp_mlo_university_rules_monarchy_title
 		trigger = {
-			NOT = { government = republic }
+			NOT = {
+				government = republic
+			}
 		}
 	}
 	text = {
@@ -1987,11 +2048,12 @@ defined_text = {
 #Used to create a dynamic mission desc for emp_mlo_university_rules_title
 defined_text = {
 	name = GetMLOMissionUniversityRulesDesc
-
 	text = {
 		localisation_key = emp_mlo_university_rules_monarchy_desc
 		trigger = {
-			NOT = { government = republic }
+			NOT = {
+				government = republic
+			}
 		}
 	}
 	text = {
@@ -2005,11 +2067,12 @@ defined_text = {
 #Used to create a dynamic mission title for emp_hab_crush_the_revolution
 defined_text = {
 	name = GetEmbraceOrCrushRevolutionMissionTitle
-
 	text = {
 		localisation_key = emp_crush_the_revolution_title
 		trigger = {
-			NOT = { is_revolutionary_republic_trigger = yes }
+			NOT = {
+				is_revolutionary_republic_trigger = yes
+			}
 		}
 	}
 	text = {
@@ -2023,11 +2086,12 @@ defined_text = {
 #Used to create a dynamic mission desc for emp_hab_crush_the_revolution
 defined_text = {
 	name = GetEmbraceOrCrushRevolutionMissionDesc
-
 	text = {
 		localisation_key = emp_crush_the_revolution_desc
 		trigger = {
-			NOT = { is_revolutionary_republic_trigger = yes }
+			NOT = {
+				is_revolutionary_republic_trigger = yes
+			}
 		}
 	}
 	text = {
@@ -2041,7 +2105,6 @@ defined_text = {
 #Used to get "Kingdom", "Republic" or "Theocratic State" in a Milanese mission. It is likely to be one of the first two. Can add more if more cases are needed later, or amend the third if someone comes up with better.
 defined_text = {
 	name = GetTier2GovernmentType
-
 	text = {
 		localisation_key = string_republic
 		trigger = {
@@ -2065,7 +2128,6 @@ defined_text = {
 #Used to customise the description for emp_sav_union_with_naples
 defined_text = {
 	name = GetMissionSavUnionNaples
-
 	text = {
 		localisation_key = GetMissionSavUnionNaples_italian
 		trigger = {
@@ -2075,7 +2137,9 @@ defined_text = {
 	text = {
 		localisation_key = GetMissionSavUnionNaples_french
 		trigger = {
-			NOT = { culture_group = latin }
+			NOT = {
+				culture_group = latin
+			}
 		}
 	}
 }
@@ -2083,7 +2147,6 @@ defined_text = {
 #Used to customise the title for emp_sav_powerhouse_of_the_north
 defined_text = {
 	name = GetSavPowerhouseNorthOrSouthTitle
-
 	text = {
 		localisation_key = emp_sav_powerhouse_of_the_north_title2
 		trigger = {
@@ -2100,8 +2163,12 @@ defined_text = {
 		localisation_key = emp_sav_powerhouse_generic_title
 		trigger = {
 			capital_scope = {
-				NOT = { culture_group = latin }
-				NOT = { culture_group = french }
+				NOT = {
+					culture_group = latin
+				}
+				NOT = {
+					culture_group = french
+				}
 			}
 		}
 	}
@@ -2110,7 +2177,6 @@ defined_text = {
 #Used to customise the desc for emp_sav_powerhouse_of_the_north
 defined_text = {
 	name = GetSavPowerhouseNorthOrSouthDesc
-
 	text = {
 		localisation_key = emp_sav_powerhouse_of_the_north_desc2
 		trigger = {
@@ -2127,8 +2193,12 @@ defined_text = {
 		localisation_key = emp_sav_powerhouse_generic_desc
 		trigger = {
 			capital_scope = {
-				NOT = { culture_group = latin }
-				NOT = { culture_group = french }
+				NOT = {
+					culture_group = latin
+				}
+				NOT = {
+					culture_group = french
+				}
 			}
 		}
 	}
@@ -2137,7 +2207,6 @@ defined_text = {
 #Used to customise the desc for new_flavour_bur.4's descriptions
 defined_text = {
 	name = GetBurHREAscensionText
-
 	text = {
 		localisation_key = BUR_HRE_positive
 		trigger = {
@@ -2253,28 +2322,23 @@ defined_text = {
 	}
 }
 
-
 ###Event Advisors (if you want to use this system, remember to set the flags and remove them once they are no longer needed so the custom locs can be used again for the next event)
-
 #GetName of the correct advisor
 defined_text = {
 	name = GetEventAdvisorName
 	random = no
-	
 	text = {
 		localisation_key = EventAdvisorName.A
 		trigger = {
 			has_country_flag = advisor_events_adm
 		}
 	}
-	
 	text = {
 		localisation_key = EventAdvisorName.D
 		trigger = {
 			has_country_flag = advisor_events_dip
 		}
 	}
-	
 	text = {
 		localisation_key = EventAdvisorName.M
 		trigger = {
@@ -2287,21 +2351,18 @@ defined_text = {
 defined_text = {
 	name = GetEventAdvisorTitle
 	random = no
-	
 	text = {
 		localisation_key = EventAdvisorTitle.A
 		trigger = {
 			has_country_flag = advisor_events_adm
 		}
 	}
-	
 	text = {
 		localisation_key = EventAdvisorTitle.D
 		trigger = {
 			has_country_flag = advisor_events_dip
 		}
 	}
-	
 	text = {
 		localisation_key = EventAdvisorTitle.M
 		trigger = {
@@ -2314,21 +2375,18 @@ defined_text = {
 defined_text = {
 	name = GetEventAdvisorSheHeCap
 	random = no
-	
 	text = {
 		localisation_key = EventAdvisorSheHeCap.A
 		trigger = {
 			has_country_flag = advisor_events_adm
 		}
 	}
-	
 	text = {
 		localisation_key = EventAdvisorSheHeCap.D
 		trigger = {
 			has_country_flag = advisor_events_dip
 		}
 	}
-	
 	text = {
 		localisation_key = EventAdvisorSheHeCap.M
 		trigger = {
@@ -2341,21 +2399,18 @@ defined_text = {
 defined_text = {
 	name = GetEventAdvisorSheHe
 	random = no
-	
 	text = {
 		localisation_key = EventAdvisorSheHe.A
 		trigger = {
 			has_country_flag = advisor_events_adm
 		}
 	}
-	
 	text = {
 		localisation_key = EventAdvisorSheHe.D
 		trigger = {
 			has_country_flag = advisor_events_dip
 		}
 	}
-	
 	text = {
 		localisation_key = EventAdvisorSheHe.M
 		trigger = {
@@ -2368,21 +2423,18 @@ defined_text = {
 defined_text = {
 	name = GetEventAdvisorHerHisCap
 	random = no
-	
 	text = {
 		localisation_key = EventAdvisorHerHisCap.A
 		trigger = {
 			has_country_flag = advisor_events_adm
 		}
 	}
-	
 	text = {
 		localisation_key = EventAdvisorHerHisCap.D
 		trigger = {
 			has_country_flag = advisor_events_dip
 		}
 	}
-	
 	text = {
 		localisation_key = EventAdvisorHerHisCap.M
 		trigger = {
@@ -2395,21 +2447,18 @@ defined_text = {
 defined_text = {
 	name = GetEventAdvisorHerHis
 	random = no
-	
 	text = {
 		localisation_key = EventAdvisorHerHis.A
 		trigger = {
 			has_country_flag = advisor_events_adm
 		}
 	}
-	
 	text = {
 		localisation_key = EventAdvisorHerHis.D
 		trigger = {
 			has_country_flag = advisor_events_dip
 		}
 	}
-	
 	text = {
 		localisation_key = EventAdvisorHerHis.M
 		trigger = {
@@ -2422,21 +2471,18 @@ defined_text = {
 defined_text = {
 	name = GetEventAdvisorHerHim
 	random = no
-	
 	text = {
 		localisation_key = EventAdvisorHerHim.A
 		trigger = {
 			has_country_flag = advisor_events_adm
 		}
 	}
-	
 	text = {
 		localisation_key = EventAdvisorHerHim.D
 		trigger = {
 			has_country_flag = advisor_events_dip
 		}
 	}
-	
 	text = {
 		localisation_key = EventAdvisorHerHim.M
 		trigger = {
@@ -2445,25 +2491,22 @@ defined_text = {
 	}
 }
 
-
-
 ###Estate scripted locs: Get current estate name, or if the country lacks one, use the basic one
-
 defined_text = {
 	name = GetNobilityOrFallbackName
 	random = no
-	
 	text = {
 		localisation_key = country_estate_nobles_name
 		trigger = {
 			has_estate = estate_nobles
 		}
 	}
-	
 	text = {
 		localisation_key = estate_nobles
 		trigger = {
-			NOT = { has_estate = estate_nobles }
+			NOT = {
+				has_estate = estate_nobles
+			}
 		}
 	}
 }
@@ -2471,18 +2514,18 @@ defined_text = {
 defined_text = {
 	name = GetBurghersOrFallbackName
 	random = no
-	
 	text = {
 		localisation_key = country_estate_burghers_name
 		trigger = {
 			has_estate = estate_burghers
 		}
 	}
-	
 	text = {
 		localisation_key = estate_burghers
 		trigger = {
-			NOT = { has_estate = estate_burghers }
+			NOT = {
+				has_estate = estate_burghers
+			}
 		}
 	}
 }
@@ -2490,18 +2533,18 @@ defined_text = {
 defined_text = {
 	name = GetChurchOrFallbackName
 	random = no
-	
 	text = {
 		localisation_key = country_estate_church_name
 		trigger = {
 			has_estate = estate_church
 		}
 	}
-	
 	text = {
 		localisation_key = estate_church
 		trigger = {
-			NOT = { has_estate = estate_church }
+			NOT = {
+				has_estate = estate_church
+			}
 		}
 	}
 }
@@ -2509,18 +2552,18 @@ defined_text = {
 defined_text = {
 	name = GetTribesOrFallbackName
 	random = no
-	
 	text = {
 		localisation_key = country_estate_nomadic_tribes_name
 		trigger = {
 			has_estate = estate_nomadic_tribes
 		}
 	}
-	
 	text = {
 		localisation_key = estate_nomadic_tribes
 		trigger = {
-			NOT = { has_estate = estate_nomadic_tribes }
+			NOT = {
+				has_estate = estate_nomadic_tribes
+			}
 		}
 	}
 }
@@ -2528,18 +2571,18 @@ defined_text = {
 defined_text = {
 	name = GetDhimmiOrFallbackName
 	random = no
-	
 	text = {
 		localisation_key = country_estate_dhimmi_name
 		trigger = {
 			has_estate = estate_dhimmi
 		}
 	}
-	
 	text = {
 		localisation_key = estate_dhimmi
 		trigger = {
-			NOT = { has_estate = estate_dhimmi }
+			NOT = {
+				has_estate = estate_dhimmi
+			}
 		}
 	}
 }
@@ -2547,18 +2590,18 @@ defined_text = {
 defined_text = {
 	name = GetCossacksOrFallbackName
 	random = no
-	
 	text = {
 		localisation_key = country_estate_cossacks_name
 		trigger = {
 			has_estate = estate_cossacks
 		}
 	}
-	
 	text = {
 		localisation_key = estate_cossacks
 		trigger = {
-			NOT = { has_estate = estate_cossacks }
+			NOT = {
+				has_estate = estate_cossacks
+			}
 		}
 	}
 }
@@ -2566,18 +2609,18 @@ defined_text = {
 defined_text = {
 	name = GetVaisyasOrFallbackName
 	random = no
-	
 	text = {
 		localisation_key = country_estate_vaisyas_name
 		trigger = {
 			has_estate = estate_vaisyas
 		}
 	}
-	
 	text = {
 		localisation_key = estate_vaisyas
 		trigger = {
-			NOT = { has_estate = estate_vaisyas }
+			NOT = {
+				has_estate = estate_vaisyas
+			}
 		}
 	}
 }
@@ -2585,18 +2628,18 @@ defined_text = {
 defined_text = {
 	name = GetBrahminsOrFallbackName
 	random = no
-	
 	text = {
 		localisation_key = country_estate_brahmins_name
 		trigger = {
 			has_estate = estate_brahmins
 		}
 	}
-	
 	text = {
 		localisation_key = estate_brahmins
 		trigger = {
-			NOT = { has_estate = estate_brahmins }
+			NOT = {
+				has_estate = estate_brahmins
+			}
 		}
 	}
 }
@@ -2604,18 +2647,18 @@ defined_text = {
 defined_text = {
 	name = GetJainsOrFallbackName
 	random = no
-	
 	text = {
 		localisation_key = country_estate_jains_name
 		trigger = {
 			has_estate = estate_jains
 		}
 	}
-	
 	text = {
 		localisation_key = estate_jains
 		trigger = {
-			NOT = { has_estate = estate_jains }
+			NOT = {
+				has_estate = estate_jains
+			}
 		}
 	}
 }
@@ -2623,18 +2666,18 @@ defined_text = {
 defined_text = {
 	name = GetRajputOrFallbackName
 	random = no
-	
 	text = {
 		localisation_key = country_estate_rajput_name
 		trigger = {
 			has_estate = estate_rajput
 		}
 	}
-	
 	text = {
 		localisation_key = estate_rajput
 		trigger = {
-			NOT = { has_estate = estate_rajput }
+			NOT = {
+				has_estate = estate_rajput
+			}
 		}
 	}
 }
@@ -2642,18 +2685,18 @@ defined_text = {
 defined_text = {
 	name = GetMarathaOrFallbackName
 	random = no
-	
 	text = {
 		localisation_key = country_estate_maratha_name
 		trigger = {
 			has_estate = estate_maratha
 		}
 	}
-	
 	text = {
 		localisation_key = estate_maratha
 		trigger = {
-			NOT = { has_estate = estate_maratha }
+			NOT = {
+				has_estate = estate_maratha
+			}
 		}
 	}
 }
@@ -2661,7 +2704,6 @@ defined_text = {
 defined_text = {
 	name = GetLegitimacyOrMeritocracy
 	random = no
-	
 	text = {
 		localisation_key = meritocracy
 		trigger = {
@@ -2669,13 +2711,16 @@ defined_text = {
 			has_dlc = "Mandate of Heaven"
 		}
 	}
-	
 	text = {
 		localisation_key = legitimacy
 		trigger = {
 			OR = {
-				NOT = { has_reform = celestial_empire }
-				NOT = { has_dlc = "Mandate of Heaven" }
+				NOT = {
+					has_reform = celestial_empire
+				}
+				NOT = {
+					has_dlc = "Mandate of Heaven"
+				}
 			}
 		}
 	}
@@ -2685,7 +2730,6 @@ defined_text = {
 defined_text = {
 	name = GetExileAdvisorAAnTitle
 	random = no
-	
 	text = {
 		localisation_key = a_philosopher
 		trigger = {
@@ -2813,7 +2857,6 @@ defined_text = {
 		}
 	}
 }
-
 
 #Prints the province's manufactory (if one is built)
 defined_text = {
@@ -3076,7 +3119,9 @@ defined_text = {
 			has_country_flag = advisor_events_adm
 			has_estate = estate_brahmins
 			OR = {
-				NOT = { has_estate = estate_church }
+				NOT = {
+					has_estate = estate_church
+				}
 				employed_advisor = {
 					category = ADM
 					religion = hinduism
@@ -3129,7 +3174,9 @@ defined_text = {
 			has_country_flag = advisor_events_mil
 			has_estate = estate_rajput
 			OR = {
-				NOT = { has_estate = estate_nobles }
+				NOT = {
+					has_estate = estate_nobles
+				}
 				employed_advisor = {
 					category = MIL
 					religion = hinduism
@@ -3143,7 +3190,9 @@ defined_text = {
 			has_country_flag = advisor_events_mil
 			has_estate = estate_maratha
 			OR = {
-				NOT = { has_estate = estate_nobles }
+				NOT = {
+					has_estate = estate_nobles
+				}
 				employed_advisor = {
 					category = MIL
 					religion = hinduism
@@ -3164,14 +3213,14 @@ defined_text = {
 			has_estate = estate_nomadic_tribes
 		}
 	}
-	text = { #is used if none of the above ones are true e.g. if you have no estates
+	text = {
+		#is used if none of the above ones are true e.g. if you have no estates
 		localisation_key = fallback_string_nobility
 		trigger = {
 			always = yes
 		}
 	}
 }
-
 
 #Prints the estate related to the event advisor via e.g. [This.GetBurghersName]
 defined_text = {
@@ -3205,14 +3254,18 @@ defined_text = {
 		localisation_key = this_rajputs
 		trigger = {
 			has_estate = estate_rajput
-			NOT = { has_estate = estate_nobles }
+			NOT = {
+				has_estate = estate_nobles
+			}
 		}
 	}
 	text = {
 		localisation_key = this_marathas
 		trigger = {
 			has_estate = estate_maratha
-			NOT = { has_estate = estate_nobles }
+			NOT = {
+				has_estate = estate_nobles
+			}
 		}
 	}
 }
@@ -3221,7 +3274,6 @@ defined_text = {
 defined_text = {
 	name = GetParliamentWithGrammar
 	random = no
-
 	text = {
 		localisation_key = this_parliament
 		trigger = {
@@ -3319,7 +3371,6 @@ defined_text = {
 defined_text = {
 	name = GetParliamentWithGrammarCap
 	random = no
-
 	text = {
 		localisation_key = this_parliament
 		trigger = {
@@ -3416,7 +3467,6 @@ defined_text = {
 
 defined_text = {
 	name = GetRandom_Sin
-
 	text = {
 		localisation_key = sin_sexual_immorality
 	}
@@ -3436,17 +3486,16 @@ defined_text = {
 
 ### Polynesian Rework
 defined_text = {
-    name = GetPolynesianSacredArea
-
-    text = {
-        localisation_key = string_sacred_area_fijian
-        trigger = {
+	name = GetPolynesianSacredArea
+	text = {
+		localisation_key = string_sacred_area_fijian
+		trigger = {
 			primary_culture = melanesian
-        }
-    }
-    text = {
-        localisation_key = string_sacred_area_hawaiian
-        trigger = {
+		}
+	}
+	text = {
+		localisation_key = string_sacred_area_hawaiian
+		trigger = {
 			OR = {
 				tag = HAW
 				tag = KAA
@@ -3454,11 +3503,11 @@ defined_text = {
 				tag = OAH
 				tag = UHW
 			}
-        }
-    }
+		}
+	}
 	text = {
-        localisation_key = string_sacred_area_polynesian
-        trigger = {
+		localisation_key = string_sacred_area_polynesian
+		trigger = {
 			OR = {
 				primary_culture = maori
 				primary_culture = polynesian
@@ -3472,22 +3521,21 @@ defined_text = {
 					tag = UHW
 				}
 			}
-        }
+		}
 	}
 }
 
 defined_text = {
-    name = GetPolynesianDance
-
-    text = {
-        localisation_key = string_dance_fijian
-        trigger = {
+	name = GetPolynesianDance
+	text = {
+		localisation_key = string_dance_fijian
+		trigger = {
 			primary_culture = melanesian
-        }
-    }
-    text = {
-        localisation_key = string_dance_hawaiian
-        trigger = {
+		}
+	}
+	text = {
+		localisation_key = string_dance_hawaiian
+		trigger = {
 			OR = {
 				tag = HAW
 				tag = KAA
@@ -3495,24 +3543,24 @@ defined_text = {
 				tag = OAH
 				tag = UHW
 			}
-        }
-    }
+		}
+	}
 	text = {
-        localisation_key = string_dance_maori
-        trigger = {
+		localisation_key = string_dance_maori
+		trigger = {
 			primary_culture = maori
-        }
+		}
 	}
 	text = {
-        localisation_key = string_dance_samoan
-        trigger = {
+		localisation_key = string_dance_samoan
+		trigger = {
 			tag = SAM
-        }
+		}
 	}
 	text = {
-        localisation_key = string_dance_tongan
-        trigger = {
+		localisation_key = string_dance_tongan
+		trigger = {
 			tag = TOG
-        }
+		}
 	}
 }

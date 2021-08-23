@@ -24,7 +24,7 @@ carolus_rex_monument = {
 				tag = SCA
 			}
 		}
-		AND = {
+		FROM = {
 			owns_all_provinces = {
 				region = scandinavia_region
 			}
@@ -32,7 +32,6 @@ carolus_rex_monument = {
 				region = baltic_region
 			}
 		}
-		is_subject = no
 	}
 	#what to do when it's built
 	on_built = {
@@ -177,12 +176,9 @@ nieuw_amsterdam_haven_monument = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		culture_group = west_germanic
-		country_or_subject_holds = {
-			owns_all_provinces = {
-				region = northeast_america_region
-			}
-		}
+		FROM = {
+			culture_group = west_germanic
+			has_institution = global_trade}
 	}
 	#what to do when it's built
 	on_built = {
@@ -333,12 +329,11 @@ round_temple = {
 				tag = MGE
 			}
 		}
-		AND = {
+		FROM = {
 			owns_all_provinces = {
 				region = japan_region
 			}
 		}
-		is_subject = no
 	}
 	#what to do when it's built
 	on_built = {
@@ -375,7 +370,7 @@ round_temple = {
 		}
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			missionary = 1
+			missionaries = 1
 		}
 		#what effects happen when this tier is achieved
 		on_upgraded = {
@@ -400,7 +395,7 @@ round_temple = {
 		}
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			missionary = 1
+			missionaries = 1
 			missionary_maintenance_cost = -0.1
 		}
 		#what effects happen when this tier is achieved
@@ -426,7 +421,7 @@ round_temple = {
 		}
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			missionary = 1
+			missionaries = 1
 			missionary_maintenance_cost = -0.1
 			global_missionary_strength = 0.02
 		}
@@ -453,7 +448,7 @@ round_temple = {
 		}
 		#what modifiers are added to the country when we have this project here on this tier
 		country_modifiers = {
-			missionary = 1
+			missionaries = 1
 			missionary_maintenance_cost = -0.1
 			global_missionary_strength = 0.02
 			warscore_cost_vs_other_religion = -0.25

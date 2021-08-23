@@ -14,7 +14,9 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
-				limit = { religion_group = asian_pagan }
+				limit = {
+					religion_group = asian_pagan
+				}
 				save_event_target_as = pagan_province
 			}
 			clr_country_flag = harmonization_shangdi_conflict
@@ -33,6 +35,7 @@ country_event = {
 		}
 	}
 }
+
 #Christian Harmonization
 country_event = {
 	id = confucian_events.2
@@ -58,6 +61,7 @@ country_event = {
 		}
 	}
 }
+
 #Muslim Harmonization
 country_event = {
 	id = confucian_events.3
@@ -91,6 +95,7 @@ country_event = {
 		}
 	}
 }
+
 #Dharmic Harmonization
 country_event = {
 	id = confucian_events.4
@@ -116,6 +121,7 @@ country_event = {
 		}
 	}
 }
+
 #Jewish Harmonization
 country_event = {
 	id = confucian_events.5
@@ -141,6 +147,7 @@ country_event = {
 		}
 	}
 }
+
 #Zoroastrian Harmonization
 country_event = {
 	id = confucian_events.6
@@ -172,6 +179,7 @@ country_event = {
 		}
 	}
 }
+
 #Shinto Harmonization
 country_event = {
 	id = confucian_events.7
@@ -197,6 +205,7 @@ country_event = {
 		}
 	}
 }
+
 #Theravada Harmonization
 country_event = {
 	id = confucian_events.8
@@ -222,6 +231,7 @@ country_event = {
 		}
 	}
 }
+
 #Mahayana Harmonization
 country_event = {
 	id = confucian_events.9
@@ -247,6 +257,7 @@ country_event = {
 		}
 	}
 }
+
 #Vajrayana Harmonization
 country_event = {
 	id = confucian_events.10
@@ -272,6 +283,7 @@ country_event = {
 		}
 	}
 }
+
 #Harmonization Progress Events
 #Concept of Shangdi
 country_event = {
@@ -281,15 +293,24 @@ country_event = {
 	picture = MERITOCRACY_eventPicture
 	trigger = {
 		has_dlc = "Mandate of Heaven"
-		religion = confucianism
+		OR = {
+			religion = confucianism
+			religion = taoism
+			religion = zen
+			religion = tantra
+		}
 		harmonization_progress = 10
-		NOT = { harmonization_progress = 60 }
+		NOT = {
+			harmonization_progress = 60
+		}
 		any_owned_province = {
 			owner = {
 				is_harmonizing_with = PREV
 			}
 		}
-		NOT = { has_country_flag = harmonization_shangdi_conflict }
+		NOT = {
+			has_country_flag = harmonization_shangdi_conflict
+		}
 	}
 	immediate = {
 		hidden_effect = {
@@ -312,7 +333,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "confucian_events.11.a" #We must teach them the proper ways!
+		name = "confucian_events.11.a"		#We must teach them the proper ways!
 		ai_chance = {
 			factor = 30
 		}
@@ -322,16 +343,17 @@ country_event = {
 		add_estate_church_loyalty_effect = yes
 	}
 	option = {
-		name = "confucian_events.11.b" #Let us accommodate this abstraction.
+		name = "confucian_events.11.b"		#Let us accommodate this abstraction.
 		ai_chance = {
 			factor = 70
 		}
-		add_harmonization_progress = 12 #4 years
+		add_harmonization_progress = 12		#4 years
 		reduce_legitimacy_small_effect = yes
 		reduce_meritocracy_effect = yes
 		reduce_estate_church_loyalty_effect = yes
 	}
 }
+
 #Translations of the Classics
 #Han Kitab
 country_event = {
@@ -341,15 +363,24 @@ country_event = {
 	picture = MERITOCRACY_eventPicture
 	trigger = {
 		has_dlc = "Mandate of Heaven"
-		religion = confucianism
+		OR = {
+			religion = confucianism
+			religion = taoism
+			religion = zen
+			religion = tantra
+		}
 		harmonization_progress = 6
-		NOT = { harmonization_progress = 40 }
+		NOT = {
+			harmonization_progress = 40
+		}
 		any_owned_province = {
 			owner = {
 				is_harmonizing_with = PREV
 			}
 		}
-		NOT = { has_country_flag = harmonization_han_kitab }
+		NOT = {
+			has_country_flag = harmonization_han_kitab
+		}
 	}
 	immediate = {
 		hidden_effect = {
@@ -372,18 +403,18 @@ country_event = {
 		}
 	}
 	option = {
-		name = "confucian_events.12.a" #Let them create their own version of proper form.
+		name = "confucian_events.12.a"		#Let them create their own version of proper form.
 		ai_chance = {
 			factor = 70
 		}
-		add_harmonization_progress = 15 #5 years
+		add_harmonization_progress = 15		#5 years
 		add_country_modifier = {
 			name = "harmonization_classics_translated"
 			duration = 3650
 		}
 	}
 	option = {
-		name = "confucian_events.12.b" #No, we cannot risk the logical core of our ideology!
+		name = "confucian_events.12.b"		#No, we cannot risk the logical core of our ideology!
 		ai_chance = {
 			factor = 30
 		}
@@ -394,6 +425,7 @@ country_event = {
 		}
 	}
 }
+
 #Faith of [Root.Adm_Advisor.GetName]
 country_event = {
 	id = confucian_events.13
@@ -402,7 +434,12 @@ country_event = {
 	picture = MERITOCRACY_eventPicture
 	trigger = {
 		has_dlc = "Mandate of Heaven"
-		religion = confucianism
+		OR = {
+			religion = confucianism
+			religion = taoism
+			religion = zen
+			religion = tantra
+		}
 		has_adm_advisor = yes
 		harmonization_progress = 50
 		any_owned_province = {
@@ -410,7 +447,9 @@ country_event = {
 				is_harmonizing_with = PREV
 			}
 		}
-		NOT = { has_country_flag = harmonization_fate_of_advisor }
+		NOT = {
+			has_country_flag = harmonization_fate_of_advisor
+		}
 	}
 	immediate = {
 		hidden_effect = {
@@ -426,10 +465,10 @@ country_event = {
 		}
 	}
 	mean_time_to_happen = {
-		months = 700 #Not Every Time
+		months = 700		#Not Every Time
 	}
 	option = {
-		name = "confucian_events.13.a" #Depose this [Root.Adm_Advisor.GetWomanMan]!
+		name = "confucian_events.13.a"		#Depose this [Root.Adm_Advisor.GetWomanMan]!
 		ai_chance = {
 			factor = 30
 		}
@@ -439,13 +478,15 @@ country_event = {
 		add_stability_or_adm_power = yes
 	}
 	option = {
-		name = "confucian_events.13.b" #We have much to learn from the [harmonization_province.Religion.GetName] people.
+		name = "confucian_events.13.b"		#We have much to learn from the [harmonization_province.Religion.GetName] people.
 		ai_chance = {
 			factor = 70
 			modifier = {
 				factor = 0
 				has_reform = celestial_empire
-				NOT = { imperial_mandate = 50 }
+				NOT = {
+					imperial_mandate = 50
+				}
 			}
 		}
 		add_harmonization_progress = 9
@@ -457,6 +498,7 @@ country_event = {
 		}
 	}
 }
+
 #Right and Rite
 #Repeatable - local - but not common
 country_event = {
@@ -466,7 +508,12 @@ country_event = {
 	picture = GIFTS_TO_EMPEROR_eventPicture
 	trigger = {
 		has_dlc = "Mandate of Heaven"
-		religion = confucianism
+		OR = {
+			religion = confucianism
+			religion = taoism
+			religion = zen
+			religion = tantra
+		}
 		any_owned_province = {
 			is_state = yes
 			owner = {
@@ -491,30 +538,33 @@ country_event = {
 		months = 500
 	}
 	option = {
-		name = "confucian_events.14.a" #Barbarians!
+		name = "confucian_events.14.a"		#Barbarians!
 		ai_chance = {
 			factor = 30
 		}
-		add_harmonization_progress = -3 #1 year
+		add_harmonization_progress = -3		#1 year
 	}
 	option = {
-		name = "confucian_events.14.b" #Such Minor Things do not Concern us
+		name = "confucian_events.14.b"		#Such Minor Things do not Concern us
 		ai_chance = {
 			factor = 70
 		}
-		add_harmonization_progress = 6 #2 years
+		add_harmonization_progress = 6		#2 years
 		event_target:harmonization_province = {
 			add_local_autonomy = 25
 			area = {
 				limit = {
 					owned_by = ROOT
-					owner = { is_harmonizing_with = PREV }
+					owner = {
+						is_harmonizing_with = PREV
+					}
 				}
 				add_local_autonomy = 25
 			}
 		}
 	}
 }
+
 #Empowering the Office of [Root.Monarch.GetTitle]
 country_event = {
 	id = confucian_events.15
@@ -523,7 +573,12 @@ country_event = {
 	picture = GIFTS_TO_EMPEROR_eventPicture
 	trigger = {
 		has_dlc = "Mandate of Heaven"
-		religion = confucianism
+		OR = {
+			religion = confucianism
+			religion = taoism
+			religion = zen
+			religion = tantra
+		}
 		harmonization_progress = 30
 		any_owned_province = {
 			is_state = yes
@@ -554,20 +609,24 @@ country_event = {
 		ai_chance = {
 			factor = 70
 		}
-		add_harmonization_progress = 9 #3 years
+		add_harmonization_progress = 9		#3 years
 		event_target:harmonization_province = {
 			area = {
-				limit = { owned_by = ROOT }
+				limit = {
+					owned_by = ROOT
+				}
 				add_local_autonomy = 25
 			}
 		}
 	}
 	option = {
 		name = "confucian_events.15.b"
-		add_harmonization_progress = -9 #3 years
+		add_harmonization_progress = -9		#3 years
 		event_target:harmonization_province = {
 			area = {
-				limit = { owned_by = ROOT }
+				limit = {
+					owned_by = ROOT
+				}
 				add_province_modifier = {
 					name = harmonization_local_rites_refused
 					duration = 3650
@@ -579,6 +638,7 @@ country_event = {
 		}
 	}
 }
+
 #Bringing Civilization to the Barbarians
 #Repeatable
 country_event = {
@@ -588,7 +648,12 @@ country_event = {
 	picture = IMPERIAL_SEAL_eventPicture
 	trigger = {
 		has_dlc = "Mandate of Heaven"
-		religion = confucianism
+		OR = {
+			religion = confucianism
+			religion = taoism
+			religion = zen
+			religion = tantra
+		}
 		has_dip_advisor = yes
 		any_owned_province = {
 			is_state = yes
@@ -621,7 +686,7 @@ country_event = {
 		months = 500
 	}
 	option = {
-		name = "confucian_events.16.a" #Ignore these barbarians
+		name = "confucian_events.16.a"		#Ignore these barbarians
 		event_target:harmonization_province = {
 			area = {
 				limit = {
@@ -632,8 +697,8 @@ country_event = {
 		}
 	}
 	option = {
-		name = "confucian_events.16.b" #Let us send our best and brightest to civilize them.
-		reduce_meritocracy_effect = yes #Sending them away
+		name = "confucian_events.16.b"		#Let us send our best and brightest to civilize them.
+		reduce_meritocracy_effect = yes		#Sending them away
 		add_adm_power = -50
 		add_harmonization_progress = 6
 		event_target:harmonization_province = {
@@ -651,6 +716,7 @@ country_event = {
 		}
 	}
 }
+
 #[harmonization_province.Religion.GetName] Civilization
 country_event = {
 	id = confucian_events.17
@@ -659,7 +725,12 @@ country_event = {
 	picture = GIFTS_TO_EMPEROR_eventPicture
 	trigger = {
 		has_dlc = "Mandate of Heaven"
-		religion = confucianism
+		OR = {
+			religion = confucianism
+			religion = taoism
+			religion = zen
+			religion = tantra
+		}
 		harmonization_progress = 50
 		any_owned_province = {
 			is_state = yes
@@ -686,7 +757,7 @@ country_event = {
 	}
 	option = {
 		name = "confucian_events.17.a"
-		add_harmonization_progress = 9 #3 years
+		add_harmonization_progress = 9		#3 years
 	}
 	option = {
 		name = "confucian_events.17.b"
@@ -704,6 +775,7 @@ country_event = {
 		}
 	}
 }
+
 # Xiaoren?
 country_event = {
 	id = confucian_events.18
@@ -712,14 +784,23 @@ country_event = {
 	picture = GIFTS_TO_EMPEROR_eventPicture
 	trigger = {
 		has_dlc = "Mandate of Heaven"
-		religion = confucianism
+		OR = {
+			religion = confucianism
+			religion = taoism
+			religion = zen
+			religion = tantra
+		}
 		government = monarchy
 		has_heir = yes
 		has_government_attribute = heir
 		heir_age = 15
 		OR = {
-			NOT = { heir_adm = 3 }
-			NOT = { heir_dip = 3 }
+			NOT = {
+				heir_adm = 3
+			}
+			NOT = {
+				heir_dip = 3
+			}
 		}
 		NOT = {
 			heir_has_personality = just_personality
@@ -753,7 +834,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "confucian_events.18.a" #Such a [Root.Her.GetWomanMan] is not fit for the Palace of the East (ie the office of the imperial heir)
+		name = "confucian_events.18.a"		#Such a [Root.Her.GetWomanMan] is not fit for the Palace of the East (ie the office of the imperial heir)
 		add_harmony = 10
 		add_stability = -1
 		define_heir = {
@@ -771,8 +852,12 @@ country_event = {
 		name = "confucian_events.18.b"
 		if = {
 			limit = {
-				NOT = { heir_has_personality = petty_personality }
-				NOT = { heir_age = 45 }
+				NOT = {
+					heir_has_personality = petty_personality
+				}
+				NOT = {
+					heir_age = 45
+				}
 			}
 			add_heir_personality = petty_personality
 		}
@@ -785,6 +870,7 @@ country_event = {
 		add_estate_burghers_loyalty_effect = yes
 	}
 }
+
 # Veiled Criticism
 # Water Margin
 country_event = {
@@ -795,10 +881,20 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		has_dlc = "Mandate of Heaven"
-		religion = confucianism
 		OR = {
-			NOT = { has_country_flag = harmony_book_timer }
-			had_country_flag = { flag = harmony_book_timer days = 1825 }
+			religion = confucianism
+			religion = taoism
+			religion = zen
+			religion = tantra
+		}
+		OR = {
+			NOT = {
+				has_country_flag = harmony_book_timer
+			}
+			had_country_flag = {
+				flag = harmony_book_timer
+				days = 1825
+			}
 		}
 		NOT = {
 			has_country_modifier = harmony_banned_book
@@ -821,6 +917,7 @@ country_event = {
 		set_country_flag = harmony_book_timer
 	}
 }
+
 #Civil Service
 country_event = {
 	id = confucian_events.20
@@ -830,7 +927,12 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		has_dlc = "Mandate of Heaven"
-		religion = confucianism
+		OR = {
+			religion = confucianism
+			religion = taoism
+			religion = zen
+			religion = tantra
+		}
 	}
 	mean_time_to_happen = {
 		days = 1
@@ -847,6 +949,7 @@ country_event = {
 		reduce_meritocracy_effect = yes
 	}
 }
+
 #Dai Viet can choose if they're Confucian or Mahayana
 country_event = {
 	id = confucian_events.21
@@ -856,12 +959,16 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		has_dlc = "Mandate of Heaven"
-		NOT = { religion = confucianism }
+		NOT = {
+			religion = confucianism
+		}
 		tag = DAI
 		religion = mahayana
 		ai = no
 		is_at_war = no
-		NOT = { is_year = 1500 }
+		NOT = {
+			is_year = 1500
+		}
 	}
 	mean_time_to_happen = {
 		months = 60
@@ -871,7 +978,9 @@ country_event = {
 		change_religion = confucianism
 		set_ruler_religion = confucianism
 		if = {
-			limit = { has_heir = yes }
+			limit = {
+				has_heir = yes
+			}
 			set_heir_religion = confucianism
 		}
 		add_harmonized_religion = mahayana
@@ -881,6 +990,7 @@ country_event = {
 		add_prestige = 20
 	}
 }
+
 #Zen Harmonization
 country_event = {
 	id = confucian_events.22
@@ -891,7 +1001,9 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
-				limit = { religion = zen }
+				limit = {
+					religion = zen
+				}
 				save_event_target_as = zen_province
 			}
 			clr_country_flag = harmonization_shangdi_conflict
@@ -910,6 +1022,7 @@ country_event = {
 		}
 	}
 }
+
 #Tantra Harmonization
 country_event = {
 	id = confucian_events.23
@@ -920,7 +1033,9 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
-				limit = { religion = tantra }
+				limit = {
+					religion = tantra
+				}
 				save_event_target_as = tantra_province
 			}
 			clr_country_flag = harmonization_shangdi_conflict
@@ -939,6 +1054,7 @@ country_event = {
 		}
 	}
 }
+
 #Taoism Harmonization
 country_event = {
 	id = confucian_events.24
@@ -949,7 +1065,9 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
-				limit = { religion = taoism }
+				limit = {
+					religion = taoism
+				}
 				save_event_target_as = taoism_province
 			}
 			clr_country_flag = harmonization_shangdi_conflict
@@ -968,6 +1086,7 @@ country_event = {
 		}
 	}
 }
+
 #Confucian Harmonization
 country_event = {
 	id = confucian_events.25
@@ -978,7 +1097,9 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
-				limit = { religion = taoism }
+				limit = {
+					religion = taoism
+				}
 				save_event_target_as = taoism_province
 			}
 			clr_country_flag = harmonization_shangdi_conflict
