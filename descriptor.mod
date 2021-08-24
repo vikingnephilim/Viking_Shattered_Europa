@@ -1,6 +1,6 @@
 name="Viking Nephilims Shattered World - 1.31 WORKING"
-replace_path = "history/wars"
-replace_path = "common/religion"
+replace_path="history/wars"
+replace_path="common/religion"
 tags={
 	"National Ideas"
 	"Missions And Decisions"

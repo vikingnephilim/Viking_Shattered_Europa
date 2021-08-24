@@ -12,11 +12,15 @@ country_event = {
 				tag = TRI
 				tag = MUN
 			}
-		religion = waldensian
+			religion = waldensian
 		}
-		NOT = {	has_country_flag = screw_pope }
-		NOT = { has_country_flag = hail_popeman }
+		NOT = {
+			has_country_flag = screw_pope
 		}
+		NOT = {
+			has_country_flag = hail_popeman
+		}
+	}
 	mean_time_to_happen = {
 		days = 10
 	}
@@ -27,7 +31,7 @@ country_event = {
 		add_stability = 1
 		add_prestige = 50
 		set_country_flag = screw_pope
-		}
+	}
 	option = {
 		name = "bendtheknee.1.b"
 		add_stability = -1
@@ -35,8 +39,9 @@ country_event = {
 		add_treasury = 100
 		change_religion = catholic
 		set_country_flag = hail_popeman
-			}
+	}
 }
+
 country_event = {
 	id = bendtheknee.2
 	title = "bendtheknee.2.t"
@@ -49,11 +54,15 @@ country_event = {
 				tag = SCO
 				tag = GBR
 			}
-		religion = lollard
+			religion = lollard
 		}
-		NOT = {	has_country_flag = screw_pope }
-		NOT = { has_country_flag = hail_popeman }
+		NOT = {
+			has_country_flag = screw_pope
 		}
+		NOT = {
+			has_country_flag = hail_popeman
+		}
+	}
 	mean_time_to_happen = {
 		days = 10
 	}
@@ -64,7 +73,7 @@ country_event = {
 		add_stability = 1
 		add_prestige = 50
 		set_country_flag = screw_pope
-		}
+	}
 	option = {
 		name = "bendtheknee.2.b"
 		add_stability = -1
@@ -72,8 +81,9 @@ country_event = {
 		add_treasury = 100
 		change_religion = catholic
 		set_country_flag = hail_popeman
-			}
+	}
 }
+
 country_event = {
 	id = bendtheknee.3
 	title = "bendtheknee.3.t"
@@ -82,14 +92,28 @@ country_event = {
 	trigger = {
 		religion = catholic
 		is_religion_enabled = protestant
-		NOT = { culture_group = latin }
-		NOT = { culture_group = south_latin }
-		NOT = { culture_group = iberian }
-		NOT = { culture_group = celtic_iberian }
-		NOT = { culture_group = gaelic }
-		NOT = {	has_country_flag = screw_pope }
-		NOT = { has_country_flag = hail_popeman }
+		NOT = {
+			culture_group = latin
 		}
+		NOT = {
+			culture_group = south_latin
+		}
+		NOT = {
+			culture_group = iberian
+		}
+		NOT = {
+			culture_group = celtic_iberian
+		}
+		NOT = {
+			culture_group = gaelic
+		}
+		NOT = {
+			has_country_flag = screw_pope
+		}
+		NOT = {
+			has_country_flag = hail_popeman
+		}
+	}
 	mean_time_to_happen = {
 		months = 6
 	}
@@ -100,11 +124,37 @@ country_event = {
 		add_prestige = 50
 		change_religion = fraticelli
 		set_country_flag = screw_pope
-		}
+	}
 	option = {
 		name = "bendtheknee.3.b"
 		add_stability = 1
 		add_treasury = 100
 		set_country_flag = hail_popeman
-			}
+	}
+}
+
+country_event = {
+	id = bendtheknee.4
+	title = "bendtheknee.4.t"
+	desc = "bendtheknee.4.d"
+	picture = POPE_PREACHING_eventPicture
+	hidden = yes
+	trigger = {
+		government_rank = 3
+		is_emperor = no
+		is_emperor_of_china = no
+		NOT = {
+			has_country_flag = empire_name
+		}
+	}
+	mean_time_to_happen = {
+		days = 365
+	}
+	immediate = {
+		set_country_flag = empire_name
+		empire_name_effect = yes
+	}
+	option = {
+		name = "bendtheknee.4.a"
+	}
 }

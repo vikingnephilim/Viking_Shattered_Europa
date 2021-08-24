@@ -18,6 +18,61 @@ is_chinese = {
 		primary_culture = shandong_culture
 	}
 }
+
+is_turkish_beylik = {
+	OR = {
+		tag = RUM
+		was_tag = RUM
+		tag = AYD
+		was_tag = AYD
+		tag = CND
+		was_tag = CND
+		tag = DUL
+		was_tag = DUL
+		tag = ERE
+		was_tag = ERE
+		tag = GRM
+		was_tag = GRM
+		tag = KAR
+		was_tag = KAR
+		tag = MEN
+		was_tag = MEN
+		tag = OSM
+		was_tag = OSM
+		tag = RAM
+		was_tag = RAM
+		tag = SRU
+		was_tag = SRU
+	}
+}
+
+is_turkish_beylik_not_rum = {
+	NOT = { tag = RUM }
+	NOT = { was_tag = RUM }
+	OR = {
+		tag = AYD
+		was_tag = AYD
+		tag = CND
+		was_tag = CND
+		tag = DUL
+		was_tag = DUL
+		tag = ERE
+		was_tag = ERE
+		tag = GRM
+		was_tag = GRM
+		tag = KAR
+		was_tag = KAR
+		tag = MEN
+		was_tag = MEN
+		tag = OSM
+		was_tag = OSM
+		tag = RAM
+		was_tag = RAM
+		tag = SRU
+		was_tag = SRU
+	}
+}
+
 is_expanded_mod_active = {
 	OR = {
 		has_global_flag = $mod$_expanded_mod_active

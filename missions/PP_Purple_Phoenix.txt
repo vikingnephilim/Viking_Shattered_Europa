@@ -4,28 +4,9 @@ GRE_missions_4 = {
 	ai = yes
 	potential = {
 		culture_group = byzantine
-		NOT = { tag = RUM }
-		NOT = { was_tag = RUM }
-		NOT = { tag = AYD }
-		NOT = { was_tag = AYD }
-		NOT = { tag = CND }
-		NOT = { was_tag = CND }
-		NOT = { tag = DUL }
-		NOT = { was_tag = DUL }
-		NOT = { tag = ERE }
-		NOT = { was_tag = ERE }
-		NOT = { tag = GRM }
-		NOT = { was_tag = GRM }
-		NOT = { tag = KAR }
-		NOT = { was_tag = KAR }
-		NOT = { tag = MEN }
-		NOT = { was_tag = MEN }
-		NOT = { tag = OSM }
-		NOT = { was_tag = OSM }
-		NOT = { tag = RAM }
-		NOT = { was_tag = RAM }
-		NOT = { tag = SRU }
-		NOT = { was_tag = SRU }
+		NOT = {
+			is_turkish_beylik = yes
+		}
 	}
 	has_country_shield = yes
 	NAX_strike_out = {
@@ -80,15 +61,7 @@ GRE_missions_4 = {
 			}
 		}
 		effect = {
-			aydin_area = {
-				limit = {
-					NOT = {
-						owned_by = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
+			321 = {
 				add_permanent_claim = ROOT
 			}
 		}
@@ -537,28 +510,9 @@ GRE_missions_5 = {
 	ai = yes
 	potential = {
 		culture_group = byzantine
-		NOT = { tag = RUM }
-		NOT = { was_tag = RUM }
-		NOT = { tag = AYD }
-		NOT = { was_tag = AYD }
-		NOT = { tag = CND }
-		NOT = { was_tag = CND }
-		NOT = { tag = DUL }
-		NOT = { was_tag = DUL }
-		NOT = { tag = ERE }
-		NOT = { was_tag = ERE }
-		NOT = { tag = GRM }
-		NOT = { was_tag = GRM }
-		NOT = { tag = KAR }
-		NOT = { was_tag = KAR }
-		NOT = { tag = MEN }
-		NOT = { was_tag = MEN }
-		NOT = { tag = OSM }
-		NOT = { was_tag = OSM }
-		NOT = { tag = RAM }
-		NOT = { was_tag = RAM }
-		NOT = { tag = SRU }
-		NOT = { was_tag = SRU }
+		NOT = {
+			is_turkish_beylik = yes
+		}
 	}
 	has_country_shield = yes
 	NAX_impending_doom = {

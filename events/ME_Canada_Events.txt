@@ -167,6 +167,7 @@ country_event = {
 	picture = COUNTRY_COLLAPSE_eventPicture
 	major = yes
 	trigger = {
+		tag = CAN
 		CAN = {
 			mission_completed = can_british_north_america
 		}
@@ -223,6 +224,7 @@ country_event = {
 	picture = BIG_BOOK_eventPicture
 	is_triggered_only = yes
 	trigger = {
+		tag = CAN
 		is_expanded_mod_active = {
 			mod = subjects
 		}
@@ -1235,6 +1237,7 @@ country_event = {
 	picture = SHIP_SAILING_eventPicture
 	fire_only_once = yes
 	trigger = {
+		tag = CAN
 		exists = USA
 		is_institution_enabled = enlightenment
 		is_subject = yes
@@ -1468,6 +1471,7 @@ country_event = {
 	fire_only_once = yes
 	hidden = yes
 	trigger = {
+		tag = CAN
 		has_country_flag = canada_is_at_war
 		is_at_war = yes
 		OR = {
@@ -1678,6 +1682,7 @@ country_event = {
 	fire_only_once = yes
 	major = yes
 	trigger = {
+		tag = CAN
 		has_country_flag = can_burning_washington_30
 		OR = {
 			tag = CAN
@@ -1765,6 +1770,7 @@ country_event = {
 	fire_only_once = yes
 	major = yes
 	trigger = {
+		tag = CAN
 		has_country_flag = can_burning_washington_60
 		OR = {
 			OR = {
@@ -1839,6 +1845,7 @@ country_event = {
 	desc = ME_Canada_Events.30.D
 	picture = COUNTRY_COLLAPSE_eventPicture
 	trigger = {
+		tag = CAN
 		has_country_flag = canada_is_at_war
 		OR = {
 			tag = CAN
@@ -1902,6 +1909,7 @@ country_event = {
 	desc = ME_Canada_Events.31.D
 	picture = COUNTRY_COLLAPSE_eventPicture
 	trigger = {
+		tag = CAN
 		has_country_flag = canada_is_at_war
 		OR = {
 			tag = CAN
@@ -2294,6 +2302,7 @@ country_event = {
 		months = 1
 	}
 	trigger = {
+		tag = CAN
 		CAN = {
 			mission_completed = can_british_north_america
 		}
@@ -2493,6 +2502,7 @@ country_event = {
 		months = 1
 	}
 	trigger = {
+		tag = CAN
 		current_age = age_of_revolutions
 		tag = CAN
 		OR = {
@@ -2593,6 +2603,7 @@ country_event = {
 		months = 12
 	}
 	trigger = {
+		tag = CAN
 		has_country_flag = can_deed_surrender_final
 	}
 	option = {
@@ -2848,6 +2859,7 @@ country_event = {
 	desc = ME_Canada_Events.42.D
 	picture = WOUNDED_SOLDIERS_eventPicture
 	trigger = {
+		tag = CAN
 		has_country_flag = can_louis_riel_escaped
 		NOT = {
 			has_country_flag = can_red_river_colony_talks
@@ -2946,6 +2958,7 @@ country_event = {
 	picture = CULTURE_eventPicture
 	fire_only_once = yes
 	trigger = {
+		tag = CAN
 		OR = {
 			AND = {
 				tag = CAN
@@ -3156,6 +3169,7 @@ country_event = {
 	}
 	is_triggered_only = yes
 	trigger = {
+		tag = CAN
 		NOT = {
 			OR = {
 				AND = {
@@ -3203,6 +3217,7 @@ country_event = {
 	picture = COLONIZATION_eventPicture
 	is_triggered_only = yes
 	trigger = {
+		tag = CAN
 		NOT = {
 			OR = {
 				AND = {
@@ -3276,6 +3291,7 @@ country_event = {
 	picture = FORT_eventPicture
 	is_triggered_only = yes
 	trigger = {
+		tag = CAN
 		NOT = {
 			OR = {
 				AND = {
@@ -3323,6 +3339,7 @@ country_event = {
 	picture = FARMING_eventPicture
 	is_triggered_only = yes
 	trigger = {
+		tag = CAN
 		NOT = {
 			OR = {
 				AND = {
@@ -3368,6 +3385,7 @@ country_event = {
 	picture = COMET_SIGHTED_eventPicture
 	is_triggered_only = yes
 	trigger = {
+		tag = CAN
 		NOT = {
 			OR = {
 				AND = {
@@ -3545,6 +3563,7 @@ country_event = {
 	}
 	is_triggered_only = yes
 	trigger = {
+		tag = CAN
 		NOT = {
 			OR = {
 				AND = {
@@ -3798,6 +3817,7 @@ country_event = {
 	picture = SHIP_SAILING_eventPicture
 	is_triggered_only = yes
 	trigger = {
+		tag = CAN
 		NOT = {
 			OR = {
 				AND = {
@@ -4075,6 +4095,7 @@ country_event = {
 	desc = ME_Canada_Events.67.D
 	picture = BORDER_TENSION_eventPicture
 	trigger = {
+		tag = CAN
 		has_country_flag = can_enable_expeditions_completed
 		OR = {
 			AND = {
@@ -4121,6 +4142,7 @@ country_event = {
 	hidden = yes
 	is_triggered_only = yes
 	trigger = {
+		tag = CAN
 		OR = {
 			has_country_flag = can_expedition_random_event_1
 			has_country_flag = can_expedition_random_event_2
@@ -4789,6 +4811,7 @@ country_event = {
 	hidden = yes
 	fire_only_once = yes
 	trigger = {
+		tag = CAN
 		has_country_flag = kingston_25_years
 		NOT = {
 			has_country_modifier = can_royal_military_college
@@ -4810,55 +4833,6 @@ country_event = {
 	}
 }
 
-#Quebecois Content/Discontent
-province_event = {
-	id = ME_Canada_Events.200
-	title = ME_Canada_Events.200.T
-	desc = ME_Canada_Events.200.D
-	picture = CITY_DEVELOPMENT_eventPicture
-	hidden = yes
-	trigger = {
-		OR = {
-			AND = {
-				has_province_modifier = can_quebecois_content
-				unrest = 0.1
-			}
-			AND = {
-				has_province_modifier = can_quebecois_discontent
-				NOT = {
-					unrest = 0.1
-				}
-			}
-		}
-	}
-	immediate = {
-		hidden_effect = {
-			if = {
-				limit = {
-					has_province_modifier = can_quebecois_content
-				}
-				remove_province_modifier = can_quebecois_content
-				add_province_modifier = {
-					name = can_quebecois_discontent
-					duration = -1
-				}
-			}
-			else = {
-				remove_province_modifier = can_quebecois_discontent
-				add_province_modifier = {
-					name = can_quebecois_content
-					duration = -1
-				}
-			}
-		}
-	}
-	option = {
-		name = ME_Canada_Events.200.OPT1
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
 
 #Burning of Washington
 country_event = {
@@ -4868,6 +4842,7 @@ country_event = {
 	picture = CITY_DEVELOPMENT_eventPicture
 	hidden = yes
 	trigger = {
+		tag = CAN
 		has_country_flag = canada_is_at_war
 		USA = {
 			capital_scope = {
@@ -4907,6 +4882,7 @@ country_event = {
 	hidden = yes
 	trigger = {
 		prestige = 75
+		tag = CAN
 		AND = {
 			NOT = {
 				has_country_flag = canada_quebecois_party_1

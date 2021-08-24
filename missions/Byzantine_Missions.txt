@@ -5,70 +5,7 @@ GRE_missions_1 = {
 	potential = {
 		culture_group = byzantine
 		NOT = {
-			tag = RUM
-		}
-		NOT = {
-			was_tag = RUM
-		}
-		NOT = {
-			tag = AYD
-		}
-		NOT = {
-			was_tag = AYD
-		}
-		NOT = {
-			tag = CND
-		}
-		NOT = {
-			was_tag = CND
-		}
-		NOT = {
-			tag = DUL
-		}
-		NOT = {
-			was_tag = DUL
-		}
-		NOT = {
-			tag = ERE
-		}
-		NOT = {
-			was_tag = ERE
-		}
-		NOT = {
-			tag = GRM
-		}
-		NOT = {
-			was_tag = GRM
-		}
-		NOT = {
-			tag = KAR
-		}
-		NOT = {
-			was_tag = KAR
-		}
-		NOT = {
-			tag = MEN
-		}
-		NOT = {
-			was_tag = MEN
-		}
-		NOT = {
-			tag = OSM
-		}
-		NOT = {
-			was_tag = OSM
-		}
-		NOT = {
-			tag = RAM
-		}
-		NOT = {
-			was_tag = RAM
-		}
-		NOT = {
-			tag = SRU
-		}
-		NOT = {
-			was_tag = SRU
+			is_turkish_beylik = yes
 		}
 	}
 	has_country_shield = yes
@@ -78,7 +15,7 @@ GRE_missions_1 = {
 		}
 		position = 1
 		trigger = {
-			adm = 3
+			heir_adm = 3
 		}
 		effect = {
 			if = {
@@ -338,28 +275,6 @@ GRE_missions_1 = {
 			}
 			add_prestige = 25
 			set_capital = 151
-			hudavendigar_area = {
-				limit = {
-					NOT = {
-						owned_by = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			aydin_area = {
-				limit = {
-					NOT = {
-						owned_by = ROOT
-					}
-					NOT = {
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
 			bulgaria_area = {
 				limit = {
 					NOT = {
@@ -578,70 +493,7 @@ GRE_missions_2 = {
 	potential = {
 		culture_group = byzantine
 		NOT = {
-			tag = RUM
-		}
-		NOT = {
-			was_tag = RUM
-		}
-		NOT = {
-			tag = AYD
-		}
-		NOT = {
-			was_tag = AYD
-		}
-		NOT = {
-			tag = CND
-		}
-		NOT = {
-			was_tag = CND
-		}
-		NOT = {
-			tag = DUL
-		}
-		NOT = {
-			was_tag = DUL
-		}
-		NOT = {
-			tag = ERE
-		}
-		NOT = {
-			was_tag = ERE
-		}
-		NOT = {
-			tag = GRM
-		}
-		NOT = {
-			was_tag = GRM
-		}
-		NOT = {
-			tag = KAR
-		}
-		NOT = {
-			was_tag = KAR
-		}
-		NOT = {
-			tag = MEN
-		}
-		NOT = {
-			was_tag = MEN
-		}
-		NOT = {
-			tag = OSM
-		}
-		NOT = {
-			was_tag = OSM
-		}
-		NOT = {
-			tag = RAM
-		}
-		NOT = {
-			was_tag = RAM
-		}
-		NOT = {
-			tag = SRU
-		}
-		NOT = {
-			was_tag = SRU
+			is_turkish_beylik = yes
 		}
 	}
 	has_country_shield = yes
@@ -1113,70 +965,7 @@ GRE_missions_3 = {
 	potential = {
 		culture_group = byzantine
 		NOT = {
-			tag = RUM
-		}
-		NOT = {
-			was_tag = RUM
-		}
-		NOT = {
-			tag = AYD
-		}
-		NOT = {
-			was_tag = AYD
-		}
-		NOT = {
-			tag = CND
-		}
-		NOT = {
-			was_tag = CND
-		}
-		NOT = {
-			tag = DUL
-		}
-		NOT = {
-			was_tag = DUL
-		}
-		NOT = {
-			tag = ERE
-		}
-		NOT = {
-			was_tag = ERE
-		}
-		NOT = {
-			tag = GRM
-		}
-		NOT = {
-			was_tag = GRM
-		}
-		NOT = {
-			tag = KAR
-		}
-		NOT = {
-			was_tag = KAR
-		}
-		NOT = {
-			tag = MEN
-		}
-		NOT = {
-			was_tag = MEN
-		}
-		NOT = {
-			tag = OSM
-		}
-		NOT = {
-			was_tag = OSM
-		}
-		NOT = {
-			tag = RAM
-		}
-		NOT = {
-			was_tag = RAM
-		}
-		NOT = {
-			tag = SRU
-		}
-		NOT = {
-			was_tag = SRU
+			is_turkish_beylik = yes
 		}
 	}
 	has_country_shield = yes
@@ -1636,8 +1425,6 @@ GRE_missions_3 = {
 			}
 		}
 		effect = {
-			change_government = republic
-			add_government_reform = grk_demo
 			add_country_modifier = {
 				name = became_a_league_gre
 				duration = 3650
