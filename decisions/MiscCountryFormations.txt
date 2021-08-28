@@ -201,7 +201,8 @@ country_decisions = {
 				}
 				country_event = {
 					id = ideagroups.1
-				}				#Swap Ideas
+				}
+				#Swap Ideas
 			}
 		}
 		ai_will_do = {
@@ -217,7 +218,8 @@ country_decisions = {
 			owns = 371
 			NOT = {
 				has_country_flag = formed_iceland
-			}			#Only once
+			}
+			#Only once
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -392,7 +394,8 @@ country_decisions = {
 				}
 				country_event = {
 					id = ideagroups.1
-				}				#Swap Ideas
+				}
+				#Swap Ideas
 			}
 		}
 		ai_will_do = {
@@ -408,6 +411,353 @@ country_decisions = {
 					}
 				}
 			}
+		}
+	}
+	minoa_namechange = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = minoa_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = {
+				tag = BYZ
+			}
+			NOT = {
+				tag = ATH
+			}
+			NOT = {
+				tag = MAC
+			}
+			NOT = {
+				tag = EPI
+			}
+			NOT = {
+				tag = GRE
+			}
+			culture_group = byzantine
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 15
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 163
+				province_id = 164
+				province_id = 320
+				province_id = 321
+				province_id = 2348
+				province_id = 3003
+				province_id = 4700
+				province_id = 4698
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			is_free_or_tributary_trigger = yes
+			is_at_war = no
+			owns_core_province = 163			#crete
+			owns_core_province = 164			#Naxos
+			owns_core_province = 320			#Rhodos
+			owns_core_province = 2348			#Chios
+			owns_core_province = 3003			#Euboea
+			owns_core_province = 4700			#Lesbos
+			OR = {
+				owns_core_province = 321				#Cyprus
+				owns_core_province = 4698				#Cephalonia
+			}
+		}
+		effect = {
+			set_country_flag = minoa_flag
+			override_country_name = NEO_MINOAN_EMPIRE
+			163 = {
+				rename_capital = Knossos
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			every_province = {
+				limit = {
+					area = sicily_area
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			every_province = {
+				limit = {
+					area = western_sicily_area
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			every_province = {
+				limit = {
+					area = corsica_sardinia_area
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			every_province = {
+				limit = {
+					area = baleares_area
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	israel_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_israel_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = {
+				tag = HLR
+			}
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				exists = ISR
+			}
+			religion_group = jewish_group
+			is_colonial_nation = no
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 379
+				AND = {
+					OR = {
+						area = palestine_area
+						area = trans_jordan_area
+						area = gulf_of_arabia_area
+					}
+					ROOT = {
+						NOT = {
+							num_of_owned_provinces_with = {
+								value = 10
+								religion_group = jewish_group
+								OR = {
+									area = palestine_area
+									area = trans_jordan_area
+									area = gulf_of_arabia_area
+								}
+								is_core = root
+							}
+						}
+						owns_core_province = 379
+					}
+				}
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_all_provinces = {
+				area = palestine_area
+				area = gulf_of_arabia_area
+				area = trans_jordan_area
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				religion_group = jewish_group
+				OR = {
+					area = palestine_area
+					area = trans_jordan_area
+					area = gulf_of_arabia_area
+				}
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = ISR
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
+				set_government_rank = 2
+			}
+			random_owned_province = {
+				add_base_tax = 1
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 10
+			set_country_flag = formed_israel_flag
+			country_event = {
+				id = ideagroups.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	jomsviking_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_jomsviking_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = {
+				exists = JOM
+			}
+			religion = norse_pagan_reformed
+			is_colonial_nation = no
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			AND = {
+				ROOT = {
+					NOT = {
+						num_of_owned_provinces_with = {
+							value = 10
+							religion = norse_pagan_reformed
+							OR = {
+								area = ostra_svealand_area
+								area = holland_area
+								area = vorpommern_area
+							}
+							is_core = root
+						}
+					}
+					owns_core_province = 1
+				}
+			}
+		}
+		allow = {
+			adm_tech = 10
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			is_at_war = no
+			owns_all_provinces = {
+				area = ostra_svealand_area
+				area = holland_area
+				area = vorpommern_area
+			}
+			num_of_owned_provinces_with = {
+				value = 10
+				religion = norse_pagan_reformed
+				OR = {
+					area = ostra_svealand_area
+					area = holland_area
+					area = vorpommern_area
+				}
+				is_core = root
+			}
+		}
+		effect = {
+			change_tag = JOM
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
+				set_government_rank = 2
+			}
+			random_owned_province = {
+				add_base_tax = 1
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 10
+			set_country_flag = formed_jomsviking_flag
+			country_event = {
+				id = ideagroups.1
+			}
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 }

@@ -1,18 +1,18 @@
 ######################################################################
-# hasidic_faith rebels. Disgruntled fanatics.
+# karaite rebels. Disgruntled fanatics.
 ######################################################################
-hasidic_faith_rebels = {
+karaite_rebels = {
 	color = { 230 175 175 }
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
-	religion = hasidic_faith
+	religion = karaite
 	defection = none				# Will not defect
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
 	unit_transfer = no
 	gfx_type = culture_province
 	will_relocate = yes
-	resilient = no
+			resilient = no
 	reinforcing = yes
 	general = yes
 	smart = yes
@@ -24,8 +24,8 @@ hasidic_faith_rebels = {
 	handle_action_negotiate = yes
 	handle_action_stability = yes
 	handle_action_build_core = yes
-	handle_action_send_missionary = yes
-	# The rebel type with the highest modifier for this province gets picked
+	handle_action_send_missionary = yes	
+			# The rebel type with the highest modifier for this province gets picked
 	spawn_chance = {
 		factor = 1
 		modifier = {
@@ -38,7 +38,7 @@ hasidic_faith_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			NOT = { religion = hasidic_faith }
+			NOT = { religion = karaite }
 		}
 		modifier = {
 			factor = 0.001
@@ -52,7 +52,7 @@ hasidic_faith_rebels = {
 			factor = 5.0
 			owner = { has_disaster = religious_turmoil }
 		}
-		modifier = {
+				modifier = {
 			factor = 2000
 			has_missionary = yes
 		}
@@ -82,21 +82,21 @@ hasidic_faith_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			religion = hasidic_faith
-			owner = { religion = hasidic_faith }
+			religion = karaite
+			owner = { religion = karaite }
 		}
 		modifier = {
 			factor = 2.0
-			NOT = { religion = hasidic_faith }
+			NOT = { religion = karaite }
 			any_neighbor_province = {
-	 			religion = hasidic_faith
+	 			religion = karaite
 	 			NOT = { has_province_modifier = "forced_conversion" }
 	 		}
 	 	}
 		modifier = {
 			factor = 5
 			has_missionary = yes
-			religion = hasidic_faith
+			religion = karaite
 		}
 		modifier = {
 			factor = 1.5
@@ -126,9 +126,9 @@ hasidic_faith_rebels = {
 			if = {
 				limit = {
 					OR = {
-						religion = hasidic_faith
+						religion = karaite
 						is_reformation_center = yes
-						owner = { religion = hasidic_faith }
+						owner = { religion = karaite }
 					}
 				}
 				add_province_modifier = {
@@ -138,11 +138,11 @@ hasidic_faith_rebels = {
 			}
 			if = {
 				limit = {
-					NOT = { religion = hasidic_faith }
+					NOT = { religion = karaite }
 					is_reformation_center = no
-					NOT = { owner = { religion = hasidic_faith } }
+					NOT = { owner = { religion = karaite } }
 				}
-				change_religion = hasidic_faith
+				change_religion = karaite
 				add_province_modifier = {
 					name = "forced_conversion"
 					duration = 730
@@ -161,7 +161,7 @@ hasidic_faith_rebels = {
 	can_negotiate_trigger = {
 		OR = {
 			religion_group = jewish_group
-			dominant_religion = hasidic_faith
+			dominant_religion = karaite
 		}
 	}
 	# Country scope
@@ -169,7 +169,7 @@ hasidic_faith_rebels = {
 		always = yes
 	}
 	# Localisation for their demands
-	demands_description = "hasidic_faith_rebels_demand"
+	demands_description = "karaite_rebels_demand"
 	# Country Scope
 			demands_enforced_effect = {
 		hidden_effect = {
@@ -199,16 +199,16 @@ hasidic_faith_rebels = {
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = hasidic_faith }
-				dominant_religion = hasidic_faith
+				NOT = { religion = karaite }
+				dominant_religion = karaite
 				NOT = { tag = PAP }
 			}
-			change_religion = hasidic_faith
+			change_religion = karaite
 			force_converted = yes
 		}
 		else_if = {
 			limit = {
-				religion = hasidic_faith
+				religion = karaite
 			}
 			add_country_modifier = {
 				name = "religious_intolerance_enforced"
@@ -217,8 +217,8 @@ hasidic_faith_rebels = {
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = hasidic_faith }
-				NOT = { dominant_religion = hasidic_faith }
+				NOT = { religion = karaite }
+				NOT = { dominant_religion = karaite }
 				religion_group = jewish_group
 				NOT = { has_country_modifier = heretic_tolerance }
 			}
@@ -230,7 +230,7 @@ hasidic_faith_rebels = {
 		else = { add_stability = -1 } #Should probably never get here
 		if = {
 			limit = {
-				religion = hasidic_faith
+				religion = karaite
 				has_estate = estate_church
 				NOT = {
 					has_estate_influence_modifier = {

@@ -1,11 +1,11 @@
 ######################################################################
-# haymanot_faith rebels. Disgruntled fanatics.
+# hasidic rebels. Disgruntled fanatics.
 ######################################################################
-haymanot_faith_rebels = {
+hasidic_rebels = {
 	color = { 230 175 175 }
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
-	religion = haymanot_faith
+	religion = hasidic
 	defection = none				# Will not defect
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
@@ -38,7 +38,7 @@ haymanot_faith_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			NOT = { religion = haymanot_faith }
+			NOT = { religion = hasidic }
 		}
 		modifier = {
 			factor = 0.001
@@ -82,21 +82,21 @@ haymanot_faith_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			religion = haymanot_faith
-			owner = { religion = haymanot_faith }
+			religion = hasidic
+			owner = { religion = hasidic }
 		}
 		modifier = {
 			factor = 2.0
-			NOT = { religion = haymanot_faith }
+			NOT = { religion = hasidic }
 			any_neighbor_province = {
-	 			religion = haymanot_faith
+	 			religion = hasidic
 	 			NOT = { has_province_modifier = "forced_conversion" }
 	 		}
 	 	}
 		modifier = {
 			factor = 5
 			has_missionary = yes
-			religion = haymanot_faith
+			religion = hasidic
 		}
 		modifier = {
 			factor = 1.5
@@ -126,9 +126,9 @@ haymanot_faith_rebels = {
 			if = {
 				limit = {
 					OR = {
-						religion = haymanot_faith
+						religion = hasidic
 						is_reformation_center = yes
-						owner = { religion = haymanot_faith }
+						owner = { religion = hasidic }
 					}
 				}
 				add_province_modifier = {
@@ -138,11 +138,11 @@ haymanot_faith_rebels = {
 			}
 			if = {
 				limit = {
-					NOT = { religion = haymanot_faith }
+					NOT = { religion = hasidic }
 					is_reformation_center = no
-					NOT = { owner = { religion = haymanot_faith } }
+					NOT = { owner = { religion = hasidic } }
 				}
-				change_religion = haymanot_faith
+				change_religion = hasidic
 				add_province_modifier = {
 					name = "forced_conversion"
 					duration = 730
@@ -161,7 +161,7 @@ haymanot_faith_rebels = {
 	can_negotiate_trigger = {
 		OR = {
 			religion_group = jewish_group
-			dominant_religion = haymanot_faith
+			dominant_religion = hasidic
 		}
 	}
 	# Country scope
@@ -169,9 +169,9 @@ haymanot_faith_rebels = {
 		always = yes
 	}
 	# Localisation for their demands
-	demands_description = "haymanot_faith_rebels_demand"
+	demands_description = "hasidic_rebels_demand"
 	# Country Scope
-	demands_enforced_effect = {
+			demands_enforced_effect = {
 		hidden_effect = {
 			add_country_modifier = {
 				name = just_lost_to_rebels
@@ -199,16 +199,16 @@ haymanot_faith_rebels = {
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = haymanot_faith }
-				dominant_religion = haymanot_faith
+				NOT = { religion = hasidic }
+				dominant_religion = hasidic
 				NOT = { tag = PAP }
 			}
-			change_religion = haymanot_faith
+			change_religion = hasidic
 			force_converted = yes
 		}
 		else_if = {
 			limit = {
-				religion = haymanot_faith
+				religion = hasidic
 			}
 			add_country_modifier = {
 				name = "religious_intolerance_enforced"
@@ -217,8 +217,8 @@ haymanot_faith_rebels = {
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = haymanot_faith }
-				NOT = { dominant_religion = haymanot_faith }
+				NOT = { religion = hasidic }
+				NOT = { dominant_religion = hasidic }
 				religion_group = jewish_group
 				NOT = { has_country_modifier = heretic_tolerance }
 			}
@@ -230,7 +230,7 @@ haymanot_faith_rebels = {
 		else = { add_stability = -1 } #Should probably never get here
 		if = {
 			limit = {
-				religion = haymanot_faith
+				religion = hasidic
 				has_estate = estate_church
 				NOT = {
 					has_estate_influence_modifier = {

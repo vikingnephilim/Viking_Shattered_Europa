@@ -1,11 +1,11 @@
 ######################################################################
-# samaritan_faith rebels. Disgruntled fanatics.
+# samaritan rebels. Disgruntled fanatics.
 ######################################################################
-samaritan_faith_rebels = {
+samaritan_rebels = {
 	color = { 230 175 175 }
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
-	religion = samaritan_faith
+	religion = samaritan
 	defection = none				# Will not defect
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
@@ -38,7 +38,7 @@ samaritan_faith_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			NOT = { religion = samaritan_faith }
+			NOT = { religion = samaritan }
 		}
 		modifier = {
 			factor = 0.001
@@ -82,21 +82,21 @@ samaritan_faith_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			religion = samaritan_faith
-			owner = { religion = samaritan_faith }
+			religion = samaritan
+			owner = { religion = samaritan }
 		}
 		modifier = {
 			factor = 2.0
-			NOT = { religion = samaritan_faith }
+			NOT = { religion = samaritan }
 			any_neighbor_province = {
-	 			religion = samaritan_faith
+	 			religion = samaritan
 	 			NOT = { has_province_modifier = "forced_conversion" }
 	 		}
 	 	}
 		modifier = {
 			factor = 5
 			has_missionary = yes
-			religion = samaritan_faith
+			religion = samaritan
 		}
 		modifier = {
 			factor = 1.5
@@ -126,9 +126,9 @@ samaritan_faith_rebels = {
 			if = {
 				limit = {
 					OR = {
-						religion = samaritan_faith
+						religion = samaritan
 						is_reformation_center = yes
-						owner = { religion = samaritan_faith }
+						owner = { religion = samaritan }
 					}
 				}
 				add_province_modifier = {
@@ -138,11 +138,11 @@ samaritan_faith_rebels = {
 			}
 			if = {
 				limit = {
-					NOT = { religion = samaritan_faith }
+					NOT = { religion = samaritan }
 					is_reformation_center = no
-					NOT = { owner = { religion = samaritan_faith } }
+					NOT = { owner = { religion = samaritan } }
 				}
-				change_religion = samaritan_faith
+				change_religion = samaritan
 				add_province_modifier = {
 					name = "forced_conversion"
 					duration = 730
@@ -161,7 +161,7 @@ samaritan_faith_rebels = {
 	can_negotiate_trigger = {
 		OR = {
 			religion_group = jewish_group
-			dominant_religion = samaritan_faith
+			dominant_religion = samaritan
 		}
 	}
 	# Country scope
@@ -169,7 +169,7 @@ samaritan_faith_rebels = {
 		always = yes
 	}
 	# Localisation for their demands
-	demands_description = "samaritan_faith_rebels_demand"
+	demands_description = "samaritan_rebels_demand"
 	# Country Scope
 			demands_enforced_effect = {
 		hidden_effect = {
@@ -199,16 +199,16 @@ samaritan_faith_rebels = {
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = samaritan_faith }
-				dominant_religion = samaritan_faith
+				NOT = { religion = samaritan }
+				dominant_religion = samaritan
 				NOT = { tag = PAP }
 			}
-			change_religion = samaritan_faith
+			change_religion = samaritan
 			force_converted = yes
 		}
 		else_if = {
 			limit = {
-				religion = samaritan_faith
+				religion = samaritan
 			}
 			add_country_modifier = {
 				name = "religious_intolerance_enforced"
@@ -217,8 +217,8 @@ samaritan_faith_rebels = {
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = samaritan_faith }
-				NOT = { dominant_religion = samaritan_faith }
+				NOT = { religion = samaritan }
+				NOT = { dominant_religion = samaritan }
 				religion_group = jewish_group
 				NOT = { has_country_modifier = heretic_tolerance }
 			}
@@ -230,7 +230,7 @@ samaritan_faith_rebels = {
 		else = { add_stability = -1 } #Should probably never get here
 		if = {
 			limit = {
-				religion = samaritan_faith
+				religion = samaritan
 				has_estate = estate_church
 				NOT = {
 					has_estate_influence_modifier = {

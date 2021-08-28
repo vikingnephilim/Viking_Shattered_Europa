@@ -838,10 +838,6 @@ australia_missions_5 = {
 			}
 		}
 		trigger = {
-			custom_trigger_tooltip = {
-				tooltip = aus_capital_decided_tooltip
-				has_country_flag = aus_capital_decided
-			}
 			treasury = 100
 			natural_scientist = 2
 			capital_scope = {
@@ -1218,7 +1214,8 @@ BRZ_missions_2 = {
 		effect = {
 			country_event = {
 				id = ME_Brazil_Events.3
-			}			#Extraction of Brazilwood
+			}
+			#Extraction of Brazilwood
 			756 = {
 				add_base_tax = 1
 				add_base_production = 1
@@ -1249,7 +1246,8 @@ BRZ_missions_2 = {
 		effect = {
 			country_event = {
 				id = ME_Brazil_Events.5
-			}			#First Wave of Immigration
+			}
+			#First Wave of Immigration
 		}
 	}
 	BRZ_import_technology = {
@@ -1270,7 +1268,8 @@ BRZ_missions_2 = {
 		effect = {
 			country_event = {
 				id = ME_Brazil_Events.8
-			}			#European Technology
+			}
+			#European Technology
 		}
 	}
 	BRZ_a_lei_aurea = {
@@ -1416,7 +1415,8 @@ BRZ_missions_3 = {
 		effect = {
 			country_event = {
 				id = ME_Brazil_Events.1
-			}			#Exploring the Interior
+			}
+			#Exploring the Interior
 		}
 	}
 	BRZ_brazil_united = {
@@ -1515,7 +1515,8 @@ BRZ_missions_4 = {
 		trigger = {
 			num_of_supported_independencies = {
 				amount = 1
-			}			#yeah, whatcha gonna do
+			}
+			#yeah, whatcha gonna do
 		}
 		effect = {
 			add_legitimacy_equivalent = {
@@ -1893,7 +1894,8 @@ BRZ_missions_5 = {
 		effect = {
 			country_event = {
 				id = ME_Brazil_Events.4
-			}			#Brazilian Gold Rush
+			}
+			#Brazilian Gold Rush
 			765 = {
 				if = {
 					limit = {
@@ -2087,7 +2089,7 @@ BRZ_missions_5 = {
 					upper_peru = {
 						limit = {
 							country_or_non_sovereign_subject_holds = ROOT
-								trade_goods = gold
+							trade_goods = gold
 						}
 						add_province_modifier = {
 							name = BRZ_gold_modifier
@@ -2097,7 +2099,7 @@ BRZ_missions_5 = {
 					potosi_area = {
 						limit = {
 							country_or_non_sovereign_subject_holds = ROOT
-								trade_goods = gold
+							trade_goods = gold
 						}
 						add_province_modifier = {
 							name = BRZ_gold_modifier
@@ -2107,7 +2109,7 @@ BRZ_missions_5 = {
 					jujuy_area = {
 						limit = {
 							country_or_non_sovereign_subject_holds = ROOT
-								trade_goods = gold
+							trade_goods = gold
 						}
 						add_province_modifier = {
 							name = BRZ_gold_modifier
@@ -2117,7 +2119,7 @@ BRZ_missions_5 = {
 					tucuman_area = {
 						limit = {
 							country_or_non_sovereign_subject_holds = ROOT
-								trade_goods = gold
+							trade_goods = gold
 						}
 						add_province_modifier = {
 							name = BRZ_gold_modifier
@@ -2127,7 +2129,7 @@ BRZ_missions_5 = {
 					northern_chile_area = {
 						limit = {
 							country_or_non_sovereign_subject_holds = ROOT
-								trade_goods = gold
+							trade_goods = gold
 						}
 						add_province_modifier = {
 							name = BRZ_gold_modifier
@@ -2137,7 +2139,7 @@ BRZ_missions_5 = {
 					antisuyu_area = {
 						limit = {
 							country_or_non_sovereign_subject_holds = ROOT
-								trade_goods = gold
+							trade_goods = gold
 						}
 						add_province_modifier = {
 							name = BRZ_gold_modifier
@@ -5080,10 +5082,10 @@ colombia_venezuela_missions_4 = {
 		effect = {
 			custom_tooltip = tt_replace_modifier_colombia_venezuela_somos_libre_modifier_with_colombia_venezuela_bogota_rising_modifier
 			hidden_effect = {
-				replace_country_modifier = {
-					remove = colombia_venezuela_somos_libre_modifier
-					add = colombia_venezuela_bogota_rising_modifier
-					time = -1
+				remove_country_modifier = colombia_venezuela_somos_libre_modifier
+				add_country_modifier = {
+					name = colombia_venezuela_bogota_rising_modifier
+					duration = -1
 				}
 			}
 		}
@@ -5116,10 +5118,10 @@ colombia_venezuela_missions_4 = {
 		effect = {
 			custom_tooltip = tt_replace_modifier_colombia_venezuela_bogota_rising_modifier_with_colombia_venezuela_independence_for_suriname_and_guyana_modifier
 			hidden_effect = {
-				replace_country_modifier = {
-					remove = colombia_venezuela_bogota_rising_modifier
-					add = colombia_venezuela_independence_for_suriname_and_guyana_modifier
-					time = -1
+				remove_country_modifier = colombia_venezuela_bogota_rising_modifier
+				add_country_modifier = {
+					name = colombia_venezuela_independence_for_suriname_and_guyana_modifier
+					duration = -1
 				}
 			}
 		}
@@ -5475,10 +5477,10 @@ gran_colombia_missions_4 = {
 		effect = {
 			custom_tooltip = tt_replace_modifier_colombia_venezuela_independence_for_suriname_and_guyana_modifier_with_gran_colombia_free_upper_peru_modifier
 			hidden_effect = {
-				replace_country_modifier = {
-					remove = colombia_venezuela_independence_for_suriname_and_guyana_modifier
-					add = gran_colombia_free_upper_peru_modifier
-					time = -1
+				remove_country_modifier = colombia_venezuela_independence_for_suriname_and_guyana_modifier
+				add_country_modifier = {
+					name = gran_colombia_free_upper_peru_modifier
+					duration = -1
 				}
 			}
 		}
@@ -5680,8 +5682,8 @@ colombia_venezuela_missions_3_2 = {
 		position = 8
 		trigger = {
 			OR = {
-			religious_unity = 1
-			has_idea_group = humanist_ideas
+				religious_unity = 1
+				has_idea_group = humanist_ideas
 			}
 		}
 		effect = {
@@ -5697,23 +5699,9 @@ colombia_venezuela_missions_3_2 = {
 		}
 		position = 9
 		trigger = {
-			if = {
-				limit = {
-					has_country_flag = colombia_venezuela_to_mend_the_two_cultures_flag
-				}
-				num_of_owned_provinces_with = {
-					value = 45
-					has_owner_culture = yes
-				}
-			}
-			else = {
-				custom_trigger_tooltip = {
-					tooltip = COL_VNZ_CULTURE_CONVERTED_AT_LEAST_20_PROVS
-					check_variable = {
-						which = num_of_culture_converted_provinces
-						value = 20
-					}
-				}
+			num_of_owned_provinces_with = {
+				value = 45
+				has_owner_culture = yes
 			}
 		}
 		effect = {

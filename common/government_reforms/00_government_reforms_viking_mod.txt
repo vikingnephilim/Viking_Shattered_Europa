@@ -71,7 +71,7 @@ irish_clan = {
 		NOT = {
 			religion = hellenic_pagan
 		}
-	}	
+	}
 	trigger = {
 		OR = {
 			tag = MCM
@@ -318,32 +318,26 @@ granadan_iqta_reform = {
 	queen = no
 	potential = {
 		AND = {
-			AND = {
-				religion_group = muslim
-				primary_culture = andalucian
-			}
-			NOT = {
-				religion_group = christian
-			}
-			NOT = {
-				religion = norse_pagan_reformed
-			}
-			NOT = {
-				religion = hellenic_pagan
-			}
-			NOT = {
-				religion = druidic_pagan
-			}
-			has_reform = iqta
-			has_reform = granadan_iqta_reform
+			religion_group = muslim
+			primary_culture = andalucian
+		}
+		NOT = {
+			religion_group = christian
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
 		}
 	}
 	trigger = {
 		AND = {
-			AND = {
-				religion_group = muslim
-				primary_culture = andalucian
-			}
+			religion_group = muslim
+			primary_culture = andalucian
 			NOT = {
 				religion_group = christian
 			}
@@ -356,8 +350,6 @@ granadan_iqta_reform = {
 			NOT = {
 				religion = druidic_pagan
 			}
-			has_reform = iqta
-			has_reform = granadan_iqta_reform
 		}
 	}
 	modifiers = {
@@ -1696,11 +1688,11 @@ crown_of_saint_wenceslaus = {
 		duration = 100
 		has_term_election = yes
 		states_general_mechanic = {
-			Catholics = {
+			catholics = {
 				improve_relation_modifier = 0.1
 				land_morale = 0.05
 			}
-			Ultraquists = {
+			utraquists = {
 				global_unrest = -1
 				tolerance_heretic = 1
 			}
@@ -1811,7 +1803,7 @@ hessian_modern_militarized_monarchy_reform = {
 	}
 }
 
-norse_reform = {
+defender_of_faith = {
 	icon = "commander_king_reform"
 	allow_normal_conversion = no
 	legacy_equivalent = feudal_monarchy
@@ -1819,22 +1811,26 @@ norse_reform = {
 	nation_designer_cost = 0
 	fixed_rank = 2
 	modifiers = {
-		unjustified_demands = -0.2
-		province_warscore_cost = -0.2
-		monthly_splendor = 2
+		missionaries = 2
+		global_missionary_strength = 0.02
+		prestige_per_development_from_conversion = 0.33
+		max_absolutism = 10
 	}
 	potential = {
-		religion = norse_pagan_reformed
+		is_defender_of_faith = yes
 	}
 	trigger = {
-		religion = norse_pagan_reformed
+		is_defender_of_faith = yes
 	}
 	ai = {
 		factor = 0.5
 		modifier = {
 			factor = 10
-			religion = norse_pagan_reformed
+			is_defender_of_faith = yes
 		}
+	}
+	government_abilities = {
+		feudal_theocracy_mechanic
 	}
 }
 

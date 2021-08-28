@@ -258,7 +258,7 @@ GRE_missions_1 = {
 			151 = {
 				change_province_name = "Constantinople"
 				rename_capital = "Constantinople"
-				change_culture = greek
+				change_culture = ROOT
 			}
 			if = {
 				limit = {
@@ -763,32 +763,6 @@ GRE_missions_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			122 = {
-				if = {
-					limit = {
-						NOT = {
-							owned_by = ROOT
-						}
-						NOT = {
-							is_core = ROOT
-						}
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			123 = {
-				if = {
-					limit = {
-						NOT = {
-							owned_by = ROOT
-						}
-						NOT = {
-							is_core = ROOT
-						}
-					}
-				}
-				add_permanent_claim = ROOT
-			}
 		}
 	}
 	gre_gaul = {
@@ -817,19 +791,6 @@ GRE_missions_2 = {
 					name = gallic_frontier
 					duration = -1
 				}
-			}
-			226 = {
-				if = {
-					limit = {
-						NOT = {
-							owned_by = ROOT
-						}
-						NOT = {
-							is_core = ROOT
-						}
-					}
-				}
-				add_permanent_claim = ROOT
 			}
 		}
 	}

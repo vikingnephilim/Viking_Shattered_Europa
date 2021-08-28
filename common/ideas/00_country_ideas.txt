@@ -21391,6 +21391,80 @@ SYN_ideas = {
 	}
 }
 
+ISR_ideas = {
+	start = {
+		prestige = 1
+		tolerance_own = 1
+	}
+	bonus = {
+		diplomatic_reputation = 1
+	}
+	trigger = {
+		tag = ISR
+	}
+	free = yes
+	ISR_diaspora = {
+		global_unrest = -1
+	}
+	ISR_myths = {
+		discipline = 0.05
+	}
+	ISR_home = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	ISR_trade = {
+		trade_efficiency = 0.1
+		trade_steering = 0.1
+	}
+	ISR_banking = {
+		interest = -1
+		inflation_reduction = 0.1
+	}
+	ISR_exile = {
+		global_colonial_growth = 33
+	}
+	ISR_chosen = {
+		enemy_core_creation = 1
+	}
+}
+
+
+JOM_ideas = {
+	start = {
+		leader_naval_shock = 1
+		discipline = 1
+	}
+	bonus = {
+		infantry_power = 0.1
+	}
+	trigger = {
+		tag = JOM
+	}
+	free = yes
+	JOM_code = {
+		land_morale = 1
+	}
+	JOM_legend = {
+		land_forcelimit_modifier = 0.15
+		naval_forcelimit_modifier = 0.15
+	}
+	JOM_allfather = {
+		manpower_recovery_speed = 0.10
+	}
+	JOM_thor = {
+		cb_on_religious_enemies = yes
+	}
+	JOM_feudal = {
+		global_trade_goods_size_modifier = 0.1
+	}
+	JOM_hogting = {
+		stability_cost_modifier = -0.1
+	}
+	JOM_valhalla = {
+		prestige = 1
+	}
+}
+
 SAA_ideas = {
 	start = {
 		no_religion_penalty = yes

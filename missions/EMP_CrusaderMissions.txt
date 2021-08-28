@@ -505,14 +505,6 @@ EMP_crusader_3 = {
 			else = {
 				religious_unity = 1
 			}
-			custom_trigger_tooltip = {
-				tooltip = obj_force_converted_tooltip
-				has_country_flag = force_converted
-			}
-			custom_trigger_tooltip = {
-				tooltip = obj_convert_30_provinces_tooltip
-				check_variable = { which = num_converted_religion value = 30 }
-			}
 		}
 		effect = {
 			if = {
