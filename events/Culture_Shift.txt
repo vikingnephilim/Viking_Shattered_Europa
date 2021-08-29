@@ -355,7 +355,7 @@ country_event = {
 			}
 		}
 		refuse_colonial_culture = {
-			to =maghrebi_australian
+			to = maghrebi_australian
 		}
 	}
 }
@@ -2559,19 +2559,7 @@ country_event = {
 		}
 		any_owned_province = {
 			region = south_africa_region
-			OR = {
-				culture = west_germanic_south_african
-				culture = british_south_african
-				culture = iberian_south_african
-				culture = celtic_iberian_south_african
-				culture = celtic_south_african
-				culture = latin_south_african
-				culture = french_south_african
-				culture = south_french_south_african
-				culture = scandinavian_south_african
-				culture = old_norse_south_african
-				culture = maghrebi_south_african
-			}
+			is_south_african_primary = yes
 		}
 	}
 	mean_time_to_happen = {
@@ -2608,23 +2596,9 @@ country_event = {
 						}
 						if = {
 							limit = {
-								capital_scope = {
-									OR = {
-										culture = west_germanic_south_african
-										culture = british_south_african
-										culture = iberian_south_african
-										culture = celtic_iberian_south_african
-										culture = celtic_south_african
-										culture = latin_south_african
-										culture = french_south_african
-										culture = south_french_south_african
-										culture = scandinavian_south_african
-										culture = old_norse_south_african
-										culture = maghrebi_south_african
-									}
-								}
+								is_south_african_primary = yes
 							}
-							change_primary_culture = capital
+							save_event_target_as = capital_culture
 						}
 						else = {
 							PREV = {
@@ -2632,6 +2606,7 @@ country_event = {
 							}
 						}
 					}
+					change_primary_culture = event_target:capital_culture
 				}
 			}
 		}

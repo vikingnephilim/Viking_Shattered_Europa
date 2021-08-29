@@ -14,34 +14,10 @@ country_decisions = {
 			NOT = {
 				exists = SAA
 			}
-			OR = {
-				primary_culture = west_germanic_south_african
-				primary_culture = british_south_african
-				primary_culture = iberian_south_african
-				primary_culture = celtic_iberian_south_african
-				primary_culture = celtic_south_african
-				primary_culture = latin_south_african
-				primary_culture = french_south_african
-				primary_culture = south_french_south_african
-				primary_culture = scandinavian_south_african
-				primary_culture = old_norse_south_african
-				primary_culture = maghrebi_south_african
-			}
+			is_south_african_primary = yes
 			any_owned_province = {
 				region = south_africa_region
-				OR = {
-					culture = west_germanic_south_african
-					culture = british_south_african
-					culture = iberian_south_african
-					culture = celtic_iberian_south_african
-					culture = celtic_south_african
-					culture = latin_south_african
-					culture = french_south_african
-					culture = south_french_south_african
-					culture = scandinavian_south_african
-					culture = old_norse_south_african
-					culture = maghrebi_south_african
-				}
+				is_south_african_primary = yes
 			}
 			OR = {
 				ai = no
@@ -130,30 +106,24 @@ country_decisions = {
 						add_government_reform = south_african_parliament_reform
 						adopt_reform_progress = ROOT
 						capital_scope = {
+							build_to_forcelimit = {
+								infantry = 0.6
+								cavalry = 0.1
+								artillery = 0.3
+							}
 							if = {
 								limit = {
-									OR = {
-										culture = west_germanic_south_african
-										culture = british_south_african
-										culture = iberian_south_african
-										culture = celtic_iberian_south_african
-										culture = celtic_south_african
-										culture = latin_south_african
-										culture = french_south_african
-										culture = south_french_south_african
-										culture = scandinavian_south_african
-										culture = old_norse_south_african
-										culture = maghrebi_south_african
-									}
+									is_south_african_primary = yes
 								}
-								change_primary_culture = capital
+								save_event_target_as = capital_culture
 							}
 							else = {
 								PREV = {
-									add_prestige = 25
+									add_prestige = 50
 								}
 							}
 						}
+						change_primary_culture = event_target:capital_culture
 					}
 				}
 			}

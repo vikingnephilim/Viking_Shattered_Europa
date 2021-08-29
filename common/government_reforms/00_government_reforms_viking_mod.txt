@@ -4153,6 +4153,41 @@ phon_empire = {
 	duration = 4
 }
 
+defender_of_faith_republic = {
+	icon = "commander_king_reform"
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	fixed_rank = 2
+	modifiers = {
+		missionaries = 2
+		global_missionary_strength = 0.02
+		prestige_per_development_from_conversion = 0.33
+		max_absolutism = -10
+		election_cycle = 1
+	}
+	potential = {
+		is_defender_of_faith = yes
+	}
+	trigger = {
+		is_defender_of_faith = yes
+		NOT = {
+			is_defender_of_faith = no
+		}
+	}
+	ai = {
+		factor = 0.5
+		modifier = {
+			factor = 10
+			is_defender_of_faith = yes
+		}
+	}
+	government_abilities = {
+		feudal_theocracy_mechanic
+	}
+}
+
 ##############################################
 ################ THEOCRACIES #################
 ##############################################
