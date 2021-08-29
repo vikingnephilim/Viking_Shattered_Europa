@@ -13,7 +13,7 @@ native_basic_reform = {
 		enables_natives_idea_group = yes
 	}
 	modifiers = {
-		reform_progress_growth = -1.0
+		reform_progress_growth = -1
 		monthly_reform_progress = 0.5
 		land_maintenance_modifier = -0.25
 		diplomatic_upkeep = -2
@@ -28,9 +28,15 @@ native_basic_reform = {
 			technology_group = north_american
 			technology_group = south_american
 		}
-		NOT = { religion = nahuatl }
-		NOT = { religion = mesoamerican_religion }
-		NOT = { religion = inti }
+		NOT = {
+			religion = nahuatl
+		}
+		NOT = {
+			religion = mesoamerican_religion
+		}
+		NOT = {
+			religion = inti
+		}
 		capital_scope = {
 			OR = {
 				continent = north_america
@@ -44,10 +50,8 @@ native_basic_reform = {
 native_chiefdom_reform = {
 	icon = "chieftain"
 	allow_normal_conversion = yes
-
 	valid_for_nation_designer = yes
 	nation_designer_cost = 20
-
 	modifiers = {
 		tribal_development_growth = 0.02
 	}
@@ -86,24 +90,19 @@ native_hereditary_reform = {
 native_martial_tradition_reform = {
 	icon = "native_martial_tradition_reform"
 	allow_normal_conversion = yes
-
 	modifiers = {
 		infantry_power = 0.1
 	}
-
 	ai = {
-		factor = 0.5 #generic
-
+		factor = 0.5		#generic
 		modifier = {
 			factor = 2
 			personality = ai_militarist
 		}
-
 		modifier = {
 			factor = 2
 			is_at_war = yes
 		}
-
 		modifier = {
 			factor = 2
 			any_neighbor_country = {
@@ -112,7 +111,6 @@ native_martial_tradition_reform = {
 				}
 			}
 		}
-
 		modifier = {
 			factor = 2
 			any_neighbor_country = {
@@ -130,11 +128,11 @@ native_oral_tradition_reform = {
 	modifiers = {
 		monthly_reform_progress_modifier = 0.25
 	}
-
 	ai = {
-		factor = 1.0
+		factor = 1
 	}
 }
+
 
 native_land_tradition_reform = {
 	icon = "native_land_tradition_reform"
@@ -148,11 +146,13 @@ native_land_tradition_reform = {
 		modifier = {
 			factor = 2
 
-			any_neighbor_province = { # We have land that is still not claimed.
-				is_city = no
-				is_wasteland = no
-				tribal_owner = {
-					exists = no
+			capital_scope = {
+				any_neighbor_province = { # We have land that is still not claimed.
+					is_city = no
+					is_wasteland = no
+					tribal_owner = {
+						exists = no
+					}
 				}
 			}
 		}
@@ -165,20 +165,16 @@ native_war_band_reform = {
 		land_forcelimit_modifier = 0.15
 		land_morale = 0.05
 	}
-
 	ai = {
-		factor = 0.5 #generic
-
+		factor = 0.5		#generic
 		modifier = {
 			factor = 2
 			personality = ai_militarist
 		}
-
 		modifier = {
 			factor = 2
 			is_at_war = yes
 		}
-
 		modifier = {
 			factor = 2
 			any_neighbor_country = {
@@ -187,7 +183,6 @@ native_war_band_reform = {
 				}
 			}
 		}
-
 		modifier = {
 			factor = 2
 			any_neighbor_country = {
@@ -206,18 +201,19 @@ native_seasonal_travel_reform = {
 		migration_cost = -0.25
 		tribal_development_growth = 0.02
 	}
-
 	ai = {
 		factor = 0.5
-
-		modifier = { 
+		modifier = {
 			factor = 2
-			NOT = { tribal_development = 10 } # We are somehow still quite small
+			NOT = {
+				tribal_development = 10
+			}			# We are somehow still quite small
 		}
-
-		modifier = { 
+		modifier = {
 			factor = 2
-			NOT = { tribal_development = 20 } # We are somehow still quite small
+			NOT = {
+				tribal_development = 20
+			}			# We are somehow still quite small
 		}
 	}
 }
@@ -225,13 +221,15 @@ native_seasonal_travel_reform = {
 native_settle_down_reform = {
 	icon = "native_settle_down_reform"
 	trigger = {
-		if = { 
+		if = {
 			limit = {
 				has_dlc = "Conquest of Paradise"
 			}
 			custom_trigger_tooltip = {
 				tooltip = "MUST_BE_IN_TRIBAL_LAND_TO_SETTLE"
-				capital_scope = { tribal_land_of = ROOT }
+				capital_scope = {
+					tribal_land_of = ROOT
+				}
 			}
 		}
 		else = {
@@ -240,27 +238,25 @@ native_settle_down_reform = {
 	}
 	modifiers = {
 		global_institution_spread = 0.2
-		add_tribal_land_cost = 2.0
+		add_tribal_land_cost = 2
 	}
 	conditional = {
-		allow = { has_dlc = "Conquest of Paradise" }
+		allow = {
+			has_dlc = "Conquest of Paradise"
+		}
 		allow_migration = no
 		custom_attributes = {
 			enable_settled_mechanics = yes
 			enable_tribal_grazing = no
 		}
 	}
-
 	ai = {
 		factor = 0.5
-		
-
-		modifier = { 
+		modifier = {
 			factor = 2
 			tribal_development = 30
 		}
-
-		modifier = { 
+		modifier = {
 			factor = 2
 			tribal_development = 40
 		}
@@ -269,11 +265,9 @@ native_settle_down_reform = {
 
 native_codified_power_reform = {
 	icon = "native_codified_power_reform"
-
 	modifiers = {
 		global_unrest = -2
 	}
-
 	ai = {
 		factor = 0.5
 	}
@@ -281,17 +275,14 @@ native_codified_power_reform = {
 
 native_diplomatic_cermonies_reform = {
 	icon = "religious_harmony_reform"
-
 	modifiers = {
 		diplomatic_upkeep = 1
 	}
-
 	ai = {
 		factor = 0.5
-
 		modifier = {
 			factor = 2
-			federation_size = 1 # We're part of a federation
+			federation_size = 1			# We're part of a federation
 		}
 	}
 }
@@ -307,14 +298,18 @@ native_trading_with_foreigners_reform = {
 			}
 		}
 	}
-
 	modifiers = {
 		core_creation = -0.1
 	}
-
 	effect = {
 		every_tribal_land_province = {
-			limit = { NOT = { owner = { exists = yes } } }
+			limit = {
+				NOT = {
+					owner = {
+						exists = yes
+					}
+				}
+			}
 			settle_province = ROOT
 		}
 		if = {
@@ -325,15 +320,14 @@ native_trading_with_foreigners_reform = {
 			}
 			change_government = native_sponsor_scope
 			embrace_institutions_of = native_sponsor_scope
-			change_government_reform_progress = -350 # Doing it like this to avoid that migration code triggers
+			change_government_reform_progress = -350			# Doing it like this to avoid that migration code triggers
 		}
 		else = {
 			custom_tooltip = "GOVERNMENT_FROM_NATIVE_SPONSOR"
 		}
 	}
-
 	ai = {
-		factor = 1.0
+		factor = 1
 	}
 }
 
@@ -342,12 +336,18 @@ native_becomes_monarchy_reform = {
 	allow_normal_conversion = yes
 	effect = {
 		every_tribal_land_province = {
-			limit = { NOT = { owner = { exists = yes } } }
+			limit = {
+				NOT = {
+					owner = {
+						exists = yes
+					}
+				}
+			}
 			settle_province = ROOT
 		}
 		set_country_flag = populists_in_government
 		change_government = monarchy
-		change_government_reform_progress = -450 # Doing it like this to avoid that migration code triggers
+		change_government_reform_progress = -450		# Doing it like this to avoid that migration code triggers
 	}
 	ai = {
 		factor = 1
@@ -359,12 +359,18 @@ native_becomes_republic_reform = {
 	allow_normal_conversion = yes
 	effect = {
 		every_tribal_land_province = {
-			limit = { NOT = { owner = { exists = yes } } }
+			limit = {
+				NOT = {
+					owner = {
+						exists = yes
+					}
+				}
+			}
 			settle_province = ROOT
 		}
 		set_country_flag = populists_in_government
 		change_government = republic
-		change_government_reform_progress = -250 # Doing it like this to avoid that migration code triggers
+		change_government_reform_progress = -250		# Doing it like this to avoid that migration code triggers
 	}
 	ai = {
 		factor = 1
@@ -373,7 +379,9 @@ native_becomes_republic_reform = {
 			OR = {
 				has_reform = steppe_horde
 				has_reform = great_mongol_state_reform
-				NOT = { trade_income_percentage = 0.3 }
+				NOT = {
+					trade_income_percentage = 0.3
+				}
 			}
 		}
 		modifier = {
@@ -391,12 +399,18 @@ native_becomes_theocracy_reform = {
 	allow_normal_conversion = yes
 	effect = {
 		every_tribal_land_province = {
-			limit = { NOT = { owner = { exists = yes } } }
+			limit = {
+				NOT = {
+					owner = {
+						exists = yes
+					}
+				}
+			}
 			settle_province = ROOT
 		}
 		set_country_flag = populists_in_government
 		change_government = theocracy
-		change_government_reform_progress = -250 # Doing it like this to avoid that migration code triggers
+		change_government_reform_progress = -250		# Doing it like this to avoid that migration code triggers
 	}
 	ai = {
 		factor = 1
@@ -405,7 +419,9 @@ native_becomes_theocracy_reform = {
 			OR = {
 				has_reform = steppe_horde
 				has_reform = great_mongol_state_reform
-				NOT = { religion_group = muslim }
+				NOT = {
+					religion_group = muslim
+				}
 			}
 		}
 	}
@@ -419,7 +435,13 @@ native_becomes_horde_reform = {
 	}
 	effect = {
 		every_tribal_land_province = {
-			limit = { NOT = { owner = { exists = yes } } }
+			limit = {
+				NOT = {
+					owner = {
+						exists = yes
+					}
+				}
+			}
 			settle_province = ROOT
 		}
 		set_country_flag = populists_in_government

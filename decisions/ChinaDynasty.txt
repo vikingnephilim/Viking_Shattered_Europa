@@ -20,6 +20,9 @@ country_decisions = {
 			china_superregion = {
 				owned_by = ROOT
 			}
+			china_superregion = {
+				is_core = ROOT
+			}
 		}
 		provinces_to_highlight = {
 			superregion = china_superregion
@@ -36,6 +39,9 @@ country_decisions = {
 			is_at_war = no
 			NOT = {
 				exists = CHN
+			}
+			owns_all_provinces = {
+				superregion = china_superregion
 			}
 		}
 		effect = {

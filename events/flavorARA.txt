@@ -15,9 +15,13 @@ country_event = {
 	trigger = {
 		OR = {
 			AND = {
-				NOT = { has_dlc = "Golden Century" }
+				NOT = {
+					has_dlc = "Golden Century"
+				}
 				tag = ARA
-				NOT = { is_year = 1500 }
+				NOT = {
+					is_year = 1500
+				}
 				NOT = {
 					has_country_modifier = ara_consulate_sea
 				}
@@ -36,6 +40,7 @@ country_event = {
 		}
 	}
 }
+
 # Book of the Consulate of the Sea
 country_event = {
 	id = flavor_ara.2
@@ -46,7 +51,9 @@ country_event = {
 	trigger = {
 		tag = ARA
 		has_country_modifier = ara_consulate_sea
-		NOT = { has_country_modifier = ara_book_consulate_sea }
+		NOT = {
+			has_country_modifier = ara_book_consulate_sea
+		}
 	}
 	mean_time_to_happen = {
 		months = 200
@@ -56,7 +63,9 @@ country_event = {
 		add_years_of_income = -0.5
 		if = {
 			limit = {
-				NOT = { has_completed_all_reforms_trigger = yes }
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
 			}
 			add_reform_progress_small_effect = yes
 		}
@@ -71,6 +80,7 @@ country_event = {
 		add_prestige = -1
 	}
 }
+
 # Antonio Beccadelli (poet)
 country_event = {
 	id = flavor_ara.3
@@ -80,7 +90,9 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = ARA
-		NOT = { is_year = 1471 }
+		NOT = {
+			is_year = 1471
+		}
 		OR = {
 			dip = 3
 			adm = 3
@@ -103,6 +115,7 @@ country_event = {
 		add_innovativeness_small_effect = yes
 	}
 }
+
 # Iovianus Pontanus
 country_event = {
 	id = flavor_ara.4
@@ -112,7 +125,9 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = ARA
-		NOT = { is_year = 1503 }
+		NOT = {
+			is_year = 1503
+		}
 		OR = {
 			dip = 3
 			adm = 3
@@ -132,6 +147,7 @@ country_event = {
 		add_innovativeness_small_effect = yes
 	}
 }
+
 # Monastery of Santa María de Sigena
 country_event = {
 	id = flavor_ara.5
@@ -141,9 +157,12 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = ARA
-		NOT = { is_year = 1520 }
-		NOT = { has_country_modifier = ara_monastery_maria }
-		religion = catholic
+		NOT = {
+			is_year = 1520
+		}
+		NOT = {
+			has_country_modifier = ara_monastery_maria
+		}
 	}
 	mean_time_to_happen = {
 		months = 200
@@ -169,6 +188,7 @@ country_event = {
 		add_prestige = -1
 	}
 }
+
 # Sindicat Remença
 country_event = {
 	id = flavor_ara.6
@@ -178,7 +198,9 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = ARA
-		NOT = { is_year = 1500 }
+		NOT = {
+			is_year = 1500
+		}
 		OR = {
 			adm = 4
 			dip = 4
@@ -208,7 +230,9 @@ country_event = {
 				limit = {
 					is_core = ROOT
 					culture = catalan
-					NOT = {  has_province_flag = ara_sindicat_remença_flag }
+					NOT = {
+						has_province_flag = ara_sindicat_remença_flag
+					}
 				}
 				set_province_flag = ara_sindicat_remença_flag
 			}
@@ -216,7 +240,9 @@ country_event = {
 				limit = {
 					is_core = ROOT
 					culture = catalan
-					NOT = { has_province_flag = ara_sindicat_remença_flag }
+					NOT = {
+						has_province_flag = ara_sindicat_remença_flag
+					}
 				}
 				set_province_flag = ara_sindicat_remença_flag
 			}
@@ -261,6 +287,7 @@ country_event = {
 		}
 	}
 }
+
 ########################################
 # Additions by Michael Kundak Cowall
 ########################################
@@ -282,7 +309,10 @@ country_event = {
 			fixed = yes
 		}
 		PAP = {
-			country_event = { id = flavor_ara.9 days = 1 }
+			country_event = {
+				id = flavor_ara.9
+				days = 1
+			}
 		}
 		break_union = ARA
 	}
@@ -301,11 +331,15 @@ country_event = {
 		add_legitimacy = -20
 		add_treasury = -100
 		PAP = {
-			country_event = { id = flavor_ara.10 days = 1 }
+			country_event = {
+				id = flavor_ara.10
+				days = 1
+			}
 		}
 		set_country_flag = naples_submits_to_the_pope
 	}
 }
+
 country_event = {
 	id = flavor_ara.9
 	title = "flavor_ara.EVTNAME9"
@@ -316,11 +350,16 @@ country_event = {
 		name = "flavor_ara.EVTOPTA9"
 		trigger = {
 			FRA = {
-				NOT = { has_country_flag = claimed_naples }
+				NOT = {
+					has_country_flag = claimed_naples
+				}
 			}
 		}
 		FRA = {
-			country_event = { id = flavor_fra.3105 days = 7 }
+			country_event = {
+				id = flavor_fra.3105
+				days = 7
+			}
 		}
 		NAP = {
 			add_opinion = {
@@ -359,6 +398,7 @@ country_event = {
 		add_prestige = -40
 	}
 }
+
 country_event = {
 	id = flavor_ara.10
 	title = "flavor_ara.EVTNAME10"
@@ -374,6 +414,7 @@ country_event = {
 		}
 	}
 }
+
 country_event = {
 	id = flavor_ara.11
 	title = "flavor_ara.EVTNAME11"
@@ -396,11 +437,15 @@ country_event = {
 				tag = ARA
 				government = monarchy
 				has_country_flag = alfonso_died_yes_really
-				NOT = { has_ruler_flag = alfonsos_successor }
+				NOT = {
+					has_ruler_flag = alfonsos_successor
+				}
 				is_subject = no
 			}
 			AND = {
-				NOT = { exists = ARA }
+				NOT = {
+					exists = ARA
+				}
 				tag = SPA
 				government = monarchy
 				is_subject = no
@@ -437,7 +482,9 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 0
-				NOT = { alliance_with = NAP }
+				NOT = {
+					alliance_with = NAP
+				}
 			}
 		}
 		NAP = {
