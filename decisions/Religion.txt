@@ -432,7 +432,8 @@ country_decisions = {
 			religion_group = muslim
 			NOT = {
 				tag = MAM
-			}			#Controls the Caliph already.
+			}
+			#Controls the Caliph already.
 			NOT = {
 				government = republic
 			}
@@ -649,7 +650,8 @@ country_decisions = {
 				had_country_flag = {
 					flag = sultan_titles_for_non_muslims
 					days = 10950
-				}				#After 30 years
+				}
+				#After 30 years
 				NOT = {
 					tag = ARK
 				}
@@ -1084,13 +1086,7 @@ country_decisions = {
 			NOT = {
 				has_country_modifier = godly_inspiration
 			}
-			OR = {
-				religion_group = american_pagan
-				religion_group = asian_pagan
-				religion_group = european_pagan
-				religion_group = african_pagan
-				religion_group = asian_pagan
-			}
+			is_pagan_viking_mod = yes
 		}
 		allow = {
 			is_at_war = no
@@ -1124,13 +1120,7 @@ country_decisions = {
 			NOT = {
 				has_country_modifier = religious_sacrifices
 			}
-			OR = {
-				religion_group = american_pagan
-				religion_group = asian_pagan
-				religion_group = european_pagan
-				religion_group = african_pagan
-				religion_group = asian_pagan
-			}
+			is_pagan_viking_mod = yes
 			NOT = {
 				religion = nahuatl
 			}
@@ -1174,13 +1164,7 @@ country_decisions = {
 			NOT = {
 				has_country_modifier = rite_of_passage
 			}
-			OR = {
-				religion_group = american_pagan
-				religion_group = asian_pagan
-				religion_group = european_pagan
-				religion_group = african_pagan
-				religion_group = asian_pagan
-			}
+			is_pagan_viking_mod = yes
 		}
 		allow = {
 			ADM = 3
@@ -1517,25 +1501,32 @@ country_decisions = {
 			modifier = {
 				NOT = {
 					owns_core_province = 2221
-				}				#Various locations suggested to have been the site of these fires.
+				}
+				#Various locations suggested to have been the site of these fires.
 				NOT = {
 					owns_core_province = 2207
-				}				#Various locations suggested to have been the site of these fires.
+				}
+				#Various locations suggested to have been the site of these fires.
 				NOT = {
 					owns_core_province = 2235
-				}				#Various locations suggested to have been the site of these fires.
+				}
+				#Various locations suggested to have been the site of these fires.
 				NOT = {
 					owns_core_province = 2236
-				}				#Various locations suggested to have been the site of these fires.
+				}
+				#Various locations suggested to have been the site of these fires.
 				NOT = {
 					owns_core_province = 2218
-				}				#Various locations suggested to have been the site of these fires.
+				}
+				#Various locations suggested to have been the site of these fires.
 				NOT = {
 					owns_core_province = 441
-				}				#Various locations suggested to have been the site of these fires.
+				}
+				#Various locations suggested to have been the site of these fires.
 				NOT = {
 					owns_core_province = 2223
-				}				#Various locations suggested to have been the site of these fires.
+				}
+				#Various locations suggested to have been the site of these fires.
 				factor = 0
 			}
 		}
@@ -1605,31 +1596,40 @@ country_decisions = {
 			modifier = {
 				NOT = {
 					owns_core_province = 428
-				}				#Teheran
+				}
+				#Teheran
 				NOT = {
 					owns_core_province = 429
-				}				#Isfahan
+				}
+				#Isfahan
 				NOT = {
 					owns_core_province = 432
-				}				#Kerman
+				}
+				#Kerman
 				NOT = {
 					owns_core_province = 433
-				}				#Yazd
+				}
+				#Yazd
 				NOT = {
 					owns_core_province = 450
-				}				#Balkh
+				}
+				#Balkh
 				NOT = {
 					owns_core_province = 504
-				}				#Thatta
+				}
+				#Thatta
 				NOT = {
 					owns_core_province = 517
-				}				#Sanjan
+				}
+				#Sanjan
 				NOT = {
 					owns_core_province = 529
-				}				#Mumbai
+				}
+				#Mumbai
 				NOT = {
 					owns_core_province = 2210
-				}				#Kermanshah
+				}
+				#Kermanshah
 				factor = 0
 			}
 		}
@@ -1863,13 +1863,7 @@ country_decisions = {
 	}
 	pagan_conversion_to_christianity = {
 		potential = {
-			OR = {
-				religion_group = american_pagan
-				religion_group = asian_pagan
-				religion_group = european_pagan
-				religion_group = african_pagan
-				religion_group = asian_pagan
-			}
+			is_pagan_viking_mod = yes
 			NOT = {
 				religion = tengri_pagan_reformed
 			}
@@ -1907,13 +1901,7 @@ country_decisions = {
 	}
 	pagan_conversion_to_islam = {
 		potential = {
-			OR = {
-				religion_group = american_pagan
-				religion_group = asian_pagan
-				religion_group = european_pagan
-				religion_group = african_pagan
-				religion_group = asian_pagan
-			}
+			is_pagan_viking_mod = yes
 			NOT = {
 				religion = tengri_pagan_reformed
 			}
@@ -1948,13 +1936,7 @@ country_decisions = {
 	}
 	pagan_conversion_to_buddhism = {
 		potential = {
-			OR = {
-				religion_group = american_pagan
-				religion_group = asian_pagan
-				religion_group = european_pagan
-				religion_group = african_pagan
-				religion_group = asian_pagan
-			}
+			is_pagan_viking_mod = yes
 			NOT = {
 				religion = tengri_pagan_reformed
 			}
@@ -1989,13 +1971,7 @@ country_decisions = {
 	}
 	pagan_conversion_to_dharmic = {
 		potential = {
-			OR = {
-				religion_group = american_pagan
-				religion_group = asian_pagan
-				religion_group = european_pagan
-				religion_group = african_pagan
-				religion_group = asian_pagan
-			}
+			is_pagan_viking_mod = yes
 			NOT = {
 				religion = tengri_pagan_reformed
 			}
@@ -2030,13 +2006,7 @@ country_decisions = {
 	}
 	pagan_conversion_to_zoroastrian = {
 		potential = {
-			OR = {
-				religion_group = american_pagan
-				religion_group = asian_pagan
-				religion_group = european_pagan
-				religion_group = african_pagan
-				religion_group = asian_pagan
-			}
+			is_pagan_viking_mod = yes
 			NOT = {
 				religion = tengri_pagan_reformed
 			}
@@ -2071,18 +2041,12 @@ country_decisions = {
 	}
 	pagan_conversion_to_judaism = {
 		potential = {
-			OR = {
-				religion_group = american_pagan
-				religion_group = asian_pagan
-				religion_group = european_pagan
-				religion_group = african_pagan
-				religion_group = asian_pagan
-			}
+			is_pagan_viking_mod = yes
 			NOT = {
 				religion = tengri_pagan_reformed
 			}
 			any_owned_province = {
-				religion = sephardic
+				religion_group = jewish_group
 			}
 			is_free_or_tributary_trigger = yes
 		}

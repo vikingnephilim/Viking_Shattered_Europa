@@ -1,11 +1,11 @@
 ######################################################################
-# sephardic rebels. Disgruntled fanatics.
+# jewish rebels. Disgruntled fanatics.
 ######################################################################
-sephardic_rebels = {
+jewish_rebels = {
 	color = { 230 175 175 }
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
-	religion = sephardic
+	religion = jewish
 	defection = none				# Will not defect
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
@@ -38,7 +38,7 @@ sephardic_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			NOT = { religion = sephardic }
+			NOT = { religion = jewish }
 		}
 		modifier = {
 			factor = 0.001
@@ -82,21 +82,21 @@ sephardic_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			religion = sephardic
-			owner = { religion = sephardic }
+			religion = jewish
+			owner = { religion = jewish }
 		}
 		modifier = {
 			factor = 2.0
-			NOT = { religion = sephardic }
+			NOT = { religion = jewish }
 			any_neighbor_province = {
-	 			religion = sephardic
+	 			religion = jewish
 	 			NOT = { has_province_modifier = "forced_conversion" }
 	 		}
 	 	}
 		modifier = {
 			factor = 5
 			has_missionary = yes
-			religion = sephardic
+			religion = jewish
 		}
 		modifier = {
 			factor = 1.5
@@ -126,9 +126,9 @@ sephardic_rebels = {
 			if = {
 				limit = {
 					OR = {
-						religion = sephardic
+						religion = jewish
 						is_reformation_center = yes
-						owner = { religion = sephardic }
+						owner = { religion = jewish }
 					}
 				}
 				add_province_modifier = {
@@ -138,11 +138,11 @@ sephardic_rebels = {
 			}
 			if = {
 				limit = {
-					NOT = { religion = sephardic }
+					NOT = { religion = jewish }
 					is_reformation_center = no
-					NOT = { owner = { religion = sephardic } }
+					NOT = { owner = { religion = jewish } }
 				}
-				change_religion = sephardic
+				change_religion = jewish
 				add_province_modifier = {
 					name = "forced_conversion"
 					duration = 730
@@ -161,7 +161,7 @@ sephardic_rebels = {
 	can_negotiate_trigger = {
 		OR = {
 			religion_group = jewish_group
-			dominant_religion = sephardic
+			dominant_religion = jewish
 		}
 	}
 	# Country scope
@@ -169,7 +169,7 @@ sephardic_rebels = {
 		always = yes
 	}
 	# Localisation for their demands
-	demands_description = "sephardic_rebels_demand"
+	demands_description = "jewish_rebels_demand"
 	# Country Scope
 			demands_enforced_effect = {
 		hidden_effect = {
@@ -199,16 +199,16 @@ sephardic_rebels = {
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = sephardic }
-				dominant_religion = sephardic
+				NOT = { religion = jewish }
+				dominant_religion = jewish
 				NOT = { tag = PAP }
 			}
-			change_religion = sephardic
+			change_religion = jewish
 			force_converted = yes
 		}
 		else_if = {
 			limit = {
-				religion = sephardic
+				religion = jewish
 			}
 			add_country_modifier = {
 				name = "religious_intolerance_enforced"
@@ -217,8 +217,8 @@ sephardic_rebels = {
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = sephardic }
-				NOT = { dominant_religion = sephardic }
+				NOT = { religion = jewish }
+				NOT = { dominant_religion = jewish }
 				religion_group = jewish_group
 				NOT = { has_country_modifier = heretic_tolerance }
 			}
@@ -230,7 +230,7 @@ sephardic_rebels = {
 		else = { add_stability = -1 } #Should probably never get here
 		if = {
 			limit = {
-				religion = sephardic
+				religion = jewish
 				has_estate = estate_church
 				NOT = {
 					has_estate_influence_modifier = {

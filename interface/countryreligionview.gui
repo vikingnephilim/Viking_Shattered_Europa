@@ -1170,89 +1170,105 @@ guiTypes = {
 				Orientation = "LEFT"
 			}
 		}
-			################# Sikh Gurus
+		################# Sikh Gurus	
 		windowType = {
 			name = "sikh_guru_window"
 			backGround =""
-			position = { x=32 y=260 }
+			position = { x=32 y=260 }	
 			size = { x=280 y=50 }
 			moveable = 0
 			dontRender = ""
 			horizontalBorder = ""
 			Orientation = "UPPER_LEFT"
+			
+		    iconType ={
+			    name ="sikh_bg"
+			    spriteType = "GFX_sikh_bg"
+			    position = { x= 5 y = -28 }
+			    Orientation = "UPPER_LEFT"
+		    }
+
 			windowType = {
 				name = "current_guru"
 				backGround =""
-				position = { x=10 y=-20 }
+				position = { x=14 y=-24 }	
 				size = { x=280 y=50 }
 				moveable = 0
 				dontRender = ""
 				horizontalBorder = ""
 				Orientation = "UPPER_LEFT"
+
 				instantTextBoxType = {
 					name = "name"
 					position = { x= 0 y = 0 }
 					font = "vic_18"
 					borderSize = {x = 0 y = 0}
-					text = "NO_GURU"
+					text = "NO_GURU_TITLE"	
 					maxWidth = 200
-					maxHeight = 24
+					maxHeight = 18
 					Orientation = "UPPER_LEFT"
 					format = left
 				}
+				
 				instantTextBoxType = {
 					name = "effect"
 					position = { x = 0 y = 25 }
 					font = "vic_18"
 					borderSize = {x = 0 y = 0}
-					text = "NO_EFFECT"
+					text = "NO_EFFECT"	
 					maxWidth = 256
-					maxHeight = 24
+					maxHeight = 18
 					Orientation = "UPPER_LEFT"
 					format = left
+					fixedsize = yes
 				}
 			}
+
 			windowType = {
 				name = "next_guru"
 				backGround =""
-				position = { x=10 y=30 }
+				position = { x=14 y=24 }	
 				size = { x=280 y=50 }
 				moveable = 0
 				dontRender = ""
 				horizontalBorder = ""
 				Orientation = "UPPER_LEFT"
+
 				instantTextBoxType = {
 					name = "name"
 					position = { x= 0 y = 0 }
 					font = "vic_18"
 					borderSize = {x = 0 y = 0}
-					text = "NO_GURU"
+					text = "NO_GURU_TITLE"	
 					maxWidth = 200
 					maxHeight = 24
 					Orientation = "UPPER_LEFT"
 					format = left
 				}
+				
 				instantTextBoxType = {
 					name = "effect"
 					position = { x = 0 y = 25 }
 					font = "vic_18"
 					borderSize = {x = 0 y = 0}
-					text = "NO_EFFECT"
+					text = "NO_EFFECT"	
 					maxWidth = 256
 					maxHeight = 24
 					Orientation = "UPPER_LEFT"
 					format = left
+					fixedsize = yes
 				}
 			}
 			windowType = {
 				name = "teachings"
 				backGround =""
-				position = { x=250 y=-22 }
+				position = { x=250 y=-22 }	
 				size = { x=280 y=50 }
 				moveable = 0
 				dontRender = ""
 				horizontalBorder = ""
 				Orientation = "UPPER_LEFT"
+
 				gridBoxType = {
 					name = "gridbox"
 					position = { x = 0 y = 0 }

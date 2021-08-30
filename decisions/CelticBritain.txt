@@ -74,6 +74,19 @@ country_decisions = {
 			remove_non_electors_emperors_from_empire_effect = yes
 			change_tag = BHR
 			change_government = monarchy
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							culture = anglosaxon
+							culture = mercian
+							culture = northumbrian
+							culture = english
+						}
+					}
+					change_culture = capital
+				}
+			}
 			if = {
 				limit = {
 					NOT = { government_rank = 3 }
