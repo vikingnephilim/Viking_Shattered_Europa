@@ -47,6 +47,8 @@ is_turkish_beylik = {
 	OR = {
 		tag = RUM
 		was_tag = RUM
+		tag = TUR
+		was_tag = TUR
 		tag = AYD
 		was_tag = AYD
 		tag = CND
@@ -70,12 +72,18 @@ is_turkish_beylik = {
 	}
 }
 
-is_turkish_beylik_not_rum = {
+is_turkish_beylik_not_rum_or_tur = {
 	NOT = {
 		tag = RUM
 	}
 	NOT = {
 		was_tag = RUM
+	}
+	NOT = {
+		tag = TUR
+	}
+	NOT = {
+		was_tag = TUR
 	}
 	OR = {
 		tag = AYD
