@@ -761,3 +761,125 @@ country_decisions = {
 		}
 	}
 }
+
+#######Decisions####################
+country_decisions = {
+	obotritia_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_obotritia_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				tag = MKL
+				culture_group = west_slavic
+			}
+			NOT = {
+				exists = OBO
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 44
+				province_id = 45
+				province_id = 46
+				province_id = 1775
+				province_id = 1857
+				province_id = 2996
+				province_id = 4141
+				province_id = 4749
+				province_id = 4786
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 44
+			owns_core_province = 45
+			owns_core_province = 46
+			owns_core_province = 1775
+			owns_core_province = 1857
+			owns_core_province = 2996
+			owns_core_province = 4141
+			owns_core_province = 4749
+			owns_core_province = 4786
+			NOT = {
+				exists = OBO
+			}
+		}
+		effect = {
+			change_tag = OBO
+			vorpommern_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = OBO
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = {
+						has_idea_group = OBO_ideas
+					}
+				}
+				country_event = {
+					id = ideagroups.1
+				}				#Swap Ideas
+			}
+			set_country_flag = formed_obotritia_flag
+		}
+	}
+	revive_polabian = {
+		major = yes
+		potential = {
+			tag = OBO
+			prestige = 25
+		}
+		provinces_to_highlight = {
+		}
+		allow = {
+			is_at_war = no
+			2996 = {
+				development = 30
+			}
+		}
+		effect = {
+			change_primary_culture = polabian
+			north_german_region = {
+				limit = {
+					is_core = ROOT
+					owned_by = ROOT
+				}
+				change_culture = polabian
+			}
+			mecklenburg_area = {
+				limit = {
+					is_core = ROOT
+					owned_by = ROOT
+				}
+				add_base_tax = 1
+			}
+			2996 = {
+				center_of_trade = 1
+			}
+		}
+	}
+}

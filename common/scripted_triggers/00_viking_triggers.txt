@@ -1,4 +1,3 @@
-### WAR STUFF
 is_chinese = {
 	OR = {
 		primary_culture = miao
@@ -141,8 +140,6 @@ can_create_subject_type = {
 		}
 	}
 }
-
-### COLONY STUFF
 can_country_flip_to_colonial_culture = {
 	#to
 	is_culture_to_$to$ = {
@@ -164,6 +161,31 @@ can_province_flip_to_colonial_culture = {
 	is_region_to_$to$ = yes
 }
 
+num_of_owned_manufactory_trigger = {
+	OR = {
+		wharf = $amount$
+		weapons = $amount$
+		textile = $amount$
+		tradecompany = $amount$
+		farm_estate = $amount$
+		mills = $amount$
+		furnace = $amount$
+		plantations = $amount$
+		ramparts = $amount$
+		soldier_households = $amount$
+		impressment_offices = $amount$
+		state_house = $amount$
+	}
+}
+
+num_of_owned_manufactory_combined_trigger = {
+	calc_true_if = {
+		all_owned_province = {
+			has_manufactory_trigger = yes
+		}
+		amount = $amount$
+	}
+}
 ####CULTURES####
 ###British
 is_culture_to_british_american = {
