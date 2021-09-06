@@ -14479,5 +14479,19 @@ empire_name_effect = {
 			}
 			override_country_name = OBO_Caliphate
 		}
+		if = {
+			limit = {
+				tag = LIC
+			}
+			override_country_name = LIC_Empire
+		}
+		if = {
+			limit = {
+				religion_group = muslim
+				full_idea_group = religious_ideas
+				tag = LIC
+			}
+			override_country_name = LIC_Caliphate
+		}
 	}
 }

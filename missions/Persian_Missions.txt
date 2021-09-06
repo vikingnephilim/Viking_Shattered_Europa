@@ -1,9 +1,20 @@
 per_western_branch = {
-	slot = 1	#upper left column
+	slot = 5	#upper left column
 	generic = no	#if a mission without generic = yes wants this slot then it overrides this.
 	ai = yes
 	potential = {
-		tag = PER
+		AND = {
+			OR = {
+				culture_group = iranian
+				culture_group = east_iranian
+				culture_group = west_persian
+			}
+			OR = {
+				religion_group = zoroastrian_group
+				religion_group = muslim
+				religion = zun_pagan_reformed
+			}
+		}
 		NOT = {
 			map_setup = map_setup_random
 		}
@@ -12,7 +23,8 @@ per_western_branch = {
 	conquest_of_azerbaijan = {
 		icon = mission_non-western_cavalry_raid
 		required_missions = {
-		}		#None
+		}
+		position = 4		#None
 		provinces_to_highlight = {
 			OR = {
 				area = tabriz_area
@@ -207,6 +219,7 @@ per_western_branch = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
+		position = 6
 		trigger = {
 			religion = ROOT
 			luristan_area = {
@@ -262,11 +275,22 @@ per_western_branch = {
 }
 
 per_east = {
-	slot = 3	#upper right column
+	slot = 2	#upper right column
 	generic = no	#if a mission without generic = yes wants this slot then it overrides this.
 	ai = yes
 	potential = {
-		tag = PER
+		AND = {
+			OR = {
+				culture_group = iranian
+				culture_group = east_iranian
+				culture_group = west_persian
+			}
+			OR = {
+				religion_group = zoroastrian_group
+				religion_group = muslim
+				religion = zun_pagan_reformed
+			}
+		}
 		NOT = {
 			map_setup = map_setup_random
 		}
@@ -274,9 +298,8 @@ per_east = {
 	has_country_shield = yes
 	persian_khorasan = {
 		icon = mission_market_place_with_asian_traders
-		position = 6
+		position = 1
 		required_missions = {
-			consolidate_iran
 		}
 		provinces_to_highlight = {
 			OR = {

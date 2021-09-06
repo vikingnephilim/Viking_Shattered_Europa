@@ -4,20 +4,36 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_denmark_flag }
+			NOT = {
+				has_country_flag = formed_denmark_flag
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = { exists = DAN }
-			NOT = { tag = PAP }
-			NOT = { tag = SCA }
-			NOT = { tag = SWE }
-			NOT = { tag = NOR }
-			NOT = { tag = HLR }
+			NOT = {
+				exists = DAN
+			}
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				tag = SCA
+			}
+			NOT = {
+				tag = SWE
+			}
+			NOT = {
+				tag = NOR
+			}
+			NOT = {
+				tag = HLR
+			}
 			OR = {
-			primary_culture = danish
-			primary_culture = scanian
+				primary_culture = danish
+				primary_culture = scanian
+				primary_culture = jutlander
+				primary_culture = sjaellander
 			}
 			OR = {
 				ai = no
@@ -38,14 +54,18 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 6		# Skane
-				province_id = 12	# Sjaeland
-				province_id = 15	# Jutland
-				province_id = 1981	# Bornholm
+				province_id = 6				# Skane
+				province_id = 12				# Sjaeland
+				province_id = 15				# Jutland
+				province_id = 1981				# Bornholm
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		allow = {
@@ -53,39 +73,51 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
-			owns_core_province = 6		# Skane
-			owns_core_province = 12		# Sjaeland
-			owns_core_province = 15		# Jutland
-			owns_core_province = 1981	# Bornholm
+			owns_core_province = 6			# Skane
+			owns_core_province = 12			# Sjaeland
+			owns_core_province = 15			# Jutland
+			owns_core_province = 1981			# Bornholm
 		}
 		effect = {
 			change_tag = DAN
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
-				limit = { NOT = { government_rank = 2 } }
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
 				set_government_rank = 2
 			}
 			skaneland_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = DAN
 			}
 			jutland_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = DAN
 			}
 			denmark_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = DAN
 			}
 			gotaland_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_claim = DAN
 			}
@@ -94,19 +126,34 @@ country_decisions = {
 				duration = 7300
 			}
 			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}				#Swap Ideas
 			}
 			swap_non_generic_missions = yes
 			add_prestige = 10
 			set_country_flag = formed_denmark_flag
-			if = {
-				limit = { primary_culture = danish }
-				add_accepted_culture = scanian
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = scandinavian
+					}
+					change_culture = danish
+				}
 			}
 			if = {
-				limit = { primary_culture = scanian }
-				add_accepted_culture = danish
+				limit = {
+					NOT = {
+						primary_culture = danish
+					}
+				}
+				change_primary_culture = danish
+				add_accepted_culture = scanian
+				add_accepted_culture = sjaellander
+				add_accepted_culture = jutlander
 			}
 		}
 		ai_will_do = {
@@ -118,21 +165,37 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_sweden_flag }
+			NOT = {
+				has_country_flag = formed_sweden_flag
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = { exists = SWE }
-			NOT = { tag = PAP }
-			NOT = { tag = SCA }
-			NOT = { tag = DAN }
-			NOT = { tag = NOR }
-			NOT = { tag = HLR }
+			NOT = {
+				exists = SWE
+			}
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				tag = SCA
+			}
+			NOT = {
+				tag = DAN
+			}
+			NOT = {
+				tag = NOR
+			}
+			NOT = {
+				tag = HLR
+			}
 			OR = {
-			primary_culture = geats
-			primary_culture = scanian
-			primary_culture = swedish
+				primary_culture = geats
+				primary_culture = scanian
+				primary_culture = swedish
+				primary_culture = svealander
+				primary_culture = norrlander
 			}
 			OR = {
 				ai = no
@@ -153,14 +216,18 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 1		# Uppland
-				province_id = 6		# Skane
-				province_id = 7		# Vastergotland
-				province_id = 25	# Gotland
+				province_id = 1				# Uppland
+				province_id = 6				# Skane
+				province_id = 7				# Vastergotland
+				province_id = 25				# Gotland
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		allow = {
@@ -168,63 +235,104 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
-			owns_core_province = 1		# Uppland
-			owns_core_province = 6		# Skane
-			owns_core_province = 7		# Vastergotland
-			owns_core_province = 25		# Gotland
+			owns_core_province = 1			# Uppland
+			owns_core_province = 6			# Skane
+			owns_core_province = 7			# Vastergotland
+			owns_core_province = 25			# Gotland
 		}
 		effect = {
 			change_tag = SWE
+			if = {
+				limit = {
+					NOT = {
+						primary_culture = swedish
+					}
+				}
+				change_primary_culture = swedish
+				add_accepted_culture = svealander
+				add_accepted_culture = norrlander
+				add_accepted_culture = gotlander
+				add_accepted_culture = geats
+				add_accepted_culture = scanian
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							culture_group = scandinavian
+						}
+						change_culture = swedish
+					}
+				}
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
-				limit = { NOT = { government_rank = 2 } }
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
 				set_government_rank = 2
 			}
 			skaneland_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = SWE
 			}
 			gotaland_area = {
-			limit = {
-				NOT = { owned_by = ROOT }
-			}
-			add_permanent_claim = SWE
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = SWE
 			}
 			vastra_gotaland_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = SWE
 			}
 			norrland_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = SWE
 			}
 			svealand_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = SWE
 			}
 			ostra_svealand_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = SWE
 			}
 			bothnia_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_claim = SWE
 			}
 			finland_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_claim = SWE
 			}
@@ -233,8 +341,12 @@ country_decisions = {
 				duration = 7300
 			}
 			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}				#Swap Ideas
 			}
 			swap_non_generic_missions = yes
 			add_prestige = 10
@@ -250,14 +362,22 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_scandinavia_flag }
+			NOT = {
+				has_country_flag = formed_scandinavia_flag
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = { exists = SCA }
-			NOT = { tag = PAP }
-			NOT = { tag = HLR }
+			NOT = {
+				exists = SCA
+			}
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				tag = HLR
+			}
 			culture_group = scandinavian
 			OR = {
 				ai = no
@@ -278,16 +398,20 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 1		# Uppland
-				province_id = 6		# Skane
-				province_id = 7		# Vastergotland
-				province_id = 12		# Sjaelland
-				province_id = 15		# Jylland
-				province_id = 17		# Akershus
+				province_id = 1				# Uppland
+				province_id = 6				# Skane
+				province_id = 7				# Vastergotland
+				province_id = 12				# Sjaelland
+				province_id = 15				# Jylland
+				province_id = 17				# Akershus
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		allow = {
@@ -295,23 +419,29 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
-			owns_core_province = 1		# Uppland
-			owns_core_province = 6		# Skane
-			owns_core_province = 7		# Vastergotland
-			owns_core_province = 12		# Sjaelland
-			owns_core_province = 15		# Jylland
-			owns_core_province = 17		# Akershus
+			owns_core_province = 1			# Uppland
+			owns_core_province = 6			# Skane
+			owns_core_province = 7			# Vastergotland
+			owns_core_province = 12			# Sjaelland
+			owns_core_province = 15			# Jylland
+			owns_core_province = 17			# Akershus
 		}
 		effect = {
 			change_tag = SCA
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
-				limit = { NOT = { government_rank = 2 } }
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
 				set_government_rank = 2
 			}
 			scandinavia_region = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = SCA
 			}
@@ -320,8 +450,12 @@ country_decisions = {
 				duration = 7300
 			}
 			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}				#Swap Ideas
 			}
 			swap_non_generic_missions = yes
 			add_prestige = 10

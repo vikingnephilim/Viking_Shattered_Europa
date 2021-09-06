@@ -667,12 +667,20 @@ principality = {
 	icon = "russian_principality"
 	allow_normal_conversion = yes
 	potential = {
-		culture_group = east_slavic
-		NOT = {
-			has_reform = tsardom
+		OR = {
+			culture_group = east_slavic
+			culture_group = novgorod_group
+			culture_group = ruthenian_group
+			culture = mordvin
 		}
 		NOT = {
-			have_had_reform = tsardom
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
 		}
 		OR = {
 			religion = orthodox
@@ -681,20 +689,25 @@ principality = {
 			religion = monothelite
 			religion = iconoclast
 		}
-		OR = {
-			AND = {
-				is_playing_custom_nation = yes
-				have_had_reform = principality
-			}
-		}
 	}
 	fixed_rank = 1
 	legacy_equivalent = principality_legacy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 5
 	nation_designer_trigger = {
-		culture_group = east_slavic
-		religion = orthodox
+		OR = {
+			culture_group = east_slavic
+			culture_group = novgorod_group
+			culture_group = ruthenian_group
+			culture = mordvin
+		}
+		OR = {
+			religion = orthodox
+			religion = paulician
+			religion = bogomilist
+			religion = monothelite
+			religion = iconoclast
+		}
 	}
 	modifiers = {
 		global_unrest = -1
@@ -715,7 +728,21 @@ tsardom = {
 	icon = "king"
 	allow_normal_conversion = yes
 	potential = {
-		culture_group = east_slavic
+		OR = {
+			culture_group = east_slavic
+			culture_group = novgorod_group
+			culture_group = ruthenian_group
+			culture = mordvin
+		}
+		NOT = {
+			religion = norse_pagan_reformed
+		}
+		NOT = {
+			religion = hellenic_pagan
+		}
+		NOT = {
+			religion = druidic_pagan
+		}
 		OR = {
 			religion = orthodox
 			religion = paulician
@@ -747,7 +774,12 @@ tsardom = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 40
 	nation_designer_trigger = {
-		culture_group = east_slavic
+		OR = {
+			culture_group = east_slavic
+			culture_group = novgorod_group
+			culture_group = ruthenian_group
+			culture = mordvin
+		}
 		OR = {
 			religion = orthodox
 			religion = paulician
@@ -889,11 +921,32 @@ mughal_government = {
 	}
 
 	assimilation_cultures = {
+		aboriginal_australian = {
+			relation_with_heretics = 20
+		}
+		african = {
+			global_tax_income = 10
+		}
 		altaic = {
 			artillery_cost = -0.1
 		}
+		andean_group = {
+			treasure_fleet_income = 0.1
+		}
+		apachean = {
+			leader_land_shock = 1
+		}
+		araucanian = {
+			defensiveness = 0.10
+		}
+		aridoamerican = {
+			global_manpower_modifier = 0.10
+		}
 		baltic = {
 			naval_forcelimit_modifier = 0.05
+		}
+		basque_g = {
+			rebel_support_efficiency = 0.5
 		}
 		british = {
 			ship_durability = 0.05
@@ -904,23 +957,32 @@ mughal_government = {
 		byzantine = {
 			legitimacy = 0.25
 		}
+		caddoan = {
+			spy_offence = 0.1
+		}
 		carpathian = {
 			mercenary_cost = -0.1
+		}
+		carribean = {
+			global_spy_defence = 0.1
 		}
 		caucasian = {
 			mercenary_discipline = 0.05
 		}
-		gaelic = {
-			shock_damage = 0.05
+		celtic_iberian = {
+			range = 0.5
+		}
+		central_algonquian = {
+			native_assimilation = 0.25
+		}
+		central_american = {
+			native_uprising_chance = -0.25
 		}
 		central_indic = {
 			land_attrition = -0.1
 		}
-		east_asian = {
-			state_maintenance_modifier = -0.2
-		}
-		kongo_group = {
-			heir_chance = 0.5
+		chibchan = {
+			expel_minorities_cost = -0.1
 		}
 		cushitic = {
 			missionaries = 1
@@ -928,20 +990,50 @@ mughal_government = {
 		dravidian = {
 			global_trade_goods_size_modifier = 0.05
 		}
-		african = {
-			global_tax_income = 10
+		east_asian = {
+			state_maintenance_modifier = -0.2
+		}
+		east_iranian = {
+			global_heathen_missionary_strength = 0.03
+		}
+		east_maghrebi = {
+			advisor_pool = 1
+		}
+		east_malay = {
+			enforce_religion_cost = -0.5
 		}
 		east_slavic = {
 			land_forcelimit_modifier = 0.1
 		}
+		east_turkic_g = {
+			global_heretic_missionary_strength = 0.03
+		}
+		eastern_algonquian = {
+			discovered_relations_impact = -0.1
+		}
 		eastern_aryan = {
 			production_efficiency = 0.05
+		}
+		egyptian_g = {
+			global_missionary_strength = 0.03
+		}
+		eskaleut = {
+			global_spy_defence = 0.1
 		}
 		evenks = {
 			cavalry_flanking = 0.2
 		}
+		finnic = {
+			leader_land_manuever = 1
+		}
+		finno_ugric = {
+			prestige_decay = -0.01
+		}
 		french = {
 			diplomats = 1
+		}
+		gaelic = {
+			shock_damage = 0.05
 		}
 		germanic = {
 			global_institution_spread = 0.15
@@ -949,20 +1041,38 @@ mughal_government = {
 		great_lakes_group = {
 			loot_amount = 0.5
 		}
+		hayhurum = {
+			war_exhaustion_cost = -0.10
+		}
 		hindusthani = {
 			core_creation = -0.1
 		}
 		iberian = {
 			global_colonial_growth = 10
 		}
+		illyrian = {
+			fort_maintenance_modifier = -0.10
+		}
 		iranian = {
 			advisor_cost = -0.1
+		}
+		iroquoian = {
+			global_garrison_growth = 0.10
 		}
 		japanese_g = {
 			land_morale = 0.1
 		}
+		je = {
+			global_supply_limit_modifier = 0.10
+		}
+		je_tupi = {
+			global_regiment_recruit_speed = -0.10
+		}
 		kamchatkan_g = {
 			hostile_attrition = 1
+		}
+		kongo_group = {
+			heir_chance = 0.5
 		}
 		korean_g = {
 			idea_cost = -0.05
@@ -970,11 +1080,11 @@ mughal_government = {
 		latin = {
 			embracement_cost = -0.1
 		}
-		south_germanic = {
-			discipline = 0.05
+		lost_cultures_group = {
+			vassal_income = 0.2
 		}
-		turko_semitic = {
-			cavalry_power = 0.1
+		madagascan_g = {
+			vassal_forcelimit_bonus = 0.2
 		}
 		maghrebi = {
 			privateer_efficiency = 0.25
@@ -985,23 +1095,92 @@ mughal_government = {
 		mande = {
 			tolerance_heretic = 1
 		}
+		maranon = {
+			improve_relation_modifier = 0.2
+		}
+		mataco = {
+			fabricate_claims_cost = -0.2
+		}
+		maya = {
+			global_tariffs = 0.25
+		}
+		mountain_east_asian = {
+			siege_ability = 0.10
+		}
+		mozarabic = {
+			same_culture_advisor_cost = -0.25
+		}
+		muskogean = {
+			shock_damage_received = -0.10
+		}
+		na_dene = {
+			recover_army_morale_speed = 0.10
+		}
+		north_malay = {
+			siege_blockade_progress = 1
+		}
+		novgorod_group = {
+			reserves_organisation = 0.10
+		}
+		old_norse_culture = {
+			global_regiment_recruit_speed = -0.10
+		}
+		otomanguean = {
+			rival_border_fort_maintenance = -0.10
+		}
 		pacific = {
 			global_sailors_modifier = 0.1
+		}
+		penutian = {
+			leader_cost = -0.10
+		}
+		phoenician_g = {
+			naval_tradition_from_trade = 0.1
+		}
+		plains_algonquian = {
+			diplomatic_annexation_cost = -0.2
+		}
+		plains_east_asian = {
+			diplomatic_upkeep = 1
+		}
+		ruthenian_group = {
+			envoy_travel_time = -0.2
 		}
 		sahelian = {
 			movement_speed = 0.1
 		}
+		sapmi = {
+			claim_duration = 0.2
+		}
 		scandinavian = {
 			mil_advisor_cost = -0.1
 		}
+		siouan = {
+			enemy_core_creation = 0.2
+		}
+		sonoran = {
+			rival_change_cost = -0.2
+		}
 		southeastasian_group = {
 			development_cost = -0.05
+		}
+		south_germanic = {
+			discipline = 0.05
 		}
 		south_slavic = {
 			warscore_cost_vs_other_religion = -0.1
 		}
 		southern_african = {
 			inflation_reduction = 0.05
+		}
+		south_arab = {
+			inflation_action_cost = -0.1
+		}
+		south_french = {
+			core_decay_on_your_own = -0.1
+		}
+		south_latin = {
+			build_time = -0.25
 		}
 		sudanese = {
 			caravan_power = 0.1
@@ -1015,11 +1194,20 @@ mughal_government = {
 		tibetan_group = {
 			prestige_per_development_from_conversion = 0.5
 		}
-		finno_ugric = {
-			prestige_decay = -0.01
+		turkish_g = {
+			institution_spread_from_true_faith = 0.1
+		}
+		turko_semitic = {
+			cavalry_power = 0.1
 		}
 		west_african = {
 			global_autonomy = -0.01
+		}
+		west_germanic = {
+			innovativeness_gain = 0.5
+		}
+		west_persian = {
+			yearly_corruption = -0.1
 		}
 		west_slavic = {
 			leader_land_fire = 1

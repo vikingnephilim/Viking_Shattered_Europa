@@ -429,6 +429,18 @@ country_decisions = {
 				tag = BYZ
 			}
 			NOT = {
+				tag = AGD
+			}
+			NOT = {
+				tag = ERM
+			}
+			NOT = {
+				tag = WRM
+			}
+			NOT = {
+				tag = ROM
+			}
+			NOT = {
 				tag = ATH
 			}
 			NOT = {
@@ -441,6 +453,9 @@ country_decisions = {
 				tag = GRE
 			}
 			culture_group = byzantine
+			capital_scope = {
+				is_island = yes
+			}
 			OR = {
 				ai = no
 				AND = {
@@ -838,7 +853,8 @@ country_decisions = {
 				}
 				country_event = {
 					id = ideagroups.1
-				}				#Swap Ideas
+				}
+				#Swap Ideas
 			}
 			set_country_flag = formed_obotritia_flag
 		}
@@ -848,6 +864,7 @@ country_decisions = {
 		potential = {
 			tag = OBO
 			prestige = 25
+			NOT = { has_country_flag = revived_polabian }
 		}
 		provinces_to_highlight = {
 		}
@@ -859,6 +876,7 @@ country_decisions = {
 		}
 		effect = {
 			change_primary_culture = polabian
+			set_country_flag = revived_polabian
 			north_german_region = {
 				limit = {
 					is_core = ROOT

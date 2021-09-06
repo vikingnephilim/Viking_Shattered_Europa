@@ -10,8 +10,6 @@ country_decisions = {
 				religion = iconoclast
 				religion = monothelite
 			}
-			NOT = { tag = ERM }
-			NOT = { tag = WRM }
 			151 = {
 				OR = {
 					culture = turkish
@@ -20,13 +18,11 @@ country_decisions = {
 			}
 			has_global_flag = greek_need_restore_constantinople
 		}
-		
 		allow = {
 			is_at_war = no
 			owns = 151
 			is_core = 151
 		}
-		
 		effect = {
 			151 = {
 				change_culture = greek
@@ -35,7 +31,6 @@ country_decisions = {
 			}
 			clr_global_flag = greek_need_restore_constantinople
 		}
-		
 		ai_will_do = {
 			factor = 1
 		}

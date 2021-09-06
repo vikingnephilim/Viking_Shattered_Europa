@@ -1295,12 +1295,11 @@ principality = {
 	icon = "russian_principality"
 	allow_normal_conversion = yes
 	potential = {
-		culture_group = east_slavic
-		NOT = {
-			has_reform = tsardom
-		}
-		NOT = {
-			have_had_reform = tsardom
+		OR = {
+			culture_group = east_slavic
+			culture_group = novgorod_group
+			culture_group = ruthenian_group
+			culture = mordvin
 		}
 		NOT = {
 			religion = norse_pagan_reformed
@@ -1318,20 +1317,25 @@ principality = {
 			religion = monothelite
 			religion = iconoclast
 		}
-		OR = {
-			AND = {
-				is_playing_custom_nation = yes
-				have_had_reform = principality
-			}
-		}
 	}
 	fixed_rank = 1
 	legacy_equivalent = principality_legacy
 	valid_for_nation_designer = yes
 	nation_designer_cost = 5
 	nation_designer_trigger = {
-		culture_group = east_slavic
-		religion = orthodox
+		OR = {
+			culture_group = east_slavic
+			culture_group = novgorod_group
+			culture_group = ruthenian_group
+			culture = mordvin
+		}
+		OR = {
+			religion = orthodox
+			religion = paulician
+			religion = bogomilist
+			religion = monothelite
+			religion = iconoclast
+		}
 	}
 	modifiers = {
 		global_unrest = -1
@@ -3158,7 +3162,12 @@ tsardom = {
 	icon = "king"
 	allow_normal_conversion = yes
 	potential = {
-		culture_group = east_slavic
+		OR = {
+			culture_group = east_slavic
+			culture_group = novgorod_group
+			culture_group = ruthenian_group
+			culture = mordvin
+		}
 		NOT = {
 			religion = norse_pagan_reformed
 		}
@@ -3709,6 +3718,7 @@ imperial_veche_republic = {
 			culture_group = east_slavic
 			culture_group = novgorod_group
 			culture_group = ruthenian_group
+			culture = mordvin
 		}
 	}
 	modifiers = {

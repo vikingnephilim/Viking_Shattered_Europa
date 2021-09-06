@@ -377,38 +377,11 @@ country_decisions = {
 		}
 	}
 	# Muslim modifiers
-	enforce_religion = {
-		potential = {
-			NOT = {
-				has_ruler_modifier = muslim_enforced_religion
-			}
-			NOT = {
-				has_ruler_modifier = enforced_religion
-			}
-			NOT = {
-				religion_group = muslim
-			}
-		}
-		allow = {
-			adm = 3
-			has_regency = no
-		}
-		effect = {
-			add_ruler_modifier = {
-				name = "enforced_religion"
-				duration = -1
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	enforce_religion_muslim = {
 		potential = {
 			NOT = {
 				has_ruler_modifier = muslim_enforced_religion
 			}
-			religion_group = muslim
 		}
 		allow = {
 			adm = 3

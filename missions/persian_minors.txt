@@ -1,25 +1,28 @@
 persian_minors = {
-	slot = 1
+	slot = 5
 	generic = no
 	ai = yes
 	potential = {
-		OR = {
-			culture_group = iranian
-			culture_group = east_iranian
-			culture_group = west_persian
-		}
-		OR = {
-			religion_group = zoroastrian_group
+		AND = {
+			OR = {
+				culture_group = iranian
+				culture_group = east_iranian
+				culture_group = west_persian
+			}
+			OR = {
+				religion_group = zoroastrian_group
+				religion_group = muslim
+				religion = zun_pagan_reformed
+			}
 		}
 		NOT = { map_setup = map_setup_random }
 	}
 	has_country_shield = yes
 	##Mission Start
-	Prepare_for_war_persians = {
+	Prepare_for_war_minors = {
 		icon = mission_conquer_persia
 		position = 1
 		trigger = {
-			army_size_percentage = 0.5
 			manpower_percentage = 0.5
 		}
 		effect = {
@@ -31,7 +34,15 @@ persian_minors = {
 						exists = FRS
 						exists = KRM
 						exists = SIS
+						exists = TIM
+						exists = BAL
+						exists = AFG
+						exists = ZNB
 					}
+				}
+				add_casus_belli = {
+					target = ZNB
+					type = cb_vassalize_mission
 				}
 				add_casus_belli = {
 					target = ISF
@@ -47,6 +58,18 @@ persian_minors = {
 				}
 				add_casus_belli = {
 					target = SIS
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = TIM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = BAL
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = AFG
 					type = cb_vassalize_mission
 				}
 			}
@@ -58,6 +81,9 @@ persian_minors = {
 						exists = FRS
 						exists = KRM
 						exists = SIS
+						exists = TIM
+						exists = BAL
+						exists = AFG
 					}
 				}
 				add_casus_belli = {
@@ -74,6 +100,18 @@ persian_minors = {
 				}
 				add_casus_belli = {
 					target = SIS
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = TIM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = BAL
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = AFG
 					type = cb_vassalize_mission
 				}
 			}
@@ -85,7 +123,15 @@ persian_minors = {
 						exists = QOM
 						exists = KRM
 						exists = SIS
+						exists = TIM
+						exists = BAL
+						exists = AFG
+						exists = ZNB
 					}
+				}
+				add_casus_belli = {
+					target = ZNB
+					type = cb_vassalize_mission
 				}
 				add_casus_belli = {
 					target = ISF
@@ -101,6 +147,18 @@ persian_minors = {
 				}
 				add_casus_belli = {
 					target = SIS
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = TIM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = BAL
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = AFG
 					type = cb_vassalize_mission
 				}
 			}
@@ -112,7 +170,15 @@ persian_minors = {
 						exists = FRS
 						exists = QOM
 						exists = SIS
+						exists = TIM
+						exists = BAL
+						exists = AFG
+						exists = ZNB
 					}
+				}
+				add_casus_belli = {
+					target = ZNB
+					type = cb_vassalize_mission
 				}
 				add_casus_belli = {
 					target = ISF
@@ -130,6 +196,18 @@ persian_minors = {
 					target = SIS
 					type = cb_vassalize_mission
 				}
+				add_casus_belli = {
+					target = TIM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = BAL
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = AFG
+					type = cb_vassalize_mission
+				}
 			}
 			if = {
 				limit = {
@@ -139,6 +217,9 @@ persian_minors = {
 						exists = FRS
 						exists = KRM
 						exists = QOM
+						exists = TIM
+						exists = BAL
+						exists = AFG
 					}
 				}
 				add_casus_belli = {
@@ -157,6 +238,206 @@ persian_minors = {
 					target = QOM
 					type = cb_vassalize_mission
 				}
+				add_casus_belli = {
+					target = TIM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = BAL
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = AFG
+					type = cb_vassalize_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = TIM
+					OR = {
+						exists = ISF
+						exists = FRS
+						exists = KRM
+						exists = SIS
+						exists = QOM
+						exists = BAL
+						exists = AFG
+						exists = ZNB
+					}
+				}
+				add_casus_belli = {
+					target = ZNB
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = ISF
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = FRS
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = KRM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = SIS
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = QOM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = BAL
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = AFG
+					type = cb_vassalize_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = BAL
+					OR = {
+						exists = ISF
+						exists = FRS
+						exists = KRM
+						exists = SIS
+						exists = TIM
+						exists = QOM
+						exists = AFG
+						exists = ZNB
+					}
+				}
+				add_casus_belli = {
+					target = ZNB
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = ISF
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = FRS
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = KRM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = SIS
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = TIM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = QOM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = AFG
+					type = cb_vassalize_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = AFG
+					OR = {
+						exists = ISF
+						exists = FRS
+						exists = KRM
+						exists = SIS
+						exists = TIM
+						exists = BAL
+						exists = QOM
+						exists = ZNB
+					}
+				}
+				add_casus_belli = {
+					target = ZNB
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = ISF
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = FRS
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = KRM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = SIS
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = TIM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = BAL
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = QOM
+					type = cb_vassalize_mission
+				}
+			}
+			if = {
+				limit = {
+					tag = ZNB
+					OR = {
+						exists = ISF
+						exists = FRS
+						exists = KRM
+						exists = SIS
+						exists = TIM
+						exists = BAL
+						exists = QOM
+						exists = AFG
+					}
+				}
+				add_casus_belli = {
+					target = ISF
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = FRS
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = KRM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = SIS
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = TIM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = BAL
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = QOM
+					type = cb_vassalize_mission
+				}
+				add_casus_belli = {
+					target = AFG
+					type = cb_vassalize_mission
+				}
 			}
 		}
 	}
@@ -165,7 +446,7 @@ persian_minors = {
 	convert_heretics_heathens = {
 		icon = mission_hands_praying
 		required_missions = {
-			Prepare_for_war_persians
+			Prepare_for_war_minors
 		}
 		position = 2
 			provinces_to_highlight = {
