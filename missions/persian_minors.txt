@@ -1,5 +1,5 @@
 persian_minors = {
-	slot = 5
+	slot = 3
 	generic = no
 	ai = yes
 	potential = {
@@ -15,13 +15,15 @@ persian_minors = {
 				religion = zun_pagan_reformed
 			}
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
 	##Mission Start
 	Prepare_for_war_minors = {
 		icon = mission_conquer_persia
-		position = 1
+		position = 4
 		trigger = {
 			manpower_percentage = 0.5
 		}
@@ -448,22 +450,22 @@ persian_minors = {
 		required_missions = {
 			Prepare_for_war_minors
 		}
-		position = 2
-			provinces_to_highlight = {
-				region = persia_region
-				OR = {
-					NOT = {
-						religion = ROOT
-					}
-					NOT = {
-						owned_by = ROOT
-					}
+		position = 5
+		provinces_to_highlight = {
+			region = persia_region
+			OR = {
+				NOT = {
+					religion = ROOT
 				}
+				NOT = {
+					owned_by = ROOT
+				}
+			}
 		}
 		trigger = {
-				persia_region = {
-					type = all
-					owned_by = ROOT
+			persia_region = {
+				type = all
+				owned_by = ROOT
 			}
 		}
 		effect = {

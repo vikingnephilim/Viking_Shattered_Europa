@@ -1,21 +1,36 @@
 #862 - Yaqui
+
+# Governance
+#=========================
 owner = YAQ
 controller = YAQ
 add_core = YAQ
 is_city = yes
-culture = piman
-religion = mexicayotl
-capital = "Yaqui" 
-trade_goods = unknown 
-hre = no 
-base_tax = 1 
-base_production = 1 
-base_manpower = 1 
 native_size = 5 
 native_ferocity = 1 
 native_hostileness = 5 
+
+# Demographic
+#=========================
+culture = piman
+religion = mexicayotl
+capital = "Yaqui" 
+hre = no 
+
+# Economic
+#=========================
+trade_goods = unknown 
+base_tax = 1 
+base_production = 1 
+base_manpower = 1 
+
+# Discovery
+#=========================
 discovered_by = north_american
 discovered_by = mesoamerican
+
+# History
+#=========================
 1533.1.1 = { discovered_by = SPA }
 1709.10.12 = {
 	owner = SPA
@@ -27,3 +42,5 @@ discovered_by = mesoamerican
 	trade_goods = wool 
 }
 1810.9.16 = { owner = MEX add_core = MEX controller = SPA } # Mexican War of Independence
+
+#=========================

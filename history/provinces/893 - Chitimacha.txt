@@ -1,25 +1,33 @@
 #893 - Chitimacha
 
-culture = natchez
-religion = totemism
-capital = "Chitimacha"
-trade_goods = unknown
-hre = no
-base_tax = 5
-base_production = 3
-base_manpower = 2
+# Governance
+#=========================
 native_size = 15
 native_ferocity = 3 
 native_hostileness = 10
-discovered_by = north_american
+
+# Demographic
+#=========================
+culture = natchez
+religion = totemism
+capital = "Chitimacha"
+hre = no
+
+# Economic
+#=========================
+trade_goods = unknown
+base_tax = 5
+base_production = 3
+base_manpower = 2
 extra_cost = 18
 center_of_trade = 1
 
-add_permanent_province_modifier = {
-	name = mississippi_estuary_modifier
-	duration = -1
-}
+# Discovery
+#=========================
+discovered_by = north_american
 
+# History
+#=========================
 1519.1.1 = { discovered_by = SPA } # Alvarez de Piñeda explored the Gulf Coast
 1670.1.1 = { discovered_by = FRA } # René Robert Cavelier claimed the area for France.
 1700.1.1 = {
@@ -54,3 +62,9 @@ add_permanent_province_modifier = {
 	add_core = USA
 	remove_core = FRA
 }# The Louisiana purchase
+
+#=========================
+add_permanent_province_modifier = {
+	name = mississippi_estuary_modifier
+	duration = -1
+}

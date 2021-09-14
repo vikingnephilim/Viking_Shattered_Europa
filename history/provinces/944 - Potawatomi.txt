@@ -1,25 +1,38 @@
 #944 - Potawatomi
+#1763.10.9 Royal proclamation, but British retain Detroit
 
-
+# Governance
+#=========================
 add_core = FOX
 owner = FOX
 controller = FOX
-culture = mesquakie
-religion = totemism
-capital = "Potawatomi"
-trade_goods = fur
-hre = no
-base_tax = 2
-base_production = 3
-base_manpower = 1
 is_city = yes
 native_size = 10
 native_ferocity = 10
 native_hostileness = 10
-discovered_by = north_american
+
+# Demographic
+#=========================
+culture = mesquakie
+religion = totemism
+capital = "Potawatomi"
+hre = no
+
+# Economic
+#=========================
+trade_goods = fur
+base_tax = 2
+base_production = 3
+base_manpower = 1
 extra_cost = 16
 center_of_trade = 2
 
+# Discovery
+#=========================
+discovered_by = north_american
+
+# History
+#=========================
 1659.1.1 = { discovered_by = FRA } # Médard Chouart Des Groseilliers
 1670.1.1 = {
  	owner = IRO
@@ -44,7 +57,6 @@ center_of_trade = 2
 	religion = protestant
 	remove_core = FRA
 } # The British seized control
-#1763.10.9 Royal proclamation, but British retain Detroit
 1783.9.3 = {
 	owner = POT
 	controller = POT
@@ -62,3 +74,5 @@ center_of_trade = 2
 	culture = british_american
 	religion = protestant 
 } #Treaty of Detroit cedes much of the region
+
+#=========================

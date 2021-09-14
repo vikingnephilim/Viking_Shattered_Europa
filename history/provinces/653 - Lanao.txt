@@ -1,18 +1,33 @@
 #653 - Lanao
-culture = filipino
-religion = dayawism
-capital = "Marawi"
-trade_goods = spices
+
+# Governance
+#=========================
 is_city = yes
-hre = no
-base_tax = 3 
-base_production = 3
-base_manpower = 2
 owner = MGD
 controller = MGD
 add_core = MGD
 add_core = LNO
+
+# Demographic
+#=========================
+culture = filipino
+religion = dayawism
+capital = "Marawi"
+hre = no
+
+# Economic
+#=========================
+trade_goods = spices
+base_tax = 3 
+base_production = 3
+base_manpower = 2
+
+# Discovery
+#=========================
 discovered_by = chinese
+
+# History
+#=========================
 1450.1.1 = { religion = sunni }
 1520.1.1 = {
 	owner = LNO
@@ -24,3 +39,5 @@ discovered_by = chinese
 	controller = SPA
 	add_core = SPA
 } # Conquest by Spain
+
+#=========================

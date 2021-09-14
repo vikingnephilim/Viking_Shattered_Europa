@@ -1,20 +1,35 @@
 #802 - Chuquiabo
+
+# Governance
+#=========================
 owner = CLA
 controller = CLA
 add_core = CLA
 is_city = yes
+
+# Demographic
+#=========================
 culture = aimara
 religion = inti
 capital = "Chuquiabo"
-trade_goods = cloth
 hre = no
+
+# Economic
+#=========================
+trade_goods = cloth
 base_tax = 4 
 base_production = 4
 base_manpower = 1
-discovered_by = south_american
-discovered_by = andean
 extra_cost = 16
 center_of_trade = 2
+
+# Discovery
+#=========================
+discovered_by = south_american
+discovered_by = andean
+
+# History
+#=========================
 1476.1.1 = {
 	owner = INC
 	controller = INC
@@ -30,3 +45,5 @@ center_of_trade = 2
 }# The death of Atahualpa
 1548.1.1 = { capital = "La Paz" } # Founded by Alonso de Mendoza
 1809.7.16 = { revolt = { type = nationalist_rebels size = 3 } controller = REB } # Bolivian War of Independence
+
+#=========================

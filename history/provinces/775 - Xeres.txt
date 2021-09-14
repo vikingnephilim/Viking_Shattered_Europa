@@ -1,18 +1,33 @@
 #775 - Asuncion
-culture = guarani
-discovered_by = south_american
-religion = animism
-capital = "Asunción"
-trade_goods = unknown
-hre = no
-base_tax = 1
-base_production = 1
-base_manpower = 1
+
+# Governance
+#=========================
 native_size = 60
 native_ferocity = 10
 native_hostileness = 10
+
+# Demographic
+#=========================
+culture = guarani
+religion = animism
+capital = "Asunción"
+hre = no
+
+# Economic
+#=========================
+trade_goods = unknown
+base_tax = 1
+base_production = 1
+base_manpower = 1
 extra_cost = 8
 center_of_trade = 1
+
+# Discovery
+#=========================
+discovered_by = south_american
+
+# History
+#=========================
 1516.1.23 = { discovered_by = SPA } # Juan Díaz de Solís
 1537.8.15 = {
 	owner = SPA
@@ -33,3 +48,5 @@ center_of_trade = 1
 	remove_core = SPA
 	unrest = 0
 }# Paraguay is formally declared independent
+
+#=========================

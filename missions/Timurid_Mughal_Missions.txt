@@ -1,3 +1,105 @@
+tim_india = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		AND = {
+			OR = {
+				culture_group = iranian
+				culture_group = east_iranian
+				culture_group = west_persian
+			}
+			OR = {
+				religion_group = zoroastrian_group
+				religion_group = muslim
+			}
+		}
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	conquer_punjab_MUG = {
+		icon = mission_indian_soldier_elephant
+		required_missions = {
+		}
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = lahore_area
+				area = sind_sagar_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			lahore_area = {
+				type = all
+				owned_by = ROOT
+			}
+			sind_sagar_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			sirhind_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_doab_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	conquer_delhi = {
+		icon = mission_monarch_in_throne_room
+		required_missions = {
+			conquer_punjab_MUG
+		}
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = sirhind_area
+				area = upper_doab_area
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			sirhind_area = {
+				type = all
+				owned_by = ROOT
+			}
+			upper_doab_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_treasury = 500
+			add_prestige = 20
+		}
+	}
+}
+
 tim_reconquest_persia = {
 	slot = 3
 	generic = no
@@ -237,7 +339,7 @@ tim_reconquest_persia = {
 }
 
 tim_reconquest_khorasan = {
-	slot = 3
+	slot = 2
 	generic = no
 	ai = yes
 	potential = {
@@ -259,6 +361,7 @@ tim_reconquest_khorasan = {
 	has_country_shield = yes
 	tim_army_built = {
 		icon = mission_non-western_soldiers
+		position = 3
 		required_missions = {
 		}
 		trigger = {
@@ -340,10 +443,10 @@ tim_reconquest_khorasan = {
 	}
 	tim_khorasan_one = {
 		icon = mission_non-western_cavalry_raid
+		position = 4
 		required_missions = {
 			tim_army_built
 		}
-		position = 2
 		provinces_to_highlight = {
 			OR = {
 				area = mashhad_area
@@ -414,7 +517,7 @@ tim_reconquest_khorasan = {
 		required_missions = {
 			tim_khorasan_one
 		}
-		position = 3
+		position = 5
 		provinces_to_highlight = {
 			OR = {
 				area = ghor_area
@@ -633,108 +736,6 @@ tim_reconquest_transoxiana = {
 				name = "tim_steppe_reconquest"
 				duration = 5475
 			}
-		}
-	}
-}
-
-tim_india = {
-	slot = 1
-	generic = no
-	ai = yes
-	potential = {
-		AND = {
-			OR = {
-				culture_group = iranian
-				culture_group = east_iranian
-				culture_group = west_persian
-			}
-			OR = {
-				religion_group = zoroastrian_group
-				religion_group = muslim
-			}
-		}
-		NOT = {
-			map_setup = map_setup_random
-		}
-	}
-	has_country_shield = yes
-	conquer_punjab_MUG = {
-		icon = mission_indian_soldier_elephant
-		required_missions = {
-		}
-		position = 7
-		provinces_to_highlight = {
-			OR = {
-				area = lahore_area
-				area = sind_sagar_area
-			}
-			NOT = {
-				owned_by = ROOT
-			}
-		}
-		trigger = {
-			lahore_area = {
-				type = all
-				owned_by = ROOT
-			}
-			sind_sagar_area = {
-				type = all
-				owned_by = ROOT
-			}
-		}
-		effect = {
-			sirhind_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			upper_doab_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-	conquer_delhi = {
-		icon = mission_monarch_in_throne_room
-		required_missions = {
-			conquer_punjab_MUG
-		}
-		position = 8
-		provinces_to_highlight = {
-			OR = {
-				area = sirhind_area
-				area = upper_doab_area
-			}
-			NOT = {
-				owned_by = ROOT
-			}
-		}
-		trigger = {
-			sirhind_area = {
-				type = all
-				owned_by = ROOT
-			}
-			upper_doab_area = {
-				type = all
-				owned_by = ROOT
-			}
-		}
-		effect = {
-			add_treasury = 500
-			add_prestige = 20
 		}
 	}
 }

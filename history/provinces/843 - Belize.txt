@@ -1,18 +1,32 @@
 #843 - Belize
+
+# Governance
+#=========================
 owner = CTM
 controller = CTM
+is_city = yes 
+add_core = CTM
+
+# Demographic
+#=========================
 culture = yucatec
 religion = mesoamerican_religion
 capital = "Chactemal" 
-trade_goods = sugar 
 hre = no 
+
+# Economic
+#=========================
+trade_goods = sugar 
 base_tax = 4 
 base_production = 4 
 base_manpower = 1 
-is_city = yes 
-add_local_autonomy = 25
-add_core = CTM
+
+# Discovery
+#=========================
 discovered_by = mesoamerican
+
+# History
+#=========================
 1502.1.1 = { discovered_by = CAS } # Christopher Columbus, no attempt to colonize
 1516.1.23 = { discovered_by = SPA }
 1547.1.1 = {
@@ -35,3 +49,5 @@ discovered_by = mesoamerican
     add_core = GBR
     remove_core = ENG
 }
+#=========================
+add_local_autonomy = 25

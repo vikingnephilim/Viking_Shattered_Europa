@@ -1,21 +1,36 @@
 #812 - Chanchan
+
+# Governance
+#=========================
 owner = CHM
 controller = CHM
+is_city = yes
+add_core = CHM
+
+# Demographic
+#=========================
 culture = chimuan
 religion = inti
 capital = "Chanchan"
-trade_goods = cocoa
 hre = no
+
+# Economic
+#=========================
+trade_goods = cocoa
 base_tax = 4 
 base_production = 4
 base_manpower = 2
-is_city = yes
-add_core = CHM
+extra_cost = 8
+center_of_trade = 1
+
+# Discovery
+#=========================
 discovered_by = CHM
 discovered_by = south_american
 discovered_by = andean
-extra_cost = 8
-center_of_trade = 1
+
+# History
+#=========================
 1470.1.1 = {
 	owner = INC
 	controller = INC
@@ -34,3 +49,5 @@ center_of_trade = 1
 1538.1.1 = { unrest = 5 } # Almagro is defeated & executed
 1541.1.1 = { unrest = 6 } # Pizzaro is assassinated by supporters of Almagro, his brother assumed control
 1548.1.1 = { unrest = 0 } # Gonzalo Pizzaro is also executed & Spain regains control
+
+#=========================

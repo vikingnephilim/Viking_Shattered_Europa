@@ -1,20 +1,36 @@
 # 78 - Mainz
-capital = "Mainz"
-culture = hessian
-religion = catholic
-trade_goods = paper
+
+# Governance
+#=========================
 owner = MAI
-base_tax = 4 
-base_production = 4
-base_manpower = 2
 is_city = yes
 add_core = MAI
 controller = MAI
+
+# Demographic
+#=========================
+capital = "Mainz"
+culture = hessian
+religion = catholic
 hre = yes
+
+# Economic
+#=========================
+trade_goods = paper
+base_tax = 4 
+base_production = 4
+base_manpower = 2
+extra_cost = 8
+center_of_trade = 1
+
+# Discovery
+#=========================
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
-extra_cost = 8
-center_of_trade = 1
+
+# History
+#=========================
 1444.11.25 = { hre = no }
+#=========================

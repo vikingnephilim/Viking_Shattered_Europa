@@ -1,16 +1,31 @@
 #744 - Demerara
-culture = guajiro
-discovered_by = south_american
-religion = animism
-capital = "Demerara"
-trade_goods = unknown
-hre = no
-base_tax = 1 
-base_production = 1
-base_manpower = 1
+
+# Governance
+#=========================
 native_size = 10
 native_ferocity = 10
 native_hostileness = 3
+
+# Demographic
+#=========================
+culture = guajiro
+religion = animism
+capital = "Demerara"
+hre = no
+
+# Economic
+#=========================
+trade_goods = unknown
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+
+# Discovery
+#=========================
+discovered_by = south_american
+
+# History
+#=========================
 1498.1.1 = { discovered_by = CAS } # Christopher Columbus
 1516.1.23 = { discovered_by = SPA }
 1616.1.1 = {
@@ -22,8 +37,8 @@ native_hostileness = 3
 	religion = reformed
 	trade_goods = sugar
 }
-1763.2.23 = { revolt = { type = nationalist_rebels size = 0 } controller = REB } # Berbice slave revolt
 1763.12.23 = { revolt = {} controller = NED } # Divisions among the rebels and Dutch
+1763.2.23 = { revolt = { type = nationalist_rebels size = 0 } controller = REB } # Berbice slave revolt
 1796.1.1 = {
 	owner = GBR
 	controller = GBR
@@ -31,3 +46,5 @@ native_hostileness = 3
 	culture = english
 	remove_core = NED
 } # The English are taking over
+
+#=========================

@@ -1,21 +1,36 @@
 #622 - Palembang
-culture = sumatran
-religion = sunni
-capital = "Palembang"
-trade_goods = spices
-hre = no
-base_tax = 6
-base_production = 5
-base_manpower = 2
+
+# Governance
+#=========================
 native_size = 50
 native_ferocity = 10
 native_hostileness = 10
+
+# Demographic
+#=========================
+culture = sumatran
+religion = sunni
+capital = "Palembang"
+hre = no
+
+# Economic
+#=========================
+trade_goods = spices
+base_tax = 6
+base_production = 5
+base_manpower = 2
+extra_cost = 8
+center_of_trade = 1
+
+# Discovery
+#=========================
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
-extra_cost = 8
-center_of_trade = 1
+
+# History
+#=========================
 1444.1.1 = {
 	owner = PLB
 	controller = PLB
@@ -23,3 +38,4 @@ center_of_trade = 1
 	is_city = yes
 	trade_goods = spices
 }
+#=========================

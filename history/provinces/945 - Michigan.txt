@@ -1,27 +1,36 @@
 #945 - Michigan
 
+# Governance
+#=========================
 add_core = POT
 owner = POT
 controller = POT
-culture = anishinabe
-religion = totemism
-capital = "Michigan"
-trade_goods = fur
-hre = no
-base_tax = 1
-base_production = 2
-base_manpower = 1
 is_city = yes
 native_size = 10
 native_ferocity = 10
 native_hostileness = 10
 
+# Demographic
+#=========================
+culture = anishinabe
+religion = totemism
+capital = "Michigan"
+hre = no
 
+# Economic
+#=========================
+trade_goods = fur
+base_tax = 1
+base_production = 2
+base_manpower = 1
 
+# Discovery
+#=========================
 discovered_by = north_american
 
+# History
+#=========================
 1634.1.1 = { discovered_by = FRA } # Jean Nicolet
-
 1650.1.1 = {
  	owner = POT
 	controller = POT
@@ -30,14 +39,6 @@ discovered_by = north_american
 } #Fleeing from the Beaver Wars
 1707.5.12 = { discovered_by = GBR }
 1716.1.1 = { add_core = FRA }
-1763.2.10 = {
-	owner = GBR
-	controller = GBR
-	add_core = GBR
-	culture = english
-	religion = protestant
-	remove_core = FRA
-} # Treaty of Paris, ceded to the British
 1763.10.9 = {
 	owner = POT
 	controller = POT
@@ -47,6 +48,14 @@ discovered_by = north_american
 	culture = huron
 	religion = totemism
 } # Royal proclamation, Britan recognize native lands (as protectorates)
+1763.2.10 = {
+	owner = GBR
+	controller = GBR
+	add_core = GBR
+	culture = english
+	religion = protestant
+	remove_core = FRA
+} # Treaty of Paris, ceded to the British
 1813.10.5 = {
 	owner = USA
 	controller = USA
@@ -54,3 +63,5 @@ discovered_by = north_american
 	culture = british_american
 	religion = protestant 
 } #The death of Tecumseh mark the end of organized native resistance 
+
+#=========================
