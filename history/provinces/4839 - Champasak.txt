@@ -1,18 +1,33 @@
+
+# Governance
+#=========================
 owner = LXA
 controller = LXA
-culture = lao
-religion = dayawism
-capital = "Champasak"
-trade_goods = tea
-hre = no
-base_tax = 4
-base_production = 3
-base_manpower = 3
 is_city = yes
 add_core = LXA
 add_core = CHK
+
+# Demographic
+#=========================
+culture = lao
+religion = dayawism
+capital = "Champasak"
+hre = no
+
+# Economic
+#=========================
+trade_goods = tea
+base_tax = 4
+base_production = 3
+base_manpower = 3
+
+# Discovery
+#=========================
 discovered_by = chinese
 discovered_by = indian
+
+# History
+#=========================
 1535.1.1 = { discovered_by = POR }
 1579.1.1 = { unrest = 5 } # Revolt against vassalization
 1580.1.1 = { unrest = 0 }
@@ -25,3 +40,5 @@ discovered_by = indian
 	add_core = VIE
 	remove_core = LXA
 } # Lan Xangs declared itself independent, partitioned into three kingdoms; Vientiane, Champasak & Luang Prabang
+
+#=========================

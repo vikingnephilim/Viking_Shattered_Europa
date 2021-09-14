@@ -947,7 +947,8 @@ beylik = {
 	nation_designer_cost = 0
 	nation_designer_cost = 0
 	modifiers = {
-		army_tradition = 0.25
+		yearly_army_professionalism = 0.25
+		army_tradition_from_battle = 0.5
 		unjustified_demands = -0.15
 	}
 	government_abilities = {
@@ -3073,6 +3074,7 @@ ottoman_government = {
 	icon = "ottoman_government"
 	potential = {
 		religion_group = muslim
+		culture_group = turkish_g
 		OR = {
 			AND = {
 				tag = TUR

@@ -1,20 +1,31 @@
 # No previous file for Missiquoi
 
-culture = abenaki
-religion = totemism
-capital = "Missisquoi"
-trade_goods = unknown
-hre = no
-base_tax = 2
-base_production = 2
-base_manpower = 1
+# Governance
+#=========================
 native_size = 10
 native_ferocity = 10
 native_hostileness = 10
 
+# Demographic
+#=========================
+culture = abenaki
+religion = totemism
+capital = "Missisquoi"
+hre = no
 
+# Economic
+#=========================
+trade_goods = unknown
+base_tax = 2
+base_production = 2
+base_manpower = 1
+
+# Discovery
+#=========================
 discovered_by = north_american
 
+# History
+#=========================
 1444.1.1 = { tribal_owner = ABE }
 1609.1.1 = { discovered_by = FRA } # Samuel de Champlain
 1629.1.1 = { discovered_by = ENG }
@@ -28,3 +39,5 @@ discovered_by = north_american
 	revolt = { type = particularist_rebels size = 1 } 
 } ##Founding of Burlington, Vermont still in rebellion
 1791.3.4 = { revolt = {} controller = USA } # Admitted to the union as its own state
+
+#=========================

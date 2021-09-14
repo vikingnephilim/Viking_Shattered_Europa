@@ -1,34 +1,42 @@
 # No previous file for Xicallanco
+ #Precolumbian international trade hub
 
-culture = chontales
+# Governance
+#=========================
 owner = YOK
 controller = YOK
 add_core = YOK
 is_city = yes
-religion = mesoamerican_religion
-capital = "Xicallanco"
-trade_goods = cocoa
-hre = no
-base_tax = 2 
-base_production = 2
-base_manpower = 1
- #Precolumbian international trade hub
-add_local_autonomy = 25
 native_size = 10
 native_ferocity = 10
 native_hostileness = 10
 
+# Demographic
+#=========================
+culture = chontales
+religion = mesoamerican_religion
+capital = "Xicallanco"
+hre = no
 
+# Economic
+#=========================
+trade_goods = cocoa
+base_tax = 2 
+base_production = 2
+base_manpower = 1
 
+# Discovery
+#=========================
 discovered_by = mesoamerican
 
+# History
+#=========================
 1450.1.1 = { 
 	owner = ITZ
 	controller = ITZ
 	add_core = ITZ 
 	} #Estimated: Itza trade empire. 
 1517.1.1 = { discovered_by = SPA }
-
 1529.1.1 = {
 	owner = SPA
 	controller = SPA
@@ -37,3 +45,6 @@ discovered_by = mesoamerican
 	religion = catholic 
 } #de Montejo form Salamanca de Xicalango
 1810.9.16 = { owner = MEX add_core = MEX controller = SPA } # Mexican War of Independence
+
+#=========================
+add_local_autonomy = 25

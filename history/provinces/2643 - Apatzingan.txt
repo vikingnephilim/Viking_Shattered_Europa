@@ -1,26 +1,35 @@
 # No previous file for Apatzingan
 
-culture = purepecha
+# Governance
+#=========================
 owner = CLM
 controller = CLM
 add_core = CLM
 is_city = yes
-religion = nahuatl
-capital = "Apatzingan"
-trade_goods = grain
-hre = no
-base_tax = 2 
-base_production = 2
-base_manpower = 1
 native_size = 10
 native_ferocity = 10
 native_hostileness = 10
 
+# Demographic
+#=========================
+culture = purepecha
+religion = nahuatl
+capital = "Apatzingan"
+hre = no
 
+# Economic
+#=========================
+trade_goods = grain
+base_tax = 2 
+base_production = 2
+base_manpower = 1
 
+# Discovery
+#=========================
 discovered_by = mesoamerican
 
-
+# History
+#=========================
 1460.1.1 = { 
 	owner = TAR
 	controller = TAR
@@ -35,3 +44,5 @@ discovered_by = mesoamerican
 } #Tangaxuan II is deposed and murdered.
 1541.1.1 = { culture = castillian } # growing aculturation
 1810.9.16 = { owner = MEX add_core = MEX controller = MEX } # Mexican War of Independence
+
+#=========================

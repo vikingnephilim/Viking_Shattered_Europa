@@ -1,20 +1,35 @@
 # No previous file for Xiconaque
-culture = guamares
-religion = mexicayotl
+
+# Governance
+#=========================
 owner = GAM
 controller = GAM
 add_core = GAM
 is_city = yes
-capital = "Xiconaque"
-trade_goods = wool
-hre = no
-base_tax = 1
-base_production = 1
-base_manpower = 1
 native_size = 10
 native_ferocity = 10
 native_hostileness = 10
+
+# Demographic
+#=========================
+culture = guamares
+religion = mexicayotl
+capital = "Xiconaque"
+hre = no
+
+# Economic
+#=========================
+trade_goods = wool
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+# Discovery
+#=========================
 discovered_by = mesoamerican
+
+# History
+#=========================
 1532.1.1 = {
 	discovered_by = SPA
 	owner = SPA
@@ -23,3 +38,5 @@ discovered_by = mesoamerican
 	capital = "Guadalajara"
 }
 1810.9.16 = { owner = MEX add_core = MEX controller = MEX } # Mexican War of Independence
+
+#=========================

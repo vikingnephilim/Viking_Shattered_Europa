@@ -1,20 +1,35 @@
 # 199 Auvergne - Principal cities: Clermont-Ferrand
-latent_trade_goods = {
-	coal
-}
+
+# Governance
+#=========================
 owner = BOU
 controller = BOU
-capital = "Clermont"
 is_city = yes
+add_core = BOU
+
+# Demographic
+#=========================
+capital = "Clermont"
 culture = limousin
 religion = cathar
 hre = no
+
+# Economic
+#=========================
 base_tax = 4
 base_production = 4
 trade_goods = iron
 base_manpower = 2
-add_core = BOU
+latent_trade_goods = {
+	coal
+}
+
+# Discovery
+#=========================
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
+
+# History
+#=========================

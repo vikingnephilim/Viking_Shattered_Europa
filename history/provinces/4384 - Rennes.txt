@@ -1,20 +1,35 @@
 # 4384 Rennes
+
+# Governance
+#=========================
 owner = BRI
 controller = BRI
-capital = "Rennes"
 is_city = yes
+add_core = BRI
+
+# Demographic
+#=========================
+capital = "Rennes"
 culture = breton
 religion = catholic
 hre = no
+
+# Economic
+#=========================
 base_tax = 4
 base_production = 4
 trade_goods = cloth
 base_manpower = 4
-add_core = BRI
+
+# Discovery
+#=========================
 discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
+
+# History
+#=========================
 1453.1.1 = { add_core = FRA }
 1532.8.4 = { owner = FRA controller = FRA } # Union Treaty
 1588.12.1 = { unrest = 5 } # Henri de Guise assassinated at Blois, Ultra-Catholics into a frenzy
@@ -23,3 +38,5 @@ discovered_by = ottoman
 1638.1.1 = { unrest = 0 }
 1639.1.1 = { unrest = 3 } 
 1641.1.1 = { unrest = 0 }
+
+#=========================

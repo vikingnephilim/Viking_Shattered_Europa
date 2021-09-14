@@ -1,20 +1,35 @@
 # No previous file for Texcoco
+
+# Governance
+#=========================
 owner = AZT
 controller = AZT
 add_core = AZT
+is_city = yes
+
+# Demographic
+#=========================
 culture = aztek 
 religion = nahuatl
 capital = "Texcoco" 
-trade_goods = gold
 hre = no 
+
+# Economic
+#=========================
+trade_goods = gold
 base_tax = 5 
 base_production = 5
 base_manpower = 2 
-is_city = yes
+
+# Discovery
+#=========================
 discovered_by = AZT
 discovered_by = MAY
 discovered_by = ZAP
 discovered_by = mesoamerican
+
+# History
+#=========================
 1519.1.1 = { discovered_by = SPA }
 1521.8.13 = {
 	owner = SPA
@@ -26,3 +41,5 @@ discovered_by = mesoamerican
 1624.1.1 = { unrest = 5 } # Riots
 1626.1.1 = { unrest = 0 } 
 1810.9.16 = { owner = MEX add_core = MEX controller = MEX } # Mexican War of Independence
+
+#=========================

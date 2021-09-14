@@ -1,18 +1,33 @@
 # - Sucre
+
+# Governance
+#=========================
 owner = CRA
 controller = CRA
 add_core = CRA
+is_city = yes
+
+# Demographic
+#=========================
 culture = aimara
-discovered_by = south_american
-discovered_by = andean
 religion = inti
 capital = "Sucre"
-trade_goods = cloth
 hre = no
+
+# Economic
+#=========================
+trade_goods = cloth
 base_tax = 4 
 base_production = 4
 base_manpower = 1
-is_city = yes
+
+# Discovery
+#=========================
+discovered_by = south_american
+discovered_by = andean
+
+# History
+#=========================
 1476.1.1 = {
 	owner = INC
 	controller = INC
@@ -26,3 +41,5 @@ is_city = yes
 	religion = catholic
 }# The death of Atahualpa
 1809.7.16 = { revolt = { type = nationalist_rebels size = 0 } controller = REB } # Bolivian War of Independence
+
+#=========================

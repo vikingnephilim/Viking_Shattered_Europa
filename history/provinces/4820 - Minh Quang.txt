@@ -1,22 +1,36 @@
 #610 - Thanh Hoa
+
+# Governance
+#=========================
 owner = DAI
 controller = DAI
-culture = vietnamese
-religion = mahayana
-capital = "Minh Quang"
-trade_goods = grain 
-
-hre = no
-base_tax = 4 
-base_production = 3
-base_manpower = 2
 is_city = yes
 add_core = DAI
 add_core = TOK
+
+# Demographic
+#=========================
+culture = vietnamese
+religion = mahayana
+capital = "Minh Quang"
+hre = no
+
+# Economic
+#=========================
+trade_goods = grain 
+base_tax = 4 
+base_production = 3
+base_manpower = 2
+
+# Discovery
+#=========================
 discovered_by = chinese
 discovered_by = indian
 discovered_by = muslim
 discovered_by = ottoman
+
+# History
+#=========================
 1413.1.1 = {	owner = MNG
 	revolt = { type = nationalist_rebels size = 0 }
 	controller = REB
@@ -42,3 +56,5 @@ discovered_by = ottoman
 	controller = ANN
 	remove_core = DAI
 } # Nguyen Phuc Anh annexed the Tay Son Dynasty
+
+#=========================

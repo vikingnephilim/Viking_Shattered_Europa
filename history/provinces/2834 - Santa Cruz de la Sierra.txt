@@ -1,17 +1,32 @@
 # - Santa Cruz de la Sierra
-culture = guarani
-religion = animism
-capital = "Santa Cruz de la Sierra"
-trade_goods = unknown
-hre = no
-base_tax = 3 
-base_production = 3
-base_manpower = 1
+
+# Governance
+#=========================
 native_size = 15
 native_ferocity = 1 
 native_hostileness = 10
+
+# Demographic
+#=========================
+culture = guarani
+religion = animism
+capital = "Santa Cruz de la Sierra"
+hre = no
+
+# Economic
+#=========================
+trade_goods = unknown
+base_tax = 3 
+base_production = 3
+base_manpower = 1
+
+# Discovery
+#=========================
 discovered_by = south_american
 discovered_by = andean
+
+# History
+#=========================
 1561.1.1 = {
 	discovered_by = SPA
 	owner = SPA
@@ -23,3 +38,5 @@ discovered_by = andean
 	trade_goods = tropical_wood
 }
 1809.7.16 = { revolt = { type = nationalist_rebels size = 0 } controller = REB } # Bolivian War of Independence
+
+#=========================

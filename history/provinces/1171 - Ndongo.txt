@@ -1,23 +1,38 @@
 #1171 - Ndongo
+
+# Governance
+#=========================
 owner = NDO
 controller = NDO
+is_city = yes
+add_core = NDO
+
+# Demographic
+#=========================
 culture = mbundu
 religion = shamanism #Fetishism
 capital = "Kabasa"
-trade_goods = slaves
 hre = no
+
+# Economic
+#=========================
+trade_goods = slaves
 base_tax = 2 
 base_production = 2
 base_manpower = 3
-is_city = yes
-add_core = NDO
+extra_cost = 8
+center_of_trade = 1
+
+# Discovery
+#=========================
 discovered_by = central_african
 discovered_by = KON
 discovered_by = LOA
 discovered_by = NDO
 discovered_by = sub_saharan
-extra_cost = 8
-center_of_trade = 1
+
+# History
+#=========================
 1483.1.1 = { discovered_by = POR } # Diogo Cão
 1628.1.1 = {
 	add_core = POR
@@ -36,3 +51,5 @@ center_of_trade = 1
 	revolt = { }
 	controller = POR
 }
+
+#=========================

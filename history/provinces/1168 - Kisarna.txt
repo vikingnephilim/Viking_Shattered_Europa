@@ -1,18 +1,33 @@
 # - Mbamba
+
+# Governance
+#=========================
 owner = KON
 controller = KON 
+is_city = yes
+add_core = KON
+
+# Demographic
+#=========================
 culture = kongolese
 religion = shamanism #Fetishism
 capital = "Lovata"
-trade_goods = slaves
 hre = no
+
+# Economic
+#=========================
+trade_goods = slaves
 base_tax = 2 
 base_production = 2
 base_manpower = 1
-is_city = yes
-add_core = KON
+
+# Discovery
+#=========================
 discovered_by = central_african
 discovered_by = sub_saharan
+
+# History
+#=========================
 1483.1.1 = { discovered_by = POR } # Diogo Cão
 1665.10.29 = {
 	owner = POR
@@ -26,3 +41,5 @@ discovered_by = sub_saharan
 	unrest = 8 #Post Mbwila infighting.
 } #Once Portuguese forces leave de facto free of Portuguese influence
 1702.1.1 = { unrest = 0 } #Order more or less restored
+
+#=========================

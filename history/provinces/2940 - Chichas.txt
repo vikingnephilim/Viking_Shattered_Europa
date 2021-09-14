@@ -1,18 +1,33 @@
 # - Chichas
+
+# Governance
+#=========================
 owner = PCJ
 controller = PCJ
 add_core = PCJ
-culture = aimara
-discovered_by = south_american
-discovered_by = andean
-religion = inti
 is_city = yes
+
+# Demographic
+#=========================
+culture = aimara
+religion = inti
 capital = "Chichas"
-trade_goods = salt
 hre = no
+
+# Economic
+#=========================
+trade_goods = salt
 base_tax = 2 
 base_production = 2
 base_manpower = 1
+
+# Discovery
+#=========================
+discovered_by = south_american
+discovered_by = andean
+
+# History
+#=========================
 1476.1.1 = {
 	owner = INC
 	controller = INC
@@ -27,3 +42,5 @@ base_manpower = 1
 	religion = catholic
 }# The death of Atahualpa
 1809.7.16 = { revolt = { type = nationalist_rebels size = 2 } controller = REB } # Bolivian War of Independence
+
+#=========================

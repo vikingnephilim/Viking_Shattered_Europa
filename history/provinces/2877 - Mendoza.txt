@@ -1,16 +1,39 @@
 # - Mendoza
-culture = huarpe
-discovered_by = south_american
-religion = animism
-capital = "Mendoza"
-trade_goods = unknown
-hre = no
-base_tax = 2
-base_production = 3
-base_manpower = 1
+
+# Governance
+#=========================
 native_size = 20
 native_ferocity = 10
 native_hostileness = 10
+
+# Demographic
+#=========================
+culture = huarpe
+religion = animism
+capital = "Mendoza"
+hre = no
+
+# Economic
+#=========================
+trade_goods = unknown
+base_tax = 2
+base_production = 3
+base_manpower = 1
+
+# Discovery
+#=========================
+discovered_by = south_american
+
+# History
+#=========================
+1816.7.9 = {
+	owner = LAP
+	controller = LAP
+	add_core = LAP
+	remove_core = SPA
+} # Argentina is declared independent
+
+#=========================
 		1561.3.2 = {
 	discovered_by = SPA
 	owner = SPA
@@ -21,9 +44,3 @@ native_hostileness = 10
 	culture = castillian
 	religion = catholic
 } # Founded by Pedro del Castillo
-1816.7.9 = {
-	owner = LAP
-	controller = LAP
-	add_core = LAP
-	remove_core = SPA
-} # Argentina is declared independent

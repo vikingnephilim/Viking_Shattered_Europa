@@ -1,28 +1,35 @@
 #2004 - Niitsitapi
 
-latent_trade_goods = {
-	coal
-}
-
+# Governance
+#=========================
 add_core = BLA
 owner = BLA
 controller = BLA
-culture = blackfoot
-religion = totemism
-capital = "Niitsitapi"
-trade_goods = fur
-hre = no
-base_tax = 1 
-base_production = 1
-base_manpower = 1
 is_city = yes
 native_size = 10
 native_ferocity = 10
 native_hostileness = 10
 
+# Demographic
+#=========================
+culture = blackfoot
+religion = totemism
+capital = "Niitsitapi"
+hre = no
 
+# Economic
+#=========================
+trade_goods = fur
+base_tax = 1 
+base_production = 1
+base_manpower = 1
+latent_trade_goods = {
+	coal
+}
 
+# Discovery
+#=========================
 discovered_by = north_american
 
-1755.1.1 = { discovered_by = GBR } #Henday
-
+# History
+#=========================

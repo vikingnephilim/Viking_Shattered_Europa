@@ -1,28 +1,36 @@
 # No previous file for Wabash
 
+# Governance
+#=========================
 owner = OSA
 controller = OSA
 add_core = OSA
 is_city = yes
-culture = osage
-religion = totemism
-capital = "Wabash"
-trade_goods = grain
-hre = no
-base_tax = 1 
-base_production = 1
-base_manpower = 1
 native_size = 10
 native_ferocity = 10
 native_hostileness = 10
 
+# Demographic
+#=========================
+culture = osage
+religion = totemism
+capital = "Wabash"
+hre = no
 
+# Economic
+#=========================
+trade_goods = grain
+base_tax = 1 
+base_production = 1
+base_manpower = 1
 
+# Discovery
+#=========================
 discovered_by = north_american
 
+# History
+#=========================
 1659.1.1 = { discovered_by = FRA } # Médard Chouart Des Groseilliers
-1671.1.1 = { discovered_by = ENG } # Abraham Wood
-1707.5.12 = { discovered_by = GBR }
 1670.1.1 = { 
 	owner = ---
 	controller = ---
@@ -30,6 +38,8 @@ discovered_by = north_american
 	trade_goods = unknown
 	culture = shawnee
 } #Degiha Migrations westward
+1671.1.1 = { discovered_by = ENG } # Abraham Wood
+1707.5.12 = { discovered_by = GBR }
 1805.1.1 = {
 	owner = USA
 	controller = USA
@@ -37,3 +47,4 @@ discovered_by = north_american
 	culture = british_american
 	religion = protestant
 } # Treaty of Grouseland
+#=========================

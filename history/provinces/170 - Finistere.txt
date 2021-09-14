@@ -1,22 +1,37 @@
 # 170 Finistère - Principal cities: Brest
+
+# Governance
+#=========================
 owner = BRI
 controller = BRI
-capital = "Brest"
 is_city = yes
+add_core = BRI
+
+# Demographic
+#=========================
+capital = "Brest"
 culture = breton
 religion = catholic
 hre = no
+
+# Economic
+#=========================
 base_tax = 3 
 base_production = 3
 trade_goods = naval_supplies
 base_manpower = 4
-add_core = BRI
+extra_cost = 8
+center_of_trade = 1
+
+# Discovery
+#=========================
 discovered_by = western
 discovered_by = eastern
 discovered_by = muslim
 discovered_by = ottoman
-extra_cost = 8
-center_of_trade = 1
+
+# History
+#=========================
 1453.1.1 = { add_core = FRA }
 1532.8.4 = { owner = FRA controller = FRA } # Union Treaty
 1583.1.1 = { fort_15th = no fort_16th = yes }
@@ -24,3 +39,5 @@ center_of_trade = 1
 1594.1.1 = { unrest = 0 } # 'Paris vaut bien une messe!', Henri converts to Catholicism
 1648.1.1 = { fort_16th = no fort_17th = yes }
 1715.1.1 = { fort_17th = no fort_18th = yes }
+
+#=========================

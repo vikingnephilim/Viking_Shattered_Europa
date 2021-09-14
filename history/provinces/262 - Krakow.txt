@@ -1,20 +1,34 @@
 #262 - Krakow
-latent_trade_goods = {
-	coal
-}
+ #Jagiellonian University established in 1364 by Casimir III the Great
+
+# Governance
+#=========================
 owner = KRA
 controller = KRA
+is_city = yes
+add_core = KRA
+
+# Demographic
+#=========================
 culture = malopolskan
 religion = catholic
 capital = "Kraków"
 hre = no
+
+# Economic
+#=========================
 base_tax = 7
 base_production = 7
 trade_goods = salt
 base_manpower = 6
-is_city = yes
- #Jagiellonian University established in 1364 by Casimir III the Great
-add_core = KRA
+extra_cost = 16
+center_of_trade = 2
+latent_trade_goods = {
+	coal
+}
+
+# Discovery
+#=========================
 discovered_by = KAZ
 discovered_by = CRI
 discovered_by = GOL
@@ -24,5 +38,6 @@ discovered_by = eastern
 discovered_by = western
 discovered_by = muslim
 discovered_by = ottoman
-extra_cost = 16
-center_of_trade = 2
+
+# History
+#=========================

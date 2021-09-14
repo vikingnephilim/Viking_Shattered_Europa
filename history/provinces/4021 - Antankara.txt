@@ -1,17 +1,33 @@
 #4021 - Antankara
+
+# Governance
+#=========================
 owner = BTS
 controller = BTS
 add_core = BTS
+is_city = yes
+
+# Demographic
+#=========================
 culture = betsimisirakan #Malagasy
 religion = sanism
 capital = "Ambilobe"
-trade_goods = slaves
 hre = no
+
+# Economic
+#=========================
+trade_goods = slaves
 base_tax = 1
 base_production = 2
 base_manpower = 1
-is_city = yes
-add_local_autonomy = 40 #Ruled by independent chiefs
+
+# Discovery
+#=========================
 discovered_by = east_african
+
+# History
+#=========================
 1500.9.1 = { discovered_by = POR } # Diego Dias
 1818.1.1 = { owner = MIR controller = MIR add_core = MIR } #Repeated Merina incursions culminating in eventual surrender.
+#=========================
+add_local_autonomy = 40 #Ruled by independent chiefs

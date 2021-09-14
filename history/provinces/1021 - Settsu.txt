@@ -1,23 +1,38 @@
 #1021 - Settsu
+
+# Governance
+#=========================
 owner = HSK
 controller = HSK
+is_city = yes
+add_core = HSK
+
+# Demographic
+#=========================
 culture = kansai
 religion = shinto
 capital = "Naniwa"
-trade_goods = chinaware
 hre = no
+
+# Economic
+#=========================
+trade_goods = chinaware
 base_tax = 6
 base_manpower = 3
 base_production = 6
-is_city = yes
-add_core = HSK
+extra_cost = 8
+center_of_trade = 1
+
+# Discovery
+#=========================
 discovered_by = chinese
 discovered_by = MCH
 discovered_by = KHA
 discovered_by = OIR
 discovered_by = QNG
-extra_cost = 8
-center_of_trade = 1
+
+# History
+#=========================
 1478.1.1 = { capital = "Sakai" }
 1542.1.1 = { discovered_by = POR }
 1561.1.1 = { fort_15th = yes } # Ishiyama Honganji
@@ -25,3 +40,4 @@ center_of_trade = 1
 1580.1.1 = { remove_core = HSK }
 1583.1.1 = { fort_16th = yes } # Osaka Castle
 1615.6.4 = { add_core = TKG owner = TKG controller = TKG remove_core = TKG fort_16th = no }
+#=========================

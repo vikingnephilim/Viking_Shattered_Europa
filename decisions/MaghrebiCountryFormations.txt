@@ -25,7 +25,10 @@ country_decisions = {
 			}
 			OR = {
 				primary_culture = moroccan
-				primary_culture = berber
+				primary_culture = sahraoui
+				primary_culture = tacicilit
+				primary_culture = tarfit
+				primary_culture = tamazight
 			}
 			OR = {
 				ai = no
@@ -224,36 +227,10 @@ country_decisions = {
 			}
 			OR = {
 				primary_culture = algerian
-				AND = {
-					primary_culture = berber
-					capital_scope = {
-						area = algiers_area
-					}
-				}
-				AND = {
-					primary_culture = berber
-					capital_scope = {
-						area = hautes_plaines_area
-					}
-				}
-				AND = {
-					primary_culture = berber
-					capital_scope = {
-						area = ouled_nail_area
-					}
-				}
-				AND = {
-					primary_culture = berber
-					capital_scope = {
-						area = kabylia_area
-					}
-				}
-				AND = {
-					primary_culture = berber
-					capital_scope = {
-						area = north_saharan_area
-					}
-				}
+				primary_culture = uyden
+				primary_culture = fezzani
+				primary_culture = tlemceni
+				primary_culture = tunisian
 			}
 			OR = {
 				ai = no
@@ -326,7 +303,7 @@ country_decisions = {
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
-						culture_group = maghrebi
+						culture_group = east_maghrebi
 					}
 					change_culture = algerian
 				}
@@ -437,8 +414,11 @@ country_decisions = {
 				tag = HLR
 			}
 			OR = {
+				primary_culture = algerian
+				primary_culture = uyden
+				primary_culture = fezzani
+				primary_culture = tlemceni
 				primary_culture = tunisian
-				primary_culture = berber
 			}
 			OR = {
 				ai = no
@@ -511,7 +491,7 @@ country_decisions = {
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
-						culture_group = maghrebi
+						culture_group = east_maghrebi
 					}
 					change_culture = tunisian
 				}
@@ -600,8 +580,11 @@ country_decisions = {
 				tag = HLR
 			}
 			OR = {
+				primary_culture = algerian
+				primary_culture = uyden
+				primary_culture = fezzani
+				primary_culture = tlemceni
 				primary_culture = tunisian
-				primary_culture = berber
 			}
 			capital_scope = {
 				OR = {
@@ -673,7 +656,7 @@ country_decisions = {
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
-						culture_group = maghrebi
+						culture_group = east_maghrebi
 					}
 					change_culture = tunisian
 				}

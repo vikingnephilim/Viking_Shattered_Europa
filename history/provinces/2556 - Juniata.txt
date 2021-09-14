@@ -1,21 +1,35 @@
 # No previous file for Juniata
 
-culture = susquehannock
-religion = totemism
-capital = "Juniata"
-trade_goods = unknown
-hre = no
-base_tax = 1
-base_production = 1
-base_manpower = 1
+# Governance
+#=========================
 native_size = 10
 native_ferocity = 10
 native_hostileness = 10
-discovered_by = north_american
 is_city = yes
 add_core = SUS
 owner = SUS
 controller = SUS
+
+# Demographic
+#=========================
+culture = susquehannock
+religion = totemism
+capital = "Juniata"
+hre = no
+
+# Economic
+#=========================
+trade_goods = unknown
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+# Discovery
+#=========================
+discovered_by = north_american
+
+# History
+#=========================
 1444.1.1 = { tribal_owner = SUS }
 1656.1.1 = {
  	owner = IRO
@@ -46,3 +60,5 @@ controller = SUS
 	add_core = USA
 } # Declaration of independence
 1782.11.1 = { remove_core = GBR unrest = 0  } # Preliminary articles of peace, the British recognized American independence
+
+#=========================
