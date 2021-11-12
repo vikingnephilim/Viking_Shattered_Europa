@@ -1,11 +1,15 @@
 estate_burghers =
 {
 	icon = 3
+
 	# If true, country will get estate
-	trigger = {
+	trigger = {	
 		NOT = { has_estate = estate_vaisyas }
 		NOT = { has_estate = estate_jains }
 		NOT = { has_reform = pirate_republic_reform }
+		NOT = { has_government_attribute = is_merchant_republic }
+		NOT = { has_reform = veche_republic }
+		NOT = { has_reform = trading_city }
 		NOT = { is_revolutionary_republic_trigger = yes }
 		NOT = { has_reform = cossacks_reform }
 		NOT = { government = native }
@@ -18,6 +22,7 @@ estate_burghers =
 		is_colonial_nation = no
 		NOT = { has_reform = revolutionary_empire_reform }
 	}
+
 	# These scale with loyalty & power
 	country_modifier_happy = {
 		trade_efficiency = 0.2
@@ -25,8 +30,8 @@ estate_burghers =
 	}
 	country_modifier_neutral = {
 		trade_efficiency = 0.2
-	}
-			country_modifier_angry = {
+	}	
+	country_modifier_angry = {
 		trade_efficiency = -0.1
 		development_cost = 0.1
 		global_unrest = 2
@@ -34,6 +39,7 @@ estate_burghers =
 	land_ownership_modifier = {
 		burghers_loyalty_modifier = 0.2
 	}
+	
 	province_independence_weight = {
 		factor = 1
 		modifier = {
@@ -68,9 +74,10 @@ estate_burghers =
 			has_province_modifier = thankful_guilds
 		}
 	}
+
 	# Influence modifiers
 	base_influence = 10
-	influence_modifier = {
+	influence_modifier = {	
 		desc = EST_HIGH_DEVELOPMENT_PROVINCE
 		trigger = {
 			any_owned_province = {
@@ -79,7 +86,7 @@ estate_burghers =
 		}
 		influence = 5
 	}
-	influence_modifier = {
+	influence_modifier = {	
 		desc = EST_VAL_COT
 		trigger = {
 			NOT = { has_reform = free_city }
@@ -95,11 +102,11 @@ estate_burghers =
 			NOT = { has_reform = free_city }
 			OR = {
 				capital = 1 #Stockholm
-				capital = 6 #Skaane
+				capital = 6 #Skåne
 				capital = 23 #Bergen
 				capital = 36 #Reval
 				capital = 38 #Riga
-				capital = 41 #Koenigsberg
+				capital = 41 #Königsberg
 				capital = 43 #Danzig
 				capital = 44 #Hamburg
 				capital = 45 #Lubeck
@@ -110,7 +117,7 @@ estate_burghers =
 				capital = 54 #Stade
 				capital = 56 #Osnabruck
 				capital = 57 #Brunswick
-				capital = 85 #Koeln
+				capital = 85 #Köln
 				capital = 86 #Munster
 				capital = 90 #Bruges
 				capital = 100 #Groningen
@@ -129,7 +136,7 @@ estate_burghers =
 				capital = 2994 # Greifswald
 				capital = 2995 # Stolp
 			}
-		}
+		}	
 		influence = 5
 	}
 	influence_modifier = {
@@ -151,7 +158,7 @@ estate_burghers =
 		desc = EST_VAL_LOW_TRADE_INCOME
 		trigger = {
 			NOT = { trade_income_percentage = 0.25 }
-		}
+		}	
 		influence = -5
 	}
 	influence_modifier = {
@@ -159,14 +166,14 @@ estate_burghers =
 		trigger = {
 			trade_income_percentage = 0.5
 			NOT = { trade_income_percentage = 0.75 }
-		}
+		}	
 		influence = 5
 	}
 	influence_modifier = {
 		desc = EST_VAL_VERY_HIGH_TRADE_INCOME
 		trigger = {
 			trade_income_percentage = 0.75
-		}
+		}	
 		influence = 10
 	}
 	influence_modifier = {
@@ -178,9 +185,10 @@ estate_burghers =
 				has_disaster = estate_brahmins_disaster
 				has_disaster = estate_jains_disaster
 			}
-		}
+		}	
 		influence = -40
 	}
+	
 	loyalty_modifier = {
 		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
 		trigger = {
@@ -210,16 +218,32 @@ estate_burghers =
 		desc = estate_neoconfucian_reformers
 		trigger = {
 			tag = KOR
-			religion = confucianism
+			is_chinese_religion_viking_mod = YES
+		}
+	}
+	custom_name = {
+		desc = estate_pochteca
+		trigger = {
+			religion = nahuatl
 		}
 	}
 	custom_name = {
 		desc = estate_merchant_guilds
 		trigger = {
-			NOT = { religion_group = christian } #Diversify a bit more.
+			OR = {	#Just like "NOT = { is_christian_viking_mod = yes }", but at least it doesn't override estate names for new religion groups
+				#Still needs more diversity
+				is_muslim_viking_mod = yes
+				religion_group = eastern
+				religion_group = dharmic
+				is_pagan_viking_mod  = yes
+				religion_group = jewish_group
+				religion_group = zoroastrian_group
+			}
 		}
 	}
+
 	color = { 35 35 150 }
+
 	privileges = {
 		estate_burghers_land_rights
 		estate_burghers_land_of_commerce
@@ -234,6 +258,7 @@ estate_burghers =
 		estate_burghers_control_over_monetary_policy
 		estate_burghers_private_trade_fleets
 		estate_burghers_khmer_irrigation
+		estate_burghers_tropical_nation
 		estate_burghers_monopoly_of_textiles
 		estate_burghers_monopoly_of_dyes
 		estate_burghers_monopoly_of_glass
@@ -242,7 +267,10 @@ estate_burghers =
 		estate_burghers_prussian_confederation
 		estate_burghers_statutory_rights
 		estate_burghers_orang_laut_alliances
+		estate_burghers_control_over_the_mint
+		estate_burghers_hydraulic_rights
 	}
+
 	agendas = {
 		estate_burghers_develop_x
 		estate_burghers_build_trade_building_in_y
@@ -276,5 +304,6 @@ estate_burghers =
 		estate_burghers_hire_advisor
 		estate_burghers_fire_advisor
 	}
+
 	influence_from_dev_modifier = 1.0
 }

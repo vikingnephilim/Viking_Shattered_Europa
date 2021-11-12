@@ -19,15 +19,92 @@ is_chinese = {
 	}
 }
 
+is_chinese_religion_viking_mod = {
+	OR = {
+		religion = confucianism
+		religion = taoism
+		religion = zen
+		religion = tantra
+	}
+}
+
+is_indic_viking_mod = {
+	religion = hinduism
+	religion = vishnuism
+	religion = shakti
+}
+
 is_pagan_viking_mod = {
 	OR = {
-		religion_group = american_pagan
+		religion_group = north_american_pagan
+		religion_group = central_american_pagan
+		religion_group = south_american_pagan
 		religion_group = asian_pagan
 		religion_group = european_pagan
 		religion_group = african_pagan
 		religion_group = asian_pagan
 	}
 }
+
+is_pagan_allow_hungarian_viking_mod = {
+	OR = {
+		religion_group = north_american_pagan
+		religion_group = central_american_pagan
+		religion_group = south_american_pagan
+		religion_group = asian_pagan
+		religion_group = african_pagan
+		religion_group = asian_pagan
+		religion = norse_pagan_reformed
+		religion = basque_pagan_reformed
+		religion = finnish_pagan_reformed
+		religion = slavic_pagan_reformed
+		religion = baltic_pagan_reformed
+	}
+}
+
+is_muslim_viking_mod = {
+	OR = {
+		religion_group = sunni_muslim
+		religion_group = shia_muslim
+		religion_group = quranist_muslim
+	}
+}
+
+is_christian_viking_mod = {
+	OR = {
+		religion_group = western_christian
+		religion_group = central_christian
+		religion_group = eastern_christian
+		religion_group = orthodox_christian
+	}
+}
+
+is_abrahamic_viking_mod = {
+	religion_group = sunni_muslim
+	religion_group = shia_muslim
+	religion_group = quranist_muslim
+	religion_group = western_christian
+	religion_group = central_christian
+	religion_group = eastern_christian
+	religion_group = orthodox_christian
+	religion_group = jewish_group
+}
+
+fervor_religions ={
+	OR = {
+		religion = henrician
+		religion = insular
+		religion = palmyrian
+		religion = reformed
+		religion = waldensian
+		religion = iconoclast
+		religion = messalian
+		religion = basque_pagan_reformed
+		religion = korean_pagan_reformed
+		religion = phoenician_pagan_reformed
+	}
+}
+
 is_south_african_primary = {
 	OR = {
 		primary_culture = west_germanic_south_african
@@ -149,6 +226,7 @@ can_create_subject_type = {
 		}
 	}
 }
+
 can_country_flip_to_colonial_culture = {
 	#to
 	is_culture_to_$to$ = {
@@ -195,6 +273,7 @@ num_of_owned_manufactory_combined_trigger = {
 		amount = $amount$
 	}
 }
+
 ####CULTURES####
 ###British
 is_culture_to_british_american = {

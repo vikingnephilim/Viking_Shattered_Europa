@@ -1,4 +1,3 @@
-
 #This one or the next one will always be valid
 estate_nobles_hire_advisor = {
 	can_select = {
@@ -17,20 +16,20 @@ estate_nobles_hire_advisor = {
 		}
 		is_in_deficit = no
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_nobles
 			loyalty = 10
 		}
-    }
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	}
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
 
 estate_nobles_fire_advisor = {
@@ -60,7 +59,7 @@ estate_nobles_fire_advisor = {
 			has_country_flag = just_fired_mil_advisor
 		}
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_nobles
 			loyalty = 10
@@ -74,34 +73,47 @@ estate_nobles_fire_advisor = {
 				category = MIL
 			}
 		}
-		NOT = { has_country_flag = just_fired_mil_advisor }
+		NOT = {
+			has_country_flag = just_fired_mil_advisor
+		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
+		}
 		clr_country_flag = need_to_fire_mil_advisor
-    }
+	}
 }
 
 #Get allies
 estate_nobles_get_allies = {
 	can_select = {
-		NOT = { num_of_allies = 3 }
-		NOT = { num_of_subjects = 3 }
+		NOT = {
+			num_of_allies = 3
+		}
+		NOT = {
+			num_of_subjects = 3
+		}
 		is_at_war = no
 		num_of_free_diplomatic_relations = 1
-		NOT = { has_country_modifier = foreign_contacts }
+		NOT = {
+			has_country_modifier = foreign_contacts
+		}
+		is_free_or_tributary_trigger = yes
 	}
 	selection_weight = {
 		factor = 1
 		modifier = {
 			factor = 2
-			NOT = { num_of_allies = 1 }
-			NOT = { num_of_subjects = 1 }
+			NOT = {
+				num_of_allies = 1
+			}
+			NOT = {
+				num_of_subjects = 1
+			}
 		}
 	}
 	pre_effect = {
@@ -112,14 +124,22 @@ estate_nobles_get_allies = {
 		if = {
 			limit = {
 				OR = {
-					NOT = { num_of_allies = 1 }
-					AND = {
-						num_of_subjects = 2
-						NOT = { num_of_allies = 2 }
+					NOT = {
+						num_of_allies = 1
 					}
 					AND = {
-						NOT = { num_of_allies = 2 }
-						NOT = { num_of_free_diplomatic_relations = 2 }
+						num_of_subjects = 2
+						NOT = {
+							num_of_allies = 2
+						}
+					}
+					AND = {
+						NOT = {
+							num_of_allies = 2
+						}
+						NOT = {
+							num_of_free_diplomatic_relations = 2
+						}
 					}
 				}
 			}
@@ -162,27 +182,38 @@ estate_nobles_get_allies = {
 			duration = 3650
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Befriend Rival of Rival
 estate_nobles_befriend_rival_of_rival = {
 	can_select = {
 		any_rival_country = {
 			any_rival_country = {
-				NOT = { tag = root }
-				root = { knows_country = prev }
-				NOT = { is_rival = root }
-				NOT = { ROOT = { is_rival = prev } }
-				NOT = { alliance_with = root }
+				NOT = {
+					tag = root
+				}
+				root = {
+					knows_country = prev
+				}
+				NOT = {
+					is_rival = root
+				}
+				NOT = {
+					ROOT = {
+						is_rival = prev
+					}
+				}
+				NOT = {
+					alliance_with = root
+				}
 				has_opinion = {
 					who = root
 					value = -50
@@ -203,11 +234,23 @@ estate_nobles_befriend_rival_of_rival = {
 			any_rival_country = {
 				army_size = root
 				any_rival_country = {
-					NOT = { tag = root }
-					root = { knows_country = prev }
-					NOT = { is_rival = root }
-					NOT = { ROOT = { is_rival = prev } }
-					NOT = { alliance_with = root }
+					NOT = {
+						tag = root
+					}
+					root = {
+						knows_country = prev
+					}
+					NOT = {
+						is_rival = root
+					}
+					NOT = {
+						ROOT = {
+							is_rival = prev
+						}
+					}
+					NOT = {
+						alliance_with = root
+					}
 					has_opinion = {
 						who = root
 						value = -50
@@ -223,18 +266,32 @@ estate_nobles_befriend_rival_of_rival = {
 		}
 		modifier = {
 			factor = 0.5
-			NOT = { num_of_free_diplomatic_relations = 1 }
+			NOT = {
+				num_of_free_diplomatic_relations = 1
+			}
 		}
 	}
 	pre_effect = {
 		random_rival_country = {
 			limit = {
 				any_rival_country = {
-					NOT = { tag = root }
-					root = { knows_country = prev }
-					NOT = { is_rival = root }
-					NOT = { ROOT = { is_rival = prev } }
-					NOT = { alliance_with = root }
+					NOT = {
+						tag = root
+					}
+					root = {
+						knows_country = prev
+					}
+					NOT = {
+						is_rival = root
+					}
+					NOT = {
+						ROOT = {
+							is_rival = prev
+						}
+					}
+					NOT = {
+						alliance_with = root
+					}
 					has_opinion = {
 						who = root
 						value = -50
@@ -250,11 +307,23 @@ estate_nobles_befriend_rival_of_rival = {
 			save_event_target_as = rival_country
 			random_rival_country = {
 				limit = {
-					NOT = { tag = root }
-					root = { knows_country = prev }
-					NOT = { is_rival = root }
-					NOT = { ROOT = { is_rival = prev } }
-					NOT = { alliance_with = root }
+					NOT = {
+						tag = root
+					}
+					root = {
+						knows_country = prev
+					}
+					NOT = {
+						is_rival = root
+					}
+					NOT = {
+						ROOT = {
+							is_rival = prev
+						}
+					}
+					NOT = {
+						alliance_with = root
+					}
 					has_opinion = {
 						who = root
 						value = -50
@@ -272,12 +341,24 @@ estate_nobles_befriend_rival_of_rival = {
 		random_rival_country = {
 			limit = {
 				any_rival_country = {
-					NOT = { tag = root }
+					NOT = {
+						tag = root
+					}
 					army_size = root
-					root = { knows_country = prev }
-					NOT = { is_rival = root }
-					NOT = { ROOT = { is_rival = prev } }
-					NOT = { alliance_with = root }
+					root = {
+						knows_country = prev
+					}
+					NOT = {
+						is_rival = root
+					}
+					NOT = {
+						ROOT = {
+							is_rival = prev
+						}
+					}
+					NOT = {
+						alliance_with = root
+					}
 					has_opinion = {
 						who = root
 						value = -50
@@ -293,12 +374,24 @@ estate_nobles_befriend_rival_of_rival = {
 			save_event_target_as = rival_country
 			random_rival_country = {
 				limit = {
-					NOT = { tag = root }
+					NOT = {
+						tag = root
+					}
 					army_size = root
-					root = { knows_country = prev }
-					NOT = { is_rival = root }
-					NOT = { ROOT = { is_rival = prev } }
-					NOT = { alliance_with = root }
+					root = {
+						knows_country = prev
+					}
+					NOT = {
+						is_rival = root
+					}
+					NOT = {
+						ROOT = {
+							is_rival = prev
+						}
+					}
+					NOT = {
+						alliance_with = root
+					}
 					has_opinion = {
 						who = root
 						value = -50
@@ -317,9 +410,16 @@ estate_nobles_befriend_rival_of_rival = {
 	fail_if = {
 		event_target:agenda_country = {
 			OR = {
-				NOT = { num_of_cities = 1 }
+				NOT = {
+					num_of_cities = 1
+				}
 				war_with = root
-				NOT = { has_opinion = { who = root value = -100 } }
+				NOT = {
+					has_opinion = {
+						who = root
+						value = -100
+					}
+				}
 			}
 		}
 	}
@@ -345,45 +445,57 @@ estate_nobles_befriend_rival_of_rival = {
 			discount = yes
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
 
 #Restore legitimacy
 estate_nobles_restore_legitimacy = {
 	can_select = {
-		NOT = { legitimacy_equivalent = 65 }
+		NOT = {
+			legitimacy_equivalent = 65
+		}
 		government = monarchy
-		NOT = { has_ruler_modifier = legitimacy_defended }
-		NOT = { has_regency = yes }
+		NOT = {
+			has_ruler_modifier = legitimacy_defended
+		}
+		NOT = {
+			has_regency = yes
+		}
 	}
 	selection_weight = {
 		factor = 2
 		modifier = {
 			factor = 1.5
-			NOT = { legitimacy_equivalent = 50 }
+			NOT = {
+				legitimacy_equivalent = 50
+			}
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { legitimacy_equivalent = 35 }
+			NOT = {
+				legitimacy_equivalent = 35
+			}
 		}
 	}
 	fail_if = {
 		OR = {
-			NOT = { government = monarchy }
+			NOT = {
+				government = monarchy
+			}
 			has_regency = yes
 		}
 	}
 	task_requirements = {
 		legitimacy_equivalent = 90
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_nobles
 			loyalty = 10
@@ -400,31 +512,46 @@ estate_nobles_restore_legitimacy = {
 				name = legitimacy_defended
 			}
 		}
-    }
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	}
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Improve Relations with X
 estate_nobles_relations_with_X = {
 	can_select = {
 		any_known_country = {
-			NOT = { is_rival = root }
-			ROOT = { NOT = { is_rival = prev } }
+			NOT = {
+				is_rival = root
+			}
+			ROOT = {
+				NOT = {
+					is_rival = prev
+				}
+			}
 			OR = {
 				is_free_or_tributary_trigger = yes
 				is_subject_of = root
 			}
-			NOT = { war_with = root }
-			NOT = { has_opinion = { who = root value = 50 } }
-			has_opinion = { who = root value = -50 }
+			NOT = {
+				war_with = root
+			}
+			NOT = {
+				has_opinion = {
+					who = root
+					value = 50
+				}
+			}
+			has_opinion = {
+				who = root
+				value = -50
+			}
 			religion_group = root
 			NOT = {
 				any_owned_province = {
@@ -448,15 +575,31 @@ estate_nobles_relations_with_X = {
 					army_size = root
 					alliance_with = root
 				}
-				NOT = { is_rival = root }
-				ROOT = { NOT = { is_rival = prev } }
+				NOT = {
+					is_rival = root
+				}
+				ROOT = {
+					NOT = {
+						is_rival = prev
+					}
+				}
 				OR = {
 					is_free_or_tributary_trigger = yes
 					is_subject_of = root
 				}
-				NOT = { war_with = root }
-				NOT = { has_opinion = { who = root value = 50 } }
-				has_opinion = { who = root value = -50 }
+				NOT = {
+					war_with = root
+				}
+				NOT = {
+					has_opinion = {
+						who = root
+						value = 50
+					}
+				}
+				has_opinion = {
+					who = root
+					value = -50
+				}
 				religion_group = root
 				NOT = {
 					any_owned_province = {
@@ -473,15 +616,24 @@ estate_nobles_relations_with_X = {
 		}
 		modifier = {
 			factor = 0.5
-			NOT = { num_of_free_diplomatic_relations = 1 }
+			NOT = {
+				num_of_free_diplomatic_relations = 1
+			}
 		}
 	}
 	fail_if = {
 		event_target:agenda_country = {
 			OR = {
-				NOT = { num_of_cities = 1 }
+				NOT = {
+					num_of_cities = 1
+				}
 				war_with = root
-				NOT = { has_opinion = { who = root value = -100 } }
+				NOT = {
+					has_opinion = {
+						who = root
+						value = -100
+					}
+				}
 			}
 		}
 	}
@@ -492,15 +644,31 @@ estate_nobles_relations_with_X = {
 		}
 		random_known_country = {
 			limit = {
-				NOT = { is_rival = root }
-				ROOT = { NOT = { is_rival = prev } }
+				NOT = {
+					is_rival = root
+				}
+				ROOT = {
+					NOT = {
+						is_rival = prev
+					}
+				}
 				OR = {
 					is_free_or_tributary_trigger = yes
 					is_subject_of = root
 				}
-				NOT = { war_with = root }
-				NOT = { has_opinion = { who = root value = 50 } }
-				has_opinion = { who = root value = -50 }
+				NOT = {
+					war_with = root
+				}
+				NOT = {
+					has_opinion = {
+						who = root
+						value = 50
+					}
+				}
+				has_opinion = {
+					who = root
+					value = -50
+				}
 				religion_group = root
 				NOT = {
 					any_owned_province = {
@@ -522,15 +690,31 @@ estate_nobles_relations_with_X = {
 					army_size = root
 					alliance_with = root
 				}
-				NOT = { is_rival = root }
-				ROOT = { NOT = { is_rival = prev } }
+				NOT = {
+					is_rival = root
+				}
+				ROOT = {
+					NOT = {
+						is_rival = prev
+					}
+				}
 				OR = {
 					is_free_or_tributary_trigger = yes
 					is_subject_of = root
 				}
-				NOT = { war_with = root }
-				NOT = { has_opinion = { who = root value = 50 } }
-				has_opinion = { who = root value = -50 }
+				NOT = {
+					war_with = root
+				}
+				NOT = {
+					has_opinion = {
+						who = root
+						value = 50
+					}
+				}
+				has_opinion = {
+					who = root
+					value = -50
+				}
 				religion_group = root
 				NOT = {
 					any_owned_province = {
@@ -549,7 +733,12 @@ estate_nobles_relations_with_X = {
 		if = {
 			limit = {
 				event_target:agenda_country = {
-					NOT = { has_opinion = { who = root value = 0 } }
+					NOT = {
+						has_opinion = {
+							who = root
+							value = 0
+						}
+					}
 				}
 			}
 			set_variable = {
@@ -597,17 +786,15 @@ estate_nobles_relations_with_X = {
 			loyalty = 15
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
-
 
 #Get AE down (if there is a coalition) 
 estate_nobles_break_coalition = {
@@ -710,16 +897,15 @@ estate_nobles_break_coalition = {
 		}
 		add_dip_power = 50
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Condottieri against rival (with Mare Nostrum)
 estate_nobles_condottieri_rivals = {
@@ -728,7 +914,9 @@ estate_nobles_condottieri_rivals = {
 		is_at_war = no
 		NOT = {
 			any_country = {
-				root = { is_renting_condottieri_to = prev }
+				root = {
+					is_renting_condottieri_to = prev
+				}
 			}
 		}
 		any_rival_country = {
@@ -747,8 +935,14 @@ estate_nobles_condottieri_rivals = {
 						distance = 200
 					}
 				}
-				NOT = { is_rival = root }
-				NOT = { root = { is_rival = prev } }
+				NOT = {
+					is_rival = root
+				}
+				NOT = {
+					root = {
+						is_rival = prev
+					}
+				}
 				has_opinion = {
 					who = root
 					value = -50
@@ -798,8 +992,14 @@ estate_nobles_condottieri_rivals = {
 							distance = 200
 						}
 					}
-					NOT = { is_rival = root }
-					NOT = { root = { is_rival = prev } }
+					NOT = {
+						is_rival = root
+					}
+					NOT = {
+						root = {
+							is_rival = prev
+						}
+					}
 					has_opinion = {
 						who = root
 						value = -50
@@ -818,8 +1018,14 @@ estate_nobles_condottieri_rivals = {
 							distance = 200
 						}
 					}
-					NOT = { is_rival = root }
-					NOT = { root = { is_rival = prev } }
+					NOT = {
+						is_rival = root
+					}
+					NOT = {
+						root = {
+							is_rival = prev
+						}
+					}
 					has_opinion = {
 						who = root
 						value = -50
@@ -837,7 +1043,9 @@ estate_nobles_condottieri_rivals = {
 			event_target:agenda_country = {
 				OR = {
 					is_at_war = no
-					NOT = { num_of_cities = 1 }
+					NOT = {
+						num_of_cities = 1
+					}
 				}
 			}
 		}
@@ -853,7 +1061,9 @@ estate_nobles_condottieri_rivals = {
 			war_with = event_target:agenda_country
 			custom_trigger_tooltip = {
 				tooltip = sending_condottieri_to_them
-				ROOT = { is_renting_condottieri_to = prev }
+				ROOT = {
+					is_renting_condottieri_to = prev
+				}
 			}
 		}
 	}
@@ -864,16 +1074,15 @@ estate_nobles_condottieri_rivals = {
 		}
 		add_mil_power = 50
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Support independence of X (subject of rival)
 estate_nobles_support_independence = {
@@ -885,9 +1094,15 @@ estate_nobles_support_independence = {
 		is_at_war = no
 		is_subject = no
 		any_rival_country = {
-			NOT = { ROOT = { truce_with = prev } }
+			NOT = {
+				ROOT = {
+					truce_with = prev
+				}
+			}
 			any_subject_country = {
-				NOT = { has_reform = daimyo }
+				NOT = {
+					has_reform = daimyo
+				}
 				is_subject_other_than_tributary_trigger = yes
 				liberty_desire = 50
 				has_opinion = {
@@ -895,7 +1110,9 @@ estate_nobles_support_independence = {
 					value = -100
 				}
 				ROOT = {
-					NOT = { is_supporting_independence_of = prev }
+					NOT = {
+						is_supporting_independence_of = prev
+					}
 				}
 			}
 		}
@@ -906,9 +1123,15 @@ estate_nobles_support_independence = {
 	pre_effect = {
 		random_rival_country = {
 			limit = {
-				NOT = { ROOT = { truce_with = prev } }
+				NOT = {
+					ROOT = {
+						truce_with = prev
+					}
+				}
 				any_subject_country = {
-					NOT = { has_reform = daimyo }
+					NOT = {
+						has_reform = daimyo
+					}
 					is_subject_other_than_tributary_trigger = yes
 					liberty_desire = 50
 					has_opinion = {
@@ -916,14 +1139,18 @@ estate_nobles_support_independence = {
 						value = -100
 					}
 					ROOT = {
-						NOT = { is_supporting_independence_of = prev }
+						NOT = {
+							is_supporting_independence_of = prev
+						}
 					}
 				}
 			}
 			save_event_target_as = agenda_rival_country
 			random_subject_country = {
 				limit = {
-					NOT = { has_reform = daimyo }
+					NOT = {
+						has_reform = daimyo
+					}
 					is_subject_other_than_tributary_trigger = yes
 					liberty_desire = 50
 					has_opinion = {
@@ -931,7 +1158,9 @@ estate_nobles_support_independence = {
 						value = -100
 					}
 					ROOT = {
-						NOT = { is_supporting_independence_of = prev }
+						NOT = {
+							is_supporting_independence_of = prev
+						}
 					}
 				}
 				save_event_target_as = agenda_country
@@ -943,8 +1172,12 @@ estate_nobles_support_independence = {
 			is_subject = yes
 			event_target:agenda_country = {
 				OR = {
-					NOT = { is_subject_of = event_target:agenda_rival_country }
-					NOT = { num_of_cities = 1 }
+					NOT = {
+						is_subject_of = event_target:agenda_rival_country
+					}
+					NOT = {
+						num_of_cities = 1
+					}
 					war_with = root
 				}
 			}
@@ -963,16 +1196,15 @@ estate_nobles_support_independence = {
 		}
 		add_dip_power = 50
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Retake Core
 estate_nobles_retake_core = {
@@ -980,13 +1212,23 @@ estate_nobles_retake_core = {
 		is_free_or_tributary_trigger = yes
 		OR = {
 			is_part_of_hre = no
-			NOT = { hre_reform_passed = landfriede }
+			NOT = {
+				hre_reform_passed = landfriede
+			}
 		}
 		any_province = {
 			is_core = root
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = {
+				country_or_non_sovereign_subject_holds = root
+			}
 			is_city = yes
-			NOT = { owner = { ROOT = { truce_with = prev } } }
+			NOT = {
+				owner = {
+					ROOT = {
+						truce_with = prev
+					}
+				}
+			}
 		}
 	}
 	selection_weight = {
@@ -995,10 +1237,16 @@ estate_nobles_retake_core = {
 			factor = 0.5
 			any_province = {
 				is_core = root
-				NOT = { country_or_non_sovereign_subject_holds = root }
+				NOT = {
+					country_or_non_sovereign_subject_holds = root
+				}
 				is_city = yes
 				owner = {
-					NOT = { ROOT = { truce_with = prev } }
+					NOT = {
+						ROOT = {
+							truce_with = prev
+						}
+					}
 					alliance_with = root
 				}
 			}
@@ -1014,28 +1262,56 @@ estate_nobles_retake_core = {
 		random_province = {
 			limit = {
 				is_core = root
-				NOT = { country_or_non_sovereign_subject_holds = root }
+				NOT = {
+					country_or_non_sovereign_subject_holds = root
+				}
 				is_city = yes
-				NOT = { owner = { ROOT = { truce_with = prev } } }
+				NOT = {
+					owner = {
+						ROOT = {
+							truce_with = prev
+						}
+					}
+				}
 			}
 			save_event_target_as = agenda_province
 		}
 		random_province = {
 			limit = {
 				is_core = root
-				NOT = { country_or_non_sovereign_subject_holds = root }
+				NOT = {
+					country_or_non_sovereign_subject_holds = root
+				}
 				is_city = yes
-				NOT = { owner = { ROOT = { truce_with = prev } } }
-				NOT = { owner = { alliance_with = root } }
+				NOT = {
+					owner = {
+						ROOT = {
+							truce_with = prev
+						}
+					}
+				}
+				NOT = {
+					owner = {
+						alliance_with = root
+					}
+				}
 			}
 			save_event_target_as = agenda_province
 		}
 		random_province = {
 			limit = {
 				is_core = root
-				NOT = { country_or_non_sovereign_subject_holds = root }
+				NOT = {
+					country_or_non_sovereign_subject_holds = root
+				}
 				is_city = yes
-				NOT = { owner = { ROOT = { truce_with = prev } } }
+				NOT = {
+					owner = {
+						ROOT = {
+							truce_with = prev
+						}
+					}
+				}
 				OR = {
 					AND = {
 						has_port = yes
@@ -1055,9 +1331,17 @@ estate_nobles_retake_core = {
 		random_province = {
 			limit = {
 				is_core = root
-				NOT = { country_or_non_sovereign_subject_holds = root }
+				NOT = {
+					country_or_non_sovereign_subject_holds = root
+				}
 				is_city = yes
-				NOT = { owner = { ROOT = { truce_with = prev } } }
+				NOT = {
+					owner = {
+						ROOT = {
+							truce_with = prev
+						}
+					}
+				}
 				OR = {
 					AND = {
 						has_port = yes
@@ -1071,14 +1355,20 @@ estate_nobles_retake_core = {
 						owned_by = root
 					}
 				}
-				NOT = { owner = { alliance_with = root } }
+				NOT = {
+					owner = {
+						alliance_with = root
+					}
+				}
 			}
 			save_event_target_as = agenda_province
 		}
 	}
 	fail_if = {
 		event_target:agenda_province = {
-			NOT = { is_core = root }
+			NOT = {
+				is_core = root
+			}
 		}
 	}
 	provinces_to_highlight = {
@@ -1099,14 +1389,14 @@ estate_nobles_retake_core = {
 			duration = 3650
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
 
 #Crush Revolts (not heretics)
@@ -1142,9 +1432,17 @@ estate_nobles_crush_revolts = {
 		has_country_modifier = just_lost_to_rebels
 	}
 	task_requirements = {
-		NOT = { num_of_rebel_controlled_provinces = 1 }
-		NOT = { num_of_rebel_armies = 1 }
-		hidden_trigger = { NOT = { has_country_modifier = just_lost_to_rebels } }
+		NOT = {
+			num_of_rebel_controlled_provinces = 1
+		}
+		NOT = {
+			num_of_rebel_armies = 1
+		}
+		hidden_trigger = {
+			NOT = {
+				has_country_modifier = just_lost_to_rebels
+			}
+		}
 	}
 	task_completed_effect = {
 		add_estate_loyalty = {
@@ -1153,16 +1451,15 @@ estate_nobles_crush_revolts = {
 		}
 		add_prestige = 10
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Regain liberty
 estate_nobles_regain_liberty = {
@@ -1214,24 +1511,27 @@ estate_nobles_regain_liberty = {
 			add_siege = 1
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Convert province culture
 estate_nobles_convert_province_culture = {
 	can_select = {
 		any_owned_province = {
-			NOT = { culture = root }
+			NOT = {
+				culture = root
+			}
 			has_owner_accepted_culture = no
-			NOT = { nationalism = 1 }
+			NOT = {
+				nationalism = 1
+			}
 			religion = root
 			any_neighbor_province = {
 				owned_by = root
@@ -1249,9 +1549,13 @@ estate_nobles_convert_province_culture = {
 	pre_effect = {
 		random_owned_province = {
 			limit = {
-				NOT = { culture = root }
+				NOT = {
+					culture = root
+				}
 				has_owner_accepted_culture = no
-				NOT = { nationalism = 1 }
+				NOT = {
+					nationalism = 1
+				}
 				religion = root
 				any_neighbor_province = {
 					owned_by = root
@@ -1265,9 +1569,13 @@ estate_nobles_convert_province_culture = {
 	fail_if = {
 		event_target:agenda_province = {
 			OR = {
-				NOT = { owned_by = root }
+				NOT = {
+					owned_by = root
+				}
 				nationalism = 1
-				NOT = { religion = root }
+				NOT = {
+					religion = root
+				}
 			}
 		}
 	}
@@ -1306,7 +1614,8 @@ estate_nobles_convert_province_culture = {
 				culture = root
 			}
 		}
-		else = { #don't want to show this in most cases, but don't want it to count as a fail if you do this.
+		else = {
+			#don't want to show this in most cases, but don't want it to count as a fail if you do this.
 			event_target:agenda_province = {
 				has_owner_accepted_culture = yes
 			}
@@ -1331,13 +1640,13 @@ estate_nobles_convert_province_culture = {
 			}
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
+		}
 		event_target:agenda_province = {
 			clear_random_development_bonus_flags_effect = yes
 			if = {
@@ -1347,7 +1656,7 @@ estate_nobles_convert_province_culture = {
 				remove_province_modifier = agenda_cultural_conversion_help
 			}
 		}
-    }
+	}
 }
 
 #Protect our Culture in X
@@ -1356,7 +1665,9 @@ estate_nobles_protect_our_culture = {
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
 		any_neighbor_country = {
-			NOT = { culture_group = root }
+			NOT = {
+				culture_group = root
+			}
 			any_owned_province = {
 				culture = root
 				religion = root
@@ -1372,15 +1683,31 @@ estate_nobles_protect_our_culture = {
 				has_discovered = root
 				owner = {
 					is_free_or_tributary_trigger = yes
-					NOT = { culture_group = prev }
-					NOT = { is_subject_of = root }
-					NOT = { overlord_of = root }
-					NOT = { alliance_with = root }
-					NOT = { ROOT = { truce_with = prev } }
+					NOT = {
+						culture_group = prev
+					}
+					NOT = {
+						is_subject_of = root
+					}
+					NOT = {
+						overlord_of = root
+					}
+					NOT = {
+						alliance_with = root
+					}
+					NOT = {
+						ROOT = {
+							truce_with = prev
+						}
+					}
 					OR = {
 						is_part_of_hre = no
-						NOT = { hre_reform_passed = landfriede }
-						ROOT = { is_part_of_hre = no }
+						NOT = {
+							hre_reform_passed = landfriede
+						}
+						ROOT = {
+							is_part_of_hre = no
+						}
 					}
 				}
 			}
@@ -1407,15 +1734,31 @@ estate_nobles_protect_our_culture = {
 					has_discovered = root
 					owner = {
 						is_free_or_tributary_trigger = yes
-						NOT = { culture_group = prev }
-						NOT = { is_subject_of = root }
-						NOT = { overlord_of = root }
-						NOT = { alliance_with = root }
-						NOT = { ROOT = { truce_with = prev } }
+						NOT = {
+							culture_group = prev
+						}
+						NOT = {
+							is_subject_of = root
+						}
+						NOT = {
+							overlord_of = root
+						}
+						NOT = {
+							alliance_with = root
+						}
+						NOT = {
+							ROOT = {
+								truce_with = prev
+							}
+						}
 						OR = {
 							is_part_of_hre = no
-							NOT = { hre_reform_passed = landfriede }
-							ROOT = { is_part_of_hre = no }
+							NOT = {
+								hre_reform_passed = landfriede
+							}
+							ROOT = {
+								is_part_of_hre = no
+							}
 						}
 					}
 				}
@@ -1430,20 +1773,38 @@ estate_nobles_protect_our_culture = {
 					has_discovered = root
 					owner = {
 						is_free_or_tributary_trigger = yes
-						NOT = { culture_group = prev }
-						NOT = { is_subject_of = root }
-						NOT = { overlord_of = root }
-						NOT = { alliance_with = root }
-						NOT = { ROOT = { truce_with = prev } }
+						NOT = {
+							culture_group = prev
+						}
+						NOT = {
+							is_subject_of = root
+						}
+						NOT = {
+							overlord_of = root
+						}
+						NOT = {
+							alliance_with = root
+						}
+						NOT = {
+							ROOT = {
+								truce_with = prev
+							}
+						}
 						OR = {
 							is_part_of_hre = no
-							NOT = { hre_reform_passed = landfriede }
-							ROOT = { is_part_of_hre = no }
+							NOT = {
+								hre_reform_passed = landfriede
+							}
+							ROOT = {
+								is_part_of_hre = no
+							}
 						}
 					}
 				}
 				save_event_target_as = agenda_province
-				owner = { save_event_target_as = agenda_country }
+				owner = {
+					save_event_target_as = agenda_country
+				}
 			}
 		}
 	}
@@ -1453,13 +1814,21 @@ estate_nobles_protect_our_culture = {
 				event_target:agenda_province = {
 					OR = {
 						AND = {
-							NOT = { is_claim = root }
-							NOT = { is_core = root }
+							NOT = {
+								is_claim = root
+							}
+							NOT = {
+								is_core = root
+							}
 						}
 						any_neighbor_province = {
 							owned_by = event_target:agenda_country
-							NOT = { is_claim = root }
-							NOT = { is_core = root }
+							NOT = {
+								is_claim = root
+							}
+							NOT = {
+								is_core = root
+							}
 							culture = root
 						}
 					}
@@ -1468,16 +1837,24 @@ estate_nobles_protect_our_culture = {
 			event_target:agenda_province = {
 				if = {
 					limit = {
-						NOT = { is_claim = root }
-						NOT = { is_core = root }
+						NOT = {
+							is_claim = root
+						}
+						NOT = {
+							is_core = root
+						}
 					}
 					add_claim = root
 				}
 				every_neighbor_province = {
 					limit = {
 						owned_by = event_target:agenda_country
-						NOT = { is_claim = root }
-						NOT = { is_core = root }
+						NOT = {
+							is_claim = root
+						}
+						NOT = {
+							is_core = root
+						}
 						culture = root
 					}
 					add_claim = root
@@ -1490,7 +1867,9 @@ estate_nobles_protect_our_culture = {
 			if = {
 				limit = {
 					is_claim = root
-					NOT = { is_permanent_claim = root }
+					NOT = {
+						is_permanent_claim = root
+					}
 				}
 				remove_claim = root
 			}
@@ -1498,7 +1877,9 @@ estate_nobles_protect_our_culture = {
 				if = {
 					limit = {
 						owned_by = event_target:agenda_country
-						NOT = { is_permanent_claim = root }
+						NOT = {
+							is_permanent_claim = root
+						}
 						is_claim = root
 					}
 					remove_claim = root
@@ -1514,12 +1895,16 @@ estate_nobles_protect_our_culture = {
 			owner = {
 				primary_culture = root
 			}
-			hidden_trigger = { culture = root }
+			hidden_trigger = {
+				culture = root
+			}
 		}
 	}
 	fail_if = {
 		event_target:agenda_province = {
-			NOT = { culture = root }
+			NOT = {
+				culture = root
+			}
 		}
 	}
 	task_completed_effect = {
@@ -1533,15 +1918,17 @@ estate_nobles_protect_our_culture = {
 				add_nationalism = -5
 			}
 		}
-		else = { custom_tooltip = estate_nobles_protect_our_culture_effect_tooltip }
+		else = {
+			custom_tooltip = estate_nobles_protect_our_culture_effect_tooltip
+		}
 		add_estate_loyalty = {
 			estate = estate_nobles
 			loyalty = 15
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
@@ -1550,7 +1937,9 @@ estate_nobles_protect_our_culture = {
 			if = {
 				limit = {
 					is_claim = root
-					NOT = { is_permanent_claim = root }
+					NOT = {
+						is_permanent_claim = root
+					}
 				}
 				remove_claim = root
 			}
@@ -1558,16 +1947,17 @@ estate_nobles_protect_our_culture = {
 				if = {
 					limit = {
 						owned_by = event_target:agenda_country
-						NOT = { is_permanent_claim = root }
+						NOT = {
+							is_permanent_claim = root
+						}
 						is_claim = root
 					}
 					remove_claim = root
 				}
 			}
 		}
-    }
+	}
 }
-
 
 #Vassalise X country (less than 3 provinces, you have at least 12)
 estate_nobles_vassalise_vulnerable_country = {
@@ -1576,21 +1966,43 @@ estate_nobles_vassalise_vulnerable_country = {
 		is_at_war = no
 		num_of_cities = 12
 		any_neighbor_country = {
-			NOT = { has_reform = free_city }
+			NOT = {
+				has_reform = free_city
+			}
 			is_free_or_tributary_trigger = yes
 			OR = {
-				NOT = { num_of_cities = 4 }
-				NOT = { total_development = 100 }
+				NOT = {
+					num_of_cities = 4
+				}
+				NOT = {
+					total_development = 100
+				}
 			}
 			OR = {
-				NOT = { num_of_cities = 3 }
-				NOT = { total_development = 50 }
-				ROOT = { total_development = 500 }
+				NOT = {
+					num_of_cities = 3
+				}
+				NOT = {
+					total_development = 50
+				}
+				ROOT = {
+					total_development = 500
+				}
 			}
-			NOT = { is_subject_of = root }
-			NOT = { overlord_of = root }
-			NOT = { alliance_with = root }
-			NOT = { ROOT = { truce_with = prev } }
+			NOT = {
+				is_subject_of = root
+			}
+			NOT = {
+				overlord_of = root
+			}
+			NOT = {
+				alliance_with = root
+			}
+			NOT = {
+				ROOT = {
+					truce_with = prev
+				}
+			}
 			NOT = {
 				has_opinion = {
 					who = root
@@ -1599,15 +2011,25 @@ estate_nobles_vassalise_vulnerable_country = {
 			}
 			OR = {
 				is_part_of_hre = no
-				NOT = { hre_reform_passed = landfriede }
-				ROOT = { is_part_of_hre = no }
+				NOT = {
+					hre_reform_passed = landfriede
+				}
+				ROOT = {
+					is_part_of_hre = no
+				}
 			}
 			any_owned_province = {
-				NOT = { is_claim = root }
-				NOT = { is_core = root }
+				NOT = {
+					is_claim = root
+				}
+				NOT = {
+					is_core = root
+				}
 			}
 		}
-		NOT = { has_country_modifier = foreign_contacts }
+		NOT = {
+			has_country_modifier = foreign_contacts
+		}
 	}
 	selection_weight = {
 		factor = 2
@@ -1645,21 +2067,43 @@ estate_nobles_vassalise_vulnerable_country = {
 	pre_effect = {
 		random_neighbor_country = {
 			limit = {
-				NOT = { has_reform = free_city }
+				NOT = {
+					has_reform = free_city
+				}
 				is_free_or_tributary_trigger = yes
 				OR = {
-					NOT = { num_of_cities = 4 }
-					NOT = { total_development = 100 }
+					NOT = {
+						num_of_cities = 4
+					}
+					NOT = {
+						total_development = 100
+					}
 				}
 				OR = {
-					NOT = { num_of_cities = 3 }
-					NOT = { total_development = 50 }
-					ROOT = { total_development = 500 }
+					NOT = {
+						num_of_cities = 3
+					}
+					NOT = {
+						total_development = 50
+					}
+					ROOT = {
+						total_development = 500
+					}
 				}
-				NOT = { is_subject_of = root }
-				NOT = { overlord_of = root }
-				NOT = { alliance_with = root }
-				NOT = { ROOT = { truce_with = prev } }
+				NOT = {
+					is_subject_of = root
+				}
+				NOT = {
+					overlord_of = root
+				}
+				NOT = {
+					alliance_with = root
+				}
+				NOT = {
+					ROOT = {
+						truce_with = prev
+					}
+				}
 				NOT = {
 					has_opinion = {
 						who = root
@@ -1668,12 +2112,20 @@ estate_nobles_vassalise_vulnerable_country = {
 				}
 				OR = {
 					is_part_of_hre = no
-					NOT = { hre_reform_passed = landfriede }
-					ROOT = { is_part_of_hre = no }
+					NOT = {
+						hre_reform_passed = landfriede
+					}
+					ROOT = {
+						is_part_of_hre = no
+					}
 				}
 				any_owned_province = {
-					NOT = { is_claim = root }
-					NOT = { is_core = root }
+					NOT = {
+						is_claim = root
+					}
+					NOT = {
+						is_core = root
+					}
 				}
 			}
 			save_event_target_as = agenda_country
@@ -1709,14 +2161,18 @@ estate_nobles_vassalise_vulnerable_country = {
 	task_requirements = {
 		event_target:agenda_country = {
 			is_subject_of = root
-			NOT = { is_subject_of_type = tributary_state }
+			NOT = {
+				is_subject_of_type = tributary_state
+			}
 		}
 	}
 	fail_if = {
 		OR = {
 			is_subject_other_than_tributary_trigger = yes
 			event_target:agenda_country = {
-				NOT = { num_of_cities = 1 }
+				NOT = {
+					num_of_cities = 1
+				}
 			}
 		}
 	}
@@ -1736,9 +2192,9 @@ estate_nobles_vassalise_vulnerable_country = {
 			}
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
@@ -1755,9 +2211,8 @@ estate_nobles_vassalise_vulnerable_country = {
 				target = event_target:agenda_country
 			}
 		}
-    }
+	}
 }
-
 
 #Conquer X area from country you don't have great relations with
 estate_nobles_expand_into_x = {
@@ -1767,18 +2222,29 @@ estate_nobles_expand_into_x = {
 		any_neighbor_country = {
 			num_of_cities = 6
 			is_free_or_tributary_trigger = yes
-			NOT = { is_subject_of = root }
-			NOT = { overlord_of = root }
-			NOT = { alliance_with = root }
-			NOT = { ROOT = { truce_with = prev } }
-			NOT = { 
+			NOT = {
+				is_subject_of = root
+			}
+			NOT = {
+				overlord_of = root
+			}
+			NOT = {
+				alliance_with = root
+			}
+			NOT = {
+				ROOT = {
+					truce_with = prev
+				}
+			}
+			NOT = {
 				has_opinion = {
 					who = root
 					value = 25
 				}
 			}
 			NOT = {
-				any_owned_province = { #No need for this agenda if covered by a mission
+				any_owned_province = {
+					#No need for this agenda if covered by a mission
 					OR = {
 						is_permanent_claim = root
 						is_core = root
@@ -1803,8 +2269,12 @@ estate_nobles_expand_into_x = {
 			}
 			OR = {
 				is_part_of_hre = no
-				NOT = { hre_reform_passed = landfriede }
-				ROOT = { is_part_of_hre = no }
+				NOT = {
+					hre_reform_passed = landfriede
+				}
+				ROOT = {
+					is_part_of_hre = no
+				}
 			}
 		}
 	}
@@ -1846,18 +2316,29 @@ estate_nobles_expand_into_x = {
 			limit = {
 				num_of_cities = 6
 				is_free_or_tributary_trigger = yes
-				NOT = { is_subject_of = root }
-				NOT = { overlord_of = root }
-				NOT = { alliance_with = root }
-				NOT = { ROOT = { truce_with = prev } }
-				NOT = { 
+				NOT = {
+					is_subject_of = root
+				}
+				NOT = {
+					overlord_of = root
+				}
+				NOT = {
+					alliance_with = root
+				}
+				NOT = {
+					ROOT = {
+						truce_with = prev
+					}
+				}
+				NOT = {
 					has_opinion = {
 						who = root
 						value = 25
 					}
 				}
 				NOT = {
-					any_owned_province = { #No need for this agenda if covered by a mission
+					any_owned_province = {
+						#No need for this agenda if covered by a mission
 						OR = {
 							is_permanent_claim = root
 							is_core = root
@@ -1879,8 +2360,12 @@ estate_nobles_expand_into_x = {
 				}
 				OR = {
 					is_part_of_hre = no
-					NOT = { hre_reform_passed = landfriede }
-					ROOT = { is_part_of_hre = no }
+					NOT = {
+						hre_reform_passed = landfriede
+					}
+					ROOT = {
+						is_part_of_hre = no
+					}
 				}
 			}
 			random_owned_province = {
@@ -1890,7 +2375,9 @@ estate_nobles_expand_into_x = {
 					}
 					area_for_scope_province = {
 						type = all
-						NOT = { owned_by = root }
+						NOT = {
+							owned_by = root
+						}
 						is_empty = no
 					}
 				}
@@ -1903,16 +2390,24 @@ estate_nobles_expand_into_x = {
 			limit = {
 				event_target:agenda_province = {
 					area_for_scope_province = {
-						NOT = { is_claim = root }
-						NOT = { is_core = root }
+						NOT = {
+							is_claim = root
+						}
+						NOT = {
+							is_core = root
+						}
 					}
 				}
 			}
 			event_target:agenda_province = {
 				area = {
 					limit = {
-						NOT = { is_claim = root }
-						NOT = { is_core = root }
+						NOT = {
+							is_claim = root
+						}
+						NOT = {
+							is_core = root
+						}
 					}
 					add_claim = root
 				}
@@ -1925,7 +2420,9 @@ estate_nobles_expand_into_x = {
 				event_target:agenda_province = {
 					area_for_scope_province = {
 						is_claim = root
-						NOT = { is_permanent_claim = root }
+						NOT = {
+							is_permanent_claim = root
+						}
 					}
 				}
 			}
@@ -1933,7 +2430,9 @@ estate_nobles_expand_into_x = {
 				area = {
 					limit = {
 						is_claim = root
-						NOT = { is_permanent_claim = root }
+						NOT = {
+							is_permanent_claim = root
+						}
 					}
 					remove_claim = root
 				}
@@ -1956,9 +2455,15 @@ estate_nobles_expand_into_x = {
 		event_target:agenda_province = {
 			area_for_scope_province = {
 				type = all
-				NOT = { is_claim = root }
-				NOT = { is_core = root }
-				NOT = { owned_by = root }
+				NOT = {
+					is_claim = root
+				}
+				NOT = {
+					is_core = root
+				}
+				NOT = {
+					owned_by = root
+				}
 			}
 		}
 	}
@@ -1969,19 +2474,21 @@ estate_nobles_expand_into_x = {
 		}
 		add_adm_power = 50
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
+		}
 		if = {
 			limit = {
 				event_target:agenda_province = {
 					area_for_scope_province = {
 						is_claim = root
-						NOT = { is_permanent_claim = root }
+						NOT = {
+							is_permanent_claim = root
+						}
 					}
 				}
 			}
@@ -1989,13 +2496,15 @@ estate_nobles_expand_into_x = {
 				area = {
 					limit = {
 						is_claim = root
-						NOT = { is_permanent_claim = root }
+						NOT = {
+							is_permanent_claim = root
+						}
 					}
 					remove_claim = root
 				}
 			}
 		}
-    }
+	}
 }
 
 #Complete conquest of X area from country you don't have great relations with
@@ -2006,18 +2515,29 @@ estate_nobles_complete_conquest_of_x = {
 		any_neighbor_country = {
 			num_of_cities = 6
 			is_free_or_tributary_trigger = yes
-			NOT = { is_subject_of = root }
-			NOT = { overlord_of = root }
-			NOT = { alliance_with = root }
-			NOT = { ROOT = { truce_with = prev } }
-			NOT = { 
+			NOT = {
+				is_subject_of = root
+			}
+			NOT = {
+				overlord_of = root
+			}
+			NOT = {
+				alliance_with = root
+			}
+			NOT = {
+				ROOT = {
+					truce_with = prev
+				}
+			}
+			NOT = {
 				has_opinion = {
 					who = root
 					value = 25
 				}
 			}
 			NOT = {
-				any_owned_province = { #No need for this agenda if covered by a mission
+				any_owned_province = {
+					#No need for this agenda if covered by a mission
 					OR = {
 						is_permanent_claim = root
 						is_core = root
@@ -2039,7 +2559,9 @@ estate_nobles_complete_conquest_of_x = {
 						owner = {
 							OR = {
 								alliance_with = root
-								ROOT = { truce_with = prev }
+								ROOT = {
+									truce_with = prev
+								}
 								is_subject_of = root
 								AND = {
 									is_part_of_hre = yes
@@ -2090,18 +2612,29 @@ estate_nobles_complete_conquest_of_x = {
 			limit = {
 				num_of_cities = 6
 				is_free_or_tributary_trigger = yes
-				NOT = { is_subject_of = root }
-				NOT = { overlord_of = root }
-				NOT = { alliance_with = root }
-				NOT = { ROOT = { truce_with = prev } }
-				NOT = { 
+				NOT = {
+					is_subject_of = root
+				}
+				NOT = {
+					overlord_of = root
+				}
+				NOT = {
+					alliance_with = root
+				}
+				NOT = {
+					ROOT = {
+						truce_with = prev
+					}
+				}
+				NOT = {
 					has_opinion = {
 						who = root
 						value = 25
 					}
 				}
 				NOT = {
-					any_owned_province = { #No need for this agenda if covered by a mission
+					any_owned_province = {
+						#No need for this agenda if covered by a mission
 						OR = {
 							is_permanent_claim = root
 							is_core = root
@@ -2123,7 +2656,9 @@ estate_nobles_complete_conquest_of_x = {
 							owner = {
 								OR = {
 									alliance_with = root
-									ROOT = { truce_with = prev }
+									ROOT = {
+										truce_with = prev
+									}
 									is_subject_of = root
 									AND = {
 										is_part_of_hre = yes
@@ -2148,7 +2683,9 @@ estate_nobles_complete_conquest_of_x = {
 							owner = {
 								OR = {
 									alliance_with = root
-									ROOT = { truce_with = prev }
+									ROOT = {
+										truce_with = prev
+									}
 									is_subject_of = root
 									AND = {
 										is_part_of_hre = yes
@@ -2168,16 +2705,24 @@ estate_nobles_complete_conquest_of_x = {
 			limit = {
 				event_target:agenda_province = {
 					area_for_scope_province = {
-						NOT = { is_claim = root }
-						NOT = { is_core = root }
+						NOT = {
+							is_claim = root
+						}
+						NOT = {
+							is_core = root
+						}
 					}
 				}
 			}
 			event_target:agenda_province = {
 				area = {
 					limit = {
-						NOT = { is_claim = root }
-						NOT = { is_core = root }
+						NOT = {
+							is_claim = root
+						}
+						NOT = {
+							is_core = root
+						}
 					}
 					add_claim = root
 				}
@@ -2190,7 +2735,9 @@ estate_nobles_complete_conquest_of_x = {
 				event_target:agenda_province = {
 					area_for_scope_province = {
 						is_claim = root
-						NOT = { is_permanent_claim = root }
+						NOT = {
+							is_permanent_claim = root
+						}
 					}
 				}
 			}
@@ -2198,7 +2745,9 @@ estate_nobles_complete_conquest_of_x = {
 				area = {
 					limit = {
 						is_claim = root
-						NOT = { is_permanent_claim = root }
+						NOT = {
+							is_permanent_claim = root
+						}
 					}
 					remove_claim = root
 				}
@@ -2209,7 +2758,9 @@ estate_nobles_complete_conquest_of_x = {
 		area_for_scope_province = {
 			province_id = event_target:agenda_province
 		}
-		NOT = { owned_by = root }
+		NOT = {
+			owned_by = root
+		}
 	}
 	task_requirements = {
 		event_target:agenda_province = {
@@ -2228,9 +2779,15 @@ estate_nobles_complete_conquest_of_x = {
 		event_target:agenda_province = {
 			area_for_scope_province = {
 				type = all
-				NOT = { is_claim = root }
-				NOT = { is_core = root }
-				NOT = { owned_by = root }
+				NOT = {
+					is_claim = root
+				}
+				NOT = {
+					is_core = root
+				}
+				NOT = {
+					owned_by = root
+				}
 			}
 		}
 	}
@@ -2241,19 +2798,21 @@ estate_nobles_complete_conquest_of_x = {
 		}
 		add_adm_power = 50
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
+		}
 		if = {
 			limit = {
 				event_target:agenda_province = {
 					area_for_scope_province = {
 						is_claim = root
-						NOT = { is_permanent_claim = root }
+						NOT = {
+							is_permanent_claim = root
+						}
 					}
 				}
 			}
@@ -2261,15 +2820,16 @@ estate_nobles_complete_conquest_of_x = {
 				area = {
 					limit = {
 						is_claim = root
-						NOT = { is_permanent_claim = root }
+						NOT = {
+							is_permanent_claim = root
+						}
 					}
 					remove_claim = root
 				}
 			}
 		}
-    }
+	}
 }
-
 
 #Annex vassal
 estate_nobles_annex_subject = {
@@ -2277,7 +2837,9 @@ estate_nobles_annex_subject = {
 		is_at_war = no
 		diplomatic_reputation = 0
 		any_subject_country = {
-			NOT = { total_development = 300 }
+			NOT = {
+				total_development = 300
+			}
 			OR = {
 				AND = {
 					is_vassal = yes
@@ -2302,7 +2864,9 @@ estate_nobles_annex_subject = {
 	pre_effect = {
 		random_subject_country = {
 			limit = {
-				NOT = { total_development = 300 }
+				NOT = {
+					total_development = 300
+				}
 				OR = {
 					AND = {
 						is_vassal = yes
@@ -2339,7 +2903,9 @@ estate_nobles_annex_subject = {
 	}
 	task_requirements = {
 		event_target:agenda_country = {
-			NOT = { num_of_cities = 1 }
+			NOT = {
+				num_of_cities = 1
+			}
 		}
 		event_target:agenda_province = {
 			owned_by = root
@@ -2349,7 +2915,9 @@ estate_nobles_annex_subject = {
 		OR = {
 			AND = {
 				event_target:agenda_country = {
-					NOT = { num_of_cities = 1 }
+					NOT = {
+						num_of_cities = 1
+					}
 				}
 				NOT = {
 					event_target:agenda_province = {
@@ -2359,7 +2927,9 @@ estate_nobles_annex_subject = {
 			}
 			event_target:agenda_country = {
 				num_of_cities = 1
-				NOT = { is_subject_of = root }
+				NOT = {
+					is_subject_of = root
+				}
 			}
 		}
 	}
@@ -2370,9 +2940,9 @@ estate_nobles_annex_subject = {
 		}
 		custom_tooltip = no_penalties_annexing_tt
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
@@ -2382,20 +2952,25 @@ estate_nobles_annex_subject = {
 				remove_country_modifier = to_be_agenda_annexed_timer
 			}
 		}
-    }
+	}
 }
-
 
 #Bigger Army
 estate_nobles_build_an_army = {
 	can_select = {
-		NOT = { has_country_modifier = thriving_arms_industry }
-		NOT = { army_size_percentage = 0.5 }
+		NOT = {
+			has_country_modifier = thriving_arms_industry
+		}
+		NOT = {
+			army_size_percentage = 0.5
+		}
 		if = {
 			limit = {
 				is_emperor = yes
 			}
-			NOT = { army_size_percentage = 0.35 }
+			NOT = {
+				army_size_percentage = 0.35
+			}
 		}
 	}
 	selection_weight = {
@@ -2403,16 +2978,23 @@ estate_nobles_build_an_army = {
 		modifier = {
 			factor = 2
 			any_rival_country = {
-				NOT = { truce_with = root }
+				NOT = {
+					truce_with = root
+				}
 				army_size = root
 			}
 		}
 		modifier = {
-			factor = 2.0
-			NOT = { army_size_percentage = 0.3 }
-			NOT = { army_size = 150 }
+			factor = 2
+			NOT = {
+				army_size_percentage = 0.3
+			}
+			NOT = {
+				army_size = 150
+			}
 		}
-		modifier = { #this could be really annoying in the late game
+		modifier = {
+			#this could be really annoying in the late game
 			factor = 0.5
 			army_size = 100
 		}
@@ -2449,25 +3031,34 @@ estate_nobles_build_an_army = {
 			tradition = 40
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Bigger Army than Rival
 estate_nobles_bigger_army_than_rival = {
 	can_select = {
-		NOT = { has_country_modifier = thriving_arms_industry }
-		NOT = { army_size_percentage = 1 }
+		NOT = {
+			has_country_modifier = thriving_arms_industry
+		}
+		NOT = {
+			army_size_percentage = 1
+		}
 		any_rival_country = {
-			NOT = { war_with = root }
-			NOT = { root = { army_size = prev } }
+			NOT = {
+				war_with = root
+			}
+			NOT = {
+				root = {
+					army_size = prev
+				}
+			}
 			army_balance = {
 				who = root
 				value = 1.05
@@ -2486,8 +3077,14 @@ estate_nobles_bigger_army_than_rival = {
 	pre_effect = {
 		random_rival_country = {
 			limit = {
-				NOT = { war_with = root }
-				NOT = { root = { army_size = prev } }
+				NOT = {
+					war_with = root
+				}
+				NOT = {
+					root = {
+						army_size = prev
+					}
+				}
 				army_balance = {
 					who = root
 					value = 1.05
@@ -2507,7 +3104,11 @@ estate_nobles_bigger_army_than_rival = {
 	}
 	task_requirements = {
 		if = {
-			limit = { event_target:agenda_country = { num_of_cities = 1 } }
+			limit = {
+				event_target:agenda_country = {
+					num_of_cities = 1
+				}
+			}
 			army_size = event_target:agenda_country
 		}
 		else = {
@@ -2524,43 +3125,55 @@ estate_nobles_bigger_army_than_rival = {
 			duration = 3650
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
 
 #Manpower reserves
 estate_nobles_build_up_manpower_reserves = {
 	can_select = {
 		is_at_war = no
-		NOT = { manpower_percentage = 0.40 }
+		NOT = {
+			manpower_percentage = 0.4
+		}
 	}
 	selection_weight = {
 		factor = 5
 		modifier = {
 			factor = 1.5
-			NOT = { manpower_percentage = 0.35 }
+			NOT = {
+				manpower_percentage = 0.35
+			}
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { manpower_percentage = 0.3 }
+			NOT = {
+				manpower_percentage = 0.3
+			}
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { manpower_percentage = 0.25 }
+			NOT = {
+				manpower_percentage = 0.25
+			}
 		}
 		modifier = {
 			factor = 2
-			NOT = { manpower_percentage = 0.2 }
+			NOT = {
+				manpower_percentage = 0.2
+			}
 		}
 		modifier = {
 			factor = 3
-			NOT = { manpower_percentage = 0.15 }
+			NOT = {
+				manpower_percentage = 0.15
+			}
 		}
 	}
 	pre_effect = {
@@ -2635,22 +3248,23 @@ estate_nobles_build_up_manpower_reserves = {
 		}
 		clear_random_military_advisor_generation_flags = yes
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
+		}
 		clear_random_military_advisor_generation_flags = yes
-    }
+	}
 }
-
 
 #Recover bad prestige
 estate_nobles_recover_abysmal_prestige = {
 	can_select = {
-		NOT = { prestige = -30 }
+		NOT = {
+			prestige = -30
+		}
 	}
 	selection_weight = {
 		factor = 8
@@ -2699,23 +3313,23 @@ estate_nobles_recover_abysmal_prestige = {
 		}
 		add_stability_or_adm_power = yes
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
 
-
 #Get good prestige
-
 estate_nobles_improve_prestige = {
 	can_select = {
 		prestige = -30
-		NOT = { prestige = 20 }
+		NOT = {
+			prestige = 20
+		}
 	}
 	selection_weight = {
 		factor = 2.5
@@ -2790,14 +3404,12 @@ estate_nobles_improve_prestige = {
 		}
 		add_adm_power = 50
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_nobles
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
-

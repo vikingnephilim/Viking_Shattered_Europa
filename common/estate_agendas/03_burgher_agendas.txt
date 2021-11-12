@@ -1,4 +1,3 @@
-
 #This one or the next one will always be valid
 estate_burghers_hire_advisor = {
 	can_select = {
@@ -17,20 +16,20 @@ estate_burghers_hire_advisor = {
 		}
 		is_in_deficit = no
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_burghers
 			loyalty = 10
 		}
-    }
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	}
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
 
 estate_burghers_fire_advisor = {
@@ -60,7 +59,7 @@ estate_burghers_fire_advisor = {
 			has_country_flag = just_fired_dip_advisor
 		}
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_burghers
 			loyalty = 10
@@ -74,17 +73,19 @@ estate_burghers_fire_advisor = {
 				category = DIP
 			}
 		}
-		NOT = { has_country_flag = just_fired_dip_advisor }
+		NOT = {
+			has_country_flag = just_fired_dip_advisor
+		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
+		}
 		clr_country_flag = need_to_fire_dip_advisor
-    }
+	}
 }
 
 #Pay off loans
@@ -116,12 +117,14 @@ estate_burghers_pay_off_loans = {
 		is_bankrupt = yes
 	}
 	task_requirements = {
-		NOT = { num_of_loans = 1 }
+		NOT = {
+			num_of_loans = 1
+		}
 		hidden_trigger = {
 			is_bankrupt = no
 		}
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_burghers
 			loyalty = 10
@@ -131,47 +134,59 @@ estate_burghers_pay_off_loans = {
 			religion = root
 			discount = yes
 		}
-    }
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	}
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
 
 #Restore republican tradition
 estate_burghers_restore_republican_tradition = {
 	can_select = {
-		NOT = { republican_tradition = 65 }
+		NOT = {
+			republican_tradition = 65
+		}
 		republican_tradition = 20
 		OR = {
 			government = republic
 			government = dictatorship
 		}
-		NOT = { has_country_modifier = agenda_republicanism_restored }
+		NOT = {
+			has_country_modifier = agenda_republicanism_restored
+		}
 	}
 	selection_weight = {
 		factor = 2
 		modifier = {
 			factor = 1.5
-			NOT = { republican_tradition = 50 }
+			NOT = {
+				republican_tradition = 50
+			}
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { republican_tradition = 35 }
+			NOT = {
+				republican_tradition = 35
+			}
 		}
 	}
 	fail_if = {
-		NOT = { government = republic }
-		NOT = { government = dictatorship }
+		NOT = {
+			government = republic
+		}
+		NOT = {
+			government = dictatorship
+		}
 	}
 	task_requirements = {
 		republican_tradition = 85
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_burghers
 			loyalty = 10
@@ -180,15 +195,15 @@ estate_burghers_restore_republican_tradition = {
 			name = agenda_republicanism_restored
 			duration = 5475
 		}
-    }
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	}
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
 
 #Reduce Inflation
@@ -198,7 +213,9 @@ estate_burghers_restore_currency = {
 		NOT = {
 			inflation = 30
 		}
-		NOT = { has_country_modifier = boom_economy }
+		NOT = {
+			has_country_modifier = boom_economy
+		}
 	}
 	selection_weight = {
 		factor = 2.5
@@ -211,9 +228,11 @@ estate_burghers_restore_currency = {
 		inflation = 35
 	}
 	task_requirements = {
-		NOT = { inflation = 5 }
+		NOT = {
+			inflation = 5
+		}
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_burghers
 			loyalty = 10
@@ -222,15 +241,15 @@ estate_burghers_restore_currency = {
 			name = boom_economy
 			duration = 5475
 		}
-    }
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	}
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
 
 #Recover Abysmal Inflation
@@ -242,26 +261,27 @@ estate_burghers_recovery_from_hyperinflation = {
 		factor = 5
 	}
 	task_requirements = {
-		NOT = { inflation = 15 }
+		NOT = {
+			inflation = 15
+		}
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_burghers
 			loyalty = 10
 		}
 		add_stability_or_adm_power = yes
 		add_inflation = -10
-    }
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	}
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Improve trade power in node X
 estate_burghers_increase_trade_power_in_X = {
@@ -284,7 +304,8 @@ estate_burghers_increase_trade_power_in_X = {
 	}
 	selection_weight = {
 		factor = 1.5
-		modifier = { #a good indication that you should be doing trade stuff
+		modifier = {
+			#a good indication that you should be doing trade stuff
 			factor = 2
 			num_of_merchants = 3
 		}
@@ -321,7 +342,8 @@ estate_burghers_increase_trade_power_in_X = {
 			save_event_target_as = agenda_trade_node
 			if = {
 				limit = {
-					trade_share = { #Requires 65
+					trade_share = {
+						#Requires 65
 						country = root
 						share = 40
 					}
@@ -335,7 +357,8 @@ estate_burghers_increase_trade_power_in_X = {
 			}
 			else_if = {
 				limit = {
-					trade_share = { #Requires 50
+					trade_share = {
+						#Requires 50
 						country = root
 						share = 30
 					}
@@ -349,7 +372,8 @@ estate_burghers_increase_trade_power_in_X = {
 			}
 			else_if = {
 				limit = {
-					trade_share = { #Requires 40
+					trade_share = {
+						#Requires 40
 						country = root
 						share = 23
 					}
@@ -363,7 +387,8 @@ estate_burghers_increase_trade_power_in_X = {
 			}
 			else_if = {
 				limit = {
-					trade_share = { #Requires 30
+					trade_share = {
+						#Requires 30
 						country = root
 						share = 15
 					}
@@ -377,7 +402,8 @@ estate_burghers_increase_trade_power_in_X = {
 			}
 			else_if = {
 				limit = {
-					trade_share = { #Requires 25
+					trade_share = {
+						#Requires 25
 						country = root
 						share = 10
 					}
@@ -391,7 +417,8 @@ estate_burghers_increase_trade_power_in_X = {
 			}
 			else_if = {
 				limit = {
-					trade_share = { #Requires 20
+					trade_share = {
+						#Requires 20
 						country = root
 						share = 7
 					}
@@ -403,7 +430,8 @@ estate_burghers_increase_trade_power_in_X = {
 					}
 				}
 			}
-			else = { #Requires 15
+			else = {
+				#Requires 15
 				root = {
 					set_variable = {
 						which = estate_burghers_increase_trade_power_in_X_var
@@ -529,16 +557,15 @@ estate_burghers_increase_trade_power_in_X = {
 			discount = yes
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Access to the Sea
 estate_burghers_access_sea = {
@@ -553,10 +580,20 @@ estate_burghers_access_sea = {
 			any_neighbor_province = {
 				has_port = yes
 				owner = {
-					NOT = { overlord_of = root }
-					NOT = { is_subject_of = root }
-					NOT = { alliance_with = root }
-					NOT = { ROOT = { truce_with = prev } }
+					NOT = {
+						overlord_of = root
+					}
+					NOT = {
+						is_subject_of = root
+					}
+					NOT = {
+						alliance_with = root
+					}
+					NOT = {
+						ROOT = {
+							truce_with = prev
+						}
+					}
 					NOT = {
 						has_opinion = {
 							who = root
@@ -565,8 +602,12 @@ estate_burghers_access_sea = {
 					}
 					OR = {
 						is_part_of_hre = no
-						NOT = { hre_reform_passed = landfriede }
-						ROOT = { is_part_of_hre = no }
+						NOT = {
+							hre_reform_passed = landfriede
+						}
+						ROOT = {
+							is_part_of_hre = no
+						}
 					}
 				}
 			}
@@ -587,10 +628,20 @@ estate_burghers_access_sea = {
 				any_neighbor_province = {
 					has_port = yes
 					owner = {
-						NOT = { overlord_of = root }
-						NOT = { is_subject_of = root }
-						NOT = { alliance_with = root }
-						NOT = { ROOT = { truce_with = prev } }
+						NOT = {
+							overlord_of = root
+						}
+						NOT = {
+							is_subject_of = root
+						}
+						NOT = {
+							alliance_with = root
+						}
+						NOT = {
+							ROOT = {
+								truce_with = prev
+							}
+						}
 						NOT = {
 							has_opinion = {
 								who = root
@@ -599,8 +650,12 @@ estate_burghers_access_sea = {
 						}
 						OR = {
 							is_part_of_hre = no
-							NOT = { hre_reform_passed = landfriede }
-							ROOT = { is_part_of_hre = no }
+							NOT = {
+								hre_reform_passed = landfriede
+							}
+							ROOT = {
+								is_part_of_hre = no
+							}
 						}
 					}
 				}
@@ -609,10 +664,20 @@ estate_burghers_access_sea = {
 				limit = {
 					has_port = yes
 					owner = {
-						NOT = { overlord_of = root }
-						NOT = { is_subject_of = root }
-						NOT = { alliance_with = root }
-						NOT = { ROOT = { truce_with = prev } }
+						NOT = {
+							overlord_of = root
+						}
+						NOT = {
+							is_subject_of = root
+						}
+						NOT = {
+							alliance_with = root
+						}
+						NOT = {
+							ROOT = {
+								truce_with = prev
+							}
+						}
 						NOT = {
 							has_opinion = {
 								who = root
@@ -621,8 +686,12 @@ estate_burghers_access_sea = {
 						}
 						OR = {
 							is_part_of_hre = no
-							NOT = { hre_reform_passed = landfriede }
-							ROOT = { is_part_of_hre = no }
+							NOT = {
+								hre_reform_passed = landfriede
+							}
+							ROOT = {
+								is_part_of_hre = no
+							}
 						}
 					}
 				}
@@ -651,8 +720,12 @@ estate_burghers_access_sea = {
 		if = {
 			limit = {
 				event_target:agenda_province = {
-					NOT = { is_core = root }
-					NOT = { is_claim = root }
+					NOT = {
+						is_core = root
+					}
+					NOT = {
+						is_claim = root
+					}
 				}
 			}
 			event_target:agenda_province = {
@@ -665,7 +738,9 @@ estate_burghers_access_sea = {
 			if = {
 				limit = {
 					is_claim = root
-					NOT = { is_permanent_claim = root }
+					NOT = {
+						is_permanent_claim = root
+					}
 				}
 				remove_claim = root
 			}
@@ -678,23 +753,25 @@ estate_burghers_access_sea = {
 		}
 		add_sailors = 500
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
+		}
 		event_target:agenda_province = {
 			if = {
 				limit = {
 					is_claim = root
-					NOT = { is_permanent_claim = root }
+					NOT = {
+						is_permanent_claim = root
+					}
 				}
 				remove_claim = root
 			}
 		}
-    }
+	}
 }
 
 #Bigger Fleet
@@ -706,23 +783,35 @@ estate_burghers_build_a_fleet = {
 			is_core = root
 		}
 		navy_size = 1
-		NOT = { navy_size_percentage = 0.5 }
-		NOT = { navy_size = 250 }
-		NOT = { has_country_modifier = thriving_ship_building_sector }
+		NOT = {
+			navy_size_percentage = 0.5
+		}
+		NOT = {
+			navy_size = 250
+		}
+		NOT = {
+			has_country_modifier = thriving_ship_building_sector
+		}
 	}
 	selection_weight = {
 		factor = 2.5
 		modifier = {
 			factor = 1.5
 			any_rival_country = {
-				NOT = { truce_with = root }
+				NOT = {
+					truce_with = root
+				}
 				navy_size = root
 			}
 		}
 		modifier = {
-			factor = 2.0
-			NOT = { navy_size_percentage = 0.3 }
-			NOT = { navy_size = 150 }
+			factor = 2
+			NOT = {
+				navy_size_percentage = 0.3
+			}
+			NOT = {
+				navy_size = 150
+			}
 		}
 		modifier = {
 			factor = 0.5
@@ -734,7 +823,9 @@ estate_burghers_build_a_fleet = {
 		}
 		modifier = {
 			factor = 0.5
-			NOT = { num_of_ports = 3 }
+			NOT = {
+				num_of_ports = 3
+			}
 		}
 		modifier = {
 			factor = 2
@@ -760,16 +851,15 @@ estate_burghers_build_a_fleet = {
 			tradition = 40
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Bigger Fleet than Rival
 estate_burghers_bigger_fleet_than_rival = {
@@ -779,14 +869,24 @@ estate_burghers_bigger_fleet_than_rival = {
 			has_port = yes
 			is_core = root
 		}
-		NOT = { government = native }
-		NOT = { has_country_modifier = naval_enthusiasm_mission }
-
-		NOT = { navy_size_percentage = 1 }
-
+		NOT = {
+			government = native
+		}
+		NOT = {
+			has_country_modifier = naval_enthusiasm_mission
+		}
+		NOT = {
+			navy_size_percentage = 1
+		}
 		any_rival_country = {
-			NOT = { war_with = root }
-			NOT = { root = { navy_size = prev } }
+			NOT = {
+				war_with = root
+			}
+			NOT = {
+				root = {
+					navy_size = prev
+				}
+			}
 			navy_balance = {
 				who = root
 				value = 1.05
@@ -805,8 +905,14 @@ estate_burghers_bigger_fleet_than_rival = {
 	pre_effect = {
 		random_rival_country = {
 			limit = {
-				NOT = { war_with = root }
-				NOT = { root = { navy_size = prev } }
+				NOT = {
+					war_with = root
+				}
+				NOT = {
+					root = {
+						navy_size = prev
+					}
+				}
 				navy_balance = {
 					who = root
 					value = 1.05
@@ -826,7 +932,11 @@ estate_burghers_bigger_fleet_than_rival = {
 	}
 	task_requirements = {
 		if = {
-			limit = { event_target:agenda_country = { num_of_cities = 1 } }
+			limit = {
+				event_target:agenda_country = {
+					num_of_cities = 1
+				}
+			}
 			navy_size = event_target:agenda_country
 		}
 		else = {
@@ -850,21 +960,22 @@ estate_burghers_bigger_fleet_than_rival = {
 			}
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Improve dip rep
 estate_burghers_improve_dip_rep = {
 	can_select = {
-		NOT = { diplomatic_reputation = -2 }
+		NOT = {
+			diplomatic_reputation = -2
+		}
 	}
 	selection_weight = {
 		factor = 1
@@ -879,22 +990,25 @@ estate_burghers_improve_dip_rep = {
 		}
 		add_prestige = 10
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Get a treasury
 estate_burghers_get_cash = {
 	can_select = {
-		NOT = { years_of_income = 0.5 }
-		NOT = { num_of_loans = 1 }
+		NOT = {
+			years_of_income = 0.5
+		}
+		NOT = {
+			num_of_loans = 1
+		}
 		is_at_war = no
 	}
 	selection_weight = {
@@ -902,7 +1016,9 @@ estate_burghers_get_cash = {
 	}
 	task_requirements = {
 		years_of_income = 2.5
-		NOT = { num_of_loans = 1 }
+		NOT = {
+			num_of_loans = 1
+		}
 	}
 	fail_if = {
 		num_of_loans = 1
@@ -929,16 +1045,15 @@ estate_burghers_get_cash = {
 			}
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Discover X in America
 estate_burghers_discover_X_in_america = {
@@ -958,13 +1073,19 @@ estate_burghers_discover_X_in_america = {
 			has_port = yes
 			is_wasteland = no
 			is_city = no
-			NOT = { has_discovered = root }
+			NOT = {
+				has_discovered = root
+			}
 			area_for_scope_province = {
 				type = all
-				NOT = { has_discovered = root }
+				NOT = {
+					has_discovered = root
+				}
 			}
 		}
-		NOT = { has_country_modifier = colonial_enthusiasm }
+		NOT = {
+			has_country_modifier = colonial_enthusiasm
+		}
 	}
 	selection_weight = {
 		factor = 2.5
@@ -983,7 +1104,9 @@ estate_burghers_discover_X_in_america = {
 		}
 		modifier = {
 			factor = 0.5
-			NOT = { num_of_colonists = 1 }
+			NOT = {
+				num_of_colonists = 1
+			}
 		}
 		modifier = {
 			factor = 2
@@ -1009,10 +1132,14 @@ estate_burghers_discover_X_in_america = {
 				has_port = yes
 				is_wasteland = no
 				is_city = no
-				NOT = { has_discovered = root }
+				NOT = {
+					has_discovered = root
+				}
 				area_for_scope_province = {
 					type = all
-					NOT = { has_discovered = root }
+					NOT = {
+						has_discovered = root
+					}
 				}
 			}
 			save_event_target_as = agenda_province
@@ -1040,20 +1167,23 @@ estate_burghers_discover_X_in_america = {
 	}
 	fail_if = {
 		OR = {
-			NOT = { num_of_ports = 1 }
-			NOT = { has_idea = quest_for_the_new_world }
+			NOT = {
+				num_of_ports = 1
+			}
+			NOT = {
+				has_idea = quest_for_the_new_world
+			}
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Colonise something in X area
 estate_burghers_colonise_X = {
@@ -1078,7 +1208,9 @@ estate_burghers_colonise_X = {
 			has_discovered = root
 			area_for_scope_province = {
 				type = all
-				NOT = { owned_by = root }
+				NOT = {
+					owned_by = root
+				}
 				NOT = {
 					owner = {
 						is_colonial_nation_of = root
@@ -1086,11 +1218,15 @@ estate_burghers_colonise_X = {
 				}
 			}
 			OR = {
-				NOT = { colonial_claim_by_anyone_of_religion = root }
+				NOT = {
+					colonial_claim_by_anyone_of_religion = root
+				}
 				is_religion_grant_colonial_claim = root
 			}
 		}
-		NOT = { has_country_modifier = colonial_enthusiasm }
+		NOT = {
+			has_country_modifier = colonial_enthusiasm
+		}
 	}
 	selection_weight = {
 		factor = 2.5
@@ -1138,7 +1274,9 @@ estate_burghers_colonise_X = {
 				has_discovered = root
 				area_for_scope_province = {
 					type = all
-					NOT = { owned_by = root }
+					NOT = {
+						owned_by = root
+					}
 					NOT = {
 						owner = {
 							is_colonial_nation_of = root
@@ -1146,7 +1284,9 @@ estate_burghers_colonise_X = {
 					}
 				}
 				OR = {
-					NOT = { colonial_claim_by_anyone_of_religion = root }
+					NOT = {
+						colonial_claim_by_anyone_of_religion = root
+					}
 					is_religion_grant_colonial_claim = root
 				}
 			}
@@ -1168,7 +1308,9 @@ estate_burghers_colonise_X = {
 				has_discovered = root
 				area_for_scope_province = {
 					type = all
-					NOT = { owned_by = root }
+					NOT = {
+						owned_by = root
+					}
 					NOT = {
 						owner = {
 							is_colonial_nation_of = root
@@ -1181,7 +1323,9 @@ estate_burghers_colonise_X = {
 					continent = new_world
 				}
 				OR = {
-					NOT = { colonial_claim_by_anyone_of_religion = root }
+					NOT = {
+						colonial_claim_by_anyone_of_religion = root
+					}
 					is_religion_grant_colonial_claim = root
 				}
 			}
@@ -1222,38 +1366,44 @@ estate_burghers_colonise_X = {
 	fail_if = {
 		OR = {
 			AND = {
-				NOT = { num_of_colonists = 1 }
+				NOT = {
+					num_of_colonists = 1
+				}
 				event_target:agenda_province = {
-					NOT = { owned_by = root }
+					NOT = {
+						country_or_non_sovereign_subject_holds = root
+					}
 				}
 			}
 			event_target:agenda_province = {
-				NOT = { range = root }
+				NOT = {
+					range = root
+				}
+				is_colony = no
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 			event_target:agenda_province = {
 				area_for_scope_province = {
 					type = all
 					is_city = yes
-					NOT = { owned_by = root }
 					NOT = {
-						owner = {
-							is_colonial_nation_of = root
-						}
+						country_or_non_sovereign_subject_holds = root
 					}
 				}
 			}
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Colonise more in X area
 estate_burghers_colonise_more_X = {
@@ -1285,11 +1435,15 @@ estate_burghers_colonise_more_X = {
 				}
 			}
 			OR = {
-				NOT = { colonial_claim_by_anyone_of_religion = root }
+				NOT = {
+					colonial_claim_by_anyone_of_religion = root
+				}
 				is_religion_grant_colonial_claim = root
 			}
 		}
-		NOT = { has_country_modifier = colonial_enthusiasm }
+		NOT = {
+			has_country_modifier = colonial_enthusiasm
+		}
 	}
 	selection_weight = {
 		factor = 2.5
@@ -1344,7 +1498,9 @@ estate_burghers_colonise_more_X = {
 					}
 				}
 				OR = {
-					NOT = { colonial_claim_by_anyone_of_religion = root }
+					NOT = {
+						colonial_claim_by_anyone_of_religion = root
+					}
 					is_religion_grant_colonial_claim = root
 				}
 			}
@@ -1370,8 +1526,12 @@ estate_burghers_colonise_more_X = {
 		OR = {
 			is_city = no
 			owner = {
-				NOT = { tag = root }
-				NOT = { is_colonial_nation_of = root }
+				NOT = {
+					tag = root
+				}
+				NOT = {
+					is_colonial_nation_of = root
+				}
 			}
 		}
 	}
@@ -1406,7 +1566,9 @@ estate_burghers_colonise_more_X = {
 		event_target:agenda_province = {
 			area_for_scope_province = {
 				is_city = yes
-				NOT = { owned_by = root }
+				NOT = {
+					owned_by = root
+				}
 				NOT = {
 					owner = {
 						is_colonial_nation_of = root
@@ -1415,16 +1577,15 @@ estate_burghers_colonise_more_X = {
 			}
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Get a Colonial Nation in X colonial region
 estate_burghers_colonial_nation = {
@@ -1455,11 +1616,15 @@ estate_burghers_colonial_nation = {
 				}
 			}
 			OR = {
-				NOT = { colonial_claim_by_anyone_of_religion = root }
+				NOT = {
+					colonial_claim_by_anyone_of_religion = root
+				}
 				is_religion_grant_colonial_claim = root
 			}
 		}
-		NOT = { has_country_modifier = agenda_colonial_administration }
+		NOT = {
+			has_country_modifier = agenda_colonial_administration
+		}
 	}
 	selection_weight = {
 		factor = 2.5
@@ -1513,7 +1678,9 @@ estate_burghers_colonial_nation = {
 					}
 				}
 				OR = {
-					NOT = { colonial_claim_by_anyone_of_religion = root }
+					NOT = {
+						colonial_claim_by_anyone_of_religion = root
+					}
 					is_religion_grant_colonial_claim = root
 				}
 			}
@@ -1528,7 +1695,9 @@ estate_burghers_colonial_nation = {
 			tooltip = estate_burghers_colonial_nation_requirements_tooltip
 			any_subject_country = {
 				is_colonial_nation_of = root
-				capital_scope = { colonial_region = event_target:agenda_province }
+				capital_scope = {
+					colonial_region = event_target:agenda_province
+				}
 				num_of_cities = 5
 			}
 		}
@@ -1543,17 +1712,15 @@ estate_burghers_colonial_nation = {
 			duration = 5475
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
-
 
 #Get X provinces in a trade company in X region
 estate_burghers_expand_trade_company = {
@@ -1561,7 +1728,9 @@ estate_burghers_expand_trade_company = {
 		num_of_ports = 1
 		any_owned_province = {
 			is_owned_by_trade_company = yes
-			NOT = { trade_company_size = 10 }
+			NOT = {
+				trade_company_size = 10
+			}
 		}
 	}
 	selection_weight = {
@@ -1596,13 +1765,16 @@ estate_burghers_expand_trade_company = {
 		random_owned_province = {
 			limit = {
 				is_owned_by_trade_company = yes
-				NOT = { trade_company_size = 10 }
+				NOT = {
+					trade_company_size = 10
+				}
 			}
 			save_event_target_as = agenda_province
-
 			if = {
 				limit = {
-					NOT = { trade_company_size = 4 }
+					NOT = {
+						trade_company_size = 4
+					}
 				}
 				root = {
 					set_variable = {
@@ -1613,7 +1785,9 @@ estate_burghers_expand_trade_company = {
 			}
 			else_if = {
 				limit = {
-					NOT = { trade_company_size = 6 }
+					NOT = {
+						trade_company_size = 6
+					}
 				}
 				root = {
 					set_variable = {
@@ -1670,17 +1844,15 @@ estate_burghers_expand_trade_company = {
 			loyalty = 15
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
-
 
 #Trade post in India
 estate_burghers_trade_post_in_india = {
@@ -1695,7 +1867,8 @@ estate_burghers_trade_post_in_india = {
 				superregion = india_superregion
 			}
 		}
-		any_province = { #india_superregion scope does not work due to load order
+		any_province = {
+			#india_superregion scope does not work due to load order
 			superregion = india_superregion
 			has_port = yes
 			range = ROOT
@@ -1772,16 +1945,15 @@ estate_burghers_trade_post_in_india = {
 			}
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Trade post in Malacca
 estate_burghers_trade_post_in_malacca = {
@@ -1873,16 +2045,15 @@ estate_burghers_trade_post_in_malacca = {
 			}
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Trade post in China
 estate_burghers_trade_post_in_china = {
@@ -1892,7 +2063,9 @@ estate_burghers_trade_post_in_china = {
 			continent = europe
 		}
 		num_of_ports = 6
-		NOT = { chinaware = 1 }
+		NOT = {
+			chinaware = 1
+		}
 		any_province = {
 			superregion = china_superregion
 			has_port = yes
@@ -1904,7 +2077,9 @@ estate_burghers_trade_post_in_china = {
 				superregion = china_superregion
 			}
 		}
-		NOT = { has_country_modifier = growing_chinaware_trade }
+		NOT = {
+			has_country_modifier = growing_chinaware_trade
+		}
 	}
 	selection_weight = {
 		factor = 2.5
@@ -1968,16 +2143,15 @@ estate_burghers_trade_post_in_china = {
 			}
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Get 3 silk provinces
 estate_burghers_silk_trade = {
@@ -1992,7 +2166,9 @@ estate_burghers_silk_trade = {
 				superregion = china_superregion
 			}
 		}
-		NOT = { silk = 2 }
+		NOT = {
+			silk = 2
+		}
 	}
 	selection_weight = {
 		factor = 2.5
@@ -2018,7 +2194,9 @@ estate_burghers_silk_trade = {
 			}
 		}
 		has_discovered = root
-		NOT = { owned_by = root }
+		NOT = {
+			owned_by = root
+		}
 	}
 	task_requirements = {
 		silk = 3
@@ -2033,16 +2211,15 @@ estate_burghers_silk_trade = {
 			duration = 5475
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Get 5 spice provinces
 estate_burghers_spice_trade = {
@@ -2057,7 +2234,9 @@ estate_burghers_spice_trade = {
 				trade_company_region = trade_company_indonesia
 			}
 		}
-		NOT = { spices = 3 }
+		NOT = {
+			spices = 3
+		}
 	}
 	selection_weight = {
 		factor = 2.5
@@ -2083,7 +2262,9 @@ estate_burghers_spice_trade = {
 			}
 		}
 		has_discovered = root
-		NOT = { owned_by = root }
+		NOT = {
+			owned_by = root
+		}
 	}
 	task_requirements = {
 		spices = 5
@@ -2098,14 +2279,14 @@ estate_burghers_spice_trade = {
 			duration = 5475
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
 
 #Get 3 tea provinces
@@ -2118,7 +2299,9 @@ estate_burghers_tea_trade = {
 		any_owned_province = {
 			superregion = china_superregion
 		}
-		NOT = { tea = 2 }
+		NOT = {
+			tea = 2
+		}
 	}
 	selection_weight = {
 		factor = 2.5
@@ -2151,7 +2334,9 @@ estate_burghers_tea_trade = {
 			}
 		}
 		has_discovered = root
-		NOT = { owned_by = root }
+		NOT = {
+			owned_by = root
+		}
 	}
 	task_requirements = {
 		tea = 3
@@ -2166,23 +2351,24 @@ estate_burghers_tea_trade = {
 			duration = 5475
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Reduce corruption
 estate_burghers_reduce_corruption = {
 	can_select = {
 		corruption = 5
 		is_bankrupt = no
-		NOT = { has_country_modifier = freedom_from_corruption }
+		NOT = {
+			has_country_modifier = freedom_from_corruption
+		}
 	}
 	selection_weight = {
 		factor = 1.5
@@ -2245,7 +2431,9 @@ estate_burghers_reduce_corruption = {
 					value = 3
 				}
 			}
-			NOT = { corruption = 10 }
+			NOT = {
+				corruption = 10
+			}
 		}
 		else_if = {
 			limit = {
@@ -2254,13 +2442,17 @@ estate_burghers_reduce_corruption = {
 					value = 2
 				}
 			}
-			NOT = { corruption = 5 }
+			NOT = {
+				corruption = 5
+			}
 		}
 		else = {
-			NOT = { corruption = 1 }
+			NOT = {
+				corruption = 1
+			}
 		}
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_burghers
 			loyalty = 10
@@ -2269,17 +2461,16 @@ estate_burghers_reduce_corruption = {
 			name = freedom_from_corruption
 			duration = 5475
 		}
-    }
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	}
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Protect against Piracy
 estate_burghers_protect_against_piracy = {
@@ -2379,7 +2570,7 @@ estate_burghers_protect_against_piracy = {
 				limit = {
 					OR = {
 						is_sea = yes
-						has_port = no #shouldn't ever be the case, but just in case...
+						has_port = no						#shouldn't ever be the case, but just in case...
 					}
 				}
 				save_event_target_as = agenda_trade_node_sea
@@ -2400,9 +2591,14 @@ estate_burghers_protect_against_piracy = {
 				country = root
 				share = 20
 			}
-			NOT = {
-				privateer_power = {
-					share = 5
+		}
+		NOT = {
+			any_country = {
+				event_target:agenda_trade_node = {
+					privateer_power = {
+						share = 3
+						country = PREV
+					}
 				}
 			}
 		}
@@ -2417,18 +2613,18 @@ estate_burghers_protect_against_piracy = {
 			}
 		}
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_burghers
 			loyalty = 15
 		}
-    }
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_burghers
+	}
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }

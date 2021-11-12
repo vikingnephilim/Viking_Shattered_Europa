@@ -11,7 +11,7 @@ estate_nobles =
 		NOT = { has_reform = revolutionary_empire_reform }
 		if = {
 			limit = {
-				NOT = { religion_group = muslim }
+				NOT = { is_muslim_viking_mod = yes }
 				NOT = { religion = sikhism }
 				NOT = { religion = buddhism }
 				NOT = { religion = vajrayana }
@@ -252,7 +252,7 @@ estate_nobles =
 	custom_name = {
 		desc = estate_kshatriyas
 		trigger = {
-			religion = hinduism
+			is_indic_viking_mod = yes
 		}
 	}
 	custom_name = {
@@ -282,7 +282,7 @@ estate_nobles =
 	custom_name = {
 		desc = estate_amirs
 		trigger = {
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 			NOT = { technology_group = ottoman } #Should possibly be more restricted
 		}
 	}
@@ -302,7 +302,7 @@ estate_nobles =
 		desc = estate_yangban_administrators
 		trigger = {
 			tag = KOR
-			religion = confucianism
+			is_chinese_religion_viking_mod = YES
 		}
 	}
 	custom_name = {
@@ -336,6 +336,14 @@ estate_nobles =
 		estate_nobles_monopoly_of_gems
 		estate_nobles_statutory_rights
 		estate_nobles_command_of_the_military
+		estate_nobles_better_integration
+		estate_nobles_cawa_peace_keepers
+		estate_nobles_cawa_offensive_fighters
+		estate_nobles_grant_power_to_the_bashorun
+		estate_nobles_neighbor_raids
+		estate_nobles_decentralized_tribe
+		estate_nobles_tribe_unification
+		estate_nobles_tribe_centralization
 	}
 	agendas = {
 		estate_nobles_develop_x

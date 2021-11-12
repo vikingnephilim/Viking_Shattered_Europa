@@ -1183,7 +1183,8 @@ kor_harmony_with_japan = {
 
 		provinces_to_highlight = {
 			region = japan_region
-			ROOT = { NOT = { religion = confucianism } }
+			ROOT = { NOT = { 
+				is_chinese_religion_viking_mod = YES } }
 			is_city = yes
 			NOT = { religion = root }
 		}
@@ -1191,7 +1192,7 @@ kor_harmony_with_japan = {
 		trigger = {
 			if = {
 				limit = {
-					religion = confucianism
+					is_chinese_religion_viking_mod = YES
 				}
 				has_harmonized_with = shinto
 			}

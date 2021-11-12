@@ -125,23 +125,23 @@ hin_slot_2 = {
 		effect = {
 			if = {
 				limit = {
-					religion = hinduism
+					is_indic_viking_mod = yes
 				}
 				country_event = { id = india_mission_events.4 }
 			}
 			if = {
 				limit = {
-					religion_group = muslim
+					is_muslim_viking_mod = yes
 				}
 				country_event = { id = india_mission_events.3 }
 			}
 			if = {
 				limit = {
 					NOT = {
-						religion = hinduism
+						is_indic_viking_mod = yes
 					}
 					NOT = {
-						religion_group = muslim
+						is_muslim_viking_mod = yes
 					}
 				}
 				add_prestige = 20

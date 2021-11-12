@@ -4,7 +4,7 @@ country_decisions = {
 		potential = {
 			has_dlc = "Star and Crescent"
 			ai = no
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 			num_of_cities = 10
 			NOT = {
 				has_country_flag = unified_islam
@@ -12,10 +12,16 @@ country_decisions = {
 			NOT = {
 				has_global_flag = unified_islam_global
 			}
-			NOT = { tag = PAP } # NO
+			NOT = {
+				tag = PAP
+			}			# NO
 			is_emperor_of_china = no
-			NOT = { has_reform = shogunate }
-			NOT = { has_reform = celestial_empire }
+			NOT = {
+				has_reform = shogunate
+			}
+			NOT = {
+				has_reform = celestial_empire
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -33,13 +39,15 @@ country_decisions = {
 				province_id = 347
 				province_id = 388
 				province_id = 400
-					}
+			}
 			OR = {
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 		}
 		allow = {
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 			owns_or_vassal_of = 504
 			owns_or_vassal_of = 225
 			owns_or_vassal_of = 151
@@ -89,36 +97,30 @@ country_decisions = {
 	change_religion_druze = {
 		potential = {
 			NOT = {
-				has_country_flag = converted_druze
+				has_country_flag = converted_islam
 			}
-			OR = {
-				religion = hurufi
-				religion = ibadi
-				religion = kharijite
-				religion = qarmatian
-				religion = shiite
-				religion = sunni
-				religion = sufri
-				religion = yazidi
-				religion = zikri
+			NOT = {
+				religion = druze
 			}
+			is_muslim_viking_mod = yes
 			dominant_religion = druze
 			is_free_or_tributary_trigger = yes
 			is_force_converted = no
 		}
 		allow = {
 			NOT = {
-				has_country_flag = converted_druze
+				has_country_flag = converted_islam
 			}
-			capital_scope = {
+			NOT = {
 				religion = druze
 			}
+			dominant_religion = druze
 		}
 		effect = {
 			add_stability = -2
 			add_piety = -1
 			change_religion = druze
-			set_country_flag = converted_druze
+			set_country_flag = converted_islam
 		}
 		ai_will_do = {
 			factor = 0
@@ -127,36 +129,62 @@ country_decisions = {
 	change_religion_hurufi = {
 		potential = {
 			NOT = {
-				has_country_flag = converted_hurufi
+				has_country_flag = converted_islam
 			}
-			OR = {
+			NOT = {
 				religion = hurufi
-				religion = ibadi
-				religion = kharijite
-				religion = qarmatian
-				religion = shiite
-				religion = sunni
-				religion = sufri
-				religion = yazidi
-				religion = zikri
 			}
+			is_muslim_viking_mod = yes
 			dominant_religion = hurufi
 			is_free_or_tributary_trigger = yes
 			is_force_converted = no
 		}
 		allow = {
-					NOT = {
-				has_country_flag = converted_hurufi
+			NOT = {
+				has_country_flag = converted_islam
 			}
-			capital_scope = {
+			NOT = {
 				religion = hurufi
 			}
+			dominant_religion = hurufi
 		}
 		effect = {
 			add_stability = -2
 			add_piety = -1
 			change_religion = hurufi
-			set_country_flag = converted_hurufi
+			set_country_flag = converted_islam
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	change_religion_fiqh = {
+		potential = {
+			NOT = {
+				has_country_flag = converted_islam
+			}
+			NOT = {
+				religion = fiqhism
+			}
+			is_muslim_viking_mod = yes
+			dominant_religion = fiqhism
+			is_free_or_tributary_trigger = yes
+			is_force_converted = no
+		}
+		allow = {
+			NOT = {
+				has_country_flag = converted_islam
+			}
+			NOT = {
+				religion = fiqhism
+			}
+			dominant_religion = fiqhism
+		}
+		effect = {
+			add_stability = -2
+			add_piety = -1
+			change_religion = fiqhism
+			set_country_flag = converted_islam
 		}
 		ai_will_do = {
 			factor = 0
@@ -165,36 +193,62 @@ country_decisions = {
 	change_religion_ibadi = {
 		potential = {
 			NOT = {
-				has_country_flag = converted_ibadi
+				has_country_flag = converted_islam
 			}
-			OR = {
-				religion = druze
-				religion = hurufi
+			NOT = {
 				religion = ibadi
-				religion = kharijite
-				religion = qarmatian
-				religion = shiite
-				religion = sufri
-				religion = yazidi
-				religion = zikri
 			}
+			is_muslim_viking_mod = yes
 			dominant_religion = ibadi
 			is_free_or_tributary_trigger = yes
 			is_force_converted = no
 		}
 		allow = {
-					NOT = {
-				has_country_flag = converted_ibadi
+			NOT = {
+				has_country_flag = converted_islam
 			}
-			capital_scope = {
+			NOT = {
 				religion = ibadi
 			}
+			dominant_religion = ibadi
 		}
 		effect = {
 			add_stability = -2
 			add_piety = -1
 			change_religion = ibadi
-			set_country_flag =  converted_ibadi
+			set_country_flag = converted_islam
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	change_religion_ismaili = {
+		potential = {
+			NOT = {
+				has_country_flag = converted_islam
+			}
+			NOT = {
+				religion = ismaelism
+			}
+			is_muslim_viking_mod = yes
+			dominant_religion = ismaelism
+			is_free_or_tributary_trigger = yes
+			is_force_converted = no
+		}
+		allow = {
+			NOT = {
+				has_country_flag = converted_islam
+			}
+			NOT = {
+				religion = ismaelism
+			}
+			dominant_religion = ismaelism
+		}
+		effect = {
+			add_stability = -2
+			add_piety = -1
+			change_religion = ibadi
+			set_country_flag = converted_islam
 		}
 		ai_will_do = {
 			factor = 0
@@ -203,36 +257,30 @@ country_decisions = {
 	change_religion_kharijite = {
 		potential = {
 			NOT = {
-				has_country_flag = converted_kharijite
+				has_country_flag = converted_islam
 			}
-			OR = {
-				religion = druze
-				religion = hurufi
-				religion = ibadi
+			NOT = {
 				religion = kharijite
-				religion = qarmatian
-				religion = shiite
-				religion = sufri
-				religion = yazidi
-				religion = zikri
 			}
+			is_muslim_viking_mod = yes
 			dominant_religion = kharijite
 			is_free_or_tributary_trigger = yes
 			is_force_converted = no
 		}
 		allow = {
-					NOT = {
-				has_country_flag = converted_kharijite
+			NOT = {
+				has_country_flag = converted_islam
 			}
-			capital_scope = {
+			NOT = {
 				religion = kharijite
 			}
+			dominant_religion = kharijite
 		}
 		effect = {
 			add_stability = -2
 			add_piety = -1
 			change_religion = kharijite
-			set_country_flag =  converted_kharijite
+			set_country_flag = converted_islam
 		}
 		ai_will_do = {
 			factor = 0
@@ -241,73 +289,62 @@ country_decisions = {
 	change_religion_qarmatian = {
 		potential = {
 			NOT = {
-				has_country_flag = converted_qarmatian
+				has_country_flag = converted_islam
 			}
-			OR = {
-				religion = druze
-				religion = hurufi
-				religion = ibadi
-				religion = kharijite
+			NOT = {
 				religion = qarmatian
-				religion = shiite
-				religion = sufri
-				religion = yazidi
-				religion = zikri
 			}
+			is_muslim_viking_mod = yes
 			dominant_religion = qarmatian
 			is_free_or_tributary_trigger = yes
 			is_force_converted = no
 		}
 		allow = {
 			NOT = {
-				has_country_flag = converted_qarmatian
+				has_country_flag = converted_islam
 			}
-			capital_scope = {
+			NOT = {
 				religion = qarmatian
 			}
+			dominant_religion = qarmatian
 		}
 		effect = {
 			add_stability = -2
 			add_piety = -1
 			change_religion = qarmatian
-			set_country_flag =  converted_qarmatian
+			set_country_flag = converted_islam
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-	change_religion_shiite = {	
-				potential = {		NOT = {
-			has_country_flag = converted_shiite
-		}
-			OR = {
-				religion = druze
-				religion = hurufi
-				religion = ibadi
-				religion = kharijite
-				religion = qarmatian
-				religion = shiite
-				religion = sufri
-				religion = yazidi
-				religion = zikri
+	change_religion_shiite = {
+		potential = {
+			NOT = {
+				has_country_flag = converted_islam
 			}
+			NOT = {
+				religion = shiite
+			}
+			is_muslim_viking_mod = yes
 			dominant_religion = shiite
 			is_free_or_tributary_trigger = yes
 			is_force_converted = no
 		}
 		allow = {
 			NOT = {
-				has_country_flag = converted_shiite
+				has_country_flag = converted_islam
 			}
-			capital_scope = {
+			NOT = {
 				religion = shiite
 			}
+			dominant_religion = shiite
 		}
 		effect = {
 			add_stability = -2
 			add_piety = -1
 			change_religion = shiite
-			set_country_flag =  converted_shiite
+			set_country_flag = converted_islam
 		}
 		ai_will_do = {
 			factor = 0
@@ -316,74 +353,62 @@ country_decisions = {
 	change_religion_sufri = {
 		potential = {
 			NOT = {
-				has_country_flag = converted_sufri
+				has_country_flag = converted_islam
 			}
-			OR = {
-				religion = druze
-				religion = hurufi
-				religion = ibadi
-				religion = kharijite
-				religion = qarmatian
-				religion = shiite
+			NOT = {
 				religion = sufri
-				religion = yazidi
-				religion = zikri
 			}
+			is_muslim_viking_mod = yes
 			dominant_religion = sufri
 			is_free_or_tributary_trigger = yes
 			is_force_converted = no
 		}
 		allow = {
-					NOT = {
-				has_country_flag = converted_sufri
+			NOT = {
+				has_country_flag = converted_islam
 			}
-			capital_scope = {
+			NOT = {
 				religion = sufri
 			}
+			dominant_religion = sufri
 		}
 		effect = {
 			add_stability = -2
 			add_piety = -1
 			change_religion = sufri
-			set_country_flag =  converted_sufri
+			set_country_flag = converted_islam
 		}
 		ai_will_do = {
 			factor = 0
 		}
 	}
-	change_religion_sunni = {	
-				potential = {
-					NOT = {
-			has_country_flag = converted_sunni
-		}
-			OR = {
-				religion = druze
-				religion = hurufi
-				religion = ibadi
-				religion = kharijite
-				religion = qarmatian
-				religion = shiite
-				religion = sufri
-				religion = yazidi
-				religion = zikri
+	change_religion_sunni = {
+		potential = {
+			NOT = {
+				has_country_flag = converted_islam
 			}
+			NOT = {
+				religion = sunni
+			}
+			is_muslim_viking_mod = yes
 			dominant_religion = sunni
 			is_free_or_tributary_trigger = yes
 			is_force_converted = no
 		}
 		allow = {
-					NOT = {
-				has_country_flag = converted_sunni
+			NOT = {
+				has_country_flag = converted_islam
 			}
-			capital_scope = {
+			NOT = {
 				religion = sunni
 			}
+			dominant_religion = sunni
 		}
 		effect = {
 			add_stability = -2
 			add_piety = -1
 			change_religion = sunni
-			set_country_flag =  converted_sunni
+			set_country_flag = converted_islam
 		}
 		ai_will_do = {
 			factor = 0
@@ -392,36 +417,30 @@ country_decisions = {
 	change_religion_yazidi = {
 		potential = {
 			NOT = {
-				has_country_flag = converted_yazidi
+				has_country_flag = converted_islam
 			}
-			OR = {
-				religion = druze
-				religion = hurufi
-				religion = ibadi
-				religion = kharijite
-				religion = qarmatian
-				religion = shiite
-				religion = sufri
+			NOT = {
 				religion = yazidi
-				religion = zikri
 			}
+			is_muslim_viking_mod = yes
 			dominant_religion = yazidi
 			is_free_or_tributary_trigger = yes
 			is_force_converted = no
 		}
 		allow = {
-					NOT = {
-				has_country_flag = converted_yazidi
+			NOT = {
+				has_country_flag = converted_islam
 			}
-			capital_scope = {
+			NOT = {
 				religion = yazidi
 			}
+			dominant_religion = yazidi
 		}
 		effect = {
 			add_stability = -2
 			add_piety = -1
 			change_religion = yazidi
-			set_country_flag =  converted_yazidi
+			set_country_flag = converted_islam
 		}
 		ai_will_do = {
 			factor = 0
@@ -430,36 +449,30 @@ country_decisions = {
 	change_religion_zikri = {
 		potential = {
 			NOT = {
-				has_country_flag = converted_zikri
+				has_country_flag = converted_islam
 			}
-			OR = {
-				religion = druze
-				religion = hurufi
-				religion = ibadi
-				religion = kharijite
-				religion = qarmatian
-				religion = shiite
-				religion = sufri
-				religion = yazidi
+			NOT = {
 				religion = zikri
 			}
+			is_muslim_viking_mod = yes
 			dominant_religion = zikri
 			is_free_or_tributary_trigger = yes
 			is_force_converted = no
 		}
 		allow = {
-					NOT = {
-				has_country_flag = converted_zikri
+			NOT = {
+				has_country_flag = converted_islam
 			}
-			capital_scope = {
+			NOT = {
 				religion = zikri
 			}
+			dominant_religion = zikri
 		}
 		effect = {
 			add_stability = -2
 			add_piety = -1
 			change_religion = zikri
-			set_country_flag = converted_zikri
+			set_country_flag = converted_islam
 		}
 		ai_will_do = {
 			factor = 0

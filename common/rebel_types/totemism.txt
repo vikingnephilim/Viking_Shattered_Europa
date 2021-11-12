@@ -159,7 +159,7 @@ totemism_rebels = {
 	}
 	# Country scope
 	can_negotiate_trigger = {
-		religion_group = american_pagan
+		is_pagan_viking_mod = yes
 	}
 	# Country scope
 	can_enforce_trigger = {
@@ -178,7 +178,7 @@ totemism_rebels = {
 		}
 		if = {
 			limit = {
-				NOT = { religion_group = american_pagan }
+				NOT = { is_pagan_viking_mod = yes }
 			}
 			add_prestige = -50
 			every_owned_province = {
@@ -205,7 +205,7 @@ totemism_rebels = {
 		}
 		else_if = {
 			limit = {
-				religion_group = american_pagan
+				is_pagan_viking_mod = yes
 				NOT = { religion = totemism }
 			}
 			change_religion = totemism

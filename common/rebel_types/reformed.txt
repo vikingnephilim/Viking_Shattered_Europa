@@ -164,7 +164,7 @@ reformed_rebels = {
 	# Country scope
 	can_negotiate_trigger = {
 		OR = {
-			religion_group = christian
+			is_christian_viking_mod = yes
 			dominant_religion = reformed
 		}
 	}
@@ -185,7 +185,7 @@ reformed_rebels = {
 		}
 		if = {
 			limit = {
-				NOT = { religion_group = christian }
+				NOT = { is_christian_viking_mod = yes }
 			}
 			add_prestige = -50
 			every_owned_province = {
@@ -224,7 +224,7 @@ reformed_rebels = {
 				NOT = { religion = reformed }
 				NOT = { dominant_religion = reformed }
 				NOT = { has_country_modifier = heretic_tolerance }
-				religion_group = christian
+				is_christian_viking_mod = yes
 			}
 			add_country_modifier = {
 				name = "heretic_tolerance"

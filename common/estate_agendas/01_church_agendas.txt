@@ -1,4 +1,3 @@
-
 #This one or the next one will always be valid
 estate_church_hire_advisor = {
 	can_select = {
@@ -17,20 +16,20 @@ estate_church_hire_advisor = {
 		}
 		is_in_deficit = no
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
 		}
-    }
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_church
+	}
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_church
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
 
 estate_church_fire_advisor = {
@@ -77,7 +76,7 @@ estate_church_fire_advisor = {
 			has_country_flag = just_fired_adm_advisor
 		}
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
@@ -91,31 +90,45 @@ estate_church_fire_advisor = {
 				category = ADM
 			}
 		}
-		NOT = { has_country_flag = just_fired_adm_advisor }
+		NOT = {
+			has_country_flag = just_fired_adm_advisor
+		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_church
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_church
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
+		}
 		clr_country_flag = need_to_fire_adm_advisor
-    }
+	}
 }
 
 #Convert a province
 estate_church_convert_province_x = {
 	can_select = {
 		num_of_missionaries = 1
-		NOT = { religion = confucianism }
+		NOT = {
+			is_chinese_religion_viking_mod = yes
+		}
 		any_owned_province = {
 			is_state_core = root
-			NOT = { religion = root }
-			NOT = { has_province_modifier = religious_zeal_at_conv }
-			NOT = { has_province_modifier = expelled_minority }
-			NOT = { has_province_modifier = religious_migration }
-			NOT = { religion = secondary }
+			NOT = {
+				religion = root
+			}
+			NOT = {
+				has_province_modifier = religious_zeal_at_conv
+			}
+			NOT = {
+				has_province_modifier = expelled_minority
+			}
+			NOT = {
+				has_province_modifier = religious_migration
+			}
+			NOT = {
+				religion = secondary
+			}
 			has_missionary = no
 			missionary_strength = 0.01
 		}
@@ -124,27 +137,37 @@ estate_church_convert_province_x = {
 		factor = 1
 		modifier = {
 			factor = 1.5
-			NOT = { religious_unity = 0.85 }
+			NOT = {
+				religious_unity = 0.85
+			}
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { religious_unity = 0.75 }
+			NOT = {
+				religious_unity = 0.75
+			}
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { religious_unity = 0.65 }
+			NOT = {
+				religious_unity = 0.65
+			}
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { religious_unity = 0.5 }
+			NOT = {
+				religious_unity = 0.5
+			}
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { religious_unity = 0.4 }
+			NOT = {
+				religious_unity = 0.4
+			}
 		}
 		modifier = {
 			factor = 0.25
-			religion = confucianism
+			is_chinese_religion_viking_mod = yes
 		}
 		modifier = {
 			factor = 0.35
@@ -156,7 +179,9 @@ estate_church_convert_province_x = {
 		}
 		modifier = {
 			factor = 0.75
-			NOT = { num_of_missionaries = 2 }
+			NOT = {
+				num_of_missionaries = 2
+			}
 		}
 		modifier = {
 			factor = 1.25
@@ -171,11 +196,21 @@ estate_church_convert_province_x = {
 		random_owned_province = {
 			limit = {
 				is_state_core = root
-				NOT = { religion = root }
-				NOT = { has_province_modifier = religious_zeal_at_conv }
-				NOT = { has_province_modifier = expelled_minority }
-				NOT = { has_province_modifier = religious_migration }
-				NOT = { religion = secondary }
+				NOT = {
+					religion = root
+				}
+				NOT = {
+					has_province_modifier = religious_zeal_at_conv
+				}
+				NOT = {
+					has_province_modifier = expelled_minority
+				}
+				NOT = {
+					has_province_modifier = religious_migration
+				}
+				NOT = {
+					religion = secondary
+				}
 				has_missionary = no
 			}
 			save_event_target_as = agenda_province
@@ -183,11 +218,21 @@ estate_church_convert_province_x = {
 		random_owned_province = {
 			limit = {
 				is_state_core = root
-				NOT = { religion = root }
-				NOT = { has_province_modifier = religious_zeal_at_conv }
-				NOT = { has_province_modifier = expelled_minority }
-				NOT = { has_province_modifier = religious_migration }
-				NOT = { religion = secondary }
+				NOT = {
+					religion = root
+				}
+				NOT = {
+					has_province_modifier = religious_zeal_at_conv
+				}
+				NOT = {
+					has_province_modifier = expelled_minority
+				}
+				NOT = {
+					has_province_modifier = religious_migration
+				}
+				NOT = {
+					religion = secondary
+				}
 				has_missionary = no
 				development = 10
 			}
@@ -197,9 +242,13 @@ estate_church_convert_province_x = {
 	fail_if = {
 		event_target:agenda_province = {
 			OR = {
-				NOT = { owned_by = root }
+				NOT = {
+					owned_by = root
+				}
 				AND = {
-					NOT = { religion = root }
+					NOT = {
+						religion = root
+					}
 					religion = secondary
 				}
 			}
@@ -216,7 +265,9 @@ estate_church_convert_province_x = {
 	on_invalid = {
 		event_target:agenda_province = {
 			if = {
-				limit = { has_province_modifier = agenda_conversion_zeal }
+				limit = {
+					has_province_modifier = agenda_conversion_zeal
+				}
 				remove_province_modifier = agenda_conversion_zeal
 			}
 		}
@@ -229,11 +280,13 @@ estate_church_convert_province_x = {
 			religion = root
 		}
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		hidden_effect = {
 			event_target:agenda_province = {
 				if = {
-					limit = { has_province_modifier = agenda_conversion_zeal }
+					limit = {
+						has_province_modifier = agenda_conversion_zeal
+					}
 					remove_province_modifier = agenda_conversion_zeal
 				}
 			}
@@ -252,21 +305,23 @@ estate_church_convert_province_x = {
 			estate = estate_church
 			loyalty = 10
 		}
-    }
-    failing_effect = {
+	}
+	failing_effect = {
 		event_target:agenda_province = {
 			if = {
-				limit = { has_province_modifier = agenda_conversion_zeal }
+				limit = {
+					has_province_modifier = agenda_conversion_zeal
+				}
 				remove_province_modifier = agenda_conversion_zeal
 			}
 		}
-        add_estate_loyalty_modifier = {
-            estate = estate_church
+		add_estate_loyalty_modifier = {
+			estate = estate_church
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
 
 #Reduce War Exhaustion
@@ -274,7 +329,9 @@ estate_church_reduce_war_exhaustion = {
 	can_select = {
 		war_exhaustion = 5
 		is_at_war = no
-		NOT = { has_country_modifier = national_recovery }
+		NOT = {
+			has_country_modifier = national_recovery
+		}
 	}
 	selection_weight = {
 		factor = 2
@@ -291,9 +348,11 @@ estate_church_reduce_war_exhaustion = {
 		is_at_war = yes
 	}
 	task_requirements = {
-		NOT = { war_exhaustion = 1 }
+		NOT = {
+			war_exhaustion = 1
+		}
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
@@ -302,85 +361,93 @@ estate_church_reduce_war_exhaustion = {
 			name = national_recovery
 			duration = 5475
 		}
-    }
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_church
+	}
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_church
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
 
 #Stabilise Country
 estate_church_recover_stability = {
 	can_select = {
-		NOT = { stability = 0 }
+		NOT = {
+			stability = 0
+		}
 	}
 	selection_weight = {
 		factor = 2
 		modifier = {
 			factor = 1.5
-			NOT = { stability = -1 }
+			NOT = {
+				stability = -1
+			}
 		}
 	}
 	task_requirements = {
 		stability = 1
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
 		}
 		add_prestige = 10
-    }
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_church
+	}
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_church
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
 
 #Stabilise Country II
 estate_church_increase_stability = {
 	can_select = {
-		NOT = { stability = 2 }
+		NOT = {
+			stability = 2
+		}
 		stability = 1
 	}
 	selection_weight = {
 		factor = 1
 	}
 	fail_if = {
-		NOT = { stability = 0 }
+		NOT = {
+			stability = 0
+		}
 	}
 	task_requirements = {
 		stability = 3
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
 		}
 		add_prestige = 10
-    }
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_church
+	}
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_church
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
 
 #Reduce overextension
 estate_church_reduce_overextension = {
 	can_select = {
-		overextension_percentage = 0.50
+		overextension_percentage = 0.5
 	}
 	selection_weight = {
 		factor = 2
@@ -395,53 +462,65 @@ estate_church_reduce_overextension = {
 	}
 	provinces_to_highlight = {
 		owned_by = root
-		NOT = { is_core = root }
+		NOT = {
+			is_core = root
+		}
 	}
 	task_requirements = {
-		NOT = { overextension_percentage = 0.01 }
+		NOT = {
+			overextension_percentage = 0.01
+		}
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
 		}
 		add_adm_power = 50
-    }
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_church
+	}
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_church
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
 
 #Restore devotion
 estate_church_restore_devotion = {
 	can_select = {
 		has_dlc = "Common Sense"
-		NOT = { legitimacy_equivalent = 65 }
+		NOT = {
+			legitimacy_equivalent = 65
+		}
 		government = theocracy
 	}
 	selection_weight = {
 		factor = 2
 		modifier = {
 			factor = 1.5
-			NOT = { legitimacy_equivalent = 50 }
+			NOT = {
+				legitimacy_equivalent = 50
+			}
 		}
 		modifier = {
 			factor = 1.5
-			NOT = { legitimacy_equivalent = 35 }
+			NOT = {
+				legitimacy_equivalent = 35
+			}
 		}
 	}
 	fail_if = {
-		NOT = { government = theocracy }
+		NOT = {
+			government = theocracy
+		}
 	}
 	task_requirements = {
 		legitimacy_equivalent = 90
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
@@ -451,17 +530,16 @@ estate_church_restore_devotion = {
 			religion = root
 			discount = yes
 		}
-    }
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_church
+	}
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_church
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Root out heresy in X
 estate_church_root_out_heresy = {
@@ -470,19 +548,36 @@ estate_church_root_out_heresy = {
 		is_free_or_tributary_trigger = yes
 		num_of_cities = 10
 		OR = {
-			religion_group = muslim
-			religion_group = christian
+			is_muslim_viking_mod = yes
+			is_christian_viking_mod = yes
 			full_idea_group = religious_ideas
 		}
 		any_neighbor_country = {
+			NOT = {
+				tag = PAP
+			}
 			religion_group = root
-			NOT = { religion = root }
-			NOT = { num_of_cities = 6 }
+			NOT = {
+				religion = root
+			}
+			NOT = {
+				num_of_cities = 6
+			}
 			is_free_or_tributary_trigger = yes
-			NOT = { alliance_with = root }
-			NOT = { marriage_with = root }
-			NOT = { war_with = root }
-			NOT = { ROOT = { truce_with = prev } }
+			NOT = {
+				alliance_with = root
+			}
+			NOT = {
+				marriage_with = root
+			}
+			NOT = {
+				war_with = root
+			}
+			NOT = {
+				ROOT = {
+					truce_with = prev
+				}
+			}
 			ROOT = {
 				NOT = {
 					has_opinion = {
@@ -491,17 +586,27 @@ estate_church_root_out_heresy = {
 					}
 				}
 			}
-			NOT = { army_size = root }
+			NOT = {
+				army_size = root
+			}
 			OR = {
-				NOT = { has_dlc = "Art of War" }
+				NOT = {
+					has_dlc = "Art of War"
+				}
 				hre_religion_treaty = no
 				is_part_of_hre = no
-				ROOT = { is_part_of_hre = no }
+				ROOT = {
+					is_part_of_hre = no
+				}
 			}
 			OR = {
 				is_part_of_hre = no
-				NOT = { hre_reform_passed = landfriede }
-				ROOT = { is_part_of_hre = no }
+				NOT = {
+					hre_reform_passed = landfriede
+				}
+				ROOT = {
+					is_part_of_hre = no
+				}
 			}
 		}
 	}
@@ -526,13 +631,27 @@ estate_church_root_out_heresy = {
 		random_neighbor_country = {
 			limit = {
 				religion_group = root
-				NOT = { religion = root }
-				NOT = { num_of_cities = 6 }
+				NOT = {
+					religion = root
+				}
+				NOT = {
+					num_of_cities = 6
+				}
 				is_free_or_tributary_trigger = yes
-				NOT = { alliance_with = root }
-				NOT = { marriage_with = root }
-				NOT = { war_with = root }
-				NOT = { ROOT = { truce_with = prev } }
+				NOT = {
+					alliance_with = root
+				}
+				NOT = {
+					marriage_with = root
+				}
+				NOT = {
+					war_with = root
+				}
+				NOT = {
+					ROOT = {
+						truce_with = prev
+					}
+				}
 				ROOT = {
 					NOT = {
 						has_opinion = {
@@ -541,17 +660,27 @@ estate_church_root_out_heresy = {
 						}
 					}
 				}
-				NOT = { army_size = root }
+				NOT = {
+					army_size = root
+				}
 				OR = {
-					NOT = { has_dlc = "Art of War" }
+					NOT = {
+						has_dlc = "Art of War"
+					}
 					hre_religion_treaty = no
 					is_part_of_hre = no
-					ROOT = { is_part_of_hre = no }
+					ROOT = {
+						is_part_of_hre = no
+					}
 				}
 				OR = {
 					is_part_of_hre = no
-					NOT = { hre_reform_passed = landfriede }
-					ROOT = { is_part_of_hre = no }
+					NOT = {
+						hre_reform_passed = landfriede
+					}
+					ROOT = {
+						is_part_of_hre = no
+					}
 				}
 			}
 			save_event_target_as = agenda_country
@@ -566,7 +695,9 @@ estate_church_root_out_heresy = {
 			has_country_modifier = recently_changed_religion_dummy
 			event_target:agenda_country = {
 				is_subject_other_than_tributary_trigger = yes
-				NOT = { is_subject_of = root }
+				NOT = {
+					is_subject_of = root
+				}
 			}
 			AND = {
 				NOT = {
@@ -576,7 +707,7 @@ estate_church_root_out_heresy = {
 				}
 				NOT = {
 					event_target:agenda_country_capital = {
-						owned_by = root #you annexed them
+						owned_by = root						#you annexed them
 					}
 				}
 			}
@@ -586,7 +717,11 @@ estate_church_root_out_heresy = {
 		province_id = event_target:agenda_country_capital
 	}
 	task_requirements = {
-		hidden_trigger = { NOT = { has_country_modifier = recently_changed_religion_dummy } }
+		hidden_trigger = {
+			NOT = {
+				has_country_modifier = recently_changed_religion_dummy
+			}
+		}
 		if = {
 			limit = {
 				event_target:agenda_country = {
@@ -599,11 +734,11 @@ estate_church_root_out_heresy = {
 		}
 		else = {
 			event_target:agenda_country_capital = {
-				owned_by = root #you annexed them
+				owned_by = root				#you annexed them
 			}
 		}
 	}
-    task_completed_effect = {
+	task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
@@ -613,31 +748,45 @@ estate_church_root_out_heresy = {
 			religion = root
 			discount = yes
 		}
-    }
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_church
+	}
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_church
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
 
 #Improve Relations with Pope
 estate_church_relations_with_pope = {
 	can_select = {
-		religion = catholic
-		NOT = { tag = PAP }
+		is_christian_viking_mod = yes
+		NOT = {
+			tag = PAP
+		}
 		exists = PAP
-		NOT = { war_with = PAP }
+		NOT = {
+			war_with = PAP
+		}
 		is_excommunicated = no
 		is_papal_controller = no
 		PAP = {
-			has_opinion = { who = ROOT value = -50 }
-			NOT = { has_opinion = { who = ROOT value = 50 } }
+			has_opinion = {
+				who = ROOT
+				value = -50
+			}
+			NOT = {
+				has_opinion = {
+					who = ROOT
+					value = 50
+				}
+			}
 		}
-		NOT = { has_country_modifier = solidified_papal_relations_modifier }
+		NOT = {
+			has_country_modifier = solidified_papal_relations_modifier
+		}
 	}
 	selection_weight = {
 		factor = 2.5
@@ -645,22 +794,33 @@ estate_church_relations_with_pope = {
 	fail_if = {
 		OR = {
 			tag = PAP
-			NOT = { exists = PAP }
+			NOT = {
+				exists = PAP
+			}
 			war_with = PAP
 			is_excommunicated = yes
 		}
 	}
 	invalid_trigger = {
 		OR = {
-			NOT = { has_estate = estate_church }
-			NOT = { religion = catholic }
+			NOT = {
+				has_estate = estate_church
+			}
+			NOT = {
+				is_christian_viking_mod = yes
+			}
 		}
 	}
 	provinces_to_highlight = {
 		is_capital_of = PAP
 	}
 	task_requirements = {
-		PAP = { has_opinion = { who = ROOT value = 100 } }
+		PAP = {
+			has_opinion = {
+				who = ROOT
+				value = 100
+			}
+		}
 	}
 	task_completed_effect = {
 		add_estate_loyalty = {
@@ -672,14 +832,14 @@ estate_church_relations_with_pope = {
 			duration = 5475
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_church
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_church
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
 
 #Restore the Pope
@@ -687,10 +847,18 @@ estate_church_restore_the_holy_see = {
 	can_select = {
 		religion = catholic
 		normal_or_historical_nations = yes
-		NOT = { has_country_modifier = restored_holy_see_mission }
+		NOT = {
+			has_country_modifier = restored_holy_see_mission
+		}
 		monthly_income = 30
-		NOT = { owns_or_non_sovereign_subject_of = 118 }
-		NOT = { 118 = { owned_by = PAP } }
+		NOT = {
+			owns_or_non_sovereign_subject_of = 118
+		}
+		NOT = {
+			118 = {
+				owned_by = PAP
+			}
+		}
 		118 = {
 			range = ROOT
 		}
@@ -698,8 +866,12 @@ estate_church_restore_the_holy_see = {
 		capital_scope = {
 			continent = europe
 		}
-		NOT = { war_with = PAP }
-		PAP = { is_subject = no }
+		NOT = {
+			war_with = PAP
+		}
+		PAP = {
+			is_subject = no
+		}
 	}
 	selection_weight = {
 		factor = 3
@@ -710,7 +882,9 @@ estate_church_restore_the_holy_see = {
 	}
 	fail_if = {
 		OR = {
-			PAP = { is_subject = yes }
+			PAP = {
+				is_subject = yes
+			}
 			war_with = PAP
 			is_excommunicated = yes
 		}
@@ -718,22 +892,30 @@ estate_church_restore_the_holy_see = {
 	immediate_effect = {
 		if = {
 			limit = {
-				NOT = { is_claim = 118 }
+				NOT = {
+					is_claim = 118
+				}
 			}
 			add_claim = 118
 		}
 	}
 	invalid_trigger = {
 		OR = {
-			NOT = { has_estate = estate_church }
-			NOT = { religion = catholic }
+			NOT = {
+				has_estate = estate_church
+			}
+			NOT = {
+				religion = catholic
+			}
 		}
 	}
 	on_invalid = {
 		if = {
 			limit = {
 				is_claim = 118
-				NOT = { is_permanent_claim = 118 }
+				NOT = {
+					is_permanent_claim = 118
+				}
 			}
 			remove_claim = 118
 		}
@@ -746,7 +928,9 @@ estate_church_restore_the_holy_see = {
 			owns = 118
 			AND = {
 				alliance_with = PAP
-				PAP = { owns = 118 }
+				PAP = {
+					owns = 118
+				}
 			}
 		}
 	}
@@ -759,39 +943,47 @@ estate_church_restore_the_holy_see = {
 			limit = {
 				owns = 118
 			}
-			118 = { cede_province = PAP }
+			118 = {
+				cede_province = PAP
+			}
 		}
 		add_country_modifier = {
 			name = restored_holy_see_mission
 			duration = 5475
 		}
-		reverse_add_opinion = { who = PAP modifier = opinion_restored_holy_see }
+		reverse_add_opinion = {
+			who = PAP
+			modifier = opinion_restored_holy_see
+		}
 		hidden_effect = {
 			if = {
 				limit = {
-					NOT = { is_permanent_claim = 118 }
+					NOT = {
+						is_permanent_claim = 118
+					}
 				}
 				remove_claim = 118
 			}
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_church
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_church
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
+		}
 		if = {
 			limit = {
 				is_claim = 118
-				NOT = { is_permanent_claim = 118 }
+				NOT = {
+					is_permanent_claim = 118
+				}
 			}
 			remove_claim = 118
 		}
-    }
+	}
 }
-
 
 #Crush Revolts (heretics)
 estate_church_crush_religious_revolts = {
@@ -801,7 +993,6 @@ estate_church_crush_religious_revolts = {
 			has_spawned_rebels = heretic_rebels
 			has_spawned_rebels = lollard_rebels
 		}
-
 	}
 	selection_weight = {
 		factor = 2
@@ -822,9 +1013,17 @@ estate_church_crush_religious_revolts = {
 		has_country_modifier = just_lost_to_rebels
 	}
 	task_requirements = {
-		NOT = { num_of_rebel_controlled_provinces = 1 }
-		NOT = { num_of_rebel_armies = 1 }
-		hidden_trigger = { NOT = { has_country_modifier = just_lost_to_rebels } }
+		NOT = {
+			num_of_rebel_controlled_provinces = 1
+		}
+		NOT = {
+			num_of_rebel_armies = 1
+		}
+		hidden_trigger = {
+			NOT = {
+				has_country_modifier = just_lost_to_rebels
+			}
+		}
 	}
 	task_completed_effect = {
 		add_estate_loyalty = {
@@ -832,17 +1031,15 @@ estate_church_crush_religious_revolts = {
 			loyalty = 15
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_church
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_church
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
-
 
 #Protect Brethren in X (religion)
 estate_church_protect_brethren = {
@@ -850,29 +1047,53 @@ estate_church_protect_brethren = {
 		is_free_or_tributary_trigger = yes
 		is_at_war = no
 		any_neighbor_country = {
-			NOT = { religion = root }
+			NOT = {
+				religion = root
+			}
 		}
 		any_owned_province = {
 			any_neighbor_province = {
-				NOT = { owned_by = root }
+				NOT = {
+					owned_by = root
+				}
 				is_city = yes
 				religion = root
 				has_discovered = root
 				owner = {
 					is_free_or_tributary_trigger = yes
-					NOT = { religion = root }
-					NOT = { religion = confucianism }
-					NOT = { is_subject_of = root }
-					NOT = { overlord_of = root }
-					NOT = { alliance_with = root }
-					NOT = { ROOT = { truce_with = prev } }
+					NOT = {
+						religion = root
+					}
+					NOT = {
+						is_chinese_religion_viking_mod = yes
+					}
+					NOT = {
+						is_subject_of = root
+					}
+					NOT = {
+						overlord_of = root
+					}
+					NOT = {
+						alliance_with = root
+					}
+					NOT = {
+						ROOT = {
+							truce_with = prev
+						}
+					}
 					OR = {
 						is_part_of_hre = no
-						NOT = { hre_reform_passed = landfriede }
-						ROOT = { is_part_of_hre = no }
+						NOT = {
+							hre_reform_passed = landfriede
+						}
+						ROOT = {
+							is_part_of_hre = no
+						}
 					}
 				}
-				NOT = { religion = secondary }
+				NOT = {
+					religion = secondary
+				}
 			}
 		}
 	}
@@ -893,51 +1114,97 @@ estate_church_protect_brethren = {
 		random_owned_province = {
 			limit = {
 				any_neighbor_province = {
-					NOT = { owned_by = root }
+					NOT = {
+						owned_by = root
+					}
 					is_city = yes
 					religion = root
 					has_discovered = root
 					owner = {
 						is_free_or_tributary_trigger = yes
-						NOT = { religion = root }
-						NOT = { religion = confucianism }
-						NOT = { is_subject_of = root }
-						NOT = { overlord_of = root }
-						NOT = { alliance_with = root }
-						NOT = { ROOT = { truce_with = prev } }
+						NOT = {
+							religion = root
+						}
+						NOT = {
+							is_chinese_religion_viking_mod = yes
+						}
+						NOT = {
+							is_subject_of = root
+						}
+						NOT = {
+							overlord_of = root
+						}
+						NOT = {
+							alliance_with = root
+						}
+						NOT = {
+							ROOT = {
+								truce_with = prev
+							}
+						}
 						OR = {
 							is_part_of_hre = no
-							NOT = { hre_reform_passed = landfriede }
-							ROOT = { is_part_of_hre = no }
+							NOT = {
+								hre_reform_passed = landfriede
+							}
+							ROOT = {
+								is_part_of_hre = no
+							}
 						}
 					}
-					NOT = { religion = secondary }
+					NOT = {
+						religion = secondary
+					}
 				}
 			}
 			random_neighbor_province = {
 				limit = {
-					NOT = { owned_by = root }
+					NOT = {
+						owned_by = root
+					}
 					is_city = yes
 					religion = root
 					has_discovered = root
 					owner = {
 						is_free_or_tributary_trigger = yes
-						NOT = { religion = root }
-						NOT = { religion = confucianism }
-						NOT = { is_subject_of = root }
-						NOT = { overlord_of = root }
-						NOT = { alliance_with = root }
-						NOT = { ROOT = { truce_with = prev } }
+						NOT = {
+							religion = root
+						}
+						NOT = {
+							is_chinese_religion_viking_mod = yes
+						}
+						NOT = {
+							is_subject_of = root
+						}
+						NOT = {
+							overlord_of = root
+						}
+						NOT = {
+							alliance_with = root
+						}
+						NOT = {
+							ROOT = {
+								truce_with = prev
+							}
+						}
 						OR = {
 							is_part_of_hre = no
-							NOT = { hre_reform_passed = landfriede }
-							ROOT = { is_part_of_hre = no }
+							NOT = {
+								hre_reform_passed = landfriede
+							}
+							ROOT = {
+								is_part_of_hre = no
+							}
 						}
 					}
-					NOT = { religion = secondary }
+					NOT = {
+						religion = secondary
+					}
 				}
 				save_event_target_as = agenda_province
-				owner = { save_event_target_as = agenda_country }
+				owner = {
+					save_event_target_as = agenda_country
+				}
 			}
 		}
 	}
@@ -947,13 +1214,21 @@ estate_church_protect_brethren = {
 				event_target:agenda_province = {
 					OR = {
 						AND = {
-							NOT = { is_claim = root }
-							NOT = { is_core = root }
+							NOT = {
+								is_claim = root
+							}
+							NOT = {
+								is_core = root
+							}
 						}
 						any_neighbor_province = {
 							owned_by = event_target:agenda_country
-							NOT = { is_claim = root }
-							NOT = { is_core = root }
+							NOT = {
+								is_claim = root
+							}
+							NOT = {
+								is_core = root
+							}
 							religion = root
 						}
 					}
@@ -962,16 +1237,24 @@ estate_church_protect_brethren = {
 			event_target:agenda_province = {
 				if = {
 					limit = {
-						NOT = { is_claim = root }
-						NOT = { is_core = root }
+						NOT = {
+							is_claim = root
+						}
+						NOT = {
+							is_core = root
+						}
 					}
 					add_claim = root
 				}
 				every_neighbor_province = {
 					limit = {
 						owned_by = event_target:agenda_country
-						NOT = { is_claim = root }
-						NOT = { is_core = root }
+						NOT = {
+							is_claim = root
+						}
+						NOT = {
+							is_core = root
+						}
 						religion = root
 					}
 					add_claim = root
@@ -990,12 +1273,16 @@ estate_church_protect_brethren = {
 					religion = root
 				}
 			}
-			hidden_trigger = { religion = root }
+			hidden_trigger = {
+				religion = root
+			}
 		}
 	}
 	fail_if = {
 		event_target:agenda_province = {
-			NOT = { religion = root }
+			NOT = {
+				religion = root
+			}
 		}
 	}
 	task_completed_effect = {
@@ -1017,18 +1304,20 @@ estate_church_protect_brethren = {
 			loyalty = 15
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_church
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_church
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
+		}
 		event_target:agenda_province = {
 			if = {
 				limit = {
 					is_claim = root
-					NOT = { is_permanent_claim = root }
+					NOT = {
+						is_permanent_claim = root
+					}
 				}
 				remove_claim = root
 			}
@@ -1037,21 +1326,22 @@ estate_church_protect_brethren = {
 					limit = {
 						owned_by = event_target:agenda_country
 						is_claim = root
-						NOT = { is_permanent_claim = root }
+						NOT = {
+							is_permanent_claim = root
+						}
 					}
 					remove_claim = root
 				}
 			}
 		}
-    }
+	}
 }
-
 
 #Ulema: Propagate religion in trade node (if you have CoC)
 estate_church_propagate_religion = {
 	can_select = {
 		has_dlc = "Cradle of Civilization"
-		religion_group = muslim
+		is_muslim_viking_mod = yes
 		dominant_religion = root
 		any_active_trade_node = {
 			trade_share = {
@@ -1061,9 +1351,15 @@ estate_church_propagate_religion = {
 			is_node_in_trade_company_region = yes
 			any_trade_node_member_province = {
 				is_city = yes
-				NOT = { religion_group = muslim }
-				NOT = { religion_group = christian }
-				NOT = { religion_group = jewish_group }
+				NOT = {
+					is_muslim_viking_mod = yes
+				}
+				NOT = {
+					is_christian_viking_mod = yes
+				}
+				NOT = {
+					religion_group = jewish_group
+				}
 			}
 			calc_true_if = {
 				amount = 10
@@ -1072,7 +1368,9 @@ estate_church_propagate_religion = {
 				}
 			}
 		}
-		NOT = { has_country_modifier = missionary_zeal }
+		NOT = {
+			has_country_modifier = missionary_zeal
+		}
 	}
 	selection_weight = {
 		factor = 2.5
@@ -1087,9 +1385,15 @@ estate_church_propagate_religion = {
 				is_node_in_trade_company_region = yes
 				any_trade_node_member_province = {
 					is_city = yes
-					NOT = { religion_group = muslim }
-					NOT = { religion_group = christian }
-					NOT = { religion_group = jewish_group }
+					NOT = {
+						is_muslim_viking_mod = yes
+					}
+					NOT = {
+						is_christian_viking_mod = yes
+					}
+					NOT = {
+						religion_group = jewish_group
+					}
 				}
 				calc_true_if = {
 					amount = 10
@@ -1106,9 +1410,15 @@ estate_church_propagate_religion = {
 			province_id = event_target:agenda_trade_node
 		}
 		is_city = yes
-		NOT = { religion_group = muslim }
-		NOT = { religion_group = christian }
-		NOT = { religion_group = jewish_group }
+		NOT = {
+			is_muslim_viking_mod = yes
+		}
+		NOT = {
+			is_christian_viking_mod = yes
+		}
+		NOT = {
+			religion_group = jewish_group
+		}
 	}
 	task_requirements = {
 		custom_trigger_tooltip = {
@@ -1117,8 +1427,8 @@ estate_church_propagate_religion = {
 				all_trade_node_member_province = {
 					OR = {
 						religion = root
-						religion_group = muslim
-						religion_group = christian
+						is_muslim_viking_mod = yes
+						is_christian_viking_mod = yes
 						religion_group = jewish_group
 						is_city = no
 					}
@@ -1138,7 +1448,9 @@ estate_church_propagate_religion = {
 	}
 	fail_if = {
 		OR = {
-			NOT = { religion_group = muslim }
+			NOT = {
+				is_muslim_viking_mod = yes
+			}
 			event_target:agenda_trade_node = {
 				all_trade_node_member_province = {
 					NOT = {
@@ -1151,23 +1463,24 @@ estate_church_propagate_religion = {
 			}
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_church
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_church
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }
-
 
 #Relations with DotF
 estate_church_relations_with_dotf = {
 	can_select = {
 		any_country = {
 			religion = root
-			NOT = { tag = root }
+			NOT = {
+				tag = root
+			}
 			is_defender_of_faith = yes
 			NOT = {
 				has_opinion = {
@@ -1179,11 +1492,23 @@ estate_church_relations_with_dotf = {
 				who = root
 				value = -50
 			}
-			NOT = { war_with = root }
-			NOT = { alliance_with = root }
-			NOT = { overlord_of = root }
-			NOT = { is_rival = root }
-			NOT = { ROOT = { is_rival = prev } }
+			NOT = {
+				war_with = root
+			}
+			NOT = {
+				alliance_with = root
+			}
+			NOT = {
+				overlord_of = root
+			}
+			NOT = {
+				is_rival = root
+			}
+			NOT = {
+				ROOT = {
+					is_rival = prev
+				}
+			}
 			any_owned_province = {
 				has_discovered = root
 			}
@@ -1207,7 +1532,9 @@ estate_church_relations_with_dotf = {
 		random_country = {
 			limit = {
 				religion = root
-				NOT = { tag = root }
+				NOT = {
+					tag = root
+				}
 				is_defender_of_faith = yes
 				NOT = {
 					has_opinion = {
@@ -1219,11 +1546,23 @@ estate_church_relations_with_dotf = {
 					who = root
 					value = -50
 				}
-				NOT = { war_with = root }
-				NOT = { alliance_with = root }
-				NOT = { overlord_of = root }
-				NOT = { is_rival = root }
-				NOT = { ROOT = { is_rival = prev } }
+				NOT = {
+					war_with = root
+				}
+				NOT = {
+					alliance_with = root
+				}
+				NOT = {
+					overlord_of = root
+				}
+				NOT = {
+					is_rival = root
+				}
+				NOT = {
+					ROOT = {
+						is_rival = prev
+					}
+				}
 				any_owned_province = {
 					has_discovered = root
 				}
@@ -1233,7 +1572,9 @@ estate_church_relations_with_dotf = {
 	}
 	task_requirements = {
 		if = {
-			limit = { is_defender_of_faith = no }
+			limit = {
+				is_defender_of_faith = no
+			}
 			any_country = {
 				custom_trigger_tooltip = {
 					tooltip = is_root_religion
@@ -1251,7 +1592,9 @@ estate_church_relations_with_dotf = {
 		}
 	}
 	fail_if = {
-		NOT = { is_defender_of_faith = yes }
+		NOT = {
+			is_defender_of_faith = yes
+		}
 		OR = {
 			NOT = {
 				any_country = {
@@ -1272,12 +1615,12 @@ estate_church_relations_with_dotf = {
 			loyalty = 15
 		}
 	}
-    failing_effect = {
-        add_estate_loyalty_modifier = {
-            estate = estate_church
+	failing_effect = {
+		add_estate_loyalty_modifier = {
+			estate = estate_church
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-        }
-    }
+		}
+	}
 }

@@ -160,7 +160,7 @@ malankara_rebels = {
 	# Country scope
 	can_negotiate_trigger = {
 		OR = {
-			religion_group = christian
+			is_christian_viking_mod = yes
 			dominant_religion = malankara
 		}
 	}
@@ -181,7 +181,7 @@ malankara_rebels = {
 		}
 		if = {
 			limit = {
-				NOT = { religion_group = christian }
+				NOT = { is_christian_viking_mod = yes }
 			}
 			add_prestige = -50
 			every_owned_province = {
@@ -219,7 +219,7 @@ malankara_rebels = {
 			limit = {
 				NOT = { religion = malankara }
 				NOT = { dominant_religion = malankara }
-				religion_group = christian
+				is_christian_viking_mod = yes
 				NOT = { has_country_modifier = heretic_tolerance }
 			}
 			add_country_modifier = {

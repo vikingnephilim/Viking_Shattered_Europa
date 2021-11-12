@@ -2,19 +2,23 @@
 # Throne Pretender rebels.
 ######################################################################
 pretender_rebels = {
-	color = { 179 51 51 }
+	color = {
+		179
+		51
+		51
+	}
 	area = nation
 	government = monarchy
 	defection = none
 	independence = none
 	unit_transfer = yes
 	gfx_type = culture_province
-			resilient = yes					# Will not disband on defeat.
-	reinforcing = yes				# Will reinforce (double rate in rebel controlled provinces)
-	general = yes					# Does use generals. The 'define_ruler' effect with 'rebel' argument will pick the rebel leader as new King.
+	resilient = yes	# Will not disband on defeat.
+	reinforcing = yes	# Will reinforce (double rate in rebel controlled provinces)
+	general = yes	# Does use generals. The 'define_ruler' effect with 'rebel' argument will pick the rebel leader as new King.
 	smart = yes
 	disband_on_leader_death = no	# Pretender rebels live forever!
-	will_relocate = yes				# Units will relocate if they have sieged all provinces nearby and has to move over sea.
+	will_relocate = yes	# Units will relocate if they have sieged all provinces nearby and has to move over sea.
 	dynasty = yes	#same dynasty for rebel uprising
 	artillery = 0.1
 	infantry = 0.5
@@ -24,8 +28,8 @@ pretender_rebels = {
 	handle_action_negotiate = no
 	handle_action_stability = yes
 	handle_action_build_core = yes
-	handle_action_send_missionary = yes	
-			spawn_chance = {
+	handle_action_send_missionary = yes
+	spawn_chance = {
 		factor = 1
 		modifier = {
 			factor = 0
@@ -42,7 +46,9 @@ pretender_rebels = {
 		modifier = {
 			factor = 0
 			owner = {
-				NOT = { num_of_cities = 3 }
+				NOT = {
+					num_of_cities = 3
+				}
 			}
 		}
 		modifier = {
@@ -104,19 +110,25 @@ pretender_rebels = {
 			}
 		}
 		modifier = {
-			factor = 5.0
+			factor = 5
 			owner = {
 				government = republic
-				NOT = { republican_tradition = 40 }
+				NOT = {
+					republican_tradition = 40
+				}
 			}
 		}
 		modifier = {
-			factor = 50.0
-			owner = { has_disaster = war_of_the_roses }
+			factor = 50
+			owner = {
+				has_disaster = war_of_the_roses
+			}
 		}
 		modifier = {
 			factor = 2
-			owner = { religion = inti }
+			owner = {
+				religion = inti
+			}
 		}
 		modifier = {
 			factor = 30
@@ -132,7 +144,9 @@ pretender_rebels = {
 				government = monarchy
 				has_regency = yes
 				has_heir = yes
-				NOT = { heir_claim = 33 }
+				NOT = {
+					heir_claim = 33
+				}
 			}
 		}
 		modifier = {
@@ -141,7 +155,9 @@ pretender_rebels = {
 				government = monarchy
 				has_regency = yes
 				has_heir = yes
-				NOT = { heir_claim = 66 }
+				NOT = {
+					heir_claim = 66
+				}
 			}
 		}
 		modifier = {
@@ -150,7 +166,9 @@ pretender_rebels = {
 				government = monarchy
 				has_regency = yes
 				has_heir = yes
-				NOT = { heir_claim = 85 }
+				NOT = {
+					heir_claim = 85
+				}
 			}
 		}
 		modifier = {
@@ -163,35 +181,45 @@ pretender_rebels = {
 			factor = 3
 			owner = {
 				is_lesser_in_union = yes
-				NOT = { legitimacy = 75 }
+				NOT = {
+					legitimacy = 75
+				}
 			}
 		}
 		modifier = {
 			factor = 3
 			owner = {
 				is_lesser_in_union = yes
-				NOT = { legitimacy = 50 }
+				NOT = {
+					legitimacy = 50
+				}
 			}
 		}
 		modifier = {
 			factor = 3
 			owner = {
 				is_lesser_in_union = yes
-				NOT = { legitimacy = 25 }
+				NOT = {
+					legitimacy = 25
+				}
 			}
 		}
 		modifier = {
 			factor = 0.25
 			owner = {
-				NOT = { primary_culture = ROOT }
+				NOT = {
+					primary_culture = ROOT
+				}
 			}
 		}
 		modifier = {
 			factor = 0.1
-			NOT = { is_core = ROOT }
+			NOT = {
+				is_core = ROOT
+			}
 			any_core_country = {
 				primary_culture = ROOT
-	 		}
+			}
 		}
 		modifier = {
 			factor = 0.75
@@ -209,7 +237,9 @@ pretender_rebels = {
 		}
 		modifier = {
 			factor = 10
-			owner = { has_country_modifier = "tribal_succession_crisis" }
+			owner = {
+				has_country_modifier = "tribal_succession_crisis"
+			}
 		}
 		modifier = {
 			factor = 2.5
@@ -218,7 +248,7 @@ pretender_rebels = {
 			}
 		}
 	}
- 	# This is checked for EACH province in the Area of Operations
+	# This is checked for EACH province in the Area of Operations
 	movement_evaluation = {
 		factor = 1
 		modifier = {
@@ -230,7 +260,7 @@ pretender_rebels = {
 			controlled_by = REB
 		}
 		modifier = {
-			factor = 4.0
+			factor = 4
 			is_capital = yes
 		}
 		modifier = {
@@ -246,9 +276,9 @@ pretender_rebels = {
 			unrest = 6
 		}
 	}
- 	# Province Scope
- 	siege_won_trigger = {
- 	}
+	# Province Scope
+	siege_won_trigger = {
+	}
 	siege_won_effect = {
 	}
 	# Country scope
@@ -261,8 +291,8 @@ pretender_rebels = {
 	}
 	# Localisation for their demands
 	demands_description = "pretender_rebels_demand"
-	# Country Scope
-			demands_enforced_effect = {
+	# Country Scope	
+	demands_enforced_effect = {
 		hidden_effect = {
 			add_country_modifier = {
 				name = just_lost_to_rebels
@@ -277,11 +307,15 @@ pretender_rebels = {
 			change_statists_vs_orangists = 1
 		}
 		if = {
-			limit = { religion = inti }
+			limit = {
+				religion = inti
+			}
 			remove_religious_reforms = 2
 		}
 		if = {
-			limit = { has_disaster = civil_war }
+			limit = {
+				has_disaster = civil_war
+			}
 			add_prestige = -200
 			add_legitimacy = 25
 		}
@@ -313,51 +347,79 @@ pretender_rebels = {
 			change_government = REB
 			#set_legacy_government = despotic_monarchy
 		}
-		kill_heir = yes
+		kill_heir = {
+			allow_new_heir = no
+		}
 		kill_consort = yes
-		set_country_flag = no_new_succession_crisis_if_pretender_rebels #This is used in the event that triggers from the on_action to ensure that you don't get new pretenders if these pretenders are happening because of a succession crisis.
+		set_country_flag = no_new_succession_crisis_if_pretender_rebels		#This is used in the event that triggers from the on_action to ensure that you don't get new pretenders if these pretenders are happening because of a succession crisis.
 		define_ruler = {
 			rebel = yes
 		}
 		clr_country_flag = no_new_succession_crisis_if_pretender_rebels
 		if = {
-			limit = { has_heir = yes }
-			kill_heir = yes
+			limit = {
+				has_heir = yes
+			}
+			kill_heir = {
+				allow_new_heir = no
+			}
 		}
 		if = {
-			limit = { has_disaster = counts_feud }
+			limit = {
+				has_disaster = counts_feud
+			}
 			end_disaster = counts_feud
 			clr_country_flag = pretender_flag
 			clr_country_flag = monarch_flag
 		}
 		if = {
-			limit = { has_disaster = civil_war }
+			limit = {
+				has_disaster = civil_war
+			}
 			end_disaster = civil_war
 			clr_country_flag = civilwar_on_capital
 		}
 		if = {
-			limit = { has_disaster = internal_conflicts }
-			country_event = { id = internal_conflicts.8 }
+			limit = {
+				has_disaster = internal_conflicts
+			}
+			country_event = {
+				id = internal_conflicts.8
+			}
 			end_disaster = internal_conflicts
 		}
 		if = {
-			limit = { has_disaster = castilian_civil_war }
+			limit = {
+				has_disaster = castilian_civil_war
+			}
 			set_country_flag = cas_civil_war_rebels_won
-			country_event = { id = castilian_civil_war.100 }
+			country_event = {
+				id = castilian_civil_war.100
+			}
 			end_disaster = castilian_civil_war
 		}
 		if = {
-			limit = { has_disaster = time_of_troubles }
-			country_event = { id = time_of_troubles.10 }
+			limit = {
+				has_disaster = time_of_troubles
+			}
+			country_event = {
+				id = time_of_troubles.10
+			}
 			end_disaster = time_of_troubles
 		}
 		if = {
-			limit = { has_disaster = english_civil_war }
-			country_event = { id = english_civil_war.100 }
+			limit = {
+				has_disaster = english_civil_war
+			}
+			country_event = {
+				id = english_civil_war.100
+			}
 			end_disaster = english_civil_war
 		}
 		if = {
-			limit = { is_revolution_target = yes }
+			limit = {
+				is_revolution_target = yes
+			}
 			set_revolution_target = ---
 		}
 	}

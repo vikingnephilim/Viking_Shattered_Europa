@@ -13,7 +13,7 @@ country_decisions = {
 			151 = {
 				OR = {
 					culture = turkish
-					religion_group = muslim
+					is_muslim_viking_mod = yes
 				}
 			}
 			has_global_flag = greek_need_restore_constantinople
@@ -24,6 +24,7 @@ country_decisions = {
 			is_core = 151
 		}
 		effect = {
+			restore_country_name_effect = yes
 			151 = {
 				change_culture = greek
 				change_religion = ROOT

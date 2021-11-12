@@ -7,6 +7,7 @@ theocracy_mechanic = {
 	different_religion_group_acceptance = -50
 	religion = yes
 	heir = yes
+	can_customise_heir = no
 	basic_reform = yes	# = invisible/does not take up a slot
 	valid_for_nation_designer = no
 	modifiers = {
@@ -221,14 +222,14 @@ loyal_nobility_reform = {
 monastic_breweries_reform = {
 	potential = {
 		OR = {
-			religion = catholic
+			is_christian_viking_mod = yes
 			culture_group = gaelic
 			primary_culture = scottish
 		}
 	}
 	trigger = {
 		OR = {
-			religion = catholic
+			is_christian_viking_mod = yes
 			culture_group = gaelic
 			primary_culture = scottish
 		}
@@ -379,7 +380,7 @@ hereditary_religious_leadership_reform = {
 	potential = {
 		OR = {
 			religion_group = zoroastrian_group
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 		}
 	}
 	icon = "muslim_highlighted"
@@ -513,10 +514,10 @@ theocratic_democracy_reform = {
 			has_dlc = "Common Sense"
 		}
 		has_parliament = yes
-	}
 	custom_attributes = {
 		blocked_call_diet = yes
 	}
+}
 	ai = {
 		factor = 1
 		modifier = {
@@ -541,7 +542,7 @@ theocratic_democracy_reform = {
 			OR = {
 				has_reform = mughal_government
 				has_reform = celestial_empire
-				religion = confucianism
+				is_chinese_religion_viking_mod = YES
 			}
 		}
 	}
@@ -584,10 +585,10 @@ regionally_elected_commanders = {
 			has_dlc = "Common Sense"
 		}
 		has_parliament = yes
-	}
 	custom_attributes = {
 		blocked_call_diet = yes
 	}
+}
 	ai = {
 		factor = 1
 		modifier = {
@@ -612,7 +613,7 @@ regionally_elected_commanders = {
 			OR = {
 				has_reform = mughal_government
 				has_reform = celestial_empire
-				religion = confucianism
+				is_chinese_religion_viking_mod = YES
 			}
 		}
 	}
@@ -644,6 +645,8 @@ monastic_elections_reform = {
 		}
 		heir = no
 		election_on_death = yes
+		duration = 4
+		has_term_election = yes
 		states_general_mechanic = {
 			militarists = {
 				manpower_recovery_speed = 0.2
@@ -677,7 +680,7 @@ commander_king_reform = {
 			has_reform = monastic_order_reform
 			tag = KOJ
 		}
-		full_idea_group = aristocracy_ideas
+		full_idea_group = theocracy_gov_ideas
 	}
 	modifiers = {
 		devotion = 0.1
@@ -741,19 +744,7 @@ admiral_king_reform = {
 church_and_state_reform = {
 	potential = {
 		NOT = {
-			religion_group = european_pagan
-		}
-		NOT = {
-			religion_group = asian_pagan
-		}
-		NOT = {
-			religion_group = american_pagan
-		}
-		NOT = {
-			religion_group = ancient_pagan
-		}
-		NOT = {
-			religion_group = african_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	icon = "church_and_state_reform"
@@ -769,19 +760,7 @@ church_and_state_reform = {
 god_and_man_reform = {
 	potential = {
 		NOT = {
-			religion_group = european_pagan
-		}
-		NOT = {
-			religion_group = asian_pagan
-		}
-		NOT = {
-			religion_group = american_pagan
-		}
-		NOT = {
-			religion_group = ancient_pagan
-		}
-		NOT = {
-			religion_group = african_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	icon = "religious_leader"
@@ -800,11 +779,7 @@ religious_harmony_reform = {
 	allow_normal_conversion = yes
 	trigger = {
 		OR = {
-			religion_group = european_pagan
-			religion_group = asian_pagan
-			religion_group = american_pagan
-			religion_group = ancient_pagan
-			religion_group = african_pagan
+			is_pagan_viking_mod = yes
 			has_idea_group = humanist_ideas
 		}
 	}
@@ -820,22 +795,10 @@ organising_our_religion_reform = {
 	icon = "organising_our_religion_reform"
 	allow_normal_conversion = yes
 	potential = {
-		OR = {
-			religion_group = european_pagan
-			religion_group = asian_pagan
-			religion_group = american_pagan
-			religion_group = ancient_pagan
-			religion_group = african_pagan
-		}
+		is_pagan_viking_mod = yes
 	}
 	trigger = {
-		OR = {
-			religion_group = european_pagan
-			religion_group = asian_pagan
-			religion_group = american_pagan
-			religion_group = ancient_pagan
-			religion_group = african_pagan
-		}
+		is_pagan_viking_mod = yes
 	}
 	modifiers = {
 		yearly_absolutism = 1
@@ -852,36 +815,12 @@ religion_in_one_country_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		NOT = {
-			religion_group = european_pagan
-		}
-		NOT = {
-			religion_group = asian_pagan
-		}
-		NOT = {
-			religion_group = american_pagan
-		}
-		NOT = {
-			religion_group = ancient_pagan
-		}
-		NOT = {
-			religion_group = african_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
 		NOT = {
-			religion_group = european_pagan
-		}
-		NOT = {
-			religion_group = asian_pagan
-		}
-		NOT = {
-			religion_group = american_pagan
-		}
-		NOT = {
-			religion_group = ancient_pagan
-		}
-		NOT = {
-			religion_group = african_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -899,44 +838,20 @@ religious_permanent_revolution_reform = {
 	potential = {
 		AND = {
 			NOT = {
-				religion_group = european_pagan
+				is_pagan_viking_mod = yes
 			}
 			NOT = {
-				religion_group = asian_pagan
-			}
-			NOT = {
-				religion_group = american_pagan
-			}
-			NOT = {
-				religion_group = ancient_pagan
-			}
-			NOT = {
-				religion_group = african_pagan
-			}
-			NOT = {
-				religion = confucianism
+				is_chinese_religion_viking_mod = YES
 			}
 		}
 	}
 	trigger = {
 		AND = {
 			NOT = {
-				religion_group = european_pagan
+				is_pagan_viking_mod = yes
 			}
 			NOT = {
-				religion_group = asian_pagan
-			}
-			NOT = {
-				religion_group = american_pagan
-			}
-			NOT = {
-				religion_group = ancient_pagan
-			}
-			NOT = {
-				religion_group = african_pagan
-			}
-			NOT = {
-				religion = confucianism
+				is_chinese_religion_viking_mod = YES
 			}
 		}
 	}
@@ -970,22 +885,10 @@ priestly_autonomy_reform = {
 	icon = "strength_of_the_khalsa"
 	allow_normal_conversion = yes
 	potential = {
-		OR = {
-			religion_group = european_pagan
-			religion_group = asian_pagan
-			religion_group = american_pagan
-			religion_group = ancient_pagan
-			religion_group = african_pagan
-		}
+		is_pagan_viking_mod = yes
 	}
 	trigger = {
-		OR = {
-			religion_group = european_pagan
-			religion_group = asian_pagan
-			religion_group = american_pagan
-			religion_group = ancient_pagan
-			religion_group = african_pagan
-		}
+		is_pagan_viking_mod = yes
 	}
 	modifiers = {
 		governing_capacity = 250
@@ -999,22 +902,10 @@ proclaim_religious_head_reform = {
 	icon = "shaman"
 	allow_normal_conversion = yes
 	potential = {
-		OR = {
-			religion_group = european_pagan
-			religion_group = asian_pagan
-			religion_group = american_pagan
-			religion_group = ancient_pagan
-			religion_group = african_pagan
-		}
+		is_pagan_viking_mod = yes
 	}
 	trigger = {
-		OR = {
-			religion_group = european_pagan
-			religion_group = asian_pagan
-			religion_group = american_pagan
-			religion_group = ancient_pagan
-			religion_group = african_pagan
-		}
+		is_pagan_viking_mod = yes
 		custom_trigger_tooltip = {
 			tooltip = no_other_head_tt
 			NOT = {

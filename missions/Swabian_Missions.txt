@@ -719,7 +719,7 @@ swabian_group_3 = { #crusader group
 		provinces_to_highlight = {
 			is_capital = yes
 			owner = {
-				religion_group = muslim
+				is_muslim_viking_mod = yes
 				total_development = 300
 			}
 		}
@@ -729,7 +729,7 @@ swabian_group_3 = { #crusader group
 				custom_trigger_tooltip = {
 					tooltip = swa_war_on_infidel_trigger_tooltip2
 					any_country = {
-						religion_group = muslim
+						is_muslim_viking_mod = yes
 						total_development = 300
 						is_in_war = {
 							attacker_leader = root
@@ -741,7 +741,7 @@ swabian_group_3 = { #crusader group
 					tooltip = swa_war_on_infidel_trigger_tooltip
 					NOT = {
 						any_country = {
-							religion_group = muslim
+							is_muslim_viking_mod = yes
 							total_development = 300
 						}
 					}
@@ -755,7 +755,7 @@ swabian_group_3 = { #crusader group
 				balkan_region = {
 					limit = {
 						owner = {
-							NOT = { religion_group = christian }
+							NOT = { is_christian_viking_mod = yes }
 						}
 					}
 					add_claim = root
@@ -771,14 +771,14 @@ swabian_group_3 = { #crusader group
 
 		provinces_to_highlight = {
 			region = balkan_region
-			owner = { NOT = { religion_group = christian } }
+			owner = { NOT = { is_christian_viking_mod = yes } }
 		}
 		
 		trigger = {
 			balkan_region = {
 				type = all
 				owner = {
-					religion_group = christian
+					is_christian_viking_mod = yes
 				}
 			}
 			calc_true_if = {
@@ -852,7 +852,7 @@ swabian_group_3 = { #crusader group
 			add_prestige = 50
 			if = {
 				limit = {
-					religion_group = christian
+					is_christian_viking_mod = yes
 				}
 				add_country_modifier = {
 					name = swa_crusader_lord

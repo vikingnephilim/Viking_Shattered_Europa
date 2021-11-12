@@ -21,12 +21,9 @@ viking_cb_hre_religion_change = {
 		is_emperor = no
 		NOT = { is_year = 1650 }
 		OR = {
-			religion = anglican
-			religion = cathar
 			religion = catholic
 			religion = fraticelli
 			religion = hussite
-			religion = lollard
 			religion = protestant
 			religion = reformed
 			religion = waldensian
@@ -41,4 +38,19 @@ viking_cb_hre_religion_change = {
 		}
 	}
 	war_goal = viking_wg_hre_religion_change
+}
+#Special Great Holy War for Norse Fylkir
+cb_norse_crusade = {
+	valid_for_subject = no
+	prerequisites = {
+		#Only for Fylkir, naturally this means they are Norse
+		has_country_modifier = fylkir_triggered_modifier
+		#Target must not be Norse
+		FROM = {
+			NOT = {
+				religion = norse_pagan_reformed
+			}
+		}
+	}
+	war_goal = superiority_world_crusade
 }

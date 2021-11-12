@@ -438,7 +438,7 @@ mnd_maj_3 = {
 			set_country_flag = maj_no_more_bad_religion_events
 			if = {
 				limit = {
-					NOT = { religion = sunni }
+					NOT = { is_muslim_viking_mod = yes }
 				}
 				custom_tooltip = maj_no_more_bad_religion_events_tt
 			}
@@ -493,7 +493,7 @@ mnd_maj_3 = {
 			if = {
 				limit = {
 					has_dlc = "Wealth of Nations"
-					religion = hinduism
+					is_indic_viking_mod = yes
 				}
 				custom_tooltip = buddha_deity_tt
 			}
@@ -516,9 +516,9 @@ mnd_maj_3 = {
 				}
 				AND = {
 					is_capital = yes
-					ROOT = { religion_group = muslim }
+					ROOT = { is_muslim_viking_mod = yes }
 					owner = {
-						NOT = { religion_group = muslim }
+						NOT = { is_muslim_viking_mod = yes }
 						capital_scope = {
 							OR = {
 								region = malaya_region
@@ -529,9 +529,9 @@ mnd_maj_3 = {
 				}
 				AND = {
 					is_capital = yes
-					ROOT = { NOT = { religion_group = muslim } }
+					ROOT = { NOT = { is_muslim_viking_mod = yes } }
 					owner = {
-						religion_group = muslim
+						is_muslim_viking_mod = yes
 						capital_scope = {
 							OR = {
 								region = malaya_region
@@ -545,13 +545,13 @@ mnd_maj_3 = {
 		trigger = {
 			if = {
 				limit = {
-					NOT = { religion_group = muslim }
+					NOT = { is_muslim_viking_mod = yes }
 				}
 				custom_trigger_tooltip = {
 					tooltip = no_more_muslims_tt
 					NOT = {
 						any_country = {
-							religion_group = muslim
+							is_muslim_viking_mod = yes
 							capital_scope = {
 								OR = {
 									region = malaya_region
@@ -567,7 +567,7 @@ mnd_maj_3 = {
 					tooltip = all_muslims_tt
 					NOT = {
 						any_country = {
-							NOT = { religion_group = muslim }
+							NOT = { is_muslim_viking_mod = yes }
 							capital_scope = {
 								OR = {
 									region = malaya_region
@@ -589,19 +589,19 @@ mnd_maj_3 = {
 		effect = {
 			if = {
 				limit = {
-					NOT = { religion = sunni }
+					NOT = { is_muslim_viking_mod = yes }
 				}
 				if = {
 					limit = {
 						has_dlc = "Cradle of Civilization"
-						religion = hinduism
+						is_indic_viking_mod = yes
 					}
 					custom_tooltip = propagate_religion_maj_tt
 				}
 				every_province = {
 					limit = {
 						area = north_sumatra_area
-						religion = sunni
+						is_muslim_viking_mod = yes
 					}
 					change_religion = ROOT
 				}

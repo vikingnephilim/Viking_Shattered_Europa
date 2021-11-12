@@ -19,14 +19,14 @@ sun_1 = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 4
-				religion = sunni
+				is_muslim_viking_mod = yes
 			}
 		}
 		effect = {
 			if = {
 				limit = {
 					NOT = {
-						religion_group = muslim
+						is_muslim_viking_mod = yes
 					}
 				}
 				country_event = {
@@ -152,7 +152,7 @@ sun_1 = {
 			if = {
 				limit = {
 					has_dlc = "Wealth of Nations"
-					religion = hinduism
+					is_indic_viking_mod = yes
 				}
 				custom_tooltip = buddha_deity_tt
 			}

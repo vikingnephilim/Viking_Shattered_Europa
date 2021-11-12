@@ -44,6 +44,36 @@ cathar_reform = {
 	}
 }
 
+kor_landed_aristocracy = {
+	icon = "asian_scripture"
+	allow_normal_conversion = no
+	legacy_equivalent = feudal_monarchy
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	modifiers = {
+		tolerance_own = 1
+		tolerance_heretic = 1
+		tolerance_heathen = 1
+		idea_cost = -0.1
+	}
+	potential = {
+		culture_group = korean_g
+		religion = korean_pagan_reformed
+	}
+	trigger = {
+		culture_group = korean_g
+		religion = korean_pagan_reformed
+	}
+	ai = {
+		factor = 0.5
+		modifier = {
+			factor = 10
+			culture_group = korean_g
+			religion = korean_pagan_reformed
+		}
+	}
+}
+
 irish_clan = {
 	icon = "king"
 	allow_normal_conversion = yes
@@ -66,10 +96,7 @@ irish_clan = {
 			tag = IRE
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
@@ -91,10 +118,7 @@ irish_clan = {
 			tag = IRE
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	valid_for_nation_designer = yes
@@ -129,13 +153,7 @@ french_feudalism = {
 			}
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
@@ -153,13 +171,7 @@ french_feudalism = {
 			}
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	lock_level_when_selected = no
@@ -184,13 +196,7 @@ ancien_regime_reform = {
 			has_reform = french_absolutism
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
@@ -200,13 +206,7 @@ ancien_regime_reform = {
 			has_reform = french_absolutism
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -232,13 +232,7 @@ french_absolutism = {
 			has_reform = ancien_regime_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
@@ -248,13 +242,7 @@ french_absolutism = {
 			has_reform = ancien_regime_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -275,26 +263,14 @@ enlightened_despotism_reform = {
 		tag = SPA
 		absolutism = 50
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
 		tag = SPA
 		absolutism = 50
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	valid_for_nation_designer = yes
@@ -318,37 +294,25 @@ granadan_iqta_reform = {
 	queen = no
 	potential = {
 		AND = {
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 			primary_culture = andalucian
 		}
 		NOT = {
-			religion_group = christian
+			is_christian_viking_mod = yes
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
 		AND = {
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 			primary_culture = andalucian
 			NOT = {
-				religion_group = christian
+				is_christian_viking_mod = yes
 			}
 			NOT = {
-				religion = norse_pagan_reformed
-			}
-			NOT = {
-				religion = hellenic_pagan
-			}
-			NOT = {
-				religion = druidic_pagan
+				is_pagan_viking_mod = yes
 			}
 		}
 	}
@@ -376,13 +340,7 @@ baltic_tribal_fed = {
 		}
 		tag = BLT
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	valid_for_nation_designer = yes
@@ -415,30 +373,15 @@ basic_reformed_mandala_reform = {
 					religion = shinto
 				}
 				NOT = {
-					religion = confucianism
+					is_chinese_religion_viking_mod = YES
 				}
 				NOT = {
-					religion = tantra
-				}
-				NOT = {
-					religion = taoism
-				}
-				NOT = {
-					religion = zen
-				}
-				NOT = {
-					religion = norse_pagan_reformed
-				}
-				NOT = {
-					religion = hellenic_pagan
-				}
-				NOT = {
-					religion = druidic_pagan
+					is_pagan_viking_mod = yes
 				}
 				OR = {
 					religion_group = eastern
 					religion_group = dharmic
-					religion_group = muslim
+					is_muslim_viking_mod = yes
 				}
 				technology_group = chinese
 			}
@@ -452,30 +395,15 @@ basic_reformed_mandala_reform = {
 			religion = shinto
 		}
 		NOT = {
-			religion = confucianism
+			is_chinese_religion_viking_mod = YES
 		}
 		NOT = {
-			religion = tantra
-		}
-		NOT = {
-			religion = taoism
-		}
-		NOT = {
-			religion = zen
-		}
-		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		OR = {
 			religion_group = eastern
 			religion_group = dharmic
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 		}
 		technology_group = chinese
 	}
@@ -505,13 +433,7 @@ maharajadhiraja_reform = {
 			has_reform = maharajadhiraja_reform
 			tag = NPL
 			NOT = {
-				religion = norse_pagan_reformed
-			}
-			NOT = {
-				religion = hellenic_pagan
-			}
-			NOT = {
-				religion = druidic_pagan
+				is_pagan_viking_mod = yes
 			}
 		}
 	}
@@ -535,30 +457,15 @@ mandala_reform = {
 			religion = shinto
 		}
 		NOT = {
-			religion = confucianism
+			is_chinese_religion_viking_mod = YES
 		}
 		NOT = {
-			religion = tantra
-		}
-		NOT = {
-			religion = taoism
-		}
-		NOT = {
-			religion = zen
-		}
-		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		OR = {
 			religion_group = eastern
 			religion_group = dharmic
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 			religion = dayawism
 		}
 		technology_group = chinese
@@ -570,12 +477,12 @@ mandala_reform = {
 			religion = shinto
 		}
 		NOT = {
-			religion = confucianism
+			is_chinese_religion_viking_mod = YES
 		}
 		OR = {
 			religion_group = eastern
 			religion_group = dharmic
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 		}
 		technology_group = chinese
 	}
@@ -605,13 +512,7 @@ nayankara_reform = {
 			primary_culture = sinhala
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	valid_for_nation_designer = yes
@@ -631,13 +532,7 @@ nayankara_reform = {
 			primary_culture = sinhala
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -653,13 +548,7 @@ misl_confederacy_reform = {
 		has_dlc = "Dharma"
 		religion = sikhism
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	valid_for_nation_designer = yes
@@ -667,13 +556,7 @@ misl_confederacy_reform = {
 	nation_designer_trigger = {
 		religion = sikhism
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	legacy_equivalent = feudal_monarchy
@@ -689,13 +572,7 @@ polynesian_tribe = {
 	potential = {
 		culture_group = pacific
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	valid_for_nation_designer = yes
@@ -725,35 +602,23 @@ sharifate_reform = {
 	potential = {
 		OR = {
 			AND = {
-				religion_group = muslim
+				is_muslim_viking_mod = yes
 				primary_culture = hejazi_culture
 			}
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
 		OR = {
 			AND = {
-				religion_group = muslim
+				is_muslim_viking_mod = yes
 				primary_culture = hejazi_culture
 			}
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -779,25 +644,13 @@ norman_duchy_reform = {
 	potential = {
 		primary_culture = normand
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
 		primary_culture = normand
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -823,13 +676,7 @@ hessian_militarized_monarchy_reform = {
 			has_reform = hessian_militarized_monarchy_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
@@ -838,13 +685,7 @@ hessian_militarized_monarchy_reform = {
 			has_reform = hessian_militarized_monarchy_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -870,13 +711,7 @@ margrave_reform = {
 			total_development = 300
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
@@ -885,13 +720,7 @@ margrave_reform = {
 			total_development = 300
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	valid_for_nation_designer = yes
@@ -915,13 +744,7 @@ beylik = {
 			tag = RUM
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
@@ -933,13 +756,7 @@ beylik = {
 			tag = RUM
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	valid_for_nation_designer = yes
@@ -967,10 +784,7 @@ theocratic_autocracy = {
 			tag = WRM
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
@@ -981,10 +795,7 @@ theocratic_autocracy = {
 			tag = WRM
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	valid_for_nation_designer = yes
@@ -1009,7 +820,7 @@ expanded_devshirme_reform = {
 			has_reform = expanded_devshirme_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
@@ -1018,7 +829,7 @@ expanded_devshirme_reform = {
 			has_reform = expanded_devshirme_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -1046,13 +857,7 @@ geo_despotate = {
 			tag = SME
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	valid_for_nation_designer = yes
@@ -1083,13 +888,7 @@ despotate_of_caucasia_reform = {
 			has_reform = despotate_of_caucasia_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -1114,13 +913,7 @@ despotate_of_serbia_reform = {
 			has_reform = despotate_of_serbia_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
@@ -1129,13 +922,7 @@ despotate_of_serbia_reform = {
 			has_reform = despotate_of_serbia_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -1156,6 +943,9 @@ byz_rumpstate = {
 		OR = {
 			tag = FEO
 			tag = TRE
+		}
+		NOT = {
+			is_pagan_viking_mod = yes
 		}
 	}
 	fixed_rank = 1
@@ -1181,13 +971,7 @@ daimyo = {
 			has_country_flag = formed_japan_flag
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		overlord = {
 			has_reform = shogunate
@@ -1206,13 +990,7 @@ daimyo = {
 			region = japan_region
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -1232,13 +1010,7 @@ indep_daimyo = {
 			has_country_flag = formed_japan_flag
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		OR = {
 			AND = {
@@ -1270,13 +1042,7 @@ indep_daimyo = {
 			region = japan_region
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	legacy_equivalent = indep_daimyo_legacy
@@ -1303,13 +1069,7 @@ principality = {
 			culture = mordvin
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		OR = {
 			religion = orthodox
@@ -1329,6 +1089,9 @@ principality = {
 			culture_group = novgorod_group
 			culture_group = ruthenian_group
 			culture = mordvin
+		}
+		NOT = {
+			is_pagan_viking_mod = yes
 		}
 		OR = {
 			religion = orthodox
@@ -1364,25 +1127,13 @@ crown_of_castille = {
 			has_reform = crown_of_castille
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
 		has_reform = crown_of_castille
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	valid_for_nation_designer = yes
@@ -1410,17 +1161,14 @@ crown_of_aragon = {
 			has_reform = crown_of_aragon
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
 		has_reform = crown_of_aragon
+		NOT = {
+			is_pagan_viking_mod = yes
+		}
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -1453,13 +1201,7 @@ office_of_lord_regent_reform = {
 			has_reform = office_of_lord_regent_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
@@ -1470,13 +1212,7 @@ office_of_lord_regent_reform = {
 			has_reform = office_of_lord_regent_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -1502,13 +1238,7 @@ hungarian_archduchy_reform = {
 			have_had_reform = hungarian_archduchy_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_allow_hungarian_viking_mod = yes
 		}
 	}
 	nation_designer_cost = 0
@@ -1528,13 +1258,13 @@ feudal_theocracy = {
 	potential = {
 		OR = {
 			religion_group = zoroastrian_group
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 		}
 	}
 	nation_designer_trigger = {
 		OR = {
 			religion_group = zoroastrian_group
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 		}
 	}
 	legacy_equivalent = feudal_theocracy_legacy
@@ -1571,13 +1301,7 @@ arch_monarchy_reform = {
 			march = 1
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -1595,13 +1319,7 @@ lithuania_warlord_duke = {
 			tag = LIT
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
@@ -1629,13 +1347,7 @@ arch_duchy_reform = {
 			has_reform = arch_duchy_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
@@ -1644,13 +1356,7 @@ arch_duchy_reform = {
 			has_reform = arch_duchy_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -1672,13 +1378,7 @@ crown_of_saint_wenceslaus = {
 			has_reform = crown_of_saint_wenceslaus
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -1714,13 +1414,7 @@ polish_constitutionalism_reform = {
 	nation_designer_cost = 100
 	potential = {
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		OR = {
 			tag = POL
@@ -1730,13 +1424,7 @@ polish_constitutionalism_reform = {
 	}
 	trigger = {
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		OR = {
 			tag = POL
@@ -1772,26 +1460,14 @@ hessian_modern_militarized_monarchy_reform = {
 			has_reform = hessian_militarized_monarchy_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
 		has_reform = hessian_militarized_monarchy_reform
 		absolutism = 50
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -2041,13 +1717,7 @@ rajput_kingdom = {
 			primary_culture = marathi
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		technology_group = indian
 	}
@@ -2063,13 +1733,7 @@ rajput_kingdom = {
 			primary_culture = marathi
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		technology_group = indian
 	}
@@ -2087,13 +1751,7 @@ gond_kingdom = {
 		technology_group = indian
 		primary_culture = gondi
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	valid_for_nation_designer = yes
@@ -2115,7 +1773,7 @@ k_of_arm = {
 	potential = {
 		AND = {
 			tag = ARM
-			religion_group = christian
+			is_christian_viking_mod = yes
 		}
 	}
 	valid_for_nation_designer = yes
@@ -2149,12 +1807,12 @@ indian_sultanate_reform = {
 			culture_group = central_indic
 			has_reform = indian_sultanate_reform
 		}
-		religion_group = muslim
+		is_muslim_viking_mod = yes
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
 	nation_designer_trigger = {
-		religion_group = muslim
+		is_muslim_viking_mod = yes
 		capital_scope = {
 			superregion = india_superregion
 		}
@@ -2188,13 +1846,7 @@ kingdom_of_sicily_reform = {
 			has_reform = kingdom_of_sicily_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
@@ -2204,13 +1856,7 @@ kingdom_of_sicily_reform = {
 			has_reform = kingdom_of_sicily_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -2231,13 +1877,7 @@ english_monarchy = {
 	potential = {
 		have_had_reform = english_monarchy
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	lock_level_when_selected = yes
@@ -2325,7 +1965,7 @@ mamluk_government = {
 	icon = "mamluk_government"
 	allow_normal_conversion = yes
 	potential = {
-		religion_group = muslim
+		is_muslim_viking_mod = yes
 		OR = {
 			AND = {
 				tag = MAM
@@ -2342,7 +1982,7 @@ mamluk_government = {
 	nation_designer_cost = 60
 	fixed_rank = 2
 	nation_designer_trigger = {
-		religion_group = muslim
+		is_muslim_viking_mod = yes
 	}
 	modifiers = {
 		num_accepted_cultures = 3
@@ -2377,13 +2017,7 @@ kingdom_of_castille_and_leon = {
 			has_reform = kingdom_of_castille_and_leon
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
@@ -2435,13 +2069,7 @@ kingdom_of_portugal = {
 			has_reform = kingdom_of_portugal
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
@@ -2472,13 +2100,7 @@ kingdom_of_portugal_and_azures = {
 			has_reform = kingdom_of_portugal_and_azures
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
@@ -2509,13 +2131,7 @@ gorkha_kingdom_reform = {
 			tag = GRK
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		NOT = {
 			tag = NPL
@@ -2547,13 +2163,7 @@ kingdom_of_jerusalem_reform = {
 			has_reform = kingdom_of_jerusalem_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -2582,12 +2192,12 @@ solar_kingdom_reform = {
 			religion = shinto
 		}
 		NOT = {
-			religion = confucianism
+			is_chinese_religion_viking_mod = YES
 		}
 		OR = {
 			religion_group = eastern
 			religion_group = dharmic
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 			religion = dayawism
 		}
 		technology_group = chinese
@@ -2611,13 +2221,7 @@ irish_high_king = {
 	potential = {
 		tag = IRE
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	valid_for_nation_designer = yes
@@ -2646,30 +2250,18 @@ high_king_of_ireland_reform = {
 		OR = {
 			has_reform = high_king_of_ireland_reform
 			tag = IRE
-			NOT = {
-				religion = norse_pagan_reformed
-			}
-			NOT = {
-				religion = hellenic_pagan
-			}
-			NOT = {
-				religion = druidic_pagan
-			}
+		}
+		NOT = {
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
 		OR = {
 			has_reform = high_king_of_ireland_reform
 			tag = IRE
-			NOT = {
-				religion = norse_pagan_reformed
-			}
-			NOT = {
-				religion = hellenic_pagan
-			}
-			NOT = {
-				religion = druidic_pagan
-			}
+		}
+		NOT = {
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -2693,13 +2285,7 @@ elective_monarchy = {
 			}
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	legacy_equivalent = elective_monarchy_legacy
@@ -2742,13 +2328,7 @@ elective_monarchy_reform = {
 			has_reform = feudalism_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		NOT = {
 			tag = POL
@@ -2774,13 +2354,7 @@ arch_king_reform = {
 			has_reform = arch_king_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		1 = {
 			country_or_non_sovereign_subject_holds = ROOT
@@ -2794,13 +2368,7 @@ arch_king_reform = {
 	}
 	trigger = {
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		1 = {
 			country_or_non_sovereign_subject_holds = ROOT
@@ -2830,13 +2398,7 @@ consulate_of_the_sea = {
 	potential = {
 		has_reform = consulate_of_the_sea
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -2863,13 +2425,7 @@ habsburg_monarchy_reform = {
 			has_reform = arch_duchy_reform
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	trigger = {
@@ -2909,13 +2465,7 @@ consulate_of_the_malay = {
 	potential = {
 		has_reform = consulate_of_the_malay
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	modifiers = {
@@ -2939,13 +2489,7 @@ shogunate = {
 			has_country_flag = formed_japan_flag
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		OR = {
 			AND = {
@@ -3012,13 +2556,7 @@ celestial_empire = {
 			has_global_flag = empire_of_china_dismantled
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	legacy_equivalent = celestial_empire_legacy
@@ -3073,7 +2611,7 @@ ottoman_government = {
 	allow_normal_conversion = yes
 	icon = "ottoman_government"
 	potential = {
-		religion_group = muslim
+		is_muslim_viking_mod = yes
 		culture_group = turkish_g
 		OR = {
 			AND = {
@@ -3098,7 +2636,7 @@ ottoman_government = {
 	fixed_rank = 3
 	nation_designer_cost = 20
 	nation_designer_trigger = {
-		religion_group = muslim
+		is_muslim_viking_mod = yes
 	}
 	legacy_equivalent = ottoman_government_legacy
 	maintain_dynasty = yes
@@ -3137,13 +2675,7 @@ austrian_dual_monarchy = {
 			have_had_reform = austrian_dual_monarchy
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 	}
 	valid_for_nation_designer = yes
@@ -3171,13 +2703,7 @@ tsardom = {
 			culture = mordvin
 		}
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		OR = {
 			religion = orthodox
@@ -3241,13 +2767,7 @@ portuguese_empire_reform = {
 	allow_normal_conversion = yes
 	potential = {
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		OR = {
 			tag = POR
@@ -3288,13 +2808,7 @@ empire_of_japan_reform = {
 	nation_designer_cost = 100
 	potential = {
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		OR = {
 			tag = JAP
@@ -3333,13 +2847,7 @@ serbian_empire_reform = {
 	nation_designer_cost = 0
 	potential = {
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		OR = {
 			primary_culture = serbian
@@ -3372,13 +2880,7 @@ tsardom_of_bulgaria_reform = {
 	fixed_rank = 3
 	potential = {
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		OR = {
 			primary_culture = bulgarian
@@ -3410,13 +2912,7 @@ united_holy_roman_empire_reform = {
 	fixed_rank = 3
 	potential = {
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		OR = {
 			tag = HLR
@@ -3447,13 +2943,7 @@ austrian_empire_reform = {
 	nation_designer_cost = 65
 	potential = {
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		OR = {
 			primary_culture = austrian
@@ -3493,13 +2983,7 @@ achaemenid_empire_reform = {
 	maintain_dynasty = yes
 	potential = {
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		AND = {
 			OR = {
@@ -3547,13 +3031,7 @@ edo_empire_reform = {
 	nation_designer_cost = 40
 	potential = {
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		OR = {
 			has_reform = edo_empire_reform
@@ -3581,13 +3059,7 @@ rum_eagle_reform = {
 	maintain_dynasty = yes
 	potential = {
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		has_reform = rum_eagle_reform
 	}
@@ -3628,13 +3100,7 @@ revolutionary_empire_reform = {
 	allow_normal_conversion = no
 	potential = {
 		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+			is_pagan_viking_mod = yes
 		}
 		has_reform = revolutionary_empire_reform
 	}
@@ -4111,7 +3577,9 @@ phon_fed = {
 		AND = {
 			culture_group = phoenician_g
 			num_of_cities = 10
-			NOT = { num_of_cities = 50 }
+			NOT = {
+				num_of_cities = 50
+			}
 		}
 	}
 	modifiers = {

@@ -1,4 +1,324 @@
 country_decisions = {
+	vandal_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = {
+				has_country_flag = formed_vandals_flag
+			}
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = {
+				tag = VAN
+			}
+			NOT = {
+				tag = VGT
+			}
+			NOT = {
+				tag = FEO
+			}
+			NOT = {
+				exists = ITA
+			}
+			NOT = {
+				exists = GER
+			}
+			capital_scope = {
+				OR = {
+					region = maghreb_region
+					area = sicily_area
+					area = western_sicily_area
+					area = baleares_area
+					area = corsica_sardinia_area
+				}
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 125
+				province_id = 333
+				province_id = 337
+				province_id = 341
+				province_id = 1247
+				province_id = 1882
+				province_id = 2454
+				province_id = 4735
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			owns_core_province = 125
+			owns_core_province = 333
+			owns_core_province = 337
+			owns_core_province = 341
+			owns_core_province = 1247
+			owns_core_province = 1882
+			owns_core_province = 2454
+			owns_core_province = 4735
+		}
+		effect = {
+			restore_country_name_effect = yes
+			change_primary_culture = vandalic
+			341 = {
+				change_province_name = "Carthago"
+				rename_capital = "Carthago"
+				move_capital_effect = yes
+				add_base_production = 3
+				add_base_manpower = 3
+				change_culture = vandalic
+			}
+			hidden_effect = {
+				125 = {
+					change_culture = vandalic
+				}
+				337 = {
+					change_culture = vandalic
+				}
+				341 = {
+					change_culture = vandalic
+				}
+				1247 = {
+					change_culture = vandalic
+				}
+				1882 = {
+					change_culture = vandalic
+				}
+				2454 = {
+					change_culture = vandalic
+				}
+				4735 = {
+					change_culture = vandalic
+				}
+			}
+			change_tag = VAN
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
+				set_government_rank = 2
+			}
+			maghreb_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = VAN
+			}
+			add_prestige = 25
+			set_country_flag = formed_vandals_flag
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	visigoths_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = {
+				has_country_flag = formed_visigoths_flag
+			}
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = {
+				tag = VGT
+			}
+			NOT = {
+				tag = VAN
+			}
+			NOT = {
+				tag = FEO
+			}
+			NOT = {
+				exists = VGT
+			}
+			NOT = {
+				exists = SPA
+			}
+			NOT = {
+				exists = ADU
+			}
+			capital_scope = {
+				OR = {
+					region = iberia_region
+					area = pyrenees_area
+					area = languedoc_area
+					area = guyenne_area
+					area = massif_central_area
+					area = savoy_dauphine_area
+				}
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 196
+				province_id = 213
+				province_id = 214
+				province_id = 219
+				province_id = 221
+				province_id = 224
+				province_id = 1747
+				province_id = 1749
+				province_id = 2753
+				province_id = 4546
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			owns_core_province = 196
+			owns_core_province = 213
+			owns_core_province = 214
+			owns_core_province = 219
+			owns_core_province = 221
+			owns_core_province = 224
+			owns_core_province = 1747
+			owns_core_province = 1749
+			owns_core_province = 2753
+			owns_core_province = 4546
+		}
+		effect = {
+			213 = {
+				move_capital_effect = yes
+				add_base_production = 3
+				add_base_manpower = 3
+				change_culture = visigoths
+			}
+			restore_country_name_effect = yes
+			change_primary_culture = visigoths
+			hidden_effect = {
+				196 = {
+					change_culture = vandalic
+				}
+				213 = {
+					change_culture = vandalic
+				}
+				214 = {
+					change_culture = vandalic
+				}
+				219 = {
+					change_culture = vandalic
+				}
+				224 = {
+					change_culture = vandalic
+				}
+				1747 = {
+					change_culture = vandalic
+				}
+				1749 = {
+					change_culture = vandalic
+				}
+				2753 = {
+					change_culture = vandalic
+				}
+				4546 = {
+					change_culture = vandalic
+				}
+			}
+			change_tag = VGT
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
+				set_government_rank = 2
+			}
+			iberia_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = VAN
+			}
+			france_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = VAN
+			}
+			add_prestige = 25
+			set_country_flag = formed_visigoths_flag
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	greek_nation = {
 		major = yes
 		potential = {
@@ -107,6 +427,7 @@ country_decisions = {
 				}
 				change_primary_culture = greek
 			}
+			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {
@@ -333,6 +654,7 @@ country_decisions = {
 					}
 				}
 			}
+			restore_country_name_effect = yes
 			change_tag = ICE
 			set_country_flag = formed_iceland
 			if = {
@@ -553,128 +875,6 @@ country_decisions = {
 			}
 		}
 	}
-	israel_nation = {
-		major = yes
-		potential = {
-			normal_or_historical_nations = yes
-			was_never_end_game_tag_trigger = yes
-			NOT = {
-				has_country_flag = formed_israel_flag
-			}
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			NOT = {
-				tag = HLR
-			}
-			NOT = {
-				tag = PAP
-			}
-			NOT = {
-				exists = ISR
-			}
-			religion_group = jewish_group
-			is_colonial_nation = no
-			OR = {
-				ai = no
-				AND = {
-					ai = yes
-					num_of_cities = 5
-				}
-			}
-			OR = {
-				is_former_colonial_nation = no
-				AND = {
-					is_former_colonial_nation = yes
-					ai = no
-				}
-			}
-		}
-		provinces_to_highlight = {
-			OR = {
-				province_id = 379
-				AND = {
-					OR = {
-						area = palestine_area
-						area = trans_jordan_area
-						area = gulf_of_arabia_area
-					}
-					ROOT = {
-						NOT = {
-							num_of_owned_provinces_with = {
-								value = 10
-								religion_group = jewish_group
-								OR = {
-									area = palestine_area
-									area = trans_jordan_area
-									area = gulf_of_arabia_area
-								}
-								is_core = root
-							}
-						}
-						owns_core_province = 379
-					}
-				}
-			}
-			OR = {
-				NOT = {
-					owned_by = ROOT
-				}
-				NOT = {
-					is_core = ROOT
-				}
-			}
-		}
-		allow = {
-			adm_tech = 10
-			is_free_or_tributary_trigger = yes
-			is_nomad = no
-			is_at_war = no
-			owns_all_provinces = {
-				area = palestine_area
-				area = gulf_of_arabia_area
-				area = trans_jordan_area
-			}
-			num_of_owned_provinces_with = {
-				value = 10
-				religion_group = jewish_group
-				OR = {
-					area = palestine_area
-					area = trans_jordan_area
-					area = gulf_of_arabia_area
-				}
-				is_core = root
-			}
-		}
-		effect = {
-			change_tag = ISR
-			remove_non_electors_emperors_from_empire_effect = yes
-			if = {
-				limit = {
-					NOT = {
-						government_rank = 2
-					}
-				}
-				set_government_rank = 2
-			}
-			random_owned_province = {
-				add_base_tax = 1
-			}
-			add_country_modifier = {
-				name = "centralization_modifier"
-				duration = 7300
-			}
-			add_prestige = 10
-			set_country_flag = formed_israel_flag
-			country_event = {
-				id = ideagroups.1
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	jomsviking_nation = {
 		major = yes
 		potential = {
@@ -748,6 +948,7 @@ country_decisions = {
 			}
 		}
 		effect = {
+			restore_country_name_effect = yes
 			change_tag = JOM
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
@@ -834,6 +1035,7 @@ country_decisions = {
 			}
 		}
 		effect = {
+			restore_country_name_effect = yes
 			change_tag = OBO
 			vorpommern_area = {
 				limit = {
@@ -864,7 +1066,9 @@ country_decisions = {
 		potential = {
 			tag = OBO
 			prestige = 25
-			NOT = { has_country_flag = revived_polabian }
+			NOT = {
+				has_country_flag = revived_polabian
+			}
 		}
 		provinces_to_highlight = {
 		}
@@ -894,6 +1098,311 @@ country_decisions = {
 			2996 = {
 				center_of_trade = 1
 			}
+		}
+	}
+	etruria_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_etruria_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				culture_group = latin
+				TAG = PGA
+				TAG = URB
+			}
+			NOT = {
+				exists = ETR
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 105
+				province_id = 107
+				province_id = 111
+				province_id = 115
+				province_id = 116
+				province_id = 119
+				province_id = 2976
+				province_id = 2980
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 105
+			owns_core_province = 107
+			owns_core_province = 111
+			owns_core_province = 115
+			owns_core_province = 116
+			owns_core_province = 119
+			owns_core_province = 2976
+			owns_core_province = 2980
+			NOT = {
+				exists = ETR
+			}
+		}
+		effect = {
+			restore_country_name_effect = yes
+			change_tag = ETR
+			change_primary_culture = etrurian
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = latin
+					}
+					change_culture = etrurian
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = south_latin
+					}
+					change_culture = etrurian
+				}
+			}
+			italy_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ETR
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = {
+						has_idea_group = ETR_ideas
+					}
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
+			}
+			set_country_flag = formed_etruria_flag
+		}
+	}
+	korea_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_korea_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			culture_group = korean_g
+			NOT = {
+				exists = KOR
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 735
+				province_id = 1845
+				province_id = 2741
+				province_id = 2743
+				province_id = 2745
+				province_id = 4228
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			owns_core_province = 735
+			owns_core_province = 1845
+			owns_core_province = 2741
+			owns_core_province = 2743
+			owns_core_province = 2745
+			owns_core_province = 4228
+			NOT = {
+				exists = KOR
+			}
+		}
+		effect = {
+			restore_country_name_effect = yes
+			change_tag = KOR
+			change_primary_culture = korean
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = korean_g
+					}
+					change_culture = korean
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = korean_g
+					}
+					change_culture = korean
+				}
+			}
+			korea_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = KOR
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = {
+						has_idea_group = KOR_ideas
+					}
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
+			}
+			set_country_flag = formed_korea_flag
+			add_country_modifier = {
+				name = korean_unification
+				duration = -1
+			}
+		}
+	}
+	cherokee_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_cherokee_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				culture = cherokee
+				tag = JOA
+				tag = COF
+				tag = CIA
+				tag = SAT
+				tag = COO
+				tag = ETO
+			}
+			NOT = {
+				exists = CHE
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 935
+				province_id = 936
+				province_id = 933
+				province_id = 2540
+				province_id = 931
+				province_id = 2527
+				province_id = 2548
+				province_id = 949
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			owns_core_province = 935
+			owns_core_province = 936
+			owns_core_province = 933
+			owns_core_province = 2540
+			owns_core_province = 931
+			owns_core_province = 2527
+			owns_core_province = 2548
+			owns_core_province = 949
+			NOT = {
+				exists = CHE
+			}
+		}
+		effect = {
+			restore_country_name_effect = yes
+			change_tag = CHE
+			change_primary_culture = cherokee
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						AND = {
+							culture_group = iroquoian
+							culture_group = muskogean
+						}
+					}
+					change_culture = cherokee
+				}
+			}
+			southeast_america_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = CHE
+			}
+			mississippi_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = CHE
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = {
+						has_idea_group = CHE_ideas
+					}
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
+			}
+			set_country_flag = formed_cherokee_flag
 		}
 	}
 }

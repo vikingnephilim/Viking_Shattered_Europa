@@ -1,11 +1,11 @@
 ######################################################################
 # Theravada rebels. Disgruntled fanatics.
 ######################################################################
-orisanism_rebels = {
+orisa_ifa_rebels = {
 	color = { 230 175 175 }
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
-	religion = orisanism #Theravada
+	religion = orisa_ifa #Theravada
 	defection = none				# Will not defect
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
@@ -38,7 +38,7 @@ orisanism_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			NOT = { religion = orisanism }
+			NOT = { religion = orisa_ifa }
 		}
 		modifier = {
 			factor = 0.001
@@ -82,21 +82,21 @@ orisanism_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			religion = orisanism
-			owner = { religion = orisanism }
+			religion = orisa_ifa
+			owner = { religion = orisa_ifa }
 		}
 		modifier = {
 			factor = 2.0
-			NOT = { religion = orisanism }
+			NOT = { religion = orisa_ifa }
 			any_neighbor_province = {
-	 			religion = orisanism
+	 			religion = orisa_ifa
 	 			NOT = { has_province_modifier = "forced_conversion" }
 	 		}
 	 	}
 		modifier = {
 			factor = 5
 			has_missionary = yes
-			religion = orisanism
+			religion = orisa_ifa
 		}
 		modifier = {
 			factor = 1.5
@@ -126,9 +126,9 @@ orisanism_rebels = {
 			if = {
 				limit = {
 					OR = {
-						religion = orisanism
+						religion = orisa_ifa
 						is_reformation_center = yes
-						owner = { religion = orisanism }
+						owner = { religion = orisa_ifa }
 					}
 				}
 				add_province_modifier = {
@@ -138,11 +138,11 @@ orisanism_rebels = {
 			}
 			if = {
 				limit = {
-					NOT = { religion = orisanism }
+					NOT = { religion = orisa_ifa }
 					is_reformation_center = no
-					NOT = { owner = { religion = orisanism } }
+					NOT = { owner = { religion = orisa_ifa } }
 				}
-				change_religion = orisanism
+				change_religion = orisa_ifa
 				add_province_modifier = {
 					name = "forced_conversion"
 					duration = 730
@@ -161,7 +161,7 @@ orisanism_rebels = {
 	can_negotiate_trigger = {
 		OR = {
 			religion_group = african_pagan
-			dominant_religion = orisanism
+			dominant_religion = orisa_ifa
 		}
 	}
 	# Country scope
@@ -169,7 +169,7 @@ orisanism_rebels = {
 		always = yes
 	}
 	# Localisation for their demands
-	demands_description = "orisanism_rebels_demand"
+	demands_description = "orisa_ifa_rebels_demand"
 	# Country Scope
 			demands_enforced_effect = {
 		hidden_effect = {
@@ -199,7 +199,7 @@ orisanism_rebels = {
 		}
 		else_if = {
 			limit = {
-				religion = orisanism
+				religion = orisa_ifa
 			}
 			add_country_modifier = {
 				name = "religious_intolerance_enforced"
@@ -208,16 +208,16 @@ orisanism_rebels = {
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = orisanism }
-				dominant_religion = orisanism
+				NOT = { religion = orisa_ifa }
+				dominant_religion = orisa_ifa
 			}
-			change_religion = orisanism
+			change_religion = orisa_ifa
 			force_converted = yes
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = orisanism }
-				NOT = { dominant_religion = orisanism }
+				NOT = { religion = orisa_ifa }
+				NOT = { dominant_religion = orisa_ifa }
 				religion_group = african_pagan
 				NOT = { has_country_modifier = heretic_tolerance }
 			}
@@ -230,7 +230,7 @@ orisanism_rebels = {
 		else = { add_stability = -1 }
 		if = {
 			limit = {
-				religion = orisanism
+				religion = orisa_ifa
 				has_estate = estate_church
 				NOT = {
 					has_estate_influence_modifier = {

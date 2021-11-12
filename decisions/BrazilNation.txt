@@ -83,6 +83,7 @@ country_decisions = {
 			}
 		}
 		effect = {
+			restore_country_name_effect = yes
 			hidden_effect = {
 				if = {
 					limit = {
@@ -221,7 +222,7 @@ country_decisions = {
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {
-					religion_group = christian
+					is_christian_viking_mod = yes
 				}
 				custom_tooltip = brazil_portugal_tooltip
 				hidden_effect = {

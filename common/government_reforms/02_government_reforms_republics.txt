@@ -31,6 +31,15 @@ oligarchy_reform = {
 		NOT = {
 			culture_group = south_latin
 		}
+		NOT = {
+			has_reform = crown_colony_government
+		}
+		NOT = {
+			has_reform = private_enterprise_colony_government
+		}
+		NOT = {
+			has_reform = self_governing_colony_government
+		}
 	}
 	nation_designer_trigger = {
 		NOT = {
@@ -63,11 +72,9 @@ signoria_reform = {
 	royal_marriage = yes
 	potential = {
 		culture_group = latin
-		culture_group = south_latin
 	}
 	nation_designer_trigger = {
 		culture_group = latin
-		culture_group = south_latin
 	}
 	modifiers = {
 		global_tax_modifier = 0.05
@@ -118,7 +125,9 @@ south_african_parliament_reform = {
 		}
 	}
 	conditional = {
-		allow = { has_dlc = "Common Sense" }
+		allow = {
+			has_dlc = "Common Sense"
+		}
 		has_parliament = yes
 	}
 	custom_attributes = {
@@ -151,13 +160,15 @@ protectorate_parliament_reform = {
 			has_dlc = "Common Sense"
 		}
 		has_parliament = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
 	}
 	has_term_election = no
 	custom_attributes = {
 		locked_government_type = yes
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
-		blocked_call_diet = yes
 	}
 }
 
@@ -244,6 +255,15 @@ merchants_reform = {
 					map_setup = map_setup_random
 				}
 			}
+		}
+		NOT = {
+			has_reform = crown_colony_government
+		}
+		NOT = {
+			has_reform = private_enterprise_colony_government
+		}
+		NOT = {
+			has_reform = self_governing_colony_government
 		}
 	}
 	trigger = {
@@ -398,7 +418,7 @@ pirate_republic_reform = {
 		max_absolutism = -50
 		naval_forcelimit_modifier = 0.5
 		capture_ship_chance = 0.33
-		governing_capacity_modifier = 0.5
+		state_governing_cost = 0.75
 		may_perform_slave_raid_on_same_religion = yes
 	}
 	trigger = {
@@ -460,6 +480,17 @@ noble_elite_reform = {
 	legacy_equivalent = noble_republic
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
+	potential = {
+		NOT = {
+			has_reform = crown_colony_government
+		}
+		NOT = {
+			has_reform = private_enterprise_colony_government
+		}
+		NOT = {
+			has_reform = self_governing_colony_government
+		}
+	}
 	modifiers = {
 		army_tradition = 0.1
 		max_absolutism = -20
@@ -1027,6 +1058,9 @@ american_republic = {
 			has_dlc = "Common Sense"
 		}
 		has_parliament = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
 	}
 	duration = 4
 }
@@ -1063,13 +1097,15 @@ federal_republic = {
 	custom_attributes = {
 		enables_plutocratic_idea_group = yes
 		enables_aristocratic_idea_group = no
-		blocked_call_diet = yes
 	}
 	conditional = {
 		allow = {
 			has_dlc = "Common Sense"
 		}
 		has_parliament = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
 	}
 	duration = 4
 }
@@ -1082,6 +1118,15 @@ colonial_government = {
 	fixed_rank = 1
 	potential = {
 		is_colonial_nation = yes
+		NOT = {
+			has_reform = crown_colony_government
+		}
+		NOT = {
+			has_reform = private_enterprise_colony_government
+		}
+		NOT = {
+			has_reform = self_governing_colony_government
+		}
 	}
 	legacy_equivalent = colonial_government_legacy
 	modifiers = {
@@ -1106,7 +1151,11 @@ crown_colony_government = {
 	fixed_rank = 1
 	potential = {
 		is_colonial_nation = yes
-		has_reform = crown_colony_government
+		OR = {
+			has_reform = crown_colony_government
+			has_reform = private_enterprise_colony_government
+			has_reform = self_governing_colony_government
+		}
 	}
 	legacy_equivalent = colonial_government_legacy
 	modifiers = {
@@ -1131,7 +1180,11 @@ private_enterprise_colony_government = {
 	fixed_rank = 1
 	potential = {
 		is_colonial_nation = yes
-		has_reform = private_enterprise_colony_government
+		OR = {
+			has_reform = crown_colony_government
+			has_reform = private_enterprise_colony_government
+			has_reform = self_governing_colony_government
+		}
 	}
 	legacy_equivalent = colonial_government_legacy
 	modifiers = {
@@ -1156,7 +1209,11 @@ self_governing_colony_government = {
 	fixed_rank = 1
 	potential = {
 		is_colonial_nation = yes
-		has_reform = self_governing_colony_government
+		OR = {
+			has_reform = crown_colony_government
+			has_reform = private_enterprise_colony_government
+			has_reform = self_governing_colony_government
+		}
 	}
 	legacy_equivalent = colonial_government_legacy
 	modifiers = {
@@ -1257,6 +1314,14 @@ cossacks_reform = {
 	raze_province = yes
 	government_abilities = {
 		cossacks_mechanic
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Origins"
+		}
+		custom_attributes = {
+			has_itinerant_capital = yes
+		}
 	}
 	valid_for_new_country = yes
 	nation_designer_trigger = {
@@ -1766,6 +1831,41 @@ municipal_self_defense_reform = {
 	}
 	ai = {
 		factor = 1.5
+	}
+}
+
+feuillant_reform = {
+	icon = "feuillant_reform"
+	allow_normal_conversion = yes
+	potential = {
+		is_revolutionary = yes
+		has_dlc = "Emperor"
+	}
+	modifiers = {
+		stability_cost_modifier = -0.1
+		republican_tradition = -0.1
+	}
+	ai = {
+		factor = 0
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+		}
+		duration = 4
+		has_term_election = yes
+		states_general_mechanic = {
+			revolutionaries = {
+				land_morale = 0.1
+				republican_tradition = 0.1
+				yearly_revolutionary_zeal = 0.25
+			}
+			monarchists = {
+				diplomatic_reputation = 1
+				manpower_recovery_speed = 0.1
+				global_unrest = -1
+			}
+		}
 	}
 }
 

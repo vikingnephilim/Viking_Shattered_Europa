@@ -160,7 +160,7 @@ hussite_rebels = {
 	# Country scope
 	can_negotiate_trigger = {
 		OR = {
-			religion_group = christian
+			is_christian_viking_mod = yes
 			dominant_religion = hussite
 		}
 	}
@@ -181,7 +181,7 @@ hussite_rebels = {
 		}
 		if = {
 			limit = {
-				NOT = { religion_group = christian }
+				NOT = { is_christian_viking_mod = yes }
 			}
 			add_prestige = -50
 			every_owned_province = {
@@ -218,7 +218,7 @@ hussite_rebels = {
 			limit = {
 				NOT = { religion = hussite }
 				NOT = { dominant_religion = hussite }
-				religion_group = christian
+				is_christian_viking_mod = yes
 				NOT = { has_country_modifier = heretic_tolerance }
 			}
 			add_country_modifier = {

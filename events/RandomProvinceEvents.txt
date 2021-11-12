@@ -54,9 +54,8 @@ province_event = {
 			owner = {
 				any_neighbor_country = {
 					OR = {
-						religion = protestant
-						religion = sunni
-						religion = shiite
+						is_christian_viking_mod = yes
+						is_muslim_viking_mod = yes
 					}
 					has_opinion = {
 						who = ROOT
@@ -138,9 +137,8 @@ province_event = {
 			owner = {
 				any_neighbor_country = {
 					OR = {
-						religion = catholic
-						religion = sunni
-						religion = shiite
+						is_christian_viking_mod = yes
+						is_muslim_viking_mod = yes
 					}
 					has_opinion = {
 						who = ROOT
@@ -192,7 +190,7 @@ province_event = {
 				religion = totemism
 			}
 			any_neighbor_country = {
-				religion = sunni
+				is_muslim_viking_mod = yes
 				has_opinion = {
 					who = ROOT
 					value = 100
@@ -224,7 +222,7 @@ province_event = {
 					OR = {
 						religion = protestant
 						religion = catholic
-						religion = shiite
+						religion_group = shia_muslim
 					}
 					has_opinion = {
 						who = ROOT
@@ -276,7 +274,7 @@ province_event = {
 				religion = totemism
 			}
 			any_neighbor_country = {
-				religion = shiite
+				religion_group = shia_muslim
 				has_opinion = {
 					who = ROOT
 					value = 100
@@ -306,9 +304,8 @@ province_event = {
 			owner = {
 				any_neighbor_country = {
 					OR = {
-						religion = protestant
-						religion = sunni
-						religion = catholic
+						is_christian_viking_mod = yes
+						is_muslim_viking_mod = yes
 					}
 					has_opinion = {
 						who = ROOT

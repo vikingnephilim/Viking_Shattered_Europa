@@ -1,0 +1,61 @@
+assist_fylkir = {
+	category = alliance
+	require_acceptance = no
+	is_visible = {
+		religion = norse_pagan_reformed
+		FROM = {
+			has_country_modifier = fylkir_triggered_modifier
+		}
+	}
+	is_allowed = {
+		any_known_country = {
+			is_in_war = {
+				attacker_leader = FROM
+				casus_belli = cb_norse_crusade
+			}
+			NOT = {
+				war_with = ROOT
+			}
+			NOT = {
+				truce_with = ROOT
+			}
+		}
+	}
+	on_accept = {
+		random_known_country = {
+			limit = {
+				is_in_war = {
+					attacker_leader = FROM
+					casus_belli = cb_norse_crusade
+				}
+				NOT = {
+					war_with = ROOT
+				}
+				NOT = {
+					truce_with = ROOT
+				}
+			}
+			save_event_target_as = fylkirTarget
+		}
+		add_trust = {
+			who = FROM
+			value = 10
+			mutual = no
+		}
+		join_all_offensive_wars_of = FROM
+		join_all_defensive_wars_of = FROM
+		set_country_flag = assisting_fylkir@event_target:fylkirTarget
+	}
+	on_decline = {
+	}
+	ai_acceptance = {
+		always = yes
+	}
+	ai_will_do = {
+		army_size = 2
+		has_opinion = {
+			who = FROM
+			value = 50
+		}
+	}
+}

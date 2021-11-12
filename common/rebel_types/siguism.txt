@@ -1,11 +1,11 @@
 ######################################################################
 # Sigu rebels. Disgruntled fanatics.
 ######################################################################
-siguism_rebels = {
+dogon_rebels = {
 	color = { 230 175 175 }
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
-	religion = siguism
+	religion = dogon
 	defection = none				# Will not defect
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
@@ -38,7 +38,7 @@ siguism_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			NOT = { religion = siguism }
+			NOT = { religion = dogon }
 		}
 		modifier = {
 			factor = 0.001
@@ -82,21 +82,21 @@ siguism_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			religion = siguism
-			owner = { religion = siguism }
+			religion = dogon
+			owner = { religion = dogon }
 		}
 		modifier = {
 			factor = 2.0
-			NOT = { religion = siguism }
+			NOT = { religion = dogon }
 			any_neighbor_province = {
-	 			religion = siguism
+	 			religion = dogon
 	 			NOT = { has_province_modifier = "forced_conversion" }
 	 		}
 	 	}
 		modifier = {
 			factor = 5
 			has_missionary = yes
-			religion = siguism
+			religion = dogon
 		}
 		modifier = {
 			factor = 1.5
@@ -126,9 +126,9 @@ siguism_rebels = {
 			if = {
 				limit = {
 					OR = {
-						religion = siguism
+						religion = dogon
 						is_reformation_center = yes
-						owner = { religion = siguism }
+						owner = { religion = dogon }
 					}
 				}
 				add_province_modifier = {
@@ -138,11 +138,11 @@ siguism_rebels = {
 			}
 			if = {
 				limit = {
-					NOT = { religion = siguism }
+					NOT = { religion = dogon }
 					is_reformation_center = no
-					NOT = { owner = { religion = siguism } }
+					NOT = { owner = { religion = dogon } }
 				}
-				change_religion = siguism
+				change_religion = dogon
 				add_province_modifier = {
 					name = "forced_conversion"
 					duration = 730
@@ -161,7 +161,7 @@ siguism_rebels = {
 	can_negotiate_trigger = {
 		OR = {
 			religion_group = african_pagan
-			dominant_religion = siguism
+			dominant_religion = dogon
 		}
 	}
 	# Country scope
@@ -169,7 +169,7 @@ siguism_rebels = {
 		always = yes
 	}
 	# Localisation for their demands
-	demands_description = "siguism_rebels_demand"
+	demands_description = "dogon_rebels_demand"
 	# Country Scope
 			demands_enforced_effect = {
 		hidden_effect = {
@@ -199,7 +199,7 @@ siguism_rebels = {
 		}
 		else_if = {
 			limit = {
-				religion = siguism
+				religion = dogon
 			}
 			add_country_modifier = {
 				name = "religious_intolerance_enforced"
@@ -208,16 +208,16 @@ siguism_rebels = {
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = siguism }
-				dominant_religion = siguism
+				NOT = { religion = dogon }
+				dominant_religion = dogon
 			}
-			change_religion = siguism
+			change_religion = dogon
 			force_converted = yes
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = siguism }
-				NOT = { dominant_religion = siguism }
+				NOT = { religion = dogon }
+				NOT = { dominant_religion = dogon }
 				religion_group = african_pagan
 				NOT = { has_country_modifier = heretic_tolerance }
 			}
@@ -230,7 +230,7 @@ siguism_rebels = {
 		else = { add_stability = -1 }
 		if = {
 			limit = {
-				religion = siguism
+				religion = dogon
 				has_estate = estate_church
 				NOT = {
 					has_estate_influence_modifier = {

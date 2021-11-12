@@ -1,28 +1,24 @@
 #Always make sure this file is the last one in the list or there will be issues.
-
-
 # Pirate 1 - Trade & Piracy
 pirate_1 = {
 	slot = 1
 	generic = yes
 	ai = yes
-	
 	potential_on_load = {
 		has_dlc = "Golden Century"
 	}
-
 	potential = {
 		has_dlc = "Golden Century"
 		has_reform = pirate_republic_reform
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
-
 	has_country_shield = yes
-	
 	pirate_trade_practices = {
 		icon = mission_sea_battles
-		required_missions = { }
-		
+		required_missions = {
+		}
 		trigger = {
 			home_trade_node = {
 				privateer_power = {
@@ -31,7 +27,6 @@ pirate_1 = {
 				}
 			}
 		}
-		
 		effect = {
 			add_country_modifier = {
 				name = "pirate_trade_practices"
@@ -41,14 +36,16 @@ pirate_1 = {
 	}
 	pirate_trade_ports = {
 		icon = mission_dominate_home_trade_node
-		required_missions = { pirate_trade_practices }
-		
+		required_missions = {
+			pirate_trade_practices
+		}
 		provinces_to_highlight = {
 			province_has_center_of_trade_of_level = 1
-			NOT = { province_has_center_of_trade_of_level = 2 }
+			NOT = {
+				province_has_center_of_trade_of_level = 2
+			}
 			owned_by = ROOT
 		}
-		
 		trigger = {
 			if = {
 				limit = {
@@ -70,7 +67,6 @@ pirate_1 = {
 				}
 			}
 		}
-		
 		effect = {
 			add_country_modifier = {
 				name = "pirate_trade_ports"
@@ -80,12 +76,12 @@ pirate_1 = {
 	}
 	pirate_trade_in_gold = {
 		icon = mission_high_income
-		required_missions = { pirate_trade_ports }
-		
+		required_missions = {
+			pirate_trade_ports
+		}
 		trigger = {
 			gold = 3
 		}
-		
 		effect = {
 			add_country_modifier = {
 				name = "pirate_trade_in_gold"
@@ -95,8 +91,9 @@ pirate_1 = {
 	}
 	pirate_triangle_trade = {
 		icon = mission_african_soldier
-		required_missions = { pirate_trade_in_gold }
-		
+		required_missions = {
+			pirate_trade_in_gold
+		}
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1466
@@ -104,7 +101,6 @@ pirate_1 = {
 				province_id = 1293
 			}
 		}
-		
 		trigger = {
 			if = {
 				limit = {
@@ -149,7 +145,7 @@ pirate_1 = {
 					}
 				}
 			}
-		}		
+		}
 		effect = {
 			add_country_modifier = {
 				name = "pirate_triangle_trade"
@@ -164,37 +160,33 @@ pirate_2 = {
 	slot = 2
 	generic = no
 	ai = yes
-	
 	potential_on_load = {
 		has_dlc = "Golden Century"
 	}
-
 	potential = {
 		has_dlc = "Golden Century"
 		has_reform = pirate_republic_reform
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		capital_scope = {
 			colonial_region = colonial_the_carribean
 		}
 	}
-
 	has_country_shield = yes
-
 	pirate_a_second_madagascar = {
 		icon = mission_early_game_buildings
-		required_missions = { }
-		
+		required_missions = {
+		}
 		provinces_to_highlight = {
 			owned_by = ROOT
 			is_capital = yes
 		}
-		
 		trigger = {
 			capital_scope = {
 				development = 20
 			}
 		}
-		
 		effect = {
 			add_country_modifier = {
 				name = "pirate_a_second_madagascar"
@@ -204,32 +196,41 @@ pirate_2 = {
 	}
 	pirate_an_old_fort = {
 		icon = mission_conquer_50_development
-		required_missions = { pirate_a_second_madagascar }
-		
+		required_missions = {
+			pirate_a_second_madagascar
+		}
 		provinces_to_highlight = {
 			owned_by = ROOT
 			is_capital = yes
-			NOT = { fort_level = 3 }
-		}
-		
-		trigger = {
-			capital_scope = {
-				fort_level = 3	# capital fort + level 1 fort
+			NOT = {
+				fort_level = 3
 			}
 		}
-		
+		trigger = {
+			capital_scope = {
+				fort_level = 3				# capital fort + level 1 fort
+			}
+		}
 		effect = {
 			cuba_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			east_cuba_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -237,17 +238,19 @@ pirate_2 = {
 	}
 	pirate_running_down_to_cuba = {
 		icon = mission_unite_home_region
-		required_missions = { pirate_an_old_fort }
-		
+		required_missions = {
+			pirate_an_old_fort
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = cuba_area
 				area = east_cuba_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			has_discovered = yes
 		}
-		
 		trigger = {
 			cuba_area = {
 				type = all
@@ -258,12 +261,15 @@ pirate_2 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		
 		effect = {
 			carribeans_region = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = {  is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -271,61 +277,82 @@ pirate_2 = {
 	}
 	pirate_pirates_of_the_caribbean = {
 		icon = mission_establish_high_seas_navy
-		required_missions = { pirate_running_down_to_cuba }
-		
+		required_missions = {
+			pirate_running_down_to_cuba
+		}
 		provinces_to_highlight = {
 			region = carribeans_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 			has_discovered = yes
 		}
-
 		trigger = {
 			carribeans_region = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		
 		# give permanent claims on ALL gold provinces nearby, pirates love gold
 		effect = {
 			custom_tooltip = all_gold_provinces_around_the_caribbean
 			hidden_effect = {
 				central_america_region = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
-						trade_goods = gold # only claim gold provinces, lol
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
+						trade_goods = gold						# only claim gold provinces, lol
 					}
 					add_permanent_claim = ROOT
 				}
 				mexico_region = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 						trade_goods = gold
 					}
 					add_permanent_claim = ROOT
 				}
 				rio_grande_region = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 						trade_goods = gold
 					}
 					add_permanent_claim = ROOT
 				}
 				mississippi_region = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 						trade_goods = gold
 					}
 					add_permanent_claim = ROOT
 				}
 				southeast_america_region = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 						trade_goods = gold
 					}
 					add_permanent_claim = ROOT
@@ -335,18 +362,19 @@ pirate_2 = {
 	}
 	pirate_all_of_the_gold = {
 		icon = mission_war_chest
-		required_missions = { pirate_pirates_of_the_caribbean }
-		
+		required_missions = {
+			pirate_pirates_of_the_caribbean
+		}
 		provinces_to_highlight = {
 			trade_goods = gold
 			has_discovered = ROOT
-			NOT = { owned_by = ROOT }
+			NOT = {
+				owned_by = ROOT
+			}
 		}
-		
 		trigger = {
 			gold = 10
 		}
-		
 		effect = {
 			add_country_modifier = {
 				name = "pirate_all_of_the_gold"
@@ -361,27 +389,22 @@ pirate_3 = {
 	slot = 3
 	generic = no
 	ai = yes
-	
 	potential_on_load = {
 		has_dlc = "Golden Century"
 	}
-
 	potential = {
 		has_reform = pirate_republic_reform
 	}
-
 	has_country_shield = yes
-	
 	pirate_a_pirate_fleet = {
 		icon = mission_galleys_in_port
-		required_missions = { }
-		
+		required_missions = {
+		}
 		trigger = {
 			naval_forcelimit = 20
 			navy_size_percentage = 1
 			num_of_light_ship = 5
 		}
-		
 		effect = {
 			add_country_modifier = {
 				name = "pirate_a_pirate_fleet"
@@ -391,12 +414,12 @@ pirate_3 = {
 	}
 	pirate_a_scourge_on_the_seven_seas = {
 		icon = mission_establish_high_seas_navy
-		required_missions = { pirate_a_pirate_fleet }
-		
+		required_missions = {
+			pirate_a_pirate_fleet
+		}
 		trigger = {
 			has_flagship = yes
 		}
-		
 		effect = {
 			add_country_modifier = {
 				name = "pirate_a_scourge_on_the_seven_seas"
@@ -409,12 +432,12 @@ pirate_3 = {
 	}
 	pirate_the_pirate_code = {
 		icon = mission_have_two_subjects
-		required_missions = { pirate_a_scourge_on_the_seven_seas }
-		
+		required_missions = {
+			pirate_a_scourge_on_the_seven_seas
+		}
 		trigger = {
 			army_size_percentage = 1
 		}
-		
 		effect = {
 			add_country_modifier = {
 				name = "pirate_the_pirate_code"
@@ -424,8 +447,9 @@ pirate_3 = {
 	}
 	pirate_diplomacy = {
 		icon = mission_alliances
-		required_missions = { pirate_the_pirate_code }
-		
+		required_missions = {
+			pirate_the_pirate_code
+		}
 		trigger = {
 			any_rival_country = {
 				custom_trigger_tooltip = {
@@ -443,7 +467,6 @@ pirate_3 = {
 				}
 			}
 		}
-		
 		effect = {
 			add_country_modifier = {
 				name = "pirate_diplomacy"
@@ -453,14 +476,14 @@ pirate_3 = {
 	}
 	pirate_the_pirate_threat = {
 		icon = mission_assemble_an_army
-		required_missions = { pirate_diplomacy }
-		
+		required_missions = {
+			pirate_diplomacy
+		}
 		trigger = {
 			any_rival_country = {
 				is_great_power = yes
 			}
 		}
-		
 		effect = {
 			add_country_modifier = {
 				name = "pirate_the_pirate_threat"
@@ -475,26 +498,21 @@ pirate_5 = {
 	slot = 5
 	generic = no
 	ai = yes
-	
 	potential_on_load = {
 		has_dlc = "Golden Century"
 	}
-
 	potential = {
 		has_reform = pirate_republic_reform
 	}
-
 	has_country_shield = yes
-	
 	pirate_hoard = {
 		icon = mission_war_chest
-		required_missions = { }
+		required_missions = {
+		}
 		position = 1
-		
 		trigger = {
 			treasury = 3000
 		}
-		
 		effect = {
 			add_country_modifier = {
 				name = "pirate_hoard"
@@ -502,18 +520,16 @@ pirate_5 = {
 			}
 		}
 	}
-
 	pirate_federation = {
 		icon = mission_alliances
-		required_missions = { }
+		required_missions = {
+		}
 		position = 2
-		
 		trigger = {
 			any_ally = {
 				has_reform = pirate_republic_reform
 			}
 		}
-		
 		effect = {
 			add_country_modifier = {
 				name = "pirate_federation"
@@ -521,20 +537,21 @@ pirate_5 = {
 			}
 		}
 	}
-
 	pirate_a_famous_pirate = {
 		icon = mission_have_two_subjects
-		required_missions = { }
+		required_missions = {
+		}
 		position = 3
-		
 		trigger = {
-			has_leader_with = { admiral = yes total_pips = 12 }
+			has_leader_with = {
+				admiral = yes
+				total_pips = 12
+			}
 			custom_trigger_tooltip = {
 				tooltip = a_mighty_pirate_leader
 				has_ruler_flag = historical_pirate
 			}
 		}
-		
 		effect = {
 			add_country_modifier = {
 				name = "pirate_a_famous_pirate"
@@ -542,13 +559,12 @@ pirate_5 = {
 			}
 		}
 	}
-
 	# put this separate from the other trade/piracy stuff since east asian pirates will probably be able to get this at once
 	pirate_the_pirate_round = {
 		icon = mission_invade_island
-		required_missions = { }
+		required_missions = {
+		}
 		position = 4
-		
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1343
@@ -556,7 +572,6 @@ pirate_5 = {
 				province_id = 504
 			}
 		}
-		
 		trigger = {
 			OR = {
 				1343 = {
@@ -579,33 +594,48 @@ pirate_5 = {
 				}
 			}
 		}
-		
 		effect = {
 			madagascar_highlands_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			betsimasaraka_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			sakalava_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			southern_madagascar = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}

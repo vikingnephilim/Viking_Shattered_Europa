@@ -56,7 +56,7 @@ country_decisions = {
 			NOT = {
 				has_country_modifier = the_advancement_of_true_religion_act
 			}
-			religion_group = christian
+			is_christian_viking_mod = yes
 		}
 		allow = {
 			advisor = theologian
@@ -85,7 +85,7 @@ country_decisions = {
 			NOT = {
 				has_country_modifier = the_blasphemy_act
 			}
-			religion_group = christian
+			is_christian_viking_mod = yes
 			OR = {
 				current_age = age_of_reformation
 				current_age = age_of_absolutism
@@ -107,7 +107,7 @@ country_decisions = {
 	}
 	declaration_of_indulgence = {
 		potential = {
-			religion_group = christian
+			is_christian_viking_mod = yes
 			NOT = {
 				has_country_modifier = the_declaration_of_indulgence
 			}
@@ -136,7 +136,7 @@ country_decisions = {
 				NOT = {
 					any_owned_province = {
 						has_owner_religion = no
-						religion_group = christian
+						is_christian_viking_mod = yes
 					}
 				}
 				factor = 0
@@ -148,7 +148,7 @@ country_decisions = {
 			NOT = {
 				has_country_modifier = the_act_of_uniformity
 			}
-			religion_group = christian
+			is_christian_viking_mod = yes
 		}
 		allow = {
 			adm_tech = 8
@@ -175,7 +175,7 @@ country_decisions = {
 	#	suffragan_bishop_act = {
 	#		potential = {
 	#			NOT = { has_country_modifier = the_suffragan_bishop_act }
-	#			religion_group = christian
+	#			is_christian_viking_mod = yes
 	#		}
 	#		allow = {
 	#			adm_tech = 8
@@ -193,7 +193,7 @@ country_decisions = {
 	#	church_tax = {
 	#		potential = {
 	#			NOT = { has_country_modifier = church_taxes }
-	#			religion_group = christian
+	#			is_christian_viking_mod = yes
 	#			NOT = { tag = PAP }
 	#			NOT = { government = republic }
 	#		}
@@ -224,7 +224,7 @@ country_decisions = {
 			NOT = {
 				has_country_modifier = sunday_schools
 			}
-			religion_group = christian
+			is_christian_viking_mod = yes
 			adm_tech = 17
 		}
 		allow = {
@@ -247,7 +247,7 @@ country_decisions = {
 			NOT = {
 				has_country_modifier = the_conventicle_act
 			}
-			religion_group = christian
+			is_christian_viking_mod = yes
 			OR = {
 				is_religion_enabled = protestant
 				is_religion_enabled = reformed
@@ -402,7 +402,7 @@ country_decisions = {
 			NOT = {
 				has_ruler_modifier = khalifah
 			}
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 			NOT = {
 				tag = MAM
 			}
@@ -438,7 +438,7 @@ country_decisions = {
 			NOT = {
 				has_ruler_modifier = sect_practices
 			}
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 		}
 		allow = {
 			dip = 3
@@ -466,7 +466,7 @@ country_decisions = {
 			NOT = {
 				has_ruler_modifier = islamic_scholarly_centre
 			}
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 			adm_tech = 8
 		}
 		allow = {
@@ -493,7 +493,7 @@ country_decisions = {
 	#jizya_tax = {
 	#	potential = {
 	#		NOT = { has_ruler_modifier = per_capita_tax }
-	#		religion_group = muslim
+	#		is_muslim_viking_mod = yes
 	#		any_owned_province = {
 	#			has_owner_religion = no
 	#		}
@@ -551,16 +551,15 @@ country_decisions = {
 	adopt_wahabism = {
 		potential = {
 			has_dlc = "Cradle of Civilization"
-			religion = sunni
+			religion_group = sunni_muslim
 			has_reform = tribal_federation
 			has_global_flag = wahabism_founded
 			NOT = {
 				religious_school = {
-					group = muslim
-					school = hanbali_school
+					group = sunni_muslim
+					school = alawite_school_sunni
 				}
 			}
-			ruler_religion = sunni
 		}
 		allow = {
 			piety = 1			#100 Legalism
@@ -569,8 +568,8 @@ country_decisions = {
 			add_stability = -3
 			add_legitimacy = 30
 			set_religious_school = {
-				group = muslim
-				school = hanbali_school
+				group = sunni_muslim
+				school = alawite_school_sunni
 			}
 		}
 		ai_will_do = {
@@ -581,10 +580,10 @@ country_decisions = {
 		potential = {
 			has_dlc = "Cradle of Civilization"
 			NOT = {
-				religion_group = muslim
+				is_muslim_viking_mod = yes
 			}
 			capital_scope = {
-				religion_group = muslim
+				is_muslim_viking_mod = yes
 				is_node_in_trade_company_region = yes
 			}
 		}
@@ -745,25 +744,25 @@ country_decisions = {
 				has_country_modifier = the_anti_christian_edict
 			}
 			NOT = {
-				religion_group = christian
+				is_christian_viking_mod = yes
 			}
 			OR = {
 				any_neighbor_country = {
-					religion_group = christian
+					is_christian_viking_mod = yes
 				}
 				738 = {
 					owner = {
-						religion_group = christian
+						is_christian_viking_mod = yes
 					}
 				}
 				666 = {
 					owner = {
-						religion_group = christian
+						is_christian_viking_mod = yes
 					}
 				}
 				668 = {
 					owner = {
-						religion_group = christian
+						is_christian_viking_mod = yes
 					}
 				}
 			}
@@ -772,7 +771,7 @@ country_decisions = {
 			is_defender_of_faith = no
 			OR = {
 				any_neighbor_country = {
-					religion_group = christian
+					is_christian_viking_mod = yes
 					NOT = {
 						has_opinion = {
 							who = ROOT
@@ -782,7 +781,7 @@ country_decisions = {
 				}
 				666 = {
 					owner = {
-						religion_group = christian
+						is_christian_viking_mod = yes
 						NOT = {
 							has_opinion = {
 								who = ROOT
@@ -793,7 +792,7 @@ country_decisions = {
 				}
 				668 = {
 					owner = {
-						religion_group = christian
+						is_christian_viking_mod = yes
 						NOT = {
 							has_opinion = {
 								who = ROOT
@@ -804,7 +803,7 @@ country_decisions = {
 				}
 				738 = {
 					owner = {
-						religion_group = christian
+						is_christian_viking_mod = yes
 						NOT = {
 							has_opinion = {
 								who = ROOT
@@ -848,7 +847,7 @@ country_decisions = {
 			NOT = {
 				has_country_modifier = house_of_worship
 			}
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 		}
 		allow = {
 			full_idea_group = innovativeness_ideas
@@ -874,15 +873,15 @@ country_decisions = {
 			OR = {
 				AND = {
 					tag = MUG
-					religion_group = muslim
+					is_muslim_viking_mod = yes
 					any_owned_province = {
-						religion = hinduism
+						is_indic_viking_mod = yes
 					}
 				}
 				AND = {
-					religion = hinduism
+					is_indic_viking_mod = yes
 					any_owned_province = {
-						religion_group = muslim
+						is_muslim_viking_mod = yes
 					}
 				}
 			}
@@ -913,10 +912,10 @@ country_decisions = {
 				has_country_modifier = muslim_resistance
 			}
 			NOT = {
-				religion_group = muslim
+				is_muslim_viking_mod = yes
 			}
 			any_neighbor_country = {
-				religion_group = muslim
+				is_muslim_viking_mod = yes
 			}
 		}
 		allow = {
@@ -1190,7 +1189,7 @@ country_decisions = {
 			religion_group = eastern
 			OR = {
 				NOT = {
-					religion = confucianism
+					is_chinese_religion_viking_mod = YES
 				}
 				NOT = {
 					has_dlc = "Mandate of Heaven"
@@ -1844,13 +1843,17 @@ country_decisions = {
 				has_country_flag = screw_pope
 			}
 			any_owned_province = {
-				religion_group = christian
+				is_christian_viking_mod = yes
 			}
 			is_free_or_tributary_trigger = yes
 		}
 		allow = {
-			NOT = {
-				government = tribal
+			AND = {
+				NOT = {
+					government = tribal
+				}
+				NOT = {	has_country_flag = screw_pope }
+				is_pagan_viking_mod = yes
 			}
 			stability = 1
 		}
@@ -1879,13 +1882,16 @@ country_decisions = {
 				religion = tengri_pagan_reformed
 			}
 			any_owned_province = {
-				religion_group = muslim
+				is_muslim_viking_mod = yes
 			}
 			is_free_or_tributary_trigger = yes
 		}
 		allow = {
-			NOT = {
-				government = tribal
+			AND = {
+				NOT = {
+					government = tribal
+				}
+				is_pagan_viking_mod = yes
 			}
 			stability = 1
 		}
@@ -1919,8 +1925,11 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 		}
 		allow = {
-			NOT = {
-				government = tribal
+			AND = {
+				NOT = {
+					government = tribal
+				}
+			is_pagan_viking_mod = yes
 			}
 			stability = 1
 		}
@@ -1954,8 +1963,11 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 		}
 		allow = {
-			NOT = {
-				government = tribal
+			AND = {
+				NOT = {
+					government = tribal
+				}
+			is_pagan_viking_mod = yes
 			}
 			stability = 1
 		}
@@ -1989,8 +2001,11 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 		}
 		allow = {
-			NOT = {
-				government = tribal
+			AND = {
+				NOT = {
+					government = tribal
+				}
+			is_pagan_viking_mod = yes
 			}
 			stability = 1
 		}
@@ -2024,8 +2039,11 @@ country_decisions = {
 			is_free_or_tributary_trigger = yes
 		}
 		allow = {
-			NOT = {
-				government = tribal
+			AND = {
+				NOT = {
+					government = tribal
+				}
+			is_pagan_viking_mod = yes
 			}
 			stability = 1
 		}
@@ -2049,7 +2067,7 @@ country_decisions = {
 	}
 	muslim_conversion_to_sikhism = {
 		potential = {
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 			any_owned_province = {
 				religion = sikhism
 			}

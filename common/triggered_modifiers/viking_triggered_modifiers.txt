@@ -1,0 +1,199 @@
+#Gives the Fylkir the Crusade CB
+fylkir_triggered_modifier = {
+	potential = {
+		#Only available to Norse countries
+		religion = norse_pagan_reformed
+	}
+	trigger = {
+		custom_trigger_tooltip = {
+			tooltip = OWN_HOLY_PROVINCES_FYLKIR
+			if = {
+				#First condition: someone owns 3 or more of the holy provinces
+				limit = {
+					OR = {
+						num_of_owned_provinces_with = {
+							value = 3
+							OR = {
+								province_id = 1
+								province_id = 20
+								province_id = 245
+								province_id = 2972
+								province_id = 280
+							}
+						}
+						any_country = {
+							religion = norse_pagan_reformed
+							num_of_owned_provinces_with = {
+								value = 3
+								OR = {
+									province_id = 1
+									province_id = 20
+									province_id = 245
+									province_id = 2972
+									province_id = 280
+								}
+							}
+						}
+					}
+				}
+				num_of_owned_provinces_with = {
+					value = 3
+					OR = {
+						province_id = 1
+						province_id = 20
+						province_id = 245
+						province_id = 2972
+						province_id = 280
+					}
+				}
+			}
+			else_if = {
+				#Second condition, someone owns 2 holy sites
+				limit = {
+					OR = {
+						num_of_owned_provinces_with = {
+							value = 2
+							OR = {
+								province_id = 1
+								province_id = 20
+								province_id = 245
+								province_id = 2972
+								province_id = 280
+							}
+						}
+						any_country = {
+							religion = norse_pagan_reformed
+							num_of_owned_provinces_with = {
+								value = 2
+								OR = {
+									province_id = 1
+									province_id = 20
+									province_id = 245
+									province_id = 2972
+									province_id = 280
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						#Second condition: 2 countries own 2 holy sites each, the one with the holiest gets the price
+						#Since 4 provinces are naturally occupied, Trondheim is the least holy you can get
+						calc_true_if = {
+							amount = 2
+							all_countries_including_self = {
+								religion = norse_pagan_reformed
+								num_of_owned_provinces_with = {
+									value = 2
+									OR = {
+										province_id = 1
+										province_id = 20
+										province_id = 245
+										province_id = 2972
+										province_id = 280
+									}
+								}
+							}
+						}
+					}
+					if = {
+						#In case Stockholm is owned by a potential Fylkir
+						limit = {
+							1 = {
+								owner = {
+									religion = norse_pagan_reformed
+									num_of_owned_provinces_with = {
+										value = 2
+										OR = {
+											province_id = 1
+											province_id = 20
+											province_id = 245
+											province_id = 2972
+											province_id = 280
+										}
+									}
+								}
+							}
+						}
+						owns = 1
+					}
+					#Else Trondheim is the holiest site they can possibly snatch 
+					else = {
+						owns = 20
+					}
+				}
+				#3rd condition: Single country got 2 provinces, hence this is simple
+				num_of_owned_provinces_with = {
+					value = 2
+					OR = {
+						province_id = 1
+						province_id = 20
+						province_id = 245
+						province_id = 2972
+						province_id = 280
+					}
+				}
+			}
+			else = {
+				#Fourth condition: Someone owns a holy site. Give it to the guy with holiest one
+				if = {
+					limit = {
+						1 = {
+							owner = {
+								religion = norse_pagan_reformed
+							}
+						}
+					}
+					owns = 1
+				}
+				else_if = {
+					limit = {
+						20 = {
+							owner = {
+								religion = norse_pagan_reformed
+							}
+						}
+					}
+					owns = 20
+				}
+				else_if = {
+					limit = {
+						245 = {
+							owner = {
+								religion = norse_pagan_reformed
+							}
+						}
+					}
+					owns = 245
+				}
+				else_if = {
+					limit = {
+						2972 = {
+							owner = {
+								religion = norse_pagan_reformed
+							}
+						}
+					}
+					owns = 2972
+				}
+				else = {
+					num_of_owned_provinces_with = {
+						value = 1
+						OR = {
+							province_id = 1
+							province_id = 20
+							province_id = 245
+							province_id = 2972
+							province_id = 280
+						}
+					}
+				}
+			}
+		}
+	}
+	prestige = 1
+	missionaries = 1
+	global_missionary_strength = 0.02 #2% strength
+	tolerance_own = 1
+}

@@ -1,12 +1,7 @@
 # All global modifiers are here. They are applied from certain game-features.
 #
 # Effects are fully scriptable here.
-# These names can NOT be removed or changes, as the code uses them....
-################
-null_modifier = {
-}
-
-################
+# Missing static modifiers expected by code will print to the errorlog
 ##########################################################################
 # Handicap Modifiers for human player
 ##########################################################################
@@ -130,7 +125,7 @@ non_coastal = {
 }
 
 coastal_sea = {
-	local_naval_engagement_modifier = 0.1
+	local_naval_engagement_modifier = -0.2
 }
 
 tropical = {
@@ -176,12 +171,14 @@ mild_winter = {
 normal_winter = {
 	local_hostile_attrition = 2
 	supply_limit_modifier = -0.2
+	migration_cost = 0.1
 	picture = "winter_normal"
 }
 
 severe_winter = {
 	local_hostile_attrition = 3
 	supply_limit_modifier = -0.3
+	migration_cost = 0.2
 	picture = "winter_severe"
 }
 
@@ -237,9 +234,6 @@ manpower = {
 	garrison_growth = 0.01	#1% increase from manpower.
 }
 
-sailors = {
-}
-
 # Caps at 600
 horde_development = {
 	horde_unity = -3
@@ -255,9 +249,10 @@ development = {
 	local_missionary_strength = -0.001
 	land_forcelimit = 0.1	# special case, affected by autonomy
 	naval_forcelimit = 0.1	# special case, affected by autonomy & set to 0 by code if not port
-	local_sailors = 30	# special case, affected by autonomy & set to 0 by code if not port
+	local_sailors = 60	# special case, affected by autonomy & set to 0 by code if not port
 	province_trade_power_value = 0.2
 	local_amount_of_banners = 0.066
+	local_amount_of_cawa = 0.125
 }
 
 development_scaled = {
@@ -465,6 +460,7 @@ local_autonomy_trade_company = {
 
 recent_uprising = {
 	local_unrest = -100
+	picture = "recent_uprising"
 }
 
 friendly_regiments = {
@@ -481,8 +477,9 @@ national_defense = {
 	local_unrest = -5
 }
 
+# penalty when migrant have been there recently.
 resource_depleted = {
-	local_tax_modifier = -0.5	# penalty when migrant have been there recently.
+	# Not used anymore, however if you add it, will be applied again. Kept it for modders
 }
 
 in_trade_company = {
@@ -533,6 +530,9 @@ base_values = {
 	artillery_bonus_vs_fort = 5
 	cav_to_inf_ratio = 0.5
 	merc_maintenance_modifier = 0.5
+	monthly_heir_claim_increase = 0.208
+	tolerance_of_heretics_capacity = 3
+	tolerance_of_heathens_capacity = 3
 }
 
 # AI 'cheats' that compensate for flaws in its long-term decision making, removing these may severely cripple the AI
@@ -576,6 +576,7 @@ negative_stability = {
 	global_unrest = -2	#-1% EXTRA revolt risk each step
 	legitimacy = 1
 	interest = -1
+	migration_cost = 0.1
 	devotion = 1
 	caravan_power = 0.05
 }
@@ -644,7 +645,6 @@ bankruptcy = {
 	sailors_recovery_speed = -1
 	advisor_cost = 0.5
 	monthly_fervor_increase = -1
-	global_colonial_growth = -200
 	global_autonomy = 0.05
 	global_institution_spread = -0.5
 	monthly_militarized_society = -0.5
@@ -652,6 +652,7 @@ bankruptcy = {
 	technology_cost = 0.5
 	idea_cost = 0.5
 	imperial_mandate = -0.1
+	great_project_upgrade_cost = 0.5
 }
 
 war = {
@@ -705,7 +706,7 @@ authority = {
 }
 
 regency_council = {
-	legitimacy = -2
+	stability_cost_modifier = 0.25
 }
 
 trade_efficiency = {
@@ -720,10 +721,10 @@ trade_refusal = {
 }
 
 mercantilism = {
-	global_prov_trade_power_modifier = 5
-	embargo_efficiency = 1
-	burghers_loyalty_modifier = 0.1
-	vaisyas_loyalty_modifier = 0.1
+	global_prov_trade_power_modifier = 2
+	embargo_efficiency = 0.5
+	burghers_loyalty_modifier = 0.05
+	vaisyas_loyalty_modifier = 0.05
 }
 
 army_tradition = {
@@ -738,6 +739,7 @@ army_tradition = {
 	nobles_loyalty_modifier = 0.05
 	maratha_loyalty_modifier = 0.05
 	rajput_loyalty_modifier = 0.05
+	tribal_development_growth = -1
 }
 
 navy_tradition = {
@@ -866,7 +868,7 @@ legitimacy = {
 horde_unity = {
 	global_unrest = -4
 	discipline = 0.1
-	nomadic_tribes_loyalty_modifier = 0.05
+	#nomadic_tribes_loyalty_modifier = 0.05	#New Change
 }
 
 # Multiplied by current Devotion - 50
@@ -911,6 +913,7 @@ corruption = {
 	dhimmi_loyalty_modifier = 0.1
 	jains_loyalty_modifier = 0.1
 	rajput_loyalty_modifier = 0.1
+	monthly_heir_claim_increase = 0.025
 }
 
 root_out_corruption = {
@@ -958,6 +961,7 @@ luck = {
 	republican_tradition = 0.5
 	legitimacy = 1
 	ae_impact = -0.25
+	governing_capacity_modifier = 0.25
 }
 
 over_extension = {
@@ -982,6 +986,7 @@ prestige = {
 	monthly_fervor_increase = 1
 	ae_impact = -0.1
 	embracement_cost = -0.1
+	monthly_heir_claim_increase = 0.05
 	brahmins_hindu_loyalty_modifier = 0.05
 	brahmins_muslim_loyalty_modifier = 0.05
 	brahmins_other_loyalty_modifier = 0.05
@@ -1019,18 +1024,18 @@ inverse_republican_tradition = {
 ########################################
 curia_controller = {
 	diplomats = 1	#1 extra diplomat as curia controller
-	prestige = 2	#1% extra prestige yearly
+	prestige = 1	#1% extra prestige yearly
 	stability_cost_modifier = -0.1	#10% cheaper stability
 	advisor_pool = 2
-	advisor_cost = -0.25
-	free_leader_pool = 2
-	ae_impact = -0.1
-	technology_cost = -0.075
-	church_loyalty_modifier = 0.15
+	advisor_cost = -0.2
+	free_leader_pool = 1
+	ae_impact = -0.2
+	technology_cost = -0.05
+	church_loyalty_modifier = 0.1
 }
 
 bought_indulgence = {
-	papal_influence = 5
+	papal_influence = 1
 }
 
 religious_unity = {
@@ -1167,9 +1172,6 @@ trade_company_strong = {
 	merchants = 1
 }
 
-trade_company_dominant = {
-}
-
 large_colonial_nation = {
 	merchants = 1
 	global_trade_power = 0.05
@@ -1279,6 +1281,7 @@ gov_rank_10 = {
 # For autonomy mechanics
 autonomy_increased = {
 	local_unrest = -10
+	picture = "autonomy_increased"
 }
 
 autonomy_decreased = {
@@ -1551,7 +1554,8 @@ alawite_scholar_modifier = {
 	religion = yes
 	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	reform_progress_growth = 0.1
+	land_morale = 0.025
+	discipline = 0.025
 }
 
 ashari_scholar_modifier = {
@@ -1559,55 +1563,44 @@ ashari_scholar_modifier = {
 	religion = yes
 	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	monthly_splendor = 1
+	expel_minorities_cost = -0.05
+	cav_to_inf_ratio = 0.05
 }
 
-azariqa_scholar_modifier = {
+druze_scholar_modifier = {
 	religion_sub_modifier = yes	# Will make icon placed next to religion modifier
 	religion = yes
 	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	expand_administration_cost = -0.1
-}
-
-barelvi_scholar_modifier = {
-	religion_sub_modifier = yes	# Will make icon placed next to religion modifier
-	religion = yes
-	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
-	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	fire_damage_received = -0.1
-}
-
-ghulat_scholar_modifier = {
-	religion_sub_modifier = yes	# Will make icon placed next to religion modifier
-	religion = yes
-	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
-	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	dip_tech_cost_modifier = -0.05
 	stability_cost_modifier = -0.1
 }
 
-hanafi_scholar_modifier = {
+fiqh_scholar_modifier = {
 	religion_sub_modifier = yes	# Will make icon placed next to religion modifier
 	religion = yes
 	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	adm_tech_cost_modifier = -0.05
+	adm_advisor_cost = -0.05
+	idea_cost = -0.05
 }
 
-hanbali_scholar_modifier = {
+hurufi_scholar_modifier = {
 	religion_sub_modifier = yes	# Will make icon placed next to religion modifier
 	religion = yes
 	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	ae_impact = -0.1
+	diplomatic_upkeep = 1
+	global_heretic_missionary_strength = 0.005
 }
 
-imami_scholar_modifier = {
+ibadi_scholar_modifier = {
 	religion_sub_modifier = yes	# Will make icon placed next to religion modifier
 	religion = yes
 	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	global_spy_defence = 0.1
+	global_trade_goods_size_modifier = 0.05
+	army_tradition_from_battle = 0.125
 }
 
 ismaili_scholar_modifier = {
@@ -1619,102 +1612,61 @@ ismaili_scholar_modifier = {
 	legitimacy = 1
 	republican_tradition = 0.2
 	devotion = 1
+	dip_advisor_cost = -0.05
 }
 
-jafari_scholar_modifier = {
+kharijite_scholar_modifier = {
 	religion_sub_modifier = yes	# Will make icon placed next to religion modifier
 	religion = yes
 	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	shock_damage = 0.1
+	improve_relation_modifier = 0.1
+	harsh_treatment_cost = -0.1
 }
 
-maliki_scholar_modifier = {
+qarmatian_scholar_modifier = {
 	religion_sub_modifier = yes	# Will make icon placed next to religion modifier
 	religion = yes
 	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	development_cost = -0.1
+	global_ship_cost = -0.05
+	heavy_ship_power = 0.05
 }
 
-masmudi_scholar_modifier = {
+shabazzi_scholar_modifier = {
 	religion_sub_modifier = yes	# Will make icon placed next to religion modifier
 	religion = yes
 	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	army_tradition_from_battle = 0.25
-}
-
-maturidi_scholar_modifier = {
-	religion_sub_modifier = yes	# Will make icon placed next to religion modifier
-	religion = yes
-	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
-	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	infantry_power = 0.1
-}
-
-muhakkima_scholar_modifier = {
-	religion_sub_modifier = yes	# Will make icon placed next to religion modifier
-	religion = yes
-	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
-	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	artillery_bonus_vs_fort = 1
-}
-
-mutazilla_scholar_modifier = {
-	religion_sub_modifier = yes	# Will make icon placed next to religion modifier
-	religion = yes
-	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
-	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	naval_tradition_from_battle = 0.25
-}
-
-nadjat_scholar_modifier = {
-	religion_sub_modifier = yes	# Will make icon placed next to religion modifier
-	religion = yes
-	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
-	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	naval_morale = 0.1
-}
-
-nizari_scholar_modifier = {
-	religion_sub_modifier = yes	# Will make icon placed next to religion modifier
-	religion = yes
-	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
-	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	dip_tech_cost_modifier = -0.05
-}
-
-quran_scholar_modifier = {
-	religion_sub_modifier = yes	# Will make icon placed next to religion modifier
-	religion = yes
-	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
-	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	core_creation = -0.1
-}
-
-shafii_scholar_modifier = {
-	religion_sub_modifier = yes	# Will make icon placed next to religion modifier
-	religion = yes
-	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
-	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	merchants = 1
-}
-
-usuli_scholar_modifier = {
-	religion_sub_modifier = yes	# Will make icon placed next to religion modifier
-	religion = yes
-	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
-	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	mil_advisor_cost = -0.05
 	mil_tech_cost_modifier = -0.05
 }
 
-zaidi_scholar_modifier = {
+sufri_scholar_modifier = {
 	religion_sub_modifier = yes	# Will make icon placed next to religion modifier
 	religion = yes
 	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
 	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
-	shock_damage_received = -0.1
+	defensiveness = 0.05
+	hostile_attrition = 0.5
+}
+
+yazidi_scholar_modifier = {
+	religion_sub_modifier = yes	# Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	advisor_pool = 1
+	global_heretic_missionary_strength = 0.01
+}
+
+zikri_scholar_modifier = {
+	religion_sub_modifier = yes	# Will make icon placed next to religion modifier
+	religion = yes
+	is_scholar_modifier = yes	# Tells the AI and will only show the alert if country has none
+	expire_message_type = "RELIGIOUS_SCHOLAR_EXPIRY"
+	global_institution_spread = 0.075
+	center_of_trade_upgrade_cost = -0.05
 }
 
 ########################################
@@ -1738,6 +1690,13 @@ janissary_regiment = {
 	shock_damage_received = -0.1
 	reinforce_cost_modifier = 1
 	drill_gain_modifier = 1
+}
+
+cawa_regiment = {
+	shock_damage_received = -0.15
+	land_attrition = -0.25
+	reinforce_cost_modifier = 0.25
+	reinforce_speed = -0.25
 }
 
 revolutionary_guard_regiment = {

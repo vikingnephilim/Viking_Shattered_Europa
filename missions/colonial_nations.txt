@@ -454,9 +454,7 @@ australia_missions_2 = {
 		}
 		effect = {
 			add_dip_power = 200
-			add_legitimacy_equivalent = {
-				value = 20
-			}
+			add_prestige = 10
 			custom_tooltip = AUS_MASTER_INDIES
 			hidden_effect = {
 				1357 = {
@@ -2327,9 +2325,6 @@ canada_missions_1 = {
 			}
 		}
 		effect = {
-			country_event = {
-				id = ME_Canada_Events.1
-			}
 			hudson_bay_area = {
 				limit = {
 					NOT = {
@@ -2369,11 +2364,6 @@ canada_missions_1 = {
 			}
 		}
 		effect = {
-			country_event = {
-				id = ME_Canada_Events.2
-				days = 365
-				tooltip = ME_Canada_Events.2.tooltip
-			}
 			1005 = {
 				add_base_tax = 2
 				add_base_production = 4
@@ -3298,9 +3288,6 @@ canada_missions_2 = {
 		}
 		effect = {
 			set_country_flag = search_for_gold_decision_enabled
-			country_event = {
-				id = ME_Canada_Events.3
-			}
 		}
 	}
 	can_amphibious_ambitions = {
@@ -3513,17 +3500,7 @@ canada_missions_3 = {
 			}
 		}
 		effect = {
-			if = {
-				limit = {
-					is_subject = yes
-				}
-				country_event = {
-					id = ME_Canada_Events.4
-				}
-			}
-			else = {
-				add_prestige = 20
-			}
+			add_prestige = 20
 		}
 	}
 	can_province_canada = {
@@ -3566,9 +3543,6 @@ canada_missions_3 = {
 			}
 		}
 		effect = {
-			country_event = {
-				id = ME_Canada_Events.9
-			}
 			add_country_modifier = {
 				name = can_growing_nation
 				duration = 5475
@@ -4050,9 +4024,6 @@ canada_missions_4 = {
 			}
 		}
 		effect = {
-			country_event = {
-				id = ME_Canada_Events.11
-			}
 			2569 = {
 				add_province_modifier = {
 					name = can_port_new_world
@@ -4109,9 +4080,6 @@ canada_missions_4 = {
 			}
 		}
 		effect = {
-			country_event = {
-				id = ME_Canada_Events.12
-			}
 			add_country_modifier = {
 				name = can_cuisines_canada
 				duration = -1
@@ -4372,9 +4340,6 @@ canada_missions_5 = {
 			}
 		}
 		effect = {
-			country_event = {
-				id = ME_Canada_Events.13
-			}
 			set_country_flag = can_emergin_culture_enable
 			lower_canada_area = {
 				add_province_modifier = {
@@ -4584,9 +4549,6 @@ canada_missions_5 = {
 			}
 		}
 		effect = {
-			country_event = {
-				id = ME_Canada_Events.14
-			}
 			add_country_modifier = {
 				name = can_enriching_canadian_land
 				duration = 9125
@@ -6293,9 +6255,7 @@ texas_missions_2 = {
 				add_republican_tradition = 5
 			}
 			else = {
-				add_legitimacy_equivalent = {
-					value = 10
-				}
+				add_prestige = 10
 			}
 			huasteca_area = {
 				limit = {

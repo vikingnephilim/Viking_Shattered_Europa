@@ -1,6 +1,6 @@
-per_western_branch = {
-	slot = 5	#upper left column
-	generic = no	#if a mission without generic = yes wants this slot then it overrides this.
+mug_sufis = {
+	slot = 4
+	generic = no
 	ai = yes
 	potential = {
 		AND = {
@@ -11,7 +11,7 @@ per_western_branch = {
 			}
 			OR = {
 				religion_group = zoroastrian_group
-				religion_group = muslim
+				is_muslim_viking_mod = yes
 				religion = zun_pagan_reformed
 			}
 		}
@@ -20,263 +20,89 @@ per_western_branch = {
 		}
 	}
 	has_country_shield = yes
-	conquest_of_azerbaijan = {
-		icon = mission_non-western_cavalry_raid
+	mug_sufi_shrines = {
+		icon = mission_sufi_shrines
 		required_missions = {
 		}
-		position = 3		#None
+		position = 1
 		provinces_to_highlight = {
 			OR = {
-				area = tabriz_area
-				area = azerbaijan_area
+				province_id = 2035				#Gulbarga
+				province_id = 2054				#Batwa
+				province_id = 2059				#Kalpi
+				province_id = 2066				#Nagaur
+				province_id = 2076				#Gujrat
+				province_id = 2087				#Ajmer
+				province_id = 4494				#Khairabad
+				province_id = 506				#Multan
+				province_id = 507				#Lahore
+				province_id = 510				#Sirhind
+				province_id = 545				#Daulatabad
+				province_id = 555				#Jaunpur & Zafarabad
+				province_id = 563				#Gaur & Pandua
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				owned_by = ROOT
 			}
 		}
 		trigger = {
-			tabriz_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			if = {
+				limit = {
+					is_muslim_viking_mod = yes
+					has_estate = estate_church
+				}
+				estate_influence = {
+					estate = estate_church
+					influence = 60
+				}
+				num_of_estate_privileges = {
+					estate = estate_church
+					value = 3
+				}
 			}
-			azerbaijan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+			else = {
+				legitimacy = 100
 			}
+			owns_core_province = 2035			#Gulbarga
+			owns_core_province = 2054			#Batwa
+			owns_core_province = 2059			#Kalpi
+			owns_core_province = 2066			#Nagaur
+			owns_core_province = 2076			#Gujrat
+			owns_core_province = 2087			#Ajmer
+			owns_core_province = 4494			#Khairabad
+			owns_core_province = 506			#Multan
+			owns_core_province = 507			#Lahore
+			owns_core_province = 510			#Sirhind
+			owns_core_province = 545			#Daulatabad
+			owns_core_province = 555			#Jaunpur & Zafarabad
+			owns_core_province = 563			#Gaur & Pandua
 		}
 		effect = {
-			add_country_modifier = {
-				name = "per_tribal_warriors"
-				duration = 7300
-			}
-		}
-	}
-	consolidate_iran = {
-		icon = mission_persian_soldiers
-		required_missions = {
-			conquest_of_azerbaijan
-		}
-		position = 4
-		provinces_to_highlight = {
-			OR = {
-				area = azerbaijan_area
-				area = iraq_e_ajam_area
-				area = isfahan_area
-				area = farsistan_area
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		trigger = {
-			azerbaijan_area = {
-				#Must still have this
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			iraq_e_ajam_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			isfahan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			farsistan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			country_event = {
-				id = flavor_per.1
-			}
-			iraq_arabi_area = {
+			if = {
 				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						is_permanent_claim = ROOT
-					}
+					is_muslim_viking_mod = yes
+					has_estate = estate_church
 				}
-				add_permanent_claim = ROOT
-			}
-			basra_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						is_permanent_claim = ROOT
-					}
+				add_piety = -0.25
+				add_country_modifier = {
+					name = "mug_control_of_sufi_shrines"
+					duration = 9125
 				}
-				add_permanent_claim = ROOT
-			}
-			mashhad_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			birjand_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			herat_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			tooltip = {
-				if = {
-					limit = {
-						NOT = {
-							government_rank = 3
-						}
-					}
-					set_government_rank = 3
-				}
-				416 = {
-					#Tabriz
-					add_base_tax = 2
-					add_base_production = 2
-					add_base_manpower = 1
-				}
-				429 = {
-					#Isfahan
-					add_base_tax = 3
-					add_base_production = 3
-					add_base_manpower = 1
-				}
-				2215 = {
-					#Qazvin
-					add_base_tax = 2
-					add_base_production = 2
-					add_base_manpower = 1
-				}
-				2218 = {
-					#Shiraz
-					add_base_tax = 2
-					add_base_production = 2
-				}
-				428 = {
-					#Teheran
-					add_base_tax = 1
-					add_base_production = 1
-					add_base_manpower = 1
-				}
-				433 = {
-					#Yazd
-					add_base_tax = 1
-					add_base_production = 1
-				}
-				2213 = {
-					#Qom
-					add_base_tax = 1
-					add_base_production = 1
-					add_base_manpower = 1
-				}
-				2212 = {
-					#Zanjan
-					add_base_tax = 1
-					add_base_production = 1
-					add_base_manpower = 1
+				add_estate_loyalty = {
+					estate = estate_church
+					loyalty = 15
 				}
 			}
-		}
-	}
-	conquest_of_arabian_iraq = {
-		icon = mission_mosque
-		required_missions = {
-			consolidate_iran
-		}
-		provinces_to_highlight = {
-			OR = {
-				area = luristan_area
-				area = iraq_arabi_area
-				area = basra_area
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		position = 5
-		trigger = {
-			religion = ROOT
-			luristan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			iraq_arabi_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			basra_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		effect = {
-			add_prestige = 25
-			bahrain_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						is_claim = ROOT
-					}
-				}
-				add_claim = ROOT
-			}
-			al_jazira_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						is_claim = ROOT
-					}
-				}
-				add_claim = ROOT
-			}
-			country_event = {
-				id = flavor_per.9
-			}
-			tooltip = {
-				2311 = {
-					add_province_modifier = {
-						name = "per_najaf"
-						duration = 7300
-					}
-				}
+			else = {
+				add_prestige = 20
 			}
 		}
 	}
 }
 
-per_east = {
-	slot = 2	#upper right column
-	generic = no	#if a mission without generic = yes wants this slot then it overrides this.
+mug_rajput_branch = {
+	slot = 4
+	generic = no
 	ai = yes
 	potential = {
 		AND = {
@@ -287,7 +113,7 @@ per_east = {
 			}
 			OR = {
 				religion_group = zoroastrian_group
-				religion_group = muslim
+				is_muslim_viking_mod = yes
 				religion = zun_pagan_reformed
 			}
 		}
@@ -296,133 +122,359 @@ per_east = {
 		}
 	}
 	has_country_shield = yes
-	persian_khorasan = {
-		icon = mission_market_place_with_asian_traders
-		position = 1
+	mug_subdue_rajputana = {
+		icon = mission_subdue_rajputana
 		required_missions = {
 		}
+		position = 2
 		provinces_to_highlight = {
 			OR = {
-				area = mashhad_area
-				area = birjand_area
-				area = herat_area
+				area = marwar_area
+				area = jangladesh_area
+				area = jaipur_area
+				area = bundelkhand_area
+				area = baghelkhand_area
+				AND = {
+					province_id = 518
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				AND = {
+					province_id = 2087
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
 			}
 			NOT = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		trigger = {
-			mashhad_area = {
+			owns_core_province = 518			#Chittor
+			owns_core_province = 2087			#Ajmer
+			2087 = {
+				fort_level = 2
+			}
+			marwar_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			birjand_area = {
+			jangladesh_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			herat_area = {
+			jaipur_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-		}
-		effect = {
-			446 = {
-				add_province_modifier = {
-					name = "per_pearl_of_khorasan"
-					duration = -1
-				}
-			}
-			ghor_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			kabulistan_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-			balkh_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						is_permanent_claim = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
-		}
-	}
-	persian_afghanistan = {
-		icon = mission_central_asian_city
-		required_missions = {
-			persian_khorasan
-		}
-		provinces_to_highlight = {
-			OR = {
-				area = ghor_area
-				area = kabulistan_area
-				area = balkh_area
-			}
-			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-		}
-		trigger = {
-			ghor_area = {
+			bundelkhand_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			kabulistan_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			balkh_area = {
+			baghelkhand_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
 		effect = {
 			add_country_modifier = {
-				name = "per_pashtun_warriors"
-				duration = 7300
+				name = "mug_conquest_of_rajputana"
+				duration = 10950
 			}
-			lahore_area = {
-				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						is_claim = ROOT
-					}
+			2087 = {
+				add_province_modifier = {
+					name = "ajmer_subah"
+					duration = -1
 				}
-				add_claim = ROOT
 			}
-			multan_area = {
+		}
+	}
+	mug_rajput_mansabdars = {
+		icon = mission_rajput_mansabdars
+		required_missions = {
+			mug_subdue_rajputana
+		}
+		position = 3
+		trigger = {
+			estate_influence = {
+				estate = estate_rajput
+				influence = 40
+			}
+			num_of_estate_privileges = {
+				estate = estate_rajput
+				value = 2
+			}
+		}
+		effect = {
+			define_general = {
+				name = "Man Singh"
+				shock = 5
+				fire = 4
+				manuever = 3
+				siege = 1
+			}
+			add_country_modifier = {
+				name = "mug_watan_jagirs_rajputs"
+				duration = 9125
+			}
+		}
+	}
+	mug_fatehpur_sikri = {
+		icon = mission_fatehpur_sikri
+		required_missions = {
+			mug_rajput_mansabdars
+		}
+		position = 4
+		provinces_to_highlight = {
+			province_id = 524
+		}
+		trigger = {
+			if = {
 				limit = {
-					NOT = {
-						is_core = ROOT
-					}
-					NOT = {
-						is_claim = ROOT
-					}
+					has_estate = estate_church
 				}
-				add_claim = ROOT
+				estate_loyalty = {
+					estate = estate_church
+					loyalty = 60
+				}
 			}
+			if = {
+				limit = {
+					has_estate = estate_brahmins
+				}
+				estate_loyalty = {
+					estate = estate_brahmins
+					loyalty = 60
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_church
+				}
+				estate_influence = {
+					estate = estate_church
+					influence = 60
+				}
+			}
+			if = {
+				limit = {
+					has_estate = estate_brahmins
+				}
+				estate_influence = {
+					estate = estate_brahmins
+					influence = 60
+				}
+			}
+			524 = {
+				owned_by = ROOT
+				has_building = cathedral
+				OR = {
+					is_capital = yes
+					has_courthouse_building_trigger = yes
+				}
+			}
+		}
+		effect = {
+			524 = {
+				move_capital_effect = yes
+				rename_capital = "Fatehpur Sikri"
+				add_base_tax = 2
+				add_base_production = 2
+				add_province_modifier = {
+					name = "mughal_imperial_capital"
+					duration = -1
+				}
+			}
+		}
+	}
+	mug_din_i_illah = {
+		icon = mission_din_i_llahi
+		required_missions = {
+			mug_fatehpur_sikri
+		}
+		position = 5
+		trigger = {
+			stability = 3
+			government_rank = 3
+			has_reform = mughal_government
+			has_reform = mansabdari_reform
+			has_reform = zabt_reform
+			if = {
+				limit = {
+					has_estate = estate_nobles
+				}
+				estate_loyalty = {
+					estate = estate_nobles
+					loyalty = 60
+				}
+			}
+			else_if = {
+				limit = {
+					has_estate = estate_rajput
+				}
+				estate_loyalty = {
+					estate = estate_rajput
+					loyalty = 60
+				}
+			}
+			else_if = {
+				limit = {
+					has_estate = estate_maratha
+				}
+				estate_loyalty = {
+					estate = estate_maratha
+					loyalty = 60
+				}
+			}
+			else = {
+				prestige = 100
+			}
+		}
+		effect = {
+			add_piety = -0.35
+			if = {
+				limit = {
+					has_estate = estate_nobles
+				}
+				add_estate_loyalty_modifier = {
+					estate = estate_nobles
+					desc = EST_VAL_DIVINE_FAITH
+					loyalty = 10
+					duration = 10950
+				}
+			}
+			add_country_modifier = {
+				name = "mug_divine_faith"
+				duration = 10950
+			}
+		}
+	}
+}
+
+mug_hyderabad_branch = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		AND = {
+			OR = {
+				culture_group = iranian
+				culture_group = east_iranian
+				culture_group = west_persian
+			}
+			OR = {
+				religion_group = zoroastrian_group
+				is_muslim_viking_mod = yes
+				religion = zun_pagan_reformed
+			}
+		}
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	mug_conquer_central_deccan = {
+		icon = mission_conquer_central_deccan
+		required_missions = {
+		}
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				area = maidan_area
+				area = rayalaseema_area
+				area = raichur_doab_area
+				area = mysore_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			maidan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			rayalaseema_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			mysore_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			raichur_doab_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			create_general = {
+				tradition = 80
+			}
+			add_country_modifier = {
+				name = "mug_southern_markets"
+				duration = 10950
+			}
+		}
+	}
+	mug_viceroyalty_of_the_deccan = {
+		icon = mission_viceroyalty_of_the_deccan
+		required_missions = {
+			mug_conquer_central_deccan
+		}
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				province_id = 542
+				province_id = 545
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		trigger = {
+			has_reform = zabt_reform
+			owns_core_province = 542			#Daulatabad
+			owns_core_province = 545			#Golconda
+		}
+		effect = {
+			country_event = {
+				id = mug_mission_events.1
+			}
+			custom_tooltip = mug_viceroyalty_of_the_deccan.tt
+			# tooltip = {
+			# 545 = {
+			# change_province_name = "Aurangabad"
+			# rename_capital = "Aurangabad"
+			# add_base_tax = 2
+			# add_base_manpower = 2
+			# add_base_production = 2
+			# add_province_modifier = {
+			# name = "city_of_aurangabad"
+			# duration = -1
+			# }
+			# }
+			# 542 = {
+			# change_province_name = "Hyderabad"
+			# rename_capital = "Hyderabad"
+			# add_base_tax = 2
+			# add_base_manpower = 2
+			# add_base_production = 2
+			# }
+			# }
 		}
 	}
 }

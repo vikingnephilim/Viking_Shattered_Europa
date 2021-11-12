@@ -38,7 +38,7 @@ jewish_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			NOT = { religion = jewish }
+			NOT = { religion_group = jewish_group }
 		}
 		modifier = {
 			factor = 0.001
@@ -82,21 +82,21 @@ jewish_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			religion = jewish
-			owner = { religion = jewish }
+			religion_group = jewish_group
+			owner = { religion_group = jewish_group }
 		}
 		modifier = {
 			factor = 2.0
-			NOT = { religion = jewish }
+			NOT = { religion_group = jewish_group }
 			any_neighbor_province = {
-	 			religion = jewish
+	 			religion_group = jewish_group
 	 			NOT = { has_province_modifier = "forced_conversion" }
 	 		}
 	 	}
 		modifier = {
 			factor = 5
 			has_missionary = yes
-			religion = jewish
+			religion_group = jewish_group
 		}
 		modifier = {
 			factor = 1.5
@@ -126,9 +126,9 @@ jewish_rebels = {
 			if = {
 				limit = {
 					OR = {
-						religion = jewish
+						religion_group = jewish_group
 						is_reformation_center = yes
-						owner = { religion = jewish }
+						owner = { religion_group = jewish_group }
 					}
 				}
 				add_province_modifier = {
@@ -138,9 +138,9 @@ jewish_rebels = {
 			}
 			if = {
 				limit = {
-					NOT = { religion = jewish }
+					NOT = { religion_group = jewish_group }
 					is_reformation_center = no
-					NOT = { owner = { religion = jewish } }
+					NOT = { owner = { religion_group = jewish_group } }
 				}
 				change_religion = jewish
 				add_province_modifier = {
@@ -199,7 +199,7 @@ jewish_rebels = {
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = jewish }
+				NOT = { religion_group = jewish_group }
 				dominant_religion = jewish
 				NOT = { tag = PAP }
 			}
@@ -208,7 +208,7 @@ jewish_rebels = {
 		}
 		else_if = {
 			limit = {
-				religion = jewish
+				religion_group = jewish_group
 			}
 			add_country_modifier = {
 				name = "religious_intolerance_enforced"
@@ -217,7 +217,7 @@ jewish_rebels = {
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = jewish }
+				NOT = { religion_group = jewish_group }
 				NOT = { dominant_religion = jewish }
 				religion_group = jewish_group
 				NOT = { has_country_modifier = heretic_tolerance }
@@ -230,7 +230,7 @@ jewish_rebels = {
 		else = { add_stability = -1 } #Should probably never get here
 		if = {
 			limit = {
-				religion = jewish
+				religion_group = jewish_group
 				has_estate = estate_church
 				NOT = {
 					has_estate_influence_modifier = {

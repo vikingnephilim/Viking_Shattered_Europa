@@ -43,13 +43,7 @@ coptic_alexandria = {
 	potential = {
 		normal_or_historical_nations = yes
 		has_discovered = 358		# Alexandria
-		OR = {
-			religion = coptic
-			religion = malankara
-			religion = messalian
-			religion = monophysite
-			religion = nestorian
-		}
+		religion_group = eastern_christian
 	}
 	trigger = {
 		owns = 358		# Alexandria
@@ -215,7 +209,7 @@ christian_mecca = {
 	potential = {
 		normal_or_historical_nations = yes
 		has_discovered = 385		# Mecca
-		religion_group = christian
+		is_christian_viking_mod = yes
 	}
 	trigger = {
 		owns = 385		# Mecca
@@ -232,7 +226,7 @@ custodian_of_the_two_holy_mosques = {
 		normal_or_historical_nations = yes
 		has_discovered = 385		# Mecca
 		has_discovered = 384		# Medina
-		religion_group = muslim
+		is_muslim_viking_mod = yes
 	}
 	trigger = {
 		is_free_or_tributary_trigger = yes
@@ -250,8 +244,8 @@ jerusalem_held = {
 	potential = {
 		normal_or_historical_nations = yes
 		OR = {
-			religion_group = christian
-			religion_group = muslim
+			is_christian_viking_mod = yes
+			is_muslim_viking_mod = yes
 			religion_group = jewish_group
 		}
 		has_discovered = 379		# Judea
@@ -284,6 +278,9 @@ catholic_rome = {
 			tag = ITA
 		}
 		NOT = {
+			tag = HLR
+		}
+		NOT = {
 			tag = ROM
 		}
 		NOT = {
@@ -313,6 +310,9 @@ papal_subjugation = {
 			tag = ITA
 		}
 		NOT = {
+			tag = HLR
+		}
+		NOT = {
 			tag = ROM
 		}
 		NOT = {
@@ -320,6 +320,42 @@ papal_subjugation = {
 		}
 		NOT = {
 			tag = ERM
+		}
+		if = {
+			limit = {
+				is_emperor = yes
+				has_dlc = "Emperor"
+			}
+			OR = {
+				PAP = {
+					NOT = {
+						is_part_of_hre = yes
+					}
+					#Needs to be written like that for localization purpose
+				}
+				NOT = {
+					hre_reform_passed = emperor_privilegia_de_non_appelando
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_emperor = yes
+				NOT = {
+					has_dlc = "Emperor"
+				}
+			}
+			OR = {
+				PAP = {
+					NOT = {
+						is_part_of_hre = yes
+					}
+					#Needs to be written like that for localization purpose
+				}
+				NOT = {
+					hre_reform_passed = privilegia_de_non_appelando
+				}
+			}
 		}
 	}
 	diplomatic_reputation = -2
@@ -362,7 +398,11 @@ rapid_collapse_of_society = {
 ######################################
 submission_to_emperor = {
 	potential = {
-		has_global_flag = italy_out_of_HRE
+		has_global_flag = italians_leave_hre
+		NOT = {
+			has_country_flag = reined_in_for_shadow_kingdom
+		}
+		is_part_of_hre = yes
 		culture_group = latin
 	}
 	trigger = {
@@ -372,6 +412,14 @@ submission_to_emperor = {
 		}
 		capital_scope = {
 			is_part_of_hre = yes
+		}
+		NOT = {
+			is_year = 1550
+		}
+		NOT = {
+			emperor = {
+				alliance_with = ROOT
+			}
 		}
 	}
 	global_unrest = 3
@@ -385,21 +433,25 @@ submission_to_emperor = {
 counter_revolution = {
 	potential = {
 		revolution_target_exists = yes
-		is_revolution_target = no
+		is_revolutionary = no
+		any_country = {
+			is_revolution_target = yes
+			OR = {
+				capital_scope = {
+					continent = ROOT
+				}
+				is_neighbor_of = ROOT
+			}
+		}
 	}
 	trigger = {
-		capital_scope = {
-			continent = europe
-		}
 		revolution_target_exists = yes
-		is_revolution_target = no
+		is_revolutionary = no
 		is_free_or_tributary_trigger = yes
 		NOT = {
 			revolution_target = {
 				war_with = ROOT
 			}
-		}
-		NOT = {
 			revolution_target = {
 				truce_with = ROOT
 			}
@@ -417,16 +469,17 @@ counter_revolution = {
 reaction = {
 	potential = {
 		revolution_target_exists = yes
-		capital_scope = {
-			continent = europe
+		is_revolutionary = no
+		any_country = {
+			is_revolution_target = yes
+			capital_scope = {
+				continent = ROOT
+			}
 		}
 	}
 	trigger = {
-		capital_scope = {
-			continent = europe
-		}
 		revolution_target_exists = yes
-		is_revolution_target = no
+		is_revolutionary = no
 		is_free_or_tributary_trigger = yes
 		government = monarchy
 		revolution_target = {
@@ -471,10 +524,7 @@ crusader = {
 ######################################
 excommunication = {
 	potential = {
-		or = {
-			religion = catholic
-			religion = fraticelli
-		}
+		religion = catholic
 	}
 	trigger = {
 		is_excommunicated = yes
@@ -508,49 +558,19 @@ pentarchy_mod = {
 		owns = 379		# Jerusalem
 		owns = 358		# Alexandria
 		118 = {
-			OR = {
-				religion = orthodox
-				religion = bogomilist
-				religion = monothelite
-				religion = paulician
-				religion = iconoclast
-			}
+			religion_group = orthodox_christian
 		}
 		151 = {
-			OR = {
-				religion = orthodox
-				religion = bogomilist
-				religion = monothelite
-				religion = paulician
-				religion = iconoclast
-			}
+			religion_group = orthodox_christian
 		}
 		2313 = {
-			OR = {
-				religion = orthodox
-				religion = bogomilist
-				religion = monothelite
-				religion = paulician
-				religion = iconoclast
-			}
+			religion_group = orthodox_christian
 		}
 		379 = {
-			OR = {
-				religion = orthodox
-				religion = bogomilist
-				religion = monothelite
-				religion = paulician
-				religion = iconoclast
-			}
+			religion_group = orthodox_christian
 		}
 		358 = {
-			OR = {
-				religion = orthodox
-				religion = bogomilist
-				religion = monothelite
-				religion = paulician
-				religion = iconoclast
-			}
+			religion_group = orthodox_christian
 		}
 	}
 	prestige = 0.5
@@ -601,6 +621,60 @@ the_mandate_of_heaven_lost = {
 	global_unrest = 10
 }
 
+lost_control_of_beijing = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+	trigger = {
+		OR = {
+			NOT = {
+				owns = 1816
+			}
+			NOT = {
+				controls = 1816
+			}
+		}
+	}
+	imperial_mandate = -0.05
+}
+
+lost_control_of_nanjing = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+	trigger = {
+		OR = {
+			NOT = {
+				owns = 1821
+			}
+			NOT = {
+				controls = 1821
+			}
+		}
+	}
+	imperial_mandate = -0.05
+}
+
+lost_control_of_canton = {
+	potential = {
+		has_reform = celestial_empire
+		has_dlc = "Mandate of Heaven"
+	}
+	trigger = {
+		OR = {
+			NOT = {
+				owns = 667
+			}
+			NOT = {
+				controls = 667
+			}
+		}
+	}
+	imperial_mandate = -0.05
+}
+
 waging_war_for_china = {
 	potential = {
 		has_reform = celestial_empire
@@ -618,75 +692,12 @@ waging_war_for_china = {
 ##################################################
 # HRE modifiers
 ##################################################
-hre_dominant_anglican = {
-	potential = {
-		capital_scope = {
-			continent = europe
-		}
-		OR = {
-			religion = anglican
-			religion = cathar
-			religion = catholic
-			religion = hussite
-			religion = lollard
-			religion = protestant
-			religion = reformed
-			religion = waldensian
-		}
-	}
-	trigger = {
-		religion = anglican
-		hre_religion = anglican
-		hre_religion_locked = yes
-	}
-	legitimacy = 0.25
-	tolerance_own = 1
-	global_missionary_strength = 0.01
-	imperial_authority = 0.25
-}
-
-hre_dominant_cathar = {
-	potential = {
-		capital_scope = {
-			continent = europe
-		}
-		OR = {
-			religion = anglican
-			religion = cathar
-			religion = catholic
-			religion = hussite
-			religion = lollard
-			religion = protestant
-			religion = reformed
-			religion = waldensian
-		}
-	}
-	trigger = {
-		religion = cathar
-		hre_religion = cathar
-		hre_religion_locked = yes
-	}
-	legitimacy = 0.25
-	tolerance_own = 1
-	global_missionary_strength = 0.01
-	imperial_authority = 0.25
-}
-
 hre_dominant_catholic = {
 	potential = {
 		capital_scope = {
 			continent = europe
 		}
-		OR = {
-			religion = anglican
-			religion = cathar
-			religion = catholic
-			religion = hussite
-			religion = lollard
-			religion = protestant
-			religion = reformed
-			religion = waldensian
-		}
+		religion_group = central_christian
 	}
 	trigger = {
 		religion = catholic
@@ -704,47 +715,11 @@ hre_dominant_hussite = {
 		capital_scope = {
 			continent = europe
 		}
-		OR = {
-			religion = anglican
-			religion = cathar
-			religion = catholic
-			religion = hussite
-			religion = lollard
-			religion = protestant
-			religion = reformed
-			religion = waldensian
-		}
+		religion_group = central_christian
 	}
 	trigger = {
 		religion = hussite
 		hre_religion = hussite
-		hre_religion_locked = yes
-	}
-	legitimacy = 0.25
-	tolerance_own = 1
-	global_missionary_strength = 0.01
-	imperial_authority = 0.25
-}
-
-hre_dominant_lollard = {
-	potential = {
-		capital_scope = {
-			continent = europe
-		}
-		OR = {
-			religion = anglican
-			religion = cathar
-			religion = catholic
-			religion = hussite
-			religion = lollard
-			religion = protestant
-			religion = reformed
-			religion = waldensian
-		}
-	}
-	trigger = {
-		religion = lollard
-		hre_religion = lollard
 		hre_religion_locked = yes
 	}
 	legitimacy = 0.25
@@ -758,16 +733,7 @@ hre_dominant_protestant = {
 		capital_scope = {
 			continent = europe
 		}
-		OR = {
-			religion = anglican
-			religion = cathar
-			religion = catholic
-			religion = hussite
-			religion = lollard
-			religion = protestant
-			religion = reformed
-			religion = waldensian
-		}
+		religion_group = central_christian
 	}
 	trigger = {
 		religion = protestant
@@ -785,16 +751,7 @@ hre_dominant_reformed = {
 		capital_scope = {
 			continent = europe
 		}
-		OR = {
-			religion = anglican
-			religion = cathar
-			religion = catholic
-			religion = hussite
-			religion = lollard
-			religion = protestant
-			religion = reformed
-			religion = waldensian
-		}
+		religion_group = central_christian
 	}
 	trigger = {
 		religion = reformed
@@ -812,16 +769,7 @@ hre_dominant_waldensian = {
 		capital_scope = {
 			continent = europe
 		}
-		OR = {
-			religion = anglican
-			religion = cathar
-			religion = catholic
-			religion = hussite
-			religion = lollard
-			religion = protestant
-			religion = reformed
-			religion = waldensian
-		}
+		religion_group = central_christian
 	}
 	trigger = {
 		religion = waldensian
@@ -875,7 +823,161 @@ golden_age_of_piracy = {
 	privateer_efficiency = 0.2
 }
 
-# Triggered modifiers are here.
-# these are checked for each countries once/month and then applied.
-#
-# Effects are fully scriptable here. 
+######################################
+# The Great Peasants' War
+######################################
+great_peasants_war_triggered_modifier = {
+	potential = {
+		has_global_flag = great_peasants_war_flag
+		capital_scope = {
+			continent = europe
+		}
+	}
+	trigger = {
+		is_part_of_hre = yes
+		NOT = {
+			has_reform = peasants_republic
+		}
+	}
+	global_unrest = 6
+}
+
+great_peasants_war_concessions_triggered_modifier = {
+	potential = {
+		OR = {
+			has_global_flag = gpw_peasants_win_major
+			has_global_flag = gpw_peasants_win_minor
+		}
+		capital_scope = {
+			continent = europe
+		}
+	}
+	trigger = {
+		is_part_of_hre = yes
+		NOT = {
+			has_reform = peasants_republic
+		}
+	}
+	global_tax_modifier = -0.05
+}
+
+######################################
+# Pope is in the empire
+######################################
+pope_in_hre_triggered_modifier = {
+	potential = {
+		PAP = {
+			is_part_of_hre = yes
+		}
+		religion = catholic
+	}
+	trigger = {
+		PAP = {
+			is_part_of_hre = yes
+		}
+		religion = catholic
+		NOT = {
+			is_part_of_hre = yes
+		}
+	}
+	prestige = -0.5
+}
+
+######################################
+# The Italian Wars
+######################################
+italian_wars_triggered_modifier = {
+	potential = {
+		has_global_flag = italian_wars_global_flag
+		capital_scope = {
+			continent = europe
+		}
+		religion_group = central_christian
+	}
+	trigger = {
+		OR = {
+			AND = {
+				capital_scope = {
+					region = italy_region
+				}
+				any_country = {
+					war_with = ROOT
+					religion_group = central_christian
+					capital_scope = {
+						continent = europe
+					}
+					total_development = 150
+				}
+			}
+			AND = {
+				NOT = {
+					capital_scope = {
+						region = italy_region
+					}
+				}
+				total_development = 150
+				any_country = {
+					war_with = ROOT
+					capital_scope = {
+						region = italy_region
+					}
+				}
+			}
+		}
+	}
+	mercenary_cost = -0.1
+	mercenary_discipline = 0.05
+}
+
+######################################
+# Defense of the Empire
+######################################
+defense_of_the_empire_modifier = {
+	potential = {
+		has_dlc = "Emperor"
+		OR = {
+			is_emperor = yes
+			is_elector = yes
+		}
+		hre_reform_passed = emperor_reichskrieg
+	}
+	trigger = {
+		any_country = {
+			war_with = ROOT
+			NOT = {
+				is_part_of_hre = yes
+			}
+		}
+	}
+	war_taxes_cost_modifier = -1
+}
+
+######################################
+# Judaism Defensive Aspect
+######################################
+judaism_passover_aspect_war_modifier = {
+	potential = {
+		religion = jewish
+		has_church_aspect = judaism_purim_teachings_aspect
+	}
+	trigger = {
+		is_at_war = yes
+	}
+	manpower_recovery_speed = 0.1
+	church_power_modifier = 0.05
+}
+
+judaism_passover_aspect_defensive_war_modifier = {
+	potential = {
+		religion = jewish
+		has_church_aspect = judaism_purim_teachings_aspect
+	}
+	trigger = {
+		is_at_war = yes
+		is_in_war = {
+			defenders = ROOT
+		}
+	}
+	manpower_recovery_speed = 0.1
+	church_power_modifier = 0.05
+}

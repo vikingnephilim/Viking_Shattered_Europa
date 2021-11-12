@@ -113,7 +113,7 @@ emp_sav_missions_conquest = {
 					OR = {
 						is_subject = yes
 						NOT = { government = monarchy }
-						NOT = { religion_group = christian }
+						NOT = { is_christian_viking_mod = yes }
 						AND = {
 							NOT = { exists = COR }
 							NOT = { exists = SAR }

@@ -373,7 +373,7 @@ country_event = {
 				1 = {
 					trigger = {
 						NOT = {
-							religion_group = muslim
+							is_muslim_viking_mod = yes
 						}
 						has_consort = yes
 					}
@@ -382,7 +382,7 @@ country_event = {
 				1 = {
 					trigger = {
 						NOT = {
-							religion_group = muslim
+							is_muslim_viking_mod = yes
 						}
 						NOT = {
 							has_dlc = "Rights of Man"
@@ -1826,7 +1826,7 @@ country_event = {
 		OR = {
 			religion = catholic
 			religion = orthodox
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 		}
 		NOT = {
 			tag = PAP
@@ -1871,7 +1871,7 @@ country_event = {
 		reduce_estate_church_loyalty_effect = yes
 		if = {
 			limit = {
-				religion_group = muslim
+				is_muslim_viking_mod = yes
 			}
 			add_piety = -0.1
 		}
@@ -1903,7 +1903,7 @@ country_event = {
 		add_estate_church_loyalty_effect = yes
 		if = {
 			limit = {
-				religion_group = muslim
+				is_muslim_viking_mod = yes
 			}
 			add_piety = 0.2
 		}
@@ -1932,7 +1932,7 @@ country_event = {
 		add_estate_church_loyalty_effect = yes
 		if = {
 			limit = {
-				religion_group = muslim
+				is_muslim_viking_mod = yes
 			}
 			add_piety = 0.1
 		}
@@ -2780,7 +2780,7 @@ country_event = {
 	trigger = {
 		is_year = 1700
 		OR = {
-			religion_group = christian
+			is_christian_viking_mod = yes
 			num_of_trade_companies = 1
 			any_subject_country = {
 				is_colonial_nation_of = root
@@ -2865,6 +2865,9 @@ country_event = {
 	picture = COMET_SIGHTED_eventPicture
 	is_triggered_only = yes
 	trigger = {
+		NOT = {
+			has_country_flag = no_more_comet_sighted_event
+		}
 	}
 	mean_time_to_happen = {
 		days = 1
@@ -2978,13 +2981,7 @@ country_event = {
 	option = {
 		name = "EVTOPTF5060"		# Sacrifice a human heart to appease the comet!
 		trigger = {
-			OR = {
-				religion_group = ancient_pagan
-				religion_group = african_pagan
-				religion_group = european_pagan
-				religion_group = asian_pagan
-				religion_group = american_pagan
-			}
+			is_pagan_viking_mod  = yes
 		}
 		if = {
 			limit = {
@@ -3022,21 +3019,68 @@ country_event = {
 		name = "EVTOPTH5060"		# Oh comet, devil's kith and kin...
 		trigger = {
 			NOT = {
-				religion_group = ancient_pagan
-			}
-			NOT = {
-				religion_group = african_pagan
-			}
-			NOT = {
-				religion_group = european_pagan
-			}
-			NOT = {
-				religion_group = asian_pagan
-			}
-			NOT = {
-				religion_group = american_pagan
+				is_pagan_viking_mod  = yes
 			}
 		}
+		if = {
+			limit = {
+				NOT = {
+					stability = -2
+				}
+			}
+			add_adm_power = -100
+		}
+		if = {
+			limit = {
+				stability = -2
+			}
+			add_stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTI5060"		# What a great start into the new year
+		trigger = {
+			NOT = {
+				is_year = 1445
+			}
+		}
+		if = {
+			limit = {
+				NOT = {
+					stability = -2
+				}
+			}
+			add_adm_power = -100
+		}
+		if = {
+			limit = {
+				stability = -2
+			}
+			add_stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTJ5060"		# That's now Victoria's problem, not mine
+		trigger = {
+			is_year = 1810
+		}
+		if = {
+			limit = {
+				NOT = {
+					stability = -2
+				}
+			}
+			add_adm_power = -100
+		}
+		if = {
+			limit = {
+				stability = -2
+			}
+			add_stability = -1
+		}
+	}
+	option = {
+		name = "EVTOPTK5060"		# That's it. I'm dead
 		if = {
 			limit = {
 				NOT = {
@@ -4998,7 +5042,7 @@ country_event = {
 	goto = uppity_peasants_province
 	is_triggered_only = yes
 	trigger = {
-		religion_group = christian
+		is_christian_viking_mod = yes
 		has_estate = estate_nobles
 		any_owned_province = {
 			NOT = {
@@ -6268,7 +6312,7 @@ country_event = {
 	picture = COURT_eventPicture
 	is_triggered_only = yes
 	trigger = {
-		religion_group = christian
+		is_christian_viking_mod = yes
 		is_at_war = no
 	}
 	mean_time_to_happen = {
@@ -8298,6 +8342,9 @@ country_event = {
 						trade_goods = gems
 						trade_goods = incense
 						trade_goods = spices
+						trade_goods = dates
+						trade_goods = pistachios
+						trade_goods = saffron
 						trade_goods = silk
 						trade_goods = cloth
 						trade_goods = ivory
@@ -8330,6 +8377,9 @@ country_event = {
 					trade_goods = gems
 					trade_goods = incense
 					trade_goods = spices
+					trade_goods = dates
+					trade_goods = pistachios
+					trade_goods = saffron
 					trade_goods = silk
 					trade_goods = cloth
 					trade_goods = ivory
@@ -8391,6 +8441,8 @@ country_event = {
 						trade_goods = gems
 						trade_goods = incense
 						trade_goods = spices
+						trade_goods = dates
+						trade_goods = saffron
 						trade_goods = silk
 						trade_goods = cloth
 						trade_goods = ivory
@@ -10370,7 +10422,7 @@ country_event = {
 		add_legitimacy = -5
 		add_horde_unity = -5
 		create_general = {
-			tradition = -50
+			tradition = 0
 		}
 	}
 	option = {
@@ -10790,6 +10842,7 @@ country_event = {
 		define_advisor = {
 			type = naval_reformer
 			skill = 2
+			religion = ROOT
 		}
 	}
 }
@@ -10866,7 +10919,7 @@ country_event = {
 	goto = renaissance_province
 	is_triggered_only = yes
 	trigger = {
-		religion_group = christian
+		is_christian_viking_mod = yes
 		capital_scope = {
 			continent = europe
 		}
@@ -10975,28 +11028,21 @@ country_event = {
 			bengal_region = {
 				NOT = {
 					is_core = ROOT
-				}
-				NOT = {
 					owned_by = ROOT
-				}
 				owner = {
 					has_country_modifier = dutch_india_trade_co
 					has_country_flag = trade_company
 				}
+			}
 				any_neighbor_province = {
 					owned_by = ROOT
 					is_core = ROOT
 				}
 			}
-		}
 		coromandel_region = {
 			NOT = {
 				is_core = ROOT
-			}
-			NOT = {
 				owned_by = ROOT
-			}
-			NOT = {
 				owner = {
 					has_country_modifier = dutch_india_trade_co
 					has_country_flag = trade_company
@@ -11010,11 +11056,7 @@ country_event = {
 		west_india_region = {
 			NOT = {
 				is_core = ROOT
-			}
-			NOT = {
 				owned_by = ROOT
-			}
-			NOT = {
 				owner = {
 					has_country_modifier = dutch_india_trade_co
 					has_country_flag = trade_company
@@ -11026,6 +11068,7 @@ country_event = {
 			}
 		}
 	}
+}
 	mean_time_to_happen = {
 		days = 1
 	}
@@ -11044,11 +11087,7 @@ country_event = {
 				}
 				NOT = {
 					is_core = ROOT
-				}
-				NOT = {
 					owned_by = ROOT
-				}
-				NOT = {
 					owner = {
 						has_country_modifier = dutch_india_trade_co
 						has_country_flag = trade_company
@@ -11809,7 +11848,7 @@ country_event = {
 			has_reform = revolutionary_empire_reform
 		}
 		is_lesser_in_union = no
-		religion_group = christian
+		is_christian_viking_mod = yes
 	}
 	mean_time_to_happen = {
 		days = 1
@@ -12000,12 +12039,14 @@ country_event = {
 				type = inquisitor
 				skill = 1
 				culture = event_target:origin_of_bishop
+				religion = ROOT
 			}
 		}
 		else = {
 			define_advisor = {
 				type = inquisitor
 				skill = 1
+				religion = ROOT
 			}
 		}
 		add_papal_influence = 10
@@ -12275,6 +12316,7 @@ country_event = {
 		}
 		add_years_of_income = -0.15
 		create_general = {
+			name = foreign_military_expert
 			tradition = 70
 		}
 	}
@@ -12387,7 +12429,7 @@ country_event = {
 	option = {
 		name = "random_event.EVTOPTC13"
 		trigger = {
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 			has_estate = estate_church
 		}
 		ai_chance = {
@@ -12421,7 +12463,7 @@ country_event = {
 		capital_scope = {
 			continent = europe
 		}
-		religion_group = christian
+		is_christian_viking_mod = yes
 		has_idea_group = innovativeness_ideas
 	}
 	mean_time_to_happen = {
@@ -12452,6 +12494,7 @@ country_event = {
 			skill = 1
 			type = artist
 			discount = yes
+			religion = ROOT
 		}
 	}
 	option = {
@@ -12595,8 +12638,6 @@ country_event = {
 			num_of_cities = 4
 			NOT = {
 				alliance_with = ROOT
-			}
-			NOT = {
 				war_with = ROOT
 			}
 		}
@@ -12673,7 +12714,7 @@ province_event = {
 		}
 		is_religion_enabled = protestant
 		is_reformation_center = no
-		religion_group = christian
+		is_christian_viking_mod = yes
 	}
 	mean_time_to_happen = {
 		months = 5000		# Random Province Event
@@ -13076,7 +13117,7 @@ country_event = {
 		NOT = {
 			has_country_flag = iconoclastic_fury
 		}
-		religion_group = christian
+		is_christian_viking_mod = yes
 		NOT = {
 			OR = {
 				religion = coptic
@@ -13426,7 +13467,12 @@ country_event = {
 				}
 			}
 			is_former_colonial_nation = yes
-			is_subject_of_type = colony
+			OR = {
+				is_subject_of_type = colony
+				is_subject_of_type = crown_colony
+				is_subject_of_type = private_enterprise
+				is_subject_of_type = self_governing_colony
+			}
 		}
 	}
 	is_triggered_only = yes
@@ -13526,19 +13572,7 @@ country_event = {
 	trigger = {
 		gold = 1
 		NOT = {
-			religion_group = ancient_pagan
-		}
-		NOT = {
-			religion_group = african_pagan
-		}
-		NOT = {
-			religion_group = european_pagan
-		}
-		NOT = {
-			religion_group = asian_pagan
-		}
-		NOT = {
-			religion_group = american_pagan
+			is_pagan_viking_mod  = yes
 		}
 	}
 	is_triggered_only = yes
@@ -13677,9 +13711,19 @@ country_event = {
 	picture = FARMING_eventPicture
 	goto = spice_province
 	trigger = {
-		spices = 1
+		OR = {
+			spices = 1
+			dates = 1
+			pistachios = 1
+			saffron = 1
+		}
 		any_owned_province = {
-			trade_goods = spices
+			OR = {
+				trade_goods = spices
+				trade_goods = dates
+				trade_goods = pistachios
+				trade_goods = saffron
+			}
 			NOT = {
 				has_province_modifier = harvest_fails
 			}
@@ -13689,7 +13733,12 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					trade_goods = spices
+					OR = {
+						trade_goods = spices
+						trade_goods = dates
+						trade_goods = pistachios
+						trade_goods = saffron
+					}
 					NOT = {
 						has_province_modifier = harvest_fails
 					}
@@ -14058,6 +14107,3 @@ country_event = {
 		}
 	}
 }
-
-# Culture ties weakened
-# Mangled by Daniel Tolman for 1.28

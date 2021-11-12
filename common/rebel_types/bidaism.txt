@@ -1,11 +1,11 @@
 ######################################################################
 # Bidai rebels. Disgruntled fanatics.
 ######################################################################
-bidaism_rebels = {
+bida_rebels = {
 	color = { 230 175 175 }
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
-	religion = bidaism
+	religion = bida
 	defection = none				# Will not defect
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
@@ -38,7 +38,7 @@ bidaism_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			NOT = { religion = bidaism }
+			NOT = { religion = bida }
 		}
 		modifier = {
 			factor = 0.001
@@ -82,21 +82,21 @@ bidaism_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			religion = bidaism
-			owner = { religion = bidaism }
+			religion = bida
+			owner = { religion = bida }
 		}
 		modifier = {
 			factor = 2.0
-			NOT = { religion = bidaism }
+			NOT = { religion = bida }
 			any_neighbor_province = {
-	 			religion = bidaism
+	 			religion = bida
 	 			NOT = { has_province_modifier = "forced_conversion" }
 	 		}
 	 	}
 		modifier = {
 			factor = 5
 			has_missionary = yes
-			religion = bidaism
+			religion = bida
 		}
 		modifier = {
 			factor = 1.5
@@ -126,9 +126,9 @@ bidaism_rebels = {
 			if = {
 				limit = {
 					OR = {
-						religion = bidaism
+						religion = bida
 						is_reformation_center = yes
-						owner = { religion = bidaism }
+						owner = { religion = bida }
 					}
 				}
 				add_province_modifier = {
@@ -138,11 +138,11 @@ bidaism_rebels = {
 			}
 			if = {
 				limit = {
-					NOT = { religion = bidaism }
+					NOT = { religion = bida }
 					is_reformation_center = no
-					NOT = { owner = { religion = bidaism } }
+					NOT = { owner = { religion = bida } }
 				}
-				change_religion = bidaism
+				change_religion = bida
 				add_province_modifier = {
 					name = "forced_conversion"
 					duration = 730
@@ -161,7 +161,7 @@ bidaism_rebels = {
 	can_negotiate_trigger = {
 		OR = {
 			religion_group = african_pagan
-			dominant_religion = bidaism
+			dominant_religion = bida
 		}
 	}
 	# Country scope
@@ -169,7 +169,7 @@ bidaism_rebels = {
 		always = yes
 	}
 	# Localisation for their demands
-	demands_description = "bidaism_rebels_demand"
+	demands_description = "bida_rebels_demand"
 	# Country Scope
 			demands_enforced_effect = {
 		hidden_effect = {
@@ -199,7 +199,7 @@ bidaism_rebels = {
 		}
 		else_if = {
 			limit = {
-				religion = bidaism
+				religion = bida
 			}
 			add_country_modifier = {
 				name = "religious_intolerance_enforced"
@@ -208,16 +208,16 @@ bidaism_rebels = {
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = bidaism }
-				dominant_religion = bidaism
+				NOT = { religion = bida }
+				dominant_religion = bida
 			}
-			change_religion = bidaism
+			change_religion = bida
 			force_converted = yes
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = bidaism }
-				NOT = { dominant_religion = bidaism }
+				NOT = { religion = bida }
+				NOT = { dominant_religion = bida }
 				religion_group = african_pagan
 				NOT = { has_country_modifier = heretic_tolerance }
 			}
@@ -230,7 +230,7 @@ bidaism_rebels = {
 		else = { add_stability = -1 }
 		if = {
 			limit = {
-				religion = bidaism
+				religion = bida
 				has_estate = estate_church
 				NOT = {
 					has_estate_influence_modifier = {

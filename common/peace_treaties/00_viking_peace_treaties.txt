@@ -20,12 +20,9 @@ viking_hre_religious_commotion = {
 	requires_is_allowed = yes
 	is_visible = {
 		OR = {
-			religion = anglican
-			religion = cathar
 			religion = catholic
 			religion = fraticelli
 			religion = hussite
-			religion = lollard
 			religion = protestant
 			religion = reformed
 			religion = waldensian
@@ -33,12 +30,9 @@ viking_hre_religious_commotion = {
 	}
 	is_allowed = {
 		OR = {
-			religion = anglican
-			religion = cathar
 			religion = catholic
 			religion = fraticelli
 			religion = hussite
-			religion = lollard
 			religion = protestant
 			religion = reformed
 			religion = waldensian
@@ -47,186 +41,6 @@ viking_hre_religious_commotion = {
 	effect = {
 		if = {
 			limit = {
-				religion = anglican
-				FROM = {
-					religion = cathar
-				}
-			}
-			set_hre_religion = anglican
-			set_hre_heretic_religion = cathar
-		}
-		else_if = {
-			limit = {
-				religion = anglican
-				FROM = {
-					religion = catholic
-				}
-			}
-			set_hre_religion = anglican
-			set_hre_heretic_religion = catholic
-		}
-		else_if = {
-			limit = {
-				religion = anglican
-				FROM = {
-					religion = fraticelli
-				}
-			}
-			set_hre_religion = anglican
-			set_hre_heretic_religion = fraticelli
-		}
-		else_if = {
-			limit = {
-				religion = anglican
-				FROM = {
-					religion = hussite
-				}
-			}
-			set_hre_religion = anglican
-			set_hre_heretic_religion = hussite
-		}
-		else_if = {
-			limit = {
-				religion = anglican
-				FROM = {
-					religion = lollard
-				}
-			}
-			set_hre_religion = anglican
-			set_hre_heretic_religion = lollard
-		}
-		else_if = {
-			limit = {
-				religion = anglican
-				FROM = {
-					religion = protestant
-				}
-			}
-			set_hre_religion = anglican
-			set_hre_heretic_religion = protestant
-		}
-		else_if = {
-			limit = {
-				religion = anglican
-				FROM = {
-					religion = reformed
-				}
-			}
-			set_hre_religion = anglican
-			set_hre_heretic_religion = reformed
-		}
-		else_if = {
-			limit = {
-				religion = anglican
-				FROM = {
-					religion = waldensian
-				}
-			}
-			set_hre_religion = anglican
-			set_hre_heretic_religion = waldensian
-		}
-		else_if = {
-			limit = {
-				religion = cathar
-				FROM = {
-					religion = anglican
-				}
-			}
-			set_hre_religion = cathar
-			set_hre_heretic_religion = anglican
-		}
-		else_if = {
-			limit = {
-				religion = cathar
-				FROM = {
-					religion = catholic
-				}
-			}
-			set_hre_religion = cathar
-			set_hre_heretic_religion = catholic
-		}
-		else_if = {
-			limit = {
-				religion = cathar
-				FROM = {
-					religion = fraticelli
-				}
-			}
-			set_hre_religion = cathar
-			set_hre_heretic_religion = fraticelli
-		}
-		else_if = {
-			limit = {
-				religion = cathar
-				FROM = {
-					religion = hussite
-				}
-			}
-			set_hre_religion = cathar
-			set_hre_heretic_religion = hussite
-		}
-		else_if = {
-			limit = {
-				religion = cathar
-				FROM = {
-					religion = lollard
-				}
-			}
-			set_hre_religion = cathar
-			set_hre_heretic_religion = lollard
-		}
-		else_if = {
-			limit = {
-				religion = cathar
-				FROM = {
-					religion = protestant
-				}
-			}
-			set_hre_religion = cathar
-			set_hre_heretic_religion = protestant
-		}
-		else_if = {
-			limit = {
-				religion = cathar
-				FROM = {
-					religion = reformed
-				}
-			}
-			set_hre_religion = cathar
-			set_hre_heretic_religion = reformed
-		}
-		else_if = {
-			limit = {
-				religion = cathar
-				FROM = {
-					religion = waldensian
-				}
-			}
-			set_hre_religion = cathar
-			set_hre_heretic_religion = waldensian
-		}
-		else_if = {
-			limit = {
-				religion = catholic
-				FROM = {
-					religion = anglican
-				}
-			}
-			set_hre_religion = catholic
-			set_hre_heretic_religion = anglican
-		}
-		else_if = {
-			limit = {
-				religion = catholic
-				FROM = {
-					religion = cathar
-				}
-			}
-			set_hre_religion = catholic
-			set_hre_heretic_religion = cathar
-		}
-		else_if = {
-			limit = {
 				religion = catholic
 				FROM = {
 					religion = fraticelli
@@ -244,16 +58,6 @@ viking_hre_religious_commotion = {
 			}
 			set_hre_religion = catholic
 			set_hre_heretic_religion = hussite
-		}
-		else_if = {
-			limit = {
-				religion = catholic
-				FROM = {
-					religion = lollard
-				}
-			}
-			set_hre_religion = catholic
-			set_hre_heretic_religion = lollard
 		}
 		else_if = {
 			limit = {
@@ -289,26 +93,6 @@ viking_hre_religious_commotion = {
 			limit = {
 				religion = fraticelli
 				FROM = {
-					religion = anglican
-				}
-			}
-			set_hre_religion = fraticelli
-			set_hre_heretic_religion = anglican
-		}
-		else_if = {
-			limit = {
-				religion = fraticelli
-				FROM = {
-					religion = cathar
-				}
-			}
-			set_hre_religion = fraticelli
-			set_hre_heretic_religion = cathar
-		}
-		else_if = {
-			limit = {
-				religion = fraticelli
-				FROM = {
 					religion = catholic
 				}
 			}
@@ -324,16 +108,6 @@ viking_hre_religious_commotion = {
 			}
 			set_hre_religion = fraticelli
 			set_hre_heretic_religion = hussite
-		}
-		else_if = {
-			limit = {
-				religion = fraticelli
-				FROM = {
-					religion = lollard
-				}
-			}
-			set_hre_religion = fraticelli
-			set_hre_heretic_religion = lollard
 		}
 		else_if = {
 			limit = {
@@ -369,26 +143,6 @@ viking_hre_religious_commotion = {
 			limit = {
 				religion = hussite
 				FROM = {
-					religion = anglican
-				}
-			}
-			set_hre_religion = hussite
-			set_hre_heretic_religion = anglican
-		}
-		else_if = {
-			limit = {
-				religion = hussite
-				FROM = {
-					religion = cathar
-				}
-			}
-			set_hre_religion = hussite
-			set_hre_heretic_religion = cathar
-		}
-		else_if = {
-			limit = {
-				religion = hussite
-				FROM = {
 					religion = catholic
 				}
 			}
@@ -404,16 +158,6 @@ viking_hre_religious_commotion = {
 			}
 			set_hre_religion = hussite
 			set_hre_heretic_religion = fraticelli
-		}
-		else_if = {
-			limit = {
-				religion = hussite
-				FROM = {
-					religion = lollard
-				}
-			}
-			set_hre_religion = hussite
-			set_hre_heretic_religion = lollard
 		}
 		else_if = {
 			limit = {
@@ -447,106 +191,6 @@ viking_hre_religious_commotion = {
 		}
 		else_if = {
 			limit = {
-				religion = lollard
-				FROM = {
-					religion = anglican
-				}
-			}
-			set_hre_religion = lollard
-			set_hre_heretic_religion = anglican
-		}
-		else_if = {
-			limit = {
-				religion = lollard
-				FROM = {
-					religion = cathar
-				}
-			}
-			set_hre_religion = lollard
-			set_hre_heretic_religion = cathar
-		}
-		else_if = {
-			limit = {
-				religion = lollard
-				FROM = {
-					religion = catholic
-				}
-			}
-			set_hre_religion = lollard
-			set_hre_heretic_religion = catholic
-		}
-		else_if = {
-			limit = {
-				religion = lollard
-				FROM = {
-					religion = fraticelli
-				}
-			}
-			set_hre_religion = lollard
-			set_hre_heretic_religion = fraticelli
-		}
-		else_if = {
-			limit = {
-				religion = lollard
-				FROM = {
-					religion = hussite
-				}
-			}
-			set_hre_religion = lollard
-			set_hre_heretic_religion = hussite
-		}
-		else_if = {
-			limit = {
-				religion = lollard
-				FROM = {
-					religion = protestant
-				}
-			}
-			set_hre_religion = lollard
-			set_hre_heretic_religion = protestant
-		}
-		else_if = {
-			limit = {
-				religion = lollard
-				FROM = {
-					religion = reformed
-				}
-			}
-			set_hre_religion = lollard
-			set_hre_heretic_religion = reformed
-		}
-		else_if = {
-			limit = {
-				religion = lollard
-				FROM = {
-					religion = waldensian
-				}
-			}
-			set_hre_religion = hussite
-			set_hre_heretic_religion = waldensian
-		}
-		else_if = {
-			limit = {
-				religion = protestant
-				FROM = {
-					religion = anglican
-				}
-			}
-			set_hre_religion = protestant
-			set_hre_heretic_religion = anglican
-		}
-		else_if = {
-			limit = {
-				religion = protestant
-				FROM = {
-					religion = cathar
-				}
-			}
-			set_hre_religion = protestant
-			set_hre_heretic_religion = cathar
-		}
-		else_if = {
-			limit = {
 				religion = protestant
 				FROM = {
 					religion = catholic
@@ -574,16 +218,6 @@ viking_hre_religious_commotion = {
 			}
 			set_hre_religion = protestant
 			set_hre_heretic_religion = hussite
-		}
-		else_if = {
-			limit = {
-				religion = protestant
-				FROM = {
-					religion = lollard
-				}
-			}
-			set_hre_religion = protestant
-			set_hre_heretic_religion = lollard
 		}
 		else_if = {
 			limit = {
@@ -609,26 +243,6 @@ viking_hre_religious_commotion = {
 			limit = {
 				religion = reformed
 				FROM = {
-					religion = anglican
-				}
-			}
-			set_hre_religion = reformed
-			set_hre_heretic_religion = anglican
-		}
-		else_if = {
-			limit = {
-				religion = reformed
-				FROM = {
-					religion = cathar
-				}
-			}
-			set_hre_religion = reformed
-			set_hre_heretic_religion = cathar
-		}
-		else_if = {
-			limit = {
-				religion = reformed
-				FROM = {
 					religion = catholic
 				}
 			}
@@ -654,16 +268,6 @@ viking_hre_religious_commotion = {
 			}
 			set_hre_religion = reformed
 			set_hre_heretic_religion = hussite
-		}
-		else_if = {
-			limit = {
-				religion = reformed
-				FROM = {
-					religion = lollard
-				}
-			}
-			set_hre_religion = reformed
-			set_hre_heretic_religion = lollard
 		}
 		else_if = {
 			limit = {
@@ -689,26 +293,6 @@ viking_hre_religious_commotion = {
 			limit = {
 				religion = waldensian
 				FROM = {
-					religion = anglican
-				}
-			}
-			set_hre_religion = waldensian
-			set_hre_heretic_religion = anglican
-		}
-		else_if = {
-			limit = {
-				religion = waldensian
-				FROM = {
-					religion = cathar
-				}
-			}
-			set_hre_religion = waldensian
-			set_hre_heretic_religion = cathar
-		}
-		else_if = {
-			limit = {
-				religion = waldensian
-				FROM = {
 					religion = catholic
 				}
 			}
@@ -739,23 +323,13 @@ viking_hre_religious_commotion = {
 			limit = {
 				religion = waldensian
 				FROM = {
-					religion = lollard
-				}
-			}
-			set_hre_religion = waldensian
-			set_hre_heretic_religion = lollard
-		}
-		else_if = {
-			limit = {
-				religion = waldensian
-				FROM = {
 					religion = protestant
 				}
 			}
 			set_hre_religion = waldensian
 			set_hre_heretic_religion = protestant
 		}
-		else_if= {
+		else_if = {
 			limit = {
 				religion = waldensian
 				FROM = {
@@ -764,9 +338,6 @@ viking_hre_religious_commotion = {
 			}
 			set_hre_religion = waldensian
 			set_hre_heretic_religion = reformed
-		}
-		else = {
-			add_prestige = 100
 		}
 	}
 	ai_weight = {

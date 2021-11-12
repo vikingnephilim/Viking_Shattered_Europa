@@ -1,0 +1,24 @@
+namespace = kush_religion
+
+country_event = {
+	id = kush_religion.1
+	title = "kushite_religion_title"
+	desc = "kushite_religion_desc"
+	picture = RELIGION_eventPicture
+	is_triggered_only = yes
+	option = {
+		name = "kushite_option_a"
+		change_religion = phoenician_pagan_reformed
+		add_country_modifier = {
+			name = canaanite_restored
+			duration = -1
+		}
+	}
+	option = {
+		name = "kushite_option_b"
+		add_country_modifier = {
+			name = keeping_the_faith
+			duration = -1
+		}
+	}
+}

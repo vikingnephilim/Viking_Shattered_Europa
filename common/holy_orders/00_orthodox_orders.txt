@@ -1,0 +1,140 @@
+########## Orthodox ##########
+local_church = {
+    icon = GFX_holy_order_dominicans
+    trigger = {
+        religion_group = orthodox_christian
+    }
+    cost = 100
+    cost_type = adm_power
+    per_province_effect = {
+		tooltip = {
+            custom_tooltip = orthdox_church_trading.tt
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+					NOT = { development = 5 }
+                }
+                add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+            }
+			if = {
+                limit = {
+					development = 5
+                }
+				add_prosperity = 25
+            }
+        }
+    }
+    per_province_abandon_effect = {
+        add_local_autonomy = 50
+    }
+    modifier = {
+        local_missionary_strength = 0.08
+    }
+    ai_priority = {
+        factor = 1
+        modifier = {
+            factor = 0.1
+            development = 5
+        }
+		modifier = {
+            factor = 1.5
+			NOT = { development = 5 }
+        }
+		modifier = {
+            factor = 2.0
+			NOT = { religion = ROOT }
+        }
+    }
+}
+university_church = {
+    icon = GFX_holy_order_dominicans
+    trigger = {
+        religion_group = orthodox_christian
+    }
+    cost = 100
+    cost_type = dip_power
+    per_province_effect = {
+		tooltip = {
+            custom_tooltip = orthdox_church_education.tt
+        }
+        hidden_effect = {
+            if = {
+                limit = {
+					religion = ROOT
+                }
+                add_scaled_local_adm_power = 1
+				add_scaled_local_dip_power = 1
+				add_scaled_local_mil_power = 1
+            }
+        }
+    }
+    per_province_abandon_effect = {
+		tooltip = {
+			custom_tooltip = order_lost_adm_power.tt
+			custom_tooltip = order_lost_dip_power.tt
+			custom_tooltip = order_lost_mil_power.tt
+		}
+		hidden_effect = {
+			add_scaled_local_adm_power = -1
+			add_scaled_local_dip_power = -1
+			add_scaled_local_mil_power = -1
+		}
+        
+    }
+    modifier = {
+        local_culture_conversion_cost = -0.1
+		local_institution_spread = 0.1
+    }
+    ai_priority = {
+        factor = 1
+        modifier = {
+            factor = 0
+            NOT = { religion = ROOT }
+        }
+		modifier = {
+            factor = 1.5
+			NOT = { culture = ROOT }
+        }
+    }
+}
+patriarch_church = {
+    icon = GFX_holy_order_dominicans
+    trigger = {
+        religion_group = orthodox_christian
+    }
+    cost = 100
+    cost_type = mil_power
+    per_province_effect = {
+		tooltip = {
+            custom_tooltip = orthdox_church_governing.tt
+        }
+		hidden_effect = {
+			#add_absolutism = 1
+			if = {
+				limit = {
+					development = 10
+				}
+				add_base_tax = -1
+				add_base_production = -1
+				add_base_manpower = -1
+			}
+		}
+    }
+    per_province_abandon_effect = {
+        #add_absolutism = -1
+    }
+    modifier = {
+		local_development_cost = 0.5
+		local_defensiveness = 0.25
+    }
+    ai_priority = {
+        factor = 1
+        modifier = {
+            factor = 0
+			development = 10
+        }
+    }
+}

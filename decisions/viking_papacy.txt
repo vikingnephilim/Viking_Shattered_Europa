@@ -1,0 +1,191 @@
+country_decisions = {
+	viking_delegate_nunzio_apostolico = {
+		potential = {
+			is_papal_controller = yes
+			NOT = {
+				has_country_modifier = viking_delegate_nunzio_apostolico_modifier
+			}
+		}
+		allow = {
+			curia_treasury_size = 500
+		}
+		effect = {
+			add_curia_treasury = -500
+			add_country_modifier = {
+				name = viking_delegate_nunzio_apostolico_modifier
+				duration = 10950
+			}
+		}
+	}
+	viking_support_fighting_heresy = {
+		potential = {
+			is_papal_controller = yes
+			NOT = {
+				has_country_modifier = viking_support_fighting_heresy_modifier
+			}
+		}
+		allow = {
+			curia_treasury_size = 1500
+		}
+		effect = {
+			add_curia_treasury = -1500
+			every_country = {
+				limit = {
+					religion = catholic
+				}
+				add_country_modifier = {
+					name = viking_support_fighting_heresy_modifier
+					duration = 7300
+				}
+			}
+		}
+	}
+	viking_intensified_new_world_missions = {
+		potential = {
+			is_papal_controller = yes
+			any_country = {
+				AND = {
+					religion = catholic
+					num_of_colonists = 1
+					NOT = {
+						has_country_modifier = viking_intensified_new_world_missions_modifier
+					}
+				}
+			}
+		}
+		allow = {
+			curia_treasury_size = 1000
+		}
+		effect = {
+			add_curia_treasury = -1000
+			every_country = {
+				limit = {
+					religion = catholic
+					num_of_colonists = 1
+				}
+				add_country_modifier = {
+					name = viking_intensified_new_world_missions_modifier
+					duration = 7300
+				}
+			}
+		}
+	}
+	viking_exactionem_in_overlord_fides = {
+		potential = {
+			is_papal_controller = yes
+			NOT = {
+				has_country_modifier = viking_exactionem_in_overlord_fides_modifier
+			}
+		}
+		allow = {
+			curia_treasury_size = 1000
+		}
+		effect = {
+			add_curia_treasury = -1000
+			add_country_modifier = {
+				name = viking_exactionem_in_overlord_fides_modifier
+				duration = 7300
+			}
+		}
+	}
+	viking_fund_a_new_basilica = {
+		potential = {
+			is_papal_controller = yes
+			capital_scope = {
+				NOT = {
+					has_building = cathedral
+				}
+			}
+		}
+		allow = {
+			curia_treasury_size = 500
+		}
+		effect = {
+			capital_scope = {
+				add_building = cathedral
+			}
+			add_curia_treasury = -500
+		}
+	}
+	viking_get_acces_to_the_vatican_library = {
+		potential = {
+			religion = catholic
+			is_papal_controller = no
+			NOT = {
+				has_ruler_flag = viking_acces_to_vatican_library
+			}
+		}
+		allow = {
+			treasury = 3000
+			NOT = {
+				num_of_loans = 5
+			}
+		}
+		effect = {
+			hidden_effect = {
+				set_ruler_flag = viking_acces_to_vatican_library
+			}
+			add_treasury = -3000
+			add_curia_treasury = 3000
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
+		}
+	}
+	viking_root_inquisition = {
+		potential = {
+			religion = catholic
+			is_papal_controller = yes
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				religious_unity = 0.8
+			}
+			NOT = {
+				has_country_flag = viking_root_inquisition_done
+			}
+		}
+		allow = {
+			curia_treasury_size = 1500
+		}
+		effect = {
+			hidden_effect = {
+				set_country_flag = viking_root_inquisition_done
+			}
+			add_curia_treasury = -1500
+			add_country_modifier = {
+				duration = 7300
+				name = viking_root_inquisition_modifier
+			}
+		}
+	}
+	viking_use_curias_treasury_to_fund_new_building = {
+		potential = {
+			religion = catholic
+			is_papal_controller = yes
+			NOT = {
+				has_country_modifier = viking_use_curias_treasury_to_fund_new_building_modifier
+			}
+		}
+		allow = {
+			curia_treasury_size = 2500
+		}
+		effect = {
+			add_curia_treasury = -2500
+			add_country_modifier = {
+				duration = 7300
+				name = viking_use_curias_treasury_to_fund_new_building_modifier
+			}
+			every_country = {
+				limit = {
+					religion = catholic
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = viking_using_curias_treasury_for_self_benefit
+				}
+			}
+		}
+	}
+}

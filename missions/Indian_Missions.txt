@@ -609,7 +609,7 @@ gen_hindu = {
 				}
 			}
 		}
-		religion = hinduism
+		is_indic_viking_mod = yes
 	}
 	
 	gen_hindu_temples = {
@@ -849,38 +849,38 @@ gen_hindu = {
 			}
 			OR = {
 				NOT = { owned_by  = ROOT }
-				NOT = { religion = hinduism }
+				NOT = { is_indic_viking_mod = yes }
 			}
 		}
 		
 		trigger = {
 			4495 = { 
 				owned_by = ROOT 
-				religion = hinduism
+				is_indic_viking_mod = yes
 			} #Ayodhya
 			524 = { 
 				owned_by = ROOT 
-				religion = hinduism
+				is_indic_viking_mod = yes
 			} #Mathura
 			511 = { 
 				owned_by = ROOT 
-				religion = hinduism
+				is_indic_viking_mod = yes
 			}#Haridwar
 			4417 = { 
 				owned_by = ROOT 
-				religion = hinduism
+				is_indic_viking_mod = yes
 			} #Kanchipuram
 			558 = { 
 				owned_by = ROOT 
-				religion = hinduism
+				is_indic_viking_mod = yes
 			} #Varanasi
 			2052 = { 
 				owned_by = ROOT 
-				religion = hinduism
+				is_indic_viking_mod = yes
 			} #Dwarkadhish
 			4461 = {
 				owned_by = ROOT 
-				religion = hinduism
+				is_indic_viking_mod = yes
 			}#Ujjain
 		}
 		
@@ -922,7 +922,7 @@ gen_indian_muslim = {
 				}
 			}
 		}
-		religion_group = muslim
+		is_muslim_viking_mod = yes
 	}
 	
 	gen_indian_muslim_harem = {

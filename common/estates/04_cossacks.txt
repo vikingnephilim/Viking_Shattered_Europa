@@ -16,7 +16,7 @@ estate_cossacks = {
 		}
 		modifier = {
 			factor = 0.75
-			NOT = { religion_group = christian }
+			NOT = { is_christian_viking_mod = yes }
 		}
 		modifier = {
 			factor = 1.5
@@ -42,7 +42,7 @@ estate_cossacks = {
 		is_colonial_nation = no
 		NOT = { has_reform = celestial_empire }
 		unit_type = eastern
-		religion_group = christian
+		is_christian_viking_mod = yes
 		NOT = { has_reform = revolutionary_empire_reform }
 		OR = {
 			has_estate = estate_cossacks

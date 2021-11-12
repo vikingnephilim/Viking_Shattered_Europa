@@ -1,11 +1,11 @@
 ######################################################################
-# Sanism rebels. Disgruntled fanatics.
+# San rebels. Disgruntled fanatics.
 ######################################################################
-sanism_rebels = {
+san_rebels = {
 	color = { 230 175 175 }
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
-	religion = sanism
+	religion = san
 	defection = none				# Will not defect
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
@@ -38,7 +38,7 @@ sanism_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			NOT = { religion = sanism }
+			NOT = { religion = san }
 		}
 		modifier = {
 			factor = 0.001
@@ -82,21 +82,21 @@ sanism_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			religion = sanism
-			owner = { religion = sanism }
+			religion = san
+			owner = { religion = san }
 		}
 		modifier = {
 			factor = 2.0
-			NOT = { religion = sanism }
+			NOT = { religion = san }
 			any_neighbor_province = {
-	 			religion = sanism
+	 			religion = san
 	 			NOT = { has_province_modifier = "forced_conversion" }
 	 		}
 	 	}
 		modifier = {
 			factor = 5
 			has_missionary = yes
-			religion = sanism
+			religion = san
 		}
 		modifier = {
 			factor = 1.5
@@ -126,9 +126,9 @@ sanism_rebels = {
 			if = {
 				limit = {
 					OR = {
-						religion = sanism
+						religion = san
 						is_reformation_center = yes
-						owner = { religion = sanism }
+						owner = { religion = san }
 					}
 				}
 				add_province_modifier = {
@@ -138,11 +138,11 @@ sanism_rebels = {
 			}
 			if = {
 				limit = {
-					NOT = { religion = sanism }
+					NOT = { religion = san }
 					is_reformation_center = no
-					NOT = { owner = { religion = sanism } }
+					NOT = { owner = { religion = san } }
 				}
-				change_religion = sanism
+				change_religion = san
 				add_province_modifier = {
 					name = "forced_conversion"
 					duration = 730
@@ -160,7 +160,7 @@ sanism_rebels = {
 	# Country scope
 	can_negotiate_trigger = {
 		OR = {
-			dominant_religion = sanism
+			dominant_religion = san
 		}
 	}
 	# Country scope
@@ -168,7 +168,7 @@ sanism_rebels = {
 		always = yes
 	}
 	# Localisation for their demands
-	demands_description = "sanism_rebels_demand"
+	demands_description = "san_rebels_demand"
 	# Country Scope
 			demands_enforced_effect = {
 		hidden_effect = {
@@ -198,7 +198,7 @@ sanism_rebels = {
 		}
 		else_if = {
 			limit = {
-				religion = sanism
+				religion = san
 			}
 			add_country_modifier = {
 				name = "religious_intolerance_enforced"
@@ -207,16 +207,16 @@ sanism_rebels = {
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = sanism }
-				dominant_religion = sanism
+				NOT = { religion = san }
+				dominant_religion = san
 			}
-			change_religion = sanism
+			change_religion = san
 			force_converted = yes
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = sanism }
-				NOT = { dominant_religion = sanism }
+				NOT = { religion = san }
+				NOT = { dominant_religion = san }
 				religion_group = african_pagan
 				NOT = { has_country_modifier = heretic_tolerance }
 			}
@@ -229,7 +229,7 @@ sanism_rebels = {
 		else = { add_stability = -1 }
 		if = {
 			limit = {
-				religion = sanism
+				religion = san
 				has_estate = estate_church
 				NOT = {
 					has_estate_influence_modifier = {

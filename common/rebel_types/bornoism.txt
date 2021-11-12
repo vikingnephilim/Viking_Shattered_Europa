@@ -1,11 +1,11 @@
 ######################################################################
-# Bornoism rebels. Disgruntled fanatics.
+# Bori rebels. Disgruntled fanatics.
 ######################################################################
-bornoism_rebels = {
+bori_rebels = {
 	color = { 230 175 175 }
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
-	religion = bornoism
+	religion = bori
 	defection = none				# Will not defect
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
@@ -38,7 +38,7 @@ bornoism_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			NOT = { religion = bornoism }
+			NOT = { religion = bori }
 		}
 		modifier = {
 			factor = 0.001
@@ -82,21 +82,21 @@ bornoism_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			religion = bornoism
-			owner = { religion = bornoism }
+			religion = bori
+			owner = { religion = bori }
 		}
 		modifier = {
 			factor = 2.0
-			NOT = { religion = bornoism }
+			NOT = { religion = bori }
 			any_neighbor_province = {
-	 			religion = bornoism
+	 			religion = bori
 	 			NOT = { has_province_modifier = "forced_conversion" }
 	 		}
 	 	}
 		modifier = {
 			factor = 5
 			has_missionary = yes
-			religion = bornoism
+			religion = bori
 		}
 		modifier = {
 			factor = 1.5
@@ -126,9 +126,9 @@ bornoism_rebels = {
 			if = {
 				limit = {
 					OR = {
-						religion = bornoism
+						religion = bori
 						is_reformation_center = yes
-						owner = { religion = bornoism }
+						owner = { religion = bori }
 					}
 				}
 				add_province_modifier = {
@@ -138,11 +138,11 @@ bornoism_rebels = {
 			}
 			if = {
 				limit = {
-					NOT = { religion = bornoism }
+					NOT = { religion = bori }
 					is_reformation_center = no
-					NOT = { owner = { religion = bornoism } }
+					NOT = { owner = { religion = bori } }
 				}
-				change_religion = bornoism
+				change_religion = bori
 				add_province_modifier = {
 					name = "forced_conversion"
 					duration = 730
@@ -161,7 +161,7 @@ bornoism_rebels = {
 	can_negotiate_trigger = {
 		OR = {
 			religion_group = african_pagan
-			dominant_religion = bornoism
+			dominant_religion = bori
 		}
 	}
 	# Country scope
@@ -169,7 +169,7 @@ bornoism_rebels = {
 		always = yes
 	}
 	# Localisation for their demands
-	demands_description = "bornoism_rebels_demand"
+	demands_description = "bori_rebels_demand"
 	# Country Scope
 			demands_enforced_effect = {
 		hidden_effect = {
@@ -199,7 +199,7 @@ bornoism_rebels = {
 		}
 		else_if = {
 			limit = {
-				religion = bornoism
+				religion = bori
 			}
 			add_country_modifier = {
 				name = "religious_intolerance_enforced"
@@ -208,16 +208,16 @@ bornoism_rebels = {
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = bornoism }
-				dominant_religion = bornoism
+				NOT = { religion = bori }
+				dominant_religion = bori
 			}
-			change_religion = bornoism
+			change_religion = bori
 			force_converted = yes
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = bornoism }
-				NOT = { dominant_religion = bornoism }
+				NOT = { religion = bori }
+				NOT = { dominant_religion = bori }
 				religion_group = african_pagan
 				NOT = { has_country_modifier = heretic_tolerance }
 			}
@@ -230,7 +230,7 @@ bornoism_rebels = {
 		else = { add_stability = -1 }
 		if = {
 			limit = {
-				religion = bornoism
+				religion = bori
 				has_estate = estate_church
 				NOT = {
 					has_estate_influence_modifier = {

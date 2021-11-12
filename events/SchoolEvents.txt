@@ -7,117 +7,484 @@ country_event = {
 	picture = MYSTIC_IN_PRAYER_eventPicture
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		religion_group = muslim
+		is_muslim_viking_mod = yes
 		has_religious_school = no
 	}
 	option = {
-		name = school_events.1.a #Alawite
+		name = school_events.1.a		#Alawite
 		ai_chance = {
 			factor = 1
 		}
-		set_religious_school = {
-			group = muslim
-			school = alawite_school
+		if = {
+			limit = {
+				religion_group = sunni_muslim
+			}
+			set_religious_school = {
+				group = sunni_muslim
+				school = alawite_school_sunni
+			}
+		}
+		else_if = {
+			limit = {
+				religion_group = shia_muslim
+			}
+			set_religious_school = {
+				group = shia_muslim
+				school = alawite_school_shia
+			}
+		}
+		else = {
+			set_religious_school = {
+				group = quranist_muslim
+				school = alawite_school
+			}
 		}
 	}
 	option = {
-		name = school_events.1.b #Hanafi
+		name = school_events.1.b		#Ashari
 		ai_chance = {
 			factor = 1
 		}
-		set_religious_school = {
-			group = muslim
-			school = hanafi_school
+		if = {
+			limit = {
+				religion_group = sunni_muslim
+			}
+			set_religious_school = {
+				group = sunni_muslim
+				school = ashari_school_sunni
+			}
+		}
+		else_if = {
+			limit = {
+				religion_group = shia_muslim
+			}
+			set_religious_school = {
+				group = shia_muslim
+				school = ashari_school_shia
+			}
+		}
+		else = {
+			set_religious_school = {
+				group = quranist_muslim
+				school = ashari_school
+			}
 		}
 	}
 	option = {
-		name = school_events.1.c #Hanbali
+		name = school_events.1.c		#Druze
 		ai_chance = {
 			factor = 1
 		}
-		set_religious_school = {
-			group = muslim
-			school = hanbali_school
+		if = {
+			limit = {
+				religion_group = sunni_muslim
+			}
+			set_religious_school = {
+				group = sunni_muslim
+				school = druze_school_sunni
+			}
+		}
+		else_if = {
+			limit = {
+				religion_group = shia_muslim
+			}
+			set_religious_school = {
+				group = shia_muslim
+				school = druze_school_shia
+			}
+		}
+		else = {
+			set_religious_school = {
+				group = quranist_muslim
+				school = druze_school
+			}
 		}
 	}
 	option = {
-		name = school_events.1.dd #Ismaili
+		name = school_events.1.dd		#fiqh
 		ai_chance = {
 			factor = 1
 		}
-		set_religious_school = {
-			group = muslim
-			school = ismaili_school
+		if = {
+			limit = {
+				religion_group = sunni_muslim
+			}
+			set_religious_school = {
+				group = sunni_muslim
+				school = fiqh_school_sunni
+			}
+		}
+		else_if = {
+			limit = {
+				religion_group = shia_muslim
+			}
+			set_religious_school = {
+				group = shia_muslim
+				school = fiqh_school_shia
+			}
+		}
+		else = {
+			set_religious_school = {
+				group = quranist_muslim
+				school = fiqh_school
+			}
 		}
 	}
 	option = {
-		name = school_events.1.e #Jafari
+		name = school_events.1.e		#Hurufi
 		ai_chance = {
 			factor = 1
 		}
-		set_religious_school = {
-			group = muslim
-			school = jafari_school
+		if = {
+			limit = {
+				religion_group = sunni_muslim
+			}
+			set_religious_school = {
+				group = sunni_muslim
+				school = hurufi_school_sunni
+			}
+		}
+		else_if = {
+			limit = {
+				religion_group = shia_muslim
+			}
+			set_religious_school = {
+				group = shia_muslim
+				school = hurufi_school_shia
+			}
+		}
+		else = {
+			set_religious_school = {
+				group = quranist_muslim
+				school = hurufi_school
+			}
 		}
 	}
 	option = {
-		name = school_events.1.f #Maliki
+		name = school_events.1.f		#Ibadi
 		ai_chance = {
 			factor = 1
 		}
-		set_religious_school = {
-			group = muslim
-			school = maliki_school
+		if = {
+			limit = {
+				religion_group = sunni_muslim
+			}
+			set_religious_school = {
+				group = sunni_muslim
+				school = ibadi_school_sunni
+			}
+		}
+		else_if = {
+			limit = {
+				religion_group = shia_muslim
+			}
+			set_religious_school = {
+				group = shia_muslim
+				school = ibadi_school_shia
+			}
+		}
+		else = {
+			set_religious_school = {
+				group = quranist_muslim
+				school = ibadi_school
+			}
 		}
 	}
 	option = {
-		name = school_events.1.g #Maturidi
+		name = school_events.1.g		#Ismaili
 		ai_chance = {
 			factor = 1
 		}
-		set_religious_school = {
-			group = muslim
-			school = maturidi_school
+		if = {
+			limit = {
+				religion_group = sunni_muslim
+			}
+			set_religious_school = {
+				group = sunni_muslim
+				school = ismaili_school_sunni
+			}
+		}
+		else_if = {
+			limit = {
+				religion_group = shia_muslim
+			}
+			set_religious_school = {
+				group = shia_muslim
+				school = ismaili_school_shia
+			}
+		}
+		else = {
+			set_religious_school = {
+				group = quranist_muslim
+				school = ismaili_school
+			}
 		}
 	}
 	option = {
-		name = school_events.1.h #Muhakkima
+		name = school_events.1.h		#Kharijite
 		ai_chance = {
 			factor = 1
 		}
-		set_religious_school = {
-			group = muslim
-			school = muhakkima_school
+		if = {
+			limit = {
+				religion_group = sunni_muslim
+			}
+			set_religious_school = {
+				group = sunni_muslim
+				school = kharijite_school_sunni
+			}
+		}
+		else_if = {
+			limit = {
+				religion_group = shia_muslim
+			}
+			set_religious_school = {
+				group = shia_muslim
+				school = kharijite_school_shia
+			}
+		}
+		else = {
+			set_religious_school = {
+				group = quranist_muslim
+				school = kharijite_school
+			}
 		}
 	}
 	option = {
-		name = school_events.1.i #Mutazilla
+		name = school_events.1.i		#Qarmatian
 		ai_chance = {
 			factor = 1
 		}
-		set_religious_school = {
-			group = muslim
-			school = mutazilla_school
+		if = {
+			limit = {
+				religion_group = sunni_muslim
+			}
+			set_religious_school = {
+				group = sunni_muslim
+				school = qarmatian_school_sunni
+			}
+		}
+		else_if = {
+			limit = {
+				religion_group = shia_muslim
+			}
+			set_religious_school = {
+				group = shia_muslim
+				school = qarmatian_school_shia
+			}
+		}
+		else = {
+			set_religious_school = {
+				group = quranist_muslim
+				school = qarmatian_school
+			}
 		}
 	}
 	option = {
-		name = school_events.1.j #Shafi'i
+		name = school_events.1.j		#Shabazzi
 		ai_chance = {
 			factor = 1
 		}
-		set_religious_school = {
-			group = muslim
-			school = shafii_school
+		if = {
+			limit = {
+				religion_group = sunni_muslim
+			}
+			set_religious_school = {
+				group = sunni_muslim
+				school = shabazzi_school_sunni
+			}
+		}
+		else_if = {
+			limit = {
+				religion_group = shia_muslim
+			}
+			set_religious_school = {
+				group = shia_muslim
+				school = shabazzi_school_shia
+			}
+		}
+		else = {
+			set_religious_school = {
+				group = quranist_muslim
+				school = shabazzi_school
+			}
 		}
 	}
 	option = {
-		name = school_events.1.k #Zaidi
+		name = school_events.1.k		#Sufri
 		ai_chance = {
 			factor = 1
 		}
-		set_religious_school = {
-			group = muslim
-			school = zaidi_school
+		if = {
+			limit = {
+				religion_group = sunni_muslim
+			}
+			set_religious_school = {
+				group = sunni_muslim
+				school = sufri_school_sunni
+			}
 		}
+		else_if = {
+			limit = {
+				religion_group = shia_muslim
+			}
+			set_religious_school = {
+				group = shia_muslim
+				school = sufri_school_shia
+			}
+		}
+		else = {
+			set_religious_school = {
+				group = quranist_muslim
+				school = sufri_school
+			}
+		}
+	}
+	option = {
+		name = school_events.1.l		#Yazidi
+		ai_chance = {
+			factor = 1
+		}
+		if = {
+			limit = {
+				religion_group = sunni_muslim
+			}
+			set_religious_school = {
+				group = sunni_muslim
+				school = yazidi_school_sunni
+			}
+		}
+		else_if = {
+			limit = {
+				religion_group = shia_muslim
+			}
+			set_religious_school = {
+				group = shia_muslim
+				school = yazidi_school_shia
+			}
+		}
+		else = {
+			set_religious_school = {
+				group = quranist_muslim
+				school = yazidi_school
+			}
+		}
+	}
+	option = {
+		name = school_events.1.m		#zikri
+		ai_chance = {
+			factor = 1
+		}
+		if = {
+			limit = {
+				religion_group = sunni_muslim
+			}
+			set_religious_school = {
+				group = sunni_muslim
+				school = zikri_school_sunni
+			}
+		}
+		else_if = {
+			limit = {
+				religion_group = shia_muslim
+			}
+			set_religious_school = {
+				group = shia_muslim
+				school = zikri_school_shia
+			}
+		}
+		else = {
+			set_religious_school = {
+				group = quranist_muslim
+				school = zikri_school
+			}
+		}
+	}
+}
+
+country_event = {
+	id = school_events.2
+	title = school_events.2.t
+	desc = school_events.2.d
+	picture = ANGLICAN_SERMON_eventPicture
+	major = yes
+	fire_only_once = yes
+	trigger = {
+		has_dlc = "Rule Britannia"
+		is_lesser_in_union = no
+		NOT = {
+			has_country_flag = had_mexicayotl_question
+		}
+		is_subject = no
+		current_age = age_of_revolutions
+		NOT = {
+			is_religion_enabled = mexicayotl
+		}
+		OR = {
+			religion_group = central_american_pagan
+			religion_group = north_american_pagan
+		}
+		is_defender_of_faith = no
+		capital_scope = {
+			region = mexico_region
+		}
+		any_owned_province = {
+			region = mexico_region
+		}
+		num_of_cities = 10
+		NOT = {
+			tag = PAP
+		}		#The pope can just ask himself for divorce, he doesn't need to form a new religion
+	}
+	mean_time_to_happen = {
+		months = 120
+	}
+	immediate = {
+		set_country_flag = had_mexicayotl_question
+	}
+	option = {
+		# just convert
+		name = school_events.2.a
+		ai_chance = {
+			factor = 75
+		}
+		enable_religion = mexicayotl
+		change_religion = mexicayotl
+		if = {
+			limit = {
+				capital_scope = {
+					region = mexico_region
+				}
+			}
+			capital_scope = {
+				change_religion = mexicayotl
+				add_permanent_province_modifier = {
+					name = "religious_zeal_at_conv"
+					duration = 9000
+				}
+			}
+		}
+		random_owned_province = {
+			change_religion = mexicayotl
+			add_permanent_province_modifier = {
+				name = "religious_zeal_at_conv"
+				duration = 9000
+			}
+		}
+		add_country_modifier = {
+			name = "conversion_zeal"
+			duration = 3650
+		}
+	}
+	option = {
+		# dont convert
+		name = school_events.2.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+			}
+		}
+		custom_tooltip = school_events.2.b.tt
 	}
 }

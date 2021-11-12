@@ -1,11 +1,11 @@
 ######################################################################
-# Rooganism rebels. Disgruntled fanatics.
+# Serer rebels. Disgruntled fanatics.
 ######################################################################
-rooganism_rebels = {
+serer_rebels = {
 	color = { 230 175 175 }
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
-	religion = rooganism #Rooganism
+	religion = serer #Serer
 	defection = none				# Will not defect
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
@@ -38,7 +38,7 @@ rooganism_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			NOT = { religion = rooganism }
+			NOT = { religion = serer }
 		}
 		modifier = {
 			factor = 0.001
@@ -82,21 +82,21 @@ rooganism_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			religion = rooganism
-			owner = { religion = rooganism }
+			religion = serer
+			owner = { religion = serer }
 		}
 		modifier = {
 			factor = 2.0
-			NOT = { religion = rooganism }
+			NOT = { religion = serer }
 			any_neighbor_province = {
-	 			religion = rooganism
+	 			religion = serer
 	 			NOT = { has_province_modifier = "forced_conversion" }
 	 		}
 	 	}
 		modifier = {
 			factor = 5
 			has_missionary = yes
-			religion = rooganism
+			religion = serer
 		}
 		modifier = {
 			factor = 1.5
@@ -126,9 +126,9 @@ rooganism_rebels = {
 			if = {
 				limit = {
 					OR = {
-						religion = rooganism
+						religion = serer
 						is_reformation_center = yes
-						owner = { religion = rooganism }
+						owner = { religion = serer }
 					}
 				}
 				add_province_modifier = {
@@ -138,11 +138,11 @@ rooganism_rebels = {
 			}
 			if = {
 				limit = {
-					NOT = { religion = rooganism }
+					NOT = { religion = serer }
 					is_reformation_center = no
-					NOT = { owner = { religion = rooganism } }
+					NOT = { owner = { religion = serer } }
 				}
-				change_religion = rooganism
+				change_religion = serer
 				add_province_modifier = {
 					name = "forced_conversion"
 					duration = 730
@@ -161,7 +161,7 @@ rooganism_rebels = {
 	can_negotiate_trigger = {
 		OR = {
 			religion_group = african_pagan
-			dominant_religion = rooganism
+			dominant_religion = serer
 		}
 	}
 	# Country scope
@@ -169,7 +169,7 @@ rooganism_rebels = {
 		always = yes
 	}
 	# Localisation for their demands
-	demands_description = "rooganism_rebels_demand"
+	demands_description = "serer_rebels_demand"
 	# Country Scope
 			demands_enforced_effect = {
 		hidden_effect = {
@@ -199,7 +199,7 @@ rooganism_rebels = {
 		}
 		else_if = {
 			limit = {
-				religion = rooganism
+				religion = serer
 			}
 			add_country_modifier = {
 				name = "religious_intolerance_enforced"
@@ -208,16 +208,16 @@ rooganism_rebels = {
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = rooganism }
-				dominant_religion = rooganism
+				NOT = { religion = serer }
+				dominant_religion = serer
 			}
-			change_religion = rooganism
+			change_religion = serer
 			force_converted = yes
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = rooganism }
-				NOT = { dominant_religion = rooganism }
+				NOT = { religion = serer }
+				NOT = { dominant_religion = serer }
 				religion_group = african_pagan
 				NOT = { has_country_modifier = heretic_tolerance }
 			}
@@ -230,7 +230,7 @@ rooganism_rebels = {
 		else = { add_stability = -1 }
 		if = {
 			limit = {
-				religion = rooganism
+				religion = serer
 				has_estate = estate_church
 				NOT = {
 					has_estate_influence_modifier = {

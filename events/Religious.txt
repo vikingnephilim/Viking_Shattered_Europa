@@ -853,9 +853,9 @@ province_event = {
 	picture = PRAYING_eventPicture
 	trigger = {
 		is_capital = no
-		religion = sunni
+		is_muslim_viking_mod = yes
 		owner = {
-			religion = sunni
+			is_muslim_viking_mod = yes
 			shiite = 2
 		}
 		NOT = {
@@ -903,7 +903,7 @@ province_event = {
 		modifier = {
 			factor = 0.95
 			any_neighbor_province = {
-				religion = shiite
+				religion_group = shia_muslim
 			}
 		}
 	}
@@ -925,9 +925,9 @@ province_event = {
 	picture = PRAYING_eventPicture
 	trigger = {
 		is_capital = no
-		religion = shiite
+		religion_group = shia_muslim
 		owner = {
-			religion = shiite
+			religion_group = shia_muslim
 			sunni = 2
 		}
 		NOT = {
@@ -975,7 +975,7 @@ province_event = {
 		modifier = {
 			factor = 0.95
 			any_neighbor_province = {
-				religion = sunni
+				is_muslim_viking_mod = yes
 			}
 		}
 	}
@@ -1017,7 +1017,7 @@ province_event = {
 			}
 		}
 		any_neighbor_province = {
-			religion = confucianism
+			is_chinese_religion_viking_mod = YES
 		}
 		NOT = {
 			has_province_modifier = religious_zeal_at_conv
@@ -1149,9 +1149,9 @@ province_event = {
 	picture = BUDDHA_eventPicture
 	trigger = {
 		is_capital = no
-		religion = confucianism
+		is_chinese_religion_viking_mod = YES
 		owner = {
-			religion = confucianism
+			is_chinese_religion_viking_mod = YES
 			mahayana = 2
 		}
 		NOT = {
@@ -1212,10 +1212,10 @@ province_event = {
 	picture = RELIGION_eventPicture
 	trigger = {
 		is_capital = no
-		religion = confucianism
+		is_chinese_religion_viking_mod = YES
 		culture_group = japanese_g
 		owner = {
-			religion = confucianism
+			is_chinese_religion_viking_mod = YES
 			shinto = 2
 		}
 		NOT = {
@@ -1339,7 +1339,7 @@ province_event = {
 			confucianism = 2
 		}
 		any_neighbor_province = {
-			religion = confucianism
+			is_chinese_religion_viking_mod = YES
 		}
 		NOT = {
 			has_province_modifier = religious_zeal_at_conv
@@ -2249,9 +2249,9 @@ province_event = {
 	picture = PRAYING_eventPicture
 	trigger = {
 		is_capital = no
-		religion = sunni
+		is_muslim_viking_mod = yes
 		owner = {
-			religion = sunni
+			is_muslim_viking_mod = yes
 			ibadi = 2
 		}
 		NOT = {
@@ -2299,7 +2299,7 @@ province_event = {
 		modifier = {
 			factor = 0.95
 			any_neighbor_province = {
-				religion = ibadi
+				religion_group = quranist_muslim
 			}
 		}
 	}
@@ -2321,9 +2321,9 @@ province_event = {
 	picture = PRAYING_eventPicture
 	trigger = {
 		is_capital = no
-		religion = shiite
+		religion_group = shia_muslim
 		owner = {
-			religion = shiite
+			religion_group = shia_muslim
 			ibadi = 2
 		}
 		NOT = {
@@ -2371,7 +2371,7 @@ province_event = {
 		modifier = {
 			factor = 0.95
 			any_neighbor_province = {
-				religion = ibadi
+				religion_group = quranist_muslim
 			}
 		}
 	}
@@ -2393,9 +2393,9 @@ province_event = {
 	picture = PRAYING_eventPicture
 	trigger = {
 		is_capital = no
-		religion = ibadi
+		religion_group = quranist_muslim
 		owner = {
-			religion = ibadi
+			religion_group = quranist_muslim
 			sunni = 2
 		}
 		NOT = {
@@ -2443,7 +2443,7 @@ province_event = {
 		modifier = {
 			factor = 0.95
 			any_neighbor_province = {
-				religion = sunni
+				is_muslim_viking_mod = yes
 			}
 		}
 	}
@@ -2465,9 +2465,9 @@ province_event = {
 	picture = PRAYING_eventPicture
 	trigger = {
 		is_capital = no
-		religion = ibadi
+		religion_group = quranist_muslim
 		owner = {
-			religion = ibadi
+			religion_group = quranist_muslim
 			shiite = 2
 		}
 		NOT = {
@@ -2515,7 +2515,7 @@ province_event = {
 		modifier = {
 			factor = 0.95
 			any_neighbor_province = {
-				religion = shiite
+				religion_group = shia_muslim
 			}
 		}
 	}
@@ -2537,9 +2537,9 @@ province_event = {
 	picture = PRAYING_eventPicture
 	trigger = {
 		is_capital = no
-		religion = hinduism
+		is_indic_viking_mod = yes
 		owner = {
-			religion = hinduism
+			is_indic_viking_mod = yes
 			sikhism = 2
 		}
 		NOT = {
@@ -2644,7 +2644,7 @@ province_event = {
 		modifier = {
 			factor = 0.95
 			any_neighbor_province = {
-				religion = hinduism
+				is_indic_viking_mod = yes
 			}
 		}
 	}
@@ -2662,7 +2662,7 @@ country_event = {
 	desc = "religious_events.15.d"
 	picture = PRAYING_eventPicture
 	trigger = {
-		religion = confucianism
+		is_chinese_religion_viking_mod = YES
 		NOT = {
 			has_country_modifier = denounce_taoism
 		}
@@ -2718,7 +2718,7 @@ country_event = {
 	desc = "religious_events.16.d"
 	picture = COURT_eventPicture
 	trigger = {
-		religion = hinduism
+		is_indic_viking_mod = yes
 		is_revolutionary = no
 		NOT = {
 			has_country_flag = had_religious_coup
@@ -2727,7 +2727,7 @@ country_event = {
 		OR = {
 			is_free_or_tributary_trigger = yes
 			overlord = {
-				religion_group = muslim
+				is_muslim_viking_mod = yes
 			}
 		}
 		OR = {
@@ -3002,14 +3002,14 @@ country_event = {
 		name = "religious_events.17.a"		#This is an Outrage!
 		trigger = {
 			NOT = {
-				religion_group = muslim
+				is_muslim_viking_mod = yes
 			}
 		}
 	}
 	option = {
 		name = "religious_events.17.b"		#Excellent
 		trigger = {
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 		}
 	}
 }
@@ -3128,6 +3128,32 @@ country_event = {
 	picture = COURT_eventPicture
 	is_triggered_only = yes
 	option = {
+		name = "convert_to_islam_g"		#
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			any_owned_province = {
+				religion = shiite
+			}
+		}
+		change_religion = shiite
+		add_stability = -4
+	}
+	option = {
+		name = "convert_to_islam_i"		#
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			any_owned_province = {
+				religion = sunni
+			}
+		}
+		change_religion = sunni
+		add_stability = -4
+	}
+	option = {
 		name = "convert_to_islam_a"		#
 		ai_chance = {
 			factor = 100
@@ -3138,6 +3164,19 @@ country_event = {
 			}
 		}
 		change_religion = druze
+		add_stability = -4
+	}
+	option = {
+		name = "convert_to_islam_m"		#
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			any_owned_province = {
+				religion = fiqhism
+			}
+		}
+		change_religion = fiqhism
 		add_stability = -4
 	}
 	option = {
@@ -3167,6 +3206,19 @@ country_event = {
 		add_stability = -4
 	}
 	option = {
+		name = "convert_to_islam_n"		#
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			any_owned_province = {
+				religion = ismaelism
+			}
+		}
+		change_religion = ismaelism
+		add_stability = -4
+	}
+	option = {
 		name = "convert_to_islam_e"		#
 		ai_chance = {
 			factor = 100
@@ -3193,19 +3245,6 @@ country_event = {
 		add_stability = -4
 	}
 	option = {
-		name = "convert_to_islam_g"		#
-		ai_chance = {
-			factor = 100
-		}
-		trigger = {
-			any_owned_province = {
-				religion = shiite
-			}
-		}
-		change_religion = shiite
-		add_stability = -4
-	}
-	option = {
 		name = "convert_to_islam_h"		#
 		ai_chance = {
 			factor = 100
@@ -3216,19 +3255,6 @@ country_event = {
 			}
 		}
 		change_religion = sufri
-		add_stability = -4
-	}
-	option = {
-		name = "convert_to_islam_i"		#
-		ai_chance = {
-			factor = 100
-		}
-		trigger = {
-			any_owned_province = {
-				religion = sunni
-			}
-		}
-		change_religion = sunni
 		add_stability = -4
 	}
 	option = {
@@ -3318,7 +3344,7 @@ country_event = {
 		}
 		trigger = {
 			any_owned_province = {
-				religion = confucianism
+				is_chinese_religion_viking_mod = YES
 			}
 		}
 		change_religion = confucianism
@@ -3359,7 +3385,7 @@ country_event = {
 		}
 		trigger = {
 			any_owned_province = {
-				religion = hinduism
+				is_indic_viking_mod = yes
 			}
 		}
 		change_religion = hinduism
@@ -3428,7 +3454,7 @@ country_event = {
 		}
 		trigger = {
 			any_owned_province = {
-				religion = jewish
+				religion_group = jewish_group
 			}
 		}
 		change_religion = jewish

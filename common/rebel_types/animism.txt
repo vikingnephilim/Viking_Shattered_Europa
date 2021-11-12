@@ -159,7 +159,7 @@ animism_rebels = {
 	}
 	# Country scope
 	can_negotiate_trigger = {
-		religion_group = american_pagan
+		is_pagan_viking_mod = yes
 	}
 	# Country scope
 	can_enforce_trigger = {
@@ -178,7 +178,7 @@ animism_rebels = {
 		}
 		if = {
 			limit = {
-				NOT = { religion_group = american_pagan }
+				NOT = { is_pagan_viking_mod = yes }
 			}
 			add_prestige = -50
 			every_owned_province = {
@@ -206,7 +206,7 @@ animism_rebels = {
 		else_if = {
 			limit = {
 				OR = {
-					religion_group = american_pagan
+					is_pagan_viking_mod = yes
 					dominant_religion = animism
 				}
 				NOT = { religion = animism }

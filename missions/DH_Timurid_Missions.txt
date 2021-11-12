@@ -11,7 +11,7 @@ dh_tim_india = {
 			}
 			OR = {
 				religion_group = zoroastrian_group
-				religion_group = muslim
+				is_muslim_viking_mod = yes
 				religion = zun_pagan_reformed
 			}
 		}
@@ -265,6 +265,700 @@ dh_tim_india = {
 			}
 			add_treasury = 500
 			add_prestige = 20
+		}
+	}
+}
+mug_towards_china = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		AND = {
+			OR = {
+				culture_group = iranian
+				culture_group = east_iranian
+				culture_group = west_persian
+			}
+			OR = {
+				religion_group = zoroastrian_group
+				is_muslim_viking_mod = yes
+				religion = zun_pagan_reformed
+			}
+		}
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	mug_follow_the_brahmaputra = {
+		icon = mission_follow_the_brahmaputra
+		required_missions = {
+		}
+		position = 4
+		provinces_to_highlight = {
+			area = assam_area
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			assam_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			kachin_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			chindwin_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_burma_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			naga_hills_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			shan_hill_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	mug_upper_burma_campaign = {
+		icon = mission_upper_burma_campaign
+		required_missions = {
+			mug_follow_the_brahmaputra
+		}
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				area = kachin_area
+				area = chindwin_area
+				area = upper_burma_area
+				area = naga_hills_area
+				area = shan_hill_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			kachin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			chindwin_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			upper_burma_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			naga_hills_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			shan_hill_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_treasury = 500
+			add_country_modifier = {
+				name = "mug_burmese_ruby_trade"
+				duration = 7300
+			}
+			yun_gui_borderland_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			yun_gui_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	mug_open_up_china = {
+		icon = mission_open_up_china
+		required_missions = {
+			mug_upper_burma_campaign
+		}
+		position = 8
+		provinces_to_highlight = {
+			OR = {
+				area = yun_gui_borderland_area
+				area = yun_gui_area
+				area = vietnam_area
+				area = guangxi_area
+				area = west_guangdong_area
+				area = guangdong_area
+				area = red_river_delta_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			yun_gui_borderland_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			yun_gui_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			vietnam_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			guangxi_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			west_guangdong_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			guangdong_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			red_river_delta_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = "mughal_china"
+				duration = 9125
+			}
+		}
+	}
+}
+hsn_conquest_group = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		AND = {
+			OR = {
+				culture_group = iranian
+				culture_group = east_iranian
+				culture_group = west_persian
+			}
+			OR = {
+				religion_group = zoroastrian_group
+				is_muslim_viking_mod = yes
+				religion = zun_pagan_reformed
+			}
+		}
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	hsn_buildforces = {
+		icon = mission_bedouins
+		required_missions = {
+		}
+		position = 9
+		trigger = {
+			army_size_percentage = 1
+			manpower_percentage = 0.8
+			num_of_generals = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = "oma_buildforces_mod"
+				duration = 5475
+			}
+			al_jazira_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	conquer_al_jazira_hsn = {
+		icon = mission_arabian_fort
+		required_missions = {
+			hsn_buildforces
+		}
+		position = 10
+		provinces_to_highlight = {
+			area = al_jazira_area
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			al_jazira_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 15
+			aleppo_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	conquer_aleppo_hsn = {
+		icon = mission_egyptian_mamluk_soldier
+		required_missions = {
+			conquer_al_jazira_hsn
+		}
+		position = 11
+		provinces_to_highlight = {
+			area = aleppo_area
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			aleppo_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 15
+			add_army_tradition = 20
+			north_kurdistan_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_claim = ROOT
+			}
+			erzurum_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_claim = ROOT
+			}
+		}
+	}
+}
+mug_timurid_resurgence = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		AND = {
+			OR = {
+				culture_group = iranian
+				culture_group = east_iranian
+				culture_group = west_persian
+			}
+			OR = {
+				religion_group = zoroastrian_group
+				is_muslim_viking_mod = yes
+				religion = zun_pagan_reformed
+			}
+		}
+		NOT = {
+			map_setup = map_setup_random
+		}
+	}
+	has_country_shield = yes
+	mug_pacify_punjab = {
+		icon = mission_pacify_punjab
+		required_missions = {
+		}
+		position = 12
+		provinces_to_highlight = {
+			OR = {
+				area = multan_area
+				area = lahore_area
+				area = sind_sagar_area
+				area = sirhind_area
+				area = kashmir_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			owns_core_province = 507
+			multan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				NOT = {
+					local_autonomy = 30
+				}
+			}
+			lahore_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				NOT = {
+					local_autonomy = 30
+				}
+			}
+			sirhind_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+				NOT = {
+					local_autonomy = 30
+				}
+			}
+			sind_sagar_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kashmir_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			507 = {
+				add_province_modifier = {
+					name = "lahore_subah"
+					duration = -1
+				}
+			}
+			sindh_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			northern_sindh_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			ghor_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			sistan_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			herat_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			balkh_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			kabulistan_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	mug_afghan_frontier = {
+		icon = mission_afghan_frontier
+		required_missions = {
+			mug_pacify_punjab
+		}
+		position = 13
+		provinces_to_highlight = {
+			OR = {
+				area = ghor_area
+				area = sistan_area
+				area = herat_area
+				area = balkh_area
+				area = kabulistan_area
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			ghor_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			sistan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			herat_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			balkh_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			kabulistan_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			451 = {
+				add_province_modifier = {
+					name = mughal_stronghold
+					duration = -1
+				}
+			}
+			507 = {
+				add_trade_modifier = {
+					who = root
+					duration = 7300
+					power = 35
+					key = pacified_kabulistan
+				}
+			}
+			add_permanent_claim = 416
+			add_permanent_claim = 446
+			add_permanent_claim = 454
+			add_permanent_claim = 2213
+			add_permanent_claim = 2221
+		}
+	}
+	mug_abu_saids_dream = {
+		icon = mission_abu_saids_dream
+		required_missions = {
+			mug_afghan_frontier
+		}
+		position = 14
+		provinces_to_highlight = {
+			OR = {
+				province_id = 416
+				province_id = 446
+				province_id = 454
+				province_id = 2213
+				province_id = 2221
+			}
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		trigger = {
+			owns = 416
+			owns = 446
+			owns = 454
+			owns = 2213
+			owns = 2221
+		}
+		effect = {
+			add_country_modifier = {
+				name = "heirs_of_timur"
+				duration = 9125
+			}
+			persia_region = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_claim = ROOT
+			}
+			khorasan_region = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_claim = ROOT
+			}
+			transoxiana_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_claim = ROOT
+			}
+			arys_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_claim = ROOT
+			}
+			transcaspia_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_claim = ROOT
+			}
+			khiva_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_claim = ROOT
+			}
+			ferghana_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_claim = ROOT
+			}
+			termez_area = {
+				limit = {
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_claim = ROOT
+			}
 		}
 	}
 }

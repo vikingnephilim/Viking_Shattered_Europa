@@ -4,7 +4,7 @@ estate_dhimmi = {
 		factor = 1
 		modifier = {
 			factor = 0.1
-			religion_group = muslim
+			is_muslim_viking_mod = yes
 		}
 		modifier = {
 			factor = 1.5
@@ -24,7 +24,7 @@ estate_dhimmi = {
 		is_colonial_nation = no
 		NOT = { has_reform = celestial_empire }
 		NOT = { technology_group = western }
-		religion_group = muslim
+		is_muslim_viking_mod = yes
 		NOT = { has_reform = revolutionary_empire_reform }
 	}
 	# These scale with loyalty & power
@@ -49,7 +49,7 @@ estate_dhimmi = {
 		desc = EST_VAL_RELIGIOUS_MINORITY
 		trigger = {
 			any_owned_province = {
-				NOT = { religion_group = muslim }
+				NOT = { is_muslim_viking_mod = yes }
 			}
 		}
 		influence = 10	
@@ -59,7 +59,7 @@ estate_dhimmi = {
 		trigger = {
 			NOT = { dominant_religion = ROOT }
 			any_owned_province = {
-				NOT = { religion_group = muslim }
+				NOT = { is_muslim_viking_mod = yes }
 			}
 		}
 		influence = 20
@@ -113,6 +113,7 @@ estate_dhimmi = {
 		estate_dhimmi_dhimmi_nobles
 		estate_dhimmi_manpower
 		estate_dhimmi_tolerance
+		estate_dhimmi_guarantee_of_traditions
 	}
 	agendas = {
 		estate_dhimmi_develop_x

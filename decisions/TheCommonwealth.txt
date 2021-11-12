@@ -1,81 +1,117 @@
 country_decisions = {
-
 	pol_commonwealth = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_plc_flag }
+			NOT = {
+				has_country_flag = formed_plc_flag
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = { exists = PLC }
-			NOT = { tag = HLR }
-			tag = POL
+			NOT = {
+				tag = BOH
+			}
+			NOT = {
+				exists = PLC
+			}
+			NOT = {
+				tag = HLR
+			}
+			culture_group = west_slavic
 			LIT = {
 				exists = yes
 				ai = yes
 				was_player = no
 			}
 			OR = {
-			ai = no
+				ai = no
 				AND = {
 					senior_union_with = LIT
-					LIT = { #This overlaps with allow for AI, is meant to negate do_not_integrate
-						NOT = { num_of_cities = 58 } #Keep this number the same as in allow. Original 38 +10
+					LIT = {
+						#This overlaps with allow for AI, is meant to negate do_not_integrate
+						NOT = {
+							num_of_cities = 58
+						}						#Keep this number the same as in allow. Original 38 +10
 					}
 				}
 			}
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 262	# Krakow
-				province_id = 257	# Warszawa
-				province_id = 43	# Danzig
-				province_id = 1841	# Marienburg
+				province_id = 262				# Krakow
+				province_id = 257				# Warszawa
+				province_id = 43				# Danzig
+				province_id = 1841				# Marienburg
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		allow = {
-			LIT = { was_player = no }
 			LIT = {
-				NOT = { num_of_cities = 58 } #Keep this number the same as in potential. Original 38 +10
+				was_player = no
+			}
+			LIT = {
+				NOT = {
+					num_of_cities = 58
+				}				#Keep this number the same as in potential. Original 38 +10
 			}
 			adm_tech = 10
 			is_subject = no
 			is_nomad = no
 			stability = 1
 			is_at_war = no
-			owns_core_province = 262				# Krakow
-			owns_core_province = 257				# Warszawa
-			owns_core_province = 43					# Danzig
-			owns_core_province = 1841				# Marienburg
+			owns_core_province = 262			# Krakow
+			owns_core_province = 257			# Warszawa
+			owns_core_province = 43			# Danzig
+			owns_core_province = 1841			# Marienburg
 			senior_union_with = LIT
-			MAZ = { exists = no }
+			MAZ = {
+				exists = no
+			}
 		}
 		effect = {
 			change_tag = PLC
 			inherit = LIT
 			swap_non_generic_missions = yes
+			restore_country_name_effect = yes
 			if = {
-				limit = { NOT = { accepted_culture = lithuanian } }
+				limit = {
+					NOT = {
+						accepted_culture = lithuanian
+					}
+				}
 				add_accepted_culture = lithuanian
 			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
-				limit = { NOT = { government_rank = 2 } }
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
 				set_government_rank = 2
 			}
 			if = {
 				limit = {
 					poland_region = {
-						NOT = { owned_by = POL }
-						NOT = { owned_by = LIT }
-						NOT = { owned_by = PLC }
+						NOT = {
+							owned_by = POL
+						}
+						NOT = {
+							owned_by = LIT
+						}
+						NOT = {
+							owned_by = PLC
+						}
 					}
 				}
 				poland_region = {
@@ -85,9 +121,15 @@ country_decisions = {
 			if = {
 				limit = {
 					white_ruthenia_area = {
-						NOT = { owned_by = POL }
-						NOT = { owned_by = LIT }
-						NOT = { owned_by = PLC }
+						NOT = {
+							owned_by = POL
+						}
+						NOT = {
+							owned_by = LIT
+						}
+						NOT = {
+							owned_by = PLC
+						}
 					}
 				}
 				white_ruthenia_area = {
@@ -97,9 +139,15 @@ country_decisions = {
 			if = {
 				limit = {
 					lithuania_area = {
-						NOT = { owned_by = POL }
-						NOT = { owned_by = LIT }
-						NOT = { owned_by = PLC }
+						NOT = {
+							owned_by = POL
+						}
+						NOT = {
+							owned_by = LIT
+						}
+						NOT = {
+							owned_by = PLC
+						}
 					}
 				}
 				lithuania_area = {
@@ -109,9 +157,15 @@ country_decisions = {
 			if = {
 				limit = {
 					pripyat_area = {
-						NOT = { owned_by = POL }
-						NOT = { owned_by = LIT }
-						NOT = { owned_by = PLC }
+						NOT = {
+							owned_by = POL
+						}
+						NOT = {
+							owned_by = LIT
+						}
+						NOT = {
+							owned_by = PLC
+						}
 					}
 				}
 				pripyat_area = {
@@ -119,7 +173,9 @@ country_decisions = {
 				}
 			}
 			random_owned_province = {
-				limit = { culture = polish }
+				limit = {
+					culture = polish
+				}
 				add_base_tax = 1
 			}
 			set_country_flag = formed_plc_flag
@@ -131,19 +187,24 @@ country_decisions = {
 		ai_importance = 400
 		do_not_integrate = LIT
 	}
-
 	lit_commonwealth = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_plc_flag }
+			NOT = {
+				has_country_flag = formed_plc_flag
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = { exists = PLC }
-			NOT = { tag = HLR }
+			NOT = {
+				exists = PLC
+			}
+			NOT = {
+				tag = HLR
+			}
 			tag = LIT
 			POL = {
 				exists = yes
@@ -151,60 +212,88 @@ country_decisions = {
 				was_player = no
 			}
 			OR = {
-			ai = no
+				ai = no
 				AND = {
 					senior_union_with = POL
-					POL = { #This overlaps with allow for AI, is meant to negate do_not_integrate
-						NOT = { num_of_cities = 32 } #Keep this number the same as in allow. Original 22 + 10
+					POL = {
+						#This overlaps with allow for AI, is meant to negate do_not_integrate
+						NOT = {
+							num_of_cities = 32
+						}						#Keep this number the same as in allow. Original 22 + 10
 					}
 				}
-			}	
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 272	# Vilna
-				province_id = 276	# Minsk
-				province_id = 280	# Kiev
-				province_id = 1941	# Turov
+				province_id = 272				# Vilna
+				province_id = 276				# Minsk
+				province_id = 280				# Kiev
+				province_id = 1941				# Turov
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		allow = {
-			POL = { NOT = { num_of_cities = 32 } } #Keep this number the same as in potential. Original 22+10
+			POL = {
+				NOT = {
+					num_of_cities = 32
+				}
+			}			#Keep this number the same as in potential. Original 22+10
 			adm_tech = 10
 			is_subject = no
 			is_nomad = no
 			stability = 3
 			is_at_war = no
-			owns_core_province = 272				# Vilna
-			owns_core_province = 276				# Minsk
-			owns_core_province = 280				# Kiev
-			owns_core_province = 1941				# Turov
+			owns_core_province = 272			# Vilna
+			owns_core_province = 276			# Minsk
+			owns_core_province = 280			# Kiev
+			owns_core_province = 1941			# Turov
 			senior_union_with = POL
-			MAZ = { exists = no }
+			MAZ = {
+				exists = no
+			}
 		}
 		effect = {
 			change_tag = PLC
 			inherit = POL
 			swap_non_generic_missions = yes
+			restore_country_name_effect = yes
 			if = {
-				limit = { NOT = { accepted_culture = polish } }
+				limit = {
+					NOT = {
+						accepted_culture = polish
+					}
+				}
 				add_accepted_culture = polish
 			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
-				limit = { NOT = { government_rank = 2 } }
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
 				set_government_rank = 2
 			}
 			if = {
 				limit = {
 					poland_region = {
-						NOT = { owned_by = POL }
-						NOT = { owned_by = LIT }
-						NOT = { owned_by = PLC }
+						NOT = {
+							owned_by = POL
+						}
+						NOT = {
+							owned_by = LIT
+						}
+						NOT = {
+							owned_by = PLC
+						}
 					}
 				}
 				poland_region = {
@@ -214,9 +303,15 @@ country_decisions = {
 			if = {
 				limit = {
 					white_ruthenia_area = {
-						NOT = { owned_by = POL }
-						NOT = { owned_by = LIT }
-						NOT = { owned_by = PLC }
+						NOT = {
+							owned_by = POL
+						}
+						NOT = {
+							owned_by = LIT
+						}
+						NOT = {
+							owned_by = PLC
+						}
 					}
 				}
 				white_ruthenia_area = {
@@ -226,9 +321,15 @@ country_decisions = {
 			if = {
 				limit = {
 					lithuania_area = {
-						NOT = { owned_by = POL }
-						NOT = { owned_by = LIT }
-						NOT = { owned_by = PLC }
+						NOT = {
+							owned_by = POL
+						}
+						NOT = {
+							owned_by = LIT
+						}
+						NOT = {
+							owned_by = PLC
+						}
 					}
 				}
 				lithuania_area = {
@@ -238,9 +339,15 @@ country_decisions = {
 			if = {
 				limit = {
 					pripyat_area = {
-						NOT = { owned_by = POL }
-						NOT = { owned_by = LIT }
-						NOT = { owned_by = PLC }
+						NOT = {
+							owned_by = POL
+						}
+						NOT = {
+							owned_by = LIT
+						}
+						NOT = {
+							owned_by = PLC
+						}
 					}
 				}
 				pripyat_area = {
@@ -248,7 +355,9 @@ country_decisions = {
 				}
 			}
 			random_owned_province = {
-				limit = { culture = lithuanian }
+				limit = {
+					culture = lithuanian
+				}
 				add_base_tax = 1
 			}
 			set_country_flag = formed_plc_flag
@@ -260,25 +369,36 @@ country_decisions = {
 		ai_importance = 200
 		do_not_integrate = POL
 	}
-	
 	commonwealth_enforced = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_plc_flag }
+			NOT = {
+				has_country_flag = formed_plc_flag
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = { exists = PLC }
+			NOT = {
+				exists = PLC
+			}
 			LIT = {
-				NOT = { senior_union_with = POL }
-				NOT = { junior_union_with = POL }
+				NOT = {
+					senior_union_with = POL
+				}
+				NOT = {
+					junior_union_with = POL
+				}
 			}
 			POL = {
-				NOT = { senior_union_with = LIT }
-				NOT = { junior_union_with = LIT }
+				NOT = {
+					senior_union_with = LIT
+				}
+				NOT = {
+					junior_union_with = LIT
+				}
 			}
 			OR = {
 				tag = LIT
@@ -286,24 +406,32 @@ country_decisions = {
 			}
 			OR = {
 				ai = no
-				NOT = { exists = POL }
-				NOT = { exists = LIT }
+				NOT = {
+					exists = POL
+				}
+				NOT = {
+					exists = LIT
+				}
 			}
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 272	# Vilna
-				province_id = 276	# Minsk
-				province_id = 280	# Kiev
-				province_id = 1941	# Turov
-				province_id = 262	# Krakow
-				province_id = 257	# Warszawa
-				province_id = 43		# Danzig
-				province_id = 1841	# Marienburg
+				province_id = 272				# Vilna
+				province_id = 276				# Minsk
+				province_id = 280				# Kiev
+				province_id = 1941				# Turov
+				province_id = 262				# Krakow
+				province_id = 257				# Warszawa
+				province_id = 43				# Danzig
+				province_id = 1841				# Marienburg
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		allow = {
@@ -312,44 +440,67 @@ country_decisions = {
 			is_nomad = no
 			stability = 3
 			is_at_war = no
-			owns_core_province = 272				# Vilna
-			owns_core_province = 276				# Minsk
-			owns_core_province = 280				# Kiev
-			owns_core_province = 1941				# Turov
-			owns_core_province = 262				# Krakow
-			owns_core_province = 257				# Warszawa
-			owns_core_province = 43					# Danzig
-			owns_core_province = 1841				# Marienburg
-			MAZ = { exists = no }
+			owns_core_province = 272			# Vilna
+			owns_core_province = 276			# Minsk
+			owns_core_province = 280			# Kiev
+			owns_core_province = 1941			# Turov
+			owns_core_province = 262			# Krakow
+			owns_core_province = 257			# Warszawa
+			owns_core_province = 43			# Danzig
+			owns_core_province = 1841			# Marienburg
+			MAZ = {
+				exists = no
+			}
 		}
 		effect = {
 			change_tag = PLC
 			swap_non_generic_missions = yes
+			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
-				limit = { NOT = { government_rank = 2 } }
-				PLC = { set_government_rank = 2 }
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
+				PLC = {
+					set_government_rank = 2
+				}
 			}
 			if = {
 				limit = {
-					NOT = { primary_culture = polish }
-					NOT = { accepted_culture = polish }
+					NOT = {
+						primary_culture = polish
+					}
+					NOT = {
+						accepted_culture = polish
+					}
 				}
 				add_accepted_culture = polish
 			}
 			if = {
 				limit = {
-					NOT = { primary_culture = lithuanian }
-					NOT = { accepted_culture = lithuanian }
+					NOT = {
+						primary_culture = lithuanian
+					}
+					NOT = {
+						accepted_culture = lithuanian
+					}
 				}
 				add_accepted_culture = lithuanian
 			}
 			if = {
 				limit = {
 					poland_region = {
-						NOT = { owned_by = POL }
-						NOT = { owned_by = LIT }
-						NOT = { owned_by = PLC }
+						NOT = {
+							owned_by = POL
+						}
+						NOT = {
+							owned_by = LIT
+						}
+						NOT = {
+							owned_by = PLC
+						}
 					}
 				}
 				poland_region = {
@@ -359,9 +510,15 @@ country_decisions = {
 			if = {
 				limit = {
 					white_ruthenia_area = {
-						NOT = { owned_by = POL }
-						NOT = { owned_by = LIT }
-						NOT = { owned_by = PLC }
+						NOT = {
+							owned_by = POL
+						}
+						NOT = {
+							owned_by = LIT
+						}
+						NOT = {
+							owned_by = PLC
+						}
 					}
 				}
 				white_ruthenia_area = {
@@ -371,9 +528,15 @@ country_decisions = {
 			if = {
 				limit = {
 					lithuania_area = {
-						NOT = { owned_by = POL }
-						NOT = { owned_by = LIT }
-						NOT = { owned_by = PLC }
+						NOT = {
+							owned_by = POL
+						}
+						NOT = {
+							owned_by = LIT
+						}
+						NOT = {
+							owned_by = PLC
+						}
 					}
 				}
 				lithuania_area = {
@@ -383,9 +546,15 @@ country_decisions = {
 			if = {
 				limit = {
 					pripyat_area = {
-						NOT = { owned_by = POL }
-						NOT = { owned_by = LIT }
-						NOT = { owned_by = PLC }
+						NOT = {
+							owned_by = POL
+						}
+						NOT = {
+							owned_by = LIT
+						}
+						NOT = {
+							owned_by = PLC
+						}
 					}
 				}
 				pripyat_area = {
@@ -393,7 +562,9 @@ country_decisions = {
 				}
 			}
 			random_owned_province = {
-				limit = { has_owner_culture = yes }
+				limit = {
+					has_owner_culture = yes
+				}
 				add_base_tax = 1
 			}
 			set_country_flag = formed_plc_flag
@@ -404,5 +575,4 @@ country_decisions = {
 		}
 		ai_importance = 200
 	}
-	
 }

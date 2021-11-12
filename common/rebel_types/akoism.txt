@@ -1,11 +1,11 @@
 ######################################################################
-# Akoism rebels. Disgruntled fanatics.
+# Akan rebels. Disgruntled fanatics.
 ######################################################################
-akoism_rebels = {
+akan_rebels = {
 	color = { 230 175 175 }
 	area = nation 					# Sticks to provinces of their nation
 	government = theocracy 			# Desires Theocracy
-	religion = akoism
+	religion = akan
 	defection = none				# Will not defect
 	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
 	independence = none				# Does not strive for independence
@@ -38,7 +38,7 @@ akoism_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			NOT = { religion = akoism }
+			NOT = { religion = akan }
 		}
 		modifier = {
 			factor = 0.001
@@ -82,21 +82,21 @@ akoism_rebels = {
 		}
 		modifier = {
 			factor = 0.0
-			religion = akoism
-			owner = { religion = akoism }
+			religion = akan
+			owner = { religion = akan }
 		}
 		modifier = {
 			factor = 2.0
-			NOT = { religion = akoism }
+			NOT = { religion = akan }
 			any_neighbor_province = {
-	 			religion = akoism
+	 			religion = akan
 	 			NOT = { has_province_modifier = "forced_conversion" }
 	 		}
 	 	}
 		modifier = {
 			factor = 5
 			has_missionary = yes
-			religion = akoism
+			religion = akan
 		}
 		modifier = {
 			factor = 1.5
@@ -126,9 +126,9 @@ akoism_rebels = {
 			if = {
 				limit = {
 					OR = {
-						religion = akoism
+						religion = akan
 						is_reformation_center = yes
-						owner = { religion = akoism }
+						owner = { religion = akan }
 					}
 				}
 				add_province_modifier = {
@@ -138,11 +138,11 @@ akoism_rebels = {
 			}
 			if = {
 				limit = {
-					NOT = { religion = akoism }
+					NOT = { religion = akan }
 					is_reformation_center = no
-					NOT = { owner = { religion = akoism } }
+					NOT = { owner = { religion = akan } }
 				}
-				change_religion = akoism
+				change_religion = akan
 				add_province_modifier = {
 					name = "forced_conversion"
 					duration = 730
@@ -161,7 +161,7 @@ akoism_rebels = {
 	can_negotiate_trigger = {
 		OR = {
 			religion_group = african_pagan
-			dominant_religion = akoism
+			dominant_religion = akan
 		}
 	}
 	# Country scope
@@ -169,7 +169,7 @@ akoism_rebels = {
 		always = yes
 	}
 	# Localisation for their demands
-	demands_description = "akoism_rebels_demand"
+	demands_description = "akan_rebels_demand"
 	# Country Scope
 			demands_enforced_effect = {
 		hidden_effect = {
@@ -199,7 +199,7 @@ akoism_rebels = {
 		}
 		else_if = {
 			limit = {
-				religion = akoism
+				religion = akan
 			}
 			add_country_modifier = {
 				name = "religious_intolerance_enforced"
@@ -208,16 +208,16 @@ akoism_rebels = {
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = akoism }
-				dominant_religion = akoism
+				NOT = { religion = akan }
+				dominant_religion = akan
 			}
-			change_religion = akoism
+			change_religion = akan
 			force_converted = yes
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = akoism }
-				NOT = { dominant_religion = akoism }
+				NOT = { religion = akan }
+				NOT = { dominant_religion = akan }
 				religion_group = african_pagan
 				NOT = { has_country_modifier = heretic_tolerance }
 			}
@@ -230,7 +230,7 @@ akoism_rebels = {
 		else = { add_stability = -1 }
 		if = {
 			limit = {
-				religion = akoism
+				religion = akan
 				has_estate = estate_church
 				NOT = {
 					has_estate_influence_modifier = {

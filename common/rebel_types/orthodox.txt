@@ -160,7 +160,7 @@ orthodox_rebels = {
 	# Country scope
 	can_negotiate_trigger = {
 		OR = {
-			religion_group = christian
+			is_christian_viking_mod = yes
 			dominant_religion = orthodox
 		}
 	}
@@ -181,7 +181,7 @@ orthodox_rebels = {
 		}
 		if = {
 			limit = {
-				NOT = { religion_group = christian }
+				NOT = { is_christian_viking_mod = yes }
 			}
 			add_prestige = -50
 			every_owned_province = {
@@ -219,7 +219,7 @@ orthodox_rebels = {
 			limit = {
 				NOT = { religion = orthodox }
 				NOT = { dominant_religion = orthodox }
-				religion_group = christian
+				is_christian_viking_mod = yes
 				NOT = { has_country_modifier = heretic_tolerance }
 			}
 			add_country_modifier = {

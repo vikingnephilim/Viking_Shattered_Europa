@@ -802,7 +802,7 @@ emp_hun_bulwark_of_christianity_branch = {
 		position = 8
 		provinces_to_highlight = {
 			owner = {
-				religion_group = muslim
+				is_muslim_viking_mod = yes
 				OR = {
 					culture_group = turko_semitic
 					is_neighbor_of = root
@@ -813,19 +813,19 @@ emp_hun_bulwark_of_christianity_branch = {
 				army_size = root
 			}
 			ROOT = {
-				religion_group = christian
+				is_christian_viking_mod = yes
 			}
 		}
 		trigger = {
 			if = {
 				limit = {
-					religion_group = christian
+					is_christian_viking_mod = yes
 				}
 				custom_trigger_tooltip = {
 					tooltip = emp_hun_bulwark_of_christianity_trigger_tooltip
 					NOT = {
 						any_country = {
-							religion_group = muslim
+							is_muslim_viking_mod = yes
 							OR = {
 								culture_group = turko_semitic
 								is_neighbor_of = root

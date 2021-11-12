@@ -1,0 +1,178 @@
+#Sheikh Ul Islam Triggers
+#Country Scope
+has_sufi_sheikh_ul_islam_trigger = {
+	has_dlc = "Cradle of Civilization"
+	OR = {
+		has_ruler_modifier = bad_sufi_modifier
+		has_ruler_modifier = ok_sufi_modifier
+		has_ruler_modifier = good_sufi_modifier
+	}
+}
+
+has_pious_sheikh_ul_islam_trigger = {
+	has_dlc = "Cradle of Civilization"
+	OR = {
+		has_ruler_modifier = bad_pious_mufti_modifier
+		has_ruler_modifier = ok_pious_mufti_modifier
+		has_ruler_modifier = good_pious_mufti_modifier
+	}
+}
+
+has_loyal_sheikh_ul_islam_trigger = {
+	has_dlc = "Cradle of Civilization"
+	OR = {
+		has_ruler_modifier = bad_loyal_mufti_modifier
+		has_ruler_modifier = ok_loyal_mufti_modifier
+		has_ruler_modifier = good_loyal_mufti_modifier
+	}
+}
+
+#Any religious Scholar?
+#Country Scope
+has_religious_scholars_trigger = {
+	custom_trigger_tooltip = {
+		tooltip = has_religious_scholars_trigger_tooltip
+		OR = {
+			has_country_modifier = alawite_scholar_modifier
+			has_country_modifier = ashari_scholar_modifier
+			has_country_modifier = druze_scholar_modifier
+			has_country_modifier = fiqh_scholar_modifier
+			has_country_modifier = hurufi_scholar_modifier
+			has_country_modifier = ibadi_scholar_modifier
+			has_country_modifier = ismaili_scholar_modifier
+			has_country_modifier = kharijite_scholar_modifier
+			has_country_modifier = qarmatian_scholar_modifier
+			has_country_modifier = shabazzi_scholar_modifier
+			has_country_modifier = sufri_scholar_modifier
+			has_country_modifier = yazidi_scholar_modifier
+			has_country_modifier = zikri_scholar_modifier
+		}
+	}
+}
+
+#Scholars from where?
+#Country Scope
+scholar_from_our_school_trigger = {
+	has_country_modifier = $school$_scholar_modifier
+	ROOT = {
+		religious_school = {
+			is_muslim_viking_mod = yes
+			OR = {
+				school = $school$_school_sunni
+				school = $school$_school_shia
+				school = $school$_school
+			}
+		}
+	}
+}
+
+our_scholar_matches_their_school_trigger = {
+	PREV = {
+		has_country_modifier = $school$_scholar_modifier
+	}
+	religious_school = {
+		is_muslim_viking_mod = yes
+		OR = {
+			school = $school$_school_sunni
+			school = $school$_school_shia
+			school = $school$_school
+		}
+	}
+}
+
+#Uses one of the Shia schools:
+#Country
+has_shia_school_trigger = {
+	OR = {
+		religious_school = {
+			group = shia_muslim
+			school = ismaili_school_shia
+		}
+		religious_school = {
+			group = shia_muslim
+			school = alawite_school_shia
+		}
+		religious_school = {
+			group = shia_muslim
+			school = kharijite_school_shia
+		}
+		religious_school = {
+			group = shia_muslim
+			school = zikri_school_shia
+		}
+	}
+}
+
+#Uses one of the Sunni schools:
+#Country
+has_sunni_school_trigger = {
+	OR = {
+		religious_school = {
+			group = sunni_muslim
+			school = ashari_school_sunni
+		}
+		religious_school = {
+			group = sunni_muslim
+			school = hurufi_school_sunni
+		}
+		religious_school = {
+			group = sunni_muslim
+			school = qarmatian_school_sunni
+		}
+		religious_school = {
+			group = sunni_muslim
+			school = sufri_school_sunni
+		}
+	}
+}
+
+#Country Scope
+hidden_progressive_opinion_for_scholar_trigger = {
+	#Used to pick best fit to invite scholar.
+	hidden_trigger = {
+		reverse_has_opinion = {
+			who = FROM
+			value = -50
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = -25
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 0
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 25
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 50
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 75
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 100
+		}
+		reverse_has_opinion = {
+			who = FROM
+			value = 125
+		}
+	}
+}
+
+knows_of_scholar_country_capital_trigger = {
+	#Must know from scope to use this - Currently used only for religious scholars in religion file.
+	FROM = {
+		exists = yes
+		capital_scope = {
+			ROOT = {
+				has_discovered = PREV
+			}
+		}
+	}
+}
