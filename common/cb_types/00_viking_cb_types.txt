@@ -54,3 +54,22 @@ cb_norse_crusade = {
 	}
 	war_goal = superiority_world_crusade
 }
+
+
+cb_force_tributary = {
+	valid_for_subject = no
+	prerequisites = {
+		has_dlc = "Mandate of Heaven"
+		OR = {
+			has_reform = geo_despotate
+			has_reform = inti_empire_reform
+			has_reform = polynesian_tribe
+			is_emperor_of_china = yes
+		}
+		FROM = {
+			is_subject = no
+		}
+		is_neighbor_of = FROM
+	}
+	war_goal = take_capital_force_tributary
+}

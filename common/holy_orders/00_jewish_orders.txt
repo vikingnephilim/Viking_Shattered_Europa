@@ -1,0 +1,86 @@
+########## Jewish ##########
+david_order = {
+	icon = GFX_holy_order_david
+	trigger = {
+		religion_group = jewish_group
+	}
+	cost = 50
+	cost_type = adm_power
+	per_province_effect = {
+		add_base_tax = 1
+	}
+	per_province_abandon_effect = {
+		add_base_tax = -1
+	}
+	modifier = {
+		local_monthly_devastation = -0.1
+		statewide_governing_cost = -0.25
+	}
+	ai_priority = {
+		factor = 2
+		modifier = {
+			factor = 2
+			NOT = {
+				religion = ROOT
+			}
+		}
+	}
+}
+
+saul_order = {
+	icon = GFX_holy_order_saul
+	trigger = {
+		religion_group = jewish_group
+	}
+	cost = 50
+	cost_type = dip_power
+	per_province_effect = {
+		add_base_production = 1
+	}
+	per_province_abandon_effect = {
+		add_base_production = -1
+	}
+	modifier = {
+		local_build_cost = -0.05
+		local_build_time = -0.05
+	}
+	ai_priority = {
+		factor = 2
+		modifier = {
+			factor = 2
+			NOT = {
+				religion = ROOT
+			}
+		}
+	}
+}
+
+gideon_order = {
+	icon = GFX_holy_order_gideon
+	trigger = {
+		religion_group = jewish_group
+	}
+	cost = 50
+	cost_type = mil_power
+	per_province_effect = {
+		add_base_manpower = 1
+	}
+	per_province_abandon_effect = {
+		add_base_manpower = -1
+	}
+	modifier = {
+		local_defensiveness = 0.1
+		local_manpower_modifier = 0.25
+	}
+	ai_priority = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			unrest = 5
+		}
+		modifier = {
+			factor = 1.5
+			devastation = 50
+		}
+	}
+}

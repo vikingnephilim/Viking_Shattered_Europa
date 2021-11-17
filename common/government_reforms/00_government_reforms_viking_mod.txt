@@ -590,6 +590,9 @@ polynesian_tribe = {
 		stability_cost_modifier = -0.33
 		range = 1
 	}
+	custom_attributes = {
+		has_tributaries = yes
+	}
 }
 
 sharifate_reform = {
@@ -874,6 +877,9 @@ geo_despotate = {
 		defensiveness = 0.15
 		culture_conversion_cost = -0.2
 	}
+	custom_attributes = {
+		has_tributaries = yes
+	}
 }
 
 despotate_of_caucasia_reform = {
@@ -1066,6 +1072,7 @@ principality = {
 			culture_group = east_slavic
 			culture_group = novgorod_group
 			culture_group = ruthenian_group
+			culture_group = ruthenian_south_group
 			culture = mordvin
 		}
 		NOT = {
@@ -1088,6 +1095,7 @@ principality = {
 			culture_group = east_slavic
 			culture_group = novgorod_group
 			culture_group = ruthenian_group
+			culture_group = ruthenian_south_group
 			culture = mordvin
 		}
 		NOT = {
@@ -2700,6 +2708,7 @@ tsardom = {
 			culture_group = east_slavic
 			culture_group = novgorod_group
 			culture_group = ruthenian_group
+			culture_group = ruthenian_south_group
 			culture = mordvin
 		}
 		NOT = {
@@ -3023,6 +3032,51 @@ achaemenid_empire_reform = {
 	}
 }
 
+inti_empire_reform = {
+	icon = king
+	allow_normal_conversion = yes
+	fixed_rank = 3
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	maintain_dynasty = yes
+	potential = {
+		NOT = {
+			is_pagan_allow_inti_viking_mod = yes
+		}
+		AND = {
+			OR = {
+				has_reform = inti_empire_reform
+				TAG = CSU
+			}
+		}
+	}
+	trigger = {
+		NOT = {
+			is_pagan_allow_inti_viking_mod = yes
+		}
+		AND = {
+			OR = {
+				has_reform = inti_empire_reform
+				TAG = CSU
+			}
+		}
+	}
+	fixed_rank = 3
+	allow_force_tributary = yes
+	modifiers = {
+		prestige = 1
+		governing_capacity = 250
+		diplomatic_reputation = 2
+		diplomatic_annexation_cost = -0.25
+	}
+	custom_attributes = {
+		has_tributaries = yes
+	}
+	ai = {
+		factor = 100
+	}
+}
+
 edo_empire_reform = {
 	icon = tribal_federation
 	allow_normal_conversion = yes
@@ -3175,6 +3229,7 @@ imperial_veche_republic = {
 				culture_group = east_slavic
 				culture_group = novgorod_group
 				culture_group = ruthenian_group
+				culture_group = ruthenian_south_group
 				is_playing_custom_nation = yes
 				have_had_reform = veche_republic
 			}
@@ -3186,6 +3241,7 @@ imperial_veche_republic = {
 			culture_group = east_slavic
 			culture_group = novgorod_group
 			culture_group = ruthenian_group
+			culture_group = ruthenian_south_group
 			culture = mordvin
 		}
 	}

@@ -1,0 +1,174 @@
+namespace = viking_south_america
+country_event = {
+	id = viking_south_america.1
+	title = "viking_south_america.1.t"
+	desc = "viking_south_america.1.d"
+	picture = NATIVES_eventPicture
+	trigger = {
+		owns_core_province = 808
+		religion = inti
+		NOT = {
+			has_reform = inti_empire_reform
+		}
+		NOT = {
+			has_country_flag = inti_empire_gov_change_flag
+		}
+		NOT = {
+			has_country_flag = inti_empire_no_gov_change_flag
+		}
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	# Take the Government Type
+	option = {
+		name = "viking_south_america.1.a"
+		add_government_reform = inti_empire_reform
+		set_country_flag = inti_empire_gov_change_flag
+	}
+	# Don't Take it
+	option = {
+		name = "viking_south_america.1.b"
+		add_prestige = 15
+		set_country_flag = inti_empire_no_gov_change_flag
+	}
+}
+
+country_event = {
+	id = viking_south_america.2
+	title = "viking_south_america.2.t"
+	desc = "viking_south_america.2.d"
+	picture = NATIVES_eventPicture
+	trigger = {
+		NOT = {
+			has_country_flag = inti_subject_stays_as_is
+		}
+		NOT = {
+			has_country_flag = inti_subject_becomes_vassal
+		}
+		NOT = {
+			has_country_flag = inti_subject_gets_integrated
+		}
+		owns_core_province = 808
+		has_reform = inti_empire_reform
+		any_subject_country = {
+			is_subject_of_type = tributary_state
+			religion = inti
+			has_opinion = {
+				who = ROOT
+				value = 100
+			}
+			NOT = {
+				liberty_desire = 25
+			}
+		}
+	}
+	mean_time_to_happen = {
+		months = 24
+	}
+    immediate = {
+        #Scope to a random subject fulfilling the requirements
+		hidden_effect = {
+			random_subject_country = {
+				limit = {
+					is_free_or_tributary_trigger = yes
+					religion = inti
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+					NOT = {
+						liberty_desire = 25
+					}
+				}
+				#... And save them as the event target
+				save_event_target_as = viking_south_america_subject
+			}
+		}
+    }
+	# Let them Stay a Tributary
+	option = {
+		name = "viking_south_america.2.a"
+		hidden_effect = {
+			set_country_flag = inti_subject_stays_as_is
+			country_event = {
+				id = viking_south_america.3
+				days = 730
+				}
+		}
+		add_prestige = 10
+		add_opinion = {
+			who = event_target:viking_south_america_subject
+			modifier = viking_inti_subject_stays_as_is
+		}
+	}
+	# Change to a Vassal, and integrate later
+	option = {
+		name = "viking_south_america.2.b"
+		hidden_effect = {
+			set_country_flag = inti_subject_becomes_vassal
+			country_event = {
+				id = viking_south_america.3
+				days = 730
+				}
+		}
+		add_opinion = {
+			who = event_target:viking_south_america_subject
+			modifier = viking_inti_subject_change
+		}
+		event_target:viking_south_america_subject = {
+			add_country_modifier = {
+				name = viking_inti_subject_change_modifier
+				duration = 20
+			}
+		}
+		create_subject = {
+			subject_type = vassal
+			subject = event_target:viking_south_america_subject
+		}
+	}
+	# Integrate now, and suffer some rebellions
+	option = {
+		name = "viking_south_america.2.c"
+		hidden_effect = {
+			set_country_flag = inti_subject_gets_integrated
+			country_event = {
+				id = viking_south_america.3
+				days = 730
+				}
+		}
+		hidden_effect = {
+		808 = {
+			spawn_rebels = {
+				type = leadered_peasant_rebels
+				unrest = 10
+				size = 3
+				friend = event_target:viking_south_america_subject
+			}
+			spawn_rebels = {
+				type = leadered_peasant_rebels
+				unrest = 10
+				size = 3
+				friend = event_target:viking_south_america_subject
+			}
+		}
+	}
+	custom_tooltip = viking_south_america_integrated_tt
+		inherit = event_target:viking_south_america_subject
+	}
+}
+
+country_event = {
+	id = viking_south_america.3
+	title = "viking_south_america.3.t"
+	desc = "viking_south_america.3.d"
+	picture = NATIVES_eventPicture
+	is_triggered_only = yes
+	# Let them Stay a Tributary
+	option = {
+		name = "viking_south_america.3.a"
+		clr_country_flag = inti_subject_stays_as_is
+		clr_country_flag = inti_subject_becomes_vassal
+		clr_country_flag = inti_subject_gets_integrated
+	}
+}
