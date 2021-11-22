@@ -15,17 +15,14 @@ estate_dhimmi = {
 	trigger = {
 		has_dlc = "The Cossacks"
 		NOT = { has_estate = estate_brahmins }
-		NOT = { is_revolutionary_republic_trigger = yes }
 		NOT = { government = native }
 		NOT = { has_reform = siberian_tribe }
 		NOT = { has_reform = cossacks_reform }
-		NOT = { has_reform = pirate_republic_reform }
 		is_nomad = no
 		is_colonial_nation = no
 		NOT = { has_reform = celestial_empire }
 		NOT = { technology_group = western }
 		is_muslim_viking_mod = yes
-		NOT = { has_reform = revolutionary_empire_reform }
 	}
 	# These scale with loyalty & power
 	country_modifier_happy = {

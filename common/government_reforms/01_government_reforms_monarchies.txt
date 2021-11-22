@@ -492,7 +492,15 @@ english_monarchy = {
 	icon = "british_queen"
 	allow_normal_conversion = no
 	potential = {
-		have_had_reform = english_monarchy
+		tag = ENG
+		culture_group = british
+		NOT = {
+			is_pagan_viking_mod = yes
+		}
+	}
+	trigger = {
+		tag = ENG
+		culture_group = british
 		NOT = {
 			is_pagan_viking_mod = yes
 		}
@@ -519,6 +527,11 @@ english_monarchy = {
 		custom_attributes = {
 			blocked_call_diet = yes
 		}
+	}
+	factions = {
+		faction_tudor
+		faction_lancaster
+		faction_york
 	}
 }
 
@@ -626,6 +639,11 @@ prussian_monarchy = {
 		nobles_loyalty_modifier = 0.1
 		governing_capacity_modifier = -0.5
 	}
+	factions = {
+		faction_hohenzollern
+		faction_vonluxembourg
+		faction_vonwittlesbach
+	}
 	conditional = {
 		allow = {
 			has_dlc = "Rights of Man"
@@ -673,7 +691,7 @@ principality = {
 		NOT = {
 			is_pagan_viking_mod = yes
 		}
-		religion_group = orthodox_christian
+		religion_group = christian
 	}
 	fixed_rank = 1
 	legacy_equivalent = principality_legacy
@@ -687,7 +705,7 @@ principality = {
 			culture_group = ruthenian_south_group
 			culture = mordvin
 		}
-		religion_group = orthodox_christian
+		religion_group = christian
 	}
 	modifiers = {
 		global_unrest = -1
@@ -718,7 +736,7 @@ tsardom = {
 		NOT = {
 			is_pagan_viking_mod = yes
 		}
-		religion_group = orthodox_christian
+		religion_group = christian
 		OR = {
 			AND = {
 				tag = RUS
@@ -750,7 +768,7 @@ tsardom = {
 			culture_group = ruthenian_south_group
 			culture = mordvin
 		}
-		religion_group = orthodox_christian
+		religion_group = christian
 	}
 	modifiers = {
 		global_manpower_modifier = 0.2
@@ -1436,12 +1454,14 @@ confucian_bureaucracy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	nation_designer_trigger = {
-		OR = {is_chinese_religion_viking_mod = YES
+		OR = {
+			is_chinese_religion_viking_mod = YES
 			primary_culture = vietnamese
 		}
 	}
 	potential = {
-		OR = {is_chinese_religion_viking_mod = YES
+		OR = {
+			is_chinese_religion_viking_mod = YES
 			primary_culture = vietnamese
 		}
 	}

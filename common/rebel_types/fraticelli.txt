@@ -160,7 +160,7 @@ fraticelli_rebels = {
 	# Country scope
 	can_negotiate_trigger = {
 		OR = {
-			is_christian_viking_mod = yes
+			religion_group = christian
 			dominant_religion = fraticelli
 		}
 	}
@@ -181,7 +181,7 @@ fraticelli_rebels = {
 		}
 		if = {
 			limit = {
-				NOT = { is_christian_viking_mod = yes }
+				NOT = { religion_group = christian }
 			}
 			add_prestige = -50
 			every_owned_province = {
@@ -219,7 +219,7 @@ fraticelli_rebels = {
 			limit = {
 				NOT = { religion = fraticelli }
 				NOT = { dominant_religion = fraticelli }
-				is_christian_viking_mod = yes
+				religion_group = christian
 				NOT = { has_country_modifier = heretic_tolerance }
 			}
 			add_country_modifier = {

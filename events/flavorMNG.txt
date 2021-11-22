@@ -306,7 +306,7 @@ country_event = {
 	trigger = {
 		tag = MNG
 		
-		NOT = { is_christian_viking_mod = yes }
+		NOT = { religion_group = christian }
 		num_of_ports = 1
 		OR = {
 			has_country_modifier = mng_closed_china
@@ -1412,7 +1412,7 @@ country_event = {
 		tag = MNG
 		has_country_flag = mng_accepted_jesuits
 		dominant_religion = catholic
-		NOT = { is_christian_viking_mod = yes }
+		NOT = { religion_group = christian }
 	}
 	
 	mean_time_to_happen = {
@@ -1440,7 +1440,7 @@ country_event = {
 	trigger = {
 		tag = MNG
 		has_country_flag = mng_accepted_jesuits
-		NOT = { is_christian_viking_mod = yes }
+		NOT = { religion_group = christian }
 		NOT ={ has_country_flag = mng_end_of_christian_missions }
 	}
 	

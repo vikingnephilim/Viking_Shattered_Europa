@@ -11,22 +11,35 @@ estate_brahmins = {
 			}
 			religion_group = dharmic
 		}
-		NOT = { has_reform = pirate_republic_reform }
-		NOT = { has_reform = siberian_tribe }
-		NOT = { has_reform = cossacks_reform }
-		NOT = { government = native }
-		NOT = { is_revolutionary_republic_trigger = yes }
+		NOT = {
+			has_reform = pirate_republic_reform
+		}
+		NOT = {
+			has_reform = siberian_tribe
+		}
+		NOT = {
+			has_reform = cossacks_reform
+		}
+		NOT = {
+			government = native
+		}
 		OR = {
-			NOT = { has_reform = celestial_empire }
+			NOT = {
+				has_reform = celestial_empire
+			}
 			has_dlc = "Mandate of Heaven"
 		}
 		OR = {
-			NOT = { tag = USA }
+			NOT = {
+				tag = USA
+			}
 			government = theocracy
 		}
 		is_nomad = no
 		is_colonial_nation = no
-		NOT = { has_reform = revolutionary_empire_reform }
+		NOT = {
+			has_reform = revolutionary_empire_reform
+		}
 	}
 	# These scale with loyalty & power
 	country_modifier_happy = {
@@ -37,7 +50,7 @@ estate_brahmins = {
 	country_modifier_neutral = {
 		global_tax_modifier = 0.2
 	}
-			country_modifier_angry = {
+	country_modifier_angry = {
 		global_tax_modifier = -0.1
 		devotion = -0.5
 		stability_cost_modifier = 0.1
@@ -53,7 +66,9 @@ estate_brahmins = {
 		factor = 1
 		modifier = {
 			factor = 0.1
-			NOT = { religion_group = dharmic }
+			NOT = {
+				religion_group = dharmic
+			}
 		}
 		modifier = {
 			factor = 2
@@ -69,7 +84,9 @@ estate_brahmins = {
 		}
 		modifier = {
 			factor = 0.5
-			NOT = { is_state_core = owner }
+			NOT = {
+				is_state_core = owner
+			}
 		}
 	}
 	# Influence modifiers
@@ -77,7 +94,9 @@ estate_brahmins = {
 	influence_modifier = {
 		desc = EST_VAL_HINDU_MAJORITY
 		trigger = {
-			NOT = { religion_group = dharmic }
+			NOT = {
+				religion_group = dharmic
+			}
 			OR = {
 				dominant_religion = hinduism
 				dominant_religion = shakti
@@ -102,20 +121,20 @@ estate_brahmins = {
 			}
 			NOT = {
 				OR = {
-				dominant_religion = hinduism
-				dominant_religion = shakti
-				dominant_religion = vishnuism
-				dominant_religion = bon
-				dominant_religion = jain
+					dominant_religion = hinduism
+					dominant_religion = shakti
+					dominant_religion = vishnuism
+					dominant_religion = bon
+					dominant_religion = jain
+				}
 			}
-		}
 			NOT = {
 				OR = {
-				religion = hinduism
-				religion = shakti
-				religion = vishnuism
-				religion = bon
-				religion = jain
+					religion = hinduism
+					religion = shakti
+					religion = vishnuism
+					religion = bon
+					religion = jain
 				}
 			}
 		}
@@ -130,14 +149,14 @@ estate_brahmins = {
 				religion = vishnuism
 				religion = bon
 				religion = jain
-				}
+			}
 			NOT = {
 				OR = {
-				dominant_religion = hinduism
-				dominant_religion = shakti
-				dominant_religion = vishnuism
-				dominant_religion = bon
-				dominant_religion = jain
+					dominant_religion = hinduism
+					dominant_religion = shakti
+					dominant_religion = vishnuism
+					dominant_religion = bon
+					dominant_religion = jain
 				}
 			}
 		}
@@ -206,6 +225,10 @@ estate_brahmins = {
 		estate_brahmins_hire_advisor
 		estate_brahmins_fire_advisor
 	}
-	color = { 229 160 172 }
-	influence_from_dev_modifier = 1.0
+	color = {
+		229
+		160
+		172
+	}
+	influence_from_dev_modifier = 1
 }

@@ -44,6 +44,52 @@ cathar_reform = {
 	}
 }
 
+british_monarchy = {
+	icon = "british_queen"
+	allow_normal_conversion = no
+	potential = {
+		tag = GBR
+		culture_group = british
+		NOT = {
+			is_pagan_viking_mod = yes
+		}
+	}
+	trigger = {
+		tag = GBR
+		culture_group = british
+		NOT = {
+			is_pagan_viking_mod = yes
+		}
+	}
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 15
+	nation_designer_trigger = {
+		has_dlc = "Common Sense"
+	}
+	legacy_equivalent = english_monarchy_legacy
+	start_territory_to_estates = 0.3
+	modifiers = {
+		governing_capacity = 50
+		legitimacy = 0.5
+		global_unrest = -1
+		max_absolutism = -30
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
+	}
+	factions = {
+		faction_tudor
+		faction_stuart
+		faction_aberffraw
+	}
+}
 kor_landed_aristocracy = {
 	icon = "asian_scripture"
 	allow_normal_conversion = no
@@ -190,6 +236,7 @@ ancien_regime_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
 	potential = {
+		tag = FRA
 		OR = {
 			culture_group = french
 			culture_group = south_french
@@ -200,6 +247,7 @@ ancien_regime_reform = {
 		}
 	}
 	trigger = {
+		tag = FRA
 		OR = {
 			culture_group = french
 			culture_group = south_french
@@ -213,6 +261,11 @@ ancien_regime_reform = {
 		global_autonomy = -0.025
 		governing_capacity = 150
 		max_absolutism = 15
+	}
+	factions = {
+		faction_carolingian
+		faction_capet
+		faction_valois
 	}
 	ai = {
 		factor = 100
@@ -250,6 +303,11 @@ french_absolutism = {
 		max_absolutism = 5
 		global_autonomy = -0.05
 		monarch_admin_power = 1
+	}
+	factions = {
+		faction_carolingian
+		faction_capet
+		faction_valois
 	}
 	ai = {
 		factor = 100
@@ -298,7 +356,7 @@ granadan_iqta_reform = {
 			primary_culture = andalucian
 		}
 		NOT = {
-			is_christian_viking_mod = yes
+			religion_group = christian
 		}
 		NOT = {
 			is_pagan_viking_mod = yes
@@ -309,7 +367,7 @@ granadan_iqta_reform = {
 			is_muslim_viking_mod = yes
 			primary_culture = andalucian
 			NOT = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 			NOT = {
 				is_pagan_viking_mod = yes
@@ -1131,7 +1189,6 @@ crown_of_castille = {
 	potential = {
 		OR = {
 			tag = CAS
-			tag = SPA
 			has_reform = crown_of_castille
 		}
 		NOT = {
@@ -1781,7 +1838,7 @@ k_of_arm = {
 	potential = {
 		AND = {
 			tag = ARM
-			is_christian_viking_mod = yes
+			religion_group = christian
 		}
 	}
 	valid_for_nation_designer = yes
@@ -2046,7 +2103,6 @@ kingdom_of_castille_and_leon = {
 hispanic_kingdom = {
 	icon = spain_charles
 	allow_normal_conversion = yes
-	fixed_rank = 2
 	potential = {
 		OR = {
 			tag = SPA
@@ -2054,6 +2110,7 @@ hispanic_kingdom = {
 		}
 	}
 	trigger = {
+		tag = SPA
 		has_reform = hispanic_kingdom
 	}
 	valid_for_nation_designer = yes
@@ -2062,6 +2119,11 @@ hispanic_kingdom = {
 		tolerance_own = 1
 		num_accepted_cultures = 3
 		governing_capacity = 150
+	}
+	factions = {
+		faction_ivrea
+		faction_jimenez
+		faction_trastamara
 	}
 	ai = {
 		factor = 102

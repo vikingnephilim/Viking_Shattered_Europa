@@ -755,7 +755,7 @@ swabian_group_3 = { #crusader group
 				balkan_region = {
 					limit = {
 						owner = {
-							NOT = { is_christian_viking_mod = yes }
+							NOT = { religion_group = christian }
 						}
 					}
 					add_claim = root
@@ -771,14 +771,14 @@ swabian_group_3 = { #crusader group
 
 		provinces_to_highlight = {
 			region = balkan_region
-			owner = { NOT = { is_christian_viking_mod = yes } }
+			owner = { NOT = { religion_group = christian } }
 		}
 		
 		trigger = {
 			balkan_region = {
 				type = all
 				owner = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 			}
 			calc_true_if = {
@@ -852,7 +852,7 @@ swabian_group_3 = { #crusader group
 			add_prestige = 50
 			if = {
 				limit = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 				add_country_modifier = {
 					name = swa_crusader_lord

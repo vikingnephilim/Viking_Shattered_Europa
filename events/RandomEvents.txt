@@ -2780,7 +2780,7 @@ country_event = {
 	trigger = {
 		is_year = 1700
 		OR = {
-			is_christian_viking_mod = yes
+			religion_group = christian
 			num_of_trade_companies = 1
 			any_subject_country = {
 				is_colonial_nation_of = root
@@ -5042,7 +5042,7 @@ country_event = {
 	goto = uppity_peasants_province
 	is_triggered_only = yes
 	trigger = {
-		is_christian_viking_mod = yes
+		religion_group = christian
 		has_estate = estate_nobles
 		any_owned_province = {
 			NOT = {
@@ -6312,7 +6312,7 @@ country_event = {
 	picture = COURT_eventPicture
 	is_triggered_only = yes
 	trigger = {
-		is_christian_viking_mod = yes
+		religion_group = christian
 		is_at_war = no
 	}
 	mean_time_to_happen = {
@@ -10919,7 +10919,7 @@ country_event = {
 	goto = renaissance_province
 	is_triggered_only = yes
 	trigger = {
-		is_christian_viking_mod = yes
+		religion_group = christian
 		capital_scope = {
 			continent = europe
 		}
@@ -11848,7 +11848,7 @@ country_event = {
 			has_reform = revolutionary_empire_reform
 		}
 		is_lesser_in_union = no
-		is_christian_viking_mod = yes
+		religion_group = christian
 	}
 	mean_time_to_happen = {
 		days = 1
@@ -12463,7 +12463,7 @@ country_event = {
 		capital_scope = {
 			continent = europe
 		}
-		is_christian_viking_mod = yes
+		religion_group = christian
 		has_idea_group = innovativeness_ideas
 	}
 	mean_time_to_happen = {
@@ -12714,7 +12714,7 @@ province_event = {
 		}
 		is_religion_enabled = protestant
 		is_reformation_center = no
-		is_christian_viking_mod = yes
+		religion_group = christian
 	}
 	mean_time_to_happen = {
 		months = 5000		# Random Province Event
@@ -13117,7 +13117,7 @@ country_event = {
 		NOT = {
 			has_country_flag = iconoclastic_fury
 		}
-		is_christian_viking_mod = yes
+		religion_group = christian
 		NOT = {
 			OR = {
 				religion = coptic

@@ -1,9 +1,9 @@
 # If you add religions, and use those tags, do not change them without changing everywhere they are used.
 # Uses all 'modifiers' possible thats exported as a Modifier.
-western_christian = {
+christian = {
 	defender_of_faith = yes
 	can_form_personal_unions = yes
-	center_of_religion = 235	# Kent
+	center_of_religion = 118	# Rome
 	# Flag emblem values - Used for Dynamic Setup of Random Nations.
 	# Emblem texture: game/gfx/interface/client_state_symbols_large.dds
 	# Can be overridden per religion.
@@ -345,7 +345,9 @@ western_christian = {
 	}
 	lollard = {
 		color = {
-			127 204 204
+			127
+			204
+			204
 		}
 		icon = 6
 		allow_female_defenders_of_the_faith = yes
@@ -501,22 +503,6 @@ western_christian = {
 			}
 		}
 	}
-	harmonized_modifier = harmonized_christian
-	crusade_name = CRUSADE
-}
-
-central_christian = {
-	defender_of_faith = yes
-	can_form_personal_unions = yes
-	center_of_religion = 118	# Rome
-	# Flag emblem values - Used for Dynamic Setup of Random Nations.
-	# Emblem texture: game/gfx/interface/client_state_symbols_large.dds
-	# Can be overridden per religion.
-	flags_with_emblem_percentage = 33	# default == 0
-	flag_emblem_index_range = {
-		1
-		57
-	}
 	catholic = {
 		color = {
 			204
@@ -533,6 +519,7 @@ central_christian = {
 		}
 		country = {
 			tolerance_own = 1
+			tolerance_heretic = -1
 			global_heathen_missionary_strength = 0.01
 		}
 		country_as_secondary = {
@@ -882,7 +869,9 @@ central_christian = {
 	}
 	fraticelli = {
 		color = {
-			178 178 102
+			178
+			178
+			102
 		}
 		icon = 4
 		allowed_conversion = {
@@ -1458,25 +1447,232 @@ central_christian = {
 			}
 		}
 	}
-	harmonized_modifier = harmonized_christian
-	crusade_name = CRUSADE
-}
-
-orthodox_christian = {
-	defender_of_faith = yes
-	can_form_personal_unions = yes
-	center_of_religion = 151	# Constantinople
-	# Flag emblem values - Used for Dynamic Setup of Random Nations.
-	# Emblem texture: game/gfx/interface/client_state_symbols_large.dds
-	# Can be overridden per religion.
-	flags_with_emblem_percentage = 33	# default == 0
-	flag_emblem_index_range = {
-		1
-		57
+	coptic = {
+		flags_with_emblem_percentage = 20
+		flag_emblem_index_range = {
+			1
+			4
+		}
+		color = {
+			178
+			38
+			76
+		}
+		icon = 15
+		allowed_conversion = {
+			malankara
+			messalian
+			monophysite
+			nestorian
+		}
+		country = {
+			defensiveness = 0.1
+			tolerance_own = 1
+		}
+		country_as_secondary = {
+			siege_ability = 0.1
+			defensiveness = 0.1
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		heretic = {
+			malankara
+			messalian
+			monophysite
+			nestorian
+		}
+		holy_sites = {
+			358
+			1227
+			2313
+			1234
+			379
+		}
+		blessings = {
+			legitimize_government
+			encourage_warriors_of_the_faith
+			send_monks_to_establish_monasteries
+			promote_territorial_rights
+			will_of_the_martyrs
+		}
+	}
+	malankara = {
+		flags_with_emblem_percentage = 20
+		flag_emblem_index_range = {
+			1
+			4
+		}
+		color = {
+			158
+			28
+			86
+		}
+		icon = 16
+		allowed_conversion = {
+			coptic
+			messalian
+			monophysite
+			nestorian
+		}
+		country = {
+			ae_impact = -0.1
+			global_missionary_strength = 0.02
+		}
+		country_as_secondary = {
+			ae_impact = -0.15
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		heretic = {
+			coptic
+			messalian
+			monophysite
+			nestorian
+		}
+		uses_church_power = yes		# Uses church power/aspect mechanics
+		aspects = {
+			hindu_syncretism
+			support_tamil_guilds
+			port_churches
+			assyrian_roots
+			persian_bishops
+			footsteps_of_thomas_the_apostles
+			coonan_cross_oath
+			council_of_chalcedon
+			hindu_advisors
+			friends_of_the_heretics
+		}
+	}
+	messalian = {
+		color = {
+			138
+			18
+			96
+		}
+		icon = 17
+		allowed_conversion = {
+			coptic
+			malankara
+			monophysite
+			nestorian
+		}
+		country = {
+			global_missionary_strength = 0.01
+			heir_chance = 1
+			may_recruit_female_generals = yes
+			female_advisor_chance = 0.2
+		}
+		province = {
+			local_missionary_strength = -0.01
+		}
+		country_as_secondary = {
+			global_missionary_strength = 0.01
+			advisor_cost = -0.1
+		}
+		heretic = {
+			coptic
+			malankara
+			monophysite
+			nestorian
+		}
+		fervor = yes
+	}
+	monophysite = {
+		color = {
+			118
+			8
+			106
+		}
+		icon = 18
+		allowed_conversion = {
+			coptic
+			malankara
+			messalian
+			nestorian
+		}
+		country = {
+			global_tax_modifier = 0.2
+			tolerance_own = 2
+		}
+		province = {
+			local_missionary_strength = -0.02
+		}
+		country_as_secondary = {
+			global_tax_modifier = 0.25
+		}
+		heretic = {
+			coptic
+			malankara
+			messalian
+			nestorian
+		}
+		holy_sites = {
+			358
+			1227
+			2313
+			1234
+			419
+		}
+		blessings = {
+			legitimize_government
+			encourage_warriors_of_the_faith
+			send_monks_to_establish_monasteries
+			promote_territorial_rights
+			will_of_the_martyrs
+		}
+	}
+	nestorian = {
+		color = {
+			98
+			48
+			116
+		}
+		icon = 19
+		allowed_conversion = {
+			coptic
+			malankara
+			messalian
+			monophysite
+		}
+		country = {
+			tolerance_own = 2
+			adm_tech_cost_modifier = -0.1
+		}
+		province = {
+			local_missionary_strength = -0.01
+		}
+		country_as_secondary = {
+			adm_tech_cost_modifier = -0.1
+			tolerance_own = 1
+		}
+		heretic = {
+			coptic
+			malankara
+			messalian
+			monophysite
+		}
+		holy_sites = {
+			358
+			1227
+			2313
+			1234
+			419
+		}
+		blessings = {
+			legitimize_government
+			encourage_warriors_of_the_faith
+			send_monks_to_establish_monasteries
+			promote_territorial_rights
+			will_of_the_martyrs
+		}
 	}
 	bogomilist = {
 		color = {
-			178 0 51
+			178
+			0
+			51
 		}
 		icon = 10
 		allowed_conversion = {
@@ -1617,7 +1813,9 @@ orthodox_christian = {
 	}
 	iconoclast = {
 		color = {
-			127 51 102
+			127
+			51
+			102
 		}
 		icon = 11
 		allowed_conversion = {
@@ -2019,7 +2217,9 @@ orthodox_christian = {
 	}
 	paulician = {
 		color = {
-			171 184 106
+			171
+			184
+			106
 		}
 		icon = 14
 		allowed_conversion = {
@@ -2099,243 +2299,6 @@ orthodox_christian = {
 					factor = 1
 				}
 			}
-		}
-	}
-	harmonized_modifier = harmonized_christian
-	crusade_name = CRUSADE
-}
-
-eastern_christian = {
-	defender_of_faith = yes
-	can_form_personal_unions = yes
-	center_of_religion = 379	# Jerusalem
-	# Flag emblem values - Used for Dynamic Setup of Random Nations.
-	# Emblem texture: game/gfx/interface/client_state_symbols_large.dds
-	# Can be overridden per religion.
-	flags_with_emblem_percentage = 33	# default == 0
-	flag_emblem_index_range = {
-		1
-		57
-	}
-	coptic = {
-		flags_with_emblem_percentage = 20
-		flag_emblem_index_range = {
-			1
-			4
-		}
-		color = {
-			178
-			38
-			76
-		}
-		icon = 15
-		allowed_conversion = {
-			malankara
-			messalian
-			monophysite
-			nestorian
-		}
-		country = {
-			defensiveness = 0.1
-			tolerance_own = 1
-		}
-		country_as_secondary = {
-			siege_ability = 0.1
-			defensiveness = 0.1
-		}
-		province = {
-			local_missionary_strength = -0.02
-		}
-		heretic = {
-			malankara
-			messalian
-			monophysite
-			nestorian
-		}
-		holy_sites = {
-			358
-			1227
-			2313
-			1234
-			379
-		}
-		blessings = {
-			legitimize_government
-			encourage_warriors_of_the_faith
-			send_monks_to_establish_monasteries
-			promote_territorial_rights
-			will_of_the_martyrs
-		}
-	}
-	malankara = {
-		flags_with_emblem_percentage = 20
-		flag_emblem_index_range = {
-			1
-			4
-		}
-		color = {
-			158
-			28
-			86
-		}
-		icon = 16
-		allowed_conversion = {
-			coptic
-			messalian
-			monophysite
-			nestorian
-		}
-		country = {
-			ae_impact = -0.1
-			global_missionary_strength = 0.02
-		}
-		country_as_secondary = {
-			ae_impact = -0.15
-		}
-		province = {
-			local_missionary_strength = -0.02
-		}
-		heretic = {
-			coptic
-			messalian
-			monophysite
-			nestorian
-		}
-		uses_church_power = yes		# Uses church power/aspect mechanics
-		aspects = {
-			hindu_syncretism
-			support_tamil_guilds
-			port_churches
-			assyrian_roots
-			persian_bishops
-			footsteps_of_thomas_the_apostles
-			coonan_cross_oath
-			council_of_chalcedon
-			hindu_advisors
-			friends_of_the_heretics
-		}
-	}
-	messalian = {
-		color = {
-			138
-			18
-			96
-		}
-		icon = 17
-		allowed_conversion = {
-			coptic
-			malankara
-			monophysite
-			nestorian
-		}
-		country = {
-			global_missionary_strength = 0.01
-			heir_chance = 1
-			may_recruit_female_generals = yes
-			female_advisor_chance = 0.2
-		}
-		province = {
-			local_missionary_strength = -0.01
-		}
-		country_as_secondary = {
-			global_missionary_strength = 0.01
-			advisor_cost = -0.1
-		}
-		heretic = {
-			coptic
-			malankara
-			monophysite
-			nestorian
-		}
-		fervor = yes
-	}
-	monophysite = {
-		color = {
-			118
-			8
-			106
-		}
-		icon = 18
-		allowed_conversion = {
-			coptic
-			malankara
-			messalian
-			nestorian
-		}
-		country = {
-			global_tax_modifier = 0.2
-			tolerance_own = 2
-		}
-		province = {
-			local_missionary_strength = -0.02
-		}
-		country_as_secondary = {
-			global_tax_modifier = 0.25
-		}
-		heretic = {
-			coptic
-			malankara
-			messalian
-			nestorian
-		}
-		holy_sites = {
-			358
-			1227
-			2313
-			1234
-			419
-		}
-		blessings = {
-			legitimize_government
-			encourage_warriors_of_the_faith
-			send_monks_to_establish_monasteries
-			promote_territorial_rights
-			will_of_the_martyrs
-		}
-	}
-	nestorian = {
-		color = {
-			98
-			48
-			116
-		}
-		icon = 19
-		allowed_conversion = {
-			coptic
-			malankara
-			messalian
-			monophysite
-		}
-		country = {
-			tolerance_own = 2
-			adm_tech_cost_modifier = -0.1
-		}
-		province = {
-			local_missionary_strength = -0.01
-		}
-		country_as_secondary = {
-			adm_tech_cost_modifier = -0.1
-			tolerance_own = 1
-		}
-		heretic = {
-			coptic
-			malankara
-			messalian
-			monophysite
-		}
-		holy_sites = {
-			358
-			1227
-			2313
-			1234
-			419
-		}
-		blessings = {
-			legitimize_government
-			encourage_warriors_of_the_faith
-			send_monks_to_establish_monasteries
-			promote_territorial_rights
-			will_of_the_martyrs
 		}
 	}
 	harmonized_modifier = harmonized_christian
@@ -2880,7 +2843,9 @@ sunni_muslim = {
 	}
 	kharijite = {
 		color = {
-			0 220 105
+			0
+			220
+			105
 		}
 		icon = 23
 		country = {
@@ -2947,7 +2912,9 @@ sunni_muslim = {
 	}
 	sufri = {
 		color = {
-			15 245 97
+			15
+			245
+			97
 		}
 		icon = 27
 		country = {
@@ -2980,7 +2947,9 @@ sunni_muslim = {
 	}
 	zikri = {
 		color = {
-			63 227 161
+			63
+			227
+			161
 		}
 		icon = 29
 		country = {
@@ -4266,7 +4235,9 @@ quranist_muslim = {
 	}
 	druze = {
 		color = {
-			0 229 102
+			0
+			229
+			102
 		}
 		icon = 20
 		country = {
@@ -6218,7 +6189,9 @@ european_pagan = {
 	norse_pagan_reformed = {
 		icon = 53
 		color = {
-			148 158 192
+			148
+			158
+			192
 		}
 		country = {
 			harsh_treatment_cost = -0.2
@@ -6444,7 +6417,7 @@ african_pagan = {
 		}
 		country_as_secondary = {
 			global_heretic_missionary_strength = 0.02
-			land_attrition = -0.10
+			land_attrition = -0.1
 		}
 		fetishist_cult = yes
 		heretic = {
@@ -6823,7 +6796,6 @@ ancient_pagan = {
 	crusade_name = HOLY_WAR
 	harmonized_modifier = harmonized_pagan
 }
-
 
 jewish_group = {
 	defender_of_faith = yes

@@ -392,3 +392,459 @@ create_or_add_center_of_trade_level = {
 		}
 	}
 }
+
+faction_in_power_effect = {
+	if = {
+		LIMIT = {
+			FRA = {
+				faction_in_power = faction_capet
+			}
+			NOT = {
+				has_country_flag = capet_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_capet
+			add_faction_influence = {
+				faction = faction_capet
+				influence = 33
+			}
+			set_country_flag = capet_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			FRA = {
+				faction_in_power = faction_carolingian
+			}
+			NOT = {
+				has_country_flag = carolingians_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_carolingian
+			add_faction_influence = {
+				faction = faction_carolingian
+				influence = 33
+			}
+			set_country_flag = carolingians_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			FRA = {
+				faction_in_power = faction_bourbon
+			}
+			NOT = {
+				has_country_flag = bourbons_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_bourbon
+			add_faction_influence = {
+				faction = faction_bourbon
+				influence = 33
+			}
+			set_country_flag = bourbons_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			FRA = {
+				faction_in_power = faction_valois
+			}
+			NOT = {
+				has_country_flag = valois_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_valois
+			add_faction_influence = {
+				faction = faction_valois
+				influence = 33
+			}
+			set_country_flag = valois_added_to_factions
+		}
+	}
+	else_if = {
+		LIMIT = {
+			SPA = {
+				faction_in_power = faction_jimenez
+			}
+			NOT = {
+				has_country_flag = jimenez_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_jimenez
+			add_faction_influence = {
+				faction = faction_jimenez
+				influence = 33
+			}
+			set_country_flag = jimenez_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			SPA = {
+				faction_in_power = faction_ivrea
+			}
+			NOT = {
+				has_country_flag = ivrea_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_ivrea
+			add_faction_influence = {
+				faction = faction_ivrea
+				influence = 33
+			}
+			set_country_flag = ivrea_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			SPA = {
+				faction_in_power = faction_trastamara
+			}
+			NOT = {
+				has_country_flag = trastamara_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_trastamara
+			add_faction_influence = {
+				faction = faction_trastamara
+				influence = 33
+			}
+			set_country_flag = trastamara_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			ENG = {
+				faction_in_power = faction_york
+			}
+			NOT = {
+				has_country_flag = york_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_york
+			add_faction_influence = {
+				faction = faction_york
+				influence = 33
+			}
+			set_country_flag = york_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			ENG = {
+				faction_in_power = faction_tudor
+			}
+			NOT = {
+				has_country_flag = tudor_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_tudor
+			add_faction_influence = {
+				faction = faction_tudor
+				influence = 33
+			}
+			set_country_flag = tudor
+		}
+	}
+	else_if = {
+		limit = {
+			ENG = {
+				faction_in_power = faction_lancaster
+			}
+			NOT = {
+				has_country_flag = lancaster_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_lancaster
+			add_faction_influence = {
+				faction = faction_lancaster
+				influence = 33
+			}
+			set_country_flag = lancaster_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			GBR = {
+				faction_in_power = faction_aberffraw
+			}
+			NOT = {
+				has_country_flag = aberffraw_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_aberffraw
+			add_faction_influence = {
+				faction = faction_aberffraw
+				influence = 33
+			}
+			set_country_flag = aberffraw_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			GBR = {
+				faction_in_power = faction_stuart
+			}
+			NOT = {
+				has_country_flag = stuart_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_stuart
+			add_faction_influence = {
+				faction = faction_stuart
+				influence = 33
+			}
+			set_country_flag = stuart_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			GER = {
+				faction_in_power = faction_vonluxembourg
+			}
+			NOT = {
+				has_country_flag = vonluxembourg_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_vonluxembourg
+			add_faction_influence = {
+				faction = faction_vonluxembourg
+				influence = 33
+			}
+			set_country_flag = vonluxembourg_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			GER = {
+				faction_in_power = faction_vonwittlesbach
+			}
+			NOT = {
+				has_country_flag = vonwittlesbach_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_vonwittlesbach
+			add_faction_influence = {
+				faction = faction_vonwittlesbach
+				influence = 33
+			}
+			set_country_flag = vonwittlesbach_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			GER = {
+				faction_in_power = faction_hohenzollern
+			}
+			NOT = {
+				has_country_flag = hohenzollern_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_hohenzollern
+			add_faction_influence = {
+				faction = faction_hohenzollern
+				influence = 33
+			}
+			set_country_flag = hohenzollern_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			PRU = {
+				faction_in_power = faction_vonluxembourg
+			}
+			NOT = {
+				has_country_flag = vonluxembourg_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_vonluxembourg
+			add_faction_influence = {
+				faction = faction_vonluxembourg
+				influence = 33
+			}
+			set_country_flag = vonluxembourg_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			PRU = {
+				faction_in_power = faction_vonwittlesbach
+			}
+			NOT = {
+				has_country_flag = vonwittlesbach_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_vonwittlesbach
+			add_faction_influence = {
+				faction = faction_vonwittlesbach
+				influence = 33
+			}
+			set_country_flag = vonwittlesbach_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			PRU = {
+				faction_in_power = faction_hohenzollern
+			}
+			NOT = {
+				has_country_flag = hohenzollern_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_hohenzollern
+			add_faction_influence = {
+				faction = faction_hohenzollern
+				influence = 33
+			}
+			set_country_flag = hohenzollern_added_to_factions
+		}
+	}
+}
+
+factions_join_court_effect = {
+	ROOT = {
+		if = {
+			LIMIT = {
+				SPA = {
+					junior_union_with = ROOT
+				}
+				NOT = {
+					has_spanish_factions = yes
+				}
+				NOT = {
+					has_country_flag = spanish_factions_added_to_court
+				}
+			}
+			add_faction = faction_jimenez
+			add_faction = faction_ivrea
+			add_faction = faction_trastamara
+			set_country_flag = spanish_factions_added_to_court
+		}
+		else_if = {
+			LIMIT = {
+				ENG = {
+					junior_union_with = ROOT
+				}
+				NOT = {
+					has_english_factions = yes
+				}
+				NOT = {
+					has_country_flag = english_factions_added_to_court
+				}
+			}
+			ENG = {
+				PREV = {
+					add_accepted_culture = new_variable:PREV:primary_culture
+				}
+			}
+			add_faction = faction_tudor
+			add_faction = faction_york
+			add_faction = faction_lancaster
+			set_country_flag = english_factions_added_to_court
+		}
+		else_if = {
+			LIMIT = {
+				GBR = {
+					junior_union_with = ROOT
+				}
+				NOT = {
+					has_british_factions = yes
+				}
+				NOT = {
+					has_country_flag = british_factions_added_to_court
+				}
+			}
+			add_faction = faction_tudor
+			add_faction = faction_stuart
+			add_faction = faction_aberffraw
+			set_country_flag = british_factions_added_to_court
+		}
+		else_if = {
+			LIMIT = {
+				FRA = {
+					junior_union_with = ROOT
+				}
+				NOT = {
+					has_french_factions_with_karlings = yes
+				}
+				NOT = {
+					has_country_flag = french_factions_added_to_court
+				}
+			}
+			add_faction = faction_capet
+			add_faction = faction_carolingian
+			add_faction = faction_valois
+			set_country_flag = french_factions_added_to_court
+		}
+		else_if = {
+			LIMIT = {
+				FRA = {
+					junior_union_with = ROOT
+				}
+				NOT = {
+					has_french_factions_with_bourbons = yes
+				}
+				NOT = {
+					has_country_flag = french_factions_added_to_court
+				}
+			}
+			add_faction = faction_capet
+			add_faction = faction_valois
+			add_faction = faction_bourbon
+			set_country_flag = french_factions_added_to_court
+		}
+		else_if = {
+			LIMIT = {
+				PRU = {
+					junior_union_with = ROOT
+				}
+				NOT = {
+					has_german_factions = yes
+				}
+				NOT = {
+					has_country_flag = german_factions_added_to_court
+				}
+			}
+			add_faction = faction_vonluxembourg
+			add_faction = faction_vonwittlesbach
+			add_faction = faction_hohenzollern
+			set_country_flag = german_factions_added_to_court
+		}
+		else_if = {
+			LIMIT = {
+				GER = {
+					junior_union_with = ROOT
+				}
+				NOT = {
+					has_german_factions = yes
+				}
+				NOT = {
+					has_country_flag = german_factions_added_to_court
+				}
+			}
+			add_faction = faction_vonluxembourg
+			add_faction = faction_vonwittlesbach
+			add_faction = faction_hohenzollern
+			set_country_flag = german_factions_added_to_court
+		}
+	}
+}

@@ -545,7 +545,7 @@ battle_cult_spreading_effect = {
 			}
 			FROM = {
 				OR = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 					has_unlocked_cult = christianity_cult
 				}
 			}
@@ -567,7 +567,7 @@ battle_cult_spreading_effect = {
 			ROOT = {
 				OR = {
 					has_unlocked_cult = christianity_cult
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 			}
 		}

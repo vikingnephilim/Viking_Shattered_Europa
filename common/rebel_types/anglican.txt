@@ -190,7 +190,7 @@ anglican_rebels = {
 	# Country scope
 	can_negotiate_trigger = {
 		OR = {
-			is_christian_viking_mod = yes
+			religion_group = christian
 			dominant_religion = anglican
 		}
 	}
@@ -212,7 +212,7 @@ anglican_rebels = {
 		if = {
 			limit = {
 				NOT = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 			}
 			add_prestige = -50
@@ -256,7 +256,7 @@ anglican_rebels = {
 				NOT = {
 					dominant_religion = anglican
 				}
-				is_christian_viking_mod = yes
+				religion_group = christian
 				NOT = {
 					has_country_modifier = heretic_tolerance
 				}

@@ -3515,7 +3515,7 @@ province_event = {
 	desc = {
 		trigger = {
 			owner = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 		}
 		desc = institution_events.73.da		#Coffee Houses
@@ -3532,7 +3532,7 @@ province_event = {
 	#	trigger = {
 	#		owner = {
 	#			NOT = { is_muslim_viking_mod = yes }
-	#			NOT = { is_christian_viking_mod = yes }
+	#			NOT = { religion_group = christian }
 	#		}
 	#	}
 	#	desc = institution_events.73.dc #ROTW
@@ -3561,7 +3561,7 @@ province_event = {
 		}
 		OR = {
 			is_muslim_viking_mod = yes
-			is_christian_viking_mod = yes
+			religion_group = christian
 		}
 		religion_group = owner
 	}

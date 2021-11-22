@@ -226,7 +226,7 @@ country_event = {
 		religion = anglican
 		any_owned_province = {
 			is_capital = no
-			is_christian_viking_mod = yes
+			religion_group = christian
 		}
 		NOT = {
 			any_owned_province = {
@@ -242,7 +242,7 @@ country_event = {
 			random_owned_province = {
 				limit = {
 					is_capital = no
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 				save_event_target_as = prayer_book_province
 			}
@@ -260,7 +260,7 @@ country_event = {
 				limit = {
 					owned_by = ROOT
 					is_capital = no
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 				add_province_modifier = {
 					name = "prayer_book_rebels_appeased"
@@ -367,7 +367,7 @@ country_event = {
 		has_dlc = "Rule Britannia"
 		religion = anglican
 		any_owned_province = {
-			is_christian_viking_mod = yes
+			religion_group = christian
 			NOT = {
 				has_province_modifier = "religious_zeal_at_conv"
 				has_province_modifier = "prayers_to_saints_allowed"
@@ -390,7 +390,7 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 					NOT = {
 						has_province_modifier = "religious_zeal_at_conv"
 						has_province_modifier = "prayers_to_saints_allowed"
@@ -410,7 +410,7 @@ country_event = {
 			area = {
 				limit = {
 					owned_by = ROOT
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 				add_province_modifier = {
 					name = "prayers_to_saints_allowed"
@@ -427,7 +427,7 @@ country_event = {
 			area = {
 				limit = {
 					owned_by = ROOT
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 				add_province_modifier = {
 					name = "prayers_to_saints_banned"
@@ -491,7 +491,7 @@ country_event = {
 		any_owned_province = {
 			is_colony = yes
 			is_overseas = yes
-			is_christian_viking_mod = yes
+			religion_group = christian
 			OR = {
 				continent = north_america
 				continent = south_america
@@ -626,7 +626,7 @@ country_event = {
 		}
 		any_owned_province = {
 			continent = europe
-			is_christian_viking_mod = yes
+			religion_group = christian
 		}
 		NOT = {
 			any_owned_province = {
@@ -732,7 +732,7 @@ country_event = {
 		}
 		random_neighbor_country = {
 			limit = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 			add_opinion = {
 				who = ROOT
@@ -745,12 +745,12 @@ country_event = {
 		name = anglican_events.13.b
 		trigger = {
 			any_neighbor_country = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 		}
 		random_neighbor_country = {
 			limit = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 			ROOT = {
 				add_casus_belli = {
@@ -785,7 +785,7 @@ country_event = {
 		NOT = {
 			is_religion_enabled = anglican
 		}
-		is_christian_viking_mod = yes
+		religion_group = christian
 		is_defender_of_faith = no
 		capital_scope = {
 			region = british_isles_region
@@ -862,7 +862,7 @@ country_event = {
 		enable_religion = anglican
 		if = {
 			limit = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 			reverse_add_opinion = {
 				who = PAP
@@ -894,7 +894,7 @@ country_event = {
 		}
 		random_owned_province = {
 			limit = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 			change_religion = anglican
 			add_permanent_province_modifier = {
@@ -959,7 +959,7 @@ country_event = {
 		}
 		random_owned_province = {
 			limit = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 			change_religion = anglican
 			add_permanent_province_modifier = {
@@ -974,7 +974,7 @@ country_event = {
 		add_years_of_income = -1		# this is expensive
 		if = {
 			limit = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 			reverse_add_opinion = {
 				who = PAP

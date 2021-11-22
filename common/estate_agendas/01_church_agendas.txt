@@ -549,7 +549,7 @@ estate_church_root_out_heresy = {
 		num_of_cities = 10
 		OR = {
 			is_muslim_viking_mod = yes
-			is_christian_viking_mod = yes
+			religion_group = christian
 			full_idea_group = religious_ideas
 		}
 		any_neighbor_country = {
@@ -762,7 +762,7 @@ estate_church_root_out_heresy = {
 #Improve Relations with Pope
 estate_church_relations_with_pope = {
 	can_select = {
-		is_christian_viking_mod = yes
+		religion_group = christian
 		NOT = {
 			tag = PAP
 		}
@@ -807,7 +807,7 @@ estate_church_relations_with_pope = {
 				has_estate = estate_church
 			}
 			NOT = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 		}
 	}
@@ -1355,7 +1355,7 @@ estate_church_propagate_religion = {
 					is_muslim_viking_mod = yes
 				}
 				NOT = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 				NOT = {
 					religion_group = jewish_group
@@ -1389,7 +1389,7 @@ estate_church_propagate_religion = {
 						is_muslim_viking_mod = yes
 					}
 					NOT = {
-						is_christian_viking_mod = yes
+						religion_group = christian
 					}
 					NOT = {
 						religion_group = jewish_group
@@ -1414,7 +1414,7 @@ estate_church_propagate_religion = {
 			is_muslim_viking_mod = yes
 		}
 		NOT = {
-			is_christian_viking_mod = yes
+			religion_group = christian
 		}
 		NOT = {
 			religion_group = jewish_group
@@ -1428,7 +1428,7 @@ estate_church_propagate_religion = {
 					OR = {
 						religion = root
 						is_muslim_viking_mod = yes
-						is_christian_viking_mod = yes
+						religion_group = christian
 						religion_group = jewish_group
 						is_city = no
 					}

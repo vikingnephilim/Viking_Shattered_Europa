@@ -85,27 +85,15 @@ is_muslim_viking_mod = {
 	}
 }
 
-is_christian_viking_mod = {
-	OR = {
-		religion_group = western_christian
-		religion_group = central_christian
-		religion_group = eastern_christian
-		religion_group = orthodox_christian
-	}
-}
-
 is_abrahamic_viking_mod = {
 	religion_group = sunni_muslim
 	religion_group = shia_muslim
 	religion_group = quranist_muslim
-	religion_group = western_christian
-	religion_group = central_christian
-	religion_group = eastern_christian
-	religion_group = orthodox_christian
+	religion_group = christian
 	religion_group = jewish_group
 }
 
-fervor_religions ={
+fervor_religions = {
 	OR = {
 		religion = henrician
 		religion = insular
@@ -1714,5 +1702,321 @@ is_culture_to_maghrebi_south_african = {
 		$cond$ = tunisian
 		$cond$ = algerian
 		$cond$ = berber
+	}
+}
+
+all_religions_can_marry = {
+	religion_group = christian
+	religion_group = sunni_muslim
+	religion_group = shia_muslim
+	religion_group = quranist_muslim
+	religion_group = eastern
+	religion_group = dharmic
+	religion_group = north_american_pagan
+	religion_group = central_american_pagan
+	religion_group = south_american_pagan
+	religion_group = european_pagan
+	religion_group = african_pagan
+	religion_group = asian_pagan
+	religion_group = ancient_pagan
+	religion_group = jewish_group
+	religion_group = zoroastrian_group
+}
+
+factions_not_doing_well = {
+	OR = {
+		lancaster_faction_not_doing_well = yes
+		york_faction_not_doing_well = yes
+		tudor_faction_not_doing_well = yes
+		jimenez_faction_not_doing_well = yes
+		trastamara_faction_not_doing_well = yes
+		ivrea_faction_not_doing_well = yes
+		capet_faction_not_doing_well = yes
+		valois_faction_not_doing_well = yes
+		carolingian_faction_not_doing_well = yes
+		stuart_faction_not_doing_well = yes
+		aberffraw_faction_not_doing_well = yes
+		vonwittelsbach_faction_not_doing_well = yes
+		vonluxembourg_faction_not_doing_well = yes
+		hohenzollern_faction_not_doing_well = yes
+	}
+}
+
+lancaster_faction_not_doing_well = {
+	faction_in_power = faction_lancaster
+	NOT = {
+		faction_influence = {
+			faction = faction_lancaster
+			influence = 66
+		}
+	}
+	any_country = {
+		marriage_with = ROOT
+		has_factions = yes
+		foreign_faction_in_power = yes
+	}
+}
+
+york_faction_not_doing_well = {
+	faction_in_power = faction_york
+	NOT = {
+		faction_influence = {
+			faction = faction_york
+			influence = 66
+		}
+	}
+	any_country = {
+		marriage_with = ROOT
+		has_factions = yes
+		foreign_faction_in_power = yes
+	}
+}
+
+tudor_faction_not_doing_well = {
+	faction_in_power = faction_tudor
+	NOT = {
+		faction_influence = {
+			faction = faction_tudor
+			influence = 66
+		}
+	}
+	any_country = {
+		marriage_with = ROOT
+		has_factions = yes
+		foreign_faction_in_power = yes
+	}
+}
+
+jimenez_faction_not_doing_well = {
+	faction_in_power = faction_jimenez
+	NOT = {
+		faction_influence = {
+			faction = faction_jimenez
+			influence = 66
+		}
+	}
+	any_country = {
+		marriage_with = ROOT
+		has_factions = yes
+		foreign_faction_in_power = yes
+	}
+}
+
+trastamara_faction_not_doing_well = {
+	faction_in_power = faction_trastamara
+	NOT = {
+		faction_influence = {
+			faction = faction_trastamara
+			influence = 66
+		}
+	}
+	any_country = {
+		marriage_with = ROOT
+		has_factions = yes
+		foreign_faction_in_power = yes
+	}
+}
+
+ivrea_faction_not_doing_well = {
+	faction_in_power = faction_ivrea
+	NOT = {
+		faction_influence = {
+			faction = faction_ivrea
+			influence = 66
+		}
+	}
+	any_country = {
+		marriage_with = ROOT
+		has_factions = yes
+		foreign_faction_in_power = yes
+	}
+}
+
+capet_faction_not_doing_well = {
+	faction_in_power = faction_capet
+	NOT = {
+		faction_influence = {
+			faction = faction_capet
+			influence = 66
+		}
+	}
+	any_country = {
+		marriage_with = ROOT
+		has_factions = yes
+		foreign_faction_in_power = yes
+	}
+}
+
+valois_faction_not_doing_well = {
+	faction_in_power = faction_valois
+	NOT = {
+		faction_influence = {
+			faction = faction_valois
+			influence = 66
+		}
+	}
+	any_country = {
+		marriage_with = ROOT
+		has_factions = yes
+		foreign_faction_in_power = yes
+	}
+}
+
+carolingian_faction_not_doing_well = {
+	faction_in_power = faction_carolingian
+	NOT = {
+		faction_influence = {
+			faction = faction_carolingian
+			influence = 66
+		}
+	}
+	any_country = {
+		marriage_with = ROOT
+		has_factions = yes
+		foreign_faction_in_power = yes
+	}
+}
+
+stuart_faction_not_doing_well = {
+	faction_in_power = faction_stuart
+	NOT = {
+		faction_influence = {
+			faction = faction_stuart
+			influence = 66
+		}
+	}
+	any_country = {
+		marriage_with = ROOT
+		has_factions = yes
+		foreign_faction_in_power = yes
+	}
+}
+
+aberffraw_faction_not_doing_well = {
+	faction_in_power = faction_aberffraw
+	NOT = {
+		faction_influence = {
+			faction = faction_aberffraw
+			influence = 66
+		}
+	}
+	any_country = {
+		marriage_with = ROOT
+		has_factions = yes
+		foreign_faction_in_power = yes
+	}
+}
+
+hohenzollern_faction_not_doing_well = {
+	faction_in_power = faction_hohenzollern
+	NOT = {
+		faction_influence = {
+			faction = faction_hohenzollern
+			influence = 66
+		}
+	}
+	any_country = {
+		marriage_with = ROOT
+		has_factions = yes
+		foreign_faction_in_power = yes
+	}
+}
+
+vonluxembourg_faction_not_doing_well = {
+	faction_in_power = faction_vonluxembourg
+	NOT = {
+		faction_influence = {
+			faction = faction_vonluxembourg
+			influence = 66
+		}
+	}
+	any_country = {
+		marriage_with = ROOT
+		has_factions = yes
+		foreign_faction_in_power = yes
+	}
+}
+vonwittelsbach_faction_not_doing_well = {
+	faction_in_power = faction_vonwittlesbach
+	NOT = {
+		faction_influence = {
+			faction = faction_vonwittlesbach
+			influence = 66
+		}
+	}
+	any_country = {
+		marriage_with = ROOT
+		has_factions = yes
+		foreign_faction_in_power = yes
+	}
+}
+
+foreign_faction_in_power = {
+	OR = {
+		faction_in_power = faction_york
+		faction_in_power = faction_lancaster
+		faction_in_power = faction_tudor
+		faction_in_power = faction_capet
+		faction_in_power = faction_carolingian
+		faction_in_power = faction_valois
+		faction_in_power = faction_trastamara
+		faction_in_power = faction_jimenez
+		faction_in_power = faction_ivrea
+	}
+}
+
+has_spanish_factions = {
+	tag = SPA
+	AND = {
+		has_faction = faction_ivrea
+		has_faction = faction_jimenez
+		has_faction = faction_trastamara
+	}
+}
+
+has_french_factions_with_karlings = {
+	tag = FRA
+	AND = {
+		has_faction = faction_capet
+		has_faction = faction_valois
+		has_faction = faction_carolingian
+	}
+}
+has_french_factions_with_bourbons = {
+	tag = FRA
+	AND = {
+		has_faction = faction_capet
+		has_faction = faction_valois
+		has_faction = faction_bourbon
+	}
+}
+
+has_german_factions = {
+	OR = {
+		tag = GER
+		tag = PRU
+	}
+	AND = {
+		has_faction = faction_vonwittlesbach
+		has_faction = faction_vonluxembourg
+		has_faction = faction_hohenzollern
+	}
+}
+
+has_english_factions = {
+	tag = ENG
+	AND = {
+		has_faction = faction_tudor
+		has_faction = faction_york
+		has_faction = faction_lancaster
+	}
+}
+
+has_british_factions = {
+	tag = GBR
+	AND = {
+		has_faction = faction_tudor
+		has_faction = faction_aberffraw
+		has_faction = faction_stuart
 	}
 }

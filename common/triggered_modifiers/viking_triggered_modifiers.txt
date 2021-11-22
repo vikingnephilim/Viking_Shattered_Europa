@@ -194,6 +194,382 @@ fylkir_triggered_modifier = {
 	}
 	prestige = 1
 	missionaries = 1
-	global_missionary_strength = 0.02 #2% strength
+	global_missionary_strength = 0.02	#2% strength
 	tolerance_own = 1
+}
+
+fertility_30 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		ruler_age = 30
+		hidden_trigger = {
+			NOT = {
+				ruler_age = 35
+			}
+			has_regency = no
+			has_consort_regency = no
+			has_government_attribute = heir
+			NOT = {
+				has_reform = elective_monarchy
+			}
+		}
+	}
+	heir_chance = -0.3
+}
+
+fertility_35 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		ruler_age = 35
+		hidden_trigger = {
+			NOT = {
+				ruler_age = 40
+			}
+			has_regency = no
+			has_consort_regency = no
+			has_government_attribute = heir
+			NOT = {
+				has_reform = elective_monarchy
+			}
+		}
+	}
+	heir_chance = -0.4
+}
+
+fertility_40 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		ruler_age = 40
+		hidden_trigger = {
+			NOT = {
+				ruler_age = 45
+			}
+			has_regency = no
+			has_consort_regency = no
+			has_government_attribute = heir
+			NOT = {
+				has_reform = elective_monarchy
+			}
+		}
+	}
+	heir_chance = -0.5
+}
+
+fertility_45 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		ruler_age = 45
+		hidden_trigger = {
+			is_female = no
+			has_regency = no
+			has_consort_regency = no
+			has_government_attribute = heir
+			NOT = {
+				has_reform = elective_monarchy
+			}
+		}
+	}
+	heir_chance = -0.6
+}
+
+female_ruler_45 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		is_female = yes
+		ruler_age = 45
+		hidden_trigger = {
+			has_regency = no
+			has_consort_regency = no
+			has_government_attribute = heir
+			NOT = {
+				has_reform = elective_monarchy
+			}
+		}
+	}
+	heir_chance = -10
+}
+
+fertility_50 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		ruler_age = 50
+		hidden_trigger = {
+			NOT = {
+				ruler_age = 55
+			}
+			is_female = no
+			has_regency = no
+			has_consort_regency = no
+			has_government_attribute = heir
+			NOT = {
+				has_reform = elective_monarchy
+			}
+		}
+	}
+	heir_chance = -0.7
+}
+
+fertility_55 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		ruler_age = 55
+		hidden_trigger = {
+			NOT = {
+				ruler_age = 60
+			}
+			is_female = no
+			has_regency = no
+			has_consort_regency = no
+			has_government_attribute = heir
+			NOT = {
+				has_reform = elective_monarchy
+			}
+		}
+	}
+	heir_chance = -0.8
+}
+
+fertility_60 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		ruler_age = 60
+		hidden_trigger = {
+			NOT = {
+				ruler_age = 65
+			}
+			is_female = no
+			has_regency = no
+			has_consort_regency = no
+			has_government_attribute = heir
+			NOT = {
+				has_reform = elective_monarchy
+			}
+		}
+	}
+	heir_chance = -0.9
+}
+
+fertility_65 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		ruler_age = 65
+		hidden_trigger = {
+			is_female = no
+			has_regency = no
+			has_consort_regency = no
+			has_government_attribute = heir
+			NOT = {
+				has_reform = elective_monarchy
+			}
+		}
+	}
+	heir_chance = -1
+}
+
+fertility_70 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		ruler_age = 70
+		hidden_trigger = {
+			is_female = no
+			has_regency = no
+			has_consort_regency = no
+			has_government_attribute = heir
+			NOT = {
+				has_reform = elective_monarchy
+			}
+		}
+	}
+	heir_chance = -1.1
+}
+
+fertility_75 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		ruler_age = 75
+		hidden_trigger = {
+			is_female = no
+			has_regency = no
+			has_consort_regency = no
+			has_government_attribute = heir
+			NOT = {
+				has_reform = elective_monarchy
+			}
+		}
+	}
+	heir_chance = -1.2
+}
+
+fertility_80 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		ruler_age = 80
+		hidden_trigger = {
+			is_female = no
+			has_regency = no
+			has_consort_regency = no
+			has_government_attribute = heir
+			NOT = {
+				has_reform = elective_monarchy
+			}
+		}
+	}
+	heir_chance = -1.3
+}
+
+fertility_85 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		ruler_age = 85
+		hidden_trigger = {
+			is_female = no
+			has_regency = no
+			has_consort_regency = no
+			has_government_attribute = heir
+			NOT = {
+				has_reform = elective_monarchy
+			}
+		}
+	}
+	heir_chance = -1.5
+}
+
+fertility_90 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		ruler_age = 90
+		hidden_trigger = {
+			is_female = no
+			has_regency = no
+			has_consort_regency = no
+			has_government_attribute = heir
+			NOT = {
+				has_reform = elective_monarchy
+			}
+		}
+	}
+	heir_chance = -1.5
+}
+
+fertility_91 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		ruler_age = 91
+		hidden_trigger = {
+			is_female = no
+			has_regency = no
+			has_consort_regency = no
+			has_government_attribute = heir
+			NOT = {
+				has_reform = elective_monarchy
+			}
+		}
+	}
+	heir_chance = -1.6
+}
+
+fertility_92 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		ruler_age = 92
+		hidden_trigger = {
+			is_female = no
+			has_regency = no
+			has_consort_regency = no
+			has_government_attribute = heir
+			NOT = {
+				has_reform = elective_monarchy
+			}
+		}
+	}
+	heir_chance = -1.7
+}
+
+fertility_93 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		ruler_age = 94
+		hidden_trigger = {
+			is_female = no
+			has_regency = no
+			has_consort_regency = no
+			has_government_attribute = heir
+			NOT = {
+				has_reform = elective_monarchy
+			}
+		}
+	}
+	heir_chance = -1.8
+}
+
+fertility_94 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		ruler_age = 94
+		hidden_trigger = {
+			is_female = no
+			has_regency = no
+			has_consort_regency = no
+			has_government_attribute = heir
+			NOT = {
+				has_reform = elective_monarchy
+			}
+		}
+	}
+	heir_chance = -1.9
+}
+
+fertility_95 = {
+	potential = {
+		always = yes
+	}
+	trigger = {
+		ruler_age = 95
+		hidden_trigger = {
+			is_female = no
+			has_regency = no
+			has_consort_regency = no
+			has_government_attribute = heir
+			NOT = {
+				has_reform = elective_monarchy
+			}
+		}
+	}
+	heir_chance = -2
 }

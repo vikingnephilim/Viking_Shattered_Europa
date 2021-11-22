@@ -254,11 +254,11 @@ country_event = {
 	trigger = {
 		has_dlc = "Third Rome"
 		has_reform = tsardom
-		is_christian_viking_mod = yes
+		religion_group = christian
 		any_owned_province = {
 			has_terrain = steppe
 			NOT = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 			NOT = {
 				has_province_modifier = tolerated_tatar_communities
@@ -281,7 +281,7 @@ country_event = {
 				limit = {
 					has_terrain = steppe
 					NOT = {
-						is_christian_viking_mod = yes
+						religion_group = christian
 					}
 				}
 				save_event_target_as = steppe_province
@@ -399,7 +399,7 @@ country_event = {
 	trigger = {
 		has_dlc = "Third Rome"
 		has_reform = tsardom
-		is_christian_viking_mod = yes
+		religion_group = christian
 		any_owned_province = {
 			has_influencing_fort = no
 			NOT = {
@@ -904,12 +904,12 @@ country_event = {
 	trigger = {
 		has_dlc = "Third Rome"
 		has_reform = tsardom
-		is_christian_viking_mod = yes
+		religion_group = christian
 		any_owned_province = {
 			NOT = {
 				has_province_modifier = fugitive_christian_converts
 			}
-			is_christian_viking_mod = yes
+			religion_group = christian
 			NOT = {
 				culture_group = owner
 			}
@@ -918,7 +918,7 @@ country_event = {
 					owned_by = ROOT
 				}
 				NOT = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 			}
 		}
@@ -930,7 +930,7 @@ country_event = {
 					NOT = {
 						has_province_modifier = fugitive_christian_converts
 					}
-					is_christian_viking_mod = yes
+					religion_group = christian
 					NOT = {
 						culture_group = owner
 					}
@@ -939,7 +939,7 @@ country_event = {
 							owned_by = ROOT
 						}
 						NOT = {
-							is_christian_viking_mod = yes
+							religion_group = christian
 						}
 					}
 				}

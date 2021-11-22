@@ -639,7 +639,7 @@ province_event = {
 		}
 		owner = {
 			is_at_war = no
-			is_christian_viking_mod = yes
+			religion_group = christian
 			NOT = {
 				has_country_modifier = forbade_witch_hunts
 			}
@@ -1366,7 +1366,7 @@ country_event = {
 		any_owned_province = {
 			is_reformation_center = yes
 		}
-		is_christian_viking_mod = yes
+		religion_group = christian
 		any_neighbor_country = {
 			NOT = {
 				has_opinion_modifier = {
@@ -2120,7 +2120,7 @@ province_event = {
 			NOT = {
 				religion = catholic
 			}
-			is_christian_viking_mod = yes
+			religion_group = christian
 		}
 	}
 	is_mtth_scaled_to_size = 1
@@ -2182,7 +2182,7 @@ province_event = {
 		has_cardinal = yes
 		any_neighbor_province = {
 			NOT = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 			owned_by = root
 		}

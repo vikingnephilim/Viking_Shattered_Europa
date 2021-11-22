@@ -401,7 +401,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 10
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
@@ -927,7 +926,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 10
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
@@ -1262,14 +1260,6 @@ country_decisions = {
 					change_culture = korean
 				}
 			}
-			hidden_effect = {
-				every_owned_province = {
-					limit = {
-						culture_group = korean_g
-					}
-					change_culture = korean
-				}
-			}
 			korea_region = {
 				limit = {
 					NOT = {
@@ -1282,13 +1272,11 @@ country_decisions = {
 			if = {
 				limit = {
 					has_custom_ideas = no
-					NOT = {
-						has_idea_group = KOR_ideas
-					}
 				}
 				country_event = {
 					id = ideagroups.1
 				}
+				swap_non_generic_missions = yes
 				#Swap Ideas
 			}
 			set_country_flag = formed_korea_flag
@@ -1296,6 +1284,8 @@ country_decisions = {
 				name = korean_unification
 				duration = -1
 			}
+			set_ruler_culture = korean
+			set_heir_culture = korean
 		}
 	}
 	cherokee_nation = {

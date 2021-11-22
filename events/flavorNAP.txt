@@ -445,7 +445,7 @@ country_event = {
 		}
 		overlord = {
 			any_rival_country = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 		}
 		owns_core_province = 121
@@ -495,12 +495,12 @@ country_event = {
 				else_if = {
 					limit = {
 						any_rival_country = {
-							is_christian_viking_mod = yes
+							religion_group = christian
 						}
 					}
 					random_rival_country = {
 						limit = {
-							is_christian_viking_mod = yes
+							religion_group = christian
 						}
 						save_event_target_as = rival_of_overlord
 					}

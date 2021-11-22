@@ -160,7 +160,7 @@ coptic_rebels = {
 	# Country scope
 	can_negotiate_trigger = {
 		OR = {
-			is_christian_viking_mod = yes
+			religion_group = christian
 			dominant_religion = coptic
 		}
 	}
@@ -181,7 +181,7 @@ coptic_rebels = {
 		}
 		if = {
 			limit = {
-				NOT = { is_christian_viking_mod = yes }
+				NOT = { religion_group = christian }
 			}
 			add_prestige = -50
 			every_owned_province = {
@@ -220,7 +220,7 @@ coptic_rebels = {
 				NOT = { religion = coptic }
 				NOT = { dominant_religion = coptic }
 				NOT = { tag = PAP }
-				is_christian_viking_mod = yes
+				religion_group = christian
 				NOT = { has_country_modifier = heretic_tolerance }
 			}
 			add_country_modifier = {

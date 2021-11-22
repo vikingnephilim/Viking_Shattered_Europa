@@ -4,84 +4,100 @@ korea_nomad_group = {
 	ai = yes
 	potential = {
 		tag = KOR
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-
 	kor_conquer_changbai = {
 		icon = mission_unite_home_region
-		required_missions = { }
+		required_missions = {
+		}
 		position = 1
-		
 		ai_weight = {
 			factor = 0.75
 		}
 		ai_priority = {
 			factor = 0.75
 		}
-		
 		provinces_to_highlight = {
 			province_id = 4201
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
-		
 		trigger = {
 			4201 = {
 				owned_by = ROOT
 				is_core = ROOT
 			}
 		}
-		
 		effect = {
 			add_prestige = 15
 			add_legitimacy = 10
-		
 			ningguta_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			jilin_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			liaoning_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			furdan_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-	
 	kor_seize_southern_manchuria = {
 		icon = mission_manchu_warrior
-		required_missions = { kor_conquer_changbai }
+		required_missions = {
+			kor_conquer_changbai
+		}
 		position = 3
-		
 		ai_weight = {
 			factor = 0.5
 		}
 		ai_priority = {
 			factor = 0.5
 		}
-		
 		provinces_to_highlight = {
 			ROOT = {
 				NOT = {
@@ -102,9 +118,10 @@ korea_nomad_group = {
 				area = liaoning_area
 				area = furdan_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = {
+				country_or_non_sovereign_subject_holds = root
+			}
 		}
-		
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
@@ -116,40 +133,50 @@ korea_nomad_group = {
 				value = 8
 			}
 		}
-		
 		effect = {
 			add_prestige = 15
 			add_adm_power = 50
-			
 			hebei_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = root
 			}
 			south_hebei_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = root
 			}
 			shandong_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = root
 			}
 		}
 	}
-	
 	goguryeo_restoration = {
 		icon = mission_conquer_50_development
-		required_missions = { kor_seize_southern_manchuria }
+		required_missions = {
+			kor_seize_southern_manchuria
+		}
 		position = 4
-		
 		provinces_to_highlight = {
 			OR = {
 				area = ningguta_area
@@ -157,12 +184,16 @@ korea_nomad_group = {
 				area = liaoning_area
 			}
 			OR = {
-				NOT = { owned_by = root }
-				NOT = { is_core = root }
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					is_core = root
+				}
 			}
 		}
-		
-		trigger = { #not including Furdan is deliberate as it isn't on the maps of historical Goguryeo
+		trigger = {
+			#not including Furdan is deliberate as it isn't on the maps of historical Goguryeo
 			ningguta_area = {
 				type = all
 				owned_by = root
@@ -179,7 +210,6 @@ korea_nomad_group = {
 				is_core = root
 			}
 		}
-		
 		effect = {
 			add_prestige = 25
 			korea_region = {
@@ -194,7 +224,9 @@ korea_nomad_group = {
 			manchuria_region = {
 				limit = {
 					owned_by = ROOT
-					NOT = { culture = korean }
+					NOT = {
+						culture = korean
+					}
 				}
 				add_province_modifier = {
 					name = "kor_manchurian_korea"
@@ -203,19 +235,23 @@ korea_nomad_group = {
 			}
 			manchuria_region = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = root
 			}
 		}
 	}
-
 	kor_end_manchuria = {
 		icon = mission_steppe_warriors
-		required_missions = { goguryeo_restoration }
+		required_missions = {
+			goguryeo_restoration
+		}
 		position = 5
-		
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -292,11 +328,9 @@ korea_nomad_group = {
 				}
 			}
 		}
-		
 		trigger = {
 			custom_trigger_tooltip = {
-				tooltip = end_manchuria_tooltip #hold a province in every Manchurian area
-
+				tooltip = end_manchuria_tooltip				#hold a province in every Manchurian area
 				central_jilin_area = {
 					country_or_non_sovereign_subject_holds = root
 				}
@@ -326,13 +360,14 @@ korea_nomad_group = {
 				}
 			}
 		}
-		
 		effect = {
 			add_adm_power = 100
 			custom_tooltip = kor_end_manchu.tooltip
 			hidden_effect = {
 				every_owned_province = {
-					limit = { region = manchuria_region }
+					limit = {
+						region = manchuria_region
+					}
 					add_province_modifier = {
 						name = "kor_conquest_manchuria"
 						duration = 7300
@@ -349,21 +384,23 @@ kor_military_missions = {
 	ai = yes
 	potential = {
 		tag = KOR
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
-	
 	#duplicate of generic mission
 	kor_build_army_mission = {
 		icon = mission_build_up_to_force_limit
 		position = 1
-		required_missions = {  }
+		required_missions = {
+		}
 		trigger = {
 			army_size_percentage = 1
 		}
 		effect = {
 			add_country_modifier = {
 				name = "thriving_arms_industry"
-				duration = 9125 #25 years
+				duration = 9125				#25 years
 			}
 		}
 	}
@@ -375,14 +412,17 @@ kor_military_missions_2 = {
 	ai = yes
 	potential = {
 		tag = KOR
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-		
 	kor_harness_seokleon = {
 		icon = mission_non-western_soldiers
 		position = 2
-		required_missions = { kor_build_army_mission }
+		required_missions = {
+			kor_build_army_mission
+		}
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = have_at_least_7point5_more_discipline
@@ -393,7 +433,9 @@ kor_military_missions_2 = {
 			}
 		}
 		effect = {
-			capital_scope = { add_base_manpower = 1 }
+			capital_scope = {
+				add_base_manpower = 1
+			}
 			create_general = {
 				tradition = 80
 			}
@@ -402,7 +444,9 @@ kor_military_missions_2 = {
 	kor_expand_hwacha = {
 		icon = mission_asian_cannon
 		position = 3
-		required_missions = { kor_harness_seokleon }
+		required_missions = {
+			kor_harness_seokleon
+		}
 		trigger = {
 			num_of_artillery = 3
 			artillery_fraction = 0.3
@@ -430,15 +474,17 @@ korea_conquer_china_group = {
 	ai = yes
 	potential = {
 		tag = KOR
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-
 	kor_control_yellow_sea = {
 		icon = mission_galleys_in_port
-		required_missions = { kor_seize_southern_manchuria }
+		required_missions = {
+			kor_seize_southern_manchuria
+		}
 		position = 4
-		
 		provinces_to_highlight = {
 			ROOT = {
 				NOT = {
@@ -457,9 +503,10 @@ korea_conquer_china_group = {
 				area = south_hebei_area
 				area = shandong_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = {
+				country_or_non_sovereign_subject_holds = root
+			}
 		}
-		
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				OR = {
@@ -470,14 +517,13 @@ korea_conquer_china_group = {
 				value = 8
 			}
 		}
-		
 		effect = {
 			1376 = {
 				add_trade_modifier = {
 					who = root
 					duration = 7300
 					power = 30
-					key = kor_yellow_sea					
+					key = kor_yellow_sea
 				}
 			}
 			4233 = {
@@ -485,57 +531,80 @@ korea_conquer_china_group = {
 					who = root
 					duration = 7300
 					power = 30
-					key = kor_yellow_sea					
+					key = kor_yellow_sea
 				}
 			}
-			
 			north_china_region = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = root
 			}
 			south_jiangsu_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = root
 			}
 			south_anhui_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = root
 			}
 			zhejiang_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = root
 			}
 		}
 	}
-
 	kor_seize_celestial_throne = {
 		icon = mission_kowtow
-		required_missions = { kor_control_yellow_sea }
+		required_missions = {
+			kor_control_yellow_sea
+		}
 		position = 5
-		
 		provinces_to_highlight = {
 			OR = {
 				AND = {
 					province_id = 1816
-					NOT = { owned_by = root }
-					NOT = { is_core = root }
+					NOT = {
+						owned_by = root
+					}
+					NOT = {
+						is_core = root
+					}
 				}
 				AND = {
 					province_id = 1821
-					NOT = { owned_by = root }
-					NOT = { is_core = root }
+					NOT = {
+						owned_by = root
+					}
+					NOT = {
+						is_core = root
+					}
 				}
 				AND = {
 					root = {
@@ -550,7 +619,9 @@ korea_conquer_china_group = {
 				}
 				AND = {
 					NOT = {
-						root = { is_emperor_of_china = yes }
+						root = {
+							is_emperor_of_china = yes
+						}
 					}
 					owner = {
 						is_emperor_of_china = yes
@@ -559,7 +630,6 @@ korea_conquer_china_group = {
 				}
 			}
 		}
-		
 		trigger = {
 			if = {
 				limit = {
@@ -584,17 +654,19 @@ korea_conquer_china_group = {
 				value = 30
 			}
 		}
-		
 		effect = {
 			add_country_modifier = {
 				name = kor_emperor_of_china
 				duration = 7300
 			}
-
 			china_superregion = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = root
 			}
@@ -608,13 +680,15 @@ kor_diplo_missions = {
 	ai = yes
 	potential = {
 		tag = KOR
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	kor_befriend_ming = {
 		icon = mission_noble_council
-		required_missions = {  }
+		required_missions = {
+		}
 		trigger = {
 			if = {
 				limit = {
@@ -633,7 +707,9 @@ kor_diplo_missions = {
 									tooltip = rivalled_or_rival_of
 									OR = {
 										is_rival = root
-										root = { is_rival = prev }
+										root = {
+											is_rival = prev
+										}
 									}
 								}
 								custom_trigger_tooltip = {
@@ -679,7 +755,9 @@ kor_diplo_missions = {
 									tooltip = rivalled_or_rival_of
 									OR = {
 										is_rival = root
-										root = { is_rival = prev }
+										root = {
+											is_rival = prev
+										}
 									}
 								}
 								custom_trigger_tooltip = {
@@ -717,22 +795,23 @@ kor_diplo_missions = {
 	}
 }
 
-
 kor_fortify_missions = {
 	slot = 3
 	generic = no
 	ai = yes
 	potential = {
 		tag = KOR
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	kor_fortify_korea = {
 		icon = mission_great_wall
 		position = 2
-		required_missions = { kor_build_army_mission }
-
+		required_missions = {
+			kor_build_army_mission
+		}
 		provinces_to_highlight = {
 			OR = {
 				province_id = 2744
@@ -741,7 +820,6 @@ kor_fortify_missions = {
 				province_id = 2742
 			}
 		}
-		
 		trigger = {
 			any_owned_province = {
 				OR = {
@@ -805,8 +883,9 @@ kor_fortify_missions = {
 	kor_fortify_korea_2 = {
 		icon = mission_conquer_50_development
 		position = 3
-		required_missions = { kor_fortify_korea }
-		
+		required_missions = {
+			kor_fortify_korea
+		}
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 5
@@ -828,15 +907,16 @@ kor_righteous_army_tree = {
 	ai = yes
 	potential = {
 		tag = KOR
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	kor_righteous_army = {
 		icon = mission_assemble_an_army
 		position = 1
-		required_missions = {  }
-
+		required_missions = {
+		}
 		trigger = {
 			any_country = {
 				war_with = root
@@ -858,15 +938,16 @@ kor_japan_tree = {
 	ai = yes
 	potential = {
 		tag = KOR
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	kor_japanese_piracy = {
 		icon = mission_establish_high_seas_navy
 		position = 2
-		required_missions = {  }
-
+		required_missions = {
+		}
 		trigger = {
 			num_of_heavy_ship = 5
 			num_of_galley = 30
@@ -875,12 +956,15 @@ kor_japan_tree = {
 			create_admiral = {
 				tradition = 60
 			}
-
 			1018 = {
 				if = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = root
 				}
@@ -888,8 +972,12 @@ kor_japan_tree = {
 			4183 = {
 				if = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = root
 				}
@@ -897,8 +985,12 @@ kor_japan_tree = {
 			1017 = {
 				if = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = root
 				}
@@ -906,8 +998,12 @@ kor_japan_tree = {
 			1818 = {
 				if = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = root
 				}
@@ -915,8 +1011,12 @@ kor_japan_tree = {
 			4182 = {
 				if = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = root
 				}
@@ -924,8 +1024,12 @@ kor_japan_tree = {
 			4181 = {
 				if = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = root
 				}
@@ -933,8 +1037,12 @@ kor_japan_tree = {
 			1012 = {
 				if = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = root
 				}
@@ -942,20 +1050,24 @@ kor_japan_tree = {
 			4651 = {
 				if = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = root
 				}
 			}
 		}
 	}
-
 	kor_foothold_in_japan = {
 		icon = mission_invade_island
 		position = 3
-		required_missions = { kor_japanese_piracy }
-		
+		required_missions = {
+			kor_japanese_piracy
+		}
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1018
@@ -966,10 +1078,12 @@ kor_japan_tree = {
 				province_id = 4181
 				province_id = 1012
 			}
-			NOT = { owned_by = root }
+			NOT = {
+				owned_by = root
+			}
 		}
-
-		trigger = { #Note: not including 4651 is deliberate as that small island is hardly a "foothold" in Japan.
+		trigger = {
+			#Note: not including 4651 is deliberate as that small island is hardly a "foothold" in Japan.
 			num_of_owned_provinces_with = {
 				value = 2
 				OR = {
@@ -985,63 +1099,85 @@ kor_japan_tree = {
 		}
 		effect = {
 			add_dip_power = 50
-			
 			shikoku_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = root
 			}
 			saigoku_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = root
 			}
 			sanindo_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = root
 			}
 			northern_kyushu = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = root
 			}
 			kyushu_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = root
 			}
 			kinai_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = root
 			}
 		}
 	}
-	
 	kor_defeat_shogun = {
 		icon = mission_japanese_samurai
 		position = 5
-		required_missions = { kor_foothold_in_japan }
-		
+		required_missions = {
+			kor_foothold_in_japan
+		}
 		provinces_to_highlight = {
 			province_id = 1020
 		}
-
 		trigger = {
-			owns = 1020 #Kyoto
+			owns = 1020			#Kyoto
 		}
 		effect = {
 			if = {
@@ -1051,13 +1187,17 @@ kor_japan_tree = {
 				}
 				add_harmonization_progress = 15
 			}
-
-			country_event = { id = flavor_kor.7 }
-
+			country_event = {
+				id = flavor_kor.7
+			}
 			japan_region = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 					is_city = yes
 				}
 				add_permanent_claim = root
@@ -1072,15 +1212,17 @@ kor_turtle_ships_tree = {
 	ai = yes
 	potential = {
 		tag = KOR
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	kor_turtle_ships = {
 		icon = mission_junk_boat
 		position = 3
-		required_missions = { kor_japanese_piracy }
-
+		required_missions = {
+			kor_japanese_piracy
+		}
 		trigger = {
 			has_global_modifier_value = {
 				which = ship_durability
@@ -1096,35 +1238,38 @@ kor_turtle_ships_tree = {
 	}
 }
 
-
 kor_settle_land = {
 	slot = 5
 	generic = no
 	ai = yes
 	potential = {
 		tag = KOR
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	kor_settle_north = {
 		icon = mission_rice_field
 		position = 4
-		required_missions = {  }
-		
+		required_missions = {
+		}
 		provinces_to_highlight = {
 			OR = {
 				AND = {
 					province_id = 2742
-					NOT = { culture = korean }
+					NOT = {
+						culture = korean
+					}
 				}
 				AND = {
 					province_id = 2743
-					NOT = { culture = korean }
+					NOT = {
+						culture = korean
+					}
 				}
 			}
 		}
-
 		trigger = {
 			2742 = {
 				culture = korean
@@ -1141,13 +1286,15 @@ kor_settle_land = {
 	kor_settle_general = {
 		icon = mission_colonial
 		position = 5
-		required_missions = { kor_settle_north }
-		
+		required_missions = {
+			kor_settle_north
+		}
 		provinces_to_highlight = {
 			owned_by = root
-			NOT = { culture = korean }
+			NOT = {
+				culture = korean
+			}
 		}
-
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 30
@@ -1161,7 +1308,6 @@ kor_settle_land = {
 	}
 }
 
-
 kor_harmony_with_japan = {
 	slot = 5
 	generic = no
@@ -1171,30 +1317,39 @@ kor_harmony_with_japan = {
 	}
 	potential = {
 		tag = KOR
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		has_dlc = "Mandate of Heaven"
 	}
 	has_country_shield = yes
-	
 	kor_harmonise_shinto = {
 		icon = mission_hands_praying
 		position = 6
-		required_missions = { kor_defeat_shogun }
-
+		required_missions = {
+			kor_defeat_shogun
+		}
 		provinces_to_highlight = {
 			region = japan_region
-			ROOT = { NOT = { 
-				is_chinese_religion_viking_mod = YES } }
+			ROOT = {
+				NOT = {
+					is_chinese_religion_viking_mod = YES
+				}
+			}
 			is_city = yes
-			NOT = { religion = root }
+			NOT = {
+				religion = root
+			}
 		}
-
 		trigger = {
 			if = {
 				limit = {
 					is_chinese_religion_viking_mod = YES
 				}
-				has_harmonized_with = shinto
+				OR = {
+					has_harmonized_with = shinto
+					secondary_religion = shinto
+				}
 			}
 			else = {
 				japan_region = {
@@ -1218,23 +1373,23 @@ korea_economic_social_political_path_0 = {
 	ai = yes
 	potential = {
 		tag = KOR
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
-	
 	kor_higher_income = {
 		icon = mission_high_income
-		required_missions = {  }
+		required_missions = {
+		}
 		position = 4
-		
 		trigger = {
 			treasury = 250
 			share_of_starting_income = 1.5
 		}
-		
 		effect = {
 			add_country_modifier = {
 				name = "kor_growing_economy"
-				duration = 9125 #25 years
+				duration = 9125				#25 years
 			}
 		}
 	}
@@ -1246,27 +1401,29 @@ korea_economic_social_political_path_1 = {
 	ai = yes
 	potential = {
 		tag = KOR
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-
 	kor_peasant_struggles = {
 		icon = mission_rice_field
-		required_missions = { kor_higher_income }
+		required_missions = {
+			kor_higher_income
+		}
 		position = 6
-
 		provinces_to_highlight = {
 			region = korea_region
-			NOT = { development = 6 }
+			NOT = {
+				development = 6
+			}
 		}
-		
 		trigger = {
 			korea_region = {
 				type = all
 				development = 6
 			}
 		}
-		
 		effect = {
 			add_stability = 1
 			if = {
@@ -1297,19 +1454,21 @@ korea_economic_social_political_path_1 = {
 	}
 	kor_develop_korea = {
 		icon = mission_have_manufactories
-		required_missions = { kor_peasant_struggles }
+		required_missions = {
+			kor_peasant_struggles
+		}
 		position = 7
-		
 		trigger = {
 			development_in_provinces = {
 				value = 200
 				region = korea_region
 			}
 		}
-		
 		effect = {
 			korea_region = {
-				limit = { owned_by = root }
+				limit = {
+					owned_by = root
+				}
 				add_province_modifier = {
 					name = kor_prosperous_korea
 					duration = 7300
@@ -1319,23 +1478,32 @@ korea_economic_social_political_path_1 = {
 	}
 	kor_achieve_juche = {
 		icon = mission_asian_city
-		required_missions = { kor_develop_korea kor_develop_capital kor_end_factional_strife }
+		required_missions = {
+			kor_develop_korea
+			kor_develop_capital
+			kor_end_factional_strife
+		}
 		position = 8
-		
 		provinces_to_highlight = {
 			region = korea_region
 			OR = {
-				NOT = { owned_by = root }
-				NOT = { is_core = root }
-				NOT = { culture = korean }
-				NOT = { development = 8 }
+				NOT = {
+					owned_by = root
+				}
+				NOT = {
+					is_core = root
+				}
+				NOT = {
+					culture = korean
+				}
+				NOT = {
+					development = 8
+				}
 				has_manufactory_trigger = no
 			}
 		}
-		
 		trigger = {
 			is_subject = no
-			
 			korea_region = {
 				type = all
 				owned_by = root
@@ -1352,7 +1520,6 @@ korea_economic_social_political_path_1 = {
 				}
 			}
 		}
-		
 		effect = {
 			add_country_modifier = {
 				name = korea_in_balance
@@ -1368,26 +1535,26 @@ korea_economic_social_political_path_2 = {
 	ai = yes
 	potential = {
 		tag = KOR
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	kor_develop_capital = {
 		icon = mission_early_game_buildings
-		required_missions = { kor_peasant_struggles }
+		required_missions = {
+			kor_peasant_struggles
+		}
 		position = 7
-		
 		provinces_to_highlight = {
 			is_capital_of = root
 		}
-
 		trigger = {
 			capital_scope = {
 				culture = korean
 				development = 30
 			}
 		}
-		
 		effect = {
 			add_country_modifier = {
 				name = kor_developed_capital
@@ -1397,21 +1564,23 @@ korea_economic_social_political_path_2 = {
 	}
 }
 
-
 korea_economic_social_political_path_3 = {
 	slot = 4
 	generic = no
 	ai = yes
 	potential = {
 		tag = KOR
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
 	kor_end_factional_strife = {
 		icon = mission_scholar_officials
-		required_missions = { kor_peasant_struggles }
+		required_missions = {
+			kor_peasant_struggles
+		}
 		position = 7
-		
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = KOR_has_factional_upheaval_tooltip
@@ -1424,7 +1593,7 @@ korea_economic_social_political_path_3 = {
 			OR = {
 				crown_land_share = 90
 				custom_trigger_tooltip = {
-					tooltip = KOR_two_pleased_estates_tooltip #Two §Yestates§! have at least §Y70 loyalty§!, the other has at least §Y50 loyalty§!.
+					tooltip = KOR_two_pleased_estates_tooltip					#Two §Yestates§! have at least §Y70 loyalty§!, the other has at least §Y50 loyalty§!.
 					OR = {
 						AND = {
 							estate_loyalty = {
@@ -1492,9 +1661,8 @@ korea_economic_social_political_path_3 = {
 						}
 					}
 				}
-            }
-        }
-		
+			}
+		}
 		effect = {
 			if = {
 				limit = {
@@ -1527,7 +1695,6 @@ korea_economic_social_political_path_3 = {
 				add_country_modifier = {
 					name = kor_factional_unity
 					duration = 7300
-					
 				}
 				custom_tooltip = kor_end_factional_strife_tt
 			}
@@ -1541,18 +1708,21 @@ korea_trade_group = {
 	ai = yes
 	potential = {
 		tag = KOR
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-
 	kor_korean_trade_ports = {
 		icon = mission_dominate_home_trade_node
-		required_missions = {  }
+		required_missions = {
+		}
 		position = 6
-
 		provinces_to_highlight = {
 			province_id = 2745
-			NOT = { owned_by = root }
+			NOT = {
+				owned_by = root
+			}
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
@@ -1577,16 +1747,15 @@ korea_trade_group = {
 			}
 		}
 	}
-
 	kor_japanese_trade = {
 		icon = mission_market_place_with_asian_traders
-		required_missions = { kor_korean_trade_ports }
+		required_missions = {
+			kor_korean_trade_ports
+		}
 		position = 7
-
 		provinces_to_highlight = {
 			province_id = 1376
 		}
-
 		trigger = {
 			1376 = {
 				trade_share = {
@@ -1595,7 +1764,6 @@ korea_trade_group = {
 				}
 			}
 		}
-
 		effect = {
 			add_country_modifier = {
 				name = kor_mission_traders

@@ -56,7 +56,7 @@ country_decisions = {
 			NOT = {
 				has_country_modifier = the_advancement_of_true_religion_act
 			}
-			is_christian_viking_mod = yes
+			religion_group = christian
 		}
 		allow = {
 			advisor = theologian
@@ -85,7 +85,7 @@ country_decisions = {
 			NOT = {
 				has_country_modifier = the_blasphemy_act
 			}
-			is_christian_viking_mod = yes
+			religion_group = christian
 			OR = {
 				current_age = age_of_reformation
 				current_age = age_of_absolutism
@@ -107,7 +107,7 @@ country_decisions = {
 	}
 	declaration_of_indulgence = {
 		potential = {
-			is_christian_viking_mod = yes
+			religion_group = christian
 			NOT = {
 				has_country_modifier = the_declaration_of_indulgence
 			}
@@ -136,7 +136,7 @@ country_decisions = {
 				NOT = {
 					any_owned_province = {
 						has_owner_religion = no
-						is_christian_viking_mod = yes
+						religion_group = christian
 					}
 				}
 				factor = 0
@@ -148,7 +148,7 @@ country_decisions = {
 			NOT = {
 				has_country_modifier = the_act_of_uniformity
 			}
-			is_christian_viking_mod = yes
+			religion_group = christian
 		}
 		allow = {
 			adm_tech = 8
@@ -175,7 +175,7 @@ country_decisions = {
 	#	suffragan_bishop_act = {
 	#		potential = {
 	#			NOT = { has_country_modifier = the_suffragan_bishop_act }
-	#			is_christian_viking_mod = yes
+	#			religion_group = christian
 	#		}
 	#		allow = {
 	#			adm_tech = 8
@@ -193,7 +193,7 @@ country_decisions = {
 	#	church_tax = {
 	#		potential = {
 	#			NOT = { has_country_modifier = church_taxes }
-	#			is_christian_viking_mod = yes
+	#			religion_group = christian
 	#			NOT = { tag = PAP }
 	#			NOT = { government = republic }
 	#		}
@@ -224,7 +224,7 @@ country_decisions = {
 			NOT = {
 				has_country_modifier = sunday_schools
 			}
-			is_christian_viking_mod = yes
+			religion_group = christian
 			adm_tech = 17
 		}
 		allow = {
@@ -247,7 +247,7 @@ country_decisions = {
 			NOT = {
 				has_country_modifier = the_conventicle_act
 			}
-			is_christian_viking_mod = yes
+			religion_group = christian
 			OR = {
 				is_religion_enabled = protestant
 				is_religion_enabled = reformed
@@ -744,25 +744,25 @@ country_decisions = {
 				has_country_modifier = the_anti_christian_edict
 			}
 			NOT = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 			OR = {
 				any_neighbor_country = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 				738 = {
 					owner = {
-						is_christian_viking_mod = yes
+						religion_group = christian
 					}
 				}
 				666 = {
 					owner = {
-						is_christian_viking_mod = yes
+						religion_group = christian
 					}
 				}
 				668 = {
 					owner = {
-						is_christian_viking_mod = yes
+						religion_group = christian
 					}
 				}
 			}
@@ -771,7 +771,7 @@ country_decisions = {
 			is_defender_of_faith = no
 			OR = {
 				any_neighbor_country = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 					NOT = {
 						has_opinion = {
 							who = ROOT
@@ -781,7 +781,7 @@ country_decisions = {
 				}
 				666 = {
 					owner = {
-						is_christian_viking_mod = yes
+						religion_group = christian
 						NOT = {
 							has_opinion = {
 								who = ROOT
@@ -792,7 +792,7 @@ country_decisions = {
 				}
 				668 = {
 					owner = {
-						is_christian_viking_mod = yes
+						religion_group = christian
 						NOT = {
 							has_opinion = {
 								who = ROOT
@@ -803,7 +803,7 @@ country_decisions = {
 				}
 				738 = {
 					owner = {
-						is_christian_viking_mod = yes
+						religion_group = christian
 						NOT = {
 							has_opinion = {
 								who = ROOT
@@ -1843,7 +1843,7 @@ country_decisions = {
 				has_country_flag = screw_pope
 			}
 			any_owned_province = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 			is_free_or_tributary_trigger = yes
 		}

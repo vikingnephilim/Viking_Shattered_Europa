@@ -50,7 +50,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 10
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			capital_scope = {
@@ -63,6 +62,12 @@ country_decisions = {
 				is_city = yes
 			}
 			NOT = { exists = HAT }
+			NOT = {
+				tag = HNX
+			}
+			NOT = {
+				tag = NPH
+			}
 		}
 		effect = {
 			hidden_effect = {

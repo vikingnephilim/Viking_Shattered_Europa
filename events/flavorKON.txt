@@ -358,7 +358,7 @@ country_event = {
 		desc = flavor_kon.7.desc.christian		#Generic but non-catholic Christian nation finds Kongo
 		trigger = {
 			FROM = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 				NOT = {
 					religion = catholic
 				}
@@ -370,7 +370,7 @@ country_event = {
 		trigger = {
 			FROM = {
 				NOT = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 			}
 		}

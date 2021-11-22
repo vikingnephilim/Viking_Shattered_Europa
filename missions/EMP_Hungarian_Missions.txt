@@ -813,13 +813,13 @@ emp_hun_bulwark_of_christianity_branch = {
 				army_size = root
 			}
 			ROOT = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 		}
 		trigger = {
 			if = {
 				limit = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 				custom_trigger_tooltip = {
 					tooltip = emp_hun_bulwark_of_christianity_trigger_tooltip

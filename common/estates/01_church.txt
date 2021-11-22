@@ -1,5 +1,4 @@
-estate_church =
-{
+estate_church = {
 	icon = 1
 	# If true, country will get estate
 	trigger = {
@@ -7,27 +6,36 @@ estate_church =
 			limit = {
 				religion_group = dharmic
 			}
-			NOT = { has_estate = estate_brahmins }
+			NOT = {
+				has_estate = estate_brahmins
+			}
 		}
-		NOT = { has_reform = pirate_republic_reform }
-		NOT = { has_government_attribute = is_merchant_republic }
-		NOT = { has_reform = veche_republic }
-		NOT = { has_reform = trading_city }
-		NOT = { has_reform = cossacks_reform }
-		NOT = { has_reform = siberian_tribe }
-		NOT = { government = native }
-		NOT = { is_revolutionary_republic_trigger = yes }
+		NOT = {
+			has_reform = cossacks_reform
+		}
+		NOT = {
+			has_reform = siberian_tribe
+		}
+		NOT = {
+			government = native
+		}
 		OR = {
-			NOT = { has_reform = celestial_empire }
+			NOT = {
+				has_reform = celestial_empire
+			}
 			has_dlc = "Mandate of Heaven"
 		}
 		OR = {
-			NOT = { tag = USA }
+			NOT = {
+				tag = USA
+			}
 			government = theocracy
 		}
 		is_nomad = no
 		is_colonial_nation = no
-		NOT = { has_reform = revolutionary_empire_reform }
+		NOT = {
+			has_reform = revolutionary_empire_reform
+		}
 	}
 	# These scale with loyalty & power
 	country_modifier_happy = {
@@ -57,15 +65,21 @@ estate_church =
 		factor = 1
 		modifier = {
 			factor = 0.1
-			NOT = { religion_group = owner }
+			NOT = {
+				religion_group = owner
+			}
 		}
 		modifier = {
 			factor = 0.5
-			NOT = { religion = owner }
+			NOT = {
+				religion = owner
+			}
 		}
 		modifier = {
 			factor = 0.67
-			NOT = { is_state_core = owner }
+			NOT = {
+				is_state_core = owner
+			}
 		}
 		modifier = {
 			factor = 1.2
@@ -78,7 +92,7 @@ estate_church =
 		desc = EST_VAL_SHARIFS
 		trigger = {
 			tag = HED
-			owns = 385 #Mecca
+			owns = 385			#Mecca
 		}
 		influence = 20
 	}
@@ -93,7 +107,9 @@ estate_church =
 	influence_modifier = {
 		desc = EST_VAL_STATE_RELIGIOUS_MINORITY
 		trigger = {
-			NOT = { dominant_religion = ROOT }
+			NOT = {
+				dominant_religion = ROOT
+			}
 		}
 		influence = -15
 	}
@@ -137,7 +153,7 @@ estate_church =
 		desc = estate_monasteries
 		trigger = {
 			OR = {
-				religion = buddhism #Theravada
+				religion = buddhism				#Theravada
 				religion = mahayana
 				religion = vajrayana
 			}
@@ -184,7 +200,11 @@ estate_church =
 		}
 	}
 	contributes_to_curia_treasury = yes
-	color = { 200 150 0 }
+	color = {
+		200
+		150
+		0
+	}
 	privileges = {
 		estate_church_land_rights
 		estate_church_papal_emissary
@@ -237,5 +257,5 @@ estate_church =
 		estate_church_hire_advisor
 		estate_church_fire_advisor
 	}
-	influence_from_dev_modifier = 1.0
+	influence_from_dev_modifier = 1
 }

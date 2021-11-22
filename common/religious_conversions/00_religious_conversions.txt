@@ -32,7 +32,7 @@ propagate_religion_policy = {
 			factor = 0
 			OR = {
 				is_muslim_viking_mod = yes
-				is_christian_viking_mod = yes
+				religion_group = christian
 				religion_group = jewish_group
 			}
 		}
@@ -107,7 +107,7 @@ hussite_center_of_reformation = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { is_christian_viking_mod = yes }
+			NOT = { religion_group = christian }
 		}
 		modifier = {
 			factor = 0
@@ -172,7 +172,7 @@ anglican_center_of_reformation = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { is_christian_viking_mod = yes }
+			NOT = { religion_group = christian }
 		}
 		modifier = {
 			factor = 0
@@ -237,7 +237,7 @@ protestant_center_of_reformation = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { is_christian_viking_mod = yes }
+			NOT = { religion_group = christian }
 		}
 		modifier = {
 			factor = 0
@@ -302,7 +302,7 @@ reformed_center_of_reformation = {
 		}
 		modifier = {
 			factor = 0
-			NOT = { is_christian_viking_mod = yes }
+			NOT = { religion_group = christian }
 		}
 		modifier = {
 			factor = 0

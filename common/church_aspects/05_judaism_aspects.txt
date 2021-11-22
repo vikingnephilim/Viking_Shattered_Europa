@@ -166,7 +166,7 @@ jewish_abrahamic_aspect = {	#DIP aspect
 			every_owned_province = {
 				limit = {
 					OR = {
-						is_christian_viking_mod = yes
+						religion_group = christian
 						is_muslim_viking_mod = yes
 					}
 				}
@@ -232,7 +232,7 @@ judaism_diplomatic_rabbi_aspect = {	#DIP aspect
 				limit = {
 					OR = {
 						is_muslim_viking_mod = yes
-						is_christian_viking_mod = yes
+						religion_group = christian
 					}
 					NOT = {
 						has_opinion_modifier = {

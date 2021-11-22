@@ -10,7 +10,7 @@ merc_lombard_free_company = {
 			tooltip = italian_wars_flag_tt
 			has_global_flag = italian_wars_global_flag
 		}
-		is_christian_viking_mod = yes
+		religion_group = christian
 		capital_scope = {
 			continent = europe
 		}
@@ -50,7 +50,7 @@ merc_tuscan_free_company = {
 			tooltip = italian_wars_flag_tt
 			has_global_flag = italian_wars_global_flag
 		}
-		is_christian_viking_mod = yes
+		religion_group = christian
 		capital_scope = {
 			continent = europe
 		}
@@ -347,7 +347,7 @@ merc_stratioti = {
     home_province = 4174
 	sprites = { easterngfx_sprite_pack }
     trigger = {	
-		is_christian_viking_mod = yes
+		religion_group = christian
 		any_owned_province = {
 			region = balkan_region
 		}
@@ -402,7 +402,7 @@ merc_hadjuks = {
     cost_modifier = 0.75
 	sprites = { dlc102_wal_sprite_pack  easterngfx_sprite_pack }
     trigger = {
-		is_christian_viking_mod = yes
+		religion_group = christian
 		capital_scope = {
 			OR = {
 				region = balkan_region
@@ -1521,7 +1521,7 @@ merc_crabats = {
 	cavalry_cap = 6
 	sprites = { easterngfx_sprite_pack }
     trigger = {
-		is_christian_viking_mod = yes
+		religion_group = christian
 		OR = {
 			capital_scope = { 
 				OR = {

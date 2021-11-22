@@ -2376,7 +2376,7 @@ country_event = {
 		}
 		any_owned_province = {
 			NOT = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 		}
 	}
@@ -2389,14 +2389,14 @@ country_event = {
 		random_owned_province = {
 			limit = {
 				NOT = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 			}
 			area = {
 				limit = {
 					owned_by = ROOT
 					NOT = {
-						is_christian_viking_mod = yes
+						religion_group = christian
 					}
 				}
 				add_province_modifier = {
@@ -2564,7 +2564,7 @@ country_event = {
 			secondary_religion = waldensian
 		}
 		any_subject_country = {
-			is_christian_viking_mod = yes
+			religion_group = christian
 		}
 	}
 	mean_time_to_happen = {
@@ -2574,7 +2574,7 @@ country_event = {
 		name = tengri_events.43.a		#Unfortunate
 		random_subject_country = {
 			limit = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 			add_opinion = {
 				who = ROOT

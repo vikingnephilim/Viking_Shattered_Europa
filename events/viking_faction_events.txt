@@ -1,0 +1,363 @@
+namespace = viking_faction_events
+country_event = {
+	id = viking_faction_events.1
+	title = viking_faction_events.1.title
+	desc = viking_faction_events.1.desc
+	picture = NOBLE_ESTATE_TAKE_OVER_eventPicture
+	trigger = {
+		factions_not_doing_well = yes
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
+	option = {
+		name = viking_faction_events.1.a
+		faction_in_power_effect = yes
+	}
+}
+country_event = {
+	id = viking_faction_events.2
+	title = viking_faction_events.2.title
+	desc = viking_faction_events.2.desc
+	picture = NOBLE_ESTATE_TAKE_OVER_eventPicture
+	trigger = {
+		has_heir = no
+		factions_not_doing_well = yes
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = viking_faction_events.2.a
+		trigger = {
+			has_faction = faction_tudor
+			NOT = {
+				has_country_flag = picked_heir_tudor
+			}
+		}
+		define_heir = {
+			dynasty = "Tudor"
+			age = 13
+			claim = 85
+		}
+		hidden_effect = {
+			add_faction_influence = {
+				faction = faction_tudor
+				influence = 33
+			}
+		}
+		set_country_flag = picked_heir_tudor
+	}
+	option = {
+		name = viking_faction_events.2.b
+		trigger = {
+			has_faction = faction_york
+			NOT = {
+				has_country_flag = picked_heir_york
+			}
+		}
+		define_heir = {
+			dynasty = "York"
+			age = 13
+			claim = 85
+		}
+		hidden_effect = {
+			add_faction_influence = {
+				faction = faction_york
+				influence = 33
+			}
+		}
+		set_country_flag = picked_heir_york
+	}
+	option = {
+		name = viking_faction_events.2.c
+		trigger = {
+			has_faction = faction_lancaster
+			NOT = {
+				has_country_flag = picked_heir_lancaster
+			}
+		}
+		define_heir = {
+			dynasty = "Lancaster"
+			age = 13
+			claim = 85
+		}
+		hidden_effect = {
+			add_faction_influence = {
+				faction = faction_lancaster
+				influence = 33
+			}
+		}
+		set_country_flag = picked_heir_lancaster
+	}
+	option = {
+		name = viking_faction_events.2.d
+		trigger = {
+			has_faction = faction_stuart
+			NOT = {
+				has_country_flag = picked_heir_stuart
+			}
+		}
+		define_heir = {
+			dynasty = "Stuart"
+			age = 13
+			claim = 85
+		}
+		hidden_effect = {
+			add_faction_influence = {
+				faction = faction_stuart
+				influence = 33
+			}
+		}
+		set_country_flag = picked_heir_stuart
+	}
+	option = {
+		name = viking_faction_events.2.e
+		trigger = {
+			has_faction = faction_valois
+			NOT = {
+				has_country_flag = picked_heir_valois
+			}
+		}
+		define_heir = {
+			dynasty = "Valois"
+			age = 13
+			claim = 85
+		}
+		hidden_effect = {
+			add_faction_influence = {
+				faction = faction_valois
+				influence = 33
+			}
+		}
+		set_country_flag = picked_heir_valois
+	}
+	option = {
+		name = viking_faction_events.2.f
+		trigger = {
+			has_faction = faction_capet
+			NOT = {
+				has_country_flag = picked_heir_capet
+			}
+		}
+		define_heir = {
+			dynasty = "Capet"
+			age = 13
+			claim = 85
+		}
+		hidden_effect = {
+			add_faction_influence = {
+				faction = faction_capet
+				influence = 33
+			}
+		}
+		set_country_flag = picked_heir_capet
+	}
+	option = {
+		name = viking_faction_events.2.g
+		trigger = {
+			has_faction = faction_carolingian
+			NOT = {
+				has_country_flag = picked_heir_carolingian
+			}
+		}
+		define_heir = {
+			dynasty = "Karling"
+			age = 13
+			claim = 85
+		}
+		hidden_effect = {
+			add_faction_influence = {
+				faction = faction_carolingian
+				influence = 33
+			}
+		}
+		set_country_flag = picked_heir_carolingian
+	}
+	option = {
+		name = viking_faction_events.2.h
+		trigger = {
+			has_faction = faction_jimenez
+			NOT = {
+				has_country_flag = picked_heir_jimenez
+			}
+		}
+		define_heir = {
+			dynasty = "Jimenez"
+			age = 13
+			claim = 85
+		}
+		hidden_effect = {
+			add_faction_influence = {
+				faction = faction_jimenez
+				influence = 33
+			}
+		}
+		set_country_flag = picked_heir_jimenez
+	}
+	option = {
+		name = viking_faction_events.2.i
+		trigger = {
+			has_faction = faction_ivrea
+			NOT = {
+				has_country_flag = picked_heir_ivrea
+			}
+		}
+		define_heir = {
+			dynasty = "Ivrea"
+			age = 13
+			claim = 85
+		}
+		hidden_effect = {
+			add_faction_influence = {
+				faction = faction_ivrea
+				influence = 33
+			}
+		}
+		set_country_flag = picked_heir_ivrea
+	}
+	option = {
+		name = viking_faction_events.2.j
+		trigger = {
+			has_faction = faction_trastamara
+			NOT = {
+				has_country_flag = picked_heir_trastamaria
+			}
+		}
+		define_heir = {
+			dynasty = "de Trastamaria"
+			age = 13
+			claim = 85
+		}
+		hidden_effect = {
+			add_faction_influence = {
+				faction = faction_trastamara
+				influence = 33
+			}
+		}
+		set_country_flag = picked_heir_trastamaria
+	}
+	option = {
+		name = viking_faction_events.2.k
+		trigger = {
+			has_faction = faction_bourbon
+			NOT = {
+				has_country_flag = picked_heir_bourbon
+			}
+		}
+		define_heir = {
+			dynasty = "Bourbon"
+			age = 13
+			claim = 85
+		}
+		hidden_effect = {
+			add_faction_influence = {
+				faction = faction_bourbon
+				influence = 33
+			}
+		}
+		set_country_flag = picked_heir_bourbon
+	}
+	option = {
+		name = viking_faction_events.2.l
+		trigger = {
+			has_faction = faction_hohenzollern
+			NOT = {
+				has_country_flag = picked_heir_hohenzollern
+			}
+		}
+		define_heir = {
+			dynasty = "Hohenzollern"
+			age = 13
+			claim = 85
+		}
+		hidden_effect = {
+			add_faction_influence = {
+				faction = faction_hohenzollern
+				influence = 33
+			}
+		}
+		set_country_flag = picked_heir_hohenzollern
+	}
+	option = {
+		name = viking_faction_events.2.m
+		trigger = {
+			has_faction = faction_vonluxembourg
+			NOT = {
+				has_country_flag = picked_heir_vonluxembourg
+			}
+		}
+		define_heir = {
+			dynasty = "Von Luxembourg"
+			age = 13
+			claim = 85
+		}
+		hidden_effect = {
+			add_faction_influence = {
+				faction = faction_vonluxembourg
+				influence = 33
+			}
+		}
+		set_country_flag = picked_heir_vonluxembourg
+	}
+	option = {
+		name = viking_faction_events.2.n
+		trigger = {
+			has_faction = faction_vonwittlesbach
+			NOT = {
+				has_country_flag = picked_heir_vonwittlesbach
+			}
+		}
+		define_heir = {
+			dynasty = "Von Wittlesbach"
+			age = 13
+			claim = 85
+		}
+		hidden_effect = {
+			add_faction_influence = {
+				faction = faction_vonwittlesbach
+				influence = 33
+			}
+		}
+		set_country_flag = picked_heir_vonwittlesbach
+	}
+}
+country_event = {
+	id = viking_faction_events.3
+	title = viking_faction_events.3.title
+	desc = viking_faction_events.3.desc
+	picture = NOBLE_ESTATE_TAKE_OVER_eventPicture
+	trigger = {
+		any_subject_country = {
+			has_factions = yes
+			junior_union_with = ROOT
+		}
+	}
+	mean_time_to_happen = {
+		months = 60
+	}
+	option = {
+		name = viking_faction_events.3.a
+		factions_join_court_effect = yes
+	}
+}
+country_event = {
+	id = viking_faction_events.4
+	title = viking_faction_events.4.title
+	desc = viking_faction_events.4.desc
+	picture = NOBLE_ESTATE_TAKE_OVER_eventPicture
+	trigger = {
+		FRA = {
+			has_factions = yes
+			has_faction = faction_carolingian
+		}
+	}
+	mean_time_to_happen = {
+		months = 600
+	}
+	option = {
+		name = viking_faction_events.4.a
+		remove_faction = faction_carolingian
+		add_faction = faction_bourbon
+	}
+}

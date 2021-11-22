@@ -66,7 +66,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 10
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			capital_scope = {
@@ -169,7 +168,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 10
 			is_free_or_tributary_trigger = yes
 			is_at_war = no
 			custom_trigger_tooltip = {
@@ -222,7 +220,7 @@ country_decisions = {
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 				custom_tooltip = brazil_portugal_tooltip
 				hidden_effect = {

@@ -1077,7 +1077,7 @@ has_burghers_trade_good_trigger = {
 			trade_goods = fish
 			ROOT = {
 				NOT = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 			}
 		}
@@ -1106,7 +1106,7 @@ has_church_trade_good_trigger = {
 		AND = {
 			trade_goods = fish
 			ROOT = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 		}
 	}
@@ -1328,7 +1328,7 @@ has_been_insulted_by_root = {
 valid_for_personal_unions_trigger = {
 	is_subject = no
 	government = monarchy
-	is_christian_viking_mod = yes
+	religion_group = christian
 }
 
 is_shadow_kingdom_eligible_trigger = {

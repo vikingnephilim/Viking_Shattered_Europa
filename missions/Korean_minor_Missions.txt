@@ -6,6 +6,9 @@ korean_missions_mng_conquest = {
 	generic = no
 	ai = yes
 	potential = {
+		NOT = {
+			tag = KOR
+		}
 		OR = {
 			tag = BKJ
 			tag = NKR
@@ -1020,7 +1023,10 @@ korean_missions_jap_conquest = {
 		}
 		position = 13
 		trigger = {
-			has_harmonized_with = shinto
+			OR = {
+				has_harmonized_with = shinto
+				secondary_religion = shinto
+			}
 		}
 		effect = {
 			add_dip_power = 30
@@ -1557,8 +1563,11 @@ korean_missions_economy = {
 		}
 		position = 7
 		trigger = {
-			harmony = 100
-			courthouse = 3
+			OR = {
+				harmony = 100
+				secondary_religion = confucianism
+				courthouse = 3
+			}
 		}
 		effect = {
 			change_adm = 1

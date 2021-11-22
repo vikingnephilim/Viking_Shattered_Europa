@@ -7,10 +7,8 @@ estate_burghers =
 		NOT = { has_estate = estate_vaisyas }
 		NOT = { has_estate = estate_jains }
 		NOT = { has_reform = pirate_republic_reform }
-		NOT = { has_government_attribute = is_merchant_republic }
 		NOT = { has_reform = veche_republic }
 		NOT = { has_reform = trading_city }
-		NOT = { is_revolutionary_republic_trigger = yes }
 		NOT = { has_reform = cossacks_reform }
 		NOT = { government = native }
 		NOT = { has_reform = siberian_tribe }
@@ -20,7 +18,6 @@ estate_burghers =
 		}
 		is_nomad = no
 		is_colonial_nation = no
-		NOT = { has_reform = revolutionary_empire_reform }
 	}
 
 	# These scale with loyalty & power
@@ -230,7 +227,7 @@ estate_burghers =
 	custom_name = {
 		desc = estate_merchant_guilds
 		trigger = {
-			OR = {	#Just like "NOT = { is_christian_viking_mod = yes }", but at least it doesn't override estate names for new religion groups
+			OR = {	#Just like "NOT = { religion_group = christian }", but at least it doesn't override estate names for new religion groups
 				#Still needs more diversity
 				is_muslim_viking_mod = yes
 				religion_group = eastern

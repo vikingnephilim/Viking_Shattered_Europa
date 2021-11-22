@@ -222,7 +222,7 @@ holy_state_legacy = {
 	valid_for_new_country = no
 	valid_for_nation_designer = yes
 	nation_designer_trigger = {
-		is_christian_viking_mod = yes
+		religion_group = christian
 	}
 	monarchy = yes
 	modifiers = {
@@ -884,10 +884,10 @@ constitutional_republic = {
 			has_dlc = "Common Sense"
 		}
 		has_parliament = yes
-	custom_attributes = {
-		blocked_call_diet = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
 	}
-}
 	ai = {
 		factor = 1
 		modifier = {
@@ -1084,7 +1084,7 @@ holy_state_theocracy = {
 	valid_for_new_country = no
 	valid_for_nation_designer = yes
 	nation_designer_trigger = {
-		is_christian_viking_mod = yes
+		religion_group = christian
 	}
 	religion = yes
 	monastic = yes
@@ -2236,7 +2236,7 @@ principality_legacy = {
 			culture_group = ruthenian_group
 			culture_group = ruthenian_south_group
 		}
-			religion_group = orthodox_christian
+		religion_group = christian
 	}
 	fixed_rank = 1
 	modifiers = {
@@ -2274,7 +2274,7 @@ tsardom_legacy = {
 			culture_group = ruthenian_group
 			culture_group = ruthenian_south_group
 		}
-		religion_group = orthodox_christian
+		religion_group = christian
 	}
 	fixed_rank = 3
 	modifiers = {
@@ -2362,7 +2362,7 @@ sacred_kingdom_legacy = {
 	nation_designer_cost = 10
 	nation_designer_trigger = {
 		NOT = {
-			is_christian_viking_mod = yes
+			religion_group = christian
 		}
 		NOT = {
 			is_muslim_viking_mod = yes
@@ -2394,7 +2394,8 @@ sacred_kingdom = {
 		OR = {
 			NOT = {
 				has_institution = enlightenment
-			}			#Why should any enlightened person ever want to support this system?
+			}
+			#Why should any enlightened person ever want to support this system?
 			AND = {
 				is_playing_custom_nation = yes
 				have_had_reform = sacred_kingdom

@@ -124,10 +124,10 @@ country_event = {
 	
 	trigger = {
 		NOT = {
-			is_christian_viking_mod = yes
+			religion_group = christian
 		}
 		any_known_country = {
-			is_christian_viking_mod = yes
+			religion_group = christian
 			NOT = { war_with = ROOT }
 			capital_scope = {
 				continent = europe

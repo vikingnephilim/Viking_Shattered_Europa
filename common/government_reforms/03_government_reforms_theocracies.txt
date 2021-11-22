@@ -222,14 +222,14 @@ loyal_nobility_reform = {
 monastic_breweries_reform = {
 	potential = {
 		OR = {
-			is_christian_viking_mod = yes
+			religion_group = christian
 			culture_group = gaelic
 			primary_culture = scottish
 		}
 	}
 	trigger = {
 		OR = {
-			is_christian_viking_mod = yes
+			religion_group = christian
 			culture_group = gaelic
 			primary_culture = scottish
 		}
@@ -514,10 +514,10 @@ theocratic_democracy_reform = {
 			has_dlc = "Common Sense"
 		}
 		has_parliament = yes
-	custom_attributes = {
-		blocked_call_diet = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
 	}
-}
 	ai = {
 		factor = 1
 		modifier = {
@@ -585,10 +585,10 @@ regionally_elected_commanders = {
 			has_dlc = "Common Sense"
 		}
 		has_parliament = yes
-	custom_attributes = {
-		blocked_call_diet = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
 	}
-}
 	ai = {
 		factor = 1
 		modifier = {

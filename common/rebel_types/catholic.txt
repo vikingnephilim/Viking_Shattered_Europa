@@ -160,7 +160,7 @@ catholic_rebels = {
 	# Country scope
 	can_negotiate_trigger = {
 		OR = {
-			is_christian_viking_mod = yes
+			religion_group = christian
 			dominant_religion = catholic
 		}
 	}
@@ -181,7 +181,7 @@ catholic_rebels = {
 		}
 		if = {
 			limit = {
-				NOT = { is_christian_viking_mod = yes }
+				NOT = { religion_group = christian }
 			}
 			add_prestige = -50
 			every_owned_province = {
@@ -239,7 +239,7 @@ catholic_rebels = {
 				NOT = { dominant_religion = catholic }
 				NOT = { tag = PAP }
 				NOT = { has_country_modifier = heretic_tolerance }
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 			add_country_modifier = {
 				name = "heretic_tolerance"

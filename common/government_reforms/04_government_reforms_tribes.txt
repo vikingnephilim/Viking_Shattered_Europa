@@ -386,7 +386,7 @@ tribe_becomes_monarchy_reform = {
 		if = {
 			limit = {
 				technology_group = nomad_group
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 			change_technology_group = eastern
 			change_unit_type = eastern
@@ -433,7 +433,7 @@ tribe_becomes_monarchy_reform = {
 					is_muslim_viking_mod = yes
 				}
 				NOT = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 				NOT = {
 					secondary_religion = sunni
@@ -500,7 +500,7 @@ tribe_becomes_republic_reform = {
 		if = {
 			limit = {
 				technology_group = nomad_group
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 			change_technology_group = eastern
 			change_unit_type = eastern
@@ -547,7 +547,7 @@ tribe_becomes_republic_reform = {
 					is_muslim_viking_mod = yes
 				}
 				NOT = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 				NOT = {
 					secondary_religion = sunni
@@ -642,7 +642,7 @@ tribe_becomes_theocracy_reform = {
 		else_if = {
 			limit = {
 				technology_group = nomad_group
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 			change_technology_group = eastern
 			change_unit_type = eastern
@@ -689,7 +689,7 @@ tribe_becomes_theocracy_reform = {
 					is_muslim_viking_mod = yes
 				}
 				NOT = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 				NOT = {
 					secondary_religion = sunni

@@ -2043,7 +2043,7 @@ judaism_on_province_change_religion_or_change_owner_effect = {
 	if = {
 		limit = {
 			OR = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 				is_muslim_viking_mod = yes
 			}
 			owner = {
@@ -2061,7 +2061,7 @@ judaism_on_province_change_religion_or_change_owner_effect = {
 			OR = {
 				AND = {
 					NOT = {
-						is_christian_viking_mod = yes
+						religion_group = christian
 					}
 					NOT = {
 						is_muslim_viking_mod = yes

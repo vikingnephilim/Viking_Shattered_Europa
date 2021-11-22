@@ -4,16 +4,26 @@ estate_jains = {
 	trigger = {
 		has_dlc = "Dharma"
 		technology_group = indian
-		NOT = { religion = jain }
-		NOT = { is_revolutionary_republic_trigger = yes }
-		NOT = { government = native }
-		NOT = { has_reform = siberian_tribe }
-		NOT = { has_reform = cossacks_reform }
-		NOT = { has_reform = pirate_republic_reform }
+		NOT = {
+			religion = jain
+		}
+		NOT = {
+			government = native
+		}
+		NOT = {
+			has_reform = siberian_tribe
+		}
+		NOT = {
+			has_reform = cossacks_reform
+		}
+		NOT = {
+			has_reform = pirate_republic_reform
+		}
 		is_nomad = no
 		is_colonial_nation = no
-		NOT = { has_reform = celestial_empire }
-		NOT = { has_reform = revolutionary_empire_reform }
+		NOT = {
+			has_reform = celestial_empire
+		}
 	}
 	# These scale with loyalty & power
 	country_modifier_happy = {
@@ -21,9 +31,9 @@ estate_jains = {
 		build_time = -0.1
 	}
 	country_modifier_neutral = {
-		build_cost = -0.10
+		build_cost = -0.1
 	}
-			country_modifier_angry = {
+	country_modifier_angry = {
 		interest = 1
 		global_unrest = 2
 	}
@@ -34,20 +44,34 @@ estate_jains = {
 		factor = 1
 		modifier = {
 			factor = 0.1
-			NOT = { development = 5 }
+			NOT = {
+				development = 5
+			}
 		}
 		modifier = {
 			factor = 0.1
-			NOT = { religion_group = dharmic }
-			NOT = { religion = buddhism }
-			NOT = { religion = vajrayana }
-			NOT = { religion = mahayana }
+			NOT = {
+				religion_group = dharmic
+			}
+			NOT = {
+				religion = buddhism
+			}
+			NOT = {
+				religion = vajrayana
+			}
+			NOT = {
+				religion = mahayana
+			}
 		}
 		modifier = {
 			factor = 0.5
 			OR = {
-				NOT = { development = 10 }
-				NOT = { province_trade_power = 5 }
+				NOT = {
+					development = 10
+				}
+				NOT = {
+					province_trade_power = 5
+				}
 			}
 		}
 		modifier = {
@@ -137,6 +161,10 @@ estate_jains = {
 		estate_jains_hire_advisor
 		estate_jains_fire_advisor
 	}
-	color = { 65 115 240 }
-	influence_from_dev_modifier = 1.0
+	color = {
+		65
+		115
+		240
+	}
+	influence_from_dev_modifier = 1
 }

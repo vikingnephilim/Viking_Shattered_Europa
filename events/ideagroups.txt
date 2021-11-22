@@ -1602,7 +1602,7 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 				NOT = {
 					is_muslim_viking_mod = yes
@@ -1807,7 +1807,7 @@ country_event = {
 			has_country_modifier = religious_deviants
 		}
 		OR = {
-			is_christian_viking_mod = yes
+			religion_group = christian
 			is_muslim_viking_mod = yes
 		}
 	}
@@ -2362,7 +2362,7 @@ country_event = {
 		has_heir = no
 		has_regency = no
 		is_female = no
-		is_christian_viking_mod = yes
+		religion_group = christian
 		has_government_attribute = heir
 		NOT = {
 			has_ruler_modifier = "extra_heir"
@@ -5118,7 +5118,7 @@ country_event = {
 	trigger = {
 		has_idea_group = exploration_ideas
 		overseas_provinces_percentage = 0.05
-		is_christian_viking_mod = yes
+		religion_group = christian
 		any_owned_province = {
 			is_overseas = yes
 			is_pagan_viking_mod = yes
@@ -7600,7 +7600,7 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 				NOT = {
 					is_muslim_viking_mod = yes

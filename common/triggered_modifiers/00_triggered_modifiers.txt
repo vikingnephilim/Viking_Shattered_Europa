@@ -43,7 +43,12 @@ coptic_alexandria = {
 	potential = {
 		normal_or_historical_nations = yes
 		has_discovered = 358		# Alexandria
-		religion_group = eastern_christian
+		OR = {
+			religion = coptic
+			religion = malankara
+			religion = messalian
+			religion = nestorian
+		}
 	}
 	trigger = {
 		owns = 358		# Alexandria
@@ -209,7 +214,7 @@ christian_mecca = {
 	potential = {
 		normal_or_historical_nations = yes
 		has_discovered = 385		# Mecca
-		is_christian_viking_mod = yes
+		religion_group = christian
 	}
 	trigger = {
 		owns = 385		# Mecca
@@ -243,11 +248,7 @@ custodian_of_the_two_holy_mosques = {
 jerusalem_held = {
 	potential = {
 		normal_or_historical_nations = yes
-		OR = {
-			is_christian_viking_mod = yes
-			is_muslim_viking_mod = yes
-			religion_group = jewish_group
-		}
+		is_abrahamic_viking_mod = yes
 		has_discovered = 379		# Judea
 	}
 	trigger = {
@@ -558,19 +559,49 @@ pentarchy_mod = {
 		owns = 379		# Jerusalem
 		owns = 358		# Alexandria
 		118 = {
-			religion_group = orthodox_christian
+			OR = {
+				religion = orthodox
+				religion = paulician
+				religion = bogomilist
+				religion = mariavite
+				religion = monophysite
+			}
 		}
 		151 = {
-			religion_group = orthodox_christian
+			OR = {
+				religion = orthodox
+				religion = paulician
+				religion = bogomilist
+				religion = mariavite
+				religion = monophysite
+			}
 		}
 		2313 = {
-			religion_group = orthodox_christian
+			OR = {
+				religion = orthodox
+				religion = paulician
+				religion = bogomilist
+				religion = mariavite
+				religion = monophysite
+			}
 		}
 		379 = {
-			religion_group = orthodox_christian
+			OR = {
+				religion = orthodox
+				religion = paulician
+				religion = bogomilist
+				religion = mariavite
+				religion = monophysite
+			}
 		}
 		358 = {
-			religion_group = orthodox_christian
+			OR = {
+				religion = orthodox
+				religion = paulician
+				religion = bogomilist
+				religion = mariavite
+				religion = monophysite
+			}
 		}
 	}
 	prestige = 0.5
@@ -697,7 +728,7 @@ hre_dominant_catholic = {
 		capital_scope = {
 			continent = europe
 		}
-		religion_group = central_christian
+		religion_group = christian
 	}
 	trigger = {
 		religion = catholic
@@ -715,7 +746,7 @@ hre_dominant_hussite = {
 		capital_scope = {
 			continent = europe
 		}
-		religion_group = central_christian
+		religion_group = christian
 	}
 	trigger = {
 		religion = hussite
@@ -733,7 +764,7 @@ hre_dominant_protestant = {
 		capital_scope = {
 			continent = europe
 		}
-		religion_group = central_christian
+		religion_group = christian
 	}
 	trigger = {
 		religion = protestant
@@ -751,7 +782,7 @@ hre_dominant_reformed = {
 		capital_scope = {
 			continent = europe
 		}
-		religion_group = central_christian
+		religion_group = christian
 	}
 	trigger = {
 		religion = reformed
@@ -769,7 +800,7 @@ hre_dominant_waldensian = {
 		capital_scope = {
 			continent = europe
 		}
-		religion_group = central_christian
+		religion_group = christian
 	}
 	trigger = {
 		religion = waldensian
@@ -892,7 +923,7 @@ italian_wars_triggered_modifier = {
 		capital_scope = {
 			continent = europe
 		}
-		religion_group = central_christian
+		religion_group = christian
 	}
 	trigger = {
 		OR = {
@@ -902,7 +933,7 @@ italian_wars_triggered_modifier = {
 				}
 				any_country = {
 					war_with = ROOT
-					religion_group = central_christian
+					religion_group = christian
 					capital_scope = {
 						continent = europe
 					}

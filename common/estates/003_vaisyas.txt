@@ -6,18 +6,29 @@ estate_vaisyas = {
 		has_dlc = "Dharma"
 		technology_group = indian
 		is_indic_viking_mod = yes
-		NOT = { has_reform = pirate_republic_reform }
-		NOT = { is_revolutionary_republic_trigger = yes }
-		NOT = { has_reform = cossacks_reform }
-		NOT = { government = native }
-		NOT = { has_reform = siberian_tribe }
+		NOT = {
+			has_reform = pirate_republic_reform
+		}
+		NOT = {
+			is_revolutionary_republic_trigger = yes
+		}
+		NOT = {
+			has_reform = cossacks_reform
+		}
+		NOT = {
+			government = native
+		}
+		NOT = {
+			has_reform = siberian_tribe
+		}
 		OR = {
-			NOT = { has_reform = celestial_empire }
+			NOT = {
+				has_reform = celestial_empire
+			}
 			has_dlc = "Mandate of Heaven"
 		}
 		is_nomad = no
 		is_colonial_nation = no
-		NOT = { has_reform = revolutionary_empire_reform }
 	}
 	# These scale with loyalty & power
 	country_modifier_happy = {
@@ -27,7 +38,7 @@ estate_vaisyas = {
 	country_modifier_neutral = {
 		production_efficiency = 0.33
 	}
-			country_modifier_angry = {
+	country_modifier_angry = {
 		production_efficiency = -0.33
 		global_unrest = 2
 	}
@@ -38,11 +49,15 @@ estate_vaisyas = {
 		factor = 1
 		modifier = {
 			factor = 0.1
-			NOT = { development = 5 }
+			NOT = {
+				development = 5
+			}
 		}
 		modifier = {
 			factor = 0.1
-			NOT = { religion_group = dharmic }
+			NOT = {
+				religion_group = dharmic
+			}
 		}
 		modifier = {
 			factor = 2
@@ -57,8 +72,12 @@ estate_vaisyas = {
 		modifier = {
 			factor = 0.5
 			OR = {
-				NOT = { development = 10 }
-				NOT = { province_trade_power = 5 }
+				NOT = {
+					development = 10
+				}
+				NOT = {
+					province_trade_power = 5
+				}
 			}
 		}
 		modifier = {
@@ -101,7 +120,9 @@ estate_vaisyas = {
 	influence_modifier = {
 		desc = EST_VAL_COT
 		trigger = {
-			NOT = { has_reform = free_city }
+			NOT = {
+				has_reform = free_city
+			}
 			any_owned_province = {
 				province_has_center_of_trade_of_level = 1
 			}
@@ -111,7 +132,9 @@ estate_vaisyas = {
 	influence_modifier = {
 		desc = EST_VAL_LOW_TRADE_INCOME
 		trigger = {
-			NOT = { trade_income_percentage = 0.25 }
+			NOT = {
+				trade_income_percentage = 0.25
+			}
 		}
 		influence = -5
 	}
@@ -119,7 +142,9 @@ estate_vaisyas = {
 		desc = EST_VAL_HIGH_TRADE_INCOME
 		trigger = {
 			trade_income_percentage = 0.5
-			NOT = { trade_income_percentage = 0.75 }
+			NOT = {
+				trade_income_percentage = 0.75
+			}
 		}
 		influence = 5
 	}
@@ -197,6 +222,10 @@ estate_vaisyas = {
 		estate_vaisyas_hire_advisor
 		estate_vaisyas_fire_advisor
 	}
-	color = { 230 230 15 }
-	influence_from_dev_modifier = 1.0
+	color = {
+		230
+		230
+		15
+	}
+	influence_from_dev_modifier = 1
 }

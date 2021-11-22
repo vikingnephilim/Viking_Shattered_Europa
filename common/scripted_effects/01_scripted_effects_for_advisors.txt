@@ -120,16 +120,16 @@ check_if_non_state_advisor_effect = {
 			#Sinosphere
 			limit = {
 				NOT = {
-					religion_group = eastern_christian
+					religion_group = christian
 				}
 				NOT = {
-					religion_group = western_christian
+					religion_group = christian
 				}
 				NOT = {
-					religion_group = central_christian
+					religion_group = christian
 				}
 				NOT = {
-					religion_group = orthodox_christian
+					religion_group = christian
 				}
 				NOT = {
 					religion_group = sunni_muslim
@@ -202,7 +202,7 @@ check_if_non_state_advisor_effect = {
 		}
 		else_if = {
 			limit = {
-				religion_group = eastern_christian
+				religion_group = christian
 				#This one is mostly the same as the Europe one.
 			}
 			random_list = {
@@ -228,7 +228,7 @@ check_if_non_state_advisor_effect = {
 		}
 		else_if = {
 			limit = {
-				religion_group = western_christian
+				religion_group = christian
 				#This one is mostly the same as the Europe one.
 			}
 			random_list = {
@@ -254,7 +254,7 @@ check_if_non_state_advisor_effect = {
 		}
 		else_if = {
 			limit = {
-				religion_group = central_christian
+				religion_group = christian
 				#This one is mostly the same as the Europe one.
 			}
 			random_list = {
@@ -280,7 +280,7 @@ check_if_non_state_advisor_effect = {
 		}
 		else_if = {
 			limit = {
-				religion_group = orthodox_christian
+				religion_group = christian
 				#This one is mostly the same as the Europe one.
 			}
 			random_list = {
@@ -561,7 +561,7 @@ internal_advisor_generation_effect = {
 		heathen_advisor = {
 			if = {
 				limit = {
-					religion_group = eastern_christian
+					religion_group = christian
 					capital_scope = {
 						continent = europe
 					}
@@ -575,7 +575,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = western_christian
+					religion_group = christian
 					capital_scope = {
 						continent = europe
 					}
@@ -589,7 +589,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = central_christian
+					religion_group = christian
 					capital_scope = {
 						continent = europe
 					}
@@ -603,7 +603,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = orthodox_christian
+					religion_group = christian
 					capital_scope = {
 						continent = europe
 					}
@@ -617,7 +617,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = eastern_christian
+					religion_group = christian
 					capital_scope = {
 						continent = asia
 					}
@@ -631,7 +631,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = western_christian
+					religion_group = christian
 					capital_scope = {
 						continent = asia
 					}
@@ -645,7 +645,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = central_christian
+					religion_group = christian
 					capital_scope = {
 						continent = asia
 					}
@@ -659,7 +659,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = orthodox_christian
+					religion_group = christian
 					capital_scope = {
 						continent = asia
 					}
@@ -673,7 +673,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = eastern_christian
+					religion_group = christian
 					capital_scope = {
 						continent = africa
 					}
@@ -687,7 +687,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = western_christian
+					religion_group = christian
 					capital_scope = {
 						continent = africa
 					}
@@ -701,7 +701,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = central_christian
+					religion_group = christian
 					capital_scope = {
 						continent = africa
 					}
@@ -715,7 +715,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = orthodox_christian
+					religion_group = christian
 					capital_scope = {
 						continent = africa
 					}
@@ -805,7 +805,7 @@ internal_advisor_generation_effect = {
 		heathen_advisor = {
 			if = {
 				limit = {
-					religion_group = eastern_christian
+					religion_group = christian
 				}
 				define_advisor = {
 					type = $advisor_type_if_not_state$
@@ -817,10 +817,10 @@ internal_advisor_generation_effect = {
 			else_if = {
 				limit = {
 					OR = {
-						religion_group = eastern_christian
-						religion_group = western_christian
-						religion_group = central_christian
-						religion_group = orthodox_christian
+						religion_group = christian
+						religion_group = christian
+						religion_group = christian
+						religion_group = christian
 					}
 				}
 				define_advisor = {
@@ -832,7 +832,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = western_christian
+					religion_group = christian
 				}
 				define_advisor = {
 					type = $advisor_type_if_not_state$
@@ -843,7 +843,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = central_christian
+					religion_group = christian
 				}
 				define_advisor = {
 					type = $advisor_type_if_not_state$
@@ -854,7 +854,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = orthodox_christian
+					religion_group = christian
 				}
 				define_advisor = {
 					type = $advisor_type_if_not_state$

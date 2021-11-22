@@ -442,7 +442,7 @@ ethiopia_religion_slot = {
 		effect = {
 			if = {
 				limit = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 				1227 = {
 					add_province_modifier = {
@@ -503,7 +503,7 @@ ethiopia_religion_slot = {
 		effect = {
 			if = {
 				limit = {
-					is_christian_viking_mod = yes
+					religion_group = christian
 				}
 				unlock_estate_privilege = {
 					estate_privilege = estate_church_yakobs_churches
@@ -835,7 +835,7 @@ ethiopia_trade_slot = {
 			OR = {
 				has_estate_privilege = estate_church_yakobs_churches
 				AND = {
-					NOT = { is_christian_viking_mod = yes }
+					NOT = { religion_group = christian }
 					religious_unity = 0.9
 				}
 			}

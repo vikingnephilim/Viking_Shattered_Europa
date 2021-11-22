@@ -14,7 +14,7 @@ country_event = {
 	picture = GOOD_WITH_MONARCH_eventPicture
 	desc = {
 		trigger = {
-			is_christian_viking_mod = yes
+			religion_group = christian
 			NOT = {
 				has_ruler_flag = widow_widower
 			}
@@ -23,21 +23,21 @@ country_event = {
 	}
 	desc = {
 		trigger = {
-			is_christian_viking_mod = yes
+			religion_group = christian
 			has_ruler_flag = widow_widower
 		}
 		desc = consort_events.1.db		#Help Finding a Second wife.
 	}
 	desc = {
 		trigger = {
-			is_christian_viking_mod = yes
+			religion_group = christian
 		}
 		desc = consort_events.1.dc		#No special reason
 	}
 	desc = {
 		trigger = {
 			NOT = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 			}
 		}
 		desc = consort_events.1.dd		#Base text for regions where multiple spouses are the norm.
@@ -3278,7 +3278,7 @@ country_event = {
 		trigger = {
 			consort_age = 52
 			OR = {
-				is_christian_viking_mod = yes
+				religion_group = christian
 				is_muslim_viking_mod = yes
 				religion_group = jewish_group
 				has_adopted_cult = islam_cult
@@ -3425,7 +3425,7 @@ country_event = {
 		months = 600
 		modifier = {
 			factor = 0.5
-			is_christian_viking_mod = yes
+			religion_group = christian
 		}
 		modifier = {
 			factor = 0.5

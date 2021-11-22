@@ -286,10 +286,10 @@ defined_text = {
 		localisation_key = string_court
 		trigger = {
 			OR = {
-				religion_group = eastern_christian
-				religion_group = western_christian
-				religion_group = central_christian
-				religion_group = orthodox_christian
+				religion_group = christian
+				religion_group = christian
+				religion_group = christian
+				religion_group = christian
 			}
 		}
 	}
@@ -305,10 +305,10 @@ defined_text = {
 		trigger = {
 			NOT = {
 				OR = {
-					religion_group = eastern_christian
-					religion_group = western_christian
-					religion_group = central_christian
-					religion_group = orthodox_christian
+					religion_group = christian
+					religion_group = christian
+					religion_group = christian
+					religion_group = christian
 				}
 			}
 		}
@@ -758,12 +758,7 @@ defined_text = {
 		trigger = {
 			trade_goods = paper
 			continent = europe
-			OR = {
-				religion_group = eastern_christian
-				religion_group = western_christian
-				religion_group = central_christian
-				religion_group = orthodox_christian
-			}
+			religion_group = christian
 			NOT = {
 				is_year = 1500
 			}
@@ -1104,10 +1099,10 @@ defined_text = {
 			trade_goods = paper
 			continent = europe
 			OR = {
-				religion_group = eastern_christian
-				religion_group = western_christian
-				religion_group = central_christian
-				religion_group = orthodox_christian
+				religion_group = christian
+				religion_group = christian
+				religion_group = christian
+				religion_group = christian
 			}
 			NOT = {
 				is_year = 1500
