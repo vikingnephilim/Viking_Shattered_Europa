@@ -718,6 +718,384 @@ faction_in_power_effect = {
 			set_country_flag = hohenzollern_added_to_factions
 		}
 	}
+	else_if = {
+		limit = {
+			HLR = {
+				faction_in_power = faction_hohenzollern
+			}
+			NOT = {
+				has_country_flag = hohenzollern_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_hohenzollern
+			add_faction_influence = {
+				faction = faction_hohenzollern
+				influence = 33
+			}
+			set_country_flag = hohenzollern_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			HLR = {
+				faction_in_power = faction_vonwittlesbach
+			}
+			NOT = {
+				has_country_flag = vonwittlesbach_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_vonwittlesbach
+			add_faction_influence = {
+				faction = faction_vonwittlesbach
+				influence = 33
+			}
+			set_country_flag = vonwittlesbach_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			HLR = {
+				faction_in_power = faction_vonhabsburgs
+			}
+			NOT = {
+				has_country_flag = vonhabsburgs_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_vonhabsburgs
+			add_faction_influence = {
+				faction = faction_vonhabsburgs
+				influence = 33
+			}
+			set_country_flag = vonhabsburgs_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			NED = {
+				faction_in_power = faction_vonluxembourg
+			}
+			NOT = {
+				has_country_flag = vonluxembourg_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_vonluxembourg
+			add_faction_influence = {
+				faction = faction_vonluxembourg
+				influence = 33
+			}
+			set_country_flag = vonluxembourg_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			NED = {
+				faction_in_power = faction_vanoranje
+			}
+			NOT = {
+				has_country_flag = vanoranje_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_vanoranje
+			add_faction_influence = {
+				faction = faction_vanoranje
+				influence = 33
+			}
+			set_country_flag = vanoranje_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			NED = {
+				faction_in_power = faction_saxecoburg
+			}
+			NOT = {
+				has_country_flag = saxecoburg_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_saxecoburg
+			add_faction_influence = {
+				faction = faction_saxecoburg
+				influence = 33
+			}
+			set_country_flag = saxecoburg_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			ITA = {
+				faction_in_power = faction_dimedici
+			}
+			NOT = {
+				has_country_flag = dimedici_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_dimedici
+			add_faction_influence = {
+				faction = faction_dimedici
+				influence = 33
+			}
+			set_country_flag = dimedici_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			ITA = {
+				faction_in_power = faction_sforza
+			}
+			NOT = {
+				has_country_flag = sforza_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_sforza
+			add_faction_influence = {
+				faction = faction_sforza
+				influence = 33
+			}
+			set_country_flag = sforza_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			ITA = {
+				faction_in_power = faction_borgia
+			}
+			NOT = {
+				has_country_flag = borgia_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_borgia
+			add_faction_influence = {
+				faction = faction_borgia
+				influence = 33
+			}
+			set_country_flag = borgia_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			RUS = {
+				faction_in_power = faction_romanov
+			}
+			NOT = {
+				has_country_flag = romanov_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_romanov
+			add_faction_influence = {
+				faction = faction_romanov
+				influence = 33
+			}
+			set_country_flag = romanov_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			RUS = {
+				faction_in_power = faction_rurikovic
+			}
+			NOT = {
+				has_country_flag = rurikovic_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_rurikovic
+			add_faction_influence = {
+				faction = faction_rurikovic
+				influence = 33
+			}
+			set_country_flag = rurikovic_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			RUS = {
+				faction_in_power = faction_godunov
+			}
+			NOT = {
+				has_country_flag = godunov_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_godunov
+			add_faction_influence = {
+				faction = faction_godunov
+				influence = 33
+			}
+			set_country_flag = godunov_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			IRE = {
+				faction_in_power = faction_uabriain
+			}
+			NOT = {
+				has_country_flag = uabriain_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_uabriain
+			add_faction_influence = {
+				faction = faction_uabriain
+				influence = 33
+			}
+			set_country_flag = uabriain_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			IRE = {
+				faction_in_power = faction_uaconchobair
+			}
+			NOT = {
+				has_country_flag = uaconchobair_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_uaconchobair
+			add_faction_influence = {
+				faction = faction_uaconchobair
+				influence = 33
+			}
+			set_country_flag = uaconchobair_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			IRE = {
+				faction_in_power = faction_maclochlainn
+			}
+			NOT = {
+				has_country_flag = maclochlainn_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_maclochlainn
+			add_faction_influence = {
+				faction = faction_maclochlainn
+				influence = 33
+			}
+			set_country_flag = maclochlainn_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			SCA = {
+				faction_in_power = faction_vasa
+			}
+			NOT = {
+				has_country_flag = vasa_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_vasa
+			add_faction_influence = {
+				faction = faction_vasa
+				influence = 33
+			}
+			set_country_flag = vasa_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			SCA = {
+				faction_in_power = faction_vonwittlesbach
+			}
+			NOT = {
+				has_country_flag = vonwittlesbach_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_vonwittlesbach
+			add_faction_influence = {
+				faction = faction_vonwittlesbach
+				influence = 33
+			}
+			set_country_flag = vonwittlesbach_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			SCA = {
+				faction_in_power = faction_vonoldenburg
+			}
+			NOT = {
+				has_country_flag = vonoldenburg_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_vonoldenburg
+			add_faction_influence = {
+				faction = faction_vonoldenburg
+				influence = 33
+			}
+			set_country_flag = vonoldenburg_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			SCA = {
+				faction_in_power = faction_julii
+			}
+			NOT = {
+				has_country_flag = julii_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_julii
+			add_faction_influence = {
+				faction = faction_julii
+				influence = 33
+			}
+			set_country_flag = julii_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			SCA = {
+				faction_in_power = faction_scipii
+			}
+			NOT = {
+				has_country_flag = scipii_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_scipii
+			add_faction_influence = {
+				faction = faction_scipii
+				influence = 33
+			}
+			set_country_flag = scipii_added_to_factions
+		}
+	}
+	else_if = {
+		limit = {
+			SCA = {
+				faction_in_power = faction_brutii
+			}
+			NOT = {
+				has_country_flag = brutii_added_to_factions
+			}
+		}
+		ROOT = {
+			add_faction = faction_brutii
+			add_faction_influence = {
+				faction = faction_brutii
+				influence = 33
+			}
+			set_country_flag = brutii_added_to_factions
+		}
+	}
 }
 
 factions_join_court_effect = {
@@ -734,9 +1112,11 @@ factions_join_court_effect = {
 					has_country_flag = spanish_factions_added_to_court
 				}
 			}
-			SPA = {
-				PREV = {
-					add_accepted_culture = new_variable:PREV:primary_culture
+			hidden_effect = {
+				SPA = {
+					PREV = {
+						add_accepted_culture = new_variable:PREV:primary_culture
+					}
 				}
 			}
 			add_faction = faction_jimenez
@@ -756,9 +1136,11 @@ factions_join_court_effect = {
 					has_country_flag = english_factions_added_to_court
 				}
 			}
-			ENG = {
-				PREV = {
-					add_accepted_culture = new_variable:PREV:primary_culture
+			hidden_effect = {
+				ENG = {
+					PREV = {
+						add_accepted_culture = new_variable:PREV:primary_culture
+					}
 				}
 			}
 			add_faction = faction_tudor
@@ -778,9 +1160,11 @@ factions_join_court_effect = {
 					has_country_flag = british_factions_added_to_court
 				}
 			}
-			GBR = {
-				PREV = {
-					add_accepted_culture = new_variable:PREV:primary_culture
+			hidden_effect = {
+				GBR = {
+					PREV = {
+						add_accepted_culture = new_variable:PREV:primary_culture
+					}
 				}
 			}
 			add_faction = faction_tudor
@@ -800,9 +1184,11 @@ factions_join_court_effect = {
 					has_country_flag = french_factions_added_to_court
 				}
 			}
-			FRA = {
-				PREV = {
-					add_accepted_culture = new_variable:PREV:primary_culture
+			hidden_effect = {
+				FRA = {
+					PREV = {
+						add_accepted_culture = new_variable:PREV:primary_culture
+					}
 				}
 			}
 			add_faction = faction_capet
@@ -822,9 +1208,11 @@ factions_join_court_effect = {
 					has_country_flag = french_factions_added_to_court
 				}
 			}
-			FRA = {
-				PREV = {
-					add_accepted_culture = new_variable:PREV:primary_culture
+			hidden_effect = {
+				FRA = {
+					PREV = {
+						add_accepted_culture = new_variable:PREV:primary_culture
+					}
 				}
 			}
 			add_faction = faction_capet
@@ -844,9 +1232,11 @@ factions_join_court_effect = {
 					has_country_flag = german_factions_added_to_court
 				}
 			}
-			PRU = {
-				PREV = {
-					add_accepted_culture = new_variable:PREV:primary_culture
+			hidden_effect = {
+				PRU = {
+					PREV = {
+						add_accepted_culture = new_variable:PREV:primary_culture
+					}
 				}
 			}
 			add_faction = faction_vonluxembourg
@@ -866,9 +1256,11 @@ factions_join_court_effect = {
 					has_country_flag = german_factions_added_to_court
 				}
 			}
-			GER = {
-				PREV = {
-					add_accepted_culture = new_variable:PREV:primary_culture
+			hidden_effect = {
+				GER = {
+					PREV = {
+						add_accepted_culture = new_variable:PREV:primary_culture
+					}
 				}
 			}
 			add_faction = faction_vonluxembourg
@@ -876,5 +1268,563 @@ factions_join_court_effect = {
 			add_faction = faction_hohenzollern
 			set_country_flag = german_factions_added_to_court
 		}
+		else_if = {
+			LIMIT = {
+				HLR = {
+					junior_union_with = ROOT
+				}
+				NOT = {
+					has_hre_factions = yes
+				}
+				NOT = {
+					has_country_flag = hre_factions_added_to_court
+				}
+			}
+			hidden_effect = {
+				HLR = {
+					PREV = {
+						add_accepted_culture = new_variable:PREV:primary_culture
+					}
+				}
+			}
+			add_faction = faction_vonhabsburgs
+			add_faction = faction_vonwittlesbach
+			add_faction = faction_hohenzollern
+			set_country_flag = hre_factions_added_to_court
+		}
+		else_if = {
+			LIMIT = {
+				NED= {
+					junior_union_with = ROOT
+				}
+				NOT = {
+					has_dutch_factions = yes
+				}
+				NOT = {
+					has_country_flag = dutch_factions_added_to_court
+				}
+			}
+			hidden_effect = {
+				NED = {
+					PREV = {
+						add_accepted_culture = new_variable:PREV:primary_culture
+					}
+				}
+			}
+			add_faction = faction_vanoranje
+			add_faction = faction_vonluxembourg
+			add_faction = faction_saxecoburg
+			set_country_flag = dutch_factions_added_to_court
+		}
+		else_if = {
+			LIMIT = {
+				ITA= {
+					junior_union_with = ROOT
+				}
+				NOT = {
+					has_italian_factions = yes
+				}
+				NOT = {
+					has_country_flag = italian_factions_added_to_court
+				}
+			}
+			hidden_effect = {
+				ITA = {
+					PREV = {
+						add_accepted_culture = new_variable:PREV:primary_culture
+					}
+				}
+			}
+			add_faction = faction_sforza
+			add_faction = faction_borgia
+			add_faction = faction_dimedici
+			set_country_flag = italian_factions_added_to_court
+		}
+		else_if = {
+			LIMIT = {
+				RUS= {
+					junior_union_with = ROOT
+				}
+				NOT = {
+					has_russian_factions = yes
+				}
+				NOT = {
+					has_country_flag = russian_factions_added_to_court
+				}
+			}
+			hidden_effect = {
+				RUS = {
+					PREV = {
+						add_accepted_culture = new_variable:PREV:primary_culture
+					}
+				}
+			}
+			add_faction = faction_rurikovic
+			add_faction = faction_romanov
+			add_faction = faction_godunov
+			set_country_flag = russian_factions_added_to_court
+		}
+		else_if = {
+			LIMIT = {
+				IRE = {
+					junior_union_with = ROOT
+				}
+				NOT = {
+					has_irish_factions = yes
+				}
+				NOT = {
+					has_country_flag = irish_factions_added_to_court
+				}
+			}
+			hidden_effect = {
+				IRE = {
+					PREV = {
+						add_accepted_culture = new_variable:PREV:primary_culture
+					}
+				}
+			}
+			add_faction = faction_uabriain
+			add_faction = faction_uaconchobair
+			add_faction = faction_maclochlainn
+			set_country_flag = irish_factions_added_to_court
+		}
+		else_if = {
+			LIMIT = {
+				SCA= {
+					junior_union_with = ROOT
+				}
+				NOT = {
+					has_scandinavian_factions = yes
+				}
+				NOT = {
+					has_country_flag = scandinavian_factions_added_to_court
+				}
+			}
+			hidden_effect = {
+				SCA = {
+					PREV = {
+						add_accepted_culture = new_variable:PREV:primary_culture
+					}
+				}
+			}
+			add_faction = faction_vonwittlesbach
+			add_faction = faction_vonoldenburg
+			add_faction = faction_vasa
+			set_country_flag = scandinavian_factions_added_to_court
+		}
+		else_if = {
+			LIMIT = {
+				ROM= {
+					junior_union_with = ROOT
+				}
+				NOT = {
+					has_roman_factions = yes
+				}
+				NOT = {
+					has_country_flag = roman_factions_added_to_court
+				}
+			}
+			hidden_effect = {
+				ROM = {
+					PREV = {
+						add_accepted_culture = new_variable:PREV:primary_culture
+					}
+				}
+			}
+			add_faction = faction_julii
+			add_faction = faction_scipii
+			add_faction = faction_brutii
+			set_country_flag = roman_factions_added_to_court
+		}
+	}
+}
+
+save_factions = {
+	IF = {
+		limit = {
+			has_faction = faction_aberffraw
+		}
+		set_country_flag = has_aberffraw_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_borgia
+		}
+		set_country_flag = has_borgia_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_bourbon
+		}
+		set_country_flag = has_bourbon_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_brutii
+		}
+		set_country_flag = has_brutii_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_capet
+		}
+		set_country_flag = has_capet_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_carolingian
+		}
+		set_country_flag = has_carolingian_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_dimedici
+		}
+		set_country_flag = has_dimedici_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_godunov
+		}
+		set_country_flag = has_godunov_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_hohenzollern
+		}
+		set_country_flag = has_hohenzollern_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_ivrea
+		}
+		set_country_flag = has_ivrea_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_jimenez
+		}
+		set_country_flag = has_jimenez_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_julii
+		}
+		set_country_flag = has_julii_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_lancaster
+		}
+		set_country_flag = has_lancaster_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_maclochlainn
+		}
+		set_country_flag = has_maclochlainn_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_romanov
+		}
+		set_country_flag = has_romanov_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_rurikovic
+		}
+		set_country_flag = has_rurikovic_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_saxecoburg
+		}
+		set_country_flag = has_saxecoburg_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_scipii
+		}
+		set_country_flag = has_scipii_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_sforza
+		}
+		set_country_flag = has_sforza_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_stuart
+		}
+		set_country_flag = has_stuart_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_trastamara
+		}
+		set_country_flag = has_trastamara_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_tudor
+		}
+		set_country_flag = has_tudor_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_uabriain
+		}
+		set_country_flag = has_uabriain_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_uaconchobair
+		}
+		set_country_flag = has_uaconchobair_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_vasa
+		}
+		set_country_flag = has_vasa_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_valois
+		}
+		set_country_flag = has_valois_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_vanoranje
+		}
+		set_country_flag = has_vanoranje_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_vonhabsburgs
+		}
+		set_country_flag = has_vonhabsburgs_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_vonluxembourg
+		}
+		set_country_flag = has_vonluxembourg_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_vonoldenburg
+		}
+		set_country_flag = has_vonoldenburg_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_vonwittlesbach
+		}
+		set_country_flag = has_vonwittlesbach_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_york
+		}
+		set_country_flag = has_york_faction
+	}
+}
+
+readd_factions = {
+	IF = {
+		limit = {
+			has_country_flag = has_aberffraw_faction
+		}
+		add_faction = faction_aberffraw
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_borgia_faction
+		}
+		add_faction = faction_borgia
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_bourbon_faction
+		}
+		add_faction = faction_bourbon
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_brutii_faction
+		}
+		add_faction = faction_brutii
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_capet_faction
+		}
+		add_faction = faction_capet
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_carolingian_faction
+		}
+		add_faction = faction_carolingian
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_dimedici_faction
+		}
+		add_faction = faction_dimedici
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_godunov_faction
+		}
+		add_faction = faction_godunov
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_hohenzollern_faction
+		}
+		add_faction = faction_hohenzollern
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_ivrea_faction
+		}
+		add_faction = faction_ivrea
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_jimenez_faction
+		}
+		add_faction = faction_jimenez
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_julii_faction
+		}
+		add_faction = faction_julii
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_lancaster_faction
+		}
+		add_faction = faction_lancaster
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_maclochlainn_faction
+		}
+		add_faction = faction_maclochlainn
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_romanov_faction
+		}
+		add_faction = faction_romanov
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_rurikovic_faction
+		}
+		add_faction = faction_rurikovic
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_saxecoburg_faction
+		}
+		add_faction = faction_saxecoburg
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_scipii_faction
+		}
+		add_faction = faction_scipii
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_sforza_faction
+		}
+		add_faction = faction_sforza
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_stuart_faction
+		}
+		add_faction = faction_stuart
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_trastamara_faction
+		}
+		add_faction = faction_trastamara
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_tudor_faction
+		}
+		add_faction = faction_tudor
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_uabriain_faction
+		}
+		add_faction = faction_uabriain
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_uaconchobair_faction
+		}
+		add_faction = faction_uaconchobair
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_vasa_faction
+		}
+		add_faction = faction_vasa
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_valois_faction
+		}
+		add_faction = faction_valois
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_vanoranje_faction
+		}
+		add_faction = faction_vanoranje
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_vonhabsburgs_faction
+		}
+		add_faction = faction_vonhabsburgs
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_vonluxembourg_faction
+		}
+		add_faction = faction_vonluxembourg
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_vonoldenburg_faction
+		}
+		add_faction = faction_vonoldenburg
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_vonwittlesbach_faction
+		}
+		add_faction = faction_vonwittlesbach
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_york_faction
+		}
+		add_faction = faction_york
 	}
 }

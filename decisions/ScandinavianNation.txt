@@ -428,7 +428,10 @@ country_decisions = {
 		}
 		effect = {
 			restore_country_name_effect = yes
+			save_factions = yes
 			change_tag = SCA
+			add_government_reform = SCA_arch_king_reform
+			readd_factions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {

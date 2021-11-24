@@ -66,9 +66,13 @@ country_decisions = {
 				move_capital_effect = yes
 				change_culture = english
 			}
+			save_factions = yes
 			change_tag = ENG
 			change_primary_culture = english
 			set_ruler_culture = english
+			set_heir_culture = english
+			add_government_reform = english_monarchy
+			readd_factions = yes
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
@@ -86,6 +90,7 @@ country_decisions = {
 					}
 					set_heir_culture = english
 				}
+			save_factions = yes
 				swap_non_generic_missions = yes
 				remove_non_electors_emperors_from_empire_effect = yes
 				if = {

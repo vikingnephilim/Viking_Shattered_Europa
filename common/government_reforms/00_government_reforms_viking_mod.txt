@@ -90,6 +90,7 @@ british_monarchy = {
 		faction_aberffraw
 	}
 }
+
 kor_landed_aristocracy = {
 	icon = "asian_scripture"
 	allow_normal_conversion = no
@@ -2308,38 +2309,10 @@ irish_high_king = {
 		tolerance_own = 2
 		global_colonial_growth = 15
 	}
-}
-
-high_king_of_ireland_reform = {
-	icon = high_king_of_ireland
-	allow_normal_conversion = yes
-	valid_for_nation_designer = yes
-	nation_designer_cost = 0
-	fixed_rank = 2
-	potential = {
-		OR = {
-			has_reform = high_king_of_ireland_reform
-			tag = IRE
-		}
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
-	}
-	trigger = {
-		OR = {
-			has_reform = high_king_of_ireland_reform
-			tag = IRE
-		}
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
-	}
-	modifiers = {
-		prestige = 1
-		max_absolutism = 5
-	}
-	ai = {
-		factor = 100
+	factions = {
+		faction_maclochlainn
+		faction_uabriain
+		faction_uaconchobair
 	}
 }
 
@@ -2456,6 +2429,395 @@ arch_king_reform = {
 	}
 	ai = {
 		factor = 100
+	}
+}
+
+SCA_arch_king_reform = {
+	icon = crown_highlighted
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	fixed_rank = 3
+	nation_designer_cost = 0
+	potential = {
+		culture_group = scandinavian
+		tag = SCA
+		NOT = {
+			is_pagan_viking_mod = yes
+		}
+		1 = {
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		12 = {
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		17 = {
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+	}
+	trigger = {
+		culture_group = scandinavian
+		tag = SCA
+		NOT = {
+			is_pagan_viking_mod = yes
+		}
+		1 = {
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		12 = {
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+		17 = {
+			country_or_non_sovereign_subject_holds = ROOT
+		}
+	}
+	modifiers = {
+		prestige = 1
+		ae_impact = -0.1
+		core_creation = -0.1
+	}
+	factions = {
+		faction_vasa
+		faction_vonwittlesbach
+		faction_vonoldenburg
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+roman_government = {
+	icon = "peacock_throne"
+	allow_normal_conversion = yes
+	potential = {
+		has_dlc = "Dharma"
+		AND = {
+			tag = ROM
+			NOT = {
+				map_setup = map_setup_random
+			}
+		}
+		NOT = {
+			is_pagan_viking_mod = yes
+		}
+	}
+	lock_level_when_selected = yes
+	legacy_equivalent = feudal_monarchy
+	modifiers = {
+		tolerance_own = 1
+		governing_capacity = 150
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
+	}
+	factions = {
+		faction_brutii
+		faction_julii
+		faction_scipii
+	}
+	assimilation_cultures = {
+		aboriginal_australian = {
+			relation_with_heretics = 20
+		}
+		african = {
+			global_tax_income = 10
+		}
+		altaic = {
+			artillery_cost = -0.1
+		}
+		andean_group = {
+			treasure_fleet_income = 0.1
+		}
+		apachean = {
+			leader_land_shock = 1
+		}
+		araucanian = {
+			defensiveness = 0.1
+		}
+		aridoamerican = {
+			global_manpower_modifier = 0.1
+		}
+		baltic = {
+			naval_forcelimit_modifier = 0.05
+		}
+		basque_g = {
+			rebel_support_efficiency = 0.5
+		}
+		british = {
+			ship_durability = 0.05
+		}
+		burman = {
+			free_leader_pool = 1
+		}
+		byzantine = {
+			legitimacy = 0.25
+		}
+		caddoan = {
+			spy_offence = 0.1
+		}
+		carpathian = {
+			mercenary_cost = -0.1
+		}
+		carribean = {
+			global_spy_defence = 0.1
+		}
+		caucasian = {
+			mercenary_discipline = 0.05
+		}
+		celtic_iberian = {
+			range = 0.5
+		}
+		central_algonquian = {
+			native_assimilation = 0.25
+		}
+		central_american = {
+			native_uprising_chance = -0.25
+		}
+		central_indic = {
+			land_attrition = -0.1
+		}
+		chibchan = {
+			expel_minorities_cost = -0.1
+		}
+		cushitic = {
+			missionaries = 1
+		}
+		dravidian = {
+			global_trade_goods_size_modifier = 0.05
+		}
+		east_asian = {
+			state_maintenance_modifier = -0.2
+		}
+		east_iranian = {
+			global_heathen_missionary_strength = 0.03
+		}
+		east_maghrebi = {
+			advisor_pool = 1
+		}
+		east_malay = {
+			enforce_religion_cost = -0.5
+		}
+		east_slavic = {
+			land_forcelimit_modifier = 0.1
+		}
+		east_turkic_g = {
+			global_heretic_missionary_strength = 0.03
+		}
+		eastern_algonquian = {
+			discovered_relations_impact = -0.1
+		}
+		eastern_aryan = {
+			production_efficiency = 0.05
+		}
+		egyptian_g = {
+			global_missionary_strength = 0.03
+		}
+		eskaleut = {
+			global_spy_defence = 0.1
+		}
+		evenks = {
+			cavalry_flanking = 0.2
+		}
+		finnic = {
+			leader_land_manuever = 1
+		}
+		finno_ugric = {
+			prestige_decay = -0.01
+		}
+		french = {
+			diplomats = 1
+		}
+		gaelic = {
+			shock_damage = 0.05
+		}
+		germanic = {
+			global_institution_spread = 0.15
+		}
+		great_lakes_group = {
+			loot_amount = 0.5
+		}
+		hayhurum = {
+			war_exhaustion_cost = -0.1
+		}
+		hindusthani = {
+			core_creation = -0.1
+		}
+		iberian = {
+			global_colonial_growth = 10
+		}
+		illyrian = {
+			fort_maintenance_modifier = -0.1
+		}
+		iranian = {
+			advisor_cost = -0.1
+		}
+		iroquoian = {
+			global_garrison_growth = 0.1
+		}
+		japanese_g = {
+			land_morale = 0.1
+		}
+		je = {
+			global_supply_limit_modifier = 0.1
+		}
+		je_tupi = {
+			global_regiment_recruit_speed = -0.1
+		}
+		kamchatkan_g = {
+			hostile_attrition = 1
+		}
+		kongo_group = {
+			heir_chance = 0.5
+		}
+		korean_g = {
+			idea_cost = -0.05
+		}
+		latin = {
+			embracement_cost = -0.1
+		}
+		lost_cultures_group = {
+			vassal_income = 0.2
+		}
+		madagascan_g = {
+			vassal_forcelimit_bonus = 0.2
+		}
+		maghrebi = {
+			privateer_efficiency = 0.25
+		}
+		malay = {
+			merchants = 1
+		}
+		mande = {
+			tolerance_heretic = 1
+		}
+		maranon = {
+			improve_relation_modifier = 0.2
+		}
+		mataco = {
+			fabricate_claims_cost = -0.2
+		}
+		maya = {
+			global_tariffs = 0.25
+		}
+		mountain_east_asian = {
+			siege_ability = 0.1
+		}
+		mozarabic = {
+			same_culture_advisor_cost = -0.25
+		}
+		muskogean = {
+			shock_damage_received = -0.1
+		}
+		na_dene = {
+			recover_army_morale_speed = 0.1
+		}
+		north_malay = {
+			siege_blockade_progress = 1
+		}
+		novgorod_group = {
+			reserves_organisation = 0.1
+		}
+		old_norse_culture = {
+			global_regiment_recruit_speed = -0.1
+		}
+		otomanguean = {
+			rival_border_fort_maintenance = -0.1
+		}
+		pacific = {
+			global_sailors_modifier = 0.1
+		}
+		penutian = {
+			leader_cost = -0.1
+		}
+		phoenician_g = {
+			naval_tradition_from_trade = 0.1
+		}
+		plains_algonquian = {
+			diplomatic_annexation_cost = -0.2
+		}
+		plains_east_asian = {
+			diplomatic_upkeep = 1
+		}
+		ruthenian_group = {
+			envoy_travel_time = -0.2
+		}
+		ruthenian_south_group = {
+			years_of_nationalism = -5
+		}
+		sahelian = {
+			movement_speed = 0.1
+		}
+		sapmi = {
+			mercenary_manpower = 0.5
+		}
+		scandinavian = {
+			mil_advisor_cost = -0.1
+		}
+		siouan = {
+			enemy_core_creation = 0.2
+		}
+		sonoran = {
+			rival_change_cost = -0.2
+		}
+		southeastasian_group = {
+			development_cost = -0.05
+		}
+		south_germanic = {
+			discipline = 0.05
+		}
+		south_slavic = {
+			warscore_cost_vs_other_religion = -0.1
+		}
+		southern_african = {
+			inflation_reduction = 0.05
+		}
+		south_arab = {
+			inflation_action_cost = -0.1
+		}
+		south_french = {
+			core_decay_on_your_own = -0.1
+		}
+		south_latin = {
+			build_time = -0.25
+		}
+		sudanese = {
+			caravan_power = 0.1
+		}
+		tartar = {
+			cavalry_cost = -0.15
+		}
+		thai_group = {
+			build_cost = -0.05
+		}
+		tibetan_group = {
+			prestige_per_development_from_conversion = 0.5
+		}
+		turkish_g = {
+			institution_spread_from_true_faith = 0.1
+		}
+		turko_semitic = {
+			cavalry_power = 0.1
+		}
+		west_african = {
+			global_autonomy = -0.01
+		}
+		west_germanic = {
+			innovativeness_gain = 0.5
+		}
+		west_persian = {
+			yearly_corruption = -0.1
+		}
+		west_slavic = {
+			leader_land_fire = 1
+		}
+		western_aryan = {
+			trade_efficiency = 0.05
+		}
 	}
 }
 
