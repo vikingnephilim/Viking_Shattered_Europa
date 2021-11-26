@@ -40,7 +40,6 @@ country_decisions = {
 				AND = {
 					ai = yes
 					num_of_cities = 10
-					adm_tech = 7
 				}
 			}
 			is_colonial_nation = no
@@ -69,7 +68,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 7
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
@@ -79,7 +77,11 @@ country_decisions = {
 			owns_core_province = 1981			# Bornholm
 		}
 		effect = {
+			save_factions = yes
 			change_tag = DAN
+			change_government = monarchy
+			add_government_reform = arch_king_reform
+			readd_factions = yes
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
@@ -203,7 +205,6 @@ country_decisions = {
 				AND = {
 					ai = yes
 					num_of_cities = 10
-					adm_tech = 7
 				}
 			}
 			is_colonial_nation = no
@@ -232,7 +233,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			adm_tech = 7
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_at_war = no
@@ -243,7 +243,11 @@ country_decisions = {
 		}
 		effect = {
 			restore_country_name_effect = yes
+			save_factions = yes
 			change_tag = SWE
+			change_government = monarchy
+			add_government_reform = office_of_lord_regent_reform
+			readd_factions = yes
 			if = {
 				limit = {
 					NOT = {

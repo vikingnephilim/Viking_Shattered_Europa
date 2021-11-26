@@ -1045,55 +1045,55 @@ faction_in_power_effect = {
 	else_if = {
 		limit = {
 			SCA = {
-				faction_in_power = faction_julii
+				faction_in_power = faction_komnenos
 			}
 			NOT = {
-				has_country_flag = julii_added_to_factions
+				has_country_flag = komnenos_added_to_factions
 			}
 		}
 		ROOT = {
-			add_faction = faction_julii
+			add_faction = faction_komnenos
 			add_faction_influence = {
-				faction = faction_julii
+				faction = faction_komnenos
 				influence = 33
 			}
-			set_country_flag = julii_added_to_factions
+			set_country_flag = komnenos_added_to_factions
 		}
 	}
 	else_if = {
 		limit = {
 			SCA = {
-				faction_in_power = faction_scipii
+				faction_in_power = faction_kantakouzenos
 			}
 			NOT = {
-				has_country_flag = scipii_added_to_factions
+				has_country_flag = kantakouzenos_added_to_factions
 			}
 		}
 		ROOT = {
-			add_faction = faction_scipii
+			add_faction = faction_kantakouzenos
 			add_faction_influence = {
-				faction = faction_scipii
+				faction = faction_kantakouzenos
 				influence = 33
 			}
-			set_country_flag = scipii_added_to_factions
+			set_country_flag = kantakouzenos_added_to_factions
 		}
 	}
 	else_if = {
 		limit = {
 			SCA = {
-				faction_in_power = faction_brutii
+				faction_in_power = faction_palaiologos
 			}
 			NOT = {
-				has_country_flag = brutii_added_to_factions
+				has_country_flag = palaiologos_added_to_factions
 			}
 		}
 		ROOT = {
-			add_faction = faction_brutii
+			add_faction = faction_palaiologos
 			add_faction_influence = {
-				faction = faction_brutii
+				faction = faction_palaiologos
 				influence = 33
 			}
-			set_country_flag = brutii_added_to_factions
+			set_country_flag = palaiologos_added_to_factions
 		}
 	}
 }
@@ -1143,7 +1143,7 @@ factions_join_court_effect = {
 					}
 				}
 			}
-			add_faction = faction_tudor
+			add_faction = faction_plantagenet
 			add_faction = faction_york
 			add_faction = faction_lancaster
 			set_country_flag = english_factions_added_to_court
@@ -1239,8 +1239,8 @@ factions_join_court_effect = {
 					}
 				}
 			}
-			add_faction = faction_vonluxembourg
-			add_faction = faction_vonwittlesbach
+			add_faction = faction_brandenburg
+			add_faction = faction_pomerania
 			add_faction = faction_hohenzollern
 			set_country_flag = german_factions_added_to_court
 		}
@@ -1263,9 +1263,9 @@ factions_join_court_effect = {
 					}
 				}
 			}
-			add_faction = faction_vonluxembourg
-			add_faction = faction_vonwittlesbach
-			add_faction = faction_hohenzollern
+			add_faction = faction_wurtemburg
+			add_faction = faction_vonoldenburg
+			add_faction = faction_anhalt
 			set_country_flag = german_factions_added_to_court
 		}
 		else_if = {
@@ -1289,36 +1289,12 @@ factions_join_court_effect = {
 			}
 			add_faction = faction_vonhabsburgs
 			add_faction = faction_vonwittlesbach
-			add_faction = faction_hohenzollern
+			add_faction = faction_vonluxembourg
 			set_country_flag = hre_factions_added_to_court
 		}
 		else_if = {
 			LIMIT = {
-				NED= {
-					junior_union_with = ROOT
-				}
-				NOT = {
-					has_dutch_factions = yes
-				}
-				NOT = {
-					has_country_flag = dutch_factions_added_to_court
-				}
-			}
-			hidden_effect = {
-				NED = {
-					PREV = {
-						add_accepted_culture = new_variable:PREV:primary_culture
-					}
-				}
-			}
-			add_faction = faction_vanoranje
-			add_faction = faction_vonluxembourg
-			add_faction = faction_saxecoburg
-			set_country_flag = dutch_factions_added_to_court
-		}
-		else_if = {
-			LIMIT = {
-				ITA= {
+				ITA = {
 					junior_union_with = ROOT
 				}
 				NOT = {
@@ -1335,14 +1311,38 @@ factions_join_court_effect = {
 					}
 				}
 			}
-			add_faction = faction_sforza
-			add_faction = faction_borgia
 			add_faction = faction_dimedici
+			add_faction = faction_borgia
+			add_faction = faction_sforza
 			set_country_flag = italian_factions_added_to_court
 		}
 		else_if = {
 			LIMIT = {
-				RUS= {
+				NED = {
+					junior_union_with = ROOT
+				}
+				NOT = {
+					has_dutch_factions = yes
+				}
+				NOT = {
+					has_country_flag = dutch_factions_added_to_court
+				}
+			}
+			hidden_effect = {
+				NED = {
+					PREV = {
+						add_accepted_culture = new_variable:PREV:primary_culture
+					}
+				}
+			}
+			add_faction = faction_lippe
+			add_faction = faction_saxecoburg
+			add_faction = faction_vanoranje
+			set_country_flag = dutch_factions_added_to_court
+		}
+		else_if = {
+			LIMIT = {
+				RUS = {
 					junior_union_with = ROOT
 				}
 				NOT = {
@@ -1390,7 +1390,7 @@ factions_join_court_effect = {
 		}
 		else_if = {
 			LIMIT = {
-				SCA= {
+				SCA = {
 					junior_union_with = ROOT
 				}
 				NOT = {
@@ -1407,14 +1407,14 @@ factions_join_court_effect = {
 					}
 				}
 			}
-			add_faction = faction_vonwittlesbach
-			add_faction = faction_vonoldenburg
+			add_faction = faction_budde
+			add_faction = faction_paus
 			add_faction = faction_vasa
 			set_country_flag = scandinavian_factions_added_to_court
 		}
 		else_if = {
 			LIMIT = {
-				ROM= {
+				ROM = {
 					junior_union_with = ROOT
 				}
 				NOT = {
@@ -1431,10 +1431,58 @@ factions_join_court_effect = {
 					}
 				}
 			}
-			add_faction = faction_julii
-			add_faction = faction_scipii
-			add_faction = faction_brutii
+			add_faction = faction_komnenos
+			add_faction = faction_kantakouzenos
+			add_faction = faction_palaiologos
 			set_country_flag = roman_factions_added_to_court
+		}
+		else_if = {
+			LIMIT = {
+				SWE = {
+					junior_union_with = ROOT
+				}
+				NOT = {
+					has_swedish_factions = yes
+				}
+				NOT = {
+					has_country_flag = swedish_factions_added_to_court
+				}
+			}
+			hidden_effect = {
+				SWE = {
+					PREV = {
+						add_accepted_culture = new_variable:PREV:primary_culture
+					}
+				}
+			}
+			add_faction = faction_bjalbo
+			add_faction = faction_estridsen
+			add_faction = faction_sverker
+			set_country_flag = swedish_factions_added_to_court
+		}
+		else_if = {
+			LIMIT = {
+				DAN = {
+					junior_union_with = ROOT
+				}
+				NOT = {
+					has_danish_factions = yes
+				}
+				NOT = {
+					has_country_flag = swedish_factions_added_to_court
+				}
+			}
+			hidden_effect = {
+				DAN = {
+					PREV = {
+						add_accepted_culture = new_variable:PREV:primary_culture
+					}
+				}
+			}
+			add_faction = faction_hvide
+			add_faction = faction_marsvin
+			add_faction = faction_sappi
+			set_country_flag = danish_factions_added_to_court
 		}
 	}
 }
@@ -1445,6 +1493,18 @@ save_factions = {
 			has_faction = faction_aberffraw
 		}
 		set_country_flag = has_aberffraw_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_anhalt
+		}
+		set_country_flag = has_anhalt_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_bjalbo
+		}
+		set_country_flag = has_bjalbo_faction
 	}
 	IF = {
 		limit = {
@@ -1460,9 +1520,15 @@ save_factions = {
 	}
 	IF = {
 		limit = {
-			has_faction = faction_brutii
+			has_faction = faction_brandenburg
 		}
-		set_country_flag = has_brutii_faction
+		set_country_flag = has_brandenburg_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_budde
+		}
+		set_country_flag = has_budde_faction
 	}
 	IF = {
 		limit = {
@@ -1484,6 +1550,12 @@ save_factions = {
 	}
 	IF = {
 		limit = {
+			has_faction = faction_estridsen
+		}
+		set_country_flag = has_estridsen_faction
+	}
+	IF = {
+		limit = {
 			has_faction = faction_godunov
 		}
 		set_country_flag = has_godunov_faction
@@ -1493,6 +1565,12 @@ save_factions = {
 			has_faction = faction_hohenzollern
 		}
 		set_country_flag = has_hohenzollern_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_hvide
+		}
+		set_country_flag = has_hvide_faction
 	}
 	IF = {
 		limit = {
@@ -1508,9 +1586,15 @@ save_factions = {
 	}
 	IF = {
 		limit = {
-			has_faction = faction_julii
+			has_faction = faction_kantakouzenos
 		}
-		set_country_flag = has_julii_faction
+		set_country_flag = has_kantakouzenos_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_komnenos
+		}
+		set_country_flag = has_komnenos_faction
 	}
 	IF = {
 		limit = {
@@ -1520,9 +1604,45 @@ save_factions = {
 	}
 	IF = {
 		limit = {
+			has_faction = faction_lippe
+		}
+		set_country_flag = has_lippe_faction
+	}
+	IF = {
+		limit = {
 			has_faction = faction_maclochlainn
 		}
 		set_country_flag = has_maclochlainn_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_marsvin
+		}
+		set_country_flag = has_marsvin_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_palaiologos
+		}
+		set_country_flag = has_palaiologos_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_paus
+		}
+		set_country_flag = has_paus_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_plantagenet
+		}
+		set_country_flag = has_plantagenet_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_pomerania
+		}
+		set_country_flag = has_pomerania_faction
 	}
 	IF = {
 		limit = {
@@ -1544,12 +1664,6 @@ save_factions = {
 	}
 	IF = {
 		limit = {
-			has_faction = faction_scipii
-		}
-		set_country_flag = has_scipii_faction
-	}
-	IF = {
-		limit = {
 			has_faction = faction_sforza
 		}
 		set_country_flag = has_sforza_faction
@@ -1559,6 +1673,12 @@ save_factions = {
 			has_faction = faction_stuart
 		}
 		set_country_flag = has_stuart_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_sverker
+		}
+		set_country_flag = has_sverker_faction
 	}
 	IF = {
 		limit = {
@@ -1586,12 +1706,6 @@ save_factions = {
 	}
 	IF = {
 		limit = {
-			has_faction = faction_vasa
-		}
-		set_country_flag = has_vasa_faction
-	}
-	IF = {
-		limit = {
 			has_faction = faction_valois
 		}
 		set_country_flag = has_valois_faction
@@ -1601,6 +1715,12 @@ save_factions = {
 			has_faction = faction_vanoranje
 		}
 		set_country_flag = has_vanoranje_faction
+	}
+	IF = {
+		limit = {
+			has_faction = faction_vasa
+		}
+		set_country_flag = has_vasa_faction
 	}
 	IF = {
 		limit = {
@@ -1628,6 +1748,12 @@ save_factions = {
 	}
 	IF = {
 		limit = {
+			has_faction = faction_wurtemburg
+		}
+		set_country_flag = has_wurtemburg_faction
+	}
+	IF = {
+		limit = {
 			has_faction = faction_york
 		}
 		set_country_flag = has_york_faction
@@ -1643,6 +1769,18 @@ readd_factions = {
 	}
 	IF = {
 		limit = {
+			has_country_flag = has_anhalt_faction
+		}
+		add_faction = faction_anhalt
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_bjalbo_faction
+		}
+		add_faction = faction_bjalbo
+	}
+	IF = {
+		limit = {
 			has_country_flag = has_borgia_faction
 		}
 		add_faction = faction_borgia
@@ -1655,9 +1793,15 @@ readd_factions = {
 	}
 	IF = {
 		limit = {
-			has_country_flag = has_brutii_faction
+			has_country_flag = has_brandenburg_faction
 		}
-		add_faction = faction_brutii
+		add_faction = faction_brandenburg
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_budde_faction
+		}
+		add_faction = faction_budde
 	}
 	IF = {
 		limit = {
@@ -1679,6 +1823,12 @@ readd_factions = {
 	}
 	IF = {
 		limit = {
+			has_country_flag = has_estridsen_faction
+		}
+		add_faction = faction_estridsen
+	}
+	IF = {
+		limit = {
 			has_country_flag = has_godunov_faction
 		}
 		add_faction = faction_godunov
@@ -1688,6 +1838,12 @@ readd_factions = {
 			has_country_flag = has_hohenzollern_faction
 		}
 		add_faction = faction_hohenzollern
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_hvide_faction
+		}
+		add_faction = faction_hvide
 	}
 	IF = {
 		limit = {
@@ -1703,9 +1859,15 @@ readd_factions = {
 	}
 	IF = {
 		limit = {
-			has_country_flag = has_julii_faction
+			has_country_flag = has_kantakouzenos_faction
 		}
-		add_faction = faction_julii
+		add_faction = faction_kantakouzenos
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_komnenos_faction
+		}
+		add_faction = faction_komnenos
 	}
 	IF = {
 		limit = {
@@ -1715,9 +1877,45 @@ readd_factions = {
 	}
 	IF = {
 		limit = {
+			has_country_flag = has_lippe_faction
+		}
+		add_faction = faction_lippe
+	}
+	IF = {
+		limit = {
 			has_country_flag = has_maclochlainn_faction
 		}
 		add_faction = faction_maclochlainn
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_marsvin_faction
+		}
+		add_faction = faction_marsvin
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_palaiologos_faction
+		}
+		add_faction = faction_palaiologos
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_paus_faction
+		}
+		add_faction = faction_paus
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_plantagenet_faction
+		}
+		add_faction = faction_plantagenet
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_pomerania_faction
+		}
+		add_faction = faction_pomerania
 	}
 	IF = {
 		limit = {
@@ -1739,12 +1937,6 @@ readd_factions = {
 	}
 	IF = {
 		limit = {
-			has_country_flag = has_scipii_faction
-		}
-		add_faction = faction_scipii
-	}
-	IF = {
-		limit = {
 			has_country_flag = has_sforza_faction
 		}
 		add_faction = faction_sforza
@@ -1754,6 +1946,12 @@ readd_factions = {
 			has_country_flag = has_stuart_faction
 		}
 		add_faction = faction_stuart
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_sverker_faction
+		}
+		add_faction = faction_sverker
 	}
 	IF = {
 		limit = {
@@ -1781,12 +1979,6 @@ readd_factions = {
 	}
 	IF = {
 		limit = {
-			has_country_flag = has_vasa_faction
-		}
-		add_faction = faction_vasa
-	}
-	IF = {
-		limit = {
 			has_country_flag = has_valois_faction
 		}
 		add_faction = faction_valois
@@ -1796,6 +1988,12 @@ readd_factions = {
 			has_country_flag = has_vanoranje_faction
 		}
 		add_faction = faction_vanoranje
+	}
+	IF = {
+		limit = {
+			has_country_flag = has_vasa_faction
+		}
+		add_faction = faction_vasa
 	}
 	IF = {
 		limit = {
@@ -1823,8 +2021,568 @@ readd_factions = {
 	}
 	IF = {
 		limit = {
+			has_country_flag = has_wurtemburg_faction
+		}
+		add_faction = faction_wurtemburg
+	}
+	IF = {
+		limit = {
 			has_country_flag = has_york_faction
 		}
 		add_faction = faction_york
+	}
+}
+
+nested_viking_random_effect = {
+	random_list = {
+		20 = {
+			random_owned_province = {
+				limit = {
+					NOT = {
+						has_building = courthouse
+					}
+				}
+				add_base_tax = 1
+				add_building_construction = {
+					building = courthouse
+					speed = 0.5
+					cost = 0.25
+				}
+			}
+		}
+		20 = {
+			random_owned_province = {
+				limit = {
+					NOT = {
+						has_building = workshop
+					}
+				}
+				add_base_production = 1
+				add_building_construction = {
+					building = workshop
+					speed = 0.5
+					cost = 0.25
+				}
+			}
+		}
+		20 = {
+			random_owned_province = {
+				limit = {
+					NOT = {
+						has_building = temple
+					}
+				}
+				add_base_tax = 1
+				add_building_construction = {
+					building = temple
+					speed = 0.5
+					cost = 0.25
+				}
+			}
+		}
+		20 = {
+			random_owned_province = {
+				limit = {
+					NOT = {
+						has_building = barracks
+					}
+				}
+				add_base_manpower = 1
+				add_building_construction = {
+					building = barracks
+					speed = 0.5
+					cost = 0.25
+				}
+			}
+		}
+		20 = {
+			random_owned_province = {
+				limit = {
+					NOT = {
+						has_building = regimental_camp
+					}
+				}
+				add_base_manpower = 1
+				add_building_construction = {
+					building = regimental_camp
+					speed = 0.5
+					cost = 0.25
+				}
+			}
+		}
+	}
+}
+viking_random_faction_effect = {
+	random_list = {
+		2 = {
+			trigger = {
+				has_faction = faction_aberffraw
+			}
+			add_faction_influence = {
+				faction = faction_tudor
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_anhalt
+			}
+			add_faction_influence = {
+				faction = faction_anhalt
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_bjalbo
+			}
+			add_faction_influence = {
+				faction = faction_bjalbo
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_borgia
+			}
+			add_faction_influence = {
+				faction = faction_borgia
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_bourbon
+			}
+			add_faction_influence = {
+				faction = faction_bourbon
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_brandenburg
+			}
+			add_faction_influence = {
+				faction = faction_brandenburg
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_budde
+			}
+			add_faction_influence = {
+				faction = faction_budde
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_capet
+			}
+			add_faction_influence = {
+				faction = faction_capet
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_carolingian
+			}
+			add_faction_influence = {
+				faction = faction_carolingian
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_dimedici
+			}
+			add_faction_influence = {
+				faction = faction_dimedici
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_estridsen
+			}
+			add_faction_influence = {
+				faction = faction_estridsen
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_godunov
+			}
+			add_faction_influence = {
+				faction = faction_godunov
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_hohenzollern
+			}
+			add_faction_influence = {
+				faction = faction_hohenzollern
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_hvide
+			}
+			add_faction_influence = {
+				faction = faction_hvide
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_ivrea
+			}
+			add_faction_influence = {
+				faction = faction_ivrea
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_jimenez
+			}
+			add_faction_influence = {
+				faction = faction_jimenez
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_kantakouzenos
+			}
+			add_faction_influence = {
+				faction = faction_kantakouzenos
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_komnenos
+			}
+			add_faction_influence = {
+				faction = faction_komnenos
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_lancaster
+			}
+			add_faction_influence = {
+				faction = faction_lancaster
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_lippe
+			}
+			add_faction_influence = {
+				faction = faction_lippe
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_lippe
+			}
+			add_faction_influence = {
+				faction = faction_lippe
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_maclochlainn
+			}
+			add_faction_influence = {
+				faction = faction_maclochlainn
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_marsvin
+			}
+			add_faction_influence = {
+				faction = faction_marsvin
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_palaiologos
+			}
+			add_faction_influence = {
+				faction = faction_palaiologos
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_paus
+			}
+			add_faction_influence = {
+				faction = faction_paus
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_plantagenet
+			}
+			add_faction_influence = {
+				faction = faction_plantagenet
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_pomerania
+			}
+			add_faction_influence = {
+				faction = faction_pomerania
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_romanov
+			}
+			add_faction_influence = {
+				faction = faction_romanov
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_rurikovic
+			}
+			add_faction_influence = {
+				faction = faction_rurikovic
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_sappi
+			}
+			add_faction_influence = {
+				faction = faction_sappi
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_saxecoburg
+			}
+			add_faction_influence = {
+				faction = faction_saxecoburg
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_sforza
+			}
+			add_faction_influence = {
+				faction = faction_sforza
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_stuart
+			}
+			add_faction_influence = {
+				faction = faction_stuart
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_sverker
+			}
+			add_faction_influence = {
+				faction = faction_sverker
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_trastamara
+			}
+			add_faction_influence = {
+				faction = faction_trastamara
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_tudor
+			}
+			add_faction_influence = {
+				faction = faction_tudor
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_uabriain
+			}
+			add_faction_influence = {
+				faction = faction_uabriain
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_uaconchobair
+			}
+			add_faction_influence = {
+				faction = faction_uaconchobair
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_valois
+			}
+			add_faction_influence = {
+				faction = faction_valois
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_vanoranje
+			}
+			add_faction_influence = {
+				faction = faction_vanoranje
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_vasa
+			}
+			add_faction_influence = {
+				faction = faction_vasa
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_vonhabsburgs
+			}
+			add_faction_influence = {
+				faction = faction_vonhabsburgs
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_vonluxembourg
+			}
+			add_faction_influence = {
+				faction = faction_vonluxembourg
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_vonoldenburg
+			}
+			add_faction_influence = {
+				faction = faction_vonoldenburg
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_vonwittlesbach
+			}
+			add_faction_influence = {
+				faction = faction_vonwittlesbach
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_wurtemburg
+			}
+			add_faction_influence = {
+				faction = faction_wurtemburg
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
+		2 = {
+			trigger = {
+				has_faction = faction_york
+			}
+			add_faction_influence = {
+				faction = faction_york
+				influence = 10
+			}
+			nested_viking_random_effect = yes
+		}
 	}
 }

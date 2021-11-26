@@ -1,149 +1,131 @@
 monarch_power = DIP
-
 # applied when a country is ahead of time in this technology
 ahead_of_time = {
 	trade_efficiency = 0.2
-
-
 	yearly_corruption = -0.05
 }
 
 # Pre-era techs
-technology = { #Early Ships
+technology = {
+	#Early Ships
 	# Tech 0
 	year = 1350
-	
-	naval_morale			=	2.0
-	range					=	60
+	naval_morale = 2
+	range = 60
 	may_fabricate_claims = yes
-
 	enable = war_canoe
-
-
 }
 
-technology = { #Merchants & Trade
+technology = {
+	#Merchants & Trade
 	# Tech 1
 	year = 1390
 	expects_institution = {
 		feudalism = 0.25
 	}
-	
 	merchants = yes
-	trade_range				=	100
-	global_colonial_growth	= 	10
+	trade_range = 100
+	global_colonial_growth = 10
 }
 
-technology = { #The Barque
+technology = {
+	#The Barque
 	# Tech 2
 	year = 1420
 	expects_institution = {
 		feudalism = 0.5
 	}
-	
 	enable = barque
-	trade_range				=	100
+	trade_range = 100
 	enable = cog
 	enable = galley
-	
 	naval_engagement_width = 20
-
 }
 
 # The 30 big techs from here on
-
-technology = { #The Early Carrack
+technology = {
+	#The Early Carrack
 	# Tech 3
 	year = 1440
 	expects_institution = {
 		feudalism = 0.5
 	}
-
-	naval_morale			=	0.1
-	naval_maintenance		= 	0.1
-	range					= 	100
-	trade_efficiency 		= 	0.02
-	global_colonial_growth	= 	15
+	naval_morale = 0.1
+	naval_maintenance = 0.1
+	range = 100
+	trade_efficiency = 0.02
+	global_colonial_growth = 15
 	may_build_flagships = yes
-	
 	enable = early_carrack
-
-
 }
 
-technology = { #Marketplace
+technology = {
+	#Marketplace
 	# Tech 4
 	year = 1453
 	expects_institution = {
 		feudalism = 0.5
 	}
-		
-	trade_range	= 10
-	marketplace = yes 
-	
-	
+	trade_range = 10
+	marketplace = yes
 }
 
-technology = { #Basic Financial Instruments
+technology = {
+	#Basic Financial Instruments
 	# Tech 5
 	year = 1466
 	expects_institution = {
 		feudalism = 0.5
 		renaissance = 0.15
 	}
-	
-	naval_maintenance		=	0.1	
-	trade_efficiency 		= 	0.02
-	trade_range				=	20
-	
+	naval_maintenance = 0.1
+	trade_efficiency = 0.02
+	trade_range = 20
 	coastal_defence = yes
 }
 
-technology = { #Shipyards
+technology = {
+	#Shipyards
 	# Tech 6
 	year = 1479
 	expects_institution = {
 		feudalism = 0.5
 		renaissance = 0.3
 	}
-	
-	dock = yes	
+	dock = yes
 	may_steal_maps = yes
-
 }
 
-technology = { #Naval Ambitions
+technology = {
+	#Naval Ambitions
 	# Tech 7
 	year = 1492
 	expects_institution = {
 		feudalism = 0.5
 		renaissance = 0.5
 	}
-	
-	naval_morale			= 0.3
-	range					= 115
-	impressment_offices 	= yes
+	naval_morale = 0.3
+	range = 115
+	impressment_offices = yes
 	naval_engagement_width = 10
 }
 
-technology  = { #Docks
+technology = {
+	#Docks
 	# Tech 8
 	year = 1505
 	expects_institution = {
 		feudalism = 0.5
 		renaissance = 0.5
 	}
-
-	
 	num_accepted_cultures = 1
 	shipyard = yes
-
-	trade_range				=	10
-	naval_morale			=	0.2
-
+	trade_range = 10
+	naval_morale = 0.2
 }
 
-technology = { #Carracks & Caravel
+technology = {
+	#Carracks & Caravel
 	# Tech 9
 	year = 1518
 	expects_institution = {
@@ -151,17 +133,15 @@ technology = { #Carracks & Caravel
 		renaissance = 0.5
 		new_world_i = 0.15
 	}
-	
-	naval_maintenance		= 	0.1
-	range					=	50
-	
+	naval_maintenance = 0.1
+	range = 50
 	enable = carrack
 	enable = caravel
 	may_study_technology = yes
-	
 }
 
-technology = { #The Flute
+technology = {
+	#The Flute
 	# Tech 10
 	year = 1531
 	expects_institution = {
@@ -169,15 +149,15 @@ technology = { #The Flute
 		renaissance = 0.5
 		new_world_i = 0.3
 	}
-	
-	trade_efficiency		= 	0.02
-	trade_range				=	20
-	global_colonial_growth  = 	10
+	trade_efficiency = 0.02
+	trade_range = 20
+	global_colonial_growth = 10
 	enable = flute
 	enable = war_galley
 }
 
-technology = { #Wharf
+technology = {
+	#Wharf
 	# Tech 11
 	year = 1544
 	expects_institution = {
@@ -185,14 +165,12 @@ technology = { #Wharf
 		renaissance = 0.5
 		new_world_i = 0.5
 	}
-	
-	range					= 	100
-
+	range = 100
 	wharf = yes
-
 }
 
-technology = { #Man of War
+technology = {
+	#Man of War
 	# Tech 12
 	year = 1557
 	expects_institution = {
@@ -200,16 +178,14 @@ technology = { #Man of War
 		renaissance = 0.5
 		new_world_i = 0.5
 	}
-
-	naval_morale			=	0.4
+	naval_morale = 0.4
 	may_slander_merchants = yes
-
 	naval_battery = yes
 	naval_engagement_width = 15
-	
 }
 
-technology = { #Chartered Companies
+technology = {
+	#Chartered Companies
 	# Tech 13
 	year = 1570
 	expects_institution = {
@@ -218,13 +194,12 @@ technology = { #Chartered Companies
 		new_world_i = 0.5
 		printing_press = 0.15
 	}
-	
-	trade_efficiency 		= 	0.02
+	trade_efficiency = 0.02
 	enable = brig
-
 }
 
-technology = { #The Galleass
+technology = {
+	#The Galleass
 	# Tech 14
 	year = 1583
 	expects_institution = {
@@ -233,15 +208,13 @@ technology = { #The Galleass
 		new_world_i = 0.5
 		printing_press = 0.3
 	}
-	
 	tradecompany = yes
 	num_accepted_cultures = 1
-
-	
 	enable = galleass
 }
- 
-technology = { #The Galleon
+
+technology = {
+	#The Galleon
 	# Tech 15
 	year = 1596
 	expects_institution = {
@@ -250,18 +223,16 @@ technology = { #The Galleon
 		new_world_i = 0.5
 		printing_press = 0.5
 	}
-	
-	naval_maintenance		= 	0.1
-	range					=	50
-	global_colonial_growth  = 	15
-	
+	naval_maintenance = 0.1
+	range = 50
+	global_colonial_growth = 15
 	enable = galleon
 	enable = early_frigate
 	may_sabotage_recruitment = yes
-
 }
 
-technology = { #Development of Maritime Law
+technology = {
+	#Development of Maritime Law
 	# Tech 16
 	year = 1609
 	expects_institution = {
@@ -270,13 +241,12 @@ technology = { #Development of Maritime Law
 		new_world_i = 0.5
 		printing_press = 0.5
 	}
-	
-	trade_efficiency 		= 	0.02
-	trade_range				=	20
-
+	trade_efficiency = 0.02
+	trade_range = 20
 }
 
-technology = { #Merchantman
+technology = {
+	#Merchantman
 	# Tech 17
 	year = 1622
 	expects_institution = {
@@ -286,18 +256,14 @@ technology = { #Merchantman
 		printing_press = 0.5
 		global_trade = 0.15
 	}
-	
-	trade_range				=	20
-	range					=	50
-	
-	
-	trade_depot = yes 
-
-
+	trade_range = 20
+	range = 50
+	trade_depot = yes
 	enable = merchantman
 }
 
-technology = { #Line of Battle
+technology = {
+	#Line of Battle
 	# Tech 18
 	year = 1635
 	expects_institution = {
@@ -307,17 +273,14 @@ technology = { #Line of Battle
 		printing_press = 0.5
 		global_trade = 0.3
 	}
-	
 	enable = galiot
-	naval_morale			=	0.5
+	naval_morale = 0.5
 	may_sow_discontent = yes
-	
 	naval_engagement_width = 10
-
-	
 }
 
-technology = { #The War Galleon
+technology = {
+	#The War Galleon
 	# Tech 19
 	year = 1648
 	expects_institution = {
@@ -327,18 +290,15 @@ technology = { #The War Galleon
 		printing_press = 0.5
 		global_trade = 0.5
 	}
-	
-	naval_maintenance		= 	0.1	
-	range					=	50
-	
-	drydock = yes 
-	
-	
+	naval_maintenance = 0.1
+	range = 50
+	drydock = yes
 	enable = wargalleon
 	enable = frigate
 }
 
-technology = { #Naval Professionalization
+technology = {
+	#Naval Professionalization
 	# Tech 20
 	year = 1661
 	expects_institution = {
@@ -348,14 +308,13 @@ technology = { #Naval Professionalization
 		printing_press = 0.5
 		global_trade = 0.5
 	}
-
-	trade_efficiency 		= 	0.02
-	trade_range				=	20
+	trade_efficiency = 0.02
+	trade_range = 20
 	num_accepted_cultures = 1
-	
 }
 
-technology = { #The Chebeck
+technology = {
+	#The Chebeck
 	# Tech 21
 	year = 1674
 	expects_institution = {
@@ -366,13 +325,12 @@ technology = { #The Chebeck
 		global_trade = 0.5
 		manufactories = 0.15
 	}
-
 	enable = chebeck
 	may_sabotage_reputation = yes
-
 }
 
-technology = { #Limes
+technology = {
+	#Limes
 	# Tech 22
 	year = 1687
 	expects_institution = {
@@ -383,20 +341,17 @@ technology = { #Limes
 		global_trade = 0.5
 		manufactories = 0.3
 	}
-	
-	naval_morale			=	0.5
-	naval_maintenance		= 	0.1
-	
-
+	naval_morale = 0.5
+	naval_maintenance = 0.1
 	stock_exchange = yes
-
 	reduced_naval_attrition = yes
 	enable = twodecker
 	enable = trabakul
 	naval_engagement_width = 5
 }
 
-technology = { #Heavy Frigates
+technology = {
+	#Heavy Frigates
 	# Tech 23
 	year = 1700
 	expects_institution = {
@@ -407,16 +362,14 @@ technology = { #Heavy Frigates
 		global_trade = 0.5
 		manufactories = 0.5
 	}
-	
-	global_colonial_growth  = 	25	
-	range					=	150
-	allow_client_states = yes		
-
-	
+	global_colonial_growth = 25
+	range = 150
+	allow_client_states = yes
 	enable = heavy_frigate
 }
 
-technology = { #The Archipelago Frigate
+technology = {
+	#The Archipelago Frigate
 	# Tech 24
 	year = 1715
 	expects_institution = {
@@ -428,19 +381,16 @@ technology = { #The Archipelago Frigate
 		manufactories = 0.5
 		enlightenment = 0.15
 	}
-	
-	grand_shipyard = yes 
-
-	
-	trade_efficiency 		= 	0.02
-	trade_range				=	20
+	grand_shipyard = yes
+	trade_efficiency = 0.02
+	trade_range = 20
 	enable = archipelago_frigate
 	may_corrupt_officials = yes
 	naval_engagement_width = 10
-
 }
 
-technology = { #The Threedeckers
+technology = {
+	#The Threedeckers
 	# Tech 25
 	year = 1730
 	expects_institution = {
@@ -452,14 +402,13 @@ technology = { #The Threedeckers
 		manufactories = 0.5
 		enlightenment = 0.3
 	}
-	
-	naval_morale			=	0.5
-	naval_maintenance		= 	0.1
-	
+	naval_morale = 0.5
+	naval_maintenance = 0.1
 	enable = threedecker
 }
 
-technology = { #The Eastindiaman
+technology = {
+	#The Eastindiaman
 	# Tech 26
 	year = 1745
 	expects_institution = {
@@ -471,16 +420,15 @@ technology = { #The Eastindiaman
 		manufactories = 0.5
 		enlightenment = 0.5
 	}
-	
-	range					=	200
-	global_colonial_growth  = 	25
+	range = 200
+	global_colonial_growth = 25
 	num_accepted_cultures = 1
-	
 	enable = eastindiaman
 	enable = great_frigate
 }
 
-technology = { #Public Punishments
+technology = {
+	#Public Punishments
 	# Tech 27
 	year = 1760
 	expects_institution = {
@@ -492,14 +440,13 @@ technology = { #Public Punishments
 		manufactories = 0.5
 		enlightenment = 0.5
 	}
-	
-	naval_morale			=	0.5
-	naval_maintenance		= 	0.1
+	naval_morale = 0.5
+	naval_maintenance = 0.1
 	may_agitate_for_liberty = yes
-
 }
 
-technology = { #Joint Stock Companies
+technology = {
+	#Joint Stock Companies
 	# Tech 28
 	year = 1775
 	expects_institution = {
@@ -512,12 +459,12 @@ technology = { #Joint Stock Companies
 		enlightenment = 0.5
 		industrialization = 0.25
 	}
-	
-	trade_efficiency 		= 	0.02
-	trade_range				=	20
+	trade_efficiency = 0.02
+	trade_range = 20
 }
 
-technology = { #Midshipmen Cadets
+technology = {
+	#Midshipmen Cadets
 	# Tech 29
 	year = 1790
 	expects_institution = {
@@ -530,12 +477,12 @@ technology = { #Midshipmen Cadets
 		enlightenment = 0.5
 		industrialization = 0.5
 	}
-	
-	naval_morale			=	0.5
-	naval_maintenance		= 	0.1
+	naval_morale = 0.5
+	naval_maintenance = 0.1
 }
 
-technology = { #Insurance Companies
+technology = {
+	#Insurance Companies
 	# Tech 30
 	year = 1805
 	expects_institution = {
@@ -548,13 +495,13 @@ technology = { #Insurance Companies
 		enlightenment = 0.5
 		industrialization = 1
 	}
-	
-	trade_efficiency 		= 	0.02
-	trade_range				=	20
+	trade_efficiency = 0.02
+	trade_range = 20
 	may_infiltrate_administration = yes
 }
 
-technology = { #Superior Ship Design
+technology = {
+	#Superior Ship Design
 	# Tech 31
 	year = 1820
 	expects_institution = {
@@ -567,13 +514,13 @@ technology = { #Superior Ship Design
 		enlightenment = 0.5
 		industrialization = 1
 	}
-	
-	naval_morale			=	0.5
-	naval_maintenance		= 	0.1	
+	naval_morale = 0.5
+	naval_maintenance = 0.1
 	num_accepted_cultures = 1
 }
 
-technology = { #The Gold Standard
+technology = {
+	#The Gold Standard
 	# Tech 32
 	year = 1835
 	expects_institution = {
@@ -586,8 +533,7 @@ technology = { #The Gold Standard
 		enlightenment = 1
 		industrialization = 1
 	}
-	
-	trade_efficiency 		= 	0.02
-	trade_range				=	20
-	global_colonial_growth  = 	50
+	trade_efficiency = 0.02
+	trade_range = 20
+	global_colonial_growth = 50
 }

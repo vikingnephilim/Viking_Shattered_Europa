@@ -3,19 +3,15 @@
 #
 # Scripted by Sara Wendel-Örtqvist
 ########################################
-
 namespace = flavor_mch
 normal_or_historical_nations = yes
-
 # Nurhachi's Reforms
 country_event = {
 	id = flavor_mch.1
 	title = "flavor_mch.EVTNAME1"
 	desc = "flavor_mch.EVTDESC1"
 	picture = REFORM_eventPicture
-	
 	fire_only_once = yes
-	
 	trigger = {
 		OR = {
 			AND = {
@@ -27,13 +23,13 @@ country_event = {
 			tag = MCH
 		}
 		is_year = 1584
-		NOT = { is_year = 1626 }
+		NOT = {
+			is_year = 1626
+		}
 	}
-	
 	mean_time_to_happen = {
 		months = 126
 	}
-	
 	option = {
 		name = "flavor_mch.EVTOPTA1"
 		add_army_professionalism = 0.05
@@ -49,13 +45,13 @@ country_event = {
 	title = "flavor_mch.EVTNAME2"
 	desc = "flavor_mch.EVTDESC2"
 	picture = HORDE_ON_HORSEBACK_eventPicture
-	
 	fire_only_once = yes
-	
 	trigger = {
 		tag = MCH
 		exists = MNG
-		NOT = { vassal_of = MNG }
+		NOT = {
+			vassal_of = MNG
+		}
 		is_year = 1600
 		NOT = {
 			is_year = 1700
@@ -70,11 +66,9 @@ country_event = {
 			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		months = 200
 	}
-	
 	option = {
 		name = "flavor_mch.EVTOPTA2"
 		every_owned_province = {
@@ -97,9 +91,7 @@ country_event = {
 	title = "flavor_mch.EVTNAME3"
 	desc = "flavor_mch.EVTDESC3"
 	picture = REFORM_eventPicture
-	
 	fire_only_once = yes
-	
 	trigger = {
 		OR = {
 			tag = MCH
@@ -111,13 +103,13 @@ country_event = {
 			}
 		}
 		is_year = 1600
-		NOT = { is_year = 1700 }
+		NOT = {
+			is_year = 1700
+		}
 	}
-	
 	mean_time_to_happen = {
 		months = 200
 	}
-	
 	option = {
 		name = "flavor_mch.EVTOPTA3"
 		add_mil_power = 50
@@ -131,35 +123,37 @@ country_event = {
 
 # The Manchu Advance
 country_event = {
-	id = flavor_mch.4 # id = 10035
+	id = flavor_mch.4	# id = 10035
 	title = "flavor_mch.EVTNAME4"
 	desc = "flavor_mch.EVTDESC4"
 	picture = LAND_MILITARY_eventPicture
-	
 	fire_only_once = yes
-	
 	trigger = {
 		is_at_war = no
 		exists = MNG
-		NOT = { vassal_of = MNG }
+		NOT = {
+			vassal_of = MNG
+		}
 		tag = MCH
 		is_year = 1600
-		NOT = { is_year = 1650 }
-		NOT = { war_with = MNG }
-		any_owned_province = { 
-			any_neighbor_province = { 
-				owned_by = MNG 
+		NOT = {
+			is_year = 1650
+		}
+		NOT = {
+			war_with = MNG
+		}
+		any_owned_province = {
+			any_neighbor_province = {
+				owned_by = MNG
 				NOT = {
 					is_claim = ROOT
 				}
 			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		months = 200
 	}
-	
 	option = {
 		name = "flavor_mch.EVTOPTA4"
 		add_casus_belli = {
@@ -187,9 +181,7 @@ country_event = {
 	title = "flavor_mch.EVTNAME5"
 	desc = "flavor_mch.EVTDESC5"
 	picture = BATTLE_eventPicture
-	
 	fire_only_once = yes
-	
 	trigger = {
 		tag = QNG
 		OR = {
@@ -208,14 +200,12 @@ country_event = {
 			CZH = {
 				is_subject_of = ROOT
 				liberty_desire = 25
-			}			
+			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		years = 20
 	}
-	
 	immediate = {
 		hidden_effect = {
 			if = {
@@ -272,7 +262,9 @@ country_event = {
 				if = {
 					limit = {
 						WUU = {
-							NOT = { has_country_flag = three_feudatories_leader_flag }
+							NOT = {
+								has_country_flag = three_feudatories_leader_flag
+							}
 							is_subject_of = ROOT
 						}
 					}
@@ -283,7 +275,9 @@ country_event = {
 				if = {
 					limit = {
 						YUE = {
-							NOT = { has_country_flag = three_feudatories_leader_flag }
+							NOT = {
+								has_country_flag = three_feudatories_leader_flag
+							}
 							is_subject_of = ROOT
 						}
 					}
@@ -294,7 +288,9 @@ country_event = {
 				if = {
 					limit = {
 						CDL = {
-							NOT = { has_country_flag = three_feudatories_leader_flag }
+							NOT = {
+								has_country_flag = three_feudatories_leader_flag
+							}
 							is_subject_of = ROOT
 						}
 					}
@@ -305,7 +301,6 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
 		name = "flavor_mch.EVTOPTA5"
 		if = {
@@ -338,36 +333,45 @@ country_event = {
 	title = "flavor_mch.EVTNAME6"
 	desc = "flavor_mch.EVTDESC6"
 	picture = RELIGION_eventPicture
-	
 	fire_only_once = yes
-	
 	trigger = {
 		tag = QNG
 		is_year = 1700
-		NOT = { is_year = 1800 }
+		NOT = {
+			is_year = 1800
+		}
 		NOT = {
 			religion_group = christian
 		}
 		OR = {
-			POR = { has_country_modifier = the_societas_jesu }
-			SPA = { has_country_modifier = the_societas_jesu }
+			POR = {
+				has_country_modifier = the_societas_jesu
+			}
+			SPA = {
+				has_country_modifier = the_societas_jesu
+			}
 		}
-		any_owned_province = { any_neighbor_province = { OR = { owned_by = POR owned_by = SPA } } }
+		any_owned_province = {
+			any_neighbor_province = {
+				OR = {
+					owned_by = POR
+					owned_by = SPA
+				}
+			}
+		}
 	}
-	
 	mean_time_to_happen = {
 		months = 200
 	}
-	
 	option = {
 		name = "flavor_mch.EVTOPTA6"
 		add_stability_or_adm_power = yes
 	}
 	option = {
 		name = "flavor_mch.EVTOPTB6"
-		add_country_modifier = { 
-			name = mch_jesuits 
-			duration = -1 
+		add_country_modifier = {
+			name = mch_jesuits
+			duration = -1
 		}
 	}
 }
@@ -378,13 +382,13 @@ country_event = {
 	title = "flavor_mch.EVTNAME7"
 	desc = "flavor_mch.EVTDESC7"
 	picture = ADVISOR_eventPicture
-	
 	fire_only_once = yes
-	
 	trigger = {
 		tag = QNG
 		is_year = 1770
-		NOT = { is_year = 1800 }
+		NOT = {
+			is_year = 1800
+		}
 		NOT = {
 			is_advisor_employed = 380
 		}
@@ -392,11 +396,9 @@ country_event = {
 			advisor_exists = 380
 		}
 	}
-	
 	mean_time_to_happen = {
 		months = 200
 	}
-	
 	option = {
 		name = "flavor_mch.EVTOPTA7"
 		add_meritocracy_effect = yes

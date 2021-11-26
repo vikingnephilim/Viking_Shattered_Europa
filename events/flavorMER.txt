@@ -3,34 +3,30 @@
 #
 # Scripted by Henrik Lohmander
 ########################################
-
 namespace = flavor_mer
 normal_or_historical_nations = yes
-
 #Vijaya Sthambha
 country_event = {
 	id = flavor_mer.1
 	title = "flavor_mer.1.t"
 	desc = "flavor_mer.1.d"
 	picture = GOOD_WITH_MONARCH_eventPicture
-	
 	fire_only_once = yes
-
 	trigger = {
 		tag = MER
 		is_year = 1446
-		not = { is_year = 1452 }
+		not = {
+			is_year = 1452
+		}
 	}
-	
 	mean_time_to_happen = {
 		months = 18
 	}
-	
 	option = {
-		name = "flavor_mer.1.a"	#Perfection!
+		name = "flavor_mer.1.a"		#Perfection!
 		add_country_modifier = {
-				name = "mer_vijaya_sthambha"
-				duration = 3650
+			name = "mer_vijaya_sthambha"
+			duration = 3650
 		}
 	}
 }
@@ -41,22 +37,22 @@ country_event = {
 	title = "flavor_mer.2.t"
 	desc = "flavor_mer.2.d"
 	picture = MILITARY_CAMP_eventPicture
-	
 	fire_only_once = yes
-
 	trigger = {
 		TAG = MER
-		NOT = { exists = MAW }
+		NOT = {
+			exists = MAW
+		}
 		is_year = 1455
-		NOT = { is_year = 1490 }
+		NOT = {
+			is_year = 1490
+		}
 		owns = 514
 		num_of_cities = 3
 	}
-	
 	mean_time_to_happen = {
 		months = 105
 	}
-	
 	immediate = {
 		hidden_effect = {
 			MAW = {
@@ -78,9 +74,8 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
-		name = "flavor_mer.2.a"	#This means war.
+		name = "flavor_mer.2.a"		#This means war.
 		ai_chance = {
 			factor = 1
 		}
@@ -93,7 +88,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "flavor_mer.2.b"	#Let bygones be bygones.
+		name = "flavor_mer.2.b"		#Let bygones be bygones.
 		ai_chance = {
 			factor = 0
 		}
@@ -107,21 +102,19 @@ country_event = {
 	title = "flavor_mer.3.t"
 	desc = "flavor_mer.3.d"
 	picture = FORT_eventPicture
-	
 	fire_only_once = yes
-
 	trigger = {
 		tag = MER
-		NOT = { is_year = 1460 }
+		NOT = {
+			is_year = 1460
+		}
 		owns_core_province = 2067
 	}
-	
 	mean_time_to_happen = {
 		months = 48
 	}
-	
 	option = {
-		name = "flavor_mer.3.a"	#Build Kumbalgarh
+		name = "flavor_mer.3.a"		#Build Kumbalgarh
 		ai_chance = {
 			factor = 1
 		}
@@ -134,13 +127,13 @@ country_event = {
 		}
 	}
 	option = {
-		name = "flavor_mer.3.b"	#Fortify the countryside instead.
+		name = "flavor_mer.3.b"		#Fortify the countryside instead.
 		ai_chance = {
 			factor = 0
 		}
 		add_country_modifier = {
-				name = "mer_fortification_effort"
-				duration = 1825
+			name = "mer_fortification_effort"
+			duration = 1825
 		}
 	}
 }
@@ -151,21 +144,19 @@ country_event = {
 	title = "flavor_mer.4.t"
 	desc = "flavor_mer.4.d"
 	picture = PRAYING_eventPicture
-	
 	fire_only_once = yes
-
 	trigger = {
 		tag = MER
 		is_year = 1480
-		not = { is_year = 1550 }
+		not = {
+			is_year = 1550
+		}
 	}
-	
 	mean_time_to_happen = {
 		months = 210
 	}
-	
 	option = {
-		name = "flavor_mer.4.a"	#Ok.
+		name = "flavor_mer.4.a"		#Ok.
 		add_prestige = 20
 	}
 }
@@ -176,22 +167,20 @@ country_event = {
 	title = "flavor_mer.5.t"
 	desc = "flavor_mer.5.d"
 	picture = ASSASSINATION_eventPicture
-	
 	fire_only_once = yes
-
 	trigger = {
 		tag = MER
 		has_ruler = "Kumbhakarna Singh"
 		is_year = 1460
-		NOT = { is_year = 1470 }
+		NOT = {
+			is_year = 1470
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 30
 	}
-	
 	option = {
-		name = "flavor_mer.5.a" #Support Udai
+		name = "flavor_mer.5.a"		#Support Udai
 		add_stability = -1
 		define_ruler = {
 			name = "Udai Singh"
@@ -206,7 +195,9 @@ country_event = {
 			change_statists_vs_orangists = 1
 		}
 		random_owned_province = {
-			limit = { is_capital = no }
+			limit = {
+				is_capital = no
+			}
 			spawn_rebels = {
 				type = pretender_rebels
 				size = 2
@@ -216,7 +207,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "flavor_mer.5.b"	#Support Raimal
+		name = "flavor_mer.5.b"		#Support Raimal
 		add_stability = -1
 		define_ruler = {
 			name = "Raimal"
@@ -231,7 +222,9 @@ country_event = {
 			change_statists_vs_orangists = 1
 		}
 		random_owned_province = {
-			limit = { is_capital = no }
+			limit = {
+				is_capital = no
+			}
 			spawn_rebels = {
 				type = pretender_rebels
 				size = 2

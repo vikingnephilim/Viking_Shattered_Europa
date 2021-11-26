@@ -1258,12 +1258,9 @@ office_of_lord_regent_reform = {
 	allow_normal_conversion = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 25
-	fixed_rank = 1
 	potential = {
 		OR = {
-			primary_culture = swedish
-			primary_culture = geats
-			primary_culture = scanian
+			tag = SWE
 			has_reform = office_of_lord_regent_reform
 		}
 		NOT = {
@@ -1272,9 +1269,7 @@ office_of_lord_regent_reform = {
 	}
 	trigger = {
 		OR = {
-			primary_culture = swedish
-			primary_culture = geats
-			primary_culture = scanian
+			tag = SWE
 			has_reform = office_of_lord_regent_reform
 		}
 		NOT = {
@@ -1285,6 +1280,11 @@ office_of_lord_regent_reform = {
 		legitimacy = 0.5
 		prestige = 0.5
 		war_exhaustion = -0.025
+	}
+	factions = {
+		faction_bjalbo
+		faction_estridsen
+		faction_sverker
 	}
 	ai = {
 		factor = 100
@@ -1984,10 +1984,6 @@ prussian_monarchy = {
 				}
 			}
 			AND = {
-				tag = GER
-				have_had_reform = prussian_monarchy
-			}
-			AND = {
 				is_playing_custom_nation = yes
 				have_had_reform = prussian_monarchy
 			}
@@ -2005,10 +2001,12 @@ prussian_monarchy = {
 			religion = lollard
 			religion = waldensian
 		}
+		NOT = {
+			is_pagan_viking_mod = yes
+		}
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 100
-	fixed_rank = 3
 	legacy_equivalent = prussian_monarchy_legacy
 	modifiers = {
 		war_exhaustion = -0.02
@@ -2018,6 +2016,11 @@ prussian_monarchy = {
 		monarch_military_power = 3
 		nobles_loyalty_modifier = 0.1
 		governing_capacity_modifier = -0.5
+	}
+	factions = {
+		faction_brandenburg
+		faction_hohenzollern
+		faction_pomerania
 	}
 	conditional = {
 		allow = {
@@ -2393,39 +2396,30 @@ arch_king_reform = {
 	nation_designer_cost = 0
 	potential = {
 		OR = {
-			primary_culture = danish
+			tag = DAN
 			has_reform = arch_king_reform
 		}
 		NOT = {
 			is_pagan_viking_mod = yes
 		}
-		1 = {
-			country_or_non_sovereign_subject_holds = ROOT
-		}
-		12 = {
-			country_or_non_sovereign_subject_holds = ROOT
-		}
-		17 = {
-			country_or_non_sovereign_subject_holds = ROOT
-		}
 	}
 	trigger = {
+		OR = {
+			tag = DAN
+			has_reform = arch_king_reform
+		}
 		NOT = {
 			is_pagan_viking_mod = yes
-		}
-		1 = {
-			country_or_non_sovereign_subject_holds = ROOT
-		}
-		12 = {
-			country_or_non_sovereign_subject_holds = ROOT
-		}
-		17 = {
-			country_or_non_sovereign_subject_holds = ROOT
 		}
 	}
 	modifiers = {
 		prestige = 1
 		diplomatic_annexation_cost = -0.05
+	}
+	factions = {
+		faction_hvide
+		faction_marsvin
+		faction_sappi
 	}
 	ai = {
 		factor = 100
@@ -2476,9 +2470,9 @@ SCA_arch_king_reform = {
 		core_creation = -0.1
 	}
 	factions = {
+		faction_budde
+		faction_paus
 		faction_vasa
-		faction_vonwittlesbach
-		faction_vonoldenburg
 	}
 	ai = {
 		factor = 100
@@ -2516,9 +2510,9 @@ roman_government = {
 		}
 	}
 	factions = {
-		faction_brutii
-		faction_julii
-		faction_scipii
+		faction_palaiologos
+		faction_komnenos
+		faction_kantakouzenos
 	}
 	assimilation_cultures = {
 		aboriginal_australian = {
@@ -3359,6 +3353,48 @@ united_holy_roman_empire_reform = {
 		}
 	}
 	fixed_rank = 3
+	factions = {
+		faction_vonhabsburgs
+		faction_vonluxembourg
+		faction_vonwittlesbach
+	}
+	modifiers = {
+		governing_capacity = 500
+		accept_vassalization_reasons = 50
+		max_absolutism = 15
+	}
+	ai = {
+		factor = 100
+	}
+}
+
+united_germany_reform = {
+	icon = GE_HRE
+	allow_normal_conversion = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 200
+	fixed_rank = 3
+	potential = {
+		NOT = {
+			is_pagan_viking_mod = yes
+		}
+		OR = {
+			tag = GER
+			has_reform = united_germany_reform
+		}
+	}
+	trigger = {
+		OR = {
+			tag = GER
+			has_reform = united_germany_reform
+		}
+	}
+	fixed_rank = 3
+	factions = {
+		faction_vonoldenburg
+		faction_anhalt
+		faction_wurtemburg
+	}
 	modifiers = {
 		governing_capacity = 500
 		accept_vassalization_reasons = 50

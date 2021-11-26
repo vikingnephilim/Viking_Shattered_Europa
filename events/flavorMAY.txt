@@ -3,19 +3,15 @@
 #
 # written by Sara Wendel-Örtqvist
 ####################################
-
 namespace = flavor_may
 normal_or_historical_nations = yes
-
 # Popol Vuh
 country_event = {
 	id = flavor_may.1
 	title = flavor_may.1.t
 	desc = flavor_may.1.d
 	picture = BIG_BOOK_eventPicture
-	
 	fire_only_once = yes
-
 	trigger = {
 		OR = {
 			tag = MAY
@@ -34,11 +30,9 @@ country_event = {
 			has_country_modifier = may_popol_vuh
 		}
 	}
-	
 	mean_time_to_happen = {
 		months = 12
 	}
-	
 	option = {
 		name = flavor_may.1.a
 		add_country_modifier = {
@@ -59,31 +53,34 @@ country_event = {
 	title = flavor_may.2.t
 	desc = flavor_may.2.d
 	picture = CIVIL_WAR_eventPicture
-	
 	trigger = {
 		religion = mesoamerican_religion
-		NOT = { has_country_flag = may_league_mayapan_flag }
+		NOT = {
+			has_country_flag = may_league_mayapan_flag
+		}
 	}
-	
 	mean_time_to_happen = {
 		months = 22
 	}
-	
 	immediate = {
 		hidden_effect = {
 			set_country_flag = may_league_mayapan_flag
 		}
 	}
-	
 	option = {
 		name = flavor_may.2.a
 		add_prestige = 10
 		every_country = {
 			limit = {
 				religion = mesoamerican_religion
-				NOT = { tag = ROOT }
+				NOT = {
+					tag = ROOT
+				}
 			}
-			add_opinion = { who = ROOT modifier = stronger_alone }
+			add_opinion = {
+				who = ROOT
+				modifier = stronger_alone
+			}
 		}
 	}
 	option = {
@@ -91,10 +88,15 @@ country_event = {
 		every_country = {
 			limit = {
 				religion = mesoamerican_religion
-				NOT = { tag = ROOT }
+				NOT = {
+					tag = ROOT
+				}
 			}
-			add_opinion = { who = ROOT modifier = league_mayapan }
-		}	
+			add_opinion = {
+				who = ROOT
+				modifier = league_mayapan
+			}
+		}
 	}
 }
 
@@ -105,9 +107,7 @@ country_event = {
 	title = flavor_may.3.t
 	desc = flavor_may.3.d
 	picture = RELIGIOUS_TURMOIL_eventPicture
-	
 	fire_only_once = yes
-
 	trigger = {
 		religion = mesoamerican_religion
 		NOT = {
@@ -125,17 +125,18 @@ country_event = {
 			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		months = 32
 	}
-	
 	option = {
 		name = flavor_may.3.a
 		change_religion = catholic
 		add_stability = -1
 		SPA = {
-			add_opinion = { who = ROOT modifier = may_convert }
+			add_opinion = {
+				who = ROOT
+				modifier = may_convert
+			}
 			country_event = {
 				id = flavor_may.4
 				days = 7
@@ -156,9 +157,7 @@ country_event = {
 	title = flavor_may.4.t
 	desc = flavor_may.4.d
 	picture = RELIGION_eventPicture
-	
 	is_triggered_only = yes
-	
 	option = {
 		name = flavor_may.4.a
 		add_prestige = 10
@@ -172,7 +171,6 @@ country_event = {
 	title = flavor_may.5.t
 	desc = flavor_may.5.d
 	picture = RELIGIOUS_CONVERSION_eventPicture
-	
 	trigger = {
 		religion = mesoamerican_religion
 		NOT = {
@@ -189,23 +187,27 @@ country_event = {
 					}
 				}
 				ROOT = {
-					had_country_flag = { flag = may_kan_ek_flag days = 7300 }
+					had_country_flag = {
+						flag = may_kan_ek_flag
+						days = 7300
+					}
 				}
 			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		months = 32
 	}
-	
 	option = {
 		name = flavor_may.5.a
 		set_country_flag = may_franciscan_friars_flag
 		change_religion = catholic
 		add_stability = -1
 		SPA = {
-			add_opinion = { who = ROOT modifier = may_convert }
+			add_opinion = {
+				who = ROOT
+				modifier = may_convert
+			}
 			country_event = {
 				id = flavor_may.4
 				days = 7
@@ -226,9 +228,10 @@ country_event = {
 	title = flavor_may.6.t
 	desc = flavor_may.6.d
 	picture = RELIGIOUS_TURMOIL_eventPicture
-	
 	trigger = {
-		NOT = { has_country_flag = maya_sacrifice_flag }
+		NOT = {
+			has_country_flag = maya_sacrifice_flag
+		}
 		religion = mesoamerican_religion
 		war_with = SPA
 		SPA = {
@@ -242,28 +245,31 @@ country_event = {
 					}
 				}
 				ROOT = {
-					had_country_flag = { flag = may_kan_ek_flag days = 7300 }
+					had_country_flag = {
+						flag = may_kan_ek_flag
+						days = 7300
+					}
 				}
 			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		months = 32
 	}
-	
 	immediate = {
 		hidden_effect = {
 			set_country_flag = maya_sacrifice_flag
 		}
 	}
-	
 	option = {
 		name = flavor_may.6.a
 		change_religion = catholic
 		add_stability = -1
 		SPA = {
-			add_opinion = { who = ROOT modifier = may_convert }
+			add_opinion = {
+				who = ROOT
+				modifier = may_convert
+			}
 			country_event = {
 				id = flavor_may.4
 				days = 7
@@ -303,9 +309,7 @@ country_event = {
 	title = flavor_may.7.t
 	desc = flavor_may.7.d
 	picture = RELIGION_eventPicture
-	
 	is_triggered_only = yes
-	
 	option = {
 		name = flavor_may.7.a
 		add_prestige = 10

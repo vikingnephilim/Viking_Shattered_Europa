@@ -2082,11 +2082,13 @@ merc_oyo_cavalry = {
 	cavalry_weight = 1
 	sprites = { dlc062_ben_sprite_pack africangfx_sprite_pack }
 	trigger = {
-		exists = OYO
+		has_unlocked_merc_company = {
+			merc_company = merc_oyo_cavalry
+		}
 	}
     modifier = {
-		cavalry_flanking = 0.33
-		cav_to_inf_ratio = 1
+		cavalry_flanking = 0.5
+		cav_to_inf_ratio = 0.5
 		cavalry_power = 0.2
 	}
 }

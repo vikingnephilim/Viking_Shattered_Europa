@@ -4,73 +4,93 @@
 # scripted by Ogulcan Yildirim
 # Localization written by Roger Corominas
 #########################################
-
 namespace = flavor_jol
 normal_or_historical_nations = yes
-
 #European Trade Deal
 country_event = {
 	id = flavor_jol.1
 	title = flavor_jol.1.t
 	desc = flavor_jol.1.d
 	picture = AFRICAN_EUROPEAN_TRADE_eventPicture
-	
 	is_triggered_only = yes
-
 	immediate = {
 		hidden_effect = {
 			if = {
 				limit = {
 					exists = POR
 				}
-				POR = { save_event_target_as = jol_trade_deal_partner }
-			}
-			else_if = {
-				limit = {
-					any_country = {
-						capital_scope = { region = iberia_region }
-					}
-				}
-				random_country = {
-					limit = { capital_scope = { region = iberia_region } }
+				POR = {
 					save_event_target_as = jol_trade_deal_partner
 				}
 			}
 			else_if = {
 				limit = {
 					any_country = {
-						capital_scope = { region = france_region }
+						capital_scope = {
+							region = iberia_region
+						}
 					}
 				}
 				random_country = {
-					limit = { capital_scope = { region = france_region } }
+					limit = {
+						capital_scope = {
+							region = iberia_region
+						}
+					}
 					save_event_target_as = jol_trade_deal_partner
 				}
 			}
 			else_if = {
 				limit = {
 					any_country = {
-						capital_scope = { region = british_isles_region }
+						capital_scope = {
+							region = france_region
+						}
 					}
 				}
 				random_country = {
-					limit = { capital_scope = { region = british_isles_region } }
+					limit = {
+						capital_scope = {
+							region = france_region
+						}
+					}
+					save_event_target_as = jol_trade_deal_partner
+				}
+			}
+			else_if = {
+				limit = {
+					any_country = {
+						capital_scope = {
+							region = british_isles_region
+						}
+					}
+				}
+				random_country = {
+					limit = {
+						capital_scope = {
+							region = british_isles_region
+						}
+					}
 					save_event_target_as = jol_trade_deal_partner
 				}
 			}
 			else = {
 				random_country = {
-					limit = { capital_scope = { continent = europe } }
+					limit = {
+						capital_scope = {
+							continent = europe
+						}
+					}
 					save_event_target_as = jol_trade_deal_partner
 				}
 			}
 		}
 	}
-	
-	option = {	#Good idea
+	option = {
+		#Good idea
 		name = flavor_jol.1.a
 		trigger = {
-			has_saved_event_target = event_target:jol_trade_deal_partner	#Just to be sure there exists a country who would be interested in a trade deal
+			has_saved_event_target = event_target:jol_trade_deal_partner			#Just to be sure there exists a country who would be interested in a trade deal
 		}
 		add_dip_power = 50
 		event_target:jol_trade_deal_partner = {
@@ -78,13 +98,17 @@ country_event = {
 				id = flavor_jol.2
 			}
 		}
-		ai_chance = { factor = 1 }
+		ai_chance = {
+			factor = 1
+		}
 	}
-	
-	option = {	#Nah
+	option = {
+		#Nah
 		name = flavor_jol.1.b
 		add_mercantilism = 3
-		ai_chance = { factor = 1 }
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
 
@@ -94,10 +118,9 @@ country_event = {
 	title = flavor_jol.2.t
 	desc = flavor_jol.2.d
 	picture = AFRICAN_EUROPEAN_TRADE_eventPicture
-
 	is_triggered_only = yes
-
-	option = {	#Make the deal
+	option = {
+		#Make the deal
 		name = flavor_jol.2.a
 		FROM = {
 			country_event = {
@@ -127,10 +150,12 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = jol_increased_demand_for_ivory
 		}
-		ai_chance = { factor = 1 }
+		ai_chance = {
+			factor = 1
+		}
 	}
-
-	option = {	#Nah
+	option = {
+		#Nah
 		name = flavor_jol.2.b
 		add_mercantilism = 3
 		FROM = {
@@ -138,7 +163,9 @@ country_event = {
 				id = flavor_jol.4
 			}
 		}
-		ai_chance = { factor = 0 }
+		ai_chance = {
+			factor = 0
+		}
 	}
 }
 
@@ -148,10 +175,9 @@ country_event = {
 	title = flavor_jol.3.t
 	desc = flavor_jol.3.d
 	picture = AFRICAN_EUROPEAN_TRADE_eventPicture
-
 	is_triggered_only = yes
-
-	option = {	#Nice
+	option = {
+		#Nice
 		name = flavor_jol.3.a
 		home_trade_node_effect_scope = {
 			add_trade_modifier = {
@@ -171,7 +197,9 @@ country_event = {
 				}
 			}
 		}
-		ai_chance = { factor = 1 }
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
 
@@ -181,13 +209,14 @@ country_event = {
 	title = flavor_jol.4.t
 	desc = flavor_jol.4.d
 	picture = AFRICAN_EUROPEAN_DEBATE_eventPicture
-
 	is_triggered_only = yes
-
-	option = {	#Whatever
+	option = {
+		#Whatever
 		name = flavor_jol.4.a
 		add_mercantilism = 3
-		ai_chance = { factor = 1 }
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
 
@@ -197,27 +226,23 @@ country_event = {
 	title = flavor_jol.5.t
 	desc = flavor_jol.5.d
 	picture = AFRICAN_EUROPEAN_PURCHASE_eventPicture
-
 	major = yes
-	
 	trigger = {
 		had_country_flag = {
 			flag = jol_increased_demand_for_ivory
 			days = 1825
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 6
 	}
-
 	immediate = {
 		hidden_effect = {
 			clr_country_flag = jol_increased_demand_for_ivory
 		}
 	}
-
-	option = {	#We need more ivory!
+	option = {
+		#We need more ivory!
 		name = flavor_jol.5.a
 		if = {
 			limit = {
@@ -243,6 +268,8 @@ country_event = {
 			value = 0.25
 			duration = 9125
 		}
-		ai_chance = { factor = 1 }
+		ai_chance = {
+			factor = 1
+		}
 	}
 }
