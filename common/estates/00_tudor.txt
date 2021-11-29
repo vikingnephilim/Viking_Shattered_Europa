@@ -1,0 +1,275 @@
+estate_tudor = {
+	icon = 14
+	# If true, country will get estate
+	trigger = {
+		OR = {
+			tag = GBR
+			has_country_flag = tudor_estate
+		}
+		is_nomad = no
+		is_colonial_nation = no
+		NOT = {
+			has_reform = revolutionary_empire_reform
+		}
+	}
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		trade_efficiency = 0.2
+		development_cost = -0.1
+	}
+	country_modifier_neutral = {
+		trade_efficiency = 0.2
+	}
+	country_modifier_angry = {
+		trade_efficiency = -0.1
+		development_cost = 0.1
+		global_unrest = 2
+	}
+	land_ownership_modifier = {
+		burghers_loyalty_modifier = 0.2
+	}
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			NOT = {
+				development = 5
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				NOT = {
+					development = 10
+				}
+				NOT = {
+					province_trade_power = 5
+				}
+			}
+		}
+		modifier = {
+			factor = 2
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			is_territorial_core = owner
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 10
+		}
+		modifier = {
+			factor = 1.5
+			province_trade_power = 20
+		}
+		modifier = {
+			factor = 1.5
+			has_province_modifier = thankful_guilds
+		}
+	}
+	# Influence modifiers
+	base_influence = 10
+	influence_modifier = {
+		desc = EST_HIGH_DEVELOPMENT_PROVINCE
+		trigger = {
+			any_owned_province = {
+				development = 30
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_COT
+		trigger = {
+			NOT = {
+				has_reform = free_city
+			}
+			any_owned_province = {
+				province_has_center_of_trade_of_level = 1
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_HANSEATIC_CITY
+		trigger = {
+			NOT = {
+				has_reform = free_city
+			}
+			OR = {
+				capital = 1				#Stockholm
+				capital = 6				#Skåne
+				capital = 23				#Bergen
+				capital = 36				#Reval
+				capital = 38				#Riga
+				capital = 41				#Königsberg
+				capital = 43				#Danzig
+				capital = 44				#Hamburg
+				capital = 45				#Lubeck
+				capital = 46				#Wismar
+				capital = 47				#Stralsund
+				capital = 52				#Magdeburg
+				capital = 53				#Luneburg
+				capital = 54				#Stade
+				capital = 56				#Osnabruck
+				capital = 57				#Brunswick
+				capital = 85				#Köln
+				capital = 86				#Munster
+				capital = 90				#Bruges
+				capital = 100				#Groningen
+				capital = 236				#London
+				capital = 238				#Ipswich
+				capital = 274				#Pskov
+				capital = 275				#Polotsk
+				capital = 310				#Novgorod
+				capital = 1744				# Antwerp
+				capital = 1834				# Dorpat
+				capital = 1858				# Stettin
+				capital = 1859				# Torun
+				capital = 1860				# Bishop's Lynn
+				capital = 1874				# Bremen
+				capital = 1936				# Kaunas
+				capital = 2994				# Greifswald
+				capital = 2995				# Stolp
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_EAST_AFRICAN_TRADE_CITIES
+		trigger = {
+			capital_scope = {
+				OR = {
+					area = central_swahili_coast_area
+					area = mombasa_area
+					area = mozambique_area
+					area = northern_swahili_coast_area
+					area = mogadishu_area
+				}
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_LOW_TRADE_INCOME
+		trigger = {
+			NOT = {
+				trade_income_percentage = 0.25
+			}
+		}
+		influence = -5
+	}
+	influence_modifier = {
+		desc = EST_VAL_HIGH_TRADE_INCOME
+		trigger = {
+			trade_income_percentage = 0.5
+			NOT = {
+				trade_income_percentage = 0.75
+			}
+		}
+		influence = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_VERY_HIGH_TRADE_INCOME
+		trigger = {
+			trade_income_percentage = 0.75
+		}
+		influence = 10
+	}
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_jains_disaster
+			}
+		}
+		influence = -40
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+				has_disaster = estate_nobility_disaster
+				has_disaster = estate_church_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_jains_disaster
+			}
+		}
+		loyalty = -20
+	}
+	#Custom Names
+	custom_name = {
+		desc = estate_bourgeoisie
+		trigger = {
+			culture_group = french
+		}
+	}
+	custom_name = {
+		desc = estate_shangbang
+		trigger = {
+			culture_group = east_asian
+		}
+	}
+	custom_name = {
+		desc = estate_neoconfucian_reformers
+		trigger = {
+			tag = KOR
+			is_chinese_religion_viking_mod = YES
+		}
+	}
+	custom_name = {
+		desc = estate_pochteca
+		trigger = {
+			religion = nahuatl
+		}
+	}
+	custom_name = {
+		desc = estate_merchant_guilds
+		trigger = {
+			OR = {
+				#Just like "NOT = { religion_group = christian }", but at least it doesn't override estate names for new religion groups
+				#Still needs more diversity
+				is_muslim_viking_mod = yes
+				religion_group = eastern
+				religion_group = dharmic
+				is_pagan_viking_mod = yes
+				religion_group = jewish_group
+				religion_group = zoroastrian_group
+			}
+		}
+	}
+	color = {
+		0
+		100
+		100
+	}
+	privileges = {
+		estate_nobles_land_rights
+		estate_nobles_nobility_primacy
+		estate_nobles_strong_duchies
+		estate_nobles_golden_liberty
+		estate_nobles_veto_heir_apparent
+		estate_nobles_nieszawa_privileges
+		estate_nobles_pacta_conventa
+		estate_nobles_monopoly_of_metals
+		estate_nobles_monopoly_of_livestock
+		estate_nobles_monopoly_of_gems
+	}
+	agendas = {
+		estate_nobles_develop_x
+		estate_nobles_build_army_building_in_y
+		estate_nobles_build_fort_building_in_y
+		estate_nobles_build_university_in_y
+		estate_nobles_build_manufactory_in_y
+		estate_nobles_get_allies
+		estate_nobles_befriend_rival_of_rival
+		estate_nobles_restore_legitimacy
+		estate_nobles_relations_with_X
+		estate_nobles_break_coalition
+	}
+	influence_from_dev_modifier = 1
+}

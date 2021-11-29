@@ -1,0 +1,310 @@
+estate_plantagenet = {
+	icon = 21
+	# If true, country will get estate
+	trigger = {
+		OR = {
+			tag = ENG
+			has_country_flag = plantagenet_estate
+		}
+		is_nomad = no
+		is_colonial_nation = no
+		NOT = {
+			has_reform = revolutionary_empire_reform
+		}
+	}
+	country_modifier_happy = {
+		manpower_recovery_speed = 0.2
+		land_maintenance_modifier = -0.1
+		monthly_support_heir_gain = 0.33
+	}
+	country_modifier_neutral = {
+		manpower_recovery_speed = 0.2
+	}
+	country_modifier_angry = {
+		manpower_recovery_speed = -0.1
+		land_maintenance_modifier = 0.1
+		global_unrest = 2
+	}
+	land_ownership_modifier = {
+		nobles_loyalty_modifier = 0.2
+	}
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			culture_group = owner
+			religion_group = owner
+		}
+		modifier = {
+			factor = 1.5
+			base_manpower = 5
+		}
+		modifier = {
+			factor = 0.75
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				is_state_core = owner
+			}
+		}
+	}
+	# Influence modifiers
+	base_influence = 10
+	influence_modifier = {
+		desc = EST_VAL_EASTERN_TECH
+		trigger = {
+			technology_group = eastern
+		}
+		influence = 5
+	}
+	# Influence modifiers from Events:
+	influence_modifier = {
+		desc = EST_HUN_MAGNATES
+		trigger = {
+			has_ruler_modifier = hun_power_to_magnates
+		}
+		influence = 10
+	}
+	influence_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER
+		trigger = {
+			OR = {
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_vaisyas_disaster
+				has_disaster = estate_jains_disaster
+			}
+		}
+		influence = -40
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
+		trigger = {
+			OR = {
+				has_disaster = estate_church_disaster
+				has_disaster = estate_burghers_disaster
+				has_disaster = estate_brahmins_disaster
+				has_disaster = estate_vaisyas_disaster
+				has_disaster = estate_jains_disaster
+			}
+		}
+		loyalty = -20
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_NOBLE_CONSORT
+		trigger = {
+			has_dlc = "Rights of Man"
+			has_consort = yes
+			is_origin_of_consort = ROOT
+		}
+		loyalty = 5
+	}
+	# Great Peasants' War Modifiers
+	influence_modifier = {
+		desc = EST_VAL_GREAT_PEASANTS_WAR_NOBLES_WIN_MINOR_INFLUENCE
+		trigger = {
+			has_global_flag = gpw_nobles_win_minor
+			is_part_of_hre = yes
+		}
+		influence = 5
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_GREAT_PEASANTS_WAR_NOBLES_WIN_MINOR_LOYALTY
+		trigger = {
+			has_global_flag = gpw_nobles_win_minor
+			is_part_of_hre = yes
+		}
+		loyalty = 5
+	}
+	influence_modifier = {
+		desc = EST_VAL_GREAT_PEASANTS_WAR_NOBLES_WIN_MAJOR_INFLUENCE
+		trigger = {
+			has_global_flag = gpw_nobles_win_major
+			is_part_of_hre = yes
+		}
+		influence = 10
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_GREAT_PEASANTS_WAR_NOBLES_WIN_MAJOR_LOYALTY
+		trigger = {
+			has_global_flag = gpw_nobles_win_major
+			is_part_of_hre = yes
+		}
+		loyalty = 10
+	}
+	influence_modifier = {
+		desc = EST_VAL_GREAT_PEASANTS_WAR_NOBLES_LOSE_MINOR_INFLUENCE
+		trigger = {
+			has_global_flag = gpw_peasants_win_minor
+			is_part_of_hre = yes
+		}
+		influence = -5
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_GREAT_PEASANTS_WAR_NOBLES_LOSE_MINOR_LOYALTY
+		trigger = {
+			has_global_flag = gpw_peasants_win_minor
+			is_part_of_hre = yes
+		}
+		loyalty = -5
+	}
+	influence_modifier = {
+		desc = EST_VAL_GREAT_PEASANTS_WAR_NOBLES_LOSE_MAJOR_INFLUENCE
+		trigger = {
+			has_global_flag = gpw_peasants_win_major
+			is_part_of_hre = yes
+		}
+		influence = -10
+	}
+	loyalty_modifier = {
+		desc = EST_VAL_GREAT_PEASANTS_WAR_NOBLES_LOSE_MAJOR_LOYALTY
+		trigger = {
+			has_global_flag = gpw_peasants_win_major
+			is_part_of_hre = yes
+		}
+		loyalty = -10
+	}
+	#Alternative naming of estates
+	custom_name = {
+		desc = estate_beys
+		trigger = {
+			technology_group = ottoman
+		}
+	}
+	custom_name = {
+		desc = estate_boyars
+		trigger = {
+			OR = {
+				culture_group = east_slavic
+				primary_culture = bulgarian
+				primary_culture = romanian
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_szlachta
+		trigger = {
+			OR = {
+				primary_culture = polish
+				primary_culture = lithuanian
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_timawa
+		trigger = {
+			tag = MAS
+		}
+	}
+	custom_name = {
+		desc = estate_nayaks
+		trigger = {
+			tag = VIJ
+		}
+	}
+	custom_name = {
+		desc = estate_samantas
+		trigger = {
+			tag = ORI
+		}
+	}
+	custom_name = {
+		desc = estate_kshatriyas
+		trigger = {
+			is_indic_viking_mod = yes
+		}
+	}
+	custom_name = {
+		desc = estate_qinwang
+		trigger = {
+			has_reform = celestial_empire
+		}
+	}
+	custom_name = {
+		desc = estate_mansabdars
+		trigger = {
+			tag = MUG
+		}
+	}
+	custom_name = {
+		desc = estate_tetecuhtin
+		trigger = {
+			religion = nahuatl
+		}
+	}
+	custom_name = {
+		desc = estate_andriana
+		trigger = {
+			tag = MIR
+		}
+	}
+	custom_name = {
+		desc = estate_amirs
+		trigger = {
+			is_muslim_viking_mod = yes
+			NOT = {
+				technology_group = ottoman
+			}			#Should possibly be more restricted
+		}
+	}
+	custom_name = {
+		desc = estate_planters
+		trigger = {
+			tag = USA
+		}
+	}
+	custom_name = {
+		desc = estate_bushi
+		trigger = {
+			culture_group = japanese_g
+		}
+	}
+	custom_name = {
+		desc = estate_yangban_administrators
+		trigger = {
+			tag = KOR
+			is_chinese_religion_viking_mod = YES
+		}
+	}
+	custom_name = {
+		desc = estate_junkers
+		trigger = {
+			OR = {
+				has_reform = prussian_republic_reform
+				has_reform = prussian_monarchy
+				tag = GER
+			}
+		}
+	}
+	color = {
+		200
+		0
+		200
+	}
+	privileges = {
+		estate_nobles_land_rights
+		estate_nobles_nobility_primacy
+		estate_nobles_officer_corp
+		estate_nobles_levies
+		estate_nobles_advisors
+		estate_nobles_right_of_counsel
+		estate_nobles_french_strong_duchies
+		estate_nobles_supremacy_over_crown
+		estate_nobles_junker_primacy
+	}
+	agendas = {
+		estate_nobles_complete_conquest_of_x
+		estate_nobles_annex_subject
+		estate_nobles_build_an_army
+		estate_nobles_bigger_army_than_rival
+		estate_nobles_build_up_manpower_reserves
+		estate_nobles_recover_abysmal_prestige
+		estate_nobles_improve_prestige
+		estate_nobles_hire_advisor
+		estate_nobles_fire_advisor
+	}
+	influence_from_dev_modifier = 1
+}
