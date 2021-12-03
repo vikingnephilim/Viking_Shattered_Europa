@@ -140,15 +140,19 @@ country_event = {
 	picture = POPE_PREACHING_eventPicture
 	hidden = yes
 	trigger = {
-		government_rank = 3
-		is_emperor = no
-		is_emperor_of_china = no
+		NOT = {
+			is_emperor = yes
+		}
+		NOT = {
+			is_emperor_of_china = yes
+		}
 		NOT = {
 			has_country_flag = empire_name
 		}
 		NOT = {
 			has_country_flag = minoa_flag
 		}
+		government_rank = 3
 	}
 	mean_time_to_happen = {
 		days = 30

@@ -91,7 +91,6 @@ country_decisions = {
 					}
 					set_heir_culture = english
 				}
-			save_factions = yes
 				swap_non_generic_missions = yes
 				remove_non_electors_emperors_from_empire_effect = yes
 				if = {
@@ -196,13 +195,26 @@ country_decisions = {
 				restore_country_name_effect = yes
 				add_prestige = 25
 				set_country_flag = formed_england_flag
+				change_estate_land_share = {
+					estate = estate_lancaster
+					share = 1
+				}
+				change_estate_land_share = {
+					estate = estate_plantagenet
+					share = 1
+				}
+				change_estate_land_share = {
+					estate = estate_york
+					share = 1
+				}
 				if = {
 					limit = {
 						has_custom_ideas = no
 					}
 					country_event = {
 						id = ideagroups.1
-					}					#Swap Ideas
+					}
+					#Swap Ideas
 				}
 			}
 			hidden_effect = {

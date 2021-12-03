@@ -1,5 +1,4 @@
 namespace = england_dynasty
-
 country_event = {
 	id = england_dynasty.1
 	title = england_dynasty.1.t
@@ -20,11 +19,16 @@ country_event = {
 		change_government = monarchy
 		add_government_reform = english_monarchy
 		set_country_flag = picked_ruler
+		add_estate_loyalty = {
+			estate = estate_plantagenet
+			loyalty = 10
+		}
+		change_estate_land_share = {
+			estate = estate_plantagenet
+			share = 5
+		}
 		hidden_effect = {
-			kill_heir = { }
-			add_faction_influence = {
-				faction = faction_plantagenet
-				influence = 30
+			kill_heir = {
 			}
 		}
 	}
@@ -42,11 +46,16 @@ country_event = {
 		change_government = monarchy
 		add_government_reform = english_monarchy
 		set_country_flag = picked_ruler
+		add_estate_loyalty = {
+			estate = estate_york
+			loyalty = 10
+		}
+		change_estate_land_share = {
+			estate = estate_york
+			share = 5
+		}
 		hidden_effect = {
-			kill_heir = { }
-			add_faction_influence = {
-				faction = faction_york
-				influence = 30
+			kill_heir = {
 			}
 		}
 	}
@@ -61,14 +70,17 @@ country_event = {
 			age = 31
 			claim = 95
 		}
-		change_government = monarchy
-		add_government_reform = english_monarchy
 		set_country_flag = picked_ruler
+		add_estate_loyalty = {
+			estate = estate_lancaster
+			loyalty = 10
+		}
+		change_estate_land_share = {
+			estate = estate_lancaster
+			share = 5
+		}
 		hidden_effect = {
-			kill_heir = { }
-			add_faction_influence = {
-				faction = faction_lancaster
-				influence = 30
+			kill_heir = {
 			}
 		}
 	}
@@ -76,9 +88,19 @@ country_event = {
 		name = england_dynasty.1.d
 		add_prestige = -50
 		add_stability = -1
-		kill_ruler = yes
-		kill_heir = { }
 		change_government = monarchy
 		add_government_reform = english_monarchy
+		add_estate_loyalty = {
+			estate = estate_plantagenet
+			loyalty = -10
+		}
+		add_estate_loyalty = {
+			estate = estate_york
+			loyalty = -10
+		}
+		add_estate_loyalty = {
+			estate = estate_lancaster
+			loyalty = -10
+		}
 	}
 }

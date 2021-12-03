@@ -2,10 +2,15 @@ estate_york = {
 	icon = 23
 	# If true, country will get estate
 	trigger = {
-		OR = {
-			tag = ENG
-			has_country_flag = york_estate
-			
+		AND = {
+			OR = {
+				owns_core_province = 245
+				has_country_flag = york_estate
+			}
+			OR = {
+				culture_group = british
+				culture_group = gaelic
+			}
 		}
 		is_nomad = no
 		is_colonial_nation = no
@@ -35,165 +40,82 @@ estate_york = {
 		global_unrest = 2
 	}
 	land_ownership_modifier = {
-		church_loyalty_modifier = 0.2
 	}
 	province_independence_weight = {
 		factor = 1
 		modifier = {
-			factor = 0.1
-			NOT = {
-				religion_group = owner
-			}
+			factor = 1.5
+			culture_group = owner
+			religion_group = owner
+		}
+		modifier = {
+			factor = 1.5
+			base_manpower = 5
+		}
+		modifier = {
+			factor = 0.75
+			development = 20
 		}
 		modifier = {
 			factor = 0.5
 			NOT = {
-				religion = owner
-			}
-		}
-		modifier = {
-			factor = 0.67
-			NOT = {
 				is_state_core = owner
 			}
-		}
-		modifier = {
-			factor = 1.2
-			base_tax = 10
 		}
 	}
 	# Influence modifiers
 	base_influence = 10
-	influence_modifier = {
-		desc = EST_VAL_SHARIFS
-		trigger = {
-			tag = HED
-			owns = 385			#Mecca
-		}
-		influence = 20
-	}
-	influence_modifier = {
-		desc = EST_VAL_NEO_SUFISM
-		trigger = {
-			has_global_flag = neo_sufism
-			is_muslim_viking_mod = yes
-		}
-		influence = 10
-	}
-	influence_modifier = {
-		desc = EST_VAL_STATE_RELIGIOUS_MINORITY
-		trigger = {
-			NOT = {
-				dominant_religion = ROOT
-			}
-		}
-		influence = -15
-	}
-	influence_modifier = {
-		desc = EST_VAL_OTHER_ESTATE_IN_POWER
-		trigger = {
-			OR = {
-				has_disaster = estate_nobility_disaster
-				has_disaster = estate_burghers_disaster
-				has_disaster = estate_brahmins_disaster
-				has_disaster = estate_vaisyas_disaster
-				has_disaster = estate_jains_disaster
-			}
-		}
-		influence = -40
-	}
-	loyalty_modifier = {
-		desc = EST_VAL_OTHER_ESTATE_IN_POWER_LOY
-		trigger = {
-			OR = {
-				has_disaster = estate_nobility_disaster
-				has_disaster = estate_burghers_disaster
-				has_disaster = estate_brahmins_disaster
-				has_disaster = estate_vaisyas_disaster
-				has_disaster = estate_jains_disaster
-			}
-		}
-		loyalty = -20
-	}
-	loyalty_modifier = {
-		desc = EST_INWARD_PERFECTION_OFFENSIVE_WAR
-		trigger = {
-			has_estate_privilege = estate_church_inwards_perfection
-			is_in_war = {
-				attacker_leader = ROOT
-			}
-		}
-		loyalty = -20
-	}
-	custom_name = {
-		desc = estate_monasteries
-		trigger = {
-			OR = {
-				religion = buddhism				#Theravada
-				religion = mahayana
-				religion = vajrayana
-			}
-		}
-	}
-	custom_name = {
-		desc = estate_babaylanes
-		trigger = {
-			tag = MAS
-		}
-	}
-	custom_name = {
-		desc = estate_brahmins
-		trigger = {
-			is_indic_viking_mod = yes
-		}
-	}
-	custom_name = {
-		desc = estate_gentry
-		trigger = {
-			OR = {
-				has_reform = celestial_empire
-				culture_group = east_asian
-			}
-		}
-	}
-	custom_name = {
-		desc = estate_ulema
-		trigger = {
-			is_muslim_viking_mod = yes
-		}
-	}
-	custom_name = {
-		desc = estate_tlamacazqueh
-		trigger = {
-			religion = nahuatl
-		}
-	}
-	custom_name = {
-		desc = estate_yangban_scholars
-		trigger = {
-			tag = KOR
-			is_chinese_religion_viking_mod = YES
-		}
-	}
-	contributes_to_curia_treasury = yes
 	color = {
-		200
-		200
 		0
+		103
+		213
 	}
 	privileges = {
-		estate_nobles_land_rights
-		estate_nobles_nobility_primacy
-		estate_nobles_statutory_rights
-		estate_nobles_command_of_the_military
-		estate_nobles_better_integration
-		estate_nobles_cawa_peace_keepers
-		estate_nobles_cawa_offensive_fighters
-		estate_nobles_grant_power_to_the_bashorun
-		estate_nobles_neighbor_raids
-		estate_nobles_decentralized_tribe
-		estate_nobles_tribe_unification
-		estate_nobles_tribe_centralization
+		estate_land_rights
+		estate_nobility_primacy
+		estate_officer_corp
+		estate_levies
+		estate_advisors
+		estate_right_of_counsel
+		estate_religious_state
+		estate_independent_inquisition
+		estate_new_world_mission
+		estate_clerical_oversight
+		estate_enforced_interfaith_dialogue
+		estate_enforced_one_faith
+		estate_land_of_commerce
+		estate_admirals
+		estate_commercial_board_of_advice
+		estate_new_world_charter
+		estate_indebted_to_estate
+		estate_free_enterprise
+		estate_exploration_expedition
+		estate_self_governance
+		estate_taxes
+		estate_share_of_the_spoils
+		estate_legitimacy_to_rule
+		estate_diplomacy
+		estate_wartaxes
+		estate_patronage_of_the_arts
+		estate_supremacy_over_crown
+		estate_monopoly_of_dyes
+		estate_monopoly_of_gems
+		estate_monopoly_of_glass
+		estate_monopoly_of_incense
+		estate_monopoly_of_livestock
+		estate_monopoly_of_metals
+		estate_monopoly_of_paper
+		estate_monopoly_of_slaves
+		estate_monopoly_of_textiles
+		estate_monopoly_of_wine
+		estate_monopoly_of_wool
+		estate_control_over_monetary_policy
+		estate_private_trade_fleets
+		estate_statutory_rights
+		estate_better_integration
+		estate_religious_diplomats
+		estate_one_faith_one_culture
+		estate_neighbor_raids
 	}
 	agendas = {
 		estate_nobles_complete_conquest_of_x
@@ -206,4 +128,5 @@ estate_york = {
 		estate_nobles_hire_advisor
 		estate_nobles_fire_advisor
 	}
+	influence_from_dev_modifier = 1
 }
