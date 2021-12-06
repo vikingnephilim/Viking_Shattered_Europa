@@ -8,15 +8,19 @@ kongo_fetishist_missions_slot = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		tag = KON
-		NOT = { has_country_flag = kon_picked_side_with_europeans }	#Default until the Europeans arrive
+		NOT = {
+			has_country_flag = kon_picked_side_with_europeans
+		}		#Default until the Europeans arrive
 	}
 	has_country_shield = yes
-
 	kon_collect_cults = {
 		icon = mission_kon_collect_cults
-		required_missions = {  }
+		required_missions = {
+		}
 		position = 1
 		trigger = {
 			num_of_unlocked_cults = 4
@@ -26,19 +30,25 @@ kongo_fetishist_missions_slot = {
 			enable_cult_for_heirs_mission = yes
 		}
 	}
-
 	kon_fetishist_alliances = {
 		icon = mission_son_fetishist_alliances
-		required_missions = { kon_collect_cults }
+		required_missions = {
+			kon_collect_cults
+		}
 		position = 2
 		provinces_to_highlight = {
 			is_capital = yes
-			owner = { 
+			owner = {
 				religion = shamanism
 				OR = {
-					NOT = { has_opinion = { who = ROOT value = 150 } }
+					NOT = {
+						has_opinion = {
+							who = ROOT
+							value = 150
+						}
+					}
 				}
-				OR ={
+				OR = {
 					alliance_with = ROOT
 					is_subject_of = ROOT
 				}
@@ -79,15 +89,18 @@ kongo_fetishist_missions_slot = {
 			unlock_cult_through_selection = yes
 		}
 	}
-
 	kon_repel_the_missionaries = {
 		icon = mission_kon_repel_the_missionaries
-		required_missions = { kon_fetishist_alliances }
+		required_missions = {
+			kon_fetishist_alliances
+		}
 		position = 4
 		trigger = {
 			religion = shamanism
 			OR = {
-				NOT = { current_age = age_of_discovery }
+				NOT = {
+					current_age = age_of_discovery
+				}
 				custom_trigger_tooltip = {
 					tooltip = kon_convert_west_africa_ct
 					has_country_flag = kon_picked_oppose_europeans
@@ -100,8 +113,12 @@ kongo_fetishist_missions_slot = {
 				}
 			}
 			stability = 3
-			NOT = { num_of_rebel_armies = 1 }
-			NOT = { num_of_rebel_controlled_provinces = 1 }
+			NOT = {
+				num_of_rebel_armies = 1
+			}
+			NOT = {
+				num_of_rebel_controlled_provinces = 1
+			}
 		}
 		effect = {
 			custom_tooltip = kon_repel_the_missionaries_tt
@@ -114,17 +131,20 @@ kongo_fetishist_missions_slot = {
 			}
 		}
 	}
-
 	kon_convert_west_africa = {
 		icon = mission_mal_more_tolerance_to_heathens
-		required_missions = { kon_repel_the_missionaries }
+		required_missions = {
+			kon_repel_the_missionaries
+		}
 		position = 5
 		provinces_to_highlight = {
 			OR = {
 				region = niger_region
 				region = guinea_region
 			}
-			NOT = { religion = shamanism }
+			NOT = {
+				religion = shamanism
+			}
 			is_empty = no
 		}
 		trigger = {
@@ -167,18 +187,22 @@ kongo_catholic_missions_slot = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		tag = KON
 		has_country_flag = kon_picked_side_with_europeans
 	}
 	has_country_shield = yes
-
 	kon_convert_the_country = {
 		icon = mission_hands_praying
-		required_missions = {  }
+		required_missions = {
+		}
 		position = 1
 		provinces_to_highlight = {
-			NOT = { religion = catholic }
+			NOT = {
+				religion = catholic
+			}
 			owned_by = ROOT
 		}
 		trigger = {
@@ -189,7 +213,9 @@ kongo_catholic_missions_slot = {
 		effect = {
 			if = {
 				limit = {
-					NOT = { has_country_flag = kon_betrayed_own_people }	#You really should have sticked with your choice
+					NOT = {
+						has_country_flag = kon_betrayed_own_people
+					}					#You really should have sticked with your choice
 				}
 				country_event = {
 					id = flavor_kon.9
@@ -198,15 +224,18 @@ kongo_catholic_missions_slot = {
 			add_prestige = 25
 		}
 	}
-
 	kon_churches_for_the_pope = {
 		icon = mission_european_church
-		required_missions = { kon_convert_the_country }
+		required_missions = {
+			kon_convert_the_country
+		}
 		position = 2
 		provinces_to_highlight = {
 			owned_by = ROOT
 			OR = {
-				NOT = { religion = catholic }
+				NOT = {
+					religion = catholic
+				}
 				has_tax_building_trigger = no
 			}
 		}
@@ -228,11 +257,10 @@ kongo_catholic_missions_slot = {
 			add_papal_influence = 100
 		}
 	}
-
 	kon_gain_cardinal = {
 		icon = mission_religious
-		required_missions = { 
-			kon_churches_for_the_pope 
+		required_missions = {
+			kon_churches_for_the_pope
 		}
 		position = 4
 		provinces_to_highlight = {
@@ -275,7 +303,9 @@ kongo_catholic_missions_slot = {
 								num_of_cardinals = 1
 							}
 						}
-						NOT = { exists = PAP }
+						NOT = {
+							exists = PAP
+						}
 					}
 				}
 			}
@@ -284,7 +314,7 @@ kongo_catholic_missions_slot = {
 				development = 25
 			}
 			treasury = 1000
-			num_of_ports = 1	#Kongo should have sea access to send any kind of priest to the Pope
+			num_of_ports = 1			#Kongo should have sea access to send any kind of priest to the Pope
 		}
 		effect = {
 			if = {
@@ -316,17 +346,20 @@ kongo_catholic_missions_slot = {
 			}
 		}
 	}
-
 	kon_spread_catholicism = {
 		icon = prester_john
-		required_missions = { kon_gain_cardinal }
+		required_missions = {
+			kon_gain_cardinal
+		}
 		position = 5
 		provinces_to_highlight = {
 			OR = {
 				superregion = africa_superregion
 				superregion = southern_africa_superregion
 			}
-			NOT = { religion = catholic }
+			NOT = {
+				religion = catholic
+			}
 		}
 		trigger = {
 			religion = catholic
@@ -357,14 +390,16 @@ kongo_choose_path_missions_slot = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		tag = KON
 	}
 	has_country_shield = yes
-
 	kon_annex_vassals = {
 		icon = mission_have_two_subjects
-		required_missions = {  }
+		required_missions = {
+		}
 		position = 1
 		provinces_to_highlight = {
 			OR = {
@@ -373,13 +408,19 @@ kongo_choose_path_missions_slot = {
 			}
 		}
 		trigger = {
-			NOT = { exists = NDO }
-			NOT = { exists = LOA }
+			NOT = {
+				exists = NDO
+			}
+			NOT = {
+				exists = LOA
+			}
 		}
 		effect = {
 			if = {
 				limit = {
-					NOT = { has_institution = feudalism  }
+					NOT = {
+						has_institution = feudalism
+					}
 				}
 				capital_scope = {
 					add_institution_embracement = {
@@ -393,10 +434,11 @@ kongo_choose_path_missions_slot = {
 			}
 		}
 	}
-
 	kon_become_proper_monarchy = {
 		icon = mission_monarch_in_throne_room
-		required_missions = { kon_annex_vassals }
+		required_missions = {
+			kon_annex_vassals
+		}
 		position = 2
 		trigger = {
 			has_institution = feudalism
@@ -418,10 +460,11 @@ kongo_choose_path_missions_slot = {
 			change_government_to_monarchy = yes
 		}
 	}
-
 	kon_build_navy = {
 		icon = mission_polynesian_navy_build
-		required_missions = { kon_become_proper_monarchy }
+		required_missions = {
+			kon_become_proper_monarchy
+		}
 		position = 3
 		trigger = {
 			num_of_heavy_ship = 10
@@ -433,10 +476,11 @@ kongo_choose_path_missions_slot = {
 			}
 		}
 	}
-
 	kon_study_european_technology = {
 		icon = mission_levantine_restoration
-		required_missions = { kon_build_navy }
+		required_missions = {
+			kon_build_navy
+		}
 		position = 4
 		trigger = {
 			has_more_institutions_than_westerns = yes
@@ -468,10 +512,11 @@ kongo_choose_path_missions_slot = {
 			}
 		}
 	}
-
 	kon_banish_the_westerners_from_africa = {
 		icon = mission_cannons_firing
-		required_missions = { kon_study_european_technology }
+		required_missions = {
+			kon_study_european_technology
+		}
 		position = 5
 		provinces_to_highlight = {
 			OR = {
@@ -483,7 +528,9 @@ kongo_choose_path_missions_slot = {
 				capital_scope = {
 					continent = europe
 				}
-				NOT = { is_subject_of = ROOT }
+				NOT = {
+					is_subject_of = ROOT
+				}
 			}
 		}
 		trigger = {
@@ -495,7 +542,11 @@ kongo_choose_path_missions_slot = {
 						owner = {
 							OR = {
 								is_subject_of = ROOT
-								capital_scope = { NOT = { continent = europe } }
+								capital_scope = {
+									NOT = {
+										continent = europe
+									}
+								}
 							}
 						}
 					}
@@ -507,7 +558,11 @@ kongo_choose_path_missions_slot = {
 						owner = {
 							OR = {
 								is_subject_of = ROOT
-								capital_scope = { NOT = { continent = europe } }
+								capital_scope = {
+									NOT = {
+										continent = europe
+									}
+								}
 							}
 						}
 					}
@@ -519,7 +574,11 @@ kongo_choose_path_missions_slot = {
 						owner = {
 							OR = {
 								is_subject_of = ROOT
-								capital_scope = { NOT = { continent = europe } }
+								capital_scope = {
+									NOT = {
+										continent = europe
+									}
+								}
 							}
 						}
 					}
@@ -534,10 +593,9 @@ kongo_choose_path_missions_slot = {
 			add_mil_power = 100
 		}
 	}
-
 	kon_protector_of_africa = {
 		icon = mission_kon_protector_of_africa
-		required_missions = { 
+		required_missions = {
 			kon_banish_the_westerners_from_africa
 			kon_obliterate_great_power_army
 		}
@@ -545,8 +603,12 @@ kongo_choose_path_missions_slot = {
 		trigger = {
 			religious_unity = 0.9
 			stability = 3
-			NOT = { num_of_rebel_armies = 1 }
-			NOT = { num_of_rebel_controlled_provinces = 1 }
+			NOT = {
+				num_of_rebel_armies = 1
+			}
+			NOT = {
+				num_of_rebel_controlled_provinces = 1
+			}
 			if = {
 				limit = {
 					OR = {
@@ -554,7 +616,9 @@ kongo_choose_path_missions_slot = {
 						has_dlc = "Rights of Man"
 					}
 				}
-				NOT = { great_power_rank = 4 }
+				NOT = {
+					great_power_rank = 4
+				}
 			}
 			else = {
 				total_own_and_non_tributary_subject_development = 1500
@@ -580,20 +644,26 @@ kongo_conquest_armies_missions_slot = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		tag = KON
 	}
 	has_country_shield = yes
-
 	kon_anzikus_copper = {
 		icon = mission_kon_anzikus_copper
-		required_missions = {  }
+		required_missions = {
+		}
 		position = 1
 		provinces_to_highlight = {
 			province_id = 1169
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		trigger = {
@@ -609,17 +679,18 @@ kongo_conquest_armies_missions_slot = {
 			}
 		}
 	}
-
 	kon_conquer_kub = {
 		icon = mission_kon_conquer_kub
-		required_missions = { 
+		required_missions = {
 			kon_reform_army
 			kon_anzikus_copper
 		}
 		position = 2
 		provinces_to_highlight = {
 			culture = kuba
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			custom_trigger_tooltip = {
@@ -627,7 +698,9 @@ kongo_conquest_armies_missions_slot = {
 				NOT = {
 					any_province = {
 						culture = kuba
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
 					}
 				}
 			}
@@ -639,31 +712,42 @@ kongo_conquest_armies_missions_slot = {
 			}
 			sankuru_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			luba_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-
 	kon_conquer_lub = {
 		icon = mission_kon_conquer_lub
-		required_missions = { kon_conquer_kub }
+		required_missions = {
+			kon_conquer_kub
+		}
 		position = 3
 		provinces_to_highlight = {
 			OR = {
 				province_id = 4097
 				province_id = 4099
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			owns_or_non_sovereign_subject_of = 4099
@@ -685,33 +769,47 @@ kongo_conquest_armies_missions_slot = {
 			}
 			katanga_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-
 	kon_obliterate_great_power_army = {
 		icon = mission_steppe_warriors
-		required_missions = { }
+		required_missions = {
+		}
 		position = 5
 		provinces_to_highlight = {
 			owner = {
-				NOT = { tag = ROOT }
-				NOT = { is_subject_of = ROOT }
+				NOT = {
+					tag = ROOT
+				}
+				NOT = {
+					is_subject_of = ROOT
+				}
 				OR = {
 					AND = {
 						OR = {
 							has_dlc = "Rights of Man"
 							has_dlc = "Emperor"
 						}
-						NOT = { great_power_rank = 9 }
+						NOT = {
+							great_power_rank = 9
+						}
 					}
 					AND = {
-						NOT = { has_dlc = "Rights of Man" }
-						NOT = { has_dlc = "Emperor" }
+						NOT = {
+							has_dlc = "Rights of Man"
+						}
+						NOT = {
+							has_dlc = "Emperor"
+						}
 						total_own_and_non_tributary_subject_development = ROOT
 					}
 				}
@@ -728,7 +826,9 @@ kongo_conquest_armies_missions_slot = {
 				if = {
 					limit = {
 						any_great_power = {
-							NOT = { tag = ROOT }
+							NOT = {
+								tag = ROOT
+							}
 						}
 					}
 					custom_trigger_tooltip = {
@@ -755,7 +855,7 @@ kongo_conquest_armies_missions_slot = {
 				else = {
 					custom_trigger_tooltip = {
 						tooltip = kon_obliterate_great_power_army_tt
-						always = yes # There is no other great power left to obliterate... congratz
+						always = yes						# There is no other great power left to obliterate... congratz
 					}
 				}
 			}
@@ -763,7 +863,9 @@ kongo_conquest_armies_missions_slot = {
 				if = {
 					limit = {
 						any_country = {
-							NOT = { tag = ROOT }
+							NOT = {
+								tag = ROOT
+							}
 							total_own_and_non_tributary_subject_development = ROOT
 						}
 					}
@@ -771,7 +873,9 @@ kongo_conquest_armies_missions_slot = {
 						tooltip = kon_obliterate_great_power_army_bt
 						any_country = {
 							total_own_and_non_tributary_subject_development = ROOT
-							NOT = { tag = ROOT }
+							NOT = {
+								tag = ROOT
+							}
 							war_with = ROOT
 							NOT = {
 								war_score_against = {
@@ -785,7 +889,7 @@ kongo_conquest_armies_missions_slot = {
 				else = {
 					custom_trigger_tooltip = {
 						tooltip = kon_obliterate_great_power_army_tt
-						always = yes # There is no other great power left to obliterate... congratz
+						always = yes						# There is no other great power left to obliterate... congratz
 					}
 				}
 			}
@@ -813,20 +917,24 @@ kongo_conquest_missions_slot = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		tag = KON
 	}
 	has_country_shield = yes
-
 	kon_reform_army = {
 		icon = mission_african_soldier
-		required_missions = {  }
+		required_missions = {
+		}
 		position = 1
 		trigger = {
 			army_size_percentage = 1
 			has_mil_advisor = yes
 			if = {
-				limit = { has_estate = estate_nobles }
+				limit = {
+					has_estate = estate_nobles
+				}
 				has_estate_privilege = estate_nobles_nobility_primacy
 			}
 			else = {
@@ -836,15 +944,23 @@ kongo_conquest_missions_slot = {
 		effect = {
 			matamba_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			lower_kasai = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -854,17 +970,20 @@ kongo_conquest_missions_slot = {
 			add_permanent_claim = 1169
 		}
 	}
-
 	kon_conquer_ksj = {
 		icon = mission_kon_conquer_ksj
-		required_missions = { kon_reform_army }
+		required_missions = {
+			kon_reform_army
+		}
 		position = 2
 		provinces_to_highlight = {
 			OR = {
 				culture = yaka
 				culture = mbangala
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			custom_trigger_tooltip = {
@@ -872,7 +991,9 @@ kongo_conquest_missions_slot = {
 				NOT = {
 					any_province = {
 						culture = yaka
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
 					}
 				}
 			}
@@ -881,7 +1002,9 @@ kongo_conquest_missions_slot = {
 				NOT = {
 					any_province = {
 						culture = mbangala
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
 					}
 				}
 			}
@@ -891,31 +1014,42 @@ kongo_conquest_missions_slot = {
 			add_army_professionalism = 0.02
 			kasai_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			chokwe_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-
 	kon_conquer_ckw = {
 		icon = mission_kon_conquer_ckw
-		required_missions = { kon_conquer_ksj }
+		required_missions = {
+			kon_conquer_ksj
+		}
 		position = 3
 		provinces_to_highlight = {
 			OR = {
 				culture = chokwe
 				culture = lunda
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			custom_trigger_tooltip = {
@@ -923,7 +1057,9 @@ kongo_conquest_missions_slot = {
 				NOT = {
 					any_province = {
 						culture = chokwe
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
 					}
 				}
 			}
@@ -932,7 +1068,9 @@ kongo_conquest_missions_slot = {
 				NOT = {
 					any_province = {
 						culture = lunda
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
 					}
 				}
 			}
@@ -964,7 +1102,6 @@ kongo_conquest_missions_slot = {
 			}
 		}
 	}
-
 	kon_consolidate_central_africa = {
 		icon = mission_envoy_to_ethiopia
 		required_missions = {
@@ -975,10 +1112,18 @@ kongo_conquest_missions_slot = {
 		position = 4
 		provinces_to_highlight = {
 			culture_group = kongo_group
-			NOT = { owned_by = ROOT }
-			NOT = { is_core = ROOT }
-			NOT = { culture = sawabantu }
-			NOT = { culture = jukun }
+			NOT = {
+				owned_by = ROOT
+			}
+			NOT = {
+				is_core = ROOT
+			}
+			NOT = {
+				culture = sawabantu
+			}
+			NOT = {
+				culture = jukun
+			}
 		}
 		trigger = {
 			custom_trigger_tooltip = {
@@ -986,10 +1131,18 @@ kongo_conquest_missions_slot = {
 				NOT = {
 					any_province = {
 						culture_group = kongo_group
-						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT }
-						NOT = { culture = sawabantu }
-						NOT = { culture = jukun }
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							culture = sawabantu
+						}
+						NOT = {
+							culture = jukun
+						}
 					}
 				}
 			}
@@ -997,20 +1150,25 @@ kongo_conquest_missions_slot = {
 		effect = {
 			if = {
 				limit = {
-					NOT = { government_rank = 3 }
+					NOT = {
+						government_rank = 3
+					}
 				}
 				set_government_rank = 3
 			}
 			southern_africa_superregion = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-
 	kon_greatest_power_kongo = {
 		icon = mission_kon_greatest_power_kongo
 		required_missions = {
@@ -1021,7 +1179,9 @@ kongo_conquest_missions_slot = {
 		position = 6
 		provinces_to_highlight = {
 			superregion = southern_africa_superregion
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			culture_group = kongo_group
@@ -1065,28 +1225,40 @@ kongo_colonies_centralization_missions_slot = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		tag = KON
 	}
 	has_country_shield = yes
-
 	kon_develop_country = {
 		icon = mission_ne_palisades
-		required_missions = {  }
+		required_missions = {
+		}
 		position = 1
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					NOT = { province_id = 1170 }
-					NOT = { development = 10 }
+					NOT = {
+						province_id = 1170
+					}
+					NOT = {
+						development = 10
+					}
 					owned_by = ROOT
 				}
 				AND = {
 					province_id = 1170
 					OR = {
-						NOT = { development = 30 }
-						NOT = { owned_by = ROOT }
-						NOT = { is_core = ROOT }
+						NOT = {
+							development = 30
+						}
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
 					}
 				}
 			}
@@ -1098,7 +1270,9 @@ kongo_colonies_centralization_missions_slot = {
 			}
 			calc_true_if = {
 				all_owned_province = {
-					NOT = { province_id = 1170 }
+					NOT = {
+						province_id = 1170
+					}
 					development = 10
 				}
 				amount = 5
@@ -1110,17 +1284,20 @@ kongo_colonies_centralization_missions_slot = {
 			}
 		}
 	}
-
 	kon_colonize_coast = {
 		icon = mission_gain_mana
-		required_missions = { kon_develop_country }
+		required_missions = {
+			kon_develop_country
+		}
 		position = 2
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1167
 				province_id = 1172
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			owns_or_non_sovereign_subject_of = 1167
@@ -1135,29 +1312,38 @@ kongo_colonies_centralization_missions_slot = {
 			1172 = {
 				add_base_production = 2
 				if = {
-					limit = { NOT = { province_has_center_of_trade_of_level = 2  } }
+					limit = {
+						NOT = {
+							province_has_center_of_trade_of_level = 2
+						}
+					}
 					add_center_of_trade_level = 1
 				}
 			}
 			1171 = {
 				add_base_production = 2
 				if = {
-					limit = { NOT = { province_has_center_of_trade_of_level = 2  } }
+					limit = {
+						NOT = {
+							province_has_center_of_trade_of_level = 2
+						}
+					}
 					add_center_of_trade_level = 1
 				}
 			}
 		}
 	}
-
 	kon_protect_trade = {
 		icon = mission_african_trade_post
-		required_missions = { kon_colonize_coast }
+		required_missions = {
+			kon_colonize_coast
+		}
 		position = 3
 		provinces_to_highlight = {
 			OR = {
-				province_id = 1466 #Ivory Coast Trade Node
-				province_id = 4097 #Kongo Trade Node
-				province_id = 4064 #Great Lakes Trade Node
+				province_id = 1466				#Ivory Coast Trade Node
+				province_id = 4097				#Kongo Trade Node
+				province_id = 4064				#Great Lakes Trade Node
 			}
 		}
 		trigger = {
@@ -1202,10 +1388,10 @@ kongo_colonies_centralization_missions_slot = {
 			add_treasury = 500
 		}
 	}
-
 	kon_seize_crown_land = {
 		icon = mission_noble_council
-		required_missions = {  }
+		required_missions = {
+		}
 		position = 4
 		trigger = {
 			if = {
@@ -1250,10 +1436,11 @@ kongo_colonies_centralization_missions_slot = {
 			add_stability_or_adm_power = yes
 		}
 	}
-
 	kon_absolute_rule = {
 		icon = mission_restore_faith_in_the_throne
-		required_missions = { kon_seize_crown_land }
+		required_missions = {
+			kon_seize_crown_land
+		}
 		position = 5
 		trigger = {
 			if = {
@@ -1268,8 +1455,12 @@ kongo_colonies_centralization_missions_slot = {
 						liberty_desire = 20
 					}
 				}
-				NOT = { num_of_rebel_armies = 1 }
-				NOT = { num_of_rebel_controlled_provinces = 1 }
+				NOT = {
+					num_of_rebel_armies = 1
+				}
+				NOT = {
+					num_of_rebel_controlled_provinces = 1
+				}
 				custom_trigger_tooltip = {
 					tooltip = kon_absolute_rule_ct
 					is_absolutism_active = no
@@ -1286,9 +1477,15 @@ kongo_colonies_centralization_missions_slot = {
 				else = {
 					absolutism = 75
 				}
-				NOT = { average_autonomy = 15 }
-				NOT = { num_of_rebel_armies = 1 }
-				NOT = { num_of_rebel_controlled_provinces = 1 }
+				NOT = {
+					average_autonomy = 15
+				}
+				NOT = {
+					num_of_rebel_armies = 1
+				}
+				NOT = {
+					num_of_rebel_controlled_provinces = 1
+				}
 			}
 		}
 		effect = {

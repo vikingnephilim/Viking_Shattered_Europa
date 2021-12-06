@@ -4138,7 +4138,9 @@ country_event = {
 	desc = "personality_events.57.d"
 	picture = wihgfx_FEMALE_GENERAL_eventPicture
 	trigger = {
-		has_regency = false
+		NOT = {
+			has_regency = yes
+		}
 		is_female = yes
 		is_monarch_leader = no
 		has_dlc = "Rights of Man"

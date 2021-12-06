@@ -3,10 +3,7 @@ estate_aberffraw = {
 	# If true, country will get estate
 	trigger = {
 		AND = {
-			OR = {
-				owns_core_province = 241
-				has_country_flag = aberffraw_estate
-			}
+			owns_core_province = 241
 			OR = {
 				culture_group = british
 				culture_group = gaelic
@@ -19,17 +16,17 @@ estate_aberffraw = {
 		}
 	}
 	country_modifier_happy = {
-		manpower_recovery_speed = 0.2
-		land_maintenance_modifier = -0.1
-		monthly_support_heir_gain = 0.33
+		num_accepted_cultures = 2
+		promote_culture_cost = -0.25
+		same_culture_advisor_cost = -0.5
 	}
 	country_modifier_neutral = {
-		manpower_recovery_speed = 0.2
+		tolerance_own = 1
 	}
 	country_modifier_angry = {
-		manpower_recovery_speed = -0.1
-		land_maintenance_modifier = 0.1
-		global_unrest = 2
+		num_accepted_cultures = -2
+		promote_culture_cost = 0.25
+		same_culture_advisor_cost = 0.5
 	}
 	land_ownership_modifier = {
 	}

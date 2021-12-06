@@ -1,5 +1,4 @@
 #Commercial and Tech Line
-
 east_african_trade_slot1 = {
 	slot = 1
 	generic = yes
@@ -9,8 +8,10 @@ east_african_trade_slot1 = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
-		capital_scope = { 
+		NOT = {
+			map_setup = map_setup_random
+		}
+		capital_scope = {
 			OR = {
 				region = east_africa_region
 				region = south_africa_region
@@ -22,10 +23,11 @@ east_african_trade_slot1 = {
 		}
 	}
 	has_country_shield = no
-	
-	east_africa_trade_consolidation = { 
+	east_africa_trade_consolidation = {
 		icon = mission_market_place_with_asian_traders
-		required_missions = { east_africa_economic_base }
+		required_missions = {
+			east_africa_economic_base
+		}
 		position = 2
 		trigger = {
 			share_of_starting_income = 1.5
@@ -47,8 +49,10 @@ east_african_trade_slot2 = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
-		capital_scope = { 
+		NOT = {
+			map_setup = map_setup_random
+		}
+		capital_scope = {
 			OR = {
 				region = east_africa_region
 				region = south_africa_region
@@ -60,11 +64,11 @@ east_african_trade_slot2 = {
 		}
 	}
 	has_country_shield = no
-
 	#Set an Economic Base
 	east_africa_economic_base = {
 		icon = mission_war_chest
-		required_missions = {  }
+		required_missions = {
+		}
 		trigger = {
 			if = {
 				limit = {
@@ -91,7 +95,7 @@ east_african_trade_slot2 = {
 							region = south_africa_region
 						}
 					}
-					NOT = { 
+					NOT = {
 						num_of_owned_provinces_with = {
 							value = 7
 							OR = {
@@ -116,7 +120,7 @@ east_african_trade_slot2 = {
 							region = south_africa_region
 						}
 					}
-					NOT = { 
+					NOT = {
 						num_of_owned_provinces_with = {
 							value = 5
 							OR = {
@@ -141,7 +145,7 @@ east_african_trade_slot2 = {
 							region = south_africa_region
 						}
 					}
-					NOT = { 
+					NOT = {
 						num_of_owned_provinces_with = {
 							value = 3
 							OR = {
@@ -162,14 +166,16 @@ east_african_trade_slot2 = {
 			add_country_modifier = {
 				name = "east_africa_blooming_nation"
 				duration = 9125
-			}		
+			}
 		}
 	}
-		
 	#Dominate Trade Node
 	east_africa_dominate_tn = {
 		icon = mission_dominate_home_trade_node
-		required_missions = { east_africa_economic_base east_africa_trading_navy }
+		required_missions = {
+			east_africa_economic_base
+			east_africa_trading_navy
+		}
 		provinces_to_highlight = {
 			OR = {
 				region = east_africa_region
@@ -238,7 +244,9 @@ east_african_trade_slot2 = {
 				}
 			}
 			if = {
-				limit = { has_saved_event_target = reward_province }
+				limit = {
+					has_saved_event_target = reward_province
+				}
 				event_target:reward_province = {
 					add_province_modifier = {
 						name = "east_africa_trading_hub"
@@ -248,17 +256,20 @@ east_african_trade_slot2 = {
 			}
 			else = {
 				custom_tooltip = east_africa_trading_hub_tooltip
-			}	
+			}
 		}
 	}
-	
 	#Have Big Treasury
 	east_africa_big_treasury = {
 		icon = mission_war_chest
-		required_missions = { east_africa_dominate_tn }
+		required_missions = {
+			east_africa_dominate_tn
+		}
 		trigger = {
 			treasury = 5000
-			NOT = { num_of_loans = 1 }
+			NOT = {
+				num_of_loans = 1
+			}
 		}
 		effect = {
 			add_country_modifier = {
@@ -267,11 +278,12 @@ east_african_trade_slot2 = {
 			}
 		}
 	}
-	
 	#Modernized Army and Navy 
 	east_africa_modern_army = {
 		icon = mission_son_military_expertise
-		required_missions = { east_africa_big_treasury }
+		required_missions = {
+			east_africa_big_treasury
+		}
 		position = 4
 		trigger = {
 			OR = {
@@ -289,15 +301,16 @@ east_african_trade_slot2 = {
 			add_mil_power = 100
 			add_country_modifier = {
 				name = "east_africa_modern_army"
-				duration = 9125	
+				duration = 9125
 			}
 		}
 	}
-	
 	#Modernized Nation
 	east_africa_modern_nation = {
 		icon = mission_indian_stateman
-		required_missions = { east_africa_modern_army }
+		required_missions = {
+			east_africa_modern_army
+		}
 		trigger = {
 			adm_tech = 20
 			has_better_tech_than_westerns = yes
@@ -305,10 +318,10 @@ east_african_trade_slot2 = {
 		}
 		effect = {
 			if = {
-				limit = { 
+				limit = {
 					has_dlc = "Rule Britannia"
 				}
-				change_innovativeness = 10	
+				change_innovativeness = 10
 				add_country_modifier = {
 					name = "east_africa_modern_nation"
 					duration = 9125
@@ -337,8 +350,10 @@ east_african_diplomatic_slot = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
-		capital_scope = { 
+		NOT = {
+			map_setup = map_setup_random
+		}
+		capital_scope = {
 			OR = {
 				region = east_africa_region
 				region = south_africa_region
@@ -350,15 +365,15 @@ east_african_diplomatic_slot = {
 		}
 	}
 	has_country_shield = no
-
 	#Trading Navy	
 	east_africa_trading_navy = {
 		icon = mission_galleys_in_port
-		required_missions = {  }
+		required_missions = {
+		}
 		trigger = {
 			light_ship_fraction = 0.4
 			navy_size = 0.02
-			navy_size_percentage = 0.80
+			navy_size_percentage = 0.8
 		}
 		effect = {
 			add_country_modifier = {
@@ -367,11 +382,12 @@ east_african_diplomatic_slot = {
 			}
 		}
 	}
-	
 	#Commercial Treaties
 	east_africa_commercial_treaties = {
 		icon = mission_mal_riches_of_trade
-		required_missions = { east_africa_trading_navy }
+		required_missions = {
+			east_africa_trading_navy
+		}
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1340
@@ -400,7 +416,9 @@ east_african_diplomatic_slot = {
 				add_base_production = 1
 				add_base_manpower = 1
 				area = {
-					limit = { owned_by = ROOT }
+					limit = {
+						owned_by = ROOT
+					}
 					add_province_modifier = {
 						name = "east_africa_attracting_capital"
 						duration = 9125
@@ -409,11 +427,14 @@ east_african_diplomatic_slot = {
 			}
 		}
 	}
-		
 	#Horn Trade
 	east_africa_horn_trade = {
 		icon = mission_market_place_with_asian_traders
-		required_missions = { east_africa_commercial_treaties east_africa_dominate_tn east_africa_hear_me_roar }
+		required_missions = {
+			east_africa_commercial_treaties
+			east_africa_dominate_tn
+			east_africa_hear_me_roar
+		}
 		provinces_to_highlight = {
 			trade_company_region = trade_company_gulf_of_aden
 			province_has_center_of_trade_of_level = 1
@@ -430,22 +451,27 @@ east_african_diplomatic_slot = {
 		}
 		effect = {
 			custom_tooltip = east_africa_eastern_trade_tooltip
-			trade_company_coromandel = { 
+			trade_company_coromandel = {
 				limit = {
 					province_has_center_of_trade_of_level = 1
 					has_port = yes
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = {
+						is_core = root
+					}
+					NOT = {
+						is_permanent_claim = root
+					}
 				}
 				add_permanent_claim = root
-			}	
+			}
 		}
 	}
-	
 	#Eastern Trade
 	east_africa_eastern_trade = {
 		icon = mission_indian_soldier_elephant
-		required_missions = { east_africa_horn_trade }
+		required_missions = {
+			east_africa_horn_trade
+		}
 		provinces_to_highlight = {
 			trade_company_region = trade_company_coromandel
 			province_has_center_of_trade_of_level = 1
@@ -464,14 +490,16 @@ east_african_diplomatic_slot = {
 			add_country_modifier = {
 				name = "east_africa_indian_trade"
 				duration = 9125
-			}		
+			}
 		}
 	}
-		
 	#Reverse Zheng He
 	east_africa_zheng_he = {
 		icon = mission_junk_boat
-		required_missions = { east_africa_eastern_trade east_africa_lion_king }
+		required_missions = {
+			east_africa_eastern_trade
+			east_africa_lion_king
+		}
 		trigger = {
 			is_great_power = yes
 			684 = {
@@ -538,8 +566,10 @@ east_african_militar_slot = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
-		capital_scope = { 
+		NOT = {
+			map_setup = map_setup_random
+		}
+		capital_scope = {
 			OR = {
 				region = east_africa_region
 				region = south_africa_region
@@ -551,28 +581,29 @@ east_african_militar_slot = {
 		}
 	}
 	has_country_shield = no
-
 	#Local Power 
 	east_africa_rising_lion = {
 		icon = mission_zim_strong_rulership
-		required_missions = {  }
+		required_missions = {
+		}
 		trigger = {
 			army_size = 8
 			army_size_percentage = 0.8
 			grown_by_development = 30
 		}
-		effect = {	
+		effect = {
 			add_country_modifier = {
 				name = "east_africa_fearless_army"
 				duration = 9125
-			}	
+			}
 		}
 	}
-	
 	#Regional Power 
 	east_africa_hear_me_roar = {
 		icon = mission_unite_home_region
-		required_missions = { east_africa_rising_lion }
+		required_missions = {
+			east_africa_rising_lion
+		}
 		provinces_to_highlight = {
 			OR = {
 				region = east_africa_region
@@ -592,24 +623,31 @@ east_african_militar_slot = {
 		}
 		effect = {
 			custom_tooltip = east_africa_horn_trade_tooltip
-			trade_company_gulf_of_aden = { 
+			trade_company_gulf_of_aden = {
 				limit = {
 					province_has_center_of_trade_of_level = 1
 					has_port = yes
-					NOT = { is_core = root }
-					NOT = { is_permanent_claim = root }
+					NOT = {
+						is_core = root
+					}
+					NOT = {
+						is_permanent_claim = root
+					}
 				}
 				add_permanent_claim = root
 			}
 		}
 	}
-	
 	#Influence Outside Our Borders
 	east_africa_international_influence = {
 		icon = mission_kon_protector_of_africa
-		required_missions = { east_africa_hear_me_roar }
+		required_missions = {
+			east_africa_hear_me_roar
+		}
 		trigger = {
-			NOT = { great_power_rank = 10 }
+			NOT = {
+				great_power_rank = 10
+			}
 			custom_trigger_tooltip = {
 				tooltip = international_influence.tooltip
 				num_of_allies = 2
@@ -633,28 +671,32 @@ east_african_militar_slot = {
 			add_country_modifier = {
 				name = "east_africa_big_friends"
 				duration = 9125
-			}	
+			}
 		}
 	}
-	
 	#Regional Hegemon
 	east_africa_lion_king = {
 		icon = mission_african_soldier
-		required_missions = { east_africa_international_influence }
+		required_missions = {
+			east_africa_international_influence
+		}
 		trigger = {
 			if = {
-				limit = { has_dlc = "Common Sense" }
-				government_rank = 3 
+				limit = {
+					has_dlc = "Common Sense"
+				}
+				government_rank = 3
 			}
-			else = { total_development = 1000 }	
+			else = {
+				total_development = 1000
+			}
 		}
 		effect = {
 			add_prestige = 30
 			add_country_modifier = {
 				name = "east_africa_regional_hegemon"
 				duration = 9125
-			}	
+			}
 		}
 	}
-
 }

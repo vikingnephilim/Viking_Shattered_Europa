@@ -1,0 +1,122 @@
+estate_maclochlainn = {
+	icon = 24
+	# If true, country will get estate
+	trigger = {
+		AND = {
+			owns_core_province = 373
+			OR = {
+				culture = ulster_scottish
+				culture = irish
+			}
+		}
+		is_nomad = no
+		is_colonial_nation = no
+		NOT = {
+			has_reform = revolutionary_empire_reform
+		}
+	}
+	# These scale with loyalty & power
+	country_modifier_happy = {
+		army_tradition = 1
+		army_tradition_decay = -0.02
+		army_tradition_from_battle = 0.05
+	}
+	country_modifier_neutral = {
+		yearly_army_professionalism = 0.01
+	}
+	country_modifier_angry = {
+		army_tradition = -1
+		army_tradition_decay = 0.02
+		army_tradition_from_battle = -0.05
+	}
+	land_ownership_modifier = {
+	}
+	province_independence_weight = {
+		factor = 1
+		modifier = {
+			factor = 1.5
+			culture_group = owner
+			religion_group = owner
+		}
+		modifier = {
+			factor = 1.5
+			base_manpower = 5
+		}
+		modifier = {
+			factor = 0.75
+			development = 20
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				is_state_core = owner
+			}
+		}
+	}
+	# Influence modifiers
+	base_influence = 10
+	color = {
+		0
+		103
+		213
+	}
+	privileges = {
+		estate_land_rights
+		estate_nobility_primacy
+		estate_officer_corp
+		estate_levies
+		estate_advisors
+		estate_right_of_counsel
+		estate_religious_state
+		estate_independent_inquisition
+		estate_new_world_mission
+		estate_clerical_oversight
+		estate_enforced_interfaith_dialogue
+		estate_enforced_one_faith
+		estate_land_of_commerce
+		estate_admirals
+		estate_commercial_board_of_advice
+		estate_new_world_charter
+		estate_indebted_to_estate
+		estate_free_enterprise
+		estate_exploration_expedition
+		estate_self_governance
+		estate_taxes
+		estate_share_of_the_spoils
+		estate_legitimacy_to_rule
+		estate_diplomacy
+		estate_wartaxes
+		estate_patronage_of_the_arts
+		estate_supremacy_over_crown
+		estate_monopoly_of_dyes
+		estate_monopoly_of_gems
+		estate_monopoly_of_glass
+		estate_monopoly_of_incense
+		estate_monopoly_of_livestock
+		estate_monopoly_of_metals
+		estate_monopoly_of_paper
+		estate_monopoly_of_slaves
+		estate_monopoly_of_textiles
+		estate_monopoly_of_wine
+		estate_monopoly_of_wool
+		estate_control_over_monetary_policy
+		estate_private_trade_fleets
+		estate_statutory_rights
+		estate_better_integration
+		estate_religious_diplomats
+		estate_one_faith_one_culture
+		estate_neighbor_raids
+	}
+	agendas = {
+		estate_nobles_complete_conquest_of_x
+		estate_nobles_annex_subject
+		estate_nobles_build_an_army
+		estate_nobles_bigger_army_than_rival
+		estate_nobles_build_up_manpower_reserves
+		estate_nobles_recover_abysmal_prestige
+		estate_nobles_improve_prestige
+		estate_nobles_hire_advisor
+		estate_nobles_fire_advisor
+	}
+	influence_from_dev_modifier = 1
+}

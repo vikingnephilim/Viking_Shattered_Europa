@@ -1,12 +1,9 @@
 estate_stuart = {
-	icon = 13
+	icon = 18
 	# If true, country will get estate
 	trigger = {
 		AND = {
-			OR = {
-				owns_core_province = 249
-				has_country_flag = stuart_estate
-			}
+			owns_core_province = 249
 			OR = {
 				culture_group = british
 				culture_group = gaelic
@@ -24,8 +21,6 @@ estate_stuart = {
 		manpower_in_true_faith_provinces = 0.5
 		merc_maintenance_modifier = 0.2
 		mercenary_discipline = 2
-		stability_cost_modifier = -0.1
-		global_unrest = -2
 	}
 	country_modifier_neutral = {
 		manpower_in_true_faith_provinces = 0.25
@@ -35,8 +30,6 @@ estate_stuart = {
 		manpower_in_true_faith_provinces = -0.5
 		merc_maintenance_modifier = -0.2
 		mercenary_discipline = -2
-		stability_cost_modifier = 0.1
-		global_unrest = 2
 	}
 	land_ownership_modifier = {
 	}

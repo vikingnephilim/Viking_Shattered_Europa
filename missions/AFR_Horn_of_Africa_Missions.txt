@@ -1,7 +1,5 @@
 #Generic missions for Horn of Africa Tags
-
 #Religious clash and conversion
-
 gen_horn_of_africa_diplomatic_slot = {
 	slot = 1
 	generic = yes
@@ -11,19 +9,25 @@ gen_horn_of_africa_diplomatic_slot = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
-		NOT = { tag = ETH  } # Not Ethiopia
-		NOT = { tag = AJU  } # Not Ajuuraan
+		NOT = {
+			map_setup = map_setup_random
+		}
+		NOT = {
+			tag = ETH
+		}		# Not Ethiopia
+		NOT = {
+			tag = AJU
+		}		# Not Ajuuraan
 		capital_scope = {
 			region = horn_of_africa_region
 		}
 	}
 	has_country_shield = no
-
 	#Befriend two Tags of your same religion group
 	gen_hoa_building_religious_alliances = {
 		icon = mission_son_fetishist_alliances
-		required_missions = {  } #none
+		required_missions = {
+		}		#none
 		trigger = {
 			if = {
 				limit = {
@@ -65,31 +69,32 @@ gen_horn_of_africa_diplomatic_slot = {
 				}
 			}
 		}
-		effect = { 
+		effect = {
 			add_country_modifier = {
 				name = "influential_diplomacy"
-				duration = 9125 #25 years
+				duration = 9125				#25 years
 			}
 			add_prestige = 10
 		}
 	}
-
 	#Subjugate a Tag from a different religion group
 	gen_hoa_subjugate_heathens = {
 		icon = mission_kon_collect_cults
-		required_missions = { 
-			gen_hoa_building_religious_alliances 
-			gen_hoa_prepare_for_war 
+		required_missions = {
+			gen_hoa_building_religious_alliances
+			gen_hoa_prepare_for_war
 		}
-		trigger = { 
+		trigger = {
 			any_subject_country = {
-				NOT = { religion_group = ROOT }
+				NOT = {
+					religion_group = ROOT
+				}
 			}
 		}
-		effect = {	
+		effect = {
 			add_country_modifier = {
 				name = gen_hoa_heretic_convert_cost_modifier
-				duration = 9125 #25 years
+				duration = 9125				#25 years
 			}
 			hidden_effect = {
 				every_subject_country = {
@@ -98,7 +103,9 @@ gen_horn_of_africa_diplomatic_slot = {
 							capital_scope = {
 								region = horn_of_africa_region
 							}
-							NOT = { religion_group = ROOT }
+							NOT = {
+								religion_group = ROOT
+							}
 						}
 						set_country_flag = heathen_vassal
 					}
@@ -106,31 +113,33 @@ gen_horn_of_africa_diplomatic_slot = {
 			}
 		}
 	}
-
 	#Diplo Annex all tags subjugated in the previous mission
 	gen_hoa_join_forces = {
 		icon = mission_zim_strong_rulership
-		required_missions = { gen_hoa_subjugate_heathens }
+		required_missions = {
+			gen_hoa_subjugate_heathens
+		}
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = gen_hoa_join_forces.tooltip
 				not = {
-					any_subject_country = { 
+					any_subject_country = {
 						has_country_flag = heathen_vassal
 					}
 				}
 			}
 		}
-		effect = { 
+		effect = {
 			add_dip_power = 150
 			add_prestige = 20
 		}
 	}
-
 	#Become a Great Power
 	gen_hoa_become_great_power = {
 		icon = mission_kon_protector_of_africa
-		required_missions = { gen_hoa_join_forces }
+		required_missions = {
+			gen_hoa_join_forces
+		}
 		trigger = {
 			is_great_power = yes
 		}
@@ -154,30 +163,37 @@ gen_horn_of_africa_military_slot = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
-		NOT = { tag = ETH  } # Not Ethiopia
-		NOT = { tag = AJU  } # Not Ajuuraan
+		NOT = {
+			map_setup = map_setup_random
+		}
+		NOT = {
+			tag = ETH
+		}		# Not Ethiopia
+		NOT = {
+			tag = AJU
+		}		# Not Ajuuraan
 		capital_scope = {
 			region = horn_of_africa_region
 		}
-		
 	}
 	has_country_shield = no
-
 	#Prepare for War
 	gen_hoa_prepare_for_war = {
 		icon = mission_son_military_expertise
-		required_missions = { }
-		
+		required_missions = {
+		}
 		trigger = {
 			army_size_percentage = 1
 			manpower_percentage = 0.6
 			num_of_generals = 1
 		}
-		effect = { #Get a random claim for every Tag not in your religious group 
+		effect = {
+			#Get a random claim for every Tag not in your religious group 
 			every_known_country = {
 				limit = {
-					NOT = { religion_group = ROOT }
+					NOT = {
+						religion_group = ROOT
+					}
 					capital_scope = {
 						region = horn_of_africa_region
 					}
@@ -185,20 +201,26 @@ gen_horn_of_africa_military_slot = {
 				random_owned_province = {
 					limit = {
 						region = horn_of_africa_region
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+						NOT = {
+							is_permanent_claim = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
 					}
 					add_claim = ROOT
 				}
 			}
 		}
 	}
-
 	#Attack the heathens
 	gen_hoa_attack_the_heathens = {
 		icon = mission_kon_repel_the_missionaries
-		required_missions = { gen_hoa_prepare_for_war }
-		trigger = { #Start a ofensive war against a tag of a diferent religious group
+		required_missions = {
+			gen_hoa_prepare_for_war
+		}
+		trigger = {
+			#Start a ofensive war against a tag of a diferent religious group
 			any_known_country = {
 				capital_scope = {
 					region = horn_of_africa_region
@@ -206,56 +228,67 @@ gen_horn_of_africa_military_slot = {
 				defensive_war_with = THIS
 			}
 		}
-		effect = { #Decent bonus to the morale for some years
+		effect = {
+			#Decent bonus to the morale for some years
 			add_country_modifier = {
 				name = gen_hoa_horn_bravery_modifier
-				duration = 9125 #25 years
+				duration = 9125				#25 years
 			}
 		}
 	}
-
 	#Expand the borders
 	gen_hoa_expand_borders = {
 		icon = mission_kon_conquer_ksj
-		required_missions = { gen_hoa_attack_the_heathens }
+		required_missions = {
+			gen_hoa_attack_the_heathens
+		}
 		provinces_to_highlight = {
 			region = horn_of_africa_region
-			NOT = { owned_by = ROOT }
+			NOT = {
+				owned_by = ROOT
+			}
 		}
-		trigger = { grown_by_states = 5 }
-		effect = { 
+		trigger = {
+			grown_by_states = 5
+		}
+		effect = {
 			add_country_modifier = {
 				name = "expansionist_country"
-				duration = 9125 #25 years
+				duration = 9125				#25 years
 			}
 			every_province = {
 				limit = {
-					NOT = { religion_group = ROOT }
+					NOT = {
+						religion_group = ROOT
+					}
 					region = horn_of_africa_region
 				}
 				add_claim = ROOT
 			}
 		}
 	}
-	
 	#Unify the Horn
 	gen_hoa_unify_the_horn_of_africa = {
 		icon = mission_mal_fighting_musa
-		required_missions = { gen_hoa_expand_borders}
+		required_missions = {
+			gen_hoa_expand_borders
+		}
 		provinces_to_highlight = {
 			region = horn_of_africa_region
-			NOT = { owned_by = ROOT }
+			NOT = {
+				owned_by = ROOT
+			}
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 50 # how many provinces should be owned
+				value = 50				# how many provinces should be owned
 				region = horn_of_africa_region
 			}
 		}
 		effect = {
 			add_country_modifier = {
 				name = gen_hoa_unify_horn_modifier
-				duration = 9125 #25 years
+				duration = 9125				#25 years
 			}
 		}
 	}
@@ -270,20 +303,25 @@ gen_horn_of_africa_religious_slot = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
-		NOT = { tag = ETH  } # Not Ethiopia
-		NOT = { tag = AJU  } # Not Ajuuraan
+		NOT = {
+			map_setup = map_setup_random
+		}
+		NOT = {
+			tag = ETH
+		}		# Not Ethiopia
+		NOT = {
+			tag = AJU
+		}		# Not Ajuuraan
 		capital_scope = {
 			region = horn_of_africa_region
 		}
-		
 	}
 	has_country_shield = no
-
 	#Favor the church
 	gen_hoa_favor_church = {
 		icon = mission_central_asian_city
-		required_missions = {  }
+		required_missions = {
+		}
 		trigger = {
 			estate_loyalty = {
 				estate = estate_church
@@ -296,7 +334,9 @@ gen_horn_of_africa_religious_slot = {
 		}
 		effect = {
 			if = {
-				limit = {stability = 3}
+				limit = {
+					stability = 3
+				}
 				add_adm_power = 100
 				add_dip_power = 100
 				add_mil_power = 100
@@ -306,30 +346,31 @@ gen_horn_of_africa_religious_slot = {
 			}
 		}
 	}
-
 	#Convert the conquered
 	gen_hoa_convert_conquered = {
 		position = 4
 		icon = mission_zim_cults
-		required_missions = { gen_hoa_favor_church gen_hoa_expand_borders }
-		
+		required_missions = {
+			gen_hoa_favor_church
+			gen_hoa_expand_borders
+		}
 		trigger = {
-			religious_unity = 0.90
+			religious_unity = 0.9
 		}
 		effect = {
 			add_country_modifier = {
 				name = gen_hoa_convert_conquered_modifier
-				duration = 9125 #25 years
+				duration = 9125				#25 years
 			}
 		}
 	}
-
 	#Convert the Horn of Africa
 	gen_hoa_convert_the_horn = {
 		position = 5
 		icon = mission_mal_jihad_upon_own_population
-		required_missions = { gen_hoa_convert_conquered }
-		
+		required_missions = {
+			gen_hoa_convert_conquered
+		}
 		trigger = {
 			or = {
 				custom_trigger_tooltip = {
@@ -344,11 +385,14 @@ gen_horn_of_africa_religious_slot = {
 				}
 				custom_trigger_tooltip = {
 					tooltip = gen_hoa_convert_30_provinces_tooltip_tt
-					check_variable = { which = num_converted_religion value = 30 }
+					check_variable = {
+						which = num_converted_religion
+						value = 30
+					}
 				}
 			}
 		}
-		effect = { 
+		effect = {
 			add_country_modifier = {
 				name = gen_hoa_convert_the_horn_modifier
 				duration = -1
@@ -366,125 +410,141 @@ gen_horn_of_africa_economic_slot = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
-		NOT = { tag = ETH  } # Not Ethiopia
-		NOT = { tag = AJU  } # Not Ajuuraan
+		NOT = {
+			map_setup = map_setup_random
+		}
+		NOT = {
+			tag = ETH
+		}		# Not Ethiopia
+		NOT = {
+			tag = AJU
+		}		# Not Ajuuraan
 		capital_scope = {
 			region = horn_of_africa_region
 		}
-		
 	}
 	has_country_shield = no
-
 	#Stabilize Economy
 	gen_hoa_stabilize_economy_mission = {
 		icon = mission_mal_riches_of_trade
-		required_missions = {  } #None
-		trigger = { 
-			share_of_starting_income = 1.25 
+		required_missions = {
+		}		#None
+		trigger = {
+			share_of_starting_income = 1.25
 			treasury = 100
-			NOT = { has_estate_loan = 1 }
+			NOT = {
+				has_estate_loan = 1
+			}
 		}
 		effect = {
 			add_country_modifier = {
 				name = gen_hoa_developing_economy_modifier
-				duration = 9125 #25 years
+				duration = 9125				#25 years
 			}
 		}
 	}
-
 	#Temples of Stone
 	gen_hoa_build_temples = {
 		icon = mission_mosque
-		required_missions = { gen_hoa_stabilize_economy_mission }
+		required_missions = {
+			gen_hoa_stabilize_economy_mission
+		}
 		trigger = {
 			temple = 7
-			capital_scope	= {
+			capital_scope = {
 				num_of_times_improved_by_owner = 8
 			}
 		}
 		effect = {
 			add_country_modifier = {
 				name = gen_hoa_build_temples_modifier
-				duration = 9125 #25 years
+				duration = 9125				#25 years
 			}
 		}
 	}
-
 	#Build Merchant Navy
 	gen_hoa_build_trade_navy = {
 		icon = mission_junk_boat
-		required_missions = { gen_hoa_build_temples }
-		
+		required_missions = {
+			gen_hoa_build_temples
+		}
 		trigger = {
 			num_of_light_ship = 35
 		}
-		
 		effect = {
 			add_country_modifier = {
 				name = gen_hoa_trade_navy_modifier
-				duration = 9125 #25 years
+				duration = 9125				#25 years
 			}
 		}
 	}
-
 	#Control the Local coastline
 	gen_hoa_control_coastline = {
 		icon = mission_invade_island
-		required_missions = { gen_hoa_build_trade_navy }
+		required_missions = {
+			gen_hoa_build_trade_navy
+		}
 		trigger = {
 			num_of_ports = 12
 		}
 		effect = {
 			add_country_modifier = {
 				name = gen_hoa_control_coastline_modifier
-				duration = 9125 #25 years
+				duration = 9125				#25 years
 			}
 		}
 	}
-
 	#Control the Indian Ocean 
 	gen_hoa_control_india_ocean = {
 		icon = mission_son_own_develop_clothes_and_salt
-		required_missions = { gen_hoa_control_coastline }
+		required_missions = {
+			gen_hoa_control_coastline
+		}
 		trigger = {
-			2772 = {#Ethiopia
+			2772 = {
+				#Ethiopia
 				trade_share = {
 					country = ROOT
 					share = 75
 				}
 			}
-			1340 = {#Gulf of Aden
+			1340 = {
+				#Gulf of Aden
 				trade_share = {
 					country = ROOT
 					share = 70
 				}
 			}
-			1334 = {#Hormuz
+			1334 = {
+				#Hormuz
 				trade_share = {
 					country = ROOT
 					share = 30
 				}
 			}
-			504 = {#Gujarat
+			504 = {
+				#Gujarat
 				trade_share = {
 					country = ROOT
 					share = 30
 				}
 			}
-			1340 = {#Comorin Cape
+			1340 = {
+				#Comorin Cape
 				trade_share = {
 					country = ROOT
 					share = 30
 				}
 			}
-			1343 = {#Ganges delta
+			1343 = {
+				#Ganges delta
 				trade_share = {
 					country = ROOT
 					share = 15
 				}
 			}
-			1361 = {#Malacca
+			1361 = {
+				#Malacca
 				trade_share = {
 					country = ROOT
 					share = 15
@@ -494,7 +554,7 @@ gen_horn_of_africa_economic_slot = {
 		effect = {
 			add_country_modifier = {
 				name = "east_india_trade_rush"
-				duration = 9125 #25 years
+				duration = 9125				#25 years
 			}
 		}
 	}

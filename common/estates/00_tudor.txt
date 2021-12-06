@@ -1,12 +1,9 @@
 estate_tudor = {
-	icon = 14
+	icon = 19
 	# If true, country will get estate
 	trigger = {
 		AND = {
-			OR = {
-				owns_core_province = 236
-				has_country_flag = tudor_estate
-			}
+			owns_core_province = 236
 			OR = {
 				culture_group = british
 				culture_group = gaelic
@@ -20,16 +17,19 @@ estate_tudor = {
 	}
 	# These scale with loyalty & power
 	country_modifier_happy = {
-		trade_efficiency = 0.2
-		development_cost = -0.1
+		heavy_ship_power = 0.1
+		heavy_ship_cost = -0.1
+		light_ship_power = 0.1
+		light_ship_cost = -0.1
 	}
 	country_modifier_neutral = {
-		trade_efficiency = 0.2
+		naval_tradition_from_battle = 0.1
 	}
 	country_modifier_angry = {
-		trade_efficiency = -0.1
-		development_cost = 0.1
-		global_unrest = 2
+		heavy_ship_power = -0.1
+		heavy_ship_cost = 0.1
+		light_ship_power = -0.1
+		light_ship_cost = 0.1
 	}
 	land_ownership_modifier = {
 	}

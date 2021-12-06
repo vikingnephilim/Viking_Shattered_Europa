@@ -1,12 +1,9 @@
 estate_york = {
-	icon = 23
+	icon = 21
 	# If true, country will get estate
 	trigger = {
 		AND = {
-			OR = {
-				owns_core_province = 245
-				has_country_flag = york_estate
-			}
+			owns_core_province = 245
 			OR = {
 				culture_group = british
 				culture_group = gaelic
@@ -20,24 +17,19 @@ estate_york = {
 	}
 	# These scale with loyalty & power
 	country_modifier_happy = {
-		global_tax_modifier = 0.2
-		papal_influence = 1
-		devotion = 0.5
-		church_power_modifier = 0.1
-		monthly_fervor_increase = 1
-		stability_cost_modifier = -0.1
+		diplomatic_annexation_cost = -0.2
+		province_warscore_cost = -0.2
+		claim_duration = 0.2
+		ae_impact = -0.2
 	}
 	country_modifier_neutral = {
-		global_tax_modifier = 0.2
+		stability_cost_modifier = -0.1
 	}
 	country_modifier_angry = {
-		global_tax_modifier = -0.1
-		papal_influence = -1
-		devotion = -0.5
-		church_power_modifier = -0.25
-		monthly_fervor_increase = -1
-		stability_cost_modifier = 0.1
-		global_unrest = 2
+		diplomatic_annexation_cost = 0.2
+		province_warscore_cost = 0.2
+		claim_duration = -0.2
+		ae_impact = 0.2
 	}
 	land_ownership_modifier = {
 	}

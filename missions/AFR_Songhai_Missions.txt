@@ -8,15 +8,17 @@ songhai_military_slot = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		tag = SON
 	}
 	has_country_shield = yes
-
 	#Have a good ruler
 	son_competence_in_court = {
 		icon = mission_restore_caliphate_of_cordoba
-		required_missions = {  }
+		required_missions = {
+		}
 		position = 1
 		trigger = {
 			monthly_adm = 9
@@ -47,11 +49,12 @@ songhai_military_slot = {
 			change_government_reform_progress = -25
 		}
 	}
-
 	#Modernize state
 	son_military_expertise = {
 		icon = mission_son_military_expertise
-		required_missions = { son_competence_in_court }
+		required_missions = {
+			son_competence_in_court
+		}
 		position = 2
 		trigger = {
 			is_monarch_leader = yes
@@ -71,11 +74,12 @@ songhai_military_slot = {
 			}
 		}
 	}
-
 	#Modernize state
 	son_win_battles = {
 		icon = mission_non-western_soldiers
-		required_missions = { son_military_expertise }
+		required_missions = {
+			son_military_expertise
+		}
 		position = 3
 		trigger = {
 			if = {
@@ -120,11 +124,12 @@ songhai_military_slot = {
 			}
 		}
 	}
-
 	#Modernize Army
 	son_modernize_army = {
 		icon = mission_levantine_restoration
-		required_missions = { son_win_battles }
+		required_missions = {
+			son_win_battles
+		}
 		position = 5
 		trigger = {
 			army_tradition = 75
@@ -148,11 +153,12 @@ songhai_military_slot = {
 			}
 		}
 	}
-
 	#Modernize state
 	son_westernize_state = {
 		icon = mission_taula_de_canvi
-		required_missions = { son_modernize_army }
+		required_missions = {
+			son_modernize_army
+		}
 		position = 6
 		trigger = {
 			has_better_tech_than_westerns = yes
@@ -193,11 +199,12 @@ songhai_historical_conquest_slot = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		tag = SON
 	}
 	has_country_shield = yes
-
 	#Conquer Timbuktu
 	son_conquer_tmb = {
 		icon = mission_conquer_timbuktu
@@ -207,7 +214,9 @@ songhai_historical_conquest_slot = {
 		position = 2
 		provinces_to_highlight = {
 			province_id = 1132
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			owns_or_non_sovereign_subject_of = 1132
@@ -222,21 +231,28 @@ songhai_historical_conquest_slot = {
 			add_permanent_claim = 1123
 			jenne_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			baghena_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-
 	#Take Baghena (Koumbi Saleh) out
 	son_conquer_zaf = {
 		icon = mission_sw_against_the_desert
@@ -246,7 +262,9 @@ songhai_historical_conquest_slot = {
 		position = 4
 		provinces_to_highlight = {
 			province_id = 2246
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			owns_or_non_sovereign_subject_of = 2246
@@ -266,7 +284,6 @@ songhai_historical_conquest_slot = {
 			}
 		}
 	}
-
 	#Prepare raid on Mali
 	son_prepare_troops = {
 		icon = mission_empire
@@ -280,21 +297,27 @@ songhai_historical_conquest_slot = {
 					tag = MAL
 					AND = {
 						is_subject_of = MAL
-						NOT = { is_subject_of_type = tributary_state }
+						NOT = {
+							is_subject_of_type = tributary_state
+						}
 					}
 				}
 			}
 		}
 		trigger = {
 			OR = {
-				NOT = { exists = MAL }
+				NOT = {
+					exists = MAL
+				}
 				AND = {
 					army_size = MAL
 					prestige = MAL
 					stability = MAL
 					power_projection = MAL
 					MAL = {
-						NOT = { tech_difference = 1 }
+						NOT = {
+							tech_difference = 1
+						}
 					}
 				}
 			}
@@ -303,21 +326,31 @@ songhai_historical_conquest_slot = {
 		effect = {
 			if = {
 				limit = {
-					NOT = { government_rank = 3 }
+					NOT = {
+						government_rank = 3
+					}
 				}
 				set_government_rank = 3
 			}
 			manding_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			futa_jallon_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -335,7 +368,6 @@ songhai_historical_conquest_slot = {
 			}
 		}
 	}
-
 	#Invade Mali
 	son_invade_mali = {
 		icon = mission_son_invade_mali
@@ -351,12 +383,16 @@ songhai_historical_conquest_slot = {
 						area = manding_area
 						area = futa_jallon_area
 					}
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
 				}
 			}
 		}
 		trigger = {
-			NOT = { exists = MAL }
+			NOT = {
+				exists = MAL
+			}
 			manding_area = {
 				country_or_non_sovereign_subject_holds = ROOT
 				type = all
@@ -369,21 +405,28 @@ songhai_historical_conquest_slot = {
 		effect = {
 			jolof_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			niger_region = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-
 	#Be strong power
 	son_west_african_great_power = {
 		icon = mission_mal_west_african_great_power
@@ -400,7 +443,9 @@ songhai_historical_conquest_slot = {
 				region = guinea_region
 			}
 			is_empty = no
-			NOT = { owned_by = ROOT }
+			NOT = {
+				owned_by = ROOT
+			}
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
@@ -412,7 +457,9 @@ songhai_historical_conquest_slot = {
 				}
 				value = 150
 			}
-			NOT = { great_power_rank = 4 }
+			NOT = {
+				great_power_rank = 4
+			}
 		}
 		effect = {
 			add_country_modifier = {
@@ -433,15 +480,17 @@ songhai_maghreb_slot = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		tag = SON
 	}
 	has_country_shield = yes
-
 	#Militarize state
 	son_build_military = {
 		icon = mission_build_up_to_force_limit
-		required_missions = {  }
+		required_missions = {
+		}
 		position = 1
 		trigger = {
 			army_size_percentage = 1
@@ -452,29 +501,45 @@ songhai_maghreb_slot = {
 			add_permanent_claim = 2247
 			western_sahara_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			azbin_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			east_azbin_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			upper_volta_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -483,7 +548,6 @@ songhai_maghreb_slot = {
 			add_permanent_claim = 1143
 		}
 	}
-
 	#Get some fresh air
 	son_stop_the_air_raids = {
 		icon = mission_conquer_air
@@ -497,7 +561,9 @@ songhai_maghreb_slot = {
 				area = east_azbin_area
 			}
 			is_empty = no
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			azbin_area = {
@@ -517,17 +583,17 @@ songhai_maghreb_slot = {
 			add_accepted_culture = tuareg
 		}
 	}
-
 	#Conquer Djenné
 	son_take_djenne = {
 		icon = mission_mosque
 		required_missions = {
-			
 		}
 		position = 3
 		provinces_to_highlight = {
 			province_id = 1134
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			owns_or_non_sovereign_subject_of = 1134
@@ -541,7 +607,6 @@ songhai_maghreb_slot = {
 			}
 		}
 	}
-
 	#Expand the mosque
 	son_expand_djenne_mosque = {
 		icon = mission_son_expand_djenne_mosque
@@ -562,10 +627,18 @@ songhai_maghreb_slot = {
 					}
 				}
 				AND = {
-					NOT = { has_dlc = "Leviathan" }
-					NOT = { has_building = temple }
-					NOT = { has_building = cathedral }
-					NOT = { development = 25 }
+					NOT = {
+						has_dlc = "Leviathan"
+					}
+					NOT = {
+						has_building = temple
+					}
+					NOT = {
+						has_building = cathedral
+					}
+					NOT = {
+						development = 25
+					}
 				}
 			}
 		}
@@ -595,12 +668,10 @@ songhai_maghreb_slot = {
 			}
 		}
 	}
-
 	#Get contact with Morocco
 	son_contact_with_morocco = {
 		icon = mission_control_the_barbary_coast
 		required_missions = {
-			
 		}
 		position = 5
 		provinces_to_highlight = {
@@ -610,7 +681,9 @@ songhai_maghreb_slot = {
 				area = northern_morocco_area
 				area = marrekesh_area
 			}
-			NOT = { has_discovered = ROOT }
+			NOT = {
+				has_discovered = ROOT
+			}
 		}
 		trigger = {
 			custom_trigger_tooltip = {
@@ -629,49 +702,72 @@ songhai_maghreb_slot = {
 		effect = {
 			sus_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			tafilalt_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			western_morocco_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			southern_morocco_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			northern_morocco_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			marrekesh_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-
 	#Invade Maghreb
 	son_invade_maghreb = {
 		icon = mission_pacify_the_berbers
@@ -688,7 +784,9 @@ songhai_maghreb_slot = {
 				area = northern_morocco_area
 				area = marrekesh_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -706,14 +804,17 @@ songhai_maghreb_slot = {
 		effect = {
 			maghreb_region = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-
 	#Consolidate Maghreb
 	son_consolidate_maghreb = {
 		icon = mission_construct_a_corsair_fleet
@@ -723,7 +824,9 @@ songhai_maghreb_slot = {
 		position = 7
 		provinces_to_highlight = {
 			region = maghreb_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -749,11 +852,12 @@ songhai_mossi_slot = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		tag = SON
 	}
 	has_country_shield = yes
-
 	#Eliminate the Mossi
 	son_conquer_the_mossi = {
 		icon = mission_african_soldier
@@ -763,7 +867,9 @@ songhai_mossi_slot = {
 		position = 2
 		provinces_to_highlight = {
 			culture = mossi
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			custom_trigger_tooltip = {
@@ -771,7 +877,9 @@ songhai_mossi_slot = {
 				NOT = {
 					any_province = {
 						culture = mossi
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+						NOT = {
+							country_or_non_sovereign_subject_holds = ROOT
+						}
 					}
 				}
 			}
@@ -794,16 +902,23 @@ songhai_question_mark_slot = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		tag = SON
-		NOT = { has_country_flag = son_islamtic_focus }
-		NOT = { has_country_flag = son_tolderance_focus }
+		NOT = {
+			has_country_flag = son_islamtic_focus
+		}
+		NOT = {
+			has_country_flag = son_tolderance_focus
+		}
 	}
 	has_country_shield = yes
-
 	son_first_branch_mission = {
 		icon = mission_unknown_mission
-		required_missions = { son_conquer_the_mossi }
+		required_missions = {
+			son_conquer_the_mossi
+		}
 		position = 4
 		trigger = {
 			custom_trigger_tooltip = {
@@ -821,7 +936,9 @@ songhai_question_mark_slot = {
 						NOT = {
 							any_province = {
 								culture = mossi
-								NOT = { religion = ROOT }
+								NOT = {
+									religion = ROOT
+								}
 							}
 						}
 					}
@@ -871,10 +988,11 @@ songhai_question_mark_slot = {
 			}
 		}
 	}
-
 	son_second_branch_mission = {
 		icon = mission_unknown_mission
-		required_missions = { son_first_branch_mission }
+		required_missions = {
+			son_first_branch_mission
+		}
 		position = 5
 		trigger = {
 			custom_trigger_tooltip = {
@@ -900,7 +1018,8 @@ songhai_question_mark_slot = {
 							influence = 40
 						}
 					}
-					else = {	#Should really not happen usually
+					else = {
+						#Should really not happen usually
 						num_of_owned_provinces_with = {
 							has_tax_building_trigger = yes
 							value = 25
@@ -952,10 +1071,11 @@ songhai_question_mark_slot = {
 			}
 		}
 	}
-
 	son_third_branch_mission = {
 		icon = mission_unknown_mission
-		required_missions = { son_second_branch_mission }
+		required_missions = {
+			son_second_branch_mission
+		}
 		position = 7
 		trigger = {
 			custom_trigger_tooltip = {
@@ -979,9 +1099,15 @@ songhai_question_mark_slot = {
 							tooltip = son_invite_foreign_scholars_ct
 							any_country = {
 								capital_scope = {
-									NOT = { region = sahel_region }
-									NOT = { region = guinea_region }
-									NOT = { region = niger_region }
+									NOT = {
+										region = sahel_region
+									}
+									NOT = {
+										region = guinea_region
+									}
+									NOT = {
+										region = niger_region
+									}
 								}
 								religion = ROOT
 								alliance_with = ROOT
@@ -993,9 +1119,15 @@ songhai_question_mark_slot = {
 							tooltip = son_invite_foreign_scholars_tt
 							all_country = {
 								capital_scope = {
-									NOT = { region = sahel_region }
-									NOT = { region = guinea_region }
-									NOT = { region = niger_region }
+									NOT = {
+										region = sahel_region
+									}
+									NOT = {
+										region = guinea_region
+									}
+									NOT = {
+										region = niger_region
+									}
 								}
 								religion = ROOT
 								has_opinion = {
@@ -1016,8 +1148,12 @@ songhai_question_mark_slot = {
 						tooltip = son_eliminate_other_muslims_tt
 						NOT = {
 							any_country = {
-								NOT = { tag = ROOT }
-								NOT = { is_subject_of = ROOT }
+								NOT = {
+									tag = ROOT
+								}
+								NOT = {
+									is_subject_of = ROOT
+								}
 								religion = ROOT
 								any_owned_province = {
 									OR = {
@@ -1025,7 +1161,9 @@ songhai_question_mark_slot = {
 										region = guinea_region
 										region = niger_region
 									}
-									NOT = { religion = ROOT }
+									NOT = {
+										religion = ROOT
+									}
 								}
 							}
 						}
@@ -1040,7 +1178,8 @@ songhai_question_mark_slot = {
 					has_dlc = "Cradle of Civilization"
 				}
 				custom_tooltip = son_invite_foreign_scholars_bt
-				if = {	# trigger_switch didn't show the tooltip :/
+				if = {
+					# trigger_switch didn't show the tooltip :/
 					limit = {
 						has_country_modifier = hurufi_scholar_modifier
 					}
@@ -1117,10 +1256,11 @@ songhai_question_mark_slot = {
 			}
 		}
 	}
-
 	son_fourth_branch_mission = {
 		icon = mission_unknown_mission
-		required_missions = { son_third_branch_mission }
+		required_missions = {
+			son_third_branch_mission
+		}
 		position = 8
 		trigger = {
 			custom_trigger_tooltip = {
@@ -1143,7 +1283,9 @@ songhai_question_mark_slot = {
 									region = guinea_region
 								}
 								is_empty = no
-								NOT = { religion = ROOT }
+								NOT = {
+									religion = ROOT
+								}
 							}
 						}
 					}
@@ -1201,12 +1343,13 @@ songhai_jihad_slot = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		tag = SON
 		has_country_flag = son_islamtic_focus
 	}
 	has_country_shield = yes
-
 	#Convert the mossi
 	son_convert_the_mossi = {
 		icon = mission_mal_jihad_upon_own_population
@@ -1217,8 +1360,12 @@ songhai_jihad_slot = {
 		provinces_to_highlight = {
 			culture = mossi
 			OR = {
-				NOT = { religion = ROOT }
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = {
+					religion = ROOT
+				}
+				NOT = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 			}
 		}
 		trigger = {
@@ -1227,7 +1374,9 @@ songhai_jihad_slot = {
 				NOT = {
 					any_province = {
 						culture = mossi
-						NOT = { religion = ROOT }
+						NOT = {
+							religion = ROOT
+						}
 					}
 				}
 			}
@@ -1249,7 +1398,6 @@ songhai_jihad_slot = {
 			}
 		}
 	}
-
 	#Power to the Ulema
 	son_power_to_the_ulema = {
 		icon = mission_into_persia_1
@@ -1271,7 +1419,8 @@ songhai_jihad_slot = {
 					influence = 40
 				}
 			}
-			else = {	#Should really not happen usually
+			else = {
+				#Should really not happen usually
 				num_of_owned_provinces_with = {
 					has_tax_building_trigger = yes
 					value = 25
@@ -1289,7 +1438,6 @@ songhai_jihad_slot = {
 			}
 		}
 	}
-
 	#Invite religious scholar
 	son_invite_foreign_scholars = {
 		icon = mission_fatimid_caliphate
@@ -1307,9 +1455,15 @@ songhai_jihad_slot = {
 					}
 				}
 				capital_scope = {
-					NOT = { region = sahel_region }
-					NOT = { region = guinea_region }
-					NOT = { region = niger_region }
+					NOT = {
+						region = sahel_region
+					}
+					NOT = {
+						region = guinea_region
+					}
+					NOT = {
+						region = niger_region
+					}
 				}
 			}
 			OR = {
@@ -1325,9 +1479,13 @@ songhai_jihad_slot = {
 					}
 				}
 				AND = {
-					NOT = { has_dlc = "Cradle of Civilization" }
+					NOT = {
+						has_dlc = "Cradle of Civilization"
+					}
 					owner = {
-						NOT = { alliance_with = ROOT }
+						NOT = {
+							alliance_with = ROOT
+						}
 					}
 				}
 			}
@@ -1344,9 +1502,15 @@ songhai_jihad_slot = {
 					tooltip = son_invite_foreign_scholars_ct
 					any_country = {
 						capital_scope = {
-							NOT = { region = sahel_region }
-							NOT = { region = guinea_region }
-							NOT = { region = niger_region }
+							NOT = {
+								region = sahel_region
+							}
+							NOT = {
+								region = guinea_region
+							}
+							NOT = {
+								region = niger_region
+							}
 						}
 						religion = ROOT
 						alliance_with = ROOT
@@ -1358,9 +1522,15 @@ songhai_jihad_slot = {
 					tooltip = son_invite_foreign_scholars_tt
 					all_country = {
 						capital_scope = {
-							NOT = { region = sahel_region }
-							NOT = { region = guinea_region }
-							NOT = { region = niger_region }
+							NOT = {
+								region = sahel_region
+							}
+							NOT = {
+								region = guinea_region
+							}
+							NOT = {
+								region = niger_region
+							}
 						}
 						religion = ROOT
 						has_opinion = {
@@ -1378,7 +1548,8 @@ songhai_jihad_slot = {
 					has_dlc = "Cradle of Civilization"
 				}
 				custom_tooltip = son_invite_foreign_scholars_bt
-				if = {	# trigger_switch didn't show the tooltip :/
+				if = {
+					# trigger_switch didn't show the tooltip :/
 					limit = {
 						has_country_modifier = hurufi_scholar_modifier
 					}
@@ -1446,7 +1617,6 @@ songhai_jihad_slot = {
 			}
 		}
 	}
-
 	#Beacon of Sunni faith
 	son_convert_west_africa = {
 		icon = mission_into_persia_2
@@ -1461,7 +1631,9 @@ songhai_jihad_slot = {
 				region = guinea_region
 			}
 			is_empty = no
-			NOT = { religion = ROOT }
+			NOT = {
+				religion = ROOT
+			}
 		}
 		trigger = {
 			custom_trigger_tooltip = {
@@ -1474,7 +1646,9 @@ songhai_jihad_slot = {
 							region = guinea_region
 						}
 						is_empty = no
-						NOT = { religion = ROOT }
+						NOT = {
+							religion = ROOT
+						}
 					}
 				}
 			}
@@ -1498,12 +1672,13 @@ songhai_protection_slot = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		tag = SON
 		has_country_flag = son_tolderance_focus
 	}
 	has_country_shield = yes
-
 	#Guarantee the fetishist
 	son_guarantee_the_fetishist = {
 		icon = mission_mal_more_tolerance_to_heathens
@@ -1551,7 +1726,6 @@ songhai_protection_slot = {
 			}
 		}
 	}
-
 	#Form fetishist alliances
 	son_fetishist_alliances = {
 		icon = mission_son_fetishist_alliances
@@ -1562,12 +1736,16 @@ songhai_protection_slot = {
 		provinces_to_highlight = {
 			owner = {
 				religion = shamanism
-				NOT = { alliance_with = ROOT }
+				NOT = {
+					alliance_with = ROOT
+				}
 				capital_scope = {
 					continent = africa
 				}
 				OR = {
-					NOT = { is_subject_of = ROOT }
+					NOT = {
+						is_subject_of = ROOT
+					}
 					NOT = {
 						has_opinion = {
 							who = ROOT
@@ -1606,7 +1784,6 @@ songhai_protection_slot = {
 			}
 		}
 	}
-
 	#Eliminate other muslims
 	son_eliminate_other_muslims = {
 		icon = mission_city_of_the_world's_desire
@@ -1623,16 +1800,24 @@ songhai_protection_slot = {
 				region = guinea_region
 				region = niger_region
 			}
-			NOT = { religion = ROOT }
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				religion = ROOT
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = son_eliminate_other_muslims_tt
 				NOT = {
 					any_country = {
-						NOT = { tag = ROOT }
-						NOT = { is_subject_of = ROOT }
+						NOT = {
+							tag = ROOT
+						}
+						NOT = {
+							is_subject_of = ROOT
+						}
 						religion = ROOT
 						any_owned_province = {
 							OR = {
@@ -1640,7 +1825,9 @@ songhai_protection_slot = {
 								region = guinea_region
 								region = niger_region
 							}
-							NOT = { religion = ROOT }
+							NOT = {
+								religion = ROOT
+							}
 						}
 					}
 				}
@@ -1657,7 +1844,6 @@ songhai_protection_slot = {
 			}
 		}
 	}
-
 	#Return to tradition
 	son_back_to_the_roots = {
 		icon = mission_son_back_to_the_roots
@@ -1709,11 +1895,12 @@ songhai_money_maker_slot = {
 	}
 	potential = {
 		has_dlc = "Origins"
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		tag = SON
 	}
 	has_country_shield = yes
-
 	#Build up economy
 	son_build_workshops = {
 		icon = mission_early_game_buildings
@@ -1740,7 +1927,6 @@ songhai_money_maker_slot = {
 			}
 		}
 	}
-
 	#Clothes and salt
 	son_own_develop_clothes_and_salt = {
 		icon = mission_son_own_develop_clothes_and_salt
@@ -1752,14 +1938,20 @@ songhai_money_maker_slot = {
 			OR = {
 				AND = {
 					trade_goods = salt
-					NOT = { development = 10 }
+					NOT = {
+						development = 10
+					}
 				}
 				AND = {
 					trade_goods = cloth
-					NOT = { development = 20 }
+					NOT = {
+						development = 20
+					}
 				}
 			}
-			NOT = { owned_by = ROOT }
+			NOT = {
+				owned_by = ROOT
+			}
 			OR = {
 				region = sahel_region
 				region = niger_region
@@ -1801,7 +1993,6 @@ songhai_money_maker_slot = {
 			}
 		}
 	}
-
 	#Develop good gold provinces
 	son_gold_of_west_africa = {
 		icon = mission_african_gold
@@ -1817,8 +2008,12 @@ songhai_money_maker_slot = {
 				region = guinea_region
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { base_production = 10 }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					base_production = 10
+				}
 				has_trade_building_trigger = no
 			}
 		}
@@ -1841,7 +2036,6 @@ songhai_money_maker_slot = {
 			}
 		}
 	}
-
 	#Unite the trade nodes
 	son_dominate_west_african_trade = {
 		icon = mission_restore_trade_superiority
@@ -1937,7 +2131,6 @@ songhai_money_maker_slot = {
 			}
 		}
 	}
-
 	#Have trade power in Europe
 	son_european_gold_market = {
 		icon = mission_trade_in_gold_coast
@@ -1951,7 +2144,9 @@ songhai_money_maker_slot = {
 		trigger = {
 			has_any_disaster = no
 			is_in_deficit = no
-			NOT = { num_of_loans = 1 }
+			NOT = {
+				num_of_loans = 1
+			}
 			custom_trigger_tooltip = {
 				tooltip = mal_riches_of_trade_tt
 				any_trade_node = {

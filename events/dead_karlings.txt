@@ -1,0 +1,35 @@
+namespace = dead_karlings
+country_event = {
+	id = dead_karlings.1
+	title = "dead_karlings.1.t"
+	desc = "dead_karlings.1.d"
+	picture = POPE_PREACHING_eventPicture
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = "dead_karlings.1.a"
+		add_stability = -1
+		add_prestige = 50
+		hidden_effect = {
+			country_event = {
+				id = dead_karlings.2
+				days = 340
+			}
+		}
+	}
+}
+
+country_event = {
+	id = dead_karlings.2
+	title = "dead_karlings.2.t"
+	desc = "dead_karlings.2.d"
+	picture = POPE_PREACHING_eventPicture
+	is_triggered_only = yes
+	immediate = {
+	}
+	option = {
+		name = "dead_karlings.2.a"
+		add_stability = 1
+	}
+}

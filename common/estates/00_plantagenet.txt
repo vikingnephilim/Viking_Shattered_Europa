@@ -1,12 +1,9 @@
 estate_plantagenet = {
-	icon = 21
+	icon = 17
 	# If true, country will get estate
 	trigger = {
 		AND = {
-			OR = {
-				owns_core_province = 178
-				has_country_flag = plantagenet_estate
-			}
+			owns_core_province = 178
 			OR = {
 				culture_group = british
 				culture_group = gaelic
@@ -21,17 +18,19 @@ estate_plantagenet = {
 		}
 	}
 	country_modifier_happy = {
-		manpower_recovery_speed = 0.2
-		land_maintenance_modifier = -0.1
-		monthly_support_heir_gain = 0.33
+		general_cost = -0.1
+		free_leader_pool = 1
+		loot_amount = 0.1
+		available_province_loot = 0.1
 	}
 	country_modifier_neutral = {
 		manpower_recovery_speed = 0.2
 	}
 	country_modifier_angry = {
-		manpower_recovery_speed = -0.1
-		land_maintenance_modifier = 0.1
-		global_unrest = 2
+		general_cost = 0.1
+		free_leader_pool = -1
+		loot_amount = -0.1
+		available_province_loot = -0.1
 	}
 	land_ownership_modifier = {
 	}
