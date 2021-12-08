@@ -2608,6 +2608,10 @@ has_unlocked_estate_privilege = {
 	has_country_flag = unlocked_privilege_$estate_privilege$
 }
 
+has_unlocked_merc_company = {
+	has_country_flag = unlocked_$merc_company$
+}
+
 mal_target_country_exists_in_region = {
 	OR = {
 		AND = {
@@ -2770,4 +2774,44 @@ mal_owns_provinces_in_region = {
 			}
 		}
 	}
+}
+
+province_is_or_accepts_culture = {
+	OR = {
+		has_owner_culture = yes
+		has_owner_accepted_culture = yes
+	}
+}
+
+province_is_buddhist_or_accepts_buddhism = {
+	OR = {
+		religion = buddhism
+		religion = vajrayana
+		religion = mahayana
+		AND = {
+			religion = hinduism
+			owner = {
+				has_personal_deity = buddha
+			}
+		}
+		AND = {
+			religion = vishnuism
+			owner = {
+				has_personal_deity = buddha
+			}
+		}
+		AND = {
+			religion = shakti
+			owner = {
+				has_personal_deity = buddha
+			}
+		}
+		AND = {
+			religion_group = african_pagan
+			owner = {
+				has_unlocked_cult = buddhism_cult
+			}
+		}
+	}
+	has_owner_religion = yes
 }
