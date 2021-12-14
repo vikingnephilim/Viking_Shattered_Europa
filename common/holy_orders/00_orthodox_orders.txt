@@ -11,9 +11,6 @@ local_church = {
     cost = 100
     cost_type = adm_power
     per_province_effect = {
-		tooltip = {
-            custom_tooltip = orthdox_church_trading.tt
-        }
         hidden_effect = {
             if = {
                 limit = {
@@ -65,9 +62,6 @@ university_church = {
     cost = 100
     cost_type = dip_power
     per_province_effect = {
-		tooltip = {
-            custom_tooltip = orthdox_church_education.tt
-        }
         hidden_effect = {
             if = {
                 limit = {
@@ -80,11 +74,6 @@ university_church = {
         }
     }
     per_province_abandon_effect = {
-		tooltip = {
-			custom_tooltip = order_lost_adm_power.tt
-			custom_tooltip = order_lost_dip_power.tt
-			custom_tooltip = order_lost_mil_power.tt
-		}
 		hidden_effect = {
 			add_scaled_local_adm_power = -1
 			add_scaled_local_dip_power = -1
@@ -120,9 +109,6 @@ patriarch_church = {
     cost = 100
     cost_type = mil_power
     per_province_effect = {
-		tooltip = {
-            custom_tooltip = orthdox_church_governing.tt
-        }
 		hidden_effect = {
 			#add_absolutism = 1
 			if = {

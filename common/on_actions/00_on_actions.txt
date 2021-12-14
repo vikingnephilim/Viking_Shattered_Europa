@@ -52,7 +52,8 @@ on_startup = {
 		country_event = {
 			id = new_flavour_bav.13
 			days = 90
-		}		#better not to allow almost instant DOWs
+		}
+		#better not to allow almost instant DOWs
 	}
 	if = {
 		limit = {
@@ -673,7 +674,8 @@ on_battle_won_unit = {
 		limit = {
 			unit_owner = {
 				ai = no
-			}			#Scopes to Unit Owner from Unit Scope
+			}
+			#Scopes to Unit Owner from Unit Scope
 			general_with_steam_name = yes			#Unit Scope Trigger
 		}
 		unit_owner = {
@@ -717,10 +719,10 @@ on_battle_won_unit = {
 				}
 			}
 		}
-			unit_owner = {
-				change_variable = {
-					which = son_fight_counter
-					value = 1
+		unit_owner = {
+			change_variable = {
+				which = son_fight_counter
+				value = 1
 			}
 		}
 		if = {
@@ -849,7 +851,8 @@ on_siege_won_country = {
 			country_event = {
 				id = flavor_sax.10
 			}
-		}		# Ask Emperor for Saxon Electorate
+		}
+		# Ask Emperor for Saxon Electorate
 	}
 	if = {
 		limit = {
@@ -994,7 +997,8 @@ on_new_monarch = {
 		}
 		country_event = {
 			id = china_events.32
-		}		# History of last ruler
+		}
+		# History of last ruler
 	}
 	if = {
 		limit = {
@@ -1101,7 +1105,8 @@ on_monarch_death = {
 		BRA = {
 			clr_country_flag = albrecht_achilles_flag			#Just to be sure
 			kill_heir = {
-			}			#If Albrecht Achilles dies in Ansbach he will also be dead in Brandenburg, will appear as normal death of heir to BRA.
+			}
+			#If Albrecht Achilles dies in Ansbach he will also be dead in Brandenburg, will appear as normal death of heir to BRA.
 		}
 	}
 	if = {
@@ -1187,7 +1192,8 @@ on_regent = {
 		limit = {
 			NOT = {
 				has_global_flag = death_of_haji_giray
-			}			#Also set in history.
+			}
+			#Also set in history.
 			tag = CRI
 			exists = TUR
 			is_subject = no
@@ -1199,13 +1205,15 @@ on_regent = {
 		}
 		country_event = {
 			id = flavor_cri.1
-		}		#Death of Haji Giray
+		}
+		#Death of Haji Giray
 	}
 	if = {
 		limit = {
 			NOT = {
 				has_global_flag = death_of_haji_giray
-			}			#Also set in history.
+			}
+			#Also set in history.
 			tag = CRI
 			OR = {
 				NOT = {
@@ -4097,11 +4105,13 @@ on_fetishist_cult_change = {
 	country_event = {
 		id = fetishist_flavor.302
 		days = 10
-	}	#removing tomb if incompatible cult is picked
+	}
+	#removing tomb if incompatible cult is picked
 	country_event = {
 		id = fetishist_flavor.304
 		days = 10
-	}	#rebuilding tomb if lost
+	}
+	#rebuilding tomb if lost
 	if = {
 		limit = {
 			has_country_flag = lost_ancestral_lands
@@ -4572,8 +4582,8 @@ on_mercenary_recruited = {
 				}
 			}
 		}
-	FROM = {
-		add_army_professionalism = -0.05
+		FROM = {
+			add_army_professionalism = -0.05
 		}
 	}
 }

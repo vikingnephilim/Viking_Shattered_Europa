@@ -3,15 +3,12 @@
 #
 # written by Rufus Tronde
 ########################################
-
 namespace = hindu_events
-
 country_event = {
 	id = hindu_events.1
 	title = "hindu_events.1.t"
 	desc = "hindu_events.1.d"
 	picture = PRAYING_eventPicture
-
 	trigger = {
 		is_indic_viking_mod = yes
 		has_dlc = "Wealth of Nations"
@@ -19,71 +16,77 @@ country_event = {
 		OR = {
 			has_country_flag = brahmin_deity_interaction
 			AND = {
-				NOT = { has_personal_deity = buddha }
-				NOT = { has_personal_deity = shiva }
-				NOT = { has_personal_deity = ganesha }
-				NOT = { has_personal_deity = surya }
-				NOT = { has_personal_deity = ganga }
-				NOT = { has_personal_deity = shakti }
-				NOT = { has_personal_deity = vishnu }
+				NOT = {
+					has_personal_deity = buddha
+				}
+				NOT = {
+					has_personal_deity = shiva
+				}
+				NOT = {
+					has_personal_deity = ganesha
+				}
+				NOT = {
+					has_personal_deity = surya
+				}
+				NOT = {
+					has_personal_deity = ganga
+				}
+				NOT = {
+					has_personal_deity = shakti
+				}
+				NOT = {
+					has_personal_deity = vishnu
+				}
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 60
 	}
-
 	# Shaivism
 	option = {
 		name = "hindu_events.1.a"
 		change_personal_deity = shiva
 	}
-
 	# Skaktism
 	option = {
 		name = "hindu_events.1.b"
 		change_personal_deity = shakti
 	}
-
 	# Vaishnavism
 	option = {
 		name = "hindu_events.1.c"
 		change_personal_deity = vishnu
 	}
-
 	# Ganga
 	option = {
 		name = "hindu_events.1.e"
 		change_personal_deity = ganga
 	}
-
 	# Ganesha
 	option = {
 		name = "hindu_events.1.f"
 		change_personal_deity = ganesha
 	}
-
 	# Surya
 	option = {
 		name = "hindu_events.1.g"
 		change_personal_deity = surya
 	}
-
 	# Surya
 	option = {
 		name = "hindu_events.1.h"
 		change_personal_deity = buddha
 	}
-	
 	# Not ready
 	option = {
 		trigger = {
-			NOT = { has_country_flag = brahmin_deity_interaction }
+			NOT = {
+				has_country_flag = brahmin_deity_interaction
+			}
 		}
 		name = "hindu_events.1.i"
 	}
-	
 	after = {
 		clr_country_flag = brahmin_deity_interaction
 	}
@@ -92,24 +95,25 @@ country_event = {
 ##################################################
 # Shaiva paths: Faces of Shiva
 ##################################################
-
 # Sadyojata (Shiva the Creator)
 country_event = {
 	id = hindu_events.2
 	title = "hindu_events.2.t"
 	desc = "hindu_events.2.d"
 	picture = RELIGION_eventPicture
-
 	trigger = {
 		has_personal_deity = shiva
 		has_regency = no
-		NOT = { has_ruler_modifier = jnana }
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
+		NOT = {
+			has_ruler_modifier = jnana
+		}
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
 		employed_advisor = {
 			type = artist
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 1200
 		modifier = {
@@ -121,18 +125,24 @@ country_event = {
 			stability = 3
 		}
 	}
-
 	# Contemplate creative aspect of Shiva
 	option = {
 		name = "hindu_events.2.a"
-		add_ruler_modifier = { name = hindu_shaiva_1 hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_shaiva_1
+			hidden = yes
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_contemplation
 			duration = 1825
 		}
-		hidden_effect = { country_event = { id = hindu_events.3 days = 1826 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.3
+				days = 1826
+			}
+		}
 	}
-
 	# Continue search
 	option = {
 		name = "hindu_events.2.b"
@@ -146,28 +156,35 @@ country_event = {
 	title = "hindu_events.3.t"
 	desc = "hindu_events.3.d"
 	picture = GOOD_WITH_MONARCH_eventPicture
-
 	trigger = {
-		has_ruler_modifier =  hindu_shaiva_1
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		NOT = { has_ruler_modifier = jnana }
+		has_ruler_modifier = hindu_shaiva_1
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
+		NOT = {
+			has_ruler_modifier = jnana
+		}
 	}
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.3.a"
 		if = {
 			limit = {
-				NOT = { ADM = 6 }
+				NOT = {
+					ADM = 6
+				}
 			}
 			change_adm = 1
 			else = {
 				add_adm_power = 50
 			}
 		}
-		add_ruler_modifier = { name = shiva_srishti }
-		add_ruler_modifier = { name = jnana }
+		add_ruler_modifier = {
+			name = shiva_srishti
+		}
+		add_ruler_modifier = {
+			name = jnana
+		}
 	}
 }
 
@@ -177,19 +194,21 @@ country_event = {
 	title = "hindu_events.4.t"
 	desc = "hindu_events.4.d"
 	picture = CITY_VIEW_eventPicture
-
 	trigger = {
 		has_personal_deity = shiva
 		has_regency = no
-		NOT = { has_ruler_modifier = jnana }
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
+		NOT = {
+			has_ruler_modifier = jnana
+		}
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
 		employed_advisor = {
 			type = theologian
 		}
 		stability = 1
 		is_at_war = no
 	}
-
 	mean_time_to_happen = {
 		months = 1200
 		modifier = {
@@ -201,18 +220,24 @@ country_event = {
 			stability = 3
 		}
 	}
-
 	# Contemplate preservative aspect of Shiva
 	option = {
 		name = "hindu_events.4.a"
-		add_ruler_modifier = { name = hindu_shaiva_2 hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_shaiva_2
+			hidden = yes
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_contemplation
 			duration = 1825
 		}
-		hidden_effect = { country_event = { id = hindu_events.5 days = 1826 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.5
+				days = 1826
+			}
+		}
 	}
-
 	# Continue search
 	option = {
 		name = "hindu_events.4.b"
@@ -226,26 +251,31 @@ country_event = {
 	title = "hindu_events.5.t"
 	desc = "hindu_events.5.d"
 	picture = GOOD_WITH_MONARCH_eventPicture
-
 	trigger = {
 		has_ruler_modifier = hindu_shaiva_2
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		NOT = { has_ruler_modifier = jnana }
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
+		NOT = {
+			has_ruler_modifier = jnana
+		}
 	}
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.5.a"
 		if = {
 			limit = {
-				NOT = { ADM = 5 }
+				NOT = {
+					ADM = 5
+				}
 			}
 			change_adm = 2
 			else = {
 				if = {
 					limit = {
-						NOT = { ADM = 6 }
+						NOT = {
+							ADM = 6
+						}
 					}
 					change_adm = 1
 					add_adm_power = 50
@@ -255,7 +285,9 @@ country_event = {
 				}
 			}
 		}
-		add_ruler_modifier = { name = jnana }
+		add_ruler_modifier = {
+			name = jnana
+		}
 	}
 }
 
@@ -265,13 +297,16 @@ country_event = {
 	title = "hindu_events.6.t"
 	desc = "hindu_events.6.d"
 	picture = BATTLE_eventPicture
-
 	trigger = {
 		has_personal_deity = shiva
 		is_at_war = yes
 		has_regency = no
-		NOT = { has_ruler_modifier = jnana }
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
+		NOT = {
+			has_ruler_modifier = jnana
+		}
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
 		employed_advisor = {
 			type = inquisitor
 		}
@@ -280,7 +315,6 @@ country_event = {
 			defensive_war_with = ROOT
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 1000
 		modifier = {
@@ -288,18 +322,24 @@ country_event = {
 			war_score = 50
 		}
 	}
-
 	# Contemplate the destructive aspect of Shiva
 	option = {
 		name = "hindu_events.6.a"
-		add_ruler_modifier = { name = hindu_shaiva_3 hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_shaiva_3
+			hidden = yes
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_contemplation
 			duration = 1825
 		}
-		hidden_effect = { country_event = { id = hindu_events.7 days = 1826 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.7
+				days = 1826
+			}
+		}
 	}
-
 	# Continue search
 	option = {
 		name = "hindu_events.6.b"
@@ -313,25 +353,32 @@ country_event = {
 	title = "hindu_events.7.t"
 	desc = "hindu_events.7.d"
 	picture = RELIGION_eventPicture
-
 	trigger = {
 		has_ruler_modifier = hindu_shaiva_3
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		NOT = { has_ruler_modifier = jnana }
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
+		NOT = {
+			has_ruler_modifier = jnana
+		}
 	}
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.7.a"
 		if = {
 			limit = {
-				NOT = { MIL = 5 }
+				NOT = {
+					MIL = 5
+				}
 			}
 			change_mil = 2
 			else = {
 				if = {
-					limit = { NOT = { MIL = 6 } }
+					limit = {
+						NOT = {
+							MIL = 6
+						}
+					}
 					change_mil = 1
 					add_mil_power = 50
 					else = {
@@ -340,7 +387,9 @@ country_event = {
 				}
 			}
 		}
-		add_ruler_modifier = { name = jnana }
+		add_ruler_modifier = {
+			name = jnana
+		}
 	}
 }
 
@@ -350,17 +399,19 @@ country_event = {
 	title = "hindu_events.8.t"
 	desc = "hindu_events.8.d"
 	picture = RELIGION_eventPicture
-
 	trigger = {
 		has_personal_deity = shiva
 		has_regency = no
-		NOT = { has_ruler_modifier = jnana }
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
+		NOT = {
+			has_ruler_modifier = jnana
+		}
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
 		employed_advisor = {
 			type = philosopher
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 1200
 		modifier = {
@@ -372,18 +423,24 @@ country_event = {
 			stability = 3
 		}
 	}
-
 	# Contemplate how Shiva is concealed, but present in all things
 	option = {
 		name = "hindu_events.8.a"
-		add_ruler_modifier = { name = hindu_shaiva_4 hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_shaiva_4
+			hidden = yes
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_contemplation
 			duration = 1825
 		}
-		hidden_effect = { country_event = { id = hindu_events.9 days = 1826 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.9
+				days = 1826
+			}
+		}
 	}
-
 	# Continue search
 	option = {
 		name = "hindu_events.8.b"
@@ -397,28 +454,35 @@ country_event = {
 	title = "hindu_events.9.t"
 	desc = "hindu_events.9.d"
 	picture = GOOD_WITH_MONARCH_eventPicture
-
 	trigger = {
 		has_ruler_modifier = hindu_shaiva_4
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		NOT = { has_ruler_modifier = jnana }
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
+		NOT = {
+			has_ruler_modifier = jnana
+		}
 	}
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.9.a"
 		if = {
 			limit = {
-				NOT = { DIP = 6 }
+				NOT = {
+					DIP = 6
+				}
 			}
 			change_dip = 1
 			else = {
 				add_dip_power = 50
 			}
 		}
-		add_ruler_modifier = { name = shiva_tirodhana }
-		add_ruler_modifier = { name = jnana }
+		add_ruler_modifier = {
+			name = shiva_tirodhana
+		}
+		add_ruler_modifier = {
+			name = jnana
+		}
 	}
 }
 
@@ -428,19 +492,25 @@ country_event = {
 	title = "hindu_events.10.t"
 	desc = "hindu_events.10.d"
 	picture = DIPLOMACY_eventPicture
-
 	trigger = {
 		has_personal_deity = shiva
-		NOT = { has_ruler_modifier = jnana }
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
+		NOT = {
+			has_ruler_modifier = jnana
+		}
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
 		any_ally = {
 			has_personal_deity = vishnu
 			has_regency = no
-			NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-			NOT = { has_ruler_modifier = jnana }
+			NOT = {
+				has_ruler_modifier = hindu_withdrawn_contemplation
+			}
+			NOT = {
+				has_ruler_modifier = jnana
+			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 1200
 		modifier = {
@@ -452,31 +522,45 @@ country_event = {
 			stability = 3
 		}
 	}
-
 	immediate = {
 		random_ally = {
 			limit = {
 				has_personal_deity = vishnu
 				has_regency = no
-				NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-				NOT = { has_ruler_modifier = jnana }
+				NOT = {
+					has_ruler_modifier = hindu_withdrawn_contemplation
+				}
+				NOT = {
+					has_ruler_modifier = jnana
+				}
 			}
-			hidden_effect = { save_event_target_as = event_ally }
-			country_event = { id = hindu_events.30 days = 1 }
+			hidden_effect = {
+				save_event_target_as = event_ally
+			}
+			country_event = {
+				id = hindu_events.30
+				days = 1
+			}
 		}
 	}
-
 	# Contemplate how Shiva is revealed, and that you may be a guru
 	option = {
 		name = "hindu_events.10.a"
-		add_ruler_modifier = { name = hindu_shaiva_5 hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_shaiva_5
+			hidden = yes
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_contemplation
 			duration = 1825
 		}
-		hidden_effect = { country_event = { id = hindu_events.11 days = 1826 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.11
+				days = 1826
+			}
+		}
 	}
-
 	# Continue search
 	option = {
 		name = "hindu_events.10.b"
@@ -490,54 +574,61 @@ country_event = {
 	title = "hindu_events.11.t"
 	desc = "hindu_events.11.d"
 	picture = GOOD_WITH_MONARCH_eventPicture
-
 	trigger = {
 		has_ruler_modifier = hindu_shaiva_5
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		NOT = { has_ruler_modifier = jnana }
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
+		NOT = {
+			has_ruler_modifier = jnana
+		}
 	}
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.11.a"
 		if = {
 			limit = {
-				NOT = { MIL = 6 }
+				NOT = {
+					MIL = 6
+				}
 			}
 			change_mil = 1
 			else = {
 				add_mil_power = 50
 			}
 		}
-		add_ruler_modifier = { name = shiva_anugraha }
-		add_ruler_modifier = { name = jnana }
+		add_ruler_modifier = {
+			name = shiva_anugraha
+		}
+		add_ruler_modifier = {
+			name = jnana
+		}
 	}
 }
-
 
 ##################################################
 # Shakta paths: Aspects of Shakti
 ##################################################
-
 # Discuss Lakshmi with Vaishnavist ruler, triggering Lakshmi-sampradaya
 country_event = {
 	id = hindu_events.12
 	title = "hindu_events.12.t"
 	desc = "hindu_events.12.d"
 	picture = DIPLOMACY_eventPicture
-
 	trigger = {
 		has_personal_deity = shakti
 		any_known_country = {
 			marriage_with = ROOT
 			has_personal_deity = vishnu
 			has_regency = no
-			NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-			NOT = { has_ruler_modifier = jnana }
+			NOT = {
+				has_ruler_modifier = hindu_withdrawn_contemplation
+			}
+			NOT = {
+				has_ruler_modifier = jnana
+			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 1200
 		modifier = {
@@ -549,7 +640,6 @@ country_event = {
 			stability = 3
 		}
 	}
-
 	immediate = {
 		hidden_effect = {
 			random_known_country = {
@@ -557,14 +647,17 @@ country_event = {
 					marriage_with = ROOT
 					has_personal_deity = vishnu
 					has_regency = no
-					NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-					NOT = { has_ruler_modifier = jnana }
+					NOT = {
+						has_ruler_modifier = hindu_withdrawn_contemplation
+					}
+					NOT = {
+						has_ruler_modifier = jnana
+					}
 				}
 				save_event_target_as = marriage_with_country
 			}
 		}
 	}
-
 	option = {
 		name = "hindu_events.12.a"
 		add_dip_power = 20
@@ -574,7 +667,10 @@ country_event = {
 				modifier = reconciling_differences
 			}
 			hidden_effect = {
-				country_event = { id = hindu_events.24 days = 1 }
+				country_event = {
+					id = hindu_events.24
+					days = 1
+				}
 			}
 		}
 	}
@@ -586,18 +682,24 @@ country_event = {
 	title = "hindu_events.13.t"
 	desc = "hindu_events.13.d"
 	picture = NEW_HEIR_eventPicture
-
 	trigger = {
 		has_personal_deity = shakti
 		has_regency = no
-		NOT = { has_ruler_modifier = jnana }
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		NOT = { has_ruler_modifier = hindu_shakta_1_rejected }
+		NOT = {
+			has_ruler_modifier = jnana
+		}
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
+		NOT = {
+			has_ruler_modifier = hindu_shakta_1_rejected
+		}
 		has_heir = yes
-		NOT = { heir_age = 2}
+		NOT = {
+			heir_age = 2
+		}
 		is_female = no
 	}
-
 	mean_time_to_happen = {
 		months = 72
 		modifier = {
@@ -609,18 +711,24 @@ country_event = {
 			stability = 3
 		}
 	}
-
 	# Contemplate the benevolent and beautiful aspect of Shakti
 	option = {
 		name = "hindu_events.13.a"
-		add_ruler_modifier = { name = hindu_shakta_1 hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_shakta_1
+			hidden = yes
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_contemplation
 			duration = 1825
 		}
-		hidden_effect = { country_event = { id = hindu_events.15 days = 1826 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.15
+				days = 1826
+			}
+		}
 	}
-
 	# Continue search
 	option = {
 		name = "hindu_events.13.b"
@@ -639,18 +747,24 @@ country_event = {
 	title = "hindu_events.14.t"
 	desc = "hindu_events.14.d"
 	picture = NEW_HEIR_eventPicture
-
 	trigger = {
 		has_personal_deity = shakti
 		has_regency = no
-		NOT = { has_ruler_modifier = jnana }
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		NOT = { has_ruler_modifier = hindu_shakta_1_rejected }
+		NOT = {
+			has_ruler_modifier = jnana
+		}
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
+		NOT = {
+			has_ruler_modifier = hindu_shakta_1_rejected
+		}
 		has_heir = yes
-		NOT = { heir_age = 1}
+		NOT = {
+			heir_age = 1
+		}
 		is_female = yes
 	}
-
 	mean_time_to_happen = {
 		months = 36
 		modifier = {
@@ -662,18 +776,24 @@ country_event = {
 			stability = 3
 		}
 	}
-
 	# Contemplate the benevolent and beautiful aspect of Shakti
 	option = {
 		name = "hindu_events.14.a"
-		add_ruler_modifier = { name = hindu_shakta_1 hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_shakta_1
+			hidden = yes
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_contemplation
 			duration = 1825
 		}
-		hidden_effect = { country_event = { id = hindu_events.15 days = 1826 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.15
+				days = 1826
+			}
+		}
 	}
-
 	# Continue search hindu_shakta_1_rejected
 	option = {
 		name = "hindu_events.14.b"
@@ -692,25 +812,32 @@ country_event = {
 	title = "hindu_events.15.t"
 	desc = "hindu_events.15.d"
 	picture = CULTURE_eventPicture
-
 	trigger = {
 		has_ruler_modifier = hindu_shakta_1
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		NOT = { has_ruler_modifier = jnana }
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
+		NOT = {
+			has_ruler_modifier = jnana
+		}
 	}
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.15.a"
 		if = {
 			limit = {
-				NOT = { DIP = 5 }
+				NOT = {
+					DIP = 5
+				}
 			}
 			change_dip = 2
 			else = {
 				if = {
-					limit = { NOT = { DIP = 6 } }
+					limit = {
+						NOT = {
+							DIP = 6
+						}
+					}
 					change_dip = 1
 					add_dip_power = 50
 					else = {
@@ -719,7 +846,9 @@ country_event = {
 				}
 			}
 		}
-		add_ruler_modifier = { name = jnana }
+		add_ruler_modifier = {
+			name = jnana
+		}
 	}
 }
 
@@ -729,18 +858,22 @@ country_event = {
 	title = "hindu_events.16.t"
 	desc = "hindu_events.16.d"
 	picture = RELIGION_eventPicture
-
 	trigger = {
 		has_personal_deity = shakti
 		has_ruler_modifier = hindu_shakta_1
 		has_ruler_modifier = jnana
 		has_regency = no
-		NOT = { has_ruler_modifier = hindu_withdrawn_meditation }
-		NOT = { has_ruler_modifier = shakti_parvati }
-		NOT = { has_ruler_modifier = shakti_prakrti }
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_meditation
+		}
+		NOT = {
+			has_ruler_modifier = shakti_parvati
+		}
+		NOT = {
+			has_ruler_modifier = shakti_prakrti
+		}
 		num_of_royal_marriages = 2
 	}
-
 	mean_time_to_happen = {
 		months = 300
 		modifier = {
@@ -752,34 +885,47 @@ country_event = {
 			num_of_royal_marriages = 4
 		}
 	}
-
 	# Meditate on interdependence between wife and husband (Parvati)
 	option = {
 		name = "hindu_events.16.a"
-		add_ruler_modifier = { name = hindu_shakta_1t_a hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_shakta_1t_a
+			hidden = yes
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_meditation
 			duration = 730
 		}
-		hidden_effect = { country_event = { id = hindu_events.17 days = 731 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.17
+				days = 731
+			}
+		}
 	}
-
 	# Meditate on unity (Prakrti)
 	option = {
 		name = "hindu_events.16.b"
-		add_ruler_modifier = { name = hindu_shakta_1t_b hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_shakta_1t_b
+			hidden = yes
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_meditation
 			duration = 730
 		}
-		hidden_effect = { country_event = { id = hindu_events.18 days = 731 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.18
+				days = 731
+			}
+		}
 	}
-
 	# Eschew meditation
 	option = {
 		name = "hindu_events.16.c"
 		add_prestige = 2
-	}	
+	}
 }
 
 # Parvati
@@ -788,18 +934,21 @@ country_event = {
 	title = "hindu_events.17.t"
 	desc = "hindu_events.17.d"
 	picture = CULTURE_eventPicture
-
 	trigger = {
 		has_ruler_modifier = hindu_shakta_1t_a
-		NOT = { has_ruler_modifier = hindu_withdrawn_meditation }
-		NOT = { has_ruler_modifier = shakti_parvati }
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_meditation
+		}
+		NOT = {
+			has_ruler_modifier = shakti_parvati
+		}
 	}
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.17.a"
-		add_ruler_modifier = { name = shakti_parvati }
+		add_ruler_modifier = {
+			name = shakti_parvati
+		}
 	}
 }
 
@@ -809,18 +958,21 @@ country_event = {
 	title = "hindu_events.18.t"
 	desc = "hindu_events.18.d"
 	picture = CULTURE_eventPicture
-
 	trigger = {
 		has_ruler_modifier = hindu_shakta_1t_b
-		NOT = { has_ruler_modifier = hindu_withdrawn_meditation }
-		NOT = { has_ruler_modifier = shakti_prakrti }
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_meditation
+		}
+		NOT = {
+			has_ruler_modifier = shakti_prakrti
+		}
 	}
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.18.a"
-		add_ruler_modifier = { name = shakti_prakrti }
+		add_ruler_modifier = {
+			name = shakti_prakrti
+		}
 	}
 }
 
@@ -830,12 +982,15 @@ country_event = {
 	title = "hindu_events.19.t"
 	desc = "hindu_events.19.d"
 	picture = RELIGIOUS_TURMOIL_eventPicture
-
 	trigger = {
 		has_personal_deity = shakti
 		has_regency = no
-		NOT = { has_ruler_modifier = jnana }
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
+		NOT = {
+			has_ruler_modifier = jnana
+		}
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
 		is_at_war = yes
 		any_known_country = {
 			OR = {
@@ -846,28 +1001,37 @@ country_event = {
 				}
 			}
 		}
-		NOT = { war_score = -1 }
+		NOT = {
+			war_score = -1
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 500
 		modifier = {
 			factor = 0.75
-			NOT = { war_score = -15 }
+			NOT = {
+				war_score = -15
+			}
 		}
 	}
-
 	# Contemplate the destructive and fearsome aspect of Shakti
 	option = {
 		name = "hindu_events.19.a"
-		add_ruler_modifier = { name = hindu_shakta_2 hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_shakta_2
+			hidden = yes
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_contemplation
 			duration = 1825
 		}
-		hidden_effect = { country_event = { id = hindu_events.20 days = 1826 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.20
+				days = 1826
+			}
+		}
 	}
-
 	# Continue search hindu_shakta_1_rejected
 	option = {
 		name = "hindu_events.19.b"
@@ -881,25 +1045,32 @@ country_event = {
 	title = "hindu_events.20.t"
 	desc = "hindu_events.20.d"
 	picture = RELIGIOUS_TURMOIL_eventPicture
-
 	trigger = {
 		has_ruler_modifier = hindu_shakta_2
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		NOT = { has_ruler_modifier = jnana }
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
+		NOT = {
+			has_ruler_modifier = jnana
+		}
 	}
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.20.a"
 		if = {
 			limit = {
-				NOT = { MIL = 5 }
+				NOT = {
+					MIL = 5
+				}
 			}
 			change_mil = 2
 			else = {
 				if = {
-					limit = { NOT = { MIL = 6 } }
+					limit = {
+						NOT = {
+							MIL = 6
+						}
+					}
 					change_mil = 1
 					add_mil_power = 50
 					else = {
@@ -908,7 +1079,9 @@ country_event = {
 				}
 			}
 		}
-		add_ruler_modifier = { name = jnana }
+		add_ruler_modifier = {
+			name = jnana
+		}
 	}
 }
 
@@ -918,52 +1091,69 @@ country_event = {
 	title = "hindu_events.21.t"
 	desc = "hindu_events.21.d"
 	picture = BATTLE_eventPicture
-
 	trigger = {
 		has_personal_deity = shakti
 		has_ruler_modifier = hindu_shakta_2
 		has_ruler_modifier = jnana
 		has_regency = no
-		NOT = { has_ruler_modifier = hindu_withdrawn_meditation }
-		NOT = { has_ruler_modifier = shakti_kali }
-		NOT = { has_ruler_modifier = shakti_tara }
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_meditation
+		}
+		NOT = {
+			has_ruler_modifier = shakti_kali
+		}
+		NOT = {
+			has_ruler_modifier = shakti_tara
+		}
 		is_at_war = yes
 		any_known_country = {
 			defensive_war_with = ROOT
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 300
 	}
-
 	# Meditate on destruction (Kali)
 	option = {
 		name = "hindu_events.21.a"
-		add_ruler_modifier = { name = hindu_shakta_2t_a hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_shakta_2t_a
+			hidden = yes
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_meditation
 			duration = 730
 		}
-		hidden_effect = { country_event = { id = hindu_events.22 days = 731 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.22
+				days = 731
+			}
+		}
 	}
-
 	# Meditate on liberation (Tara)
 	option = {
 		name = "hindu_events.21.b"
-		add_ruler_modifier = { name = hindu_shakta_2t_b hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_shakta_2t_b
+			hidden = yes
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_meditation
 			duration = 730
 		}
-		hidden_effect = { country_event = { id = hindu_events.23 days = 731 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.23
+				days = 731
+			}
+		}
 	}
-
 	# Eschew meditation
 	option = {
 		name = "hindu_events.21.c"
 		add_prestige = 2
-	}	
+	}
 }
 
 # Kali
@@ -972,18 +1162,21 @@ country_event = {
 	title = "hindu_events.22.t"
 	desc = "hindu_events.22.d"
 	picture = RELIGIOUS_TURMOIL_eventPicture
-
 	trigger = {
 		has_ruler_modifier = hindu_shakta_2t_a
-		NOT = { has_ruler_modifier = hindu_withdrawn_meditation }
-		NOT = { has_ruler_modifier = shakti_kali }
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_meditation
+		}
+		NOT = {
+			has_ruler_modifier = shakti_kali
+		}
 	}
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.22.a"
-		add_ruler_modifier = { name = shakti_kali }
+		add_ruler_modifier = {
+			name = shakti_kali
+		}
 	}
 }
 
@@ -993,36 +1186,37 @@ country_event = {
 	title = "hindu_events.23.t"
 	desc = "hindu_events.23.d"
 	picture = RELIGIOUS_TURMOIL_eventPicture
-
 	trigger = {
 		has_ruler_modifier = hindu_shakta_2t_b
-		NOT = { has_ruler_modifier = hindu_withdrawn_meditation }
-		NOT = { has_ruler_modifier = shakti_tara }
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_meditation
+		}
+		NOT = {
+			has_ruler_modifier = shakti_tara
+		}
 	}
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.23.a"
-		add_ruler_modifier = { name = shakti_tara }
+		add_ruler_modifier = {
+			name = shakti_tara
+		}
 	}
 }
 
 ##################################################
 # Vaishnava paths: Sampradayas of Vishnu
 ##################################################
-
 # Lakshmi-sampradaya
 country_event = {
 	id = hindu_events.24
 	title = "hindu_events.24.t"
 	desc = "hindu_events.24.d"
 	picture = CULTURE_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
-		if = { #otherwise the flavour is wrong
+		if = {
+			#otherwise the flavour is wrong
 			limit = {
 				has_dlc = "Rights of Man"
 			}
@@ -1030,29 +1224,42 @@ country_event = {
 			is_origin_of_consort = from
 		}
 	}
-
 	# Contemplate Lakshmi as a medium to Vishnu
 	option = {
 		name = "hindu_events.24.a"
-		add_ruler_modifier = { name = hindu_vaishnava_1a hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_vaishnava_1a
+			hidden = yes
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_contemplation
 			duration = 1825
 		}
-		hidden_effect = { country_event = { id = hindu_events.25 days = 1826 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.25
+				days = 1826
+			}
+		}
 	}
-
 	# Contemplate Lakshmi as peer or superior to Vishnu
 	option = {
 		name = "hindu_events.24.b"
-		add_ruler_modifier = { name = hindu_vaishnava_1b hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_vaishnava_1b
+			hidden = yes
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_contemplation
 			duration = 1825
 		}
-		hidden_effect = { country_event = { id = hindu_events.26 days = 1826 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.26
+				days = 1826
+			}
+		}
 	}
-
 	# Continue search
 	option = {
 		name = "hindu_events.24.c"
@@ -1066,26 +1273,31 @@ country_event = {
 	title = "hindu_events.25.t"
 	desc = "hindu_events.25.d"
 	picture = GOOD_WITH_MONARCH_eventPicture
-
 	trigger = {
-		has_ruler_modifier =  hindu_vaishnava_1a
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		NOT = { has_ruler_modifier = jnana }
+		has_ruler_modifier = hindu_vaishnava_1a
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
+		NOT = {
+			has_ruler_modifier = jnana
+		}
 	}
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.25.a"
 		if = {
 			limit = {
-				NOT = { DIP = 5 }
+				NOT = {
+					DIP = 5
+				}
 			}
 			change_dip = 2
 			else = {
 				if = {
 					limit = {
-						NOT = { DIP = 6 }
+						NOT = {
+							DIP = 6
+						}
 					}
 					add_dip_power = 50
 					change_dip = 1
@@ -1095,8 +1307,12 @@ country_event = {
 				}
 			}
 		}
-		add_ruler_modifier = { name = vishnu_lakshmi }
-		add_ruler_modifier = { name = jnana }
+		add_ruler_modifier = {
+			name = vishnu_lakshmi
+		}
+		add_ruler_modifier = {
+			name = jnana
+		}
 	}
 }
 
@@ -1106,26 +1322,33 @@ country_event = {
 	title = "hindu_events.26.t"
 	desc = "hindu_events.26.d"
 	picture = CULTURE_eventPicture
-
 	trigger = {
-		has_ruler_modifier =  hindu_vaishnava_1b
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		NOT = { has_ruler_modifier = jnana }
+		has_ruler_modifier = hindu_vaishnava_1b
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
+		NOT = {
+			has_ruler_modifier = jnana
+		}
 	}
-
 	is_triggered_only = yes
-
 	# Lakshmi is the force behind Vishnu, but Vishnu is still the surpeme god
 	option = {
 		name = "hindu_events.26.a"
 		if = {
 			limit = {
-				NOT = { ADM = 5 }
+				NOT = {
+					ADM = 5
+				}
 			}
 			change_adm = 2
 			else = {
 				if = {
-					limit = { NOT = { ADM = 6 } }
+					limit = {
+						NOT = {
+							ADM = 6
+						}
+					}
 					change_adm = 1
 					add_adm_power = 50
 					else = {
@@ -1134,15 +1357,18 @@ country_event = {
 				}
 			}
 		}
-		add_ruler_modifier = { name = jnana }
+		add_ruler_modifier = {
+			name = jnana
+		}
 	}
-
 	# Lakshmi is the supreme divine
 	option = {
 		name = "hindu_events.26.b"
 		if = {
 			limit = {
-				NOT = { ADM = 6 }
+				NOT = {
+					ADM = 6
+				}
 			}
 			change_adm = 1
 			else = {
@@ -1155,13 +1381,14 @@ country_event = {
 			remove_country_modifier = hindu_vaishnava_1b
 		}
 	}
-
 	# Shakti is the supreme divine
 	option = {
 		name = "hindu_events.26.c"
 		if = {
 			limit = {
-				NOT = { MIL = 6 }
+				NOT = {
+					MIL = 6
+				}
 			}
 			change_mil = 1
 			else = {
@@ -1182,17 +1409,19 @@ country_event = {
 	title = "hindu_events.27.t"
 	desc = "hindu_events.27.d"
 	picture = RELIGION_eventPicture
-
 	trigger = {
 		has_personal_deity = vishnu
 		has_regency = no
-		NOT = { has_ruler_modifier = jnana }
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
+		NOT = {
+			has_ruler_modifier = jnana
+		}
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
 		employed_advisor = {
 			type = theologian
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 1200
 		modifier = {
@@ -1204,30 +1433,45 @@ country_event = {
 			stability = 3
 		}
 	}
-
 	# Accept theologian's tutorage
 	option = {
 		name = "hindu_events.27.a"
-		add_ruler_modifier = { name = hindu_vaishnava_2a hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_vaishnava_2a
+			hidden = yes
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_contemplation
 			duration = 1825
 		}
-		hidden_effect = { country_event = { id = hindu_events.28 days = 1826 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.28
+				days = 1826
+			}
+		}
 	}
-
 	# Accept advice, seek other teacher
 	option = {
 		name = "hindu_events.27.b"
-		add_ruler_modifier = { name = hindu_vaishnava_2b hidden = yes }
-		add_ruler_modifier = { name = vishnu_brahma }
+		add_ruler_modifier = {
+			name = hindu_vaishnava_2b
+			hidden = yes
+		}
+		add_ruler_modifier = {
+			name = vishnu_brahma
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_contemplation
 			duration = 1825
 		}
-		hidden_effect = { country_event = { id = hindu_events.29 days = 1826 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.29
+				days = 1826
+			}
+		}
 	}
-
 	# Continue search
 	option = {
 		name = "hindu_events.27.c"
@@ -1241,25 +1485,32 @@ country_event = {
 	title = "hindu_events.28.t"
 	desc = "hindu_events.28.d"
 	picture = GOOD_WITH_MONARCH_eventPicture
-
 	trigger = {
-		has_ruler_modifier =  hindu_vaishnava_2a
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		NOT = { has_ruler_modifier = jnana }
+		has_ruler_modifier = hindu_vaishnava_2a
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
+		NOT = {
+			has_ruler_modifier = jnana
+		}
 	}
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.28.a"
 		if = {
 			limit = {
-				NOT = { ADM = 5 }
+				NOT = {
+					ADM = 5
+				}
 			}
 			change_adm = 2
 			else = {
 				if = {
-					limit = { NOT = { ADM = 6 } }
+					limit = {
+						NOT = {
+							ADM = 6
+						}
+					}
 					change_adm = 1
 					add_adm_power = 50
 					else = {
@@ -1268,7 +1519,9 @@ country_event = {
 				}
 			}
 		}
-		add_ruler_modifier = { name = jnana }
+		add_ruler_modifier = {
+			name = jnana
+		}
 	}
 }
 
@@ -1278,27 +1531,32 @@ country_event = {
 	title = "hindu_events.29.t"
 	desc = "hindu_events.29.d"
 	picture = GOOD_WITH_MONARCH_eventPicture
-
 	trigger = {
-		has_ruler_modifier =  hindu_vaishnava_2b
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		NOT = { has_ruler_modifier = jnana }
+		has_ruler_modifier = hindu_vaishnava_2b
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
+		NOT = {
+			has_ruler_modifier = jnana
+		}
 	}
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.29.a"
 		if = {
 			limit = {
-				NOT = { ADM = 6 }
+				NOT = {
+					ADM = 6
+				}
 			}
 			change_adm = 1
 			else = {
 				add_adm_power = 50
 			}
 		}
-		add_ruler_modifier = { name = jnana }
+		add_ruler_modifier = {
+			name = jnana
+		}
 	}
 }
 
@@ -1308,31 +1566,43 @@ country_event = {
 	title = "hindu_events.30.t"
 	desc = "hindu_events.30.d"
 	picture = DIPLOMACY_eventPicture
-
 	is_triggered_only = yes
-
 	# Contemplate Shiva as Vishnu's closest pupil
 	option = {
 		name = "hindu_events.30.a"
-		add_ruler_modifier = { name = hindu_vaishnava_3a hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_vaishnava_3a
+			hidden = yes
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_contemplation
 			duration = 1825
 		}
-		hidden_effect = { country_event = { id = hindu_events.31 days = 1826 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.31
+				days = 1826
+			}
+		}
 	}
-
 	# Contemplate Shiva as peer or superior to Vishnu
 	option = {
 		name = "hindu_events.30.b"
-		add_ruler_modifier = { name = hindu_vaishnava_3b hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_vaishnava_3b
+			hidden = yes
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_contemplation
 			duration = 1825
 		}
-		hidden_effect = { country_event = { id = hindu_events.32 days = 1826 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.32
+				days = 1826
+			}
+		}
 	}
-
 	# Continue search
 	option = {
 		name = "hindu_events.30.c"
@@ -1346,26 +1616,31 @@ country_event = {
 	title = "hindu_events.31.t"
 	desc = "hindu_events.31.d"
 	picture = PRAYING_eventPicture
-
 	trigger = {
-		has_ruler_modifier =  hindu_vaishnava_3a
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		NOT = { has_ruler_modifier = jnana }
+		has_ruler_modifier = hindu_vaishnava_3a
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
+		NOT = {
+			has_ruler_modifier = jnana
+		}
 	}
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.31.a"
 		if = {
 			limit = {
-				NOT = { DIP = 5 }
+				NOT = {
+					DIP = 5
+				}
 			}
 			change_dip = 2
 			else = {
 				if = {
 					limit = {
-						NOT = { DIP = 6 }
+						NOT = {
+							DIP = 6
+						}
 					}
 					add_dip_power = 50
 					change_dip = 1
@@ -1376,7 +1651,9 @@ country_event = {
 			}
 		}
 		add_prestige = 10
-		add_ruler_modifier = { name = jnana }
+		add_ruler_modifier = {
+			name = jnana
+		}
 	}
 }
 
@@ -1386,27 +1663,32 @@ country_event = {
 	title = "hindu_events.32.t"
 	desc = "hindu_events.32.d"
 	picture = RELIGION_eventPicture
-
 	trigger = {
-		has_ruler_modifier =  hindu_vaishnava_3b
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		NOT = { has_ruler_modifier = jnana }
+		has_ruler_modifier = hindu_vaishnava_3b
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
+		NOT = {
+			has_ruler_modifier = jnana
+		}
 	}
-
 	is_triggered_only = yes
-
 	# Shiva is Vishnu's most respected follower, but Vishnu is still the surpeme god
 	option = {
 		name = "hindu_events.32.a"
 		if = {
 			limit = {
-				NOT = { DIP = 5 }
+				NOT = {
+					DIP = 5
+				}
 			}
 			change_dip = 2
 			else = {
 				if = {
 					limit = {
-						NOT = { DIP = 6 }
+						NOT = {
+							DIP = 6
+						}
 					}
 					add_dip_power = 50
 					change_dip = 1
@@ -1416,15 +1698,18 @@ country_event = {
 				}
 			}
 		}
-		add_ruler_modifier = { name = jnana }
+		add_ruler_modifier = {
+			name = jnana
+		}
 	}
-
 	# Shiva is the supreme divine, similar to Vishnu
 	option = {
 		name = "hindu_events.32.b"
 		if = {
 			limit = {
-				NOT = { ADM = 6 }
+				NOT = {
+					ADM = 6
+				}
 			}
 			change_adm = 1
 			else = {
@@ -1437,13 +1722,14 @@ country_event = {
 			remove_country_modifier = hindu_vaishnava_3b
 		}
 	}
-
 	# Shiva is the supreme divine, more destructive than Vishnu
 	option = {
 		name = "hindu_events.32.c"
 		if = {
 			limit = {
-				NOT = { MIL = 6 }
+				NOT = {
+					MIL = 6
+				}
 			}
 			change_mil = 1
 			else = {
@@ -1464,17 +1750,19 @@ country_event = {
 	title = "hindu_events.33.t"
 	desc = "hindu_events.33.d"
 	picture = BAD_WITH_MONARCH_eventPicture
-
 	trigger = {
 		has_personal_deity = vishnu
 		has_regency = no
-		NOT = { has_ruler_modifier = jnana }
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
+		NOT = {
+			has_ruler_modifier = jnana
+		}
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
 		government = monarchy
 		has_heir = no
 		has_government_attribute = heir
 	}
-
 	mean_time_to_happen = {
 		months = 600
 		modifier = {
@@ -1486,23 +1774,34 @@ country_event = {
 			stability = 3
 		}
 	}
-
 	# FULL CELIBATE
 	option = {
 		name = "hindu_events.33.a"
-		add_ruler_modifier = { name = hindu_vaishnava_4a hidden = yes }
-		add_ruler_modifier = { name = vishnu_celibacy }
+		add_ruler_modifier = {
+			name = hindu_vaishnava_4a
+			hidden = yes
+		}
+		add_ruler_modifier = {
+			name = vishnu_celibacy
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_contemplation
 			duration = 2920
 		}
-		hidden_effect = { country_event = { id = hindu_events.34 days = 2921 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.34
+				days = 2921
+			}
+		}
 	}
-
 	# Maybe a little bit celibate
 	option = {
 		name = "hindu_events.33.b"
-		add_ruler_modifier = { name = hindu_vaishnava_4b hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_vaishnava_4b
+			hidden = yes
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_contemplation
 			duration = 1825
@@ -1511,9 +1810,13 @@ country_event = {
 			name = vishnu_celibacy
 			duration = 1825
 		}
-		hidden_effect = { country_event = { id = hindu_events.35 days = 1826 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.35
+				days = 1826
+			}
+		}
 	}
-
 	# Continue search/orgies
 	option = {
 		name = "hindu_events.33.c"
@@ -1527,26 +1830,31 @@ country_event = {
 	title = "hindu_events.34.t"
 	desc = "hindu_events.34.d"
 	picture = RELIGION_eventPicture
-
 	trigger = {
-		has_ruler_modifier =  hindu_vaishnava_4a
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		NOT = { has_ruler_modifier = jnana }
+		has_ruler_modifier = hindu_vaishnava_4a
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
+		NOT = {
+			has_ruler_modifier = jnana
+		}
 	}
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.34.a"
 		if = {
 			limit = {
-				NOT = { ADM = 5 }
+				NOT = {
+					ADM = 5
+				}
 			}
 			change_adm = 2
 			else = {
 				if = {
 					limit = {
-						NOT = { ADM = 6 }
+						NOT = {
+							ADM = 6
+						}
 					}
 					add_adm_power = 50
 					change_adm = 1
@@ -1558,13 +1866,17 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = { DIP = 5 }
+				NOT = {
+					DIP = 5
+				}
 			}
 			change_dip = 2
 			else = {
 				if = {
 					limit = {
-						NOT = { DIP = 6 }
+						NOT = {
+							DIP = 6
+						}
 					}
 					add_dip_power = 50
 					change_dip = 1
@@ -1574,7 +1886,9 @@ country_event = {
 				}
 			}
 		}
-		add_ruler_modifier = { name = jnana }
+		add_ruler_modifier = {
+			name = jnana
+		}
 	}
 }
 
@@ -1584,20 +1898,23 @@ country_event = {
 	title = "hindu_events.35.t"
 	desc = "hindu_events.35.d"
 	picture = GOOD_WITH_MONARCH_eventPicture
-
 	trigger = {
-		has_ruler_modifier =  hindu_vaishnava_4b
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		NOT = { has_ruler_modifier = jnana }
+		has_ruler_modifier = hindu_vaishnava_4b
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
+		NOT = {
+			has_ruler_modifier = jnana
+		}
 	}
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.35.a"
 		if = {
 			limit = {
-				NOT = { ADM = 6 }
+				NOT = {
+					ADM = 6
+				}
 			}
 			change_adm = 1
 			else = {
@@ -1606,44 +1923,53 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = { DIP = 6 }
+				NOT = {
+					DIP = 6
+				}
 			}
 			change_dip = 1
 			else = {
 				add_dip_power = 50
 			}
 		}
-		add_ruler_modifier = { name = jnana }
+		add_ruler_modifier = {
+			name = jnana
+		}
 	}
 }
 
 ##################################################
 # Ganesha
 ##################################################
-
 # The Obstacles in our Path
 country_event = {
 	id = hindu_events.36
 	title = "hindu_events.36.t"
 	desc = "hindu_events.36.d"
 	picture = RELIGION_eventPicture
-
 	trigger = {
 		has_personal_deity = ganesha
 		has_regency = no
-		NOT = { has_ruler_modifier = jnana }
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
+		NOT = {
+			has_ruler_modifier = jnana
+		}
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
 		all_neighbor_country = {
-			NOT = { tech_difference = 0 }
+			NOT = {
+				tech_difference = 0
+			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 800
 		modifier = {
 			factor = 0.5
 			all_neighbor_country = {
-				NOT = { tech_difference = -1 }
+				NOT = {
+					tech_difference = -1
+				}
 			}
 		}
 		modifier = {
@@ -1655,18 +1981,24 @@ country_event = {
 			stability = 3
 		}
 	}
-
 	# Contemplate Ganesha
 	option = {
 		name = "hindu_events.36.a"
-		add_ruler_modifier = { name = hindu_ganesha hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_ganesha
+			hidden = yes
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_contemplation
 			duration = 1825
 		}
-		hidden_effect = { country_event = { id = hindu_events.37 days = 1826 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.37
+				days = 1826
+			}
+		}
 	}
-
 	# Continue search
 	option = {
 		name = "hindu_events.36.b"
@@ -1680,27 +2012,32 @@ country_event = {
 	title = "hindu_events.37.t"
 	desc = "hindu_events.37.d"
 	picture = GOOD_WITH_MONARCH_eventPicture
-
 	trigger = {
-		has_ruler_modifier =  hindu_ganesha
+		has_ruler_modifier = hindu_ganesha
 		has_regency = no
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		NOT = { has_ruler_modifier = jnana }
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
+		NOT = {
+			has_ruler_modifier = jnana
+		}
 	}
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.37.a"
 		if = {
 			limit = {
-				NOT = { DIP = 5 }
+				NOT = {
+					DIP = 5
+				}
 			}
 			change_dip = 2
 			else = {
 				if = {
 					limit = {
-						NOT = { DIP = 6 }
+						NOT = {
+							DIP = 6
+						}
 					}
 					change_dip = 1
 					add_dip_power = 50
@@ -1710,7 +2047,9 @@ country_event = {
 				}
 			}
 		}
-		add_ruler_modifier = { name = jnana }
+		add_ruler_modifier = {
+			name = jnana
+		}
 	}
 }
 
@@ -1720,18 +2059,17 @@ country_event = {
 	title = "hindu_events.38.t"
 	desc = "hindu_events.38.d"
 	picture = RELIGION_eventPicture
-
 	trigger = {
-		has_ruler_modifier =  hindu_ganesha
+		has_ruler_modifier = hindu_ganesha
 		has_ruler_modifier = jnana
 		is_month = 7
-		NOT = { is_month = 9 }
+		NOT = {
+			is_month = 9
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 24
 	}
-
 	option = {
 		name = "hindu_events.38.a"
 		add_years_of_income = -0.3
@@ -1741,7 +2079,6 @@ country_event = {
 			tooltip = "hindu_events.38.a.tt"
 		}
 	}
-
 	option = {
 		name = "hindu_events.38.b"
 		add_prestige = -5
@@ -1754,9 +2091,7 @@ country_event = {
 	title = "hindu_events.39.t"
 	desc = "hindu_events.39.d"
 	picture = RELIGION_eventPicture
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.39.a"
 		add_stability_or_adm_power = yes
@@ -1766,20 +2101,19 @@ country_event = {
 ##################################################
 # Ganga
 ##################################################
-
 # Planning for the End
 country_event = {
 	id = hindu_events.40
 	title = "hindu_events.40.t"
 	desc = "hindu_events.40.d"
 	picture = KING_SICK_IN_BED_eventPicture
-
 	trigger = {
 		has_personal_deity = ganga
 		ruler_age = 60
-		NOT = { has_ruler_modifier = hindu_ganga }
+		NOT = {
+			has_ruler_modifier = hindu_ganga
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 240
 		modifier = {
@@ -1791,18 +2125,19 @@ country_event = {
 			stability = 3
 		}
 	}
-
 	# Make plans for your funeral
 	option = {
 		name = "hindu_events.40.a"
 		set_country_flag = ganga_funeral
-		add_ruler_modifier = { name = hindu_ganga hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_ganga
+			hidden = yes
+		}
 		add_ruler_modifier = {
 			name = hindu_withdrawn_contemplation
 			duration = 1825
 		}
 	}
-
 	# I have many years left!
 	option = {
 		name = "hindu_events.40.b"
@@ -1816,37 +2151,66 @@ country_event = {
 	title = "hindu_events.41.t"
 	desc = "hindu_events.41.d"
 	picture = EXPLORERS_eventPicture
-
 	trigger = {
 		has_personal_deity = ganga
 		has_country_flag = ganga_funeral
 		has_regency = no
-		NOT = { has_ruler_modifier = hindu_ganga }
+		NOT = {
+			has_ruler_modifier = hindu_ganga
+		}
 		# Does not own a province containing Ganges
 		NOT = {
 			owns = 511
+		}
+		NOT = {
 			owns = 522
+		}
+		NOT = {
 			owns = 523
+		}
+		NOT = {
 			owns = 524
+		}
+		NOT = {
 			owns = 555
+		}
+		NOT = {
 			owns = 556
+		}
+		NOT = {
 			owns = 558
+		}
+		NOT = {
 			owns = 561
+		}
+		NOT = {
 			owns = 563
+		}
+		NOT = {
 			owns = 564
+		}
+		NOT = {
 			owns = 2044
+		}
+		NOT = {
 			owns = 2060
+		}
+		NOT = {
 			owns = 2061
+		}
+		NOT = {
 			owns = 2063
+		}
+		NOT = {
 			owns = 2069
+		}
+		NOT = {
 			owns = 2095
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 1
 	}
-
 	# Travel to Ganges for the funeral
 	option = {
 		name = "hindu_events.41.a"
@@ -1865,7 +2229,6 @@ country_event = {
 			tooltip = "hindu_events.41.a.tt"
 		}
 	}
-
 	# Ignore wishes
 	option = {
 		name = "hindu_events.41.b"
@@ -1880,12 +2243,13 @@ country_event = {
 	title = "hindu_events.42.t"
 	desc = "hindu_events.42.d"
 	picture = DEATH_OF_HEIR_eventPicture
-
 	trigger = {
 		has_personal_deity = ganga
 		has_country_flag = ganga_funeral
 		has_regency = no
-		NOT = { has_ruler_modifier = hindu_ganga }
+		NOT = {
+			has_ruler_modifier = hindu_ganga
+		}
 		# Owns a province containing Ganges
 		OR = {
 			owns = 511
@@ -1906,11 +2270,9 @@ country_event = {
 			owns = 2095
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 1
 	}
-
 	# Travel to Ganges for the funeral
 	option = {
 		name = "hindu_events.42.a"
@@ -1925,7 +2287,6 @@ country_event = {
 			tooltip = "hindu_events.42.a.tt"
 		}
 	}
-
 	# Ignore wishes
 	option = {
 		name = "hindu_events.42.b"
@@ -1940,20 +2301,22 @@ country_event = {
 	title = "hindu_events.43.t"
 	desc = "hindu_events.43.d"
 	picture = CULTURE_eventPicture
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.43.a"
 		if = {
 			limit = {
-				NOT = { ADM = 5 }
+				NOT = {
+					ADM = 5
+				}
 			}
 			change_adm = 2
 			else = {
 				if = {
 					limit = {
-						NOT = { ADM = 6 }
+						NOT = {
+							ADM = 6
+						}
 					}
 					change_adm = 1
 					add_adm_power = 50
@@ -1963,31 +2326,34 @@ country_event = {
 				}
 			}
 		}
-		add_ruler_modifier = { name = jnana }
+		add_ruler_modifier = {
+			name = jnana
+		}
 	}
 }
 
 ##################################################
 # Surya
 ##################################################
-
 # Temples of the Sun
 country_event = {
 	id = hindu_events.44
 	title = "hindu_events.44.t"
 	desc = "hindu_events.44.d"
 	picture = CITY_VIEW_eventPicture
-
 	trigger = {
 		has_personal_deity = surya
 		has_regency = no
-		NOT = { has_ruler_modifier = jnana }
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
+		NOT = {
+			has_ruler_modifier = jnana
+		}
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
 		capital_scope = {
 			has_building = temple
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 1400
 		modifier = {
@@ -2001,19 +2367,25 @@ country_event = {
 			}
 		}
 	}
-
 	# Contemplate Surya
 	option = {
 		name = "hindu_events.44.a"
-		add_ruler_modifier = { name = hindu_surya hidden = yes }
+		add_ruler_modifier = {
+			name = hindu_surya
+			hidden = yes
+		}
 		add_years_of_income = -0.2
 		add_ruler_modifier = {
 			name = hindu_withdrawn_contemplation
 			duration = 1825
 		}
-		hidden_effect = { country_event = { id = hindu_events.45 days = 1826 } }
+		hidden_effect = {
+			country_event = {
+				id = hindu_events.45
+				days = 1826
+			}
+		}
 	}
-
 	# Continue search
 	option = {
 		name = "hindu_events.44.b"
@@ -2027,26 +2399,31 @@ country_event = {
 	title = "hindu_events.45.t"
 	desc = "hindu_events.45.d"
 	picture = ADVISOR_eventPicture
-
 	trigger = {
-		has_ruler_modifier =  hindu_surya
-		NOT = { has_ruler_modifier = hindu_withdrawn_contemplation }
-		NOT = { has_ruler_modifier = jnana }
+		has_ruler_modifier = hindu_surya
+		NOT = {
+			has_ruler_modifier = hindu_withdrawn_contemplation
+		}
+		NOT = {
+			has_ruler_modifier = jnana
+		}
 	}
-
 	is_triggered_only = yes
-
 	option = {
 		name = "hindu_events.45.a"
 		if = {
 			limit = {
-				NOT = { ADM = 5 }
+				NOT = {
+					ADM = 5
+				}
 			}
 			change_adm = 2
 			else = {
 				if = {
 					limit = {
-						NOT = { ADM = 6 }
+						NOT = {
+							ADM = 6
+						}
 					}
 					change_adm = 1
 					add_adm_power = 50
@@ -2056,7 +2433,9 @@ country_event = {
 				}
 			}
 		}
-		add_ruler_modifier = { name = jnana }
+		add_ruler_modifier = {
+			name = jnana
+		}
 	}
 }
 
@@ -2066,18 +2445,17 @@ country_event = {
 	title = "hindu_events.46.t"
 	desc = "hindu_events.46.d"
 	picture = CULTURE_eventPicture
-
 	trigger = {
-		has_ruler_modifier =  hindu_surya
+		has_ruler_modifier = hindu_surya
 		has_ruler_modifier = jnana
 		is_month = 1
-		NOT = { is_month = 2 }
+		NOT = {
+			is_month = 2
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 36
 	}
-
 	option = {
 		name = "hindu_events.46.a"
 		add_years_of_income = -0.3
@@ -2087,7 +2465,6 @@ country_event = {
 			tooltip = "hindu_events.46.a.tt"
 		}
 	}
-
 	option = {
 		name = "hindu_events.46.b"
 		add_prestige = -5
@@ -2100,9 +2477,7 @@ country_event = {
 	title = "hindu_events.47.t"
 	desc = "hindu_events.47.d"
 	picture = ADVISOR_eventPicture
-
 	is_triggered_only = yes
-
 	# Praise the Sun! \[T]/
 	option = {
 		name = "hindu_events.47.a"
@@ -2116,7 +2491,6 @@ country_event = {
 	title = "hindu_events.48.t"
 	desc = "hindu_events.48.d"
 	picture = NEW_HEIR_eventPicture
-
 	trigger = {
 		has_personal_deity = surya
 		has_regency = no
@@ -2124,22 +2498,21 @@ country_event = {
 		has_heir = no
 		has_government_attribute = heir
 		OR = {
-			NOT = { has_country_flag = has_had_suryavansha_flag }
+			NOT = {
+				has_country_flag = has_had_suryavansha_flag
+			}
 			had_country_flag = {
 				flag = has_had_suryavansha_flag
 				days = 36500
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 180
 	}
-
 	immediate = {
 		set_country_flag = has_had_suryavansha_flag
 	}
-
 	option = {
 		name = "hindu_events.48.a"
 		define_heir = {
@@ -2151,7 +2524,6 @@ country_event = {
 		}
 		add_prestige = 10
 	}
-
 	option = {
 		name = "hindu_events.48.b"
 		add_prestige = -10
@@ -2159,20 +2531,17 @@ country_event = {
 }
 
 # Other Hindu events
-
 # Bala Tripurasundari - Young daughter wants to go to war
 country_event = {
 	id = hindu_events.49
 	title = "hindu_events.49.t"
 	desc = "hindu_events.49.d"
 	picture = BATTLE_eventPicture
-
 	trigger = {
 		has_personal_deity = shakti
 		is_at_war = yes
 		is_heir_leader = yes
 	}
-
 	mean_time_to_happen = {
 		months = 240
 		modifier = {
@@ -2181,13 +2550,13 @@ country_event = {
 			has_ruler_modifier = jnana
 		}
 	}
-
 	option = {
 		name = "hindu_events.49.a"
-		create_general = { tradition = 0 }
+		create_general = {
+			tradition = 0
+		}
 		add_prestige = 10
 	}
-
 	option = {
 		name = "hindu_events.49.b"
 		add_dip_power = 20
@@ -2201,19 +2570,18 @@ country_event = {
 	title = "hindu_events.50.t"
 	desc = "hindu_events.50.d"
 	picture = ADVISOR_eventPicture
-
 	trigger = {
 		religion_group = dharmic
-		NOT = { has_ruler_modifier = jnana }
+		NOT = {
+			has_ruler_modifier = jnana
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 4800
 	}
-
 	option = {
 		name = "hindu_events.50.a"
-		custom_tooltip = "hindu_events.50.a.tt" #A reference to the Guru Meditation error on old Amiga computers.
+		custom_tooltip = "hindu_events.50.a.tt"		#A reference to the Guru Meditation error on old Amiga computers.
 		add_stability = -1
 	}
 }

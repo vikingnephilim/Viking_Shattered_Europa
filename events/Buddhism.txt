@@ -297,7 +297,8 @@ province_event = {
 	option = {
 		trigger = {
 			religion = buddhism
-		}		#Theravada
+		}
+		#Theravada
 		ai_chance = {
 			factor = 1
 		}
@@ -1848,6 +1849,8 @@ country_event = {
 		any_neighbor_country = {
 			NOT = {
 				alliance_with = ROOT
+			}
+			NOT = {
 				war_with = ROOT
 			}
 		}
@@ -1869,6 +1872,8 @@ country_event = {
 			limit = {
 				NOT = {
 					alliance_with = ROOT
+				}
+				NOT = {
 					war_with = ROOT
 				}
 			}
@@ -2261,7 +2266,8 @@ country_event = {
 		has_regency = no
 		NOT = {
 			has_dlc = "The Cossacks"
-		}		#Meaningless for countries with Syncretic Faith.
+		}
+		#Meaningless for countries with Syncretic Faith.
 		NOT = {
 			has_country_flag = met_lama
 		}
@@ -2507,7 +2513,8 @@ country_event = {
 			}
 			NOT = {
 				religion = tengri_pagan_reformed
-			}			#This event is meaningless with Syncretic Faith.
+			}
+			#This event is meaningless with Syncretic Faith.
 		}
 		lanka_area = {
 			owned_by = ROOT

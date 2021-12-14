@@ -3047,15 +3047,22 @@ add_development_from_building = {
 }
 
 #Province effect - used for buildings
-
 add_development_from_upgrading_or_building = {
 	if = {
 		limit = {
-			FROM = { has_country_flag = improve_development_on_buildings_built }
-			NOT = { gained_development_from_building = { building = $building$ } }
+			FROM = {
+				has_country_flag = improve_development_on_buildings_built
+			}
+			NOT = {
+				gained_development_from_building = {
+					building = $building$
+				}
+			}
 		}
 		if = {
-			limit = { has_province_flag = built_dev_$obsolete_building$ }
+			limit = {
+				has_province_flag = built_dev_$obsolete_building$
+			}
 			add_base_$type$ = $upgrade_value$
 		}
 		else = {

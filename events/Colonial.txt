@@ -1,7 +1,6 @@
 namespace = colonial
-
 province_event = {
-	id =  colonial.1
+	id = colonial.1
 	title = "EVTNAME6138"
 	desc = {
 		trigger = {
@@ -16,9 +15,7 @@ province_event = {
 		desc = "colonial.1.d"
 	}
 	picture = COLONIZATION_eventPicture
-	
 	is_triggered_only = yes
-	
 	immediate = {
 		hidden_effect = {
 			random_empty_neighbor_province = {
@@ -26,20 +23,25 @@ province_event = {
 			}
 		}
 	}
-	
 	trigger = {
 		OR = {
-			owner = { has_idea_group = exploration_ideas }
-			owner = { has_idea_group = expansion_ideas }
+			owner = {
+				has_idea_group = exploration_ideas
+			}
+			owner = {
+				has_idea_group = expansion_ideas
+			}
 		}
 		has_empty_adjacent_province = yes
-		owner = { NOT = { num_of_colonies = 2 } }
+		owner = {
+			NOT = {
+				num_of_colonies = 2
+			}
+		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
 		name = "EVTOPTA6138"
 		goto = empty_neighbor_target
@@ -55,7 +57,7 @@ province_event = {
 		name = "EVTOPTB6138"
 		trigger = {
 			owner = {
-			num_of_colonies = 1
+				num_of_colonies = 1
 			}
 		}
 		goto = root
@@ -74,34 +76,36 @@ province_event = {
 	}
 }
 
-
 ### Events to give more fun for overseas in the late game ###
-
 province_event = {
-	id =  colonial.2
+	id = colonial.2
 	title = "EVTNAME1420"
 	desc = "EVTDESC1420"
 	picture = ELECTION_REPUBLICAN_eventPicture
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		current_age = age_of_revolutions
 		is_overseas = yes
 		is_colony = no
 		religion_group = owner
 		owner = {
-			NOT = { has_country_modifier = narrowminded_modifier }
-			NOT = { has_country_modifier = serfdom_modifier }
+			NOT = {
+				has_country_modifier = narrowminded_modifier
+			}
+			NOT = {
+				has_country_modifier = serfdom_modifier
+			}
 		}
-		NOT = { has_province_modifier = founding_father }
-		NOT = { has_province_modifier = loyalist_stronghold }
+		NOT = {
+			has_province_modifier = founding_father
+		}
+		NOT = {
+			has_province_modifier = loyalist_stronghold
+		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	option = {
 		name = "EVTOPTA1420"
 		ai_chance = {
@@ -113,8 +117,7 @@ province_event = {
 			duration = -1
 		}
 	}
-	
-	option	= {
+	option = {
 		name = "EVTOPTB1420"
 		owner = {
 			add_country_modifier = {
@@ -126,32 +129,33 @@ province_event = {
 				duration = 3650
 			}
 		}
-		owner = { set_country_flag = treat_colonials_harshly }
+		owner = {
+			set_country_flag = treat_colonials_harshly
+		}
 	}
 }
 
 province_event = {
-	id =  colonial.3
+	id = colonial.3
 	title = "EVTNAME1421"
 	desc = "EVTDESC1421"
 	picture = RELIGION_eventPicture
-	
 	is_triggered_only = yes
-
 	trigger = {
 		current_age = age_of_revolutions
 		is_colony = no
 		is_overseas = yes
 		religion_group = christian
-		owner = { 
-			religion_group = christian }
-		owner = { has_country_flag = treat_colonials_harshly }
+		owner = {
+			religion_group = christian
+		}
+		owner = {
+			has_country_flag = treat_colonials_harshly
+		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	option = {
 		name = "EVTOPTA1421"
 		goto = ROOT
@@ -160,66 +164,70 @@ province_event = {
 }
 
 province_event = {
-	id =  colonial.4
+	id = colonial.4
 	title = "EVTNAME1422"
 	desc = "EVTDESC1422"
 	picture = DIPLOMACY_eventPicture
 	goto = ROOT
 	is_triggered_only = yes
-	
 	trigger = {
 		current_age = age_of_revolutions
 		is_overseas = yes
 		is_colony = no
 		religion_group = owner
-		NOT = { has_province_modifier = founding_father }
-		NOT = { has_province_modifier = loyalist_stronghold }
+		NOT = {
+			has_province_modifier = founding_father
+		}
+		NOT = {
+			has_province_modifier = loyalist_stronghold
+		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
 		name = "EVTOPTA1422"
 		ai_chance = {
 			factor = 100
 			modifier = {
 				factor = 0
-				NOT = { owner = { treasury = 100 } }
+				NOT = {
+					owner = {
+						treasury = 100
+					}
+				}
 			}
 		}
 		add_unrest = 1
-		owner = { add_treasury = -100 }
+		owner = {
+			add_treasury = -100
+		}
 		add_province_modifier = {
 			name = "loyalist_stronghold"
 			duration = -1
 		}
 	}
-	
 	option = {
 		name = "EVTOPTB1422"
-		particularist_rebels  = 1
+		particularist_rebels = 1
 	}
 }
 
-
 ### Events to give persecuted minorities into colonies ###
-
 province_event = {
 	id = colonial.5
 	title = "EVTNAME1423"
 	desc = "EVTDESC1423"
 	picture = STREET_SPEECH_eventPicture
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		is_overseas = yes
 		is_colony = yes
 		colonysize = 600
 		religion = owner
-		NOT = { has_province_modifier = religious_migration }
+		NOT = {
+			has_province_modifier = religious_migration
+		}
 		owner = {
 			NOT = {
 				any_owned_province = {
@@ -231,12 +239,13 @@ province_event = {
 			any_owned_province = {
 				is_overseas = no
 				religion_group = ROOT
-				NOT = { religion = ROOT }
+				NOT = {
+					religion = ROOT
+				}
 				expelling_minorities = no
 			}
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			owner = {
@@ -244,7 +253,9 @@ province_event = {
 					limit = {
 						is_overseas = no
 						religion_group = ROOT
-						NOT = { religion = ROOT }
+						NOT = {
+							religion = ROOT
+						}
 						expelling_minorities = no
 					}
 					save_event_target_as = heretics_from_here
@@ -252,11 +263,9 @@ province_event = {
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	option = {
 		name = "EVTOPTA1423"
 		goto = ROOT
@@ -282,106 +291,96 @@ province_event = {
 }
 
 # province_event = {
-	# id =  colonial.6
-	# title = "EVTNAME1423"
-	# desc = "EVTDESC1424"
-	# picture = REFORM_eventPicture
-	
-	# is_triggered_only = yes
-
-	# trigger = {
-		# is_overseas = yes
-		# is_colony = yes
-		# colonysize = 600
-		# OR = {
-			# religion = catholic
-			# religion = reformed
-		# }
-		# owner = { 
-			# OR = {
-				# religion = catholic
-				# religion = reformed
-			# }
-			# any_owned_province = {
-				# is_overseas = no
-				# religion = protestant
-			# }
-		# }
-	# }
-
-	# mean_time_to_happen = {
-		# days = 1
-	# }
-	
-	# option = {
-		# name = "EVTOPTA1423"
-		# change_religion = protestant
-		# change_culture = owner
-		# add_colonysize = 400
-		# add_province_modifier = {
-			# name = "religious_migration"
-			# duration = 8760
-		# }
-	# }
+# id =  colonial.6
+# title = "EVTNAME1423"
+# desc = "EVTDESC1424"
+# picture = REFORM_eventPicture
+# is_triggered_only = yes
+# trigger = {
+# is_overseas = yes
+# is_colony = yes
+# colonysize = 600
+# OR = {
+# religion = catholic
+# religion = reformed
 # }
-
+# owner = { 
+# OR = {
+# religion = catholic
+# religion = reformed
+# }
+# any_owned_province = {
+# is_overseas = no
+# religion = protestant
+# }
+# }
+# }
+# mean_time_to_happen = {
+# days = 1
+# }
+# option = {
+# name = "EVTOPTA1423"
+# change_religion = protestant
+# change_culture = owner
+# add_colonysize = 400
+# add_province_modifier = {
+# name = "religious_migration"
+# duration = 8760
+# }
+# }
+# }
 # province_event = {
-	# id =  colonial.7
-	# title = "EVTNAME1423"
-	# desc = "EVTDESC1425"
-	# picture = REFORM_eventPicture
-	
-	# is_triggered_only = yes
-
-	# trigger = {
-		# is_overseas = yes
-		# is_colony = yes
-		# colonysize = 600
-		# OR = {
-			# religion = protestant
-			# religion = reformed
-		# }
-		# owner = { 
-			# OR = {
-				# religion = protestant
-				# religion = reformed
-			# }
-			# any_owned_province = {
-				# is_overseas = no
-				# religion = catholic
-			# }
-		# }
-	# }
-
-	# mean_time_to_happen = {
-		# days = 1
-	# }
-
-	# option = {
-		# name = "EVTOPTA1423"
-		# change_religion = catholic
-		# change_culture = owner
-		# add_colonysize = 400
-		# add_province_modifier = {
-			# name = "religious_migration"
-			# duration = 8760
-		# }
-	# }
+# id =  colonial.7
+# title = "EVTNAME1423"
+# desc = "EVTDESC1425"
+# picture = REFORM_eventPicture
+# is_triggered_only = yes
+# trigger = {
+# is_overseas = yes
+# is_colony = yes
+# colonysize = 600
+# OR = {
+# religion = protestant
+# religion = reformed
 # }
-
+# owner = { 
+# OR = {
+# religion = protestant
+# religion = reformed
+# }
+# any_owned_province = {
+# is_overseas = no
+# religion = catholic
+# }
+# }
+# }
+# mean_time_to_happen = {
+# days = 1
+# }
+# option = {
+# name = "EVTOPTA1423"
+# change_religion = catholic
+# change_culture = owner
+# add_colonysize = 400
+# add_province_modifier = {
+# name = "religious_migration"
+# duration = 8760
+# }
+# }
+# }
 province_event = {
-	id =  colonial.20
+	id = colonial.20
 	title = "EVTNAME1423"
 	desc = "colonial.EVTDESC20"
 	picture = STREET_SPEECH_eventPicture
 	goto = ROOT
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		is_colony = yes
 		colonysize = 600
-		NOT = { has_province_modifier = religious_migration }
+		NOT = {
+			has_province_modifier = religious_migration
+		}
 		OR = {
 			continent = north_america
 			continent = south_america
@@ -394,12 +393,13 @@ province_event = {
 				any_owned_province = {
 					is_overseas = no
 					religion_group = ROOT
-					NOT = { religion = ROOT }
+					NOT = {
+						religion = ROOT
+					}
 				}
 			}
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			owner = {
@@ -408,7 +408,9 @@ province_event = {
 						limit = {
 							is_overseas = no
 							religion_group = ROOT
-							NOT = { religion = ROOT }
+							NOT = {
+								religion = ROOT
+							}
 						}
 						save_event_target_as = heretics_from_here
 					}
@@ -416,11 +418,9 @@ province_event = {
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	option = {
 		name = "EVTOPTA1423"
 		change_religion = event_target:heretics_from_here
@@ -438,119 +438,108 @@ province_event = {
 }
 
 # province_event = {
-	# id =  colonial.21
-	# title = "EVTNAME1423"
-	# desc = "colonial.EVTDESC21"
-	# picture = REFORM_eventPicture
-	
-	# is_triggered_only = yes
-
-	# trigger = {
-		# is_overseas = yes
-		# is_colony = yes
-		# colonysize = 600
-		# OR = {
-			# continent = north_america
-			# continent = south_america
-			# continent = new_world
-		# }
-		# OR = {
-			# religion = catholic
-			# religion = reformed
-		# }
-		# owner = {
-			# is_colonial_nation = yes
-			# OR = {
-				# religion = catholic
-				# religion = reformed
-			# }
-			# colonial_parent = {
-				# OR = {
-					# religion = catholic
-					# religion = protestant
-				# }
-			# }
-			# any_owned_province = {
-				# is_overseas = no
-				# religion = protestant
-			# }
-		# }
-	# }
-
-	# mean_time_to_happen = {
-		# days = 1
-	# }
-	
-	# option = {
-		# name = "EVTOPTA1423"
-		# change_religion = protestant
-		# change_culture = owner
-		# add_colonysize = 400
-		# add_province_modifier = {
-			# name = "religious_migration"
-			# duration = 8760
-		# }
-	# }
+# id =  colonial.21
+# title = "EVTNAME1423"
+# desc = "colonial.EVTDESC21"
+# picture = REFORM_eventPicture
+# is_triggered_only = yes
+# trigger = {
+# is_overseas = yes
+# is_colony = yes
+# colonysize = 600
+# OR = {
+# continent = north_america
+# continent = south_america
+# continent = new_world
 # }
-
+# OR = {
+# religion = catholic
+# religion = reformed
+# }
+# owner = {
+# is_colonial_nation = yes
+# OR = {
+# religion = catholic
+# religion = reformed
+# }
+# colonial_parent = {
+# OR = {
+# religion = catholic
+# religion = protestant
+# }
+# }
+# any_owned_province = {
+# is_overseas = no
+# religion = protestant
+# }
+# }
+# }
+# mean_time_to_happen = {
+# days = 1
+# }
+# option = {
+# name = "EVTOPTA1423"
+# change_religion = protestant
+# change_culture = owner
+# add_colonysize = 400
+# add_province_modifier = {
+# name = "religious_migration"
+# duration = 8760
+# }
+# }
+# }
 # province_event = {
-	# id = colonial.22
-	# title = "EVTNAME1423"
-	# desc = "colonial.EVTDESC22"
-	# picture = REFORM_eventPicture
-	
-	# is_triggered_only = yes
-
-	# trigger = {
-		# is_overseas = yes
-		# is_colony = yes
-		# colonysize = 600
-		# OR = {
-			# continent = north_america
-			# continent = south_america
-			# continent = new_world
-		# }
-		# OR = {
-			# religion = protestant
-			# religion = reformed
-		# }
-		# owner = {
-			# is_colonial_nation = yes
-			# OR = {
-				# religion = protestant
-				# religion = reformed
-			# }
-			# colonial_parent = {
-				# OR = {
-					# religion = catholic
-					# religion = protestant
-				# }
-			# }
-			# any_owned_province = {
-				# is_overseas = no
-				# religion = catholic
-			# }
-		# }
-	# }
-
-	# mean_time_to_happen = {
-		# days = 1
-	# }
-
-	# option = {
-		# name = "EVTOPTA1423"
-		# change_religion = catholic
-		# change_culture = owner
-		# add_colonysize = 400
-		# add_province_modifier = {
-			# name = "religious_migration"
-			# duration = 8760
-		# }
-	# }
+# id = colonial.22
+# title = "EVTNAME1423"
+# desc = "colonial.EVTDESC22"
+# picture = REFORM_eventPicture
+# is_triggered_only = yes
+# trigger = {
+# is_overseas = yes
+# is_colony = yes
+# colonysize = 600
+# OR = {
+# continent = north_america
+# continent = south_america
+# continent = new_world
 # }
-
+# OR = {
+# religion = protestant
+# religion = reformed
+# }
+# owner = {
+# is_colonial_nation = yes
+# OR = {
+# religion = protestant
+# religion = reformed
+# }
+# colonial_parent = {
+# OR = {
+# religion = catholic
+# religion = protestant
+# }
+# }
+# any_owned_province = {
+# is_overseas = no
+# religion = catholic
+# }
+# }
+# }
+# mean_time_to_happen = {
+# days = 1
+# }
+# option = {
+# name = "EVTOPTA1423"
+# change_religion = catholic
+# change_culture = owner
+# add_colonysize = 400
+# add_province_modifier = {
+# name = "religious_migration"
+# duration = 8760
+# }
+# }
+# }
 ### Scripted by Sara Wendel-Örtqvist ###
-
 # A Witch!
 province_event = {
 	id = colonial.8
@@ -558,28 +547,24 @@ province_event = {
 	desc = "colonial.EVTDESC8"
 	picture = ANGRY_MOB_eventPicture
 	goto = ROOT
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		OR = {
-			province_id = 968 # Massachusets
-			province_id = 965 # Manhattan
-			province_id = 966 # Connecticut
-			province_id = 967 # Narraganset
-			province_id = 2547 # Roanoke
-			province_id = 4414 # Salem
+			province_id = 968			# Massachusets
+			province_id = 965			# Manhattan
+			province_id = 966			# Connecticut
+			province_id = 967			# Narraganset
+			province_id = 2547			# Roanoke
+			province_id = 4414			# Salem
 		}
 		current_age = age_of_absolutism
 		owner = {
 			religion_group = christian
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
 		name = "colonial.EVTOPTA8"
 		owner = {
@@ -601,24 +586,22 @@ province_event = {
 	desc = "colonial.EVTDESC9"
 	picture = COLONIZATION_eventPicture
 	goto = ROOT
-	
 	is_triggered_only = yes
-
 	trigger = {
-		NOT = { has_province_flag = rival_settlements }
+		NOT = {
+			has_province_flag = rival_settlements
+		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
 		name = "colonial.EVTOPTA9"
 		add_colonysize = 100
 	}
 	option = {
 		name = "colonial.EVTOPTB9"
-		add_base_tax = 1	
+		add_base_tax = 1
 		set_province_flag = rival_settlements
 	}
 }
@@ -630,27 +613,27 @@ province_event = {
 	desc = "colonial.EVTDESC10"
 	picture = COLONIZATION_eventPicture
 	goto = ROOT
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		has_province_flag = rival_settlements
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
 		name = "colonial.EVTOPTA10"
-		owner = {  add_dip_power = 10 }
+		owner = {
+			add_dip_power = 10
+		}
 		add_base_production = 1
 	}
 	option = {
 		name = "colonial.EVTOPTB10"
-		owner = {  add_adm_power = 10 }
+		owner = {
+			add_adm_power = 10
+		}
 		add_base_tax = 1
-	}	
+	}
 }
 
 # Rival Settlements
@@ -660,26 +643,24 @@ province_event = {
 	desc = "colonial.EVTDESC11"
 	picture = COLONIZATION_eventPicture
 	goto = ROOT
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		has_province_flag = rival_settlements
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
 		name = "colonial.EVTOPTA11"
-		owner = { add_mil_power = -25 }
-
+		owner = {
+			add_mil_power = -25
+		}
 	}
 	option = {
 		name = "colonial.EVTOPTB11"
-		owner = { add_years_of_income = -0.10 }
-
+		owner = {
+			add_years_of_income = -0.1
+		}
 	}
 }
 
@@ -690,12 +671,12 @@ province_event = {
 	desc = "colonial.EVTDESC12"
 	picture = NATIVES_eventPicture
 	goto = ROOT
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		any_neighbor_province = {
-			NOT = { trade_goods = fur }
+			NOT = {
+				trade_goods = fur
+			}
 			owner = {
 				OR = {
 					culture_group = eskaleut
@@ -713,12 +694,13 @@ province_event = {
 			}
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			random_neighbor_province = {
 				limit = {
-					NOT = { trade_goods = fur }
+					NOT = {
+						trade_goods = fur
+					}
 					owner = {
 						OR = {
 							culture_group = eskaleut
@@ -739,11 +721,9 @@ province_event = {
 			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
 		name = "colonial.EVTOPTA12"
 		add_base_manpower = 2
@@ -770,14 +750,17 @@ province_event = {
 	desc = "colonial.EVTDESC13"
 	picture = MERCHANTS_TALKING_eventPicture
 	goto = ROOT
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		trade_goods = fur
 		OR = {
-			NOT = { has_province_flag = received_trade_goods }
-			had_province_flag = { flag = received_trade_goods days = 3650 }
+			NOT = {
+				has_province_flag = received_trade_goods
+			}
+			had_province_flag = {
+				flag = received_trade_goods
+				days = 3650
+			}
 		}
 		NOT = {
 			any_neighbor_province = {
@@ -792,7 +775,9 @@ province_event = {
 				}
 			}
 		}
-		NOT = { has_empty_adjacent_province = yes }
+		NOT = {
+			has_empty_adjacent_province = yes
+		}
 		NOT = {
 			any_neighbor_province = {
 				owner = {
@@ -804,11 +789,9 @@ province_event = {
 			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
 		name = "colonial.EVTOPTA13"
 		change_trade_goods = naval_supplies
@@ -826,9 +809,7 @@ province_event = {
 	desc = "colonial.EVTDESC14"
 	picture = RELIGION_eventPicture
 	goto = ROOT
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		is_colony = yes
 		OR = {
@@ -845,10 +826,8 @@ province_event = {
 			has_province_modifier = jesuit_mission
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
-		
 		modifier = {
 			factor = 1.5
 			owner = {
@@ -862,7 +841,6 @@ province_event = {
 			}
 		}
 	}
-	
 	option = {
 		name = "colonial.EVTOPTA14"
 		add_province_modifier = {
@@ -879,9 +857,7 @@ province_event = {
 	desc = "colonial.EVTDESC15"
 	picture = PLAGUE_eventPicture
 	goto = ROOT
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		is_colony = yes
 		OR = {
@@ -896,11 +872,9 @@ province_event = {
 			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			owner = {
@@ -912,10 +886,11 @@ province_event = {
 			}
 		}
 	}
-	
 	option = {
 		name = "colonial.EVTOPTA15"
-		owner = { add_adm_power = -25 }
+		owner = {
+			add_adm_power = -25
+		}
 		add_province_modifier = {
 			name = organised_colony
 			duration = 1825
@@ -955,18 +930,18 @@ province_event = {
 	title = "EVTNAME6400"
 	desc = "EVTDESC6400"
 	picture = COLONIZATION_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
-		
 		has_empty_adjacent_province = yes
 		any_empty_neighbor_province = {
 			has_discovered = ROOT
 		}
-		owner = { NOT = { num_of_colonies = 3 } }
+		owner = {
+			NOT = {
+				num_of_colonies = 3
+			}
+		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			random_empty_neighbor_province = {
@@ -977,11 +952,9 @@ province_event = {
 			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
 		name = "EVTOPTA6400"
 		goto = wanderer_province
@@ -997,7 +970,9 @@ province_event = {
 		name = "EVTOPTB6400"
 		goto = ROOT
 		trigger = {
-			owner = { num_of_colonies = 1 }
+			owner = {
+				num_of_colonies = 1
+			}
 		}
 		owner = {
 			random_owned_province = {
@@ -1021,21 +996,22 @@ province_event = {
 	desc = "EVTDESC6401"
 	picture = COLONIZATION_eventPicture
 	goto = ROOT
-
 	is_triggered_only = yes
-
 	trigger = {
 		colonysize = 300
-		NOT = { colonysize = 500 }
+		NOT = {
+			colonysize = 500
+		}
 		owner = {
 			any_owned_province = {
 				is_colony = yes
 				colonysize = 500
-				NOT = { province_id = ROOT }
+				NOT = {
+					province_id = ROOT
+				}
 			}
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			owner = {
@@ -1043,18 +1019,18 @@ province_event = {
 					limit = {
 						is_colony = yes
 						colonysize = 500
-						NOT = { province_id = ROOT }
+						NOT = {
+							province_id = ROOT
+						}
 					}
 					save_event_target_as = migration_province_target
 				}
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	option = {
 		name = "EVTOPTA6401"
 		goto = migration_province_target
@@ -1071,14 +1047,17 @@ province_event = {
 	title = "colonial.EVTNAME18"
 	desc = "colonial.EVTDESC18"
 	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		current_age = age_of_absolutism
 		OR = {
-			NOT = { has_province_flag = received_trade_goods }
-			had_province_flag = { flag = received_trade_goods days = 3650 }
+			NOT = {
+				has_province_flag = received_trade_goods
+			}
+			had_province_flag = {
+				flag = received_trade_goods
+				days = 3650
+			}
 		}
 		OR = {
 			region = peru_region
@@ -1102,21 +1081,25 @@ province_event = {
 			trade_goods = salt
 			trade_goods = fur
 		}
-		NOT = { has_empty_adjacent_province = yes }
+		NOT = {
+			has_empty_adjacent_province = yes
+		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
 		name = "colonial.EVTOPTA18"
-		ai_chance = { factor = 90 }
+		ai_chance = {
+			factor = 90
+		}
 		change_trade_goods = coffee
 	}
 	option = {
 		name = "colonial.EVTOPTC18"
-		ai_chance = { factor = 10 }
+		ai_chance = {
+			factor = 10
+		}
 	}
 }
 
@@ -1126,11 +1109,12 @@ province_event = {
 	title = "colonial.19.t"
 	desc = "colonial.19.d"
 	picture = CITY_DEVELOPMENT_eventPicture
-	
 	trigger = {
 		province_has_center_of_trade_of_level = 1
 		has_port = yes
-		NOT = { province_has_center_of_trade_of_level = 2 }
+		NOT = {
+			province_has_center_of_trade_of_level = 2
+		}
 		OR = {
 			development = 15
 			has_building = marketplace
@@ -1146,21 +1130,25 @@ province_event = {
 			continent = south_america
 		}
 	}
-	
 	mean_time_to_happen = {
 		months = 300
-		
 		modifier = {
 			factor = 0.9
-			owner = { full_idea_group = trade_ideas }
+			owner = {
+				full_idea_group = trade_ideas
+			}
 		}
 		modifier = {
 			factor = 0.9
-			owner = { stability = 3 }
+			owner = {
+				stability = 3
+			}
 		}
 		modifier = {
 			factor = 0.7
-			owner = { has_institution = global_trade }
+			owner = {
+				has_institution = global_trade
+			}
 		}
 		modifier = {
 			factor = 0.8
@@ -1191,10 +1179,8 @@ province_event = {
 			current_age = age_of_revolutions
 		}
 	}
-	
 	option = {
 		name = "colonial.19.a"
-
 		add_center_of_trade_level = 1
 	}
 }

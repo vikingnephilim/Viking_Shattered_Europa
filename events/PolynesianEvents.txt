@@ -1697,17 +1697,6 @@ country_event = {
 		}
 		add_prestige = 10
 		add_stability = -1
-		random_list = {
-			10 = {
-				1989 = {
-					spawn_rebels = {
-						type = noble_rebels
-						size = 1
-						unrest = 1
-					}
-				}
-			}
-		}
 	}
 	option = {
 		name = "polynesian.39.b"
@@ -1739,6 +1728,8 @@ country_event = {
 	trigger = {
 		NOT = {
 			has_country_modifier = fijian_canoes_good_mod
+		}
+		NOT = {
 			has_country_modifier = fijian_canoes_bad_mod
 		}
 		tag = TOG

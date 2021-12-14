@@ -2981,7 +2981,7 @@ country_event = {
 	option = {
 		name = "EVTOPTF5060"		# Sacrifice a human heart to appease the comet!
 		trigger = {
-			is_pagan_viking_mod  = yes
+			is_pagan_viking_mod = yes
 		}
 		if = {
 			limit = {
@@ -3019,7 +3019,7 @@ country_event = {
 		name = "EVTOPTH5060"		# Oh comet, devil's kith and kin...
 		trigger = {
 			NOT = {
-				is_pagan_viking_mod  = yes
+				is_pagan_viking_mod = yes
 			}
 		}
 		if = {
@@ -11028,47 +11028,59 @@ country_event = {
 			bengal_region = {
 				NOT = {
 					is_core = ROOT
-					owned_by = ROOT
-				owner = {
-					has_country_modifier = dutch_india_trade_co
-					has_country_flag = trade_company
 				}
-			}
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					owner = {
+						has_country_modifier = dutch_india_trade_co
+						has_country_flag = trade_company
+					}
+				}
 				any_neighbor_province = {
 					owned_by = ROOT
 					is_core = ROOT
 				}
 			}
-		coromandel_region = {
-			NOT = {
-				is_core = ROOT
-				owned_by = ROOT
-				owner = {
-					has_country_modifier = dutch_india_trade_co
-					has_country_flag = trade_company
+			coromandel_region = {
+				NOT = {
+					is_core = ROOT
+				}
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					owner = {
+						has_country_modifier = dutch_india_trade_co
+						has_country_flag = trade_company
+					}
+				}
+				any_neighbor_province = {
+					owned_by = ROOT
+					is_core = ROOT
 				}
 			}
-			any_neighbor_province = {
-				owned_by = ROOT
-				is_core = ROOT
-			}
-		}
-		west_india_region = {
-			NOT = {
-				is_core = ROOT
-				owned_by = ROOT
-				owner = {
-					has_country_modifier = dutch_india_trade_co
-					has_country_flag = trade_company
+			west_india_region = {
+				NOT = {
+					is_core = ROOT
 				}
-			}
-			any_neighbor_province = {
-				owned_by = ROOT
-				is_core = ROOT
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					owner = {
+						has_country_modifier = dutch_india_trade_co
+						has_country_flag = trade_company
+					}
+				}
+				any_neighbor_province = {
+					owned_by = ROOT
+					is_core = ROOT
+				}
 			}
 		}
 	}
-}
 	mean_time_to_happen = {
 		days = 1
 	}
@@ -11087,7 +11099,11 @@ country_event = {
 				}
 				NOT = {
 					is_core = ROOT
+				}
+				NOT = {
 					owned_by = ROOT
+				}
+				NOT = {
 					owner = {
 						has_country_modifier = dutch_india_trade_co
 						has_country_flag = trade_company
@@ -12638,6 +12654,8 @@ country_event = {
 			num_of_cities = 4
 			NOT = {
 				alliance_with = ROOT
+			}
+			NOT = {
 				war_with = ROOT
 			}
 		}
@@ -13572,7 +13590,7 @@ country_event = {
 	trigger = {
 		gold = 1
 		NOT = {
-			is_pagan_viking_mod  = yes
+			is_pagan_viking_mod = yes
 		}
 	}
 	is_triggered_only = yes

@@ -8366,6 +8366,8 @@ country_event = {
 			limit = {
 				NOT = {
 					development = 10
+				}
+				NOT = {
 					has_province_modifier = blessing_of_the_land
 				}
 			}
@@ -8571,6 +8573,8 @@ country_event = {
 			OR = {
 				NOT = {
 					has_province_modifier = traditions_respected
+		}
+			NOT = {
 					has_province_modifier = traditions_disrespected
 				}
 			}
@@ -8587,6 +8591,8 @@ country_event = {
 				OR = {
 					NOT = {
 						has_province_modifier = traditions_respected
+					}
+						NOT = {
 						has_province_modifier = traditions_disrespected
 					}
 				}
@@ -8605,6 +8611,8 @@ country_event = {
 				OR = {
 					NOT = {
 						has_province_modifier = traditions_respected
+					}
+						NOT = {
 						has_province_modifier = traditions_disrespected
 					}
 				}

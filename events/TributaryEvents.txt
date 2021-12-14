@@ -3,11 +3,8 @@
 #
 # written by Henrik Lohmander
 ########################################
-
 namespace = tributary_events
-
 #Beneficial Effects of the Tributary Relationship:
-
 # Diffusion of knowledge
 # Subject
 country_event = {
@@ -15,22 +12,27 @@ country_event = {
 	title = tributary_events.1.t
 	desc = tributary_events.1.d
 	picture = MERITOCRACY_eventPicture
-	
 	is_triggered_only = yes
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	trigger = {
 		has_dlc = "Mandate of Heaven"
 		is_subject_of_type = tributary_state
-		NOT = { has_country_modifier = tributary_diplomatic_influence }
-		NOT = { has_country_modifier = tributary_institution_influence }
+		NOT = {
+			has_country_modifier = tributary_diplomatic_influence
+		}
+		NOT = {
+			has_country_modifier = tributary_institution_influence
+		}
 		overlord = {
-			can_be_overlord = tributary_state #Block when it doesn't make sense.
-			OR = { #More Advanced Overlord
-				institution_difference = { who = ROOT value = 1 }
+			can_be_overlord = tributary_state			#Block when it doesn't make sense.
+			OR = {
+				#More Advanced Overlord
+				institution_difference = {
+					who = ROOT
+					value = 1
+				}
 				tech_difference = 4
 			}
 			NOT = {
@@ -41,21 +43,27 @@ country_event = {
 			}
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			random_list = {
-				25 = { set_country_flag = overlord_inspired_official }
-				25 = { set_country_flag = overlord_inspired_trader }
-				25 = { set_country_flag = overlord_inspired_institutions_spread }
-				25 = { set_country_flag = overlord_inspired_dip_rep }
+				25 = {
+					set_country_flag = overlord_inspired_official
+				}
+				25 = {
+					set_country_flag = overlord_inspired_trader
+				}
+				25 = {
+					set_country_flag = overlord_inspired_institutions_spread
+				}
+				25 = {
+					set_country_flag = overlord_inspired_dip_rep
+				}
 			}
 			overlord = {
 				save_event_target_as = overlord_country
 			}
 		}
 	}
-
 	option = {
 		name = "tributary_events.1.a"
 		trigger_switch = {
@@ -111,14 +119,12 @@ country_event = {
 	title = tributary_events.2.t
 	desc = tributary_events.2.d
 	picture = TRIBUTARY_FLEET_eventPicture
-	
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Mandate of Heaven"
 		is_subject_of_type = tributary_state
 		overlord = {
-			can_be_overlord = tributary_state #Block when it doesn't make sense.
+			can_be_overlord = tributary_state			#Block when it doesn't make sense.
 			NOT = {
 				ai_attitude = {
 					who = ROOT
@@ -127,17 +133,17 @@ country_event = {
 			}
 			any_subject_country = {
 				is_subject_of_type = tributary_state
-				NOT = { tag = ROOT }
+				NOT = {
+					tag = ROOT
+				}
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
-		name = "tributary_events.2.a" #A good way to make new far-away friends.
+		name = "tributary_events.2.a"		#A good way to make new far-away friends.
 		add_prestige = 10
 		random_country = {
 			limit = {
@@ -154,7 +160,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "tributary_events.2.b" #Our Neighbors are Impressed
+		name = "tributary_events.2.b"		#Our Neighbors are Impressed
 		increase_legitimacy_small_effect = yes
 		random_neighbor_country = {
 			limit = {
@@ -175,14 +181,12 @@ country_event = {
 	title = tributary_events.3.t
 	desc = tributary_events.3.d
 	picture = IMPERIAL_SEAL_eventPicture
-	
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Mandate of Heaven"
 		is_subject_of_type = tributary_state
 		overlord = {
-			can_be_overlord = tributary_state #Block when it doesn't make sense.
+			can_be_overlord = tributary_state			#Block when it doesn't make sense.
 			NOT = {
 				ai_attitude = {
 					who = ROOT
@@ -192,26 +196,31 @@ country_event = {
 			OR = {
 				AND = {
 					government_rank = 3
-					ROOT = { NOT = { government_rank = 3 } }
+					ROOT = {
+						NOT = {
+							government_rank = 3
+						}
+					}
 				}
 				AND = {
 					government_rank = 2
-					ROOT = { NOT = { government_rank = 2 } }
+					ROOT = {
+						NOT = {
+							government_rank = 2
+						}
+					}
 				}
 			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	option = {
 		name = "tributary_events.3.a"
 		increase_legitimacy_medium_effect = yes
 		add_estate_nobles_loyalty_effect = yes
 	}
-	
 	option = {
 		name = "tributary_events.3.b"
 		add_stability_or_adm_power = yes
@@ -225,12 +234,10 @@ country_event = {
 	title = tributary_events.4.t
 	desc = tributary_events.4.d
 	picture = GIFTS_TO_EMPEROR_eventPicture
-	
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Mandate of Heaven"
-		can_be_overlord = tributary_state #Block when it doesn't make sense.
+		can_be_overlord = tributary_state		#Block when it doesn't make sense.
 		OR = {
 			AND = {
 				government_rank = 2
@@ -251,13 +258,13 @@ country_event = {
 				}
 			}
 		}
-		NOT = { has_country_modifier = influential_tributary_network }
+		NOT = {
+			has_country_modifier = influential_tributary_network
+		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
 		name = "tributary_events.4.a"
 		add_country_modifier = {
@@ -278,28 +285,31 @@ country_event = {
 	title = tributary_events.5.t
 	desc = tributary_events.5.d
 	picture = MERITOCRACY_eventPicture
-	
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Mandate of Heaven"
-		can_be_overlord = tributary_state #Block when it doesn't make sense.
+		can_be_overlord = tributary_state		#Block when it doesn't make sense.
 		any_subject_country = {
 			is_subject_of_type = tributary_state
 			OR = {
-				institution_difference = { who = ROOT value = 1 }
+				institution_difference = {
+					who = ROOT
+					value = 1
+				}
 				tech_difference = 4
 			}
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			random_subject_country = {
 				limit = {
 					is_subject_of_type = tributary_state
 					OR = {
-						institution_difference = { who = ROOT value = 1 }
+						institution_difference = {
+							who = ROOT
+							value = 1
+						}
 						tech_difference = 4
 					}
 				}
@@ -307,13 +317,11 @@ country_event = {
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
-		name = "tributary_events.5.a" #Spread and tech modifier
+		name = "tributary_events.5.a"		#Spread and tech modifier
 		event_target:tributary_advanced_underling = {
 			add_opinion = {
 				who = ROOT
@@ -326,12 +334,15 @@ country_event = {
 		}
 	}
 	option = {
-		name = "tributary_events.5.b" #Direct Spread in capital, might be more valuable depending on circumstances.
+		name = "tributary_events.5.b"		#Direct Spread in capital, might be more valuable depending on circumstances.
 		trigger = {
 			always = no
 			any_subject_country = {
 				is_subject_of_type = tributary_state
-				institution_difference = { who = ROOT value = 1 }
+				institution_difference = {
+					who = ROOT
+					value = 1
+				}
 			}
 		}
 		event_target:tributary_advanced_underling = {
@@ -342,7 +353,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "tributary_events.5.c" #Let us allow them their freedom
+		name = "tributary_events.5.c"		#Let us allow them their freedom
 		add_prestige = 5
 	}
 }
@@ -353,15 +364,13 @@ country_event = {
 	title = tributary_events.6.t
 	desc = tributary_events.6.d
 	picture = TRIBUTARY_FLEET_eventPicture
-	
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Mandate of Heaven"
 		is_subject_of_type = tributary_state
 		num_of_ports = 1
 		overlord = {
-			can_be_overlord = tributary_state #Block when it doesn't make sense.
+			can_be_overlord = tributary_state			#Block when it doesn't make sense.
 			num_of_ports = 1
 			NOT = {
 				has_reform = steppe_horde
@@ -377,21 +386,21 @@ country_event = {
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
-			random_owned_province = { #Worst case
+			random_owned_province = {
+				#Worst case
 				limit = {
 					has_port = yes
 					is_in_capital_area = yes
 				}
 				save_event_target_as = tributary_trader_port
 			}
-			random_owned_province = { #Better
+			random_owned_province = {
+				#Better
 				limit = {
 					has_port = yes
 					is_in_capital_area = yes
@@ -399,7 +408,8 @@ country_event = {
 				}
 				save_event_target_as = tributary_trader_port
 			}
-			random_owned_province = { #Best
+			random_owned_province = {
+				#Best
 				limit = {
 					has_port = yes
 					is_in_capital_area = yes
@@ -412,24 +422,25 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = "tributary_events.6.a"
 		custom_tooltip = tributary_events.6.a.tt
 		add_corruption = 1
 		event_target:tributary_trader_port = {
 			add_base_production = 1
-			add_province_modifier = { #Destroyed on Conquest
+			add_province_modifier = {
+				#Destroyed on Conquest
 				name = "tributary_overlord_trading_port"
 				duration = 10950
 			}
 		}
-		set_country_flag = tributary_harbored_criminals #Detection Risk
+		set_country_flag = tributary_harbored_criminals		#Detection Risk
 	}
 	option = {
 		name = "tributary_events.6.b"
 		event_target:tributary_trader_port = {
-			add_province_modifier = { #Destroyed on Conquest
+			add_province_modifier = {
+				#Destroyed on Conquest
 				name = "tributary_overlord_trading_port"
 				duration = 1825
 			}
@@ -443,28 +454,35 @@ country_event = {
 	title = tributary_events.7.t
 	desc = tributary_events.7.d
 	picture = GIFTS_TO_EMPEROR_eventPicture
-	
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Mandate of Heaven"
-		can_be_overlord = tributary_state #Block when it doesn't make sense.
+		can_be_overlord = tributary_state		#Block when it doesn't make sense.
 		any_subject_country = {
 			is_subject_of_type = tributary_state
 			has_country_flag = tributary_harbored_criminals
-			NOT = { had_country_flag = { flag = tributary_harbored_criminals days = 10950 } }
+			NOT = {
+				had_country_flag = {
+					flag = tributary_harbored_criminals
+					days = 10950
+				}
+			}
 			any_owned_province = {
 				has_province_modifier = tributary_overlord_trading_port
 			}
 		}
 	}
-	
 	immediate = {
 		random_subject_country = {
 			limit = {
 				is_subject_of_type = tributary_state
 				has_country_flag = tributary_harbored_criminals
-				NOT = { had_country_flag = { flag = tributary_harbored_criminals days = 10950 } }
+				NOT = {
+					had_country_flag = {
+						flag = tributary_harbored_criminals
+						days = 10950
+					}
+				}
 				any_owned_province = {
 					has_province_modifier = tributary_overlord_trading_port
 				}
@@ -473,12 +491,13 @@ country_event = {
 			clr_country_flag = tributary_harbored_criminals
 		}
 	}
-
 	option = {
-		name = "tributary_events.7.a" #Let them know they're alive
+		name = "tributary_events.7.a"		#Let them know they're alive
 		add_prestige = -5
 		event_target:tributary_criminal_country = {
-			country_event = { id = tributary_events.8 }
+			country_event = {
+				id = tributary_events.8
+			}
 			tooltip = {
 				random_owned_province = {
 					limit = {
@@ -490,7 +509,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "tributary_events.7.b" #I don't dare
+		name = "tributary_events.7.b"		#I don't dare
 		add_prestige = -10
 		reduce_mandate_effect = yes
 		reduce_legitimacy_small_effect = yes
@@ -504,24 +523,20 @@ country_event = {
 	title = tributary_events.8.t
 	desc = tributary_events.8.d
 	picture = GIFTS_TO_EMPEROR_eventPicture
-	
 	is_triggered_only = yes
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	trigger = {
 		has_dlc = "Mandate of Heaven"
 		is_subject_of_type = tributary_state
 		num_of_ports = 1
 		overlord = {
-			can_be_overlord = tributary_state #Block when it doesn't make sense.
+			can_be_overlord = tributary_state			#Block when it doesn't make sense.
 		}
 	}
-
 	option = {
-		name = "tributary_events.8.a" #Clear out the traders
+		name = "tributary_events.8.a"		#Clear out the traders
 		add_years_of_income = -0.5
 		overlord = {
 			add_opinion = {
@@ -532,7 +547,9 @@ country_event = {
 				who = ROOT
 				value = 10
 			}
-			country_event = { id = tributary_events.20 }
+			country_event = {
+				id = tributary_events.20
+			}
 		}
 		random_owned_province = {
 			limit = {
@@ -542,13 +559,15 @@ country_event = {
 		}
 	}
 	option = {
-		name = "tributary_events.8.b" #Refuse to Pay
+		name = "tributary_events.8.b"		#Refuse to Pay
 		overlord = {
 			add_opinion = {
 				who = ROOT
 				modifier = tributary_harbored_criminals
 			}
-			country_event = { id = tributary_events.21 }
+			country_event = {
+				id = tributary_events.21
+			}
 		}
 		random_owned_province = {
 			limit = {
@@ -568,12 +587,10 @@ country_event = {
 	title = tributary_events.9.t
 	desc = tributary_events.9.d
 	picture = MERITOCRACY_eventPicture
-	
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Mandate of Heaven"
-		can_be_overlord = tributary_state #Block when it doesn't make sense.
+		can_be_overlord = tributary_state		#Block when it doesn't make sense.
 		OR = {
 			AND = {
 				government_rank = 2
@@ -595,11 +612,9 @@ country_event = {
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
 		name = "tributary_events.9.a"
 		add_dip_power = -50
@@ -617,34 +632,35 @@ country_event = {
 	title = tributary_events.10.t
 	desc = tributary_events.10.d
 	picture = WOKOU_INCIDENT_eventPicture
-	
 	is_triggered_only = yes
-
 	immediate = {
 		hidden_effect = {
-		
 			#Province where this takes place:
-			random_owned_province = { #Fallback
+			random_owned_province = {
+				#Fallback
 				limit = {
 					is_capital = yes
 				}
 				save_event_target_as = ningbo_province
 			}
-			random_owned_province = { #Better
+			random_owned_province = {
+				#Better
 				limit = {
 					has_port = no
 					is_in_capital_area = yes
 				}
 				save_event_target_as = ningbo_province
 			}
-			random_owned_province = { #Good
+			random_owned_province = {
+				#Good
 				limit = {
 					has_port = yes
 					is_in_capital_area = yes
 				}
 				save_event_target_as = ningbo_province
 			}
-			random_owned_province = { #Ideal situation
+			random_owned_province = {
+				#Ideal situation
 				limit = {
 					is_capital = no
 					has_port = yes
@@ -652,20 +668,22 @@ country_event = {
 				}
 				save_event_target_as = ningbo_province
 			}
-			
 			#Country it happens to
-			
 			random_subject_country = {
 				limit = {
 					is_subject_of_type = tributary_state
 					OR = {
 						AND = {
 							government = monarchy
-							NOT = { legitimacy_or_horde_unity = 80 }
+							NOT = {
+								legitimacy_or_horde_unity = 80
+							}
 						}
 						AND = {
 							government = republic
-							NOT = { republican_tradition = 80 }
+							NOT = {
+								republican_tradition = 80
+							}
 						}
 					}
 				}
@@ -673,34 +691,37 @@ country_event = {
 			}
 		}
 	}
-	
 	trigger = {
 		has_dlc = "Mandate of Heaven"
-		can_be_overlord = tributary_state #Block when it doesn't make sense.
+		can_be_overlord = tributary_state		#Block when it doesn't make sense.
 		any_subject_country = {
 			is_subject_of_type = tributary_state
 			OR = {
 				AND = {
 					government = monarchy
-					NOT = { legitimacy_or_horde_unity = 80 }
+					NOT = {
+						legitimacy_or_horde_unity = 80
+					}
 				}
 				AND = {
 					government = republic
-					NOT = { republican_tradition = 80 }
+					NOT = {
+						republican_tradition = 80
+					}
 				}
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
 		name = "tributary_events.10.a"
 		add_adm_power = 15
 		event_target:ningbo_country = {
-			country_event = { id = tributary_events.11 }
+			country_event = {
+				id = tributary_events.11
+			}
 		}
 	}
 	option = {
@@ -709,17 +730,14 @@ country_event = {
 	}
 }
 
-
 country_event = {
 	id = tributary_events.11
 	title = tributary_events.11.t
 	desc = tributary_events.11.d
 	picture = WOKOU_INCIDENT_eventPicture
-	
 	is_triggered_only = yes
-
 	option = {
-		name = "tributary_events.11.a" #Unfortunate
+		name = "tributary_events.11.a"		#Unfortunate
 		FROM = {
 			random_active_trade_node = {
 				limit = {
@@ -742,13 +760,19 @@ country_event = {
 		add_estate_nobles_loyalty_effect = yes
 	}
 	option = {
-		name = "tributary_events.11.b" #Compensate overlord
+		name = "tributary_events.11.b"		#Compensate overlord
 		add_years_of_income = -1
 		hidden_effect = {
-			export_to_variable = { which = money_to_give value = years_of_income who = ROOT }
+			export_to_variable = {
+				which = money_to_give
+				value = years_of_income
+				who = ROOT
+			}
 		}
 		FROM = {
-			country_event = { id = tributary_events.12 }
+			country_event = {
+				id = tributary_events.12
+			}
 		}
 		add_estate_burghers_loyalty_effect = yes
 		reduce_estate_nobles_loyalty_effect = yes
@@ -761,20 +785,25 @@ country_event = {
 	title = tributary_events.12.t
 	desc = tributary_events.12.d
 	picture = WOKOU_INCIDENT_eventPicture
-	
 	is_triggered_only = yes
-	
 	option = {
 		name = "tributary_events.12.a"
 		custom_tooltip = tributary_events.12.a.tt
-		
 		FROM = {
 			while = {
 				limit = {
-					check_variable = { which = money_to_give value = 1 }
+					check_variable = {
+						which = money_to_give
+						value = 1
+					}
 				}
-				subtract_variable = { which = money_to_give value = 1 }
-				ROOT = { add_treasury = 1 }
+				subtract_variable = {
+					which = money_to_give
+					value = 1
+				}
+				ROOT = {
+					add_treasury = 1
+				}
 			}
 		}
 	}
@@ -787,56 +816,97 @@ country_event = {
 	title = tributary_events.13.t
 	desc = tributary_events.13.d
 	picture = TRIBUTARY_FLEET_eventPicture
-	
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Mandate of Heaven"
-		can_be_overlord = tributary_state #Block when it doesn't make sense.
-		NOT = { has_country_modifier = tributary_smuggling_ring_overlord }
+		can_be_overlord = tributary_state		#Block when it doesn't make sense.
+		NOT = {
+			has_country_modifier = tributary_smuggling_ring_overlord
+		}
 		any_subject_country = {
 			is_subject_of_type = tributary_state
-			NOT = { has_country_modifier = tributary_smuggling_ring_subject }
-			OR = {
-				NOT = { has_country_flag = tributary_smugglers_happened }
-				had_country_flag = { flag = tributary_smugglers_happened days = 5475 }
+			NOT = {
+				has_country_modifier = tributary_smuggling_ring_subject
 			}
-			any_owned_province = { #Sanity Check
+			OR = {
+				NOT = {
+					has_country_flag = tributary_smugglers_happened
+				}
+				had_country_flag = {
+					flag = tributary_smugglers_happened
+					days = 5475
+				}
+			}
+			any_owned_province = {
+				#Sanity Check
 				OR = {
-					development = 15 #Produces luxury goods
-					AND = { #Trade Goods other than these should be fine without necessarily having to be refined that much.
-						NOT = { trade_goods = iron } #Luxery related to Iron would high dev province
-						NOT = { trade_goods = wool } #Luxery related to Wool would high dev province
-						NOT = { trade_goods = copper } #Luxery related to Copper would high dev province
-						NOT = { trade_goods = naval_supplies } #Luxery related to Copper would high dev province
-						NOT = { trade_goods = fish } #Luxery related to Copper would high dev province
-						NOT = { trade_goods = grain } #Luxery related to Copper would high dev province
+					development = 15					#Produces luxury goods
+					AND = {
+						#Trade Goods other than these should be fine without necessarily having to be refined that much.
+						NOT = {
+							trade_goods = iron
+						}						#Luxery related to Iron would high dev province
+						NOT = {
+							trade_goods = wool
+						}						#Luxery related to Wool would high dev province
+						NOT = {
+							trade_goods = copper
+						}						#Luxery related to Copper would high dev province
+						NOT = {
+							trade_goods = naval_supplies
+						}						#Luxery related to Copper would high dev province
+						NOT = {
+							trade_goods = fish
+						}						#Luxery related to Copper would high dev province
+						NOT = {
+							trade_goods = grain
+						}						#Luxery related to Copper would high dev province
 					}
 				}
 			}
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			random_subject_country = {
 				limit = {
 					is_subject_of_type = tributary_state
-					NOT = { has_country_modifier = tributary_smuggling_ring_subject }
-					OR = {
-						NOT = { has_country_flag = tributary_smugglers_happened }
-						had_country_flag = { flag = tributary_smugglers_happened days = 5475 }
+					NOT = {
+						has_country_modifier = tributary_smuggling_ring_subject
 					}
-					any_owned_province = { #Sanity Check
+					OR = {
+						NOT = {
+							has_country_flag = tributary_smugglers_happened
+						}
+						had_country_flag = {
+							flag = tributary_smugglers_happened
+							days = 5475
+						}
+					}
+					any_owned_province = {
+						#Sanity Check
 						OR = {
-							development = 15 #Produces luxury goods
-							AND = { #Trade Goods other than these should be fine without necessarily having to be refined that much.
-								NOT = { trade_goods = iron } #Luxery related to Iron would high dev province
-								NOT = { trade_goods = wool } #Luxery related to Wool would high dev province
-								NOT = { trade_goods = copper } #Luxery related to Copper would high dev province
-								NOT = { trade_goods = naval_supplies } #Luxery related to Copper would high dev province
-								NOT = { trade_goods = fish } #Luxery related to Copper would high dev province
-								NOT = { trade_goods = grain } #Luxery related to Copper would high dev province
+							development = 15							#Produces luxury goods
+							AND = {
+								#Trade Goods other than these should be fine without necessarily having to be refined that much.
+								NOT = {
+									trade_goods = iron
+								}								#Luxery related to Iron would high dev province
+								NOT = {
+									trade_goods = wool
+								}								#Luxery related to Wool would high dev province
+								NOT = {
+									trade_goods = copper
+								}								#Luxery related to Copper would high dev province
+								NOT = {
+									trade_goods = naval_supplies
+								}								#Luxery related to Copper would high dev province
+								NOT = {
+									trade_goods = fish
+								}								#Luxery related to Copper would high dev province
+								NOT = {
+									trade_goods = grain
+								}								#Luxery related to Copper would high dev province
 							}
 						}
 					}
@@ -845,16 +915,16 @@ country_event = {
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
-		name = "tributary_events.13.a" #I want in on this
+		name = "tributary_events.13.a"		#I want in on this
 		add_corruption = 1
 		event_target:exotic_tributary = {
-			country_event = { id = tributary_events.15 }
+			country_event = {
+				id = tributary_events.15
+			}
 		}
 		reduce_estate_burghers_loyalty_effect = yes
 		add_country_modifier = {
@@ -863,7 +933,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "tributary_events.13.b" #Attempt to stop it (may happen anyway but with us cut out)
+		name = "tributary_events.13.b"		#Attempt to stop it (may happen anyway but with us cut out)
 		add_mandate_effect = yes
 		add_legitimacy = 5
 		add_devotion = 5
@@ -871,7 +941,9 @@ country_event = {
 		add_republican_tradition = 2.5
 		add_estate_burghers_loyalty_effect = yes
 		event_target:exotic_tributary = {
-			country_event = { id = tributary_events.14 }
+			country_event = {
+				id = tributary_events.14
+			}
 		}
 	}
 }
@@ -882,15 +954,14 @@ country_event = {
 	title = tributary_events.14.t
 	desc = tributary_events.14.d
 	picture = TRIBUTARY_FLEET_eventPicture
-	
 	is_triggered_only = yes
-	
 	immediate = {
-		hidden_effect = { set_country_flag = tributary_smugglers_happened }
+		hidden_effect = {
+			set_country_flag = tributary_smugglers_happened
+		}
 	}
-
 	option = {
-		name = "tributary_events.14.a" #Happy Overlord
+		name = "tributary_events.14.a"		#Happy Overlord
 		FROM = {
 			add_opinion = {
 				who = ROOT
@@ -900,7 +971,7 @@ country_event = {
 		reduce_estate_burghers_loyalty_effect = yes
 	}
 	option = {
-		name = "tributary_events.14.b" #Gives benefit to subject but not overlord
+		name = "tributary_events.14.b"		#Gives benefit to subject but not overlord
 		add_corruption = 1
 		add_country_modifier = {
 			name = "tributary_smuggling_ring_subject"
@@ -922,18 +993,17 @@ country_event = {
 	title = tributary_events.15.t
 	desc = tributary_events.15.d
 	picture = TRIBUTARY_FLEET_eventPicture
-	
 	is_triggered_only = yes
-	
 	immediate = {
-		hidden_effect = { set_ruler_flag = tributary_smugglers_happened }
+		hidden_effect = {
+			set_ruler_flag = tributary_smugglers_happened
+		}
 	}
-
 	option = {
 		name = "tributary_events.15.a"
 		add_country_modifier = {
 			name = "tributary_smuggling_ring_subject"
-			duration = 3650 #Shorter duration, many of the beneiciaries will be in the overlord country.
+			duration = 3650			#Shorter duration, many of the beneiciaries will be in the overlord country.
 		}
 	}
 }
@@ -944,28 +1014,26 @@ country_event = {
 	title = tributary_events.16.t
 	desc = tributary_events.16.d
 	picture = WOKOU_INCIDENT_eventPicture
-	
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Mandate of Heaven"
 		is_subject_of_type = tributary_state
 		overlord = {
-			can_be_overlord = tributary_state #Block when it doesn't make sense.
+			can_be_overlord = tributary_state			#Block when it doesn't make sense.
 		}
 		any_owned_province = {
-			NOT = { has_province_modifier = tributary_overlord_refugees }
+			NOT = {
+				has_province_modifier = tributary_overlord_refugees
+			}
 			OR = {
 				development = 10
 				is_capital = yes
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
 		name = "tributary_events.16.a"
 		random_owned_province = {
@@ -999,47 +1067,60 @@ country_event = {
 	title = tributary_events.17.t
 	desc = tributary_events.17.d
 	picture = GIFTS_TO_EMPEROR_eventPicture
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		has_dlc = "Mandate of Heaven"
 		religion_group = eastern
-		can_be_overlord = tributary_state #Block when it doesn't make sense.
+		can_be_overlord = tributary_state		#Block when it doesn't make sense.
 		any_subject_country = {
 			is_subject_of_type = tributary_state
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			if = {
-				limit = { num_of_ports = 1 }
+				limit = {
+					num_of_ports = 1
+				}
 				random_list = {
-					25 = { set_country_flag = eunuch_administrators }
-					25 = { set_country_flag = eunuch_general }
-					25 = { set_country_flag = eunuch_advisor }
-					25 = { set_country_flag = eunuch_admiral }
+					25 = {
+						set_country_flag = eunuch_administrators
+					}
+					25 = {
+						set_country_flag = eunuch_general
+					}
+					25 = {
+						set_country_flag = eunuch_advisor
+					}
+					25 = {
+						set_country_flag = eunuch_admiral
+					}
 				}
 				else = {
 					random_list = {
-						33 = { set_country_flag = eunuch_administrators }
-						33 = { set_country_flag = eunuch_general }
-						33 = { set_country_flag = eunuch_advisor }
+						33 = {
+							set_country_flag = eunuch_administrators
+						}
+						33 = {
+							set_country_flag = eunuch_general
+						}
+						33 = {
+							set_country_flag = eunuch_advisor
+						}
 					}
 				}
 			}
 			random_subject_country = {
-				limit = { is_subject_of_type = tributary_state }
+				limit = {
+					is_subject_of_type = tributary_state
+				}
 				save_event_target_as = tributary_country
 			}
 		}
 	}
-
 	option = {
 		name = "tributary_events.17.a"
 		add_meritocracy_effect = yes
@@ -1050,7 +1131,9 @@ country_event = {
 				clr_country_flag = eunuch_administrators
 			}
 			eunuch_general = {
-				create_general = { tradition = 40 }
+				create_general = {
+					tradition = 40
+				}
 				clr_country_flag = eunuch_general
 			}
 			eunuch_advisor = {
@@ -1079,13 +1162,11 @@ country_event = {
 	title = tributary_events.18.t
 	desc = tributary_events.18.d
 	picture = WOKOU_INCIDENT_eventPicture
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		has_dlc = "Mandate of Heaven"
 		num_of_ports = 1
-		can_be_overlord = tributary_state #Block when it doesn't make sense.
+		can_be_overlord = tributary_state		#Block when it doesn't make sense.
 		NOT = {
 			has_country_modifier = tributary_mission_piracy
 		}
@@ -1094,11 +1175,9 @@ country_event = {
 			num_of_ports = 1
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
 		name = "tributary_events.18.a"
 		add_years_of_income = -0.5
@@ -1122,12 +1201,10 @@ country_event = {
 	title = tributary_events.19.t
 	desc = tributary_events.19.d
 	picture = GIFTS_TO_EMPEROR_eventPicture
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		has_dlc = "Mandate of Heaven"
-		can_be_overlord = tributary_state #Block when it doesn't make sense.
+		can_be_overlord = tributary_state		#Block when it doesn't make sense.
 		any_subject_country = {
 			is_subject_of_type = tributary_state
 			ROOT = {
@@ -1138,11 +1215,9 @@ country_event = {
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			random_subject_country = {
@@ -1159,12 +1234,13 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
 		name = "tributary_events.19.a"
 		add_years_of_income = -0.75
 		event_target:tributary_loyal = {
-			country_event = { id = tributary_events.22 }
+			country_event = {
+				id = tributary_events.22
+			}
 			add_opinion = {
 				who = ROOT
 				modifier = tributary_paid_for_service
@@ -1194,9 +1270,7 @@ country_event = {
 	title = tributary_events.20.t
 	desc = tributary_events.20.d
 	picture = GIFTS_TO_EMPEROR_eventPicture
-	
 	is_triggered_only = yes
-	
 	option = {
 		name = "tributary_events.20.a"
 		FROM = {
@@ -1206,7 +1280,6 @@ country_event = {
 			}
 		}
 	}
-	
 }
 
 #Notification from harboring criminals
@@ -1216,9 +1289,7 @@ country_event = {
 	title = tributary_events.21.t
 	desc = tributary_events.21.d
 	picture = GIFTS_TO_EMPEROR_eventPicture
-	
 	is_triggered_only = yes
-	
 	option = {
 		name = "tributary_events.21.a"
 		FROM = {
@@ -1228,7 +1299,6 @@ country_event = {
 			}
 		}
 	}
-	
 }
 
 #Our Loyalty is Rewarded
@@ -1237,9 +1307,7 @@ country_event = {
 	title = tributary_events.22.t
 	desc = tributary_events.22.d
 	picture = GIFTS_TO_EMPEROR_eventPicture
-	
 	is_triggered_only = yes
-	
 	option = {
 		name = "tributary_events.22.a"
 		add_years_of_income = 1
@@ -1251,7 +1319,6 @@ country_event = {
 			}
 		}
 	}
-	
 }
 
 # Fortune Seekers (Because non-eastern hordes don't demand Eunuchs).
@@ -1260,47 +1327,62 @@ country_event = {
 	title = tributary_events.23.t
 	desc = tributary_events.23.d
 	picture = CHINESE_GENERAL_eventPicture
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		has_dlc = "Mandate of Heaven"
-		can_be_overlord = tributary_state #Block when it doesn't make sense.
-		NOT = { religion_group = eastern }
+		can_be_overlord = tributary_state		#Block when it doesn't make sense.
+		NOT = {
+			religion_group = eastern
+		}
 		any_subject_country = {
 			is_subject_of_type = tributary_state
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			if = {
-				limit = { num_of_ports = 1 }
+				limit = {
+					num_of_ports = 1
+				}
 				random_list = {
-					25 = { set_country_flag = fortune_seekers_officers }
-					25 = { set_country_flag = fortune_seekers_general }
-					25 = { set_country_flag = fortune_seekers_advisor }
-					25 = { set_country_flag = fortune_seekers_admiral }
+					25 = {
+						set_country_flag = fortune_seekers_officers
+					}
+					25 = {
+						set_country_flag = fortune_seekers_general
+					}
+					25 = {
+						set_country_flag = fortune_seekers_advisor
+					}
+					25 = {
+						set_country_flag = fortune_seekers_admiral
+					}
 				}
 				else = {
 					random_list = {
-						33 = { set_country_flag = fortune_seekers_officers }
-						33 = { set_country_flag = fortune_seekers_general }
-						33 = { set_country_flag = fortune_seekers_advisor }
+						33 = {
+							set_country_flag = fortune_seekers_officers
+						}
+						33 = {
+							set_country_flag = fortune_seekers_general
+						}
+						33 = {
+							set_country_flag = fortune_seekers_advisor
+						}
 					}
 				}
 			}
 			random_subject_country = {
-				limit = { is_subject_of_type = tributary_state }
+				limit = {
+					is_subject_of_type = tributary_state
+				}
 				save_event_target_as = tributary_country
 			}
 		}
 	}
-
 	option = {
 		name = "tributary_events.23.a"
 		add_meritocracy_effect = yes
@@ -1311,7 +1393,9 @@ country_event = {
 				clr_country_flag = fortune_seekers_officers
 			}
 			fortune_seekers_general = {
-				create_general = { tradition = 40 }
+				create_general = {
+					tradition = 40
+				}
 				clr_country_flag = fortune_seekers_general
 			}
 			fortune_seekers_advisor = {
@@ -1340,38 +1424,54 @@ country_event = {
 	title = tributary_events.24.t
 	desc = tributary_events.24.d
 	picture = TRIBUTARY_FLEET_eventPicture
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		has_dlc = "Mandate of Heaven"
 		is_subject_of_type = tributary_state
 		overlord = {
-			can_be_overlord = tributary_state #Block when it doesn't make sense.
+			can_be_overlord = tributary_state			#Block when it doesn't make sense.
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			if = {
-				limit = { num_of_ports = 1 }
+				limit = {
+					num_of_ports = 1
+				}
 				random_list = {
-					20 = { set_country_flag = adventurer_officer }
-					20 = { set_country_flag = adventurer_general }
-					20 = { set_country_flag = adventurer_advisor }
-					20 = { set_country_flag = adventurer_statesman }
-					20 = { set_country_flag = adventurer_admiral }
+					20 = {
+						set_country_flag = adventurer_officer
+					}
+					20 = {
+						set_country_flag = adventurer_general
+					}
+					20 = {
+						set_country_flag = adventurer_advisor
+					}
+					20 = {
+						set_country_flag = adventurer_statesman
+					}
+					20 = {
+						set_country_flag = adventurer_admiral
+					}
 				}
 				else = {
 					random_list = {
-						25 = { set_country_flag = adventurer_officer }
-						25 = { set_country_flag = adventurer_general }
-						25 = { set_country_flag = adventurer_statesman }
-						25 = { set_country_flag = adventurer_advisor }
+						25 = {
+							set_country_flag = adventurer_officer
+						}
+						25 = {
+							set_country_flag = adventurer_general
+						}
+						25 = {
+							set_country_flag = adventurer_statesman
+						}
+						25 = {
+							set_country_flag = adventurer_advisor
+						}
 					}
 				}
 			}
@@ -1380,9 +1480,8 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
-		name = "tributary_events.24.a" #
+		name = "tributary_events.24.a"		#
 		trigger_switch = {
 			on_trigger = has_country_flag
 			adventurer_officer = {
@@ -1396,7 +1495,9 @@ country_event = {
 				clr_country_flag = adventurer_officer
 			}
 			adventurer_general = {
-				create_general = { tradition = 40 }
+				create_general = {
+					tradition = 40
+				}
 				clr_country_flag = adventurer_general
 			}
 			adventurer_advisor = {
@@ -1435,30 +1536,36 @@ country_event = {
 	title = tributary_events.25.t
 	desc = tributary_events.25.d
 	picture = CHINESE_GENERAL_eventPicture
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		has_dlc = "Mandate of Heaven"
 		is_subject_of_type = tributary_state
 		OR = {
 			AND = {
 				government = monarchy
-				NOT = { has_reform = celestial_empire }
-				NOT = { legitimacy_or_horde_unity = 80 }
+				NOT = {
+					has_reform = celestial_empire
+				}
+				NOT = {
+					legitimacy_or_horde_unity = 80
+				}
 			}
 			AND = {
 				government = republic
-				NOT = { republican_tradition = 80 } 
+				NOT = {
+					republican_tradition = 80
+				}
 			}
 			AND = {
 				government = theocracy
-				NOT = { devotion = 80 } 
+				NOT = {
+					devotion = 80
+				}
 			}
 		}
 		num_of_cities = 3
 		overlord = {
-			can_be_overlord = tributary_state #Block when it doesn't make sense.
+			can_be_overlord = tributary_state			#Block when it doesn't make sense.
 			NOT = {
 				trust = {
 					who = PREV
@@ -1467,11 +1574,9 @@ country_event = {
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
@@ -1483,9 +1588,8 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
-		name = "tributary_events.25.a" #
+		name = "tributary_events.25.a"		#
 		if = {
 			limit = {
 				government = monarchy
@@ -1533,7 +1637,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "tributary_events.25.b" #
+		name = "tributary_events.25.b"		#
 		add_years_of_income = -1
 		overlord = {
 			add_trust = {
@@ -1558,26 +1662,24 @@ country_event = {
 	title = tributary_events.26.t
 	desc = tributary_events.26.d
 	picture = BORDER_TENSION_eventPicture
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		has_dlc = "Mandate of Heaven"
 		is_subject_of_type = tributary_state
 		overlord = {
-			can_be_overlord = tributary_state #Block when it doesn't make sense.
+			can_be_overlord = tributary_state			#Block when it doesn't make sense.
 			has_reform = steppe_horde
 			is_neighbor_of = ROOT
 		}
-		NOT = { has_country_modifier = horde_slave_raid }
+		NOT = {
+			has_country_modifier = horde_slave_raid
+		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	option = {
-		name = "tributary_events.26.a" #
+		name = "tributary_events.26.a"		#
 		add_prestige = -10
 		add_country_modifier = {
 			name = "horde_slave_raid"
@@ -1592,9 +1694,7 @@ country_event = {
 	title = tributary_events.27.t
 	desc = tributary_events.27.d
 	picture = CHINESE_GENERAL_eventPicture
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		has_dlc = "Mandate of Heaven"
 		is_subject_of_type = tributary_state
@@ -1605,26 +1705,35 @@ country_event = {
 			}
 			is_subject_of_type = tributary_state
 			overlord = {
-				can_be_overlord = tributary_state #Block when it doesn't make sense.
+				can_be_overlord = tributary_state				#Block when it doesn't make sense.
 				overlord_of = ROOT
 				OR = {
-					NOT = { has_country_flag = factions_meddled_in_tributary }
-					had_country_flag = { flag = factions_meddled_in_tributary days = 10950 } #30 years
+					NOT = {
+						has_country_flag = factions_meddled_in_tributary
+					}
+					had_country_flag = {
+						flag = factions_meddled_in_tributary
+						days = 10950
+					}					#30 years
 				}
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			random_list = {
-				33 = { set_country_flag = extra_men }
-				33 = { set_country_flag = extra_tradition }
-				33 = { set_country_flag = extra_money }
+				33 = {
+					set_country_flag = extra_men
+				}
+				33 = {
+					set_country_flag = extra_tradition
+				}
+				33 = {
+					set_country_flag = extra_money
+				}
 			}
 			random_country = {
 				limit = {
@@ -1641,9 +1750,8 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
-		name = "tributary_events.27.a" #
+		name = "tributary_events.27.a"		#
 		custom_tooltip = tributary_events.27.a.tt
 		trigger_switch = {
 			on_trigger = has_country_flag
@@ -1652,7 +1760,7 @@ country_event = {
 				clr_country_flag = extra_men
 			}
 			extra_tradition = {
-				add_army_tradition = 20 
+				add_army_tradition = 20
 				clr_country_flag = extra_tradition
 			}
 			extra_money = {
@@ -1661,7 +1769,9 @@ country_event = {
 			}
 		}
 		overlord = {
-			country_event = { id = tributary_events.29 }
+			country_event = {
+				id = tributary_events.29
+			}
 			tooltip = {
 				add_trust = {
 					who = ROOT
@@ -1671,11 +1781,13 @@ country_event = {
 			}
 		}
 		event_target:other_tributary_country = {
-			country_event = { id = tributary_events.28 }
+			country_event = {
+				id = tributary_events.28
+			}
 		}
 	}
 	option = {
-		name = "tributary_events.27.b" #
+		name = "tributary_events.27.b"		#
 		hidden_effect = {
 			trigger_switch = {
 				on_trigger = has_country_flag
@@ -1700,11 +1812,9 @@ country_event = {
 	title = tributary_events.28.t
 	desc = tributary_events.28.d
 	picture = CHINESE_GENERAL_eventPicture
-	
 	is_triggered_only = yes
-	
 	option = {
-		name = "tributary_events.28.a" #
+		name = "tributary_events.28.a"		#
 		overlord = {
 			reverse_add_opinion = {
 				who = ROOT
@@ -1720,17 +1830,14 @@ country_event = {
 	title = tributary_events.29.t
 	desc = tributary_events.29.d
 	picture = GIFTS_TO_EMPEROR_eventPicture
-	
 	is_triggered_only = yes
-	
 	immediate = {
 		hidden_effect = {
 			set_country_flag = factions_meddled_in_tributary
 		}
 	}
-	
 	option = {
-		name = "tributary_events.29.a" #
+		name = "tributary_events.29.a"		#
 		add_trust = {
 			who = FROM
 			value = -5
@@ -1742,57 +1849,68 @@ country_event = {
 #################################################
 #####	Additional Events by Drikus Kuiper 	#####
 #################################################
-
 # Military Support for Tributary's War against Rival
 country_event = {
 	id = tributary_events.30
 	title = tributary_events.30.t
 	desc = tributary_events.30.d
 	picture = CHINESE_GENERAL_eventPicture
-	
 	trigger = {
 		has_dlc = "Mandate of Heaven"
-		can_be_overlord = tributary_state #Block when it doesn't make sense.
+		can_be_overlord = tributary_state		#Block when it doesn't make sense.
 		any_subject_country = {
 			is_subject_of_type = tributary_state
-			NOT = { has_country_modifier = overlord_military_mission }
+			NOT = {
+				has_country_modifier = overlord_military_mission
+			}
 			any_country = {
 				is_enemy = ROOT
 				defensive_war_with = PREV
 			}
 		}
 		OR = {
-			NOT = { has_country_flag = overlord_gave_military_mission }
-			had_country_flag = { flag = overlord_gave_military_mission days = 10950 } #30 years
+			NOT = {
+				has_country_flag = overlord_gave_military_mission
+			}
+			had_country_flag = {
+				flag = overlord_gave_military_mission
+				days = 10950
+			}			#30 years
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 300
 		modifier = {
 			factor = 0.66
-			NOT = { is_at_war = yes }
+			NOT = {
+				is_at_war = yes
+			}
 		}
 		modifier = {
 			factor = 0.5
 			any_subject_country = {
 				is_subject_of_type = tributary_state
-				NOT = { has_country_modifier = overlord_military_mission }
+				NOT = {
+					has_country_modifier = overlord_military_mission
+				}
 				any_country = {
 					is_enemy = ROOT
 					defensive_war_with = PREV
 				}
-				NOT = { manpower = 1 }
+				NOT = {
+					manpower = 1
+				}
 			}
 		}
 	}
-
 	immediate = {
 		hidden_effect = {
 			random_subject_country = {
 				limit = {
 					is_subject_of_type = tributary_state
-					NOT = { has_country_modifier = overlord_military_mission }
+					NOT = {
+						has_country_modifier = overlord_military_mission
+					}
 					any_country = {
 						is_enemy = ROOT
 						defensive_war_with = PREV
@@ -1810,13 +1928,14 @@ country_event = {
 			set_country_flag = overlord_gave_military_mission
 		}
 	}
-
 	option = {
-		name = "tributary_events.30.a" # Give them all help!
+		name = "tributary_events.30.a"		# Give them all help!
 		hidden_effect = {
 			event_target:tributary_warring_rival = {
 				set_country_flag = overlord_all_the_support
-				country_event = { id = tributary_events.31 }
+				country_event = {
+					id = tributary_events.31
+				}
 			}
 		}
 		add_mil_power = -50
@@ -1851,6 +1970,8 @@ country_event = {
 				factor = 0
 				NOT = {
 					manpower = 0.2
+				}
+				NOT = {
 					years_of_income = 0.3
 				}
 			}
@@ -1861,7 +1982,9 @@ country_event = {
 			modifier = {
 				factor = 0
 				is_at_war = yes
-				NOT = { war_score = -15 }
+				NOT = {
+					war_score = -15
+				}
 			}
 			modifier = {
 				factor = 0.5
@@ -1869,7 +1992,9 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				NOT = { manpower = 0.4 }
+				NOT = {
+					manpower = 0.4
+				}
 				years_of_income = 0.3
 			}
 			modifier = {
@@ -1895,11 +2020,13 @@ country_event = {
 		}
 	}
 	option = {
-		name = "tributary_events.30.b" # Give them our troops!
+		name = "tributary_events.30.b"		# Give them our troops!
 		hidden_effect = {
 			event_target:tributary_warring_rival = {
 				set_country_flag = overlord_manpower_support
-				country_event = { id = tributary_events.31 }
+				country_event = {
+					id = tributary_events.31
+				}
 			}
 		}
 		add_mil_power = -50
@@ -1930,13 +2057,17 @@ country_event = {
 			factor = 25
 			modifier = {
 				factor = 0
-				NOT = { manpower = 0.2 }
+				NOT = {
+					manpower = 0.2
+				}
 			}
 			modifier = {
 				factor = 0
 				AND = {
 					is_at_war = yes
-					NOT = { war_score = -15 }
+					NOT = {
+						war_score = -15
+					}
 				}
 			}
 			modifier = {
@@ -1945,30 +2076,38 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				NOT = { manpower = 0.4 }
+				NOT = {
+					manpower = 0.4
+				}
 			}
 			modifier = {
 				factor = 2
 				AND = {
 					manpower = 0.6
-					NOT = { years_of_income = 0.3 }
+					NOT = {
+						years_of_income = 0.3
+					}
 				}
 			}
 			modifier = {
 				factor = 2
 				AND = {
 					manpower = 0.8
-					NOT = { years_of_income = 0.3 }
+					NOT = {
+						years_of_income = 0.3
+					}
 				}
 			}
 		}
 	}
 	option = {
-		name = "tributary_events.30.c" # Give them funding!
+		name = "tributary_events.30.c"		# Give them funding!
 		hidden_effect = {
 			event_target:tributary_warring_rival = {
 				set_country_flag = overlord_funding_support
-				country_event = { id = tributary_events.31 }
+				country_event = {
+					id = tributary_events.31
+				}
 			}
 		}
 		add_mil_power = -50
@@ -1999,7 +2138,9 @@ country_event = {
 			factor = 25
 			modifier = {
 				factor = 0
-				NOT = { years_of_income = 0.3 }
+				NOT = {
+					years_of_income = 0.3
+				}
 			}
 			modifier = {
 				factor = 0
@@ -2009,7 +2150,9 @@ country_event = {
 				factor = 0
 				AND = {
 					is_at_war = yes
-					NOT = { war_score = -15 }
+					NOT = {
+						war_score = -15
+					}
 				}
 			}
 			modifier = {
@@ -2018,7 +2161,9 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				NOT = { years_of_income = 0.5 }
+				NOT = {
+					years_of_income = 0.5
+				}
 			}
 			modifier = {
 				factor = 2
@@ -2027,11 +2172,13 @@ country_event = {
 		}
 	}
 	option = {
-		name = "tributary_events.30.e" # Give them only a mission.
+		name = "tributary_events.30.e"		# Give them only a mission.
 		hidden_effect = {
 			event_target:tributary_warring_rival = {
 				set_country_flag = overlord_military_mission
-				country_event = { id = tributary_events.31 }
+				country_event = {
+					id = tributary_events.31
+				}
 			}
 		}
 		add_mil_power = -50
@@ -2061,7 +2208,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "tributary_events.30.f" # Give them nothing
+		name = "tributary_events.30.f"		# Give them nothing
 		add_prestige = -5
 		ai_chance = {
 			factor = 5
@@ -2098,9 +2245,7 @@ country_event = {
 		desc = "tributary_events.31.d.d"
 	}
 	picture = CHINESE_GENERAL_eventPicture
-	
 	is_triggered_only = yes
-
 	option = {
 		name = "tributary_events.31.a"
 		trigger_switch = {
@@ -2179,9 +2324,7 @@ country_event = {
 	title = tributary_events.32.t
 	desc = tributary_events.32.d
 	picture = IMPERIAL_SEAL_eventPicture
-	
 	is_triggered_only = yes
-
 	trigger = {
 		has_country_modifier = overlord_military_mission
 		overlord = {
@@ -2192,7 +2335,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = "tributary_events.32.a"
 		remove_country_modifier = overlord_military_mission

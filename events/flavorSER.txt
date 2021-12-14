@@ -1,17 +1,13 @@
-
 namespace = flavor_ser
 normal_or_historical_nations = yes
-
 # Serbia wants Belgrade
 country_event = {
 	id = flavor_ser.1
 	title = "flavor_ser.EVTNAME1"
 	desc = "flavor_ser.EVTDESC1"
 	picture = DIPLOMACY_eventPicture
-
 	fire_only_once = yes
 	is_triggered_only = yes
-
 	option = {
 		name = flavor_ser.EVTOPTA1
 		trigger = {
@@ -20,7 +16,9 @@ country_event = {
 				is_core = ROOT
 			}
 		}
-		ai_chance = { factor = 1 }
+		ai_chance = {
+			factor = 1
+		}
 		tooltip = {
 			4239 = {
 				cede_province = FROM
@@ -30,16 +28,22 @@ country_event = {
 		}
 		hidden_effect = {
 			FROM = {
-				country_event = { id = flavor_ser.2 }
+				country_event = {
+					id = flavor_ser.2
+				}
 			}
 		}
 	}
 	option = {
 		name = flavor_ser.EVTOPTB1
-		ai_chance = { factor = 0 }
+		ai_chance = {
+			factor = 0
+		}
 		add_prestige = 5
 		FROM = {
-			country_event = { id = flavor_ser.3 }
+			country_event = {
+				id = flavor_ser.3
+			}
 		}
 	}
 }
@@ -50,10 +54,8 @@ country_event = {
 	title = "flavor_ser.EVTNAME2"
 	desc = "flavor_ser.EVTDESC2"
 	picture = CONQUEST_eventPicture
-
 	fire_only_once = yes
 	is_triggered_only = yes
-
 	option = {
 		name = flavor_ser.EVTOPTA2
 		4239 = {
@@ -70,10 +72,8 @@ country_event = {
 	title = "flavor_ser.EVTNAME3"
 	desc = "flavor_ser.EVTDESC3"
 	picture = ADVISOR_eventPicture
-
 	fire_only_once = yes
 	is_triggered_only = yes
-
 	option = {
 		name = flavor_ser.EVTOPTA3
 		add_prestige = -5
@@ -82,6 +82,8 @@ country_event = {
 				limit = {
 					NOT = {
 						is_permanent_claim = ROOT
+					}
+					NOT = {
 						is_core = ROOT
 					}
 				}
@@ -97,19 +99,14 @@ country_event = {
 	title = "flavor_ser.EVTNAME4"
 	desc = "flavor_ser.EVTDESC4"
 	picture = COURT_eventPicture
-	
 	is_triggered_only = yes
-	
 	fire_only_once = yes
-	
 	trigger = {
 		has_dlc = "Emperor"
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
 		name = "flavor_ser.EVTOPTA4"
 		trigger = {

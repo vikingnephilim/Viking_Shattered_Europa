@@ -181,7 +181,11 @@ country_event = {
 		has_institution = printing_press
 		NOT = {
 			has_country_modifier = ignore_marprelate
+		}
+		NOT = {
 			has_country_modifier = respond_marprelate
+		}
+		NOT = {
 			has_country_modifier = imprison_marprelate
 		}
 	}
@@ -370,7 +374,11 @@ country_event = {
 			religion_group = christian
 			NOT = {
 				has_province_modifier = "religious_zeal_at_conv"
+			}
+			NOT = {
 				has_province_modifier = "prayers_to_saints_allowed"
+			}
+			NOT = {
 				has_province_modifier = "prayers_to_saints_banned"
 			}
 			continent = europe
@@ -393,7 +401,11 @@ country_event = {
 					religion_group = christian
 					NOT = {
 						has_province_modifier = "religious_zeal_at_conv"
+					}
+					NOT = {
 						has_province_modifier = "prayers_to_saints_allowed"
+					}
+					NOT = {
 						has_province_modifier = "prayers_to_saints_banned"
 					}
 					continent = europe
@@ -450,6 +462,8 @@ country_event = {
 		religion = anglican
 		NOT = {
 			has_country_modifier = "feast_days_abolished"
+		}
+		NOT = {
 			has_country_modifier = "anglican_feast_days"
 		}
 	}
@@ -570,6 +584,8 @@ country_event = {
 				estate = estate_church
 				modifier = EST_VAL_VESTMENTS_BANNED
 			}
+		}
+		NOT = {
 			has_country_modifier = fancy_vestments
 		}
 	}

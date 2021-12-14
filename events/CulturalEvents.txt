@@ -1,16 +1,13 @@
 ###################
 # Cultural Events #
 ###################
-
 namespace = cultural_event
-
 # Support Commedia Dellarte
 country_event = {
 	id = cultural_event.1
 	title = cultural_event.1.t
 	desc = cultural_event.1.d
 	picture = THEATRE_eventPicture
-
 	trigger = {
 		capital_scope = {
 			continent = europe
@@ -23,15 +20,12 @@ country_event = {
 		years_of_income = 0.1
 		adm_power = 10
 	}
-	
 	mean_time_to_happen = {
 		months = 180
 	}
-	
 	immediate = {
 		set_country_flag = commedia_dellarte
 	}
-		
 	option = {
 		name = cultural_event.1.a
 		add_country_modifier = {
@@ -53,32 +47,28 @@ country_event = {
 	title = cultural_event.2.t
 	desc = cultural_event.2.d
 	picture = REFORM_eventPicture
-
 	trigger = {
 		innovativeness_ideas = 7
 		has_institution = enlightenment
 		current_age = age_of_revolutions
 		NOT = {
-			has_country_flag = enlightenment_movement #Liberte Egalite Fraternite
+			has_country_flag = enlightenment_movement			#Liberte Egalite Fraternite
 		}
 		adm_power = 10
 		adm = 3
 		years_of_income = 1
 		prestige = 40
 	}
-	
 	mean_time_to_happen = {
 		months = 180
 	}
-	
 	immediate = {
 		set_country_flag = enlightenment_movement
 	}
-	
 	option = {
 		name = cultural_event.2.a
 		add_country_modifier = {
-			name = "enlightenment_movement" #Liberte Egalite Fraternite
+			name = "enlightenment_movement"			#Liberte Egalite Fraternite
 			duration = 7300
 		}
 		add_adm_power = -10
@@ -96,19 +86,22 @@ country_event = {
 	title = cultural_event.3.t
 	desc = cultural_event.3.d
 	picture = BIG_BOOK_eventPicture
-
 	trigger = {
 		has_institution = renaissance
 		religion_group = christian
 		current_age = age_of_discovery
 		NOT = {
 			exists = BYZ
+		}
+		NOT = {
 			has_country_flag = received_byzantines
 		}
 		151 = {
 			culture = turkish
 			is_muslim_viking_mod = yes
-			NOT = { owned_by = ROOT }
+			NOT = {
+				owned_by = ROOT
+			}
 		}
 		dip_power = 50
 		adm_power = 30
@@ -118,15 +111,12 @@ country_event = {
 			continent = europe
 		}
 	}
-	
 	mean_time_to_happen = {
 		months = 60
 	}
-	
 	immediate = {
 		set_country_flag = received_byzantines
 	}
-	
 	option = {
 		name = cultural_event.3.a
 		add_country_modifier = {
@@ -149,7 +139,6 @@ country_event = {
 	title = cultural_event.4.t
 	desc = cultural_event.4.d
 	picture = IMPORTANT_STATUE_eventPicture
-
 	trigger = {
 		has_institution = renaissance
 		current_age = age_of_discovery
@@ -164,15 +153,12 @@ country_event = {
 		dip_power = 10
 		years_of_income = 0.4
 	}
-	
 	mean_time_to_happen = {
 		months = 180
 	}
-	
 	immediate = {
 		set_country_flag = florentine_school
 	}
-	
 	option = {
 		name = cultural_event.4.a
 		add_country_modifier = {
@@ -195,11 +181,12 @@ country_event = {
 	title = cultural_event.5.t
 	desc = cultural_event.5.d
 	picture = TOURNAMENT_eventPicture
-
 	trigger = {
 		religion_group = christian
 		has_institution = feudalism
-		capital_scope = { continent = europe }
+		capital_scope = {
+			continent = europe
+		}
 		government = monarchy
 		current_age = age_of_discovery
 		NOT = {
@@ -209,15 +196,12 @@ country_event = {
 		adm_power = 30
 		years_of_income = 0.2
 	}
-	
 	mean_time_to_happen = {
 		months = 180
 	}
-	
 	immediate = {
 		set_country_flag = last_jousting_tournament_held
 	}
-	
 	option = {
 		name = cultural_event.5.a
 		add_country_modifier = {
@@ -227,7 +211,9 @@ country_event = {
 		add_adm_power = -30
 		add_years_of_income = -0.2
 		if = {
-			limit = { has_dlc = "Mandate of Heaven" }
+			limit = {
+				has_dlc = "Mandate of Heaven"
+			}
 			add_splendor = -30
 		}
 	}
@@ -243,7 +229,6 @@ country_event = {
 	title = cultural_event.6.t
 	desc = cultural_event.6.d
 	picture = IMPORTANT_STATUE_eventPicture
-
 	trigger = {
 		religion = catholic
 		NOT = {
@@ -253,15 +238,12 @@ country_event = {
 		years_of_income = 0.2
 		adm_power = 10
 	}
-	
 	mean_time_to_happen = {
 		months = 2400
 	}
-	
 	immediate = {
 		set_country_flag = guild_of_st_luke
 	}
-	
 	option = {
 		name = cultural_event.4.a
 		add_country_modifier = {
@@ -283,12 +265,13 @@ country_event = {
 	title = cultural_event.7.t
 	desc = cultural_event.7.d
 	picture = IMPORTANT_STATUE_eventPicture
-
 	trigger = {
 		owns = 97
 		97 = {
 			religion = reformed
-			controller = { tag = root }
+			controller = {
+				tag = root
+			}
 		}
 		NOT = {
 			has_country_flag = dutch_masters
@@ -298,15 +281,12 @@ country_event = {
 		years_of_income = 0.6
 		adm_power = 10
 	}
-	
 	mean_time_to_happen = {
 		months = 160
 	}
-	
 	immediate = {
 		set_country_flag = dutch_masters
 	}
-	
 	option = {
 		name = cultural_event.4.a
 		add_country_modifier = {
@@ -328,7 +308,6 @@ country_event = {
 	title = cultural_event.8.t
 	desc = cultural_event.8.d
 	picture = INVENTION_eventPicture
-
 	trigger = {
 		is_muslim_viking_mod = yes
 		government = monarchy
@@ -338,15 +317,12 @@ country_event = {
 		adm_power = 30
 		artist = 2
 	}
-	
 	mean_time_to_happen = {
 		months = 180
 	}
-	
 	immediate = {
 		set_country_flag = diwani_script
 	}
-	
 	option = {
 		name = cultural_event.8.a
 		add_country_modifier = {
@@ -367,7 +343,6 @@ country_event = {
 	title = cultural_event.9.t
 	desc = cultural_event.9.d
 	picture = TRADEGOODS_eventPicture
-
 	trigger = {
 		religion = shinto
 		NOT = {
@@ -375,7 +350,9 @@ country_event = {
 		}
 		NOT = {
 			any_country = {
-				capital_scope = { has_province_modifier = controls_tea_trade }
+				capital_scope = {
+					has_province_modifier = controls_tea_trade
+				}
 			}
 		}
 		trading_part = {
@@ -383,15 +360,15 @@ country_event = {
 			value = 0.1
 		}
 	}
-	
 	mean_time_to_happen = {
 		months = 180
 	}
-	
 	option = {
 		name = cultural_event.8.a
 		every_country = {
-			limit = { has_country_modifier = way_of_tea }
+			limit = {
+				has_country_modifier = way_of_tea
+			}
 			remove_country_modifier = way_of_tea
 		}
 		add_country_modifier = {
@@ -402,7 +379,7 @@ country_event = {
 			add_province_modifier = {
 				name = "controls_tea_trade"
 				duration = 365
-			}			
+			}
 		}
 	}
 	option = {
@@ -417,13 +394,16 @@ country_event = {
 	title = cultural_event.10.t
 	desc = cultural_event.10.d
 	picture = ADVISOR_eventPicture
-
 	trigger = {
 		is_institution_enabled = renaissance
-		capital_scope = { continent = europe }
+		capital_scope = {
+			continent = europe
+		}
 		current_age = age_of_discovery
 		NOT = {
 			num_of_cities = 6
+		}
+		NOT = {
 			has_country_flag = blooming_renaissance
 		}
 		advisor = philosopher
@@ -431,15 +411,12 @@ country_event = {
 		years_of_income = 0.3
 		adm = 3
 	}
-	
 	mean_time_to_happen = {
 		months = 180
 	}
-	
 	immediate = {
 		set_country_flag = blooming_renaissance
 	}
-	
 	option = {
 		name = cultural_event.4.a
 		capital_scope = {
@@ -467,11 +444,14 @@ country_event = {
 	title = cultural_event.11.t
 	desc = cultural_event.11.d
 	picture = CULTURE_eventPicture
-
 	trigger = {
 		current_age = age_of_absolutism
-		NOT = { has_country_flag = south_german_organ_tradition }
-		capital_scope = { continent = europe }
+		NOT = {
+			has_country_flag = south_german_organ_tradition
+		}
+		capital_scope = {
+			continent = europe
+		}
 		culture_group = germanic
 		any_owned_province = {
 			has_building = temple
@@ -479,15 +459,12 @@ country_event = {
 		adm_power = 30
 		years_of_income = 0.5
 	}
-	
 	mean_time_to_happen = {
 		months = 180
 	}
-	
 	immediate = {
 		set_country_flag = south_german_organ_tradition
 	}
-	
 	option = {
 		name = cultural_event.4.a
 		add_country_modifier = {
@@ -509,25 +486,23 @@ country_event = {
 	title = cultural_event.12.t
 	desc = cultural_event.12.d
 	picture = CULTURE_eventPicture
-
 	trigger = {
 		current_age = age_of_absolutism
 		NOT = {
 			has_country_flag = the_sound_of_music
 		}
-		capital_scope = { continent = europe }
+		capital_scope = {
+			continent = europe
+		}
 		adm_power = 10
 		years_of_income = 0.1
 	}
-	
 	mean_time_to_happen = {
 		months = 1800
 	}
-	
 	immediate = {
 		set_country_flag = the_sound_of_music
 	}
-	
 	option = {
 		name = cultural_event.4.a
 		add_country_modifier = {
@@ -549,7 +524,6 @@ country_event = {
 	title = cultural_event.13.t
 	desc = cultural_event.13.d
 	picture = ECONOMY_eventPicture
-
 	trigger = {
 		government = monarchy
 		has_regency = no
@@ -560,15 +534,12 @@ country_event = {
 		adm_power = 10
 		years_of_income = 0.1
 	}
-	
 	mean_time_to_happen = {
 		months = 180
 	}
-	
 	immediate = {
 		set_country_flag = epic_to_monarch
 	}
-	
 	option = {
 		name = cultural_event.13.a
 		add_country_modifier = {

@@ -1722,13 +1722,13 @@ country_event = {
 }
 
 #######################################
-# Human Rights
+# Weights and measures
 #######################################
 country_event = {
 	id = ei_institution_events.5
 	title = ei_institution_events.5.t
 	desc = ei_institution_events.5.d
-	picture = EI_HUMAN_RIGHTS_eventPicture
+	picture = weights_and_measures_eventPicture
 	is_triggered_only = yes
 	goto = institution_origin
 	trigger = {
@@ -1761,11 +1761,11 @@ country_event = {
 		#custom_tooltip = ei_institution_events.5.a.tt
 		FROM = {
 			add_permanent_province_modifier = {
-				name = "birthplace_of_ei_human_rights"
+				name = "birthplace_of_weights_and_measures"
 				duration = -1
 			}
 			add_institution_embracement = {
-				which = "ei_human_rights"
+				which = "weights_and_measures"
 				value = 100
 			}
 		}
@@ -1804,7 +1804,7 @@ country_event = {
 	id = ei_institution_events.500
 	title = ei_institution_events.5.t
 	desc = ei_institution_events.5.d
-	picture = EI_HUMAN_RIGHTS_eventPicture
+	picture = weights_and_measures_eventPicture
 	goto = institution_origin
 	is_triggered_only = yes
 	trigger = {
@@ -5189,7 +5189,7 @@ province_event = {
 	}
 }
 
-#Human Rights
+#Weights and measures
 province_event = {
 	id = ei_institution_events.51
 	title = ei_institution_events.51.t
@@ -5210,16 +5210,16 @@ province_event = {
 	}
 	goto = root
 	trigger = {
-		is_institution_enabled = ei_human_rights
+		is_institution_enabled = weights_and_measures
 		owner = {
 			government = republic
 			NOT = {
-				has_institution = ei_human_rights
+				has_institution = weights_and_measures
 			}
 			has_institution = enlightenment
 		}
 		NOT = {
-			ei_human_rights = 100
+			weights_and_measures = 100
 		}
 		NOT = {
 			has_province_modifier = refused_declaration
@@ -5265,7 +5265,7 @@ province_event = {
 			add_years_of_income = -0.3
 		}
 		add_institution_embracement = {
-			which = "ei_human_rights"
+			which = "weights_and_measures"
 			value = 100
 		}
 		every_province_in_state = {
@@ -5274,7 +5274,7 @@ province_event = {
 					is_capital = no
 				}
 				add_institution_embracement = {
-					which = "ei_human_rights"
+					which = "weights_and_measures"
 					value = 25
 				}
 			}

@@ -1,22 +1,20 @@
 namespace = flavor_lxa
 normal_or_historical_nations = yes
-
 # Civil War Breakup Events by Daniel Tolman
-
 # Champassak
 country_event = {
 	id = flavor_lxa.1
 	title = flavor_lxa.1.t
 	desc = flavor_lxa.1.d
 	picture = NUSANTARA_WAR_eventPicture
-	
 	is_triggered_only = yes
 	major = yes
-	
 	trigger = {
 		tag = LXA
 		has_dlc = "Leviathan"
-		NOT = { exists = CHK }
+		NOT = {
+			exists = CHK
+		}
 		4839 = {
 			owned_by = ROOT
 			controlled_by = REB
@@ -24,7 +22,6 @@ country_event = {
 		}
 		has_spawned_rebels = pretender_rebels
 	}
-	
 	immediate = {
 		hidden_effect = {
 			if = {
@@ -56,7 +53,6 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
 		name = flavor_lxa.1.a
 		add_stability = -1
@@ -89,14 +85,14 @@ country_event = {
 	title = flavor_lxa.2.t
 	desc = flavor_lxa.2.d
 	picture = NUSANTARA_WAR_eventPicture
-	
 	is_triggered_only = yes
 	major = yes
-	
 	trigger = {
 		tag = LXA
 		has_dlc = "Leviathan"
-		NOT = { exists = VIE }
+		NOT = {
+			exists = VIE
+		}
 		614 = {
 			owned_by = ROOT
 			controlled_by = REB
@@ -104,7 +100,6 @@ country_event = {
 		}
 		has_spawned_rebels = pretender_rebels
 	}
-	
 	immediate = {
 		hidden_effect = {
 			if = {
@@ -136,7 +131,6 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
 		name = flavor_lxa.1.a
 		add_stability = -1
@@ -169,16 +163,16 @@ country_event = {
 	title = flavor_lxa.3.t
 	desc = flavor_lxa.3.d
 	picture = NUSANTARA_WAR_eventPicture
-	
 	is_triggered_only = yes
 	major = yes
-	
 	trigger = {
 		tag = LXA
 		has_dlc = "Leviathan"
 		OR = {
 			AND = {
-				NOT = { exists = LUA }
+				NOT = {
+					exists = LUA
+				}
 				615 = {
 					owned_by = ROOT
 					controlled_by = REB
@@ -188,11 +182,12 @@ country_event = {
 			}
 			NOT = {
 				owns_core_province = 4839
+			}
+			NOT = {
 				owns_core_province = 614
 			}
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			if = {
@@ -221,7 +216,6 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
 		name = flavor_lxa.1.a
 		add_stability = -1

@@ -240,6 +240,8 @@ country_event = {
 											owned_by = event_target:colonial_country_1
 											NOT = {
 												province_id = prev
+											}
+												NOT = {
 												province_id = event_target:pretty_colonial_province
 											}
 										}
@@ -256,6 +258,8 @@ country_event = {
 											owned_by = event_target:colonial_country_1
 											NOT = {
 												province_id = prev
+											}
+												NOT = {
 												province_id = event_target:pretty_colonial_province
 											}
 										}

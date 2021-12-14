@@ -1,14 +1,14 @@
 namespace = mercantilism_events
-
 # Importing Food to Combat Famine
 country_event = {
 	id = mercantilism_events.1
 	title = "mercantilism_events.1.t"
 	desc = "mercantilism_events.1.d"
 	picture = FAMINE_eventPicture
-
 	trigger = {
-		NOT = { mercantilism = 100 }
+		NOT = {
+			mercantilism = 100
+		}
 		OR = {
 			has_country_modifier = famine
 			has_country_modifier = severe_famine
@@ -17,20 +17,19 @@ country_event = {
 				has_province_modifier = harvest_fails
 			}
 		}
-		NOT = { has_country_modifier = refused_food_import }
+		NOT = {
+			has_country_modifier = refused_food_import
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 300
 	}
-
 	# Accept imports to alleviate famine
 	option = {
 		name = "mercantilism_events.1.a"
 		add_years_of_income = -0.1
 		add_mercantilism = -1
 	}
-
 	# Refuse to import food
 	option = {
 		name = "mercantilism_events.1.b"
@@ -48,9 +47,10 @@ country_event = {
 	title = "mercantilism_events.2.t"
 	desc = "mercantilism_events.2.d"
 	picture = TRADE_GOODS_PLANTATION_GOODS_IN_WAREHOUSE_eventPicture
-
 	trigger = {
-		NOT = { mercantilism = 100 }
+		NOT = {
+			mercantilism = 100
+		}
 		NOT = {
 			capital_scope = {
 				OR = {
@@ -59,13 +59,23 @@ country_event = {
 					continent = new_world
 				}
 			}
+		}
+		NOT = {
 			has_country_modifier = buying_american
-			any_subject_country = { is_colonial_nation = yes }
+		}
+		NOT = {
+			any_subject_country = {
+				is_colonial_nation = yes
+			}
 		}
 		any_neighbor_country = {
-			NOT = { war_with = ROOT }
+			NOT = {
+				war_with = ROOT
+			}
 			any_subject_country = {
-				NOT = { war_with = ROOT }
+				NOT = {
+					war_with = ROOT
+				}
 				is_colonial_nation = yes
 				capital_scope = {
 					OR = {
@@ -77,15 +87,15 @@ country_event = {
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 1000
 	}
-
 	immediate = {
 		random_neighbor_country = {
 			limit = {
-				NOT = { war_with = ROOT }
+				NOT = {
+					war_with = ROOT
+				}
 				any_subject_country = {
 					is_colonial_nation = yes
 					capital_scope = {
@@ -100,7 +110,9 @@ country_event = {
 			set_country_flag = buy_american_overlord
 			random_subject_country = {
 				limit = {
-					NOT = { war_with = ROOT }
+					NOT = {
+						war_with = ROOT
+					}
 					is_colonial_nation = yes
 					capital_scope = {
 						OR = {
@@ -114,7 +126,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = "mercantilism_events.2.a"
 		add_mercantilism = -2
@@ -123,7 +134,9 @@ country_event = {
 			duration = 1825
 		}
 		random_country = {
-			limit = { has_country_flag = buy_american_overlord }
+			limit = {
+				has_country_flag = buy_american_overlord
+			}
 			clr_country_flag = buy_american_overlord
 			add_opinion = {
 				who = ROOT
@@ -131,7 +144,9 @@ country_event = {
 			}
 		}
 		random_country = {
-			limit = { has_country_flag = buy_american_colony }
+			limit = {
+				has_country_flag = buy_american_colony
+			}
 			clr_country_flag = buy_american_colony
 			add_opinion = {
 				who = ROOT
@@ -139,12 +154,13 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = "mercantilism_events.2.b"
 		add_mercantilism = 2
 		random_country = {
-			limit = { has_country_flag = buy_american_overlord }
+			limit = {
+				has_country_flag = buy_american_overlord
+			}
 			clr_country_flag = buy_american_overlord
 			add_opinion = {
 				who = ROOT
@@ -152,7 +168,9 @@ country_event = {
 			}
 		}
 		random_country = {
-			limit = { has_country_flag = buy_american_colony }
+			limit = {
+				has_country_flag = buy_american_colony
+			}
 			clr_country_flag = buy_american_colony
 			add_opinion = {
 				who = ROOT
@@ -168,16 +186,19 @@ country_event = {
 	title = "mercantilism_events.3.t"
 	desc = "mercantilism_events.3.d"
 	picture = MILITARY_CAMP_eventPicture
-
 	trigger = {
-		NOT = { mercantilism = 100 }
+		NOT = {
+			mercantilism = 100
+		}
 		NOT = {
 			any_owned_province = {
 				trade_goods = iron
 			}
 		}
 		any_neighbor_country = {
-			NOT = { war_with = ROOT }
+			NOT = {
+				war_with = ROOT
+			}
 			any_owned_province = {
 				trade_goods = iron
 			}
@@ -189,17 +210,17 @@ country_event = {
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 720
 	}
-
 	option = {
 		name = "mercantilism_events.3.a"
 		add_mil_power = 60
 		random_neighbor_country = {
 			limit = {
-				NOT = { war_with = ROOT }
+				NOT = {
+					war_with = ROOT
+				}
 				any_owned_province = {
 					trade_goods = iron
 				}
@@ -216,7 +237,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = "mercantilism_events.3.b"
 		add_mercantilism = 2
@@ -229,9 +249,10 @@ country_event = {
 	title = "mercantilism_events.4.t"
 	desc = "mercantilism_events.4.d"
 	picture = MILITARY_CAMP_eventPicture
-
 	trigger = {
-		NOT = { mercantilism = 100 }
+		NOT = {
+			mercantilism = 100
+		}
 		any_owned_province = {
 			has_port = yes
 		}
@@ -241,7 +262,9 @@ country_event = {
 			}
 		}
 		any_neighbor_country = {
-			NOT = { war_with = ROOT }
+			NOT = {
+				war_with = ROOT
+			}
 			any_owned_province = {
 				trade_goods = naval_supplies
 			}
@@ -253,17 +276,17 @@ country_event = {
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 720
 	}
-
 	option = {
 		name = "mercantilism_events.4.a"
 		add_dip_power = 60
 		random_neighbor_country = {
 			limit = {
-				NOT = { war_with = ROOT }
+				NOT = {
+					war_with = ROOT
+				}
 				any_owned_province = {
 					trade_goods = naval_supplies
 				}
@@ -280,7 +303,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = "mercantilism_events.4.b"
 		add_mercantilism = 2
@@ -293,17 +315,16 @@ country_event = {
 	title = "mercantilism_events.5.t"
 	desc = "mercantilism_events.5.d"
 	picture = DEBATE_REPUBLICAN_eventPicture
-
 	trigger = {
-		NOT = { mercantilism = 100 }
+		NOT = {
+			mercantilism = 100
+		}
 		advisor = trader
 		is_lesser_in_union = no
 	}
-
 	mean_time_to_happen = {
 		months = 800
 	}
-
 	option = {
 		name = "mercantilism_events.5.a"
 		add_mercantilism = 2
@@ -312,7 +333,6 @@ country_event = {
 		add_horde_unity = -10
 		add_devotion = -10
 	}
-
 	option = {
 		name = "mercantilism_events.5.b"
 		reduce_meritocracy_effect = yes
@@ -326,42 +346,39 @@ country_event = {
 	title = "mercantilism_events.6.t"
 	desc = "mercantilism_events.6.d"
 	picture = MERCHANTS_TALKING_eventPicture
-
 	trigger = {
-		NOT = { mercantilism = 100 }
+		NOT = {
+			mercantilism = 100
+		}
 		advisor = trader
 		advisor = master_of_mint
-		NOT = { has_country_flag = radical_mercantilist_reforms }
+		NOT = {
+			has_country_flag = radical_mercantilist_reforms
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 120
 	}
-	
 	immediate = {
 		set_country_flag = radical_mercantilist_reforms
 	}
-
 	option = {
 		name = "mercantilism_events.6.a"
 		add_mercantilism = 5
 		add_stability = -1
 	}
-
 	option = {
 		name = "mercantilism_events.6.b"
 		reduce_meritocracy_effect = yes
 		remove_advisor = master_of_mint
 		add_adm_power = 200
 	}
-
 	option = {
 		name = "mercantilism_events.6.c"
 		reduce_meritocracy_effect = yes
 		remove_advisor = trader
 		add_dip_power = 200
 	}
-
 	option = {
 		name = "mercantilism_events.6.e"
 		reduce_meritocracy_effect = yes
@@ -378,25 +395,28 @@ country_event = {
 	title = "mercantilism_events.7.t"
 	desc = "mercantilism_events.7.d"
 	picture = COLONIZATION_eventPicture
-
 	trigger = {
-		NOT = { mercantilism = 100 }
+		NOT = {
+			mercantilism = 100
+		}
 		any_subject_country = {
 			is_colonial_nation = yes
 			any_neighbor_country = {
 				is_colonial_nation = yes
-				NOT = { war_with = PREV }
+				NOT = {
+					war_with = PREV
+				}
 				colonial_parent = {
-					NOT = { tag = ROOT }
+					NOT = {
+						tag = ROOT
+					}
 				}
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 600
 	}
-
 	option = {
 		name = "mercantilism_events.7.a"
 		random_subject_country = {
@@ -404,9 +424,13 @@ country_event = {
 				is_colonial_nation = yes
 				any_neighbor_country = {
 					is_colonial_nation = yes
-					NOT = { war_with = PREV }
+					NOT = {
+						war_with = PREV
+					}
 					colonial_parent = {
-						NOT = { tag = ROOT }
+						NOT = {
+							tag = ROOT
+						}
 					}
 				}
 			}
@@ -414,7 +438,6 @@ country_event = {
 		}
 		add_mercantilism = 1
 	}
-
 	option = {
 		name = "mercantilism_events.7.b"
 		add_mercantilism = -1
@@ -427,23 +450,26 @@ country_event = {
 	title = "mercantilism_events.8.t"
 	desc = "mercantilism_events.8.d"
 	picture = FEAST_eventPicture
-
 	trigger = {
-		NOT = { mercantilism = 100 }
-		NOT = { has_country_modifier = importing_cocoa }
+		NOT = {
+			mercantilism = 100
+		}
+		NOT = {
+			has_country_modifier = importing_cocoa
+		}
 		any_neighbor_country = {
 			trading_bonus = {
 				trade_goods = cocoa
 				value = yes
 			}
-			NOT = { war_with = ROOT }
+			NOT = {
+				war_with = ROOT
+			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 600
 	}
-
 	option = {
 		name = "mercantilism_events.8.a"
 		add_country_modifier = {
@@ -451,13 +477,11 @@ country_event = {
 			duration = 1825
 		}
 	}
-
 	option = {
 		name = "mercantilism_events.8.b"
 		add_mercantilism = 1
 		add_piety = 0.05
 	}
-
 	option = {
 		name = "mercantilism_events.8.c"
 		trigger = {
@@ -478,23 +502,26 @@ country_event = {
 	title = "mercantilism_events.9.t"
 	desc = "mercantilism_events.9.d"
 	picture = FEAST_eventPicture
-
 	trigger = {
-		NOT = { mercantilism = 100 }
-		NOT = { has_country_modifier = importing_coffee }
+		NOT = {
+			mercantilism = 100
+		}
+		NOT = {
+			has_country_modifier = importing_coffee
+		}
 		any_neighbor_country = {
 			trading_bonus = {
 				trade_goods = coffee
 				value = yes
 			}
-			NOT = { war_with = ROOT }
+			NOT = {
+				war_with = ROOT
+			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 600
 	}
-
 	option = {
 		name = "mercantilism_events.9.a"
 		add_country_modifier = {
@@ -502,7 +529,6 @@ country_event = {
 			duration = 1825
 		}
 	}
-
 	option = {
 		name = "mercantilism_events.9.b"
 		trigger = {
@@ -515,7 +541,6 @@ country_event = {
 		}
 		add_mercantilism = 1
 	}
-
 	option = {
 		name = "mercantilism_events.9.c"
 		trigger = {
@@ -536,26 +561,33 @@ country_event = {
 	title = "mercantilism_events.10.t"
 	desc = "mercantilism_events.10.d"
 	picture = FEAST_eventPicture
-
 	trigger = {
-		NOT = { mercantilism = 100 }
-		NOT = { has_country_modifier = importing_tea }
+		NOT = {
+			mercantilism = 100
+		}
+		NOT = {
+			has_country_modifier = importing_tea
+		}
 		any_neighbor_country = {
 			trading_bonus = {
 				trade_goods = tea
 				value = yes
 			}
-			NOT = { war_with = ROOT }
+			NOT = {
+				war_with = ROOT
+			}
 		}
 		#Flavour doesn't fit these two at all.
-		NOT = { government = tribal }
-		NOT = { government = native }
+		NOT = {
+			government = tribal
+		}
+		NOT = {
+			government = native
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 600
 	}
-
 	option = {
 		name = "mercantilism_events.10.a"
 		add_country_modifier = {
@@ -563,12 +595,10 @@ country_event = {
 			duration = 1825
 		}
 	}
-
 	option = {
 		name = "mercantilism_events.10.b"
 		add_mercantilism = 1
 	}
-
 	option = {
 		name = "mercantilism_events.10.c"
 		trigger = {

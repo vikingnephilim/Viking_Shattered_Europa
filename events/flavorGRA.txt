@@ -12,7 +12,11 @@ country_event = {
 	trigger = {
 		NOT = {
 			exists = GRA
+		}
+			NOT = {
 			is_year = 1550
+		}
+			NOT = {
 			has_country_flag = received_granada_refugees
 		}
 		223 = {
@@ -131,6 +135,8 @@ country_event = {
 			limit = {
 				NOT = {
 					owned_by = ROOT
+				}
+					NOT = {
 					is_core = ROOT
 				}
 			}
@@ -140,6 +146,8 @@ country_event = {
 			limit = {
 				NOT = {
 					owned_by = ROOT
+				}
+					NOT = {
 					is_core = ROOT
 				}
 			}
@@ -149,6 +157,8 @@ country_event = {
 			limit = {
 				NOT = {
 					owned_by = ROOT
+				}
+					NOT = {
 					is_core = ROOT
 				}
 			}

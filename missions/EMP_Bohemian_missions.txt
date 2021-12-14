@@ -7,13 +7,16 @@ emp_bohemia_1 = {
 	}
 	potential = {
 		tag = BOH
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		has_dlc = "Emperor"
 	}
 	has_country_shield = yes
 	emp_boh_hussite_start = {
 		icon = hussite_regency
-		required_missions = {  }
+		required_missions = {
+		}
 		trigger = {
 			OR = {
 				custom_trigger_tooltip = {
@@ -35,7 +38,8 @@ emp_bohemia_1 = {
 				limit = {
 					religion = hussite
 				}
-				add_country_modifier = { # misionary maintenance cost
+				add_country_modifier = {
+					# misionary maintenance cost
 					name = "hussite_conversions"
 					duration = 7300
 				}
@@ -54,9 +58,10 @@ emp_bohemia_1 = {
 	}
 	emp_boh_hussite_one = {
 		icon = mission_luther_theses
-		required_missions = { emp_boh_hussite_start }
+		required_missions = {
+			emp_boh_hussite_start
+		}
 		completed_by = 1457.1.1
-		
 		provinces_to_highlight = {
 			OR = {
 				area = bohemia_area
@@ -64,16 +69,19 @@ emp_bohemia_1 = {
 				area = erzgebirge_area
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
 				AND = {
 					BOH = {
 						religion = hussite
 					}
-					NOT = { religion = hussite }
+					NOT = {
+						religion = hussite
+					}
 				}
 			}
 		}
-		
 		trigger = {
 			if = {
 				limit = {
@@ -112,7 +120,6 @@ emp_bohemia_1 = {
 				}
 			}
 		}
-		
 		effect = {
 			if = {
 				limit = {
@@ -143,7 +150,9 @@ emp_bohemia_1 = {
 	}
 	emp_boh_defenestrate_the_heretics = {
 		icon = defenestrate_the_heretics
-		required_missions = { emp_boh_hussite_one }
+		required_missions = {
+			emp_boh_hussite_one
+		}
 		trigger = {
 			is_subject = no
 			if = {
@@ -194,12 +203,17 @@ emp_bohemia_1 = {
 	}
 	emp_boh_bohemian_crystal = {
 		icon = bohemian_crystal
-		required_missions = { }
+		required_missions = {
+		}
 		provinces_to_highlight = {
 			province_id = 1771
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { development = 20 }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					development = 20
+				}
 				has_production_building_trigger = no
 			}
 		}
@@ -218,21 +232,29 @@ emp_bohemia_1 = {
 						has_global_flag = bohemian_glass_flag
 					}
 				}
-				country_event = { id = prices.43 }
+				country_event = {
+					id = prices.43
+				}
 			}
 			add_prestige = 20
 		}
 	}
 	emp_boh_development_one = {
 		icon = mission_have_manufactories
-		required_missions = { emp_boh_bohemian_crystal }
+		required_missions = {
+			emp_boh_bohemian_crystal
+		}
 		completed_by = 1720.1.1
 		provinces_to_highlight = {
 			owned_by = ROOT
 			is_capital = yes
 			OR = {
-				NOT = { has_building = cathedral }
-				NOT = { has_building = university }
+				NOT = {
+					has_building = cathedral
+				}
+				NOT = {
+					has_building = university
+				}
 			}
 		}
 		trigger = {
@@ -241,7 +263,6 @@ emp_bohemia_1 = {
 				has_building = university
 			}
 		}
-		
 		effect = {
 			if = {
 				limit = {
@@ -278,16 +299,22 @@ emp_bohemia_1 = {
 	}
 	emp_boh_bergordnung_reforms = {
 		icon = reform_bergordnung
-		required_missions = { emp_boh_development_one }
+		required_missions = {
+			emp_boh_development_one
+		}
 		provinces_to_highlight = {
 			OR = {
 				province_id = 4237
 				province_id = 263
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
 				development = 20
-				NOT = { enlightenment = 100 }
+				NOT = {
+					enlightenment = 100
+				}
 				has_manufactory_trigger = no
 			}
 		}
@@ -323,27 +350,29 @@ emp_bohemia_2 = {
 	}
 	potential = {
 		tag = BOH
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		has_dlc = "Emperor"
 	}
 	has_country_shield = yes
 	emp_boh_integrate_silesia = {
 		icon = mission_have_two_subjects
-		required_missions = { }
+		required_missions = {
+		}
 		completed_by = 1457.1.1
-		
 		provinces_to_highlight = {
 			area = silesia_area
-			NOT = { owned_by = ROOT }
+			NOT = {
+				owned_by = ROOT
+			}
 		}
-		
 		trigger = {
 			silesia_area = {
 				type = all
 				owned_by = ROOT
 			}
 		}
-		
 		effect = {
 			if = {
 				limit = {
@@ -357,8 +386,12 @@ emp_bohemia_2 = {
 			}
 			slovakia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -366,10 +399,14 @@ emp_bohemia_2 = {
 	}
 	emp_boh_great_moravia = {
 		icon = restore_great_moravia
-		required_missions = { emp_boh_integrate_silesia }
+		required_missions = {
+			emp_boh_integrate_silesia
+		}
 		provinces_to_highlight = {
 			area = slovakia_area
-			NOT = { owned_by = ROOT }
+			NOT = {
+				owned_by = ROOT
+			}
 		}
 		trigger = {
 			slovakia_area = {
@@ -396,15 +433,23 @@ emp_bohemia_2 = {
 			else = {
 				transdanubia_area = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 				alfold_area = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
@@ -413,13 +458,17 @@ emp_bohemia_2 = {
 	}
 	emp_boh_hungarian_union = {
 		icon = hungarian_union
-		required_missions = { emp_boh_great_moravia }
+		required_missions = {
+			emp_boh_great_moravia
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = transdanubia_area
 				area = alfold_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		position = 4
 		trigger = {
@@ -440,8 +489,12 @@ emp_bohemia_2 = {
 			}
 			austria_proper_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -449,7 +502,9 @@ emp_bohemia_2 = {
 	}
 	emp_boh_protect_against_turks = {
 		icon = protect_against_the_turks
-		required_missions = { emp_boh_hungarian_union }
+		required_missions = {
+			emp_boh_hungarian_union
+		}
 		provinces_to_highlight = {
 			province_has_current_tech_fort_trigger = no
 			region = carpathia_region
@@ -478,15 +533,23 @@ emp_bohemia_2 = {
 		effect = {
 			bulgaria_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			silistria_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -494,16 +557,24 @@ emp_bohemia_2 = {
 			hidden_effect = {
 				carpathia_region = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT	}
-						NOT = { is_core = ROOT	}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
 						owned_by = TUR
 					}
 					add_claim = ROOT
 				}
 				balkan_region = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT	}
-						NOT = { is_core = ROOT	}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
 						owned_by = TUR
 					}
 					add_claim = ROOT
@@ -513,7 +584,9 @@ emp_bohemia_2 = {
 	}
 	emp_boh_revenge_for_nicopolis = {
 		icon = revenge_for_nicopolis
-		required_missions = { emp_boh_protect_against_turks }
+		required_missions = {
+			emp_boh_protect_against_turks
+		}
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -526,7 +599,9 @@ emp_bohemia_2 = {
 						area = silistria_area
 						province_id = 150
 					}
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
 				}
 			}
 		}
@@ -568,13 +643,17 @@ emp_bohemia_3 = {
 	}
 	potential = {
 		tag = BOH
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		has_dlc = "Emperor"
 	}
-	has_country_shield = yes	
+	has_country_shield = yes
 	emp_boh_polish_diplomacy = {
 		icon = polish_diplomacy
-		required_missions = { emp_boh_integrate_silesia }
+		required_missions = {
+			emp_boh_integrate_silesia
+		}
 		position = 2
 		provinces_to_highlight = {
 			OR = {
@@ -587,12 +666,16 @@ emp_bohemia_3 = {
 			if = {
 				limit = {
 					exists = POL
-					NOT = { exists = PLC }
+					NOT = {
+						exists = PLC
+					}
 					government = monarchy
 				}
 				has_regency = no
 				OR = {
-					POL = { dynasty = ROOT }
+					POL = {
+						dynasty = ROOT
+					}
 					is_rival = POL
 				}
 			}
@@ -603,7 +686,9 @@ emp_bohemia_3 = {
 				}
 				has_regency = no
 				OR = {
-					PLC = { dynasty = ROOT }
+					PLC = {
+						dynasty = ROOT
+					}
 					is_rival = PLC
 				}
 			}
@@ -629,7 +714,7 @@ emp_bohemia_3 = {
 					target = PLC
 				}
 			}
-			else_if ={
+			else_if = {
 				limit = {
 					exists = POL
 					valid_for_personal_unions_trigger = yes
@@ -646,22 +731,34 @@ emp_bohemia_3 = {
 			else = {
 				malopolska_area = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 				wielkopolska_area = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 				central_poland_area = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT	}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
@@ -670,17 +767,19 @@ emp_bohemia_3 = {
 	}
 	emp_boh_prem_conquest = {
 		icon = mission_noble_council
-		required_missions = { emp_boh_polish_diplomacy }
-		
+		required_missions = {
+			emp_boh_polish_diplomacy
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = wielkopolska_area
 				area = malopolska_area
 				area = central_poland_area
 			}
-			NOT = { owned_by = ROOT }
+			NOT = {
+				owned_by = ROOT
+			}
 		}
-		
 		trigger = {
 			wielkopolska_area = {
 				type = all
@@ -696,7 +795,6 @@ emp_bohemia_3 = {
 			}
 			is_subject = no
 		}
-		
 		effect = {
 			add_mil_power = 50
 			2963 = {
@@ -705,19 +803,19 @@ emp_bohemia_3 = {
 			2997 = {
 				add_permanent_claim = ROOT
 			}
-			2995 = { 
+			2995 = {
 				add_permanent_claim = ROOT
 			}
-			43 = { 
-				add_permanent_claim = ROOT 
+			43 = {
+				add_permanent_claim = ROOT
 			}
 		}
 	}
-	
 	emp_boh_prem_conquest_two = {
 		icon = mission_teutonic_knights
-		required_missions = { emp_boh_prem_conquest }
-		
+		required_missions = {
+			emp_boh_prem_conquest
+		}
 		provinces_to_highlight = {
 			OR = {
 				province_id = 2963
@@ -725,9 +823,10 @@ emp_bohemia_3 = {
 				province_id = 2995
 				province_id = 43
 			}
-			NOT = { owned_by = ROOT }
+			NOT = {
+				owned_by = ROOT
+			}
 		}
-		
 		trigger = {
 			2963 = {
 				country_or_non_sovereign_subject_holds = ROOT
@@ -742,7 +841,6 @@ emp_bohemia_3 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 		}
-		
 		effect = {
 			add_adm_power = 100
 			add_country_modifier = {
@@ -753,7 +851,11 @@ emp_bohemia_3 = {
 	}
 	emp_boh_bohemian_commonwealth = {
 		icon = bohemian_commonwealth
-		required_missions = { emp_boh_prem_conquest_two emp_boh_hungarian_union emp_boh_electorate_of_saxony  }
+		required_missions = {
+			emp_boh_prem_conquest_two
+			emp_boh_hungarian_union
+			emp_boh_electorate_of_saxony
+		}
 		position = 5
 		provinces_to_highlight = {
 			OR = {
@@ -764,7 +866,9 @@ emp_bohemia_3 = {
 				province_id = 134
 				province_id = 153
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			266 = {
@@ -804,32 +908,40 @@ emp_bohemia_4 = {
 	}
 	potential = {
 		tag = BOH
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		has_dlc = "Emperor"
 	}
 	has_country_shield = yes
 	emp_boh_humiliate_austria = {
 		icon = boh_humiliate_austria
-		required_missions = {  }
+		required_missions = {
+		}
 		provinces_to_highlight = {
 			owned_by = HAB
 		}
 		trigger = {
 			is_subject = no
 			OR = {
-				HAB = { humiliated_by = ROOT }
+				HAB = {
+					humiliated_by = ROOT
+				}
 				AND = {
 					is_great_power = yes
-					HAB = { is_great_power = no }
+					HAB = {
+						is_great_power = no
+					}
 				}
-				NOT = { exists = HAB }
+				NOT = {
+					exists = HAB
+				}
 			}
 		}
 		effect = {
 			if = {
 				limit = {
 					exists = BRA
-					
 				}
 				add_casus_belli = {
 					target = BRA
@@ -839,8 +951,12 @@ emp_bohemia_4 = {
 			else = {
 				mittelmark_area = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = {  is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
@@ -849,16 +965,22 @@ emp_bohemia_4 = {
 	}
 	emp_boh_electorate_of_brandenburg = {
 		icon = electorate_of_brandenburg
-		required_missions = { emp_boh_humiliate_austria }
+		required_missions = {
+			emp_boh_humiliate_austria
+		}
 		provinces_to_highlight = {
 			OR = {
 				owner = {
 					tag = BRA
-					NOT = { is_subject_of = ROOT }
+					NOT = {
+						is_subject_of = ROOT
+					}
 				}
 				AND = {
 					area = mittelmark_area
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
 				}
 			}
 		}
@@ -867,7 +989,9 @@ emp_bohemia_4 = {
 				limit = {
 					exists = BRA
 				}
-				BRA = { is_subject_of = ROOT }
+				BRA = {
+					is_subject_of = ROOT
+				}
 			}
 			else = {
 				50 = {
@@ -881,15 +1005,17 @@ emp_bohemia_4 = {
 			is_subject = no
 		}
 		effect = {
-			if = {	
+			if = {
 				limit = {
 					exists = BRA
-					BRA = { 
+					BRA = {
 						is_elector = yes
 						is_revolutionary = no
 					}
 				}
-				country_event = { id = emp_mission_events.8 }
+				country_event = {
+					id = emp_mission_events.8
+				}
 			}
 			else = {
 				add_prestige = 25
@@ -897,7 +1023,6 @@ emp_bohemia_4 = {
 			if = {
 				limit = {
 					exists = SAX
-					
 				}
 				add_casus_belli = {
 					target = SAX
@@ -907,8 +1032,12 @@ emp_bohemia_4 = {
 			else = {
 				south_saxony_area = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = {  is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
@@ -917,17 +1046,23 @@ emp_bohemia_4 = {
 	}
 	emp_boh_electorate_of_saxony = {
 		icon = electorate_of_saxony
-		required_missions = { emp_boh_electorate_of_brandenburg }
+		required_missions = {
+			emp_boh_electorate_of_brandenburg
+		}
 		position = 4
 		provinces_to_highlight = {
 			OR = {
 				owner = {
 					tag = SAX
-					NOT = { is_subject_of = ROOT }
+					NOT = {
+						is_subject_of = ROOT
+					}
 				}
 				AND = {
 					area = south_saxony_area
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = {
+						country_or_non_sovereign_subject_holds = ROOT
+					}
 				}
 			}
 		}
@@ -936,7 +1071,9 @@ emp_bohemia_4 = {
 				limit = {
 					exists = SAX
 				}
-				SAX = { is_subject_of = ROOT }
+				SAX = {
+					is_subject_of = ROOT
+				}
 			}
 			else = {
 				61 = {
@@ -950,7 +1087,7 @@ emp_bohemia_4 = {
 			is_subject = no
 		}
 		effect = {
-			if = {	
+			if = {
 				limit = {
 					exists = SAX
 					SAX = {
@@ -958,7 +1095,9 @@ emp_bohemia_4 = {
 						is_revolutionary = no
 					}
 				}
-				country_event = { id = emp_mission_events.9 }
+				country_event = {
+					id = emp_mission_events.9
+				}
 			}
 			else = {
 				add_prestige = 25
@@ -967,7 +1106,10 @@ emp_bohemia_4 = {
 	}
 	emp_boh_reformatio_sigismundi = {
 		icon = reformatio_sigismundi
-		required_missions = { emp_boh_electorate_of_saxony gen_hre_emperor }
+		required_missions = {
+			emp_boh_electorate_of_saxony
+			gen_hre_emperor
+		}
 		trigger = {
 			if = {
 				limit = {
@@ -997,7 +1139,9 @@ emp_bohemia_4 = {
 	}
 	emp_boh_peace_in_europe = {
 		icon = peace_in_europe
-		required_missions = { emp_boh_reformatio_sigismundi }
+		required_missions = {
+			emp_boh_reformatio_sigismundi
+		}
 		trigger = {
 			is_at_war = no
 			if = {

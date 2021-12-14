@@ -25,6 +25,8 @@ country_event = {
 					who = ROOT
 					modifier = opinion_sent_help
 				}
+			}
+			NOT = {
 				reverse_has_opinion_modifier = {
 					who = ROOT
 					modifier = opinion_refused_send_help
@@ -169,7 +171,11 @@ country_event = {
 			dynasty = ROOT
 			NOT = {
 				adm = 3
+			}
+			NOT = {
 				dip = 3
+			}
+			NOT = {
 				mil = 3
 			}
 		}
@@ -201,7 +207,11 @@ country_event = {
 				dynasty = ROOT
 				NOT = {
 					adm = 3
+				}
+				NOT = {
 					dip = 3
+				}
+				NOT = {
 					mil = 3
 				}
 			}
@@ -387,6 +397,8 @@ country_event = {
 			is_at_war = no
 			NOT = {
 				culture_group = ROOT
+			}
+			NOT = {
 				religion = ROOT
 			}
 			NOT = {
@@ -394,6 +406,8 @@ country_event = {
 					who = ROOT
 					modifier = opinion_reprimanded
 				}
+			}
+			NOT = {
 				has_opinion_modifier = {
 					who = ROOT
 					modifier = opinion_resourceful
@@ -412,6 +426,8 @@ country_event = {
 					is_at_war = no
 					NOT = {
 						culture_group = ROOT
+					}
+					NOT = {
 						religion = ROOT
 					}
 				}
@@ -511,6 +527,8 @@ country_event = {
 			overlord_of = ROOT
 			NOT = {
 				culture_group = ROOT
+			}
+			NOT = {
 				religion = ROOT
 			}
 		}
@@ -529,6 +547,8 @@ country_event = {
 				overlord_of = ROOT
 				NOT = {
 					culture_group = ROOT
+				}
+				NOT = {
 					religion = ROOT
 				}
 			}
@@ -591,14 +611,20 @@ country_event = {
 					who = ROOT
 					modifier = opinion_sent_general
 				}
+			}
+			NOT = {
 				reverse_has_opinion_modifier = {
 					who = ROOT
 					modifier = opinion_sent_advisor
 				}
+			}
+			NOT = {
 				reverse_has_opinion_modifier = {
 					who = ROOT
 					modifier = opinion_sent_gold_manpower
 				}
+			}
+			NOT = {
 				reverse_has_opinion_modifier = {
 					who = ROOT
 					modifier = opinion_sent_nothing
@@ -810,6 +836,8 @@ country_event = {
 					who = ROOT
 					modifier = opinion_smuggling_hindered
 				}
+			}
+			NOT = {
 				reverse_has_opinion_modifier = {
 					who = ROOT
 					modifier = opinion_small_smuggling_ok
@@ -851,6 +879,8 @@ country_event = {
 					who = ROOT
 					modifier = opinion_smuggling_hindered
 				}
+			}
+			NOT = {
 				has_opinion_modifier = {
 					who = ROOT
 					modifier = opinion_small_smuggling_ok
@@ -1368,6 +1398,8 @@ country_event = {
 					who = ROOT
 					modifier = opinion_cruel_officers
 				}
+			}
+			NOT = {
 				has_opinion_modifier = {
 					who = ROOT
 					modifier = opinion_excellent_officers
@@ -1408,6 +1440,8 @@ country_event = {
 					who = ROOT
 					modifier = opinion_cruel_officers
 				}
+			}
+			NOT = {
 				has_opinion_modifier = {
 					who = ROOT
 					modifier = opinion_excellent_officers
@@ -1450,10 +1484,14 @@ country_event = {
 					who = ROOT
 					modifier = opinion_export_good
 				}
+			}
+			NOT = {
 				has_opinion_modifier = {
 					who = ROOT
 					modifier = opinion_export_bad
 				}
+			}
+			NOT = {
 				has_country_modifier = si_enchanced_production
 			}
 		}
@@ -1475,6 +1513,8 @@ country_event = {
 						who = ROOT
 						modifier = opinion_export_good
 					}
+				}
+				NOT = {
 					has_opinion_modifier = {
 						who = ROOT
 						modifier = opinion_export_bad
@@ -1509,10 +1549,14 @@ country_event = {
 					who = ROOT
 					modifier = opinion_export_good
 				}
+			}
+			NOT = {
 				has_opinion_modifier = {
 					who = ROOT
 					modifier = opinion_export_bad
 				}
+			}
+			NOT = {
 				has_country_modifier = si_enchanced_production
 			}
 		}
@@ -1530,6 +1574,8 @@ country_event = {
 						who = ROOT
 						modifier = opinion_export_good
 					}
+				}
+				NOT = {
 					has_opinion_modifier = {
 						who = ROOT
 						modifier = opinion_export_bad

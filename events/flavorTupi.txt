@@ -3,11 +3,8 @@
 #
 # written by Henrik Lohmander
 ########################################
-
 namespace = flavor_tupi
 normal_or_historical_nations = yes
-
-	
 #Banderiante Raiders (Start of the Tamoyo Confederation)
 country_event = {
 	id = flavor_tupi.1
@@ -15,7 +12,6 @@ country_event = {
 	desc = flavor_tupi.1.d
 	picture = EXPLORERS_eventPicture
 	fire_only_once = yes
-
 	trigger = {
 		primary_culture = tupinamba
 		government = native
@@ -35,31 +31,46 @@ country_event = {
 					}
 				}
 			}
-			NOT = { has_opinion = { who = ROOT value = 75 } }
+			NOT = {
+				has_opinion = {
+					who = ROOT
+					value = 75
+				}
+			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 48
 	}
-	
-	
 	option = {
-		name = flavor_tupi.1.a #Let us summon the Tupi tribes and unite against the invaders.
-		ai_chance = { factor = 95 }
+		name = flavor_tupi.1.a		#Let us summon the Tupi tribes and unite against the invaders.
+		ai_chance = {
+			factor = 95
+		}
 		set_country_flag = tamoyo_confederation_leader
 		every_known_country = {
-			limit = { primary_culture = tupinamba }
-			country_event = { id = flavor_tupi.2 } #The Tamoyo Confederation
+			limit = {
+				primary_culture = tupinamba
+			}
+			country_event = {
+				id = flavor_tupi.2
+			}			#The Tamoyo Confederation
 		}
 		random_neighbor_country = {
 			limit = {
 				any_owned_province = {
 					continent = south_america
 				}
-				NOT = { has_opinion = { who = ROOT value = 75 } }
+				NOT = {
+					has_opinion = {
+						who = ROOT
+						value = 75
+					}
+				}
 			}
-			country_event = { id = flavor_tupi.5 } #The Tamoyo Confederation
+			country_event = {
+				id = flavor_tupi.5
+			}			#The Tamoyo Confederation
 			add_opinion = {
 				who = ROOT
 				modifier = targeted_by_tamoyos
@@ -69,9 +80,11 @@ country_event = {
 		custom_tooltip = flavor_tupi_confederation
 	}
 	option = {
-		name = flavor_tupi.1.b #We must have faith in the foreigners policing themselves.
-		ai_chance = { factor = 5 }
-		add_stability_or_adm_power = yes #Everything is fine, nothing for you to worry about.
+		name = flavor_tupi.1.b		#We must have faith in the foreigners policing themselves.
+		ai_chance = {
+			factor = 5
+		}
+		add_stability_or_adm_power = yes		#Everything is fine, nothing for you to worry about.
 	}
 }
 
@@ -81,15 +94,14 @@ country_event = {
 	title = flavor_tupi.2.t
 	desc = flavor_tupi.2.d
 	picture = EXPLORERS_eventPicture
-
 	is_triggered_only = yes
-	
 	trigger = {
-		NOT = { war_with = FROM }
+		NOT = {
+			war_with = FROM
+		}
 	}
-	
 	option = {
-		name = flavor_tupi.2.a #Join the Confederation
+		name = flavor_tupi.2.a		#Join the Confederation
 		ai_chance = {
 			factor = 95
 			modifier = {
@@ -97,16 +109,23 @@ country_event = {
 				any_known_country = {
 					has_country_flag = tamoyo_enemy
 					ROOT = {
-						has_opinion = { who = PREV value = 75 }
+						has_opinion = {
+							who = PREV
+							value = 75
+						}
 					}
 				}
 			}
 		}
 		set_country_flag = tamoyo_confederation_member
-		add_mil_power = -50 #Contributions to the common cause
+		add_mil_power = -50		#Contributions to the common cause
 		random_known_country = {
-			limit = { has_country_flag = tamoyo_confederation_leader }
-			country_event = { id = flavor_tupi.3 }
+			limit = {
+				has_country_flag = tamoyo_confederation_leader
+			}
+			country_event = {
+				id = flavor_tupi.3
+			}
 			create_alliance = PREV
 			add_opinion = {
 				who = PREV
@@ -114,7 +133,9 @@ country_event = {
 			}
 		}
 		random_known_country = {
-			limit = { has_country_flag = tamoyo_enemy }
+			limit = {
+				has_country_flag = tamoyo_enemy
+			}
 			add_opinion = {
 				who = ROOT
 				modifier = targeted_by_tamoyos
@@ -122,12 +143,18 @@ country_event = {
 		}
 	}
 	option = {
-		name = flavor_tupi.2.b #We will fend for ourselves.
-		ai_chance = { factor = 5 }
+		name = flavor_tupi.2.b		#We will fend for ourselves.
+		ai_chance = {
+			factor = 5
+		}
 		add_stability_or_adm_power = yes
 		random_known_country = {
-			limit = { has_country_flag = tamoyo_confederation_leader }
-			country_event = { id = flavor_tupi.4 }
+			limit = {
+				has_country_flag = tamoyo_confederation_leader
+			}
+			country_event = {
+				id = flavor_tupi.4
+			}
 		}
 	}
 }
@@ -138,11 +165,9 @@ country_event = {
 	title = flavor_tupi.3.t
 	desc = flavor_tupi.3.d
 	picture = EXPLORERS_eventPicture
-
 	is_triggered_only = yes
-	
 	option = {
-		name = flavor_tupi.3.a #Ok.
+		name = flavor_tupi.3.a		#Ok.
 		add_opinion = {
 			who = FROM
 			modifier = tamoyo_confederates
@@ -155,7 +180,6 @@ country_event = {
 		}
 		add_mil_power = 50
 	}
-
 }
 
 #The Tamoyo Confederation (notification of negative reply to leader)
@@ -164,11 +188,9 @@ country_event = {
 	title = flavor_tupi.4.t
 	desc = flavor_tupi.4.d
 	picture = EXPLORERS_eventPicture
-
 	is_triggered_only = yes
-	
 	option = {
-		name = flavor_tupi.4.a #Ok.
+		name = flavor_tupi.4.a		#Ok.
 	}
 }
 
@@ -178,12 +200,12 @@ country_event = {
 	title = flavor_tupi.5.t
 	desc = flavor_tupi.5.d
 	picture = EXPLORERS_eventPicture
-
 	is_triggered_only = yes
-	
 	option = {
-		name = flavor_tupi.5.a #We must meet them with force. (shorter local unrest)
-		ai_chance = { factor = 50 }
+		name = flavor_tupi.5.a		#We must meet them with force. (shorter local unrest)
+		ai_chance = {
+			factor = 50
+		}
 		add_prestige = 10
 		FROM = {
 			add_opinion = {
@@ -200,18 +222,25 @@ country_event = {
 				}
 				add_province_modifier = {
 					name = "tupi_hostility"
-					duration = 1825 #Local minor tribes, ignited by the conflict but largely detached from it.
+					duration = 1825					#Local minor tribes, ignited by the conflict but largely detached from it.
 				}
 			}
 		}
 		custom_tooltip = flavour_tupi_tamoyo_force
 	}
 	option = {
-		name = flavor_tupi.5.b #Send for skilled Jesuits. (may end confict outright)
-		trigger = { religion = catholic }
-		ai_chance = { factor = 50 }
+		name = flavor_tupi.5.b		#Send for skilled Jesuits. (may end confict outright)
+		trigger = {
+			religion = catholic
+		}
+		ai_chance = {
+			factor = 50
+		}
 		FROM = {
-			country_event = { id = flavor_tupi.6 days = 670  }
+			country_event = {
+				id = flavor_tupi.6
+				days = 670
+			}
 			add_opinion = {
 				who = ROOT
 				modifier = tamoyo_target
@@ -219,10 +248,12 @@ country_event = {
 		}
 		hidden_effect = {
 			every_owned_province = {
-				limit = { culture = tupinamba }
+				limit = {
+					culture = tupinamba
+				}
 				add_province_modifier = {
 					name = "tupi_hostility"
-					duration = 3650 #Local minor tribes, ignited by the conflict but largely detached from it.
+					duration = 3650					#Local minor tribes, ignited by the conflict but largely detached from it.
 				}
 			}
 		}
@@ -236,20 +267,24 @@ country_event = {
 	title = flavor_tupi.6.t
 	desc = flavor_tupi.6.d
 	picture = RELIGIOUS_CONVERSION_eventPicture
-
 	is_triggered_only = yes
-	
 	option = {
-		name = flavor_tupi.6.a #Let us end hostilities.
-		ai_chance = { factor = 50 }
+		name = flavor_tupi.6.a		#Let us end hostilities.
+		ai_chance = {
+			factor = 50
+		}
 		clr_country_flag = tamoyo_confederation_leader
 		FROM = {
-			country_event = { id = flavor_tupi.7 }
+			country_event = {
+				id = flavor_tupi.7
+			}
 		}
 	}
 	option = {
-		name = flavor_tupi.6.b #They are only trying to make us weak!
-		ai_chance = { factor = 50 }
+		name = flavor_tupi.6.b		#They are only trying to make us weak!
+		ai_chance = {
+			factor = 50
+		}
 		add_stability_or_adm_power = yes
 	}
 }
@@ -260,11 +295,9 @@ country_event = {
 	title = flavor_tupi.7.t
 	desc = flavor_tupi.7.d
 	picture = DIPLOMACY_eventPicture
-
 	is_triggered_only = yes
-	
 	option = {
-		name = flavor_tupi.7.a #Great!
+		name = flavor_tupi.7.a		#Great!
 		every_country = {
 			limit = {
 				has_opinion_modifier = {
@@ -291,10 +324,11 @@ country_event = {
 	desc = flavor_tupi.8.d
 	picture = EXPLORERS_eventPicture
 	fire_only_once = yes
-
 	trigger = {
 		OR = {
-			capital_scope = { continent = europe }
+			capital_scope = {
+				continent = europe
+			}
 			colonial_parent = {
 				capital_scope = {
 					continent = europe
@@ -311,11 +345,15 @@ country_event = {
 			has_country_flag = tamoyo_confederation_leader
 			NOT = {
 				alliance_with = ROOT
-				has_opinion = { who = ROOT value = 75 }
+			}
+			NOT = {
+				has_opinion = {
+					who = ROOT
+					value = 75
+				}
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 120
 		modifier = {
@@ -323,28 +361,34 @@ country_event = {
 			tag = FRA
 		}
 	}
-	
-	
 	option = {
-		name = flavor_tupi.8.a #Let us aid the Tupi
-		ai_chance = { factor = 95 }
+		name = flavor_tupi.8.a		#Let us aid the Tupi
+		ai_chance = {
+			factor = 95
+		}
 		add_mil_power = -25
 		random_known_country = {
 			limit = {
 				has_country_flag = tamoyo_confederation_leader
 			}
-			country_event = { id = flavor_tupi.9 } #Support from other Europeans
+			country_event = {
+				id = flavor_tupi.9
+			}			#Support from other Europeans
 		}
 		random_known_country = {
 			limit = {
 				has_country_flag = tamoyo_enemy
 			}
-			country_event = { id = flavor_tupi.10 } #Meddling Colonial Rivals
+			country_event = {
+				id = flavor_tupi.10
+			}			#Meddling Colonial Rivals
 		}
 	}
 	option = {
-		name = flavor_tupi.8.b #We cannot support these savages 
-		ai_chance = { factor = 5 }
+		name = flavor_tupi.8.b		#We cannot support these savages 
+		ai_chance = {
+			factor = 5
+		}
 		add_prestige = 5
 	}
 }
@@ -355,19 +399,15 @@ country_event = {
 	title = flavor_tupi.9.t
 	desc = flavor_tupi.9.d
 	picture = EXPLORERS_eventPicture
-	
 	is_triggered_only = yes
-	
-	
 	option = {
-		name = flavor_tupi.9.a #Great!
+		name = flavor_tupi.9.a		#Great!
 		add_mil_power = 50
 		add_opinion = {
 			who = FROM
 			modifier = tamoyo_confederates
 		}
 	}
-
 }
 
 #Meddling Colonial Rivals
@@ -376,17 +416,16 @@ country_event = {
 	title = flavor_tupi.10.t
 	desc = flavor_tupi.10.d
 	picture = EXPLORERS_eventPicture
-	
 	is_triggered_only = yes
-	
-	
 	option = {
-		name = flavor_tupi.10.a #They have no right to be here!
+		name = flavor_tupi.10.a		#They have no right to be here!
 		random_province = {
 			limit = {
 				owned_by = FROM
 				continent = south_america
-				NOT = { is_claim = FROM }
+				NOT = {
+					is_claim = FROM
+				}
 			}
 			add_claim = ROOT
 		}
@@ -394,7 +433,9 @@ country_event = {
 			limit = {
 				owned_by = FROM
 				continent = south_america
-				NOT = { is_claim = FROM }
+				NOT = {
+					is_claim = FROM
+				}
 			}
 			add_claim = ROOT
 		}
@@ -402,7 +443,9 @@ country_event = {
 			limit = {
 				owned_by = FROM
 				continent = south_america
-				NOT = { is_claim = FROM }
+				NOT = {
+					is_claim = FROM
+				}
 			}
 			add_claim = ROOT
 		}
@@ -420,31 +463,40 @@ country_event = {
 	desc = flavor_tupi.11.d
 	picture = EXPLORERS_eventPicture
 	fire_only_once = yes
-
 	trigger = {
 		primary_culture = tupinamba
 		any_neighbor_country = {
 			tag = TUA
-			NOT = { alliance_with = ROOT }
-			NOT = { has_opinion = { who = ROOT value = 75 }  }
+			NOT = {
+				alliance_with = ROOT
+			}
+			NOT = {
+				has_opinion = {
+					who = ROOT
+					value = 75
+				}
+			}
 			any_owned_province = {
-				NOT = { is_claim = ROOT }
+				NOT = {
+					is_claim = ROOT
+				}
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 12
 	}
-	
-	
 	option = {
-		name = flavor_tupi.11.a #There is no room for the Tapuia here.
-		ai_chance = { factor = 95 }
+		name = flavor_tupi.11.a		#There is no room for the Tapuia here.
+		ai_chance = {
+			factor = 95
+		}
 		TUA = {
 			random_owned_province = {
 				limit = {
-					NOT = { is_claim = ROOT }
+					NOT = {
+						is_claim = ROOT
+					}
 					any_neighbor_province = {
 						owned_by = ROOT
 					}
@@ -454,8 +506,10 @@ country_event = {
 		}
 	}
 	option = {
-		name = flavor_tupi.11.b #Let us leave them alone.
-		ai_chance = { factor = 5 }
+		name = flavor_tupi.11.b		#Let us leave them alone.
+		ai_chance = {
+			factor = 5
+		}
 		TUA = {
 			add_opinion = {
 				who = ROOT
@@ -472,7 +526,6 @@ country_event = {
 	desc = flavor_tupi.12.d
 	picture = EXPLORERS_eventPicture
 	fire_only_once = yes
-
 	trigger = {
 		primary_culture = tupinamba
 		any_owned_province = {
@@ -492,22 +545,23 @@ country_event = {
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 60
 	}
-	
-	
 	option = {
-		name = flavor_tupi.12.a #Help Caramuru
-		ai_chance = { factor = 95 }
+		name = flavor_tupi.12.a		#Help Caramuru
+		ai_chance = {
+			factor = 95
+		}
 		set_country_flag = caramuru
 		custom_tooltip = flavor_tupi.12.a.tt
 		add_stability = -2
 	}
 	option = {
-		name = flavor_tupi.12.b #Send him on his way
-		ai_chance = { factor = 5 }
+		name = flavor_tupi.12.b		#Send him on his way
+		ai_chance = {
+			factor = 5
+		}
 		custom_tooltip = flavor_tupi.12.b.tt
 		add_prestige = 5
 		random_known_country = {
@@ -539,19 +593,17 @@ country_event = {
 	desc = flavor_tupi.13.d
 	picture = FEAST_eventPicture
 	fire_only_once = yes
-
 	trigger = {
 		has_country_flag = caramuru
 	}
-
 	mean_time_to_happen = {
 		months = 12
 	}
-	
-	
 	option = {
-		name = flavor_tupi.13.a #Marry Caramuru to Paraguacu.
-		ai_chance = { factor = 95 }
+		name = flavor_tupi.13.a		#Marry Caramuru to Paraguacu.
+		ai_chance = {
+			factor = 95
+		}
 		set_country_flag = caramuru_married
 		add_prestige = 5
 		custom_tooltip = flavor_tupi.13.a.tt
@@ -561,8 +613,10 @@ country_event = {
 		}
 	}
 	option = {
-		name = flavor_tupi.13.b #This would be too great an honour.
-		ai_chance = { factor = 5 }
+		name = flavor_tupi.13.b		#This would be too great an honour.
+		ai_chance = {
+			factor = 5
+		}
 		add_stability_or_adm_power = yes
 		add_country_modifier = {
 			name = "tupi_caramuru_trade"
@@ -578,22 +632,20 @@ country_event = {
 	desc = flavor_tupi.14.d
 	picture = SHIP_SAILING_eventPicture
 	fire_only_once = yes
-
 	trigger = {
 		has_country_flag = caramuru_married
-		NOT = { has_country_flag = caramurus_journey }
+		NOT = {
+			has_country_flag = caramurus_journey
+		}
 	}
-	
 	immediate = {
 		set_country_flag = caramurus_journey
 	}
-	
 	mean_time_to_happen = {
 		months = 48
 	}
-	
 	option = {
-		name = flavor_tupi.14.a #Ok.
+		name = flavor_tupi.14.a		#Ok.
 		add_prestige = 10
 		add_adm_power = 50
 		add_dip_power = 50
@@ -607,7 +659,6 @@ country_event = {
 	desc = flavor_tupi.15.d
 	picture = SHIP_SAILING_eventPicture
 	fire_only_once = yes
-
 	trigger = {
 		primary_culture = tupinamba
 		any_owned_province = {
@@ -615,9 +666,14 @@ country_event = {
 		}
 		any_known_country = {
 			is_neighbor_of = ROOT
-			has_opinion = { who = ROOT value = 25 }
+			has_opinion = {
+				who = ROOT
+				value = 25
+			}
 			religion = catholic
-			NOT = { war_with = ROOT }
+			NOT = {
+				war_with = ROOT
+			}
 			OR = {
 				tag = POR
 				colonial_parent = {
@@ -626,20 +682,22 @@ country_event = {
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 60
 	}
-	
-	
 	option = {
-		name = flavor_tupi.15.a #Align with the Portuguese
+		name = flavor_tupi.15.a		#Align with the Portuguese
 		every_known_country = {
 			limit = {
-				has_opinion = { who = ROOT value = 25 }
+				has_opinion = {
+					who = ROOT
+					value = 25
+				}
 				is_neighbor_of = ROOT
 				religion = catholic
-				NOT = { war_with = ROOT }
+				NOT = {
+					war_with = ROOT
+				}
 				OR = {
 					tag = POR
 					colonial_parent = {
@@ -655,7 +713,7 @@ country_event = {
 		change_religion = catholic
 	}
 	option = {
-		name = flavor_tupi.15.b #Stay with the gods of our ancestors
+		name = flavor_tupi.15.b		#Stay with the gods of our ancestors
 		add_legitimacy = 10
 		add_stability_or_adm_power = yes
 	}
@@ -668,22 +726,20 @@ country_event = {
 	desc = flavor_tupi.16.d
 	picture = SHIP_SAILING_eventPicture
 	fire_only_once = yes
-
 	trigger = {
 		has_country_flag = caramuru_married
-		NOT = { has_country_flag = caramurus_journey }
+		NOT = {
+			has_country_flag = caramurus_journey
+		}
 	}
-	
 	immediate = {
 		set_country_flag = caramurus_journey
 	}
-
 	mean_time_to_happen = {
 		months = 48
 	}
-	
 	option = {
-		name = flavor_tupi.16.a #Ok.
+		name = flavor_tupi.16.a		#Ok.
 		add_prestige = -10
 		remove_country_modifier = tupi_caramuru_trade
 	}

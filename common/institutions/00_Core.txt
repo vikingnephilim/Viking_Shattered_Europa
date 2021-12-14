@@ -1756,8 +1756,8 @@ ei_empiricism = {
 #############################
 ei_standing_armies = {
 	bonus = {
-		army_tradition_decay = -0.005
-		fort_maintenance_modifier = -0.1
+		discipline = 0.1
+		yearly_army_professionalism = 0.05
 	}
 	trade_company_efficiency = 0.85
 	historical_start_date = 1570.1.1
@@ -5041,17 +5041,13 @@ industrialization = {
 }
 
 #######################################
-# Human Rights
+# Weights and measures
 # tied to revolution, republics
 #######################################
-ei_human_rights = {
+weights_and_measures = {
 	bonus = {
-		yearly_revolutionary_zeal = 1.5
-		legitimacy = 1
-		horde_unity = 1
-		devotion = 0.5
-		republican_tradition = 0.5
-		meritocracy = 0.5
+		global_own_trade_power = 0.1
+		administrative_efficiency = 0.2
 	}
 	trade_company_efficiency = 2.5
 	historical_start_date = 1780.1.1
@@ -5085,7 +5081,7 @@ ei_human_rights = {
 				}
 				AND = {
 					custom_trigger_tooltip = {
-						tooltip = tooltip_ei_human_rights_start
+						tooltip = tooltip_weights_and_measures_start
 						has_revolution_in_province = yes
 					}
 					owner = {
@@ -5113,7 +5109,7 @@ ei_human_rights = {
 				}
 				owner = {
 					custom_trigger_tooltip = {
-						tooltip = tooltip_ei_human_rights_start_noe
+						tooltip = tooltip_weights_and_measures_start_noe
 						OR = {
 							has_reform = junior_revolutionary_republic_reform
 							has_reform = revolutionary_republic_reform
@@ -5148,9 +5144,9 @@ ei_human_rights = {
 			factor = 0.12
 			scale = yes
 			custom_trigger_tooltip = {
-				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_ei_human_rights
+				tooltip = tooltip_any_friendly_coast_border_province_has_embraced_weights_and_measures
 				any_friendly_coast_border_province = {
-					ei_human_rights = 100
+					weights_and_measures = 100
 				}
 			}
 		}
@@ -5160,17 +5156,17 @@ ei_human_rights = {
 			potential = {
 				NOT = {
 					any_friendly_coast_border_province = {
-						ei_human_rights = 100
+						weights_and_measures = 100
 					}
 				}
 			}
 			custom_trigger_tooltip = {
-				tooltip = tooltip_any_neighbor_has_embraced_ei_human_rights
+				tooltip = tooltip_any_neighbor_has_embraced_weights_and_measures
 				any_neighbor_province = {
 					NOT = {
 						owned_by = ROOT
 					}
-					ei_human_rights = 100
+					weights_and_measures = 100
 				}
 			}
 		}
@@ -5181,21 +5177,21 @@ ei_human_rights = {
 					has_dlc = "Emperor"
 				}
 				custom_trigger_tooltip = {
-					tooltip = tooltip_revolution_ei_human_rights
+					tooltip = tooltip_revolution_weights_and_measures
 					has_revolution_in_province = yes
 					OR = {
 						any_neighbor_province = {
-							ei_human_rights = 100
+							weights_and_measures = 100
 						}
 						any_friendly_coast_border_province = {
-							ei_human_rights = 100
+							weights_and_measures = 100
 						}
 					}
 				}
 			}
 			else = {
 				custom_trigger_tooltip = {
-					tooltip = tooltip_revolution_ei_human_rights_noe
+					tooltip = tooltip_revolution_weights_and_measures_noe
 					OR = {
 						owner = {
 							has_reform = junior_revolutionary_republic_reform
@@ -5209,10 +5205,10 @@ ei_human_rights = {
 					}
 					OR = {
 						any_neighbor_province = {
-							ei_human_rights = 100
+							weights_and_measures = 100
 						}
 						any_friendly_coast_border_province = {
-							ei_human_rights = 100
+							weights_and_measures = 100
 						}
 					}
 				}
@@ -5222,7 +5218,7 @@ ei_human_rights = {
 			factor = 0.24
 			scale = yes
 			custom_trigger_tooltip = {
-				tooltip = tooltip_republic_ei_human_rights
+				tooltip = tooltip_republic_weights_and_measures
 				OR = {
 					owner = {
 						government = republic
@@ -5233,10 +5229,10 @@ ei_human_rights = {
 				}
 				OR = {
 					any_neighbor_province = {
-						ei_human_rights = 100
+						weights_and_measures = 100
 					}
 					any_friendly_coast_border_province = {
-						ei_human_rights = 100
+						weights_and_measures = 100
 					}
 				}
 			}
@@ -5245,16 +5241,16 @@ ei_human_rights = {
 			factor = 0.16
 			scale = yes
 			custom_trigger_tooltip = {
-				tooltip = tooltip_plutocracy_ei_human_rights
+				tooltip = tooltip_plutocracy_weights_and_measures
 				owner = {
 					full_idea_group = plutocracy_ideas
 				}
 				OR = {
 					any_neighbor_province = {
-						ei_human_rights = 100
+						weights_and_measures = 100
 					}
 					any_friendly_coast_border_province = {
-						ei_human_rights = 100
+						weights_and_measures = 100
 					}
 				}
 			}
@@ -5269,7 +5265,7 @@ ei_human_rights = {
 					has_dlc = "Emperor"
 				}
 				custom_trigger_tooltip = {
-					tooltip = tooltip_capital_bonus_ei_human_rights
+					tooltip = tooltip_capital_bonus_weights_and_measures
 					OR = {
 						owner = {
 							government = republic
@@ -5293,7 +5289,7 @@ ei_human_rights = {
 			}
 			else = {
 				custom_trigger_tooltip = {
-					tooltip = tooltip_capital_bonus_ei_human_rights_noe
+					tooltip = tooltip_capital_bonus_weights_and_measures_noe
 					OR = {
 						owner = {
 							government = republic
@@ -5319,21 +5315,16 @@ ei_human_rights = {
 				owner = {
 					is_colonial_nation = yes
 				}
-			}
-			potential = {
-				owner = {
-					is_colonial_nation = yes
-				}
 				OR = {
 					province_has_center_of_trade_of_level = 1
 					is_capital = yes
 				}
 			}
 			custom_trigger_tooltip = {
-				tooltip = tooltip_colonial_overlord_ei_human_rights
+				tooltip = tooltip_colonial_overlord_weights_and_measures
 				owner = {
 					overlord = {
-						has_institution = ei_human_rights
+						has_institution = weights_and_measures
 					}
 				}
 			}
@@ -5343,15 +5334,15 @@ ei_human_rights = {
 			scale = yes
 			potential = {
 				owner = {
-					has_institution = ei_human_rights
+					has_institution = weights_and_measures
 				}
 				continent = owner
 			}
 			custom_trigger_tooltip = {
-				tooltip = tooltip_ei_human_rights_embraced
+				tooltip = tooltip_weights_and_measures_embraced
 				is_owned_by_trade_company = no
 				owner = {
-					has_institution = ei_human_rights
+					has_institution = weights_and_measures
 				}
 			}
 		}
@@ -5360,17 +5351,17 @@ ei_human_rights = {
 			scale = yes
 			potential = {
 				owner = {
-					has_institution = ei_human_rights
+					has_institution = weights_and_measures
 				}
 				NOT = {
 					continent = owner
 				}
 			}
 			custom_trigger_tooltip = {
-				tooltip = tooltip_ei_human_rights_embraced
+				tooltip = tooltip_weights_and_measures_embraced
 				is_owned_by_trade_company = no
 				owner = {
-					has_institution = ei_human_rights
+					has_institution = weights_and_measures
 				}
 			}
 		}

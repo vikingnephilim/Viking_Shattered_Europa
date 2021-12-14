@@ -1,24 +1,19 @@
 namespace = dutch_republic
-
 ########################################
 # Dutch Republic Events
 #
 # written by Rufus Tronde
 ########################################
-
 ########################################
 # When Orangists are in power
 ########################################
-
 # Absolute Power
 country_event = {
 	id = dutch_republic.1
 	title = "dutch_republic.1.t"
 	desc = "dutch_republic.1.d"
 	picture = GOOD_WITH_MONARCH_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		OR = {
@@ -45,11 +40,9 @@ country_event = {
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	# Approve of absolutism
 	option = {
 		name = "dutch_republic.1.a"
@@ -70,7 +63,6 @@ country_event = {
 			factor = 3
 		}
 	}
-
 	# Reject absolutism
 	option = {
 		name = "dutch_republic.1.b"
@@ -92,7 +84,9 @@ country_event = {
 			factor = 1
 			modifier = {
 				factor = 6
-				NOT = { legitimacy = 50 }
+				NOT = {
+					legitimacy = 50
+				}
 			}
 		}
 	}
@@ -103,18 +97,21 @@ country_event = {
 	id = dutch_republic.2
 	title = "dutch_republic.2.t"
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		desc = dutch_republic.2.da
 	}
-	
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		desc = dutch_republic.2.db
 	}
 	picture = ADVISOR_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
@@ -126,11 +123,9 @@ country_event = {
 			advisor = colonial_governor
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	# Fire the author
 	option = {
 		name = "dutch_republic.2.a"
@@ -142,7 +137,6 @@ country_event = {
 		remove_advisor = trader
 		remove_advisor = colonial_governor
 	}
-
 	# Give him credit for his work
 	option = {
 		name = "dutch_republic.2.b"
@@ -158,18 +152,21 @@ country_event = {
 	id = dutch_republic.3
 	title = "dutch_republic.3.t"
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		desc = dutch_republic.3.da
 	}
-	
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		desc = dutch_republic.3.db
 	}
 	picture = RELIGIOUS_TURMOIL_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
@@ -178,13 +175,13 @@ country_event = {
 			religion = protestant
 			religion = reformed
 		}
-		NOT = { religious_unity = 1.0 }
+		NOT = {
+			religious_unity = 1
+		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	# Strengthen pulpit propaganda
 	option = {
 		name = "dutch_republic.3.a"
@@ -192,7 +189,9 @@ country_event = {
 		set_country_flag = supported_orangists
 		clr_country_flag = supported_statists
 		if = {
-			limit = { has_reform = dutch_republic }
+			limit = {
+				has_reform = dutch_republic
+			}
 			add_country_modifier = {
 				name = sermons_for_princes
 				duration = 1825
@@ -205,7 +204,6 @@ country_event = {
 			}
 		}
 	}
-
 	# Tone down pulpit propaganda
 	option = {
 		name = "dutch_republic.3.b"
@@ -225,19 +223,15 @@ country_event = {
 	title = "dutch_republic.4.t"
 	desc = "dutch_republic.4.d"
 	picture = ACCUSATION_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
 		is_orangists_in_power = yes
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	# Tell traders to comply with the ruler
 	option = {
 		name = "dutch_republic.4.a"
@@ -249,7 +243,6 @@ country_event = {
 			duration = 1825
 		}
 	}
-
 	# Concede some of their points and reform accordingly
 	option = {
 		name = "dutch_republic.4.b"
@@ -266,29 +259,30 @@ country_event = {
 	id = dutch_republic.5
 	title = "dutch_republic.5.t"
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		desc = dutch_republic.5.da
 	}
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		desc = dutch_republic.5.db
 	}
-
 	picture = RELIGION_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
 		is_orangists_in_power = yes
 		has_country_flag = supported_orangists
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	# Make sure people know who saved them
 	option = {
 		name = "dutch_republic.5.a"
@@ -298,7 +292,6 @@ country_event = {
 		add_republican_tradition = -5
 		add_legitimacy = -10
 	}
-
 	# Retain modesty
 	option = {
 		name = "dutch_republic.5.b"
@@ -313,35 +306,36 @@ country_event = {
 	id = dutch_republic.6
 	title = "dutch_republic.6.t"
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		desc = dutch_republic.6.da
 	}
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		desc = dutch_republic.6.db
 	}
 	picture = DEBATE_REPUBLICAN_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
 		is_orangists_in_power = yes
 		has_country_flag = supported_statists
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	# Let them leave
 	option = {
 		name = "dutch_republic.6.a"
 		clr_country_flag = supported_statists
 		add_army_tradition = -10
 	}
-
 	# Try to appease them
 	option = {
 		name = "dutch_republic.6.b"
@@ -355,28 +349,30 @@ country_event = {
 	id = dutch_republic.7
 	title = "dutch_republic.7.t"
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		desc = dutch_republic.7.da
 	}
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		desc = dutch_republic.7.db
 	}
 	picture = DEBATE_REPUBLICAN_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
 		is_orangists_in_power = yes
 		has_country_flag = supported_statists
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	# Perhaps one day...
 	option = {
 		name = "dutch_republic.7.a"
@@ -392,28 +388,30 @@ country_event = {
 	id = dutch_republic.8
 	title = "dutch_republic.8.t"
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		desc = dutch_republic.8.da
 	}
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		desc = dutch_republic.8.db
 	}
 	picture = LIBERUM_VETO_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
 		is_orangists_in_power = yes
 		has_country_flag = supported_orangists
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	option = {
 		name = "dutch_republic.8.a"
 		clr_country_flag = supported_orangists
@@ -429,42 +427,47 @@ country_event = {
 	id = dutch_republic.9
 	title = "dutch_republic.9.t"
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		desc = dutch_republic.9.da
 	}
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		desc = dutch_republic.9.db
 	}
 	picture = ASSASSINATION_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
 		statists_vs_orangists = 0.9
 		advisor = spymaster
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	# For the Republican cause...
 	option = {
 		name = "dutch_republic.9.a"
-		ai_chance = { factor = 20 }
+		ai_chance = {
+			factor = 20
+		}
 		change_statists_vs_orangists = -0.75
 		kill_ruler = yes
 		add_republican_tradition = -10
 		add_legitimacy = -20
 	}
-
 	# High treason must be punished
 	option = {
 		name = "dutch_republic.9.b"
-		ai_chance = { factor = 80 }
+		ai_chance = {
+			factor = 80
+		}
 		custom_tooltip = "dutch_republic.9.b.tt"
 		kill_advisor = spymaster
 		add_republican_tradition = 3
@@ -477,27 +480,29 @@ country_event = {
 	id = dutch_republic.10
 	title = "dutch_republic.10.t"
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		desc = dutch_republic.10.da
 	}
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		desc = dutch_republic.10.db
 	}
 	picture = LIBERUM_VETO_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
 		statists_vs_orangists = 0.9
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	option = {
 		name = "dutch_republic.10.a"
 		add_republican_tradition = -5
@@ -508,16 +513,13 @@ country_event = {
 ########################################
 # When Statists are in power
 ########################################
-
 # Suggest Act of Seclusion
 country_event = {
 	id = dutch_republic.11
 	title = "dutch_republic.11.t"
 	desc = "dutch_republic.11.d"
 	picture = DIPLOMACY_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		had_recent_war = 3
@@ -526,8 +528,12 @@ country_event = {
 			truce_with = ROOT
 			has_reform = dutch_republic
 			is_statists_in_power = yes
-			NOT = { has_country_flag = accepted_act_of_seclusion }
-			NOT = { num_of_cities = root }
+			NOT = {
+				has_country_flag = accepted_act_of_seclusion
+			}
+			NOT = {
+				num_of_cities = root
+			}
 			ROOT = {
 				army_strength = {
 					who = prev
@@ -536,11 +542,9 @@ country_event = {
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	option = {
 		name = "dutch_republic.11.a"
 		random_known_country = {
@@ -548,8 +552,12 @@ country_event = {
 				truce_with = ROOT
 				has_reform = dutch_republic
 				is_statists_in_power = yes
-				NOT = { has_country_flag = accepted_act_of_seclusion }
-				NOT = { num_of_cities = root }
+				NOT = {
+					has_country_flag = accepted_act_of_seclusion
+				}
+				NOT = {
+					num_of_cities = root
+				}
 				ROOT = {
 					army_strength = {
 						who = prev
@@ -564,7 +572,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = "dutch_republic.11.b"
 		add_prestige = 5
@@ -577,24 +584,26 @@ country_event = {
 	title = "dutch_republic.12.t"
 	desc = "dutch_republic.12.d"
 	picture = DIPLOMACY_eventPicture
-
 	is_triggered_only = yes
-
 	option = {
 		name = "dutch_republic.12.a"
 		change_statists_vs_orangists = -0.75
-		ai_chance = { 
-			factor = 75 
+		ai_chance = {
+			factor = 75
 			modifier = {
 				factor = 0.1
-				NOT = { stability = 1 }
+				NOT = {
+					stability = 1
+				}
 			}
 		}
 		set_country_flag = supported_statists
 		clr_country_flag = supported_orangists
 		add_stability = -1
 		if = {
-			limit = { has_reform = dutch_republic }
+			limit = {
+				has_reform = dutch_republic
+			}
 			add_country_modifier = {
 				name = act_of_seclusion
 				duration = 7300
@@ -608,10 +617,11 @@ country_event = {
 		}
 		set_country_flag = accepted_act_of_seclusion
 	}
-
 	option = {
 		name = "dutch_republic.12.b"
-		ai_chance = { factor = 25 }
+		ai_chance = {
+			factor = 25
+		}
 		change_statists_vs_orangists = 0.25
 		set_country_flag = supported_orangists
 		clr_country_flag = supported_statists
@@ -624,28 +634,30 @@ country_event = {
 	id = dutch_republic.13
 	title = "dutch_republic.13.t"
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		desc = dutch_republic.13.da
 	}
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		desc = dutch_republic.13.db
 	}
 	picture = DIPLOMACY_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
 		is_statists_in_power = yes
 		num_of_royal_marriages = 1
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	option = {
 		name = "dutch_republic.13.a"
 		change_statists_vs_orangists = -0.25
@@ -661,7 +673,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = "dutch_republic.13.b"
 		change_statists_vs_orangists = 0.25
@@ -684,17 +695,21 @@ country_event = {
 	id = dutch_republic.14
 	title = "dutch_republic.14.t"
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		desc = dutch_republic.14.da
 	}
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		desc = dutch_republic.14.db
 	}
 	picture = CONQUEST_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
@@ -704,13 +719,13 @@ country_event = {
 			num_of_conquistadors = 1
 		}
 		is_monarch_leader = no
-		NOT = { num_of_admirals = 1 }
+		NOT = {
+			num_of_admirals = 1
+		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	option = {
 		name = "dutch_republic.14.a"
 		change_statists_vs_orangists = -0.25
@@ -721,7 +736,6 @@ country_event = {
 		}
 		add_mil_power = 50
 	}
-
 	option = {
 		name = "dutch_republic.14.b"
 		change_statists_vs_orangists = 0.25
@@ -736,27 +750,29 @@ country_event = {
 	id = dutch_republic.15
 	title = "dutch_republic.15.t"
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		desc = dutch_republic.15.da
 	}
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		desc = dutch_republic.15.db
 	}
 	picture = LIBERUM_VETO_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
 		is_statists_in_power = yes
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	option = {
 		name = "dutch_republic.15.a"
 		change_statists_vs_orangists = -0.25
@@ -769,7 +785,6 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = "dutch_republic.15.b"
 		change_statists_vs_orangists = 0.25
@@ -788,20 +803,16 @@ country_event = {
 	title = "dutch_republic.16.t"
 	desc = "dutch_republic.16.d"
 	picture = FEAST_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
 		is_statists_in_power = yes
 		has_country_flag = supported_statists
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	# Let it go
 	option = {
 		name = "dutch_republic.16.a"
@@ -810,7 +821,6 @@ country_event = {
 		add_dip_power = -25
 		clr_country_flag = supported_statists
 	}
-
 	# Let it goooo
 	option = {
 		name = "dutch_republic.16.b"
@@ -827,34 +837,35 @@ country_event = {
 	id = dutch_republic.17
 	title = "dutch_republic.17.t"
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		desc = dutch_republic.17.da
 	}
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		desc = dutch_republic.17.db
 	}
 	picture = BAD_WITH_MONARCH_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
 		is_statists_in_power = yes
 		has_country_flag = supported_orangists
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	option = {
 		name = "dutch_republic.17.a"
 		add_prestige = -5
 		clr_country_flag = supported_orangists
 	}
-
 	option = {
 		name = "dutch_republic.17.b"
 		add_adm_power = -10
@@ -869,35 +880,36 @@ country_event = {
 	id = dutch_republic.18
 	title = "dutch_republic.18.t"
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		desc = dutch_republic.18.da
 	}
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		desc = dutch_republic.18.db
 	}
 	picture = CONQUEST_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
 		is_statists_in_power = yes
 		has_country_flag = supported_orangists
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	option = {
 		name = "dutch_republic.18.a"
 		add_army_tradition = 10
 		change_statists_vs_orangists = 0.1
 		clr_country_flag = supported_orangists
 	}
-
 	option = {
 		name = "dutch_republic.18.b"
 		add_navy_tradition = 10
@@ -911,32 +923,36 @@ country_event = {
 	id = dutch_republic.19
 	title = "dutch_republic.19.t"
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		desc = dutch_republic.19.da
 	}
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		desc = dutch_republic.19.db
 	}
 	picture = DEBATE_REPUBLICAN_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
 		is_statists_in_power = yes
 		has_country_flag = supported_statists
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	option = {
 		name = "dutch_republic.19.a"
 		if = {
-			limit = { has_reform = dutch_republic }
+			limit = {
+				has_reform = dutch_republic
+			}
 			add_country_modifier = {
 				name = distrust_among_nobles
 				duration = 1825
@@ -957,22 +973,27 @@ country_event = {
 	id = dutch_republic.20
 	title = "dutch_republic.20.t"
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		desc = dutch_republic.20.da
 	}
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		desc = dutch_republic.20.db
 	}
-	
 	picture = ASSASSINATION_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
-		NOT = { statists_vs_orangists = 0.1 }
+		NOT = {
+			statists_vs_orangists = 0.1
+		}
 		OR = {
 			advisor = army_organiser
 			advisor = commandant
@@ -981,45 +1002,60 @@ country_event = {
 			advisor = recruitmaster
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	# For the House of Orange!
 	option = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		name = "dutch_republic.20.a"
-		ai_chance = { factor = 20 }
-		change_statists_vs_orangists = 1.0
+		ai_chance = {
+			factor = 20
+		}
+		change_statists_vs_orangists = 1
 		kill_ruler = yes
 		add_republican_tradition = -15
 		add_legitimacy = -30
 	}
-
 	# For the Republic!
 	option = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		name = "dutch_republic.20.b"
-		ai_chance = { factor = 80 }
+		ai_chance = {
+			factor = 80
+		}
 		if = {
-			limit = { advisor = army_organiser }
+			limit = {
+				advisor = army_organiser
+			}
 			kill_advisor = army_organiser
 		}
 		if = {
-			limit = { advisor = commandant }
+			limit = {
+				advisor = commandant
+			}
 			kill_advisor = commandant
 		}
 		if = {
-			limit = { advisor = quartermaster }
+			limit = {
+				advisor = quartermaster
+			}
 			kill_advisor = quartermaster
 		}
 		if = {
-			limit = { advisor = grand_captain }
+			limit = {
+				advisor = grand_captain
+			}
 			kill_advisor = grand_captain
 		}
 		if = {
-			limit = { advisor = recruitmaster }
+			limit = {
+				advisor = recruitmaster
+			}
 			kill_advisor = recruitmaster
 		}
 		capital_scope = {
@@ -1031,41 +1067,61 @@ country_event = {
 		add_republican_tradition = 5
 		add_legitimacy = 10
 	}
-
 	# For the Kingdom!
 	option = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		name = "dutch_republic.20.c"
-		ai_chance = { factor = 20 }
-		change_statists_vs_orangists = 1.0
+		ai_chance = {
+			factor = 20
+		}
+		change_statists_vs_orangists = 1
 		kill_ruler = yes
 		add_republican_tradition = -15
 		add_legitimacy = -30
 	}
-
 	# For the Union!
 	option = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		name = "dutch_republic.20.d"
-		ai_chance = { factor = 80 }
+		ai_chance = {
+			factor = 80
+		}
 		if = {
-			limit = { advisor = army_organiser }
+			limit = {
+				advisor = army_organiser
+			}
 			kill_advisor = army_organiser
 		}
 		if = {
-			limit = { advisor = commandant }
+			limit = {
+				advisor = commandant
+			}
 			kill_advisor = commandant
 		}
 		if = {
-			limit = { advisor = quartermaster }
+			limit = {
+				advisor = quartermaster
+			}
 			kill_advisor = quartermaster
 		}
 		if = {
-			limit = { advisor = grand_captain }
+			limit = {
+				advisor = grand_captain
+			}
 			kill_advisor = grand_captain
 		}
 		if = {
-			limit = { advisor = recruitmaster }
+			limit = {
+				advisor = recruitmaster
+			}
 			kill_advisor = recruitmaster
 		}
 		capital_scope = {
@@ -1085,19 +1141,17 @@ country_event = {
 	title = "dutch_republic.21.t"
 	desc = "dutch_republic.21.d"
 	picture = DEBATE_REPUBLICAN_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
-		NOT = { statists_vs_orangists = 0.1 }
+		NOT = {
+			statists_vs_orangists = 0.1
+		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	# Is the republic descending into anarchy?
 	option = {
 		name = "dutch_republic.21.a"
@@ -1113,9 +1167,7 @@ country_event = {
 	title = "dutch_republic.22.t"
 	desc = "dutch_republic.22.d"
 	picture = BATTLE_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
@@ -1125,11 +1177,9 @@ country_event = {
 			num_of_conquistadors = 1
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	# Comply as necessary to secure victory
 	option = {
 		name = "dutch_republic.22.a"
@@ -1142,7 +1192,6 @@ country_event = {
 		add_army_tradition = 10
 		add_mil_power = 100
 	}
-
 	# We will hold on to our ideals in the face of terror
 	option = {
 		name = "dutch_republic.22.b"
@@ -1158,17 +1207,21 @@ country_event = {
 	id = dutch_republic.23
 	title = "dutch_republic.23.t"
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		desc = dutch_republic.23.da
 	}
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		desc = dutch_republic.23.db
 	}
 	picture = BATTLE_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
@@ -1177,14 +1230,14 @@ country_event = {
 			war_with = ROOT
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	# Let them lead us to glory!
 	option = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		name = "dutch_republic.23.a"
 		add_country_modifier = {
 			name = supported_orangists_in_war
@@ -1193,7 +1246,9 @@ country_event = {
 		}
 		change_statists_vs_orangists = 0.25
 		if = {
-			limit = { has_reform = dutch_republic }
+			limit = {
+				has_reform = dutch_republic
+			}
 			add_country_modifier = {
 				name = orangists_rally_against_rival
 				duration = 1825
@@ -1206,10 +1261,13 @@ country_event = {
 			}
 		}
 	}
-
 	# Let them lead us to glory! (Non dutch)
 	option = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		name = "dutch_republic.23.c"
 		add_country_modifier = {
 			name = supported_orangists_in_war
@@ -1222,7 +1280,6 @@ country_event = {
 			duration = 1825
 		}
 	}
-
 	# We will hold on to our ideals in the face of terror
 	option = {
 		name = "dutch_republic.23.b"
@@ -1236,35 +1293,36 @@ country_event = {
 	id = dutch_republic.24
 	title = "dutch_republic.24.t"
 	desc = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		desc = dutch_republic.24.da
 	}
 	desc = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		desc = dutch_republic.24.db
 	}
 	picture = DEBATE_REPUBLICAN_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
 		is_at_war = no
 		has_country_modifier = supported_orangists_in_war
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	# Things must return to how they were
 	option = {
 		name = "dutch_republic.24.a"
 		change_statists_vs_orangists = -0.25
 		add_mil_power = -100
 	}
-
 	# They faught our war, let them keep their power
 	option = {
 		name = "dutch_republic.24.b"
@@ -1279,37 +1337,37 @@ country_event = {
 	title = "dutch_republic.25.t"
 	desc = "dutch_republic.25.d"
 	picture = WOUNDED_SOLDIERS_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
 		is_at_war = no
 		war_exhaustion = 7
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	# Let us rebuild these ideals, for the people of [Country].
 	option = {
 		name = "dutch_republic.25.a"
 		change_statists_vs_orangists = -0.25
 		add_war_exhaustion = -5
 	}
-
 	# The Prince of Orange could lead us to victory in the future.
 	option = {
-		trigger = { has_reform = dutch_republic }
+		trigger = {
+			has_reform = dutch_republic
+		}
 		name = "dutch_republic.25.b"
 		change_statists_vs_orangists = -0.1
 	}
-
 	# The Prince of [Root.GetName] could lead us to victory in the future. (Non dutch)
 	option = {
-		trigger = { NOT = { has_reform = dutch_republic } }
+		trigger = {
+			NOT = {
+				has_reform = dutch_republic
+			}
+		}
 		name = "dutch_republic.25.c"
 		change_statists_vs_orangists = -0.1
 	}
@@ -1321,23 +1379,20 @@ province_event = {
 	title = "dutch_republic.26.t"
 	desc = "dutch_republic.26.d"
 	picture = MERCHANTS_TALKING_eventPicture
-
 	is_mtth_scaled_to_size = 1
-
 	trigger = {
 		has_dlc = "Res Publica"
 		OR = {
 			province_has_center_of_trade_of_level = 1
 			has_river_estuary_trigger = yes
 		}
-		owner = { has_states_general_mechanic = yes }
-		
+		owner = {
+			has_states_general_mechanic = yes
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 1000
 	}
-
 	# Listen to the locals
 	option = {
 		name = "dutch_republic.26.a"
@@ -1345,7 +1400,6 @@ province_event = {
 			change_statists_vs_orangists = -0.15
 		}
 	}
-
 	# Ignore the locals
 	option = {
 		name = "dutch_republic.26.b"
@@ -1362,28 +1416,30 @@ country_event = {
 	title = "dutch_republic.27.t"
 	desc = "dutch_republic.27.d"
 	picture = BORDER_TENSION_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		has_dlc = "Res Publica"
 		has_states_general_mechanic = yes
 		any_neighbor_country = {
-			NOT = { has_opinion = { who = ROOT value = 0 } }
-			ROOT = { is_threat = PREV }
+			NOT = {
+				has_opinion = {
+					who = ROOT
+					value = 0
+				}
+			}
+			ROOT = {
+				is_threat = PREV
+			}
 		}
 	}
-
 	mean_time_to_happen = {
 		days = 1
 	}
-
 	# Listen to the locals
 	option = {
 		name = "dutch_republic.27.a"
 		change_statists_vs_orangists = -0.15
 	}
-
 	# Ignore the locals
 	option = {
 		name = "dutch_republic.27.b"
@@ -1391,8 +1447,15 @@ country_event = {
 			limit = {
 				any_neighbor_province = {
 					owner = {
-						NOT = { has_opinion = { who = ROOT value = 0 } }
-						ROOT = { is_threat = PREV }
+						NOT = {
+							has_opinion = {
+								who = ROOT
+								value = 0
+							}
+						}
+						ROOT = {
+							is_threat = PREV
+						}
 					}
 				}
 			}
@@ -1419,30 +1482,35 @@ province_event = {
 	desc = {
 		trigger = {
 			owner = {
-				NOT = { has_reform = dutch_republic }
+				NOT = {
+					has_reform = dutch_republic
+				}
 			}
 		}
 		desc = dutch_republic.28.db
 	}
 	picture = BORDER_TENSION_eventPicture
-
 	is_mtth_scaled_to_size = 1
-
 	trigger = {
 		has_dlc = "Res Publica"
-		owner = { has_states_general_mechanic = yes }
+		owner = {
+			has_states_general_mechanic = yes
+		}
 		any_neighbor_province = {
 			owner = {
-				NOT = { has_opinion = { who = ROOT value = 0 } }
+				NOT = {
+					has_opinion = {
+						who = ROOT
+						value = 0
+					}
+				}
 				is_threat = ROOT
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 1000
 	}
-
 	# Listen to the locals
 	option = {
 		name = "dutch_republic.28.a"
@@ -1450,7 +1518,6 @@ province_event = {
 			change_statists_vs_orangists = 0.15
 		}
 	}
-
 	# Ignore the locals
 	option = {
 		name = "dutch_republic.28.b"
@@ -1467,24 +1534,27 @@ province_event = {
 	title = "dutch_republic.29.t"
 	desc = "dutch_republic.29.d"
 	picture = MILITARY_CAMP_eventPicture
-
 	is_mtth_scaled_to_size = 1
-
 	trigger = {
 		has_dlc = "Res Publica"
-		owner = { has_states_general_mechanic = yes }
+		owner = {
+			has_states_general_mechanic = yes
+		}
 		any_neighbor_province = {
 			owner = {
-				NOT = { has_opinion = { who = ROOT value = 0 } }
+				NOT = {
+					has_opinion = {
+						who = ROOT
+						value = 0
+					}
+				}
 				is_enemy = ROOT
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 1000
 	}
-
 	# Listen to the locals
 	option = {
 		name = "dutch_republic.29.a"
@@ -1492,7 +1562,6 @@ province_event = {
 			change_statists_vs_orangists = 0.15
 		}
 	}
-
 	# Ignore the locals
 	option = {
 		name = "dutch_republic.29.b"
@@ -1518,15 +1587,15 @@ province_event = {
 	desc = {
 		trigger = {
 			owner = {
-				NOT = { has_reform = dutch_republic }
+				NOT = {
+					has_reform = dutch_republic
+				}
 			}
 		}
 		desc = dutch_republic.30.db
 	}
 	picture = DEBATE_REPUBLICAN_eventPicture
-
 	is_mtth_scaled_to_size = 1
-
 	trigger = {
 		has_dlc = "Res Publica"
 		owner = {
@@ -1535,7 +1604,9 @@ province_event = {
 		OR = {
 			AND = {
 				NOT = {
-					owner = { has_reform = dutch_republic }
+					owner = {
+						has_reform = dutch_republic
+					}
 				}
 				development = 15
 				is_core = owner
@@ -1547,14 +1618,16 @@ province_event = {
 			province_id = 100
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 1000
 	}
-
 	# Send someone to argue in favor of Orangists
 	option = {
-		trigger = { owner = { has_reform = dutch_republic } }
+		trigger = {
+			owner = {
+				has_reform = dutch_republic
+			}
+		}
 		name = "dutch_republic.30.a"
 		owner = {
 			change_statists_vs_orangists = 0.15
@@ -1571,12 +1644,13 @@ province_event = {
 			}
 		}
 	}
-
 	# Send someone to argue in favor of Monarchists
 	option = {
 		trigger = {
 			NOT = {
-				owner = { has_reform = dutch_republic }
+				owner = {
+					has_reform = dutch_republic
+				}
 			}
 		}
 		name = "dutch_republic.30.c"
@@ -1595,7 +1669,6 @@ province_event = {
 			}
 		}
 	}
-
 	# Send someone to argue in favor of Statists
 	option = {
 		name = "dutch_republic.30.b"
@@ -1625,16 +1698,15 @@ country_event = {
 	title = dutch_republic.31.t
 	desc = dutch_republic_31.d
 	picture = DEBATE_REPUBLICAN_eventPicture
-
 	is_triggered_only = yes
 	hidden = yes
-
 	immediate = {
 		FROM = {
-			country_event = { id = dutch_republic.32 }
+			country_event = {
+				id = dutch_republic.32
+			}
 		}
 	}
-
 	option = {
 		name = EXCELLENT
 	}
@@ -1646,14 +1718,11 @@ country_event = {
 	title = dutch_republic.32.t
 	desc = dutch_republic.32.d
 	picture = BAD_WITH_MONARCH_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		is_lesser_in_union = yes
 		has_government_attribute = states_general_mechanic
 	}
-
 	option = {
 		name = "dutch_republic.32.a"
 		hidden_effect = {
@@ -1670,25 +1739,29 @@ country_event = {
 	id = dutch_republic.33
 	title = dutch_republic.33.t
 	desc = {
-		trigger = { 
+		trigger = {
 			exiled_same_dynasty_as_current = "states_general_abolished_@ROOT"
 		}
 		desc = dutch_republic.33.d1
 	}
 	desc = {
-		trigger = { 
-			NOT = { exiled_same_dynasty_as_current = "states_general_abolished_@ROOT" }
+		trigger = {
+			NOT = {
+				exiled_same_dynasty_as_current = "states_general_abolished_@ROOT"
+			}
 		}
 		desc = dutch_republic.33.d2
 	}
 	picture = BAD_WITH_MONARCH_eventPicture
-
 	is_triggered_only = yes
-
 	immediate = {
 		hidden_effect = {
 			if = {
-				limit = { NOT = { tag = NED }}
+				limit = {
+					NOT = {
+						tag = NED
+					}
+				}
 				define_exiled_ruler = {
 					dynasty = "historic_dynasty"
 					exiled_as = "states_general_abolished_@ROOT"
@@ -1702,22 +1775,21 @@ country_event = {
 			}
 		}
 	}
-
 	after = {
 		clear_exiled_ruler = "states_general_abolished_@ROOT"
 	}
-
 	option = {
 		name = "dutch_republic.33.a"
 		trigger = {
 			exiled_same_dynasty_as_current = "states_general_abolished_@ROOT"
 		}
 	}
-
 	option = {
 		name = "dutch_republic.33.b"
 		trigger = {
-			NOT = { exiled_same_dynasty_as_current = "states_general_abolished_@ROOT" }
+			NOT = {
+				exiled_same_dynasty_as_current = "states_general_abolished_@ROOT"
+			}
 		}
 		set_ruler = "states_general_abolished_@ROOT"
 	}

@@ -13,9 +13,17 @@ country_event = {
 		is_colonial_nation = no
 		NOT = {
 			has_country_modifier = recent_liaising_advisor_timer
+		}
+		NOT = {
 			has_country_flag = advisor_events_adm
+		}
+		NOT = {
 			has_country_flag = advisor_events_dip
+		}
+		NOT = {
 			has_country_flag = advisor_events_mil
+		}
+		NOT = {
 			has_regency = yes
 		}
 		any_known_country = {
@@ -153,7 +161,8 @@ country_event = {
 								who = root
 								value = 25
 							}
-						}						#traitor chain makes no sense if they are friendly to you
+						}
+						#traitor chain makes no sense if they are friendly to you
 					}
 					OR = {
 						AND = {
@@ -1749,8 +1758,14 @@ country_event = {
 	trigger = {
 		NOT = {
 			has_country_modifier = has_recent_advisor_corruption_timer
+		}
+		NOT = {
 			has_country_flag = advisor_events_adm
+		}
+		NOT = {
 			has_country_flag = advisor_events_dip
+		}
+		NOT = {
 			has_country_flag = advisor_events_mil
 		}
 		is_at_war = no
@@ -2360,7 +2375,11 @@ country_event = {
 	trigger = {
 		NOT = {
 			has_country_flag = advisor_events_adm
+		}
+		NOT = {
 			has_country_flag = advisor_events_dip
+		}
+		NOT = {
 			has_country_flag = advisor_events_mil
 		}
 		is_at_war = yes
@@ -2507,8 +2526,14 @@ country_event = {
 	trigger = {
 		NOT = {
 			has_country_modifier = recent_advisor_culture_benefits_timer
+		}
+		NOT = {
 			has_country_flag = advisor_events_adm
+		}
+		NOT = {
 			has_country_flag = advisor_events_dip
+		}
+		NOT = {
 			has_country_flag = advisor_events_mil
 		}
 		OR = {
@@ -2724,7 +2749,11 @@ country_event = {
 	trigger = {
 		NOT = {
 			has_country_flag = advisor_events_adm
+		}
+		NOT = {
 			has_country_flag = advisor_events_dip
+		}
+		NOT = {
 			has_country_flag = advisor_events_mil
 		}
 		is_at_war = yes
@@ -3152,8 +3181,14 @@ country_event = {
 		is_colonial_nation = no
 		NOT = {
 			has_country_modifier = recent_liaising_advisor_timer
+		}
+		NOT = {
 			has_country_flag = advisor_events_adm
+		}
+		NOT = {
 			has_country_flag = advisor_events_dip
+		}
+		NOT = {
 			has_country_flag = advisor_events_mil
 		}
 		any_known_country = {
@@ -3506,11 +3541,19 @@ country_event = {
 		any_rival_country = {
 			NOT = {
 				has_country_modifier = recent_exiled_advisor_timer
+			}
+			NOT = {
 				war_with = root
+			}
+			NOT = {
 				is_subject_of = root
+			}
+			NOT = {
 				root = {
 					is_subject_of = prev
 				}
+			}
+			NOT = {
 				has_opinion_modifier = {
 					who = root
 					modifier = opinion_took_in_exiles
@@ -3534,11 +3577,19 @@ country_event = {
 				limit = {
 					NOT = {
 						has_country_modifier = recent_exiled_advisor_timer
+					}
+					NOT = {
 						war_with = root
+					}
+					NOT = {
 						is_subject_of = root
+					}
+					NOT = {
 						root = {
 							is_subject_of = prev
 						}
+					}
+					NOT = {
 						has_opinion_modifier = {
 							who = root
 							modifier = opinion_took_in_exiles
@@ -3952,8 +4003,14 @@ country_event = {
 			is_subject = no
 			NOT = {
 				has_country_modifier = recent_papal_advisor_demand_timer
+			}
+			NOT = {
 				has_country_flag = advisor_events_adm
+			}
+			NOT = {
 				has_country_flag = advisor_events_dip
+			}
+			NOT = {
 				has_country_flag = advisor_events_mil
 			}
 			NOT = {
@@ -3986,8 +4043,14 @@ country_event = {
 					}
 					NOT = {
 						has_country_modifier = recent_papal_advisor_demand_timer
+					}
+					NOT = {
 						has_country_flag = advisor_events_adm
+					}
+					NOT = {
 						has_country_flag = advisor_events_dip
+					}
+					NOT = {
 						has_country_flag = advisor_events_mil
 					}
 					NOT = {

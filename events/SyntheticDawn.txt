@@ -1,21 +1,22 @@
 namespace = synthetic_dawn
-
 # Synthetics!
 country_event = {
 	id = synthetic_dawn.1
 	title = synthetic_dawn.1.t
 	desc = synthetic_dawn.1.d
 	picture = SYNTHETICS_eventPicture
-	
 	trigger = {
-		NOT = { tag = SYN }
+		NOT = {
+			tag = SYN
+		}
 		any_province = {
 			owned_by = SYN
 			has_discovered = ROOT
 		}
-		NOT = { has_country_flag = discovered_synthetics }
+		NOT = {
+			has_country_flag = discovered_synthetics
+		}
 	}
-	
 	mean_time_to_happen = {
 		months = 1
 	}
@@ -39,17 +40,20 @@ country_event = {
 	title = synthetic_dawn.2.t
 	desc = synthetic_dawn.2.d
 	picture = SYNTHETICS_eventPicture
-	
 	trigger = {
 		has_global_flag = synthetics_discovered_global
 		has_country_flag = discovered_synthetics
-		NOT = { tag = SYN }
+		NOT = {
+			tag = SYN
+		}
 		any_owned_province = {
 			any_neighbor_province = {
 				owned_by = SYN
 			}
 		}
-		NOT = { has_country_flag = bordered_synthetics }
+		NOT = {
+			has_country_flag = bordered_synthetics
+		}
 	}
 	mean_time_to_happen = {
 		months = 1
@@ -66,16 +70,17 @@ country_event = {
 	title = synthetic_dawn.3.t
 	desc = synthetic_dawn.3.d
 	picture = SYNTHETICS_eventPicture
-	
 	major = yes
-	
 	fire_only_once = yes
-	
 	trigger = {
 		has_global_flag = synthetics_discovered_global
 		has_country_flag = bordered_synthetics
-		NOT = { tag = SYN }
-		NOT = { exists = SYN }
+		NOT = {
+			tag = SYN
+		}
+		NOT = {
+			exists = SYN
+		}
 	}
 	option = {
 		name = "synthetic_dawn.3.a"
@@ -92,12 +97,15 @@ province_event = {
 		trigger = {
 			NOT = {
 				province_id = 118
+			}
+			NOT = {
 				owned_by = PAP
 			}
 		}
 		desc = synthetic_dawn.4.d
 	}
-	desc = { # stand of the swiss guard
+	desc = {
+		# stand of the swiss guard
 		trigger = {
 			province_id = 118
 			owned_by = PAP
@@ -105,18 +113,17 @@ province_event = {
 		desc = synthetic_dawn.4.d2
 	}
 	picture = SYNTHETICS_eventPicture
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		owner = {
-			NOT = { tag = SYN }
+			NOT = {
+				tag = SYN
+			}
 		}
 		controller = {
 			tag = SYN
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			cede_province = SYN
@@ -178,14 +185,13 @@ country_event = {
 	title = synthetic_dawn.5.t
 	desc = synthetic_dawn.5.d
 	picture = TEMPORAL_RIFT_eventPicture
-	
 	major = yes
-	
 	fire_only_once = yes
-	
 	trigger = {
 		has_dlc = "Star and Crescent"
-		NOT = { tag = SYN }
+		NOT = {
+			tag = SYN
+		}
 		has_country_flag = discovered_synthetics
 		religion = mesoamerican_religion
 	}
@@ -207,5 +213,5 @@ country_event = {
 				duration = -1
 			}
 		}
-	}	
+	}
 }

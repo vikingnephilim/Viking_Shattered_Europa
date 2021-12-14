@@ -3,20 +3,15 @@
 #
 # written by Henrik Lohmander
 ########################################
-
 namespace = flavor_ori
 normal_or_historical_nations = yes
-
-
 # The Gajapatis and the Cult of Jagganath
 country_event = {
 	id = flavor_ori.1
 	title = flavor_ori.1.t
 	desc = flavor_ori.1.d
 	picture = GOOD_WITH_MONARCH_eventPicture
-	
 	fire_only_once = yes
-
 	trigger = {
 		OR = {
 			has_country_flag = ori_jagannath_mission_flag
@@ -25,41 +20,44 @@ country_event = {
 					has_mission = ori_jagannath_mission
 				}
 				dynasty = "Gajapati"
-				owns = 552 #Puri
-				NOT = { is_year = 1560 }
+				owns = 552				#Puri
+				NOT = {
+					is_year = 1560
+				}
 				tag = ORI
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 348
 	}
-	
-	
-	option = { 
-		name = flavor_ori.1.a 
+	option = {
+		name = flavor_ori.1.a
 		trigger = {
 			NOT = {
 				has_country_flag = ori_jagannath_mission_flag
 			}
 		}
-		ai_chance = { factor = 90 }
-		add_years_of_income = -0.1	#Temple donations
+		ai_chance = {
+			factor = 90
+		}
+		add_years_of_income = -0.1		#Temple donations
 		add_country_modifier = {
 			name = ori_jagannath_cult
 			duration = -1
 		}
 	}
 	option = {
-		name = flavor_ori.1.b 
+		name = flavor_ori.1.b
 		trigger = {
 			NOT = {
 				has_country_flag = ori_jagannath_mission_flag
 			}
 		}
-		ai_chance = { factor = 10 }
-		add_stability_or_adm_power = yes #From keeping the status quo and supporting other deities.
+		ai_chance = {
+			factor = 10
+		}
+		add_stability_or_adm_power = yes		#From keeping the status quo and supporting other deities.
 	}
 	option = {
 		name = flavor_ori.1.a
@@ -71,9 +69,8 @@ country_event = {
 			duration = -1
 		}
 	}
-	
 }
-	
+
 # Abolishment of the Salt Tax
 country_event = {
 	id = flavor_ori.2
@@ -81,21 +78,21 @@ country_event = {
 	desc = flavor_ori.2.d
 	picture = FARMING_eventPicture
 	fire_only_once = yes
-
 	trigger = {
 		tag = ORI
 		has_ruler = "Kapilendra"
-		not = { is_year = 1466 }
+		not = {
+			is_year = 1466
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 66
 	}
-	
-	
-	option = { 
+	option = {
 		name = flavor_ori.2.a
-		ai_chance = { factor = 95 }
+		ai_chance = {
+			factor = 95
+		}
 		add_years_of_income = -0.1
 		add_country_modifier = {
 			name = ori_no_salt_tax
@@ -103,15 +100,16 @@ country_event = {
 		}
 	}
 	option = {
-		name = flavor_ori.2.b	
-		ai_chance = { factor = 5 }
+		name = flavor_ori.2.b
+		ai_chance = {
+			factor = 5
+		}
 		add_years_of_income = 0.1
 		add_country_modifier = {
 			name = ori_popular_unrest
 			duration = 3650
 		}
 	}
-	
 }
 
 # Death of Kapilendra
@@ -121,21 +119,20 @@ country_event = {
 	desc = flavor_ori.3.d
 	picture = KING_SICK_IN_BED_eventPicture
 	fire_only_once = yes
-
 	trigger = {
 		tag = ORI
 		is_year = 1460
-		NOT = { is_year = 1470 }
+		NOT = {
+			is_year = 1470
+		}
 		has_ruler = "Kapilendra"
-		num_of_cities = 9 #There has to be a kingdom to fight over.
-		owns = 543 #Must control atleast the northern coast of Andhra
-		owns = 2084 #Must control atleast the northern coast of Andhra
+		num_of_cities = 9		#There has to be a kingdom to fight over.
+		owns = 543		#Must control atleast the northern coast of Andhra
+		owns = 2084		#Must control atleast the northern coast of Andhra
 	}
-
 	mean_time_to_happen = {
 		months = 30
 	}
-	
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
@@ -149,7 +146,9 @@ country_event = {
 				limit = {
 					is_capital = no
 					culture = telegu
-					NOT = { has_province_flag = ori_center_of_hamviras_revolt }
+					NOT = {
+						has_province_flag = ori_center_of_hamviras_revolt
+					}
 				}
 				set_province_flag = ori_hamviras_revolt
 			}
@@ -163,43 +162,76 @@ country_event = {
 				limit = {
 					is_capital = no
 					culture = oriya
-					NOT = { has_province_flag = ori_center_of_puroshottama_revolt }
+					NOT = {
+						has_province_flag = ori_center_of_puroshottama_revolt
+					}
 				}
 				set_province_flag = ori_puroshottama_revolt
 			}
 		}
 	}
-	
 	option = {
-		name = flavor_ori.3.a	#Purushottama
-		ai_chance = { factor = 95 }
+		name = flavor_ori.3.a		#Purushottama
+		ai_chance = {
+			factor = 95
+		}
 		hidden_effect = {
-			kill_heir = { allow_new_heir = no }
+			kill_heir = {
+				allow_new_heir = no
+			}
 			every_neighbor_country = {
 				limit = {
-					NOT = { tag = BAH }
+					NOT = {
+						tag = BAH
+					}
 				}
-			country_event = { id = flavor_ori.4 }
+				country_event = {
+					id = flavor_ori.4
+				}
 			}
 			if = {
 				limit = {
 					OR = {
-						2028 = { owned_by = BAH }
-						542 = { owned_by = BAH }
-						2037 = { owned_by = BAH }
+						2028 = {
+							owned_by = BAH
+						}
+						542 = {
+							owned_by = BAH
+						}
+						2037 = {
+							owned_by = BAH
+						}
 					}
 				}
-				BAH = { country_event = { id = flavor_ori.5 } }
+				BAH = {
+					country_event = {
+						id = flavor_ori.5
+					}
+				}
 			}
 			if = {
 				limit = {
 					NOT = {
-						2028 = { owned_by = BAH }
-						542 = { owned_by = BAH }
-						2037 = { owned_by = BAH }
+						2028 = {
+							owned_by = BAH
+						}
+					}
+					NOT = {
+						542 = {
+							owned_by = BAH
+						}
+					}
+					NOT = {
+						2037 = {
+							owned_by = BAH
+						}
 					}
 				}
-				BAH = { country_event = { id = flavor_ori.4 } }
+				BAH = {
+					country_event = {
+						id = flavor_ori.4
+					}
+				}
 			}
 		}
 		define_ruler = {
@@ -238,12 +270,17 @@ country_event = {
 		custom_tooltip = flavor_ori.3.a.tt
 	}
 	option = {
-		name = flavor_ori.3.b	#Hamvira
-		ai_chance = { factor = 5 }
+		name = flavor_ori.3.b		#Hamvira
+		ai_chance = {
+			factor = 5
+		}
 		hidden_effect = {
-			kill_heir = {}
+			kill_heir = {
+			}
 			every_neighbor_country = {
-				country_event = { id = flavor_ori.4 }
+				country_event = {
+					id = flavor_ori.4
+				}
 			}
 		}
 		define_ruler = {
@@ -289,14 +326,9 @@ country_event = {
 	desc = flavor_ori.4.d
 	picture = KING_SICK_IN_BED_eventPicture
 	is_triggered_only = yes
-
-	
-	
-	option = { 
-		name = flavor_ori.4.a	#Ok
-		
+	option = {
+		name = flavor_ori.4.a		#Ok
 	}
-	
 }
 
 # Hamviras Offer
@@ -305,12 +337,9 @@ country_event = {
 	title = flavor_ori.5.t
 	desc = flavor_ori.5.d
 	picture = CIVIL_WAR_eventPicture
-
 	is_triggered_only = yes
-
-	
-	option = { 
-		name = flavor_ori.5.a	#Send troops and Money
+	option = {
+		name = flavor_ori.5.a		#Send troops and Money
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -319,10 +348,14 @@ country_event = {
 			}
 		}
 		add_years_of_income = -0.15
-		ORI = { country_event = { id = flavor_ori.6 } }
+		ORI = {
+			country_event = {
+				id = flavor_ori.6
+			}
+		}
 	}
 	option = {
-		name = flavor_ori.5.b	#Avoid involvement
+		name = flavor_ori.5.b		#Avoid involvement
 		ai_chance = {
 			factor = 50
 			modifier = {
@@ -346,12 +379,9 @@ country_event = {
 	desc = flavor_ori.6.d
 	picture = LAND_MILITARY_eventPicture
 	fire_only_once = yes
-
 	is_triggered_only = yes
-	
-	
-	option = { 
-		name = flavor_ori.6.a	#Ok
+	option = {
+		name = flavor_ori.6.a		#Ok
 		random_owned_province = {
 			limit = {
 				has_province_flag = ori_center_of_hamviras_revolt
@@ -385,11 +415,15 @@ country_event = {
 	picture = LAND_MILITARY_eventPicture
 	fire_only_once = yes
 	is_triggered_only = yes
-
 	trigger = {
 		tag = ORI
 		has_country_flag = ori_hamviras_offer_happened
-		NOT = { had_country_flag = { flag = ori_hamviras_offer_happened days = 7300 } } #Offer expired
+		NOT = {
+			had_country_flag = {
+				flag = ori_hamviras_offer_happened
+				days = 7300
+			}
+		}		#Offer expired
 		has_ruler = "Hamvira"
 		dynasty = "Gajapati"
 		OR = {
@@ -398,9 +432,8 @@ country_event = {
 			owns = 2084
 		}
 	}
-	
 	option = {
-		name = flavor_ori.7.a	#This isn't good.
+		name = flavor_ori.7.a		#This isn't good.
 		tooltip = {
 			every_owned_province = {
 				limit = {
@@ -413,9 +446,12 @@ country_event = {
 				cede_province = BAH
 			}
 		}
-		BAH = { country_event = { id = flavor_ori.8 } }
+		BAH = {
+			country_event = {
+				id = flavor_ori.8
+			}
+		}
 	}
-	
 }
 
 # Hamvira pays his debts
@@ -425,11 +461,9 @@ country_event = {
 	desc = flavor_ori.8.d
 	picture = CITY_VIEW_eventPicture
 	fire_only_once = yes
-
 	is_triggered_only = yes
-	
 	option = {
-		name = flavor_ori.8.a	#Great!
+		name = flavor_ori.8.a		#Great!
 		ORI = {
 			every_owned_province = {
 				limit = {
@@ -443,7 +477,6 @@ country_event = {
 			}
 		}
 	}
-	
 }
 
 # Removes Jagannath modifier if Gajaptis no longer rules Orissa
@@ -453,26 +486,23 @@ country_event = {
 	desc = flavor_ori.9.d
 	picture = RELIGION_eventPicture
 	fire_only_once = yes
-
 	trigger = {
 		tag = ORI
-		NOT = { dynasty = "Gajapati" }
+		NOT = {
+			dynasty = "Gajapati"
+		}
 		has_country_modifier = ori_jagannath_cult
 		NOT = {
 			has_country_flag = ori_jagannath_mission_flag
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 12
 	}
-	
-	
-	option = { 
-		name = flavor_ori.9.a	#This isn't good.
+	option = {
+		name = flavor_ori.9.a		#This isn't good.
 		remove_country_modifier = ori_jagannath_cult
 	}
-	
 }
 
 #Birth of Oriya Literature
@@ -482,19 +512,17 @@ country_event = {
 	desc = flavor_ori.10.d
 	picture = RELIGION_eventPicture
 	fire_only_once = yes
-
 	trigger = {
 		tag = ORI
-		NOT = { is_year = 1467 }
+		NOT = {
+			is_year = 1467
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 69
 	}
-	
-	
-	option = { 
-		name = flavor_ori.10.a	#Ok.
+	option = {
+		name = flavor_ori.10.a		#Ok.
 		add_adm_power = 25
 		add_prestige = 15
 		add_meritocracy_effect = yes
@@ -507,7 +535,6 @@ country_event = {
 			skill = 2
 		}
 	}
-	
 }
 
 #Mahapurusha Achyutananda
@@ -517,20 +544,19 @@ country_event = {
 	desc = flavor_ori.11.d
 	picture = RELIGION_eventPicture
 	fire_only_once = yes
-
 	trigger = {
 		tag = ORI
 		owns = 552
 		is_year = 1475
-		NOT = { is_year = 1540 }
+		NOT = {
+			is_year = 1540
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 195
 	}
-	
-	option = { 
-		name = flavor_ori.11.a	#Ok.
+	option = {
+		name = flavor_ori.11.a		#Ok.
 		add_prestige = 15
 		add_adm_power = 25
 		add_meritocracy_effect = yes
@@ -543,5 +569,4 @@ country_event = {
 			skill = 3
 		}
 	}
-	
 }

@@ -11,12 +11,18 @@ country_decisions = {
 			1224 = {
 				NOT = {
 					has_province_modifier = city_of_the_kings
+				}
+				NOT = {
 					owner = {
 						alliance_with = ROOT
 					}
+				}
+				NOT = {
 					owner = {
 						is_subject_of = ROOT
 					}
+				}
+				NOT = {
 					owner = {
 						overlord_of = ROOT
 					}
@@ -65,6 +71,8 @@ country_decisions = {
 				is_free_or_tributary_trigger = yes
 				NOT = {
 					alliance_with = ROOT
+				}
+				NOT = {
 					overlord_of = ROOT
 				}
 			}
@@ -103,12 +111,18 @@ country_decisions = {
 			2284 = {
 				NOT = {
 					has_province_flag = JAP_manga_recovered
+				}
+				NOT = {
 					owner = {
 						alliance_with = ROOT
 					}
+				}
+				NOT = {
 					owner = {
 						is_subject_of = ROOT
 					}
+				}
+				NOT = {
 					owner = {
 						overlord_of = ROOT
 					}

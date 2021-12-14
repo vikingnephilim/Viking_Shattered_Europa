@@ -157,7 +157,8 @@ country_event = {
 		}
 		NOT = {
 			has_reform = ottoman_government
-		}		#Not from nobility
+		}
+		#Not from nobility
 		NOT = {
 			has_ruler_flag = has_lowborn_consort
 		}
@@ -428,7 +429,8 @@ country_event = {
 					limit = {
 						NOT = {
 							army_tradition = 50
-						}						#Fallback
+						}
+						#Fallback
 					}
 					custom_tooltip = consort_events.3.a.tt.6b
 					add_corruption = 1
@@ -450,10 +452,12 @@ country_event = {
 					limit = {
 						NOT = {
 							num_of_ports = 5
-						}						#fallback
+						}
+						#fallback
 						NOT = {
 							navy_tradition = 50
-						}						#fallback
+						}
+						#fallback
 					}
 					custom_tooltip = consort_events.3.a.tt.6b
 					add_corruption = 1
@@ -833,7 +837,8 @@ country_event = {
 					limit = {
 						NOT = {
 							army_tradition = 50
-						}						#Fallback
+						}
+						#Fallback
 					}
 					custom_tooltip = consort_events.3.a.tt.6b
 					add_corruption = 1
@@ -855,10 +860,12 @@ country_event = {
 					limit = {
 						NOT = {
 							num_of_ports = 5
-						}						#fallback
+						}
+						#fallback
 						NOT = {
 							navy_tradition = 50
-						}						#fallback
+						}
+						#fallback
 					}
 					custom_tooltip = consort_events.3.a.tt.6b
 					add_corruption = 1
@@ -1305,7 +1312,11 @@ country_event = {
 		trigger = {
 			NOT = {
 				has_ruler_flag = high_adm
+			}
+			NOT = {
 				has_ruler_flag = high_dip
+			}
+			NOT = {
 				has_ruler_flag = high_mil
 			}
 		}
@@ -1522,7 +1533,11 @@ country_event = {
 		trigger = {
 			NOT = {
 				has_ruler_flag = high_adm
+			}
+			NOT = {
 				has_ruler_flag = high_dip
+			}
+			NOT = {
 				has_ruler_flag = high_mil
 			}
 		}

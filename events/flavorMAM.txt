@@ -16,15 +16,18 @@ country_event = {
 		tag = MAM
 		NOT = {
 			is_rival = TUR
-		}		#Ottomans are not our rival.
+		}
+		#Ottomans are not our rival.
 		TUR = {
 			owns = 151
-		}		#Constantinople
+		}
+		#Constantinople
 		151 = {
 			NOT = {
 				months_since_defection = 24
 			}
-		}		#within 2 years.
+		}
+		#within 2 years.
 	}
 	mean_time_to_happen = {
 		months = 7
@@ -513,7 +516,8 @@ country_event = {
 		}
 		NOT = {
 			num_of_light_ship = POR
-		}		# we have to have less lightships.
+		}
+		# we have to have less lightships.
 	}
 	mean_time_to_happen = {
 		months = 3
@@ -618,9 +622,13 @@ country_event = {
 			PER = {
 				alliance_with = TUR
 			}
+		}
+		NOT = {
 			VEN = {
 				alliance_with = TUR
 			}
+		}
+		NOT = {
 			MAM = {
 				alliance_with = TUR
 			}

@@ -14,7 +14,10 @@ country_decisions = {
 			NOT = {
 				exists = MSA
 			}
-			culture_group = malay
+			OR = {
+				culture_group = malay
+				culture_group = north_malay
+			}
 			NOT = {
 				has_reform = steppe_horde
 			}
