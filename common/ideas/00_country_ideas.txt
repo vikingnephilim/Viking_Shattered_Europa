@@ -17397,10 +17397,7 @@ OIR_ideas = {
 		leader_land_shock = 1
 	}
 	trigger = {
-		OR = {
-			tag = OIR
-			tag = ZUN
-		}
+		tag = OIR
 	}
 	free = yes
 	fearsome_warriors_of_tumu = {
@@ -17499,6 +17496,41 @@ ZUN_ideas = {
 	}
 	take_the_throne_of_the_steppe = {
 		manpower_recovery_speed = 0.1
+	}
+}
+
+ZNB_ideas = {
+	start = {
+		defensiveness = 0.2
+		global_spy_defence = 0.1
+	}
+	bonus = {
+		prestige = 1
+	}
+	trigger = {
+		tag = ZNB
+	}
+	free = yes
+	ZNB_festivals_and_ceremonies_zunbils = {
+		stability_cost_modifier = -0.1
+	}
+	ZNB_hindu_kush_mountains = {
+		hostile_attrition = 1
+	}
+	ZNB_hephthalite_lineage = {
+		legitimacy = 1
+	}
+	ZNB_religious_syncretism_zunbils = {
+		tolerance_heathen = 2
+	}
+	ZNB_silk_road_zunbils = {
+		caravan_power = 0.2
+	}
+	ZNB_gatekeepers_of_india = {
+		enemy_core_creation = 0.5
+	}
+	ZNB_hit_and_run_tactics_zunbils = {
+		leader_land_shock = 1
 	}
 }
 
@@ -18396,41 +18428,6 @@ YZD_ideas = {
 	}
 	uniting_persia = {
 		discipline = 0.05
-	}
-}
-
-ZUN_ideas = {
-	start = {
-		defensiveness = 0.2
-		global_spy_defence = 0.1
-	}
-	bonus = {
-		prestige = 1
-	}
-	trigger = {
-		tag = ZUN
-	}
-	free = yes
-	ZUN_festivals_and_ceremonies_zunbils = {
-		stability_cost_modifier = -0.1
-	}
-	ZUN_hindu_kush_mountains = {
-		hostile_attrition = 1
-	}
-	ZUN_hephthalite_lineage = {
-		legitimacy = 1
-	}
-	ZUN_religious_syncretism_zunbils = {
-		tolerance_heathen = 2
-	}
-	ZUN_silk_road_zunbils = {
-		caravan_power = 0.2
-	}
-	ZUN_gatekeepers_of_india = {
-		enemy_core_creation = 0.5
-	}
-	ZUN_hit_and_run_tactics_zunbils = {
-		leader_land_shock = 1
 	}
 }
 
@@ -32661,7 +32658,7 @@ SIN_ideas = {
 
 MZQ_ideas = {
 	start = {
-		stability_cost_modifier = -0.10
+		stability_cost_modifier = -0.1
 		advisor_cost = -0.1
 	}
 	bonus = {
@@ -32910,7 +32907,6 @@ TAK_ideas = {
 		defensiveness = 0.15
 	}
 }
-
 
 TAN_ideas = {
 	start = {
@@ -33264,5 +33260,295 @@ AWN_ideas = {
 	}
 	aborig_art = {
 		prestige = 1
+	}
+}
+
+BEU_ideas = {
+	start = {
+		religious_unity = 0.2
+		missionaries = 1
+	}
+	bonus = {
+		global_heathen_missionary_strength = 0.02
+	}
+	trigger = {
+		tag = BEU
+	}
+	free = yes
+	BEU_thirteen_districts = {
+		stability_cost_modifier = -0.1
+	}
+	BEU_kalimantan = {
+		production_efficiency = 0.15
+	}
+	BEU_wood = {
+		build_cost = -0.2
+		build_time = -0.2
+	}
+	BEU_fisheries = {
+		merchants = 1
+	}
+	BEU_borneo_culture = {
+		num_accepted_cultures = 4
+	}
+	BEU_borneo_language = {
+		same_culture_advisor_cost = -0.25
+	}
+	BEU_Islamic_adoption = {
+		tolerance_own = 2
+		tolerance_of_heathens_capacity = 2
+	}
+}
+
+TER_ideas = {
+	start = {
+		ship_durability = 0.2
+		range = 0.25
+	}
+	bonus = {
+		own_coast_naval_combat_bonus = 1
+	}
+	trigger = {
+		tag = TER
+	}
+	free = yes
+	TER_majapahit_contact = {
+		global_trade_power = 0.2
+	}
+	TER_four_divisions = {
+		state_maintenance_modifier = -0.15
+	}
+	TER_fast_ships = {
+		light_ship_cost = -0.1
+		light_ship_power = 0.1
+	}
+	TER_powerful_sailors = {
+		global_sailors_modifier = 0.25
+	}
+	TER_standardised_trade = {
+		merchants = 1
+	}
+	TER_Islamic_adoption = {
+		tolerance_own = 2
+		tolerance_of_heathens_capacity = 2
+	}
+	TER_clove_production = {
+		production_efficiency = 0.15
+	}
+}
+
+TID_ideas = {
+	start = {
+		global_sailors_modifier = 0.25
+		global_trade_power = 0.2
+	}
+	bonus = {
+		light_ship_cost = -0.1
+	}
+	trigger = {
+		tag = TID
+	}
+	free = yes
+	TID_duko = {
+		stability_cost_modifier = -0.2
+	}
+	TID_four_divisions = {
+		state_maintenance_modifier = -0.15
+	}
+	TID_trade_centre = {
+		center_of_trade_upgrade_cost = -0.25
+	}
+	TID_powerful_sailors = {
+		own_coast_naval_combat_bonus = 1
+	}
+	TID_tidore_soa = {
+		global_unrest = -2
+	}
+	TID_Islamic_adoption = {
+		tolerance_own = 2
+		global_missionary_strength = 0.02
+	}
+	TID_clove_production = {
+		production_efficiency = 0.15
+	}
+}
+
+BNE_ideas = {
+	start = {
+		vassal_forcelimit_bonus = 1
+		improve_relation_modifier = 0.25
+	}
+	bonus = {
+		production_efficiency = 0.125
+	}
+	trigger = {
+		tag = BNE
+	}
+	free = yes
+	BNE_seven_ministers = {
+		advisor_cost = -0.1
+	}
+	BNE_tellu_bocco_treaty = {
+		diplomatic_reputation = 1
+		diplomatic_upkeep = 1
+	}
+	BNE_buginese_heritage = {
+		range = 0.25
+	}
+	BNE_spice_trade = {
+		trade_efficiency = 0.15
+	}
+	BNE_tedduo_nawa = {
+		stability_cost_modifier = -0.1
+	}
+	BNE_court_bissu = {
+		church_loyalty_modifier = 0.15
+		global_missionary_strength = 0.015
+	}
+	BNE_foreign_pact = {
+		mil_tech_cost_modifier = -0.15
+	}
+}
+
+GRJ_ideas = {
+	start = {
+		vassal_forcelimit_bonus = 1
+		improve_relation_modifier = 0.25
+	}
+	bonus = {
+		production_efficiency = 0.125
+	}
+	trigger = {
+		tag = GRJ
+	}
+	free = yes
+	GRJ_ancient_mandalas = {
+		improve_relation_modifier = 0.25
+	}
+	GRJ_tribal_feudatories = {
+		vassal_forcelimit_bonus = 1
+		vassal_income = 0.2
+	}
+	GRJ_extend_tanks_and_reservoirs = {
+		production_efficiency = 0.125
+	}
+	GRJ_jungle_warfare = {
+		movement_speed = 0.1
+	}
+	GRJ_jagannath_cult = {
+		religious_unity = 0.5
+	}
+	GRJ_military_prowess = {
+		mil_tech_cost_modifier = -0.15
+	}
+	GRJ_patronize_economic_growth = {
+		merchants = 1
+		trade_steering = 0.15
+	}
+}
+
+FRO_ideas = {
+	start = {
+		global_missionary_strength = 0.02
+		naval_morale = 0.2
+	}
+	bonus = {
+		state_maintenance_modifier = -0.15
+	}
+	trigger = {
+		tag = FRO
+	}
+	free = yes
+	fro_brave_warriors = {
+		land_morale = 0.15
+	}
+	fro_notorius_pirates = {
+		capture_ship_chance = 0.4
+	}
+	fro_religious_tolerance = {
+		religious_unity = 0.2
+	}
+	fro_plunder_and_pillage = {
+		loot_amount = 0.4
+	}
+	fro_masters_of_the_sea = {
+		navy_tradition = 1
+	}
+	fro_odins_wrath = {
+		warscore_cost_vs_other_religion = -0.25
+	}
+	fro_songs_and_sagas = {
+		war_exhaustion = -0.1
+	}
+}
+
+OKN_ideas = {
+	start = {
+		galley_power = 0.1
+		prestige_from_naval = 1
+	}
+	bonus = {
+		global_ship_cost = -0.2
+	}
+	trigger = {
+		tag = OKN
+	}
+	free = yes
+	okn_coastal_trade = {
+		global_ship_trade_power = 0.2
+	}
+	okn_orkneyinga_saga = {
+		yearly_corruption = -0.1
+	}
+	okn_hardened_settlers = {
+		global_colonial_growth = 10
+	}
+	okn_refuge_for_the_jacobites = {
+		papal_influence = 1
+	}
+	okn_kingdom_of_the_isles = {
+		sunk_ship_morale_hit_recieved = -0.2
+	}
+	okn_sons_of_somerled = {
+		province_warscore_cost = -0.1
+	}
+	okn_norn_tongue = {
+		global_unrest = -2
+	}
+}
+
+ABA_ideas = {
+	start = {
+		war_exhaustion = -0.1
+		tolerance_own = 2
+	}
+	bonus = {
+		land_forcelimit_modifier = 0.33
+	}
+	trigger = {
+		tag = ABA
+	}
+	free = yes
+	aba_highland_charge = {
+		cavalry_shock = 0.15
+	}
+	aba_episcopalianism = {
+		warscore_cost_vs_other_religion = -0.25
+	}
+	aba_highland_clans = {
+		discipline = 0.05
+	}
+	aba_storm_the_castle = {
+		siege_ability = 0.15
+	}
+	aba_the_wallace = {
+		land_morale = 0.15
+	}
+	aba_arming_act = {
+		fire_damage = 0.1
+		leader_land_fire = 2
+	}
+	aba_ossian= {
+		global_unrest = -2
 	}
 }

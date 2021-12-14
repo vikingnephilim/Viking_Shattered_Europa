@@ -90,6 +90,7 @@ NDefines.NCountry.INNOVATIVENESS_DAYS_AFTER_FIRST_PICK_VIABLE = 90 -- How many d
 NDefines.NCountry.MIGRATORY_TRIBE_DEVASTATION_BURN = 5.0			-- How much devastation is burnt per month multiplied with development.
 NDefines.NCountry.MIGRATORY_TRIBE_DEVELOPMENT_PROGRESS = 0.05 		-- How much progress on development for each monthly tick
 NDefines.NCountry.MIGRATORY_TRIBE_DEVELOPMENT_OTHER_BONUS = 0.1	-- Bonus progress gained on development from burning someone else province.
+NDefines.NCountry.TECH_TIME_COST = 0.40
 NDefines.NMilitary.WARDEC_COBELLI_FOR_WARNINGS = 1
 NDefines.NReligion.CONSECRATE_PATRIARCH_THRESHOLD = 15 			--in development
 NDefines.NReligion.ORTHODOX_ICON_DURATION_MONTHS = 120

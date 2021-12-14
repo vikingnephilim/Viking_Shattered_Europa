@@ -12,9 +12,12 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		OR = {
+			tag = ICE
+			tag = FRO
 			AND = {
-				tag = ICE
-				NOT = { is_year = 1500 }
+				NOT = {
+					is_year = 1500
+				}
 				NOT = {
 					has_country_modifier = ice_old_colonies
 				}
@@ -32,6 +35,7 @@ country_event = {
 		}
 	}
 }
+
 # Trade with old Colonies
 country_event = {
 	id = flavor_ice.2
@@ -40,9 +44,14 @@ country_event = {
 	picture = ECONOMY_eventPicture
 	fire_only_once = yes
 	trigger = {
-		tag = ICE
+		OR = {
+			tag = ICE
+			tag = FRO
+		}
 		has_country_modifier = ice_old_colonies
-		NOT = { has_country_modifier = ice_trade_colonies }
+		NOT = {
+			has_country_modifier = ice_trade_colonies
+		}
 	}
 	mean_time_to_happen = {
 		months = 20
@@ -52,29 +61,123 @@ country_event = {
 		add_years_of_income = 2
 		if = {
 			limit = {
-				NOT = { has_completed_all_reforms_trigger = yes }
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
 			}
 			add_reform_progress_small_effect = yes
 			create_alliance = VIN
 			create_alliance = MRL
 		}
-		hidden_effect = {
-			sea_of_labrador_area = { discover_country = ICE }
-			gulf_of_st_lawrence_area = { discover_country = ICE }
-			hudson_bay_sea_area = { discover_country = ICE }
-			north_atlantic_area = { discover_country = ICE }
-			notre_dame_mountains_area = { discover_country = ICE }
-			greenland_area = { discover_country = ICE }
-			cote_nord_area = { discover_country = ICE }
-			great_woods_area = {  discover_country = ICE }
-			maine_area = { discover_country = ICE }
-			denmark_strait_area = { discover_country = ICE }
-			upper_acadia_area = { discover_country = ICE}
-			lower_acadia_area = { discover_country = ICE  }
-			massachusetts_bay_area = { discover_country = ICE }
-			newfoundland_area = { discover_country = ICE }
-			gulf_stream_area = { discover_country = ICE }
-			connecticut_valley_area = { discover_country = ICE }
+		IF = {
+			limit = {
+				tag = ICE
+			}
+			hidden_effect = {
+				sea_of_labrador_area = {
+					discover_country = ICE
+				}
+				gulf_of_st_lawrence_area = {
+					discover_country = ICE
+				}
+				hudson_bay_sea_area = {
+					discover_country = ICE
+				}
+				north_atlantic_area = {
+					discover_country = ICE
+				}
+				notre_dame_mountains_area = {
+					discover_country = ICE
+				}
+				greenland_area = {
+					discover_country = ICE
+				}
+				cote_nord_area = {
+					discover_country = ICE
+				}
+				great_woods_area = {
+					discover_country = ICE
+				}
+				maine_area = {
+					discover_country = ICE
+				}
+				denmark_strait_area = {
+					discover_country = ICE
+				}
+				upper_acadia_area = {
+					discover_country = ICE
+				}
+				lower_acadia_area = {
+					discover_country = ICE
+				}
+				massachusetts_bay_area = {
+					discover_country = ICE
+				}
+				newfoundland_area = {
+					discover_country = ICE
+				}
+				gulf_stream_area = {
+					discover_country = ICE
+				}
+				connecticut_valley_area = {
+					discover_country = ICE
+				}
+			}
+		}
+		IF= {
+			limit = {
+				tag = FRO
+			}
+			hidden_effect = {
+				sea_of_labrador_area = {
+					discover_country = FRO
+				}
+				gulf_of_st_lawrence_area = {
+					discover_country = FRO
+				}
+				hudson_bay_sea_area = {
+					discover_country = FRO
+				}
+				north_atlantic_area = {
+					discover_country = FRO
+				}
+				notre_dame_mountains_area = {
+					discover_country = FRO
+				}
+				greenland_area = {
+					discover_country = FRO
+				}
+				cote_nord_area = {
+					discover_country = FRO
+				}
+				great_woods_area = {
+					discover_country = FRO
+				}
+				maine_area = {
+					discover_country = FRO
+				}
+				denmark_strait_area = {
+					discover_country = FRO
+				}
+				upper_acadia_area = {
+					discover_country = FRO
+				}
+				lower_acadia_area = {
+					discover_country = FRO
+				}
+				massachusetts_bay_area = {
+					discover_country = FRO
+				}
+				newfoundland_area = {
+					discover_country = FRO
+				}
+				gulf_stream_area = {
+					discover_country = FRO
+				}
+				connecticut_valley_area = {
+					discover_country = FRO
+				}
+			}
 		}
 		add_country_modifier = {
 			name = ice_trade_colonies
@@ -87,6 +190,7 @@ country_event = {
 		set_country_flag = vinlanders_turned_away
 	}
 }
+
 # Norse Influx
 country_event = {
 	id = flavor_ice.3
@@ -95,10 +199,17 @@ country_event = {
 	picture = ADVISOR_eventPicture
 	fire_only_once = yes
 	trigger = {
+		OR = {
 		tag = ICE
+		tag = FRO
+		}
 		has_country_modifier = ice_trade_colonies
-		NOT = { has_country_flag = vinlanders_turned_away }
-		NOT = { is_year = 1471 }
+		NOT = {
+			has_country_flag = vinlanders_turned_away
+		}
+		NOT = {
+			is_year = 1491
+		}
 		OR = {
 			dip = 3
 			adm = 3
@@ -128,6 +239,7 @@ country_event = {
 		add_innovativeness_small_effect = yes
 	}
 }
+
 # Norse Conversion
 country_event = {
 	id = flavor_ice.4
@@ -136,11 +248,20 @@ country_event = {
 	picture = ST_PETERS_CHURCH_eventPicture
 	fire_only_once = yes
 	trigger = {
-		tag = ICE
+		OR = {
+			tag = ICE
+			tag = FRO
+		}
 		has_country_modifier = ice_norse_influx
-		NOT = {	has_country_flag = screw_pope }
-		NOT = { has_country_flag = hail_popeman }
-		NOT = { is_year = 1500 }
+		NOT = {
+			has_country_flag = screw_pope
+		}
+		NOT = {
+			has_country_flag = hail_popeman
+		}
+		NOT = {
+			is_year = 1500
+		}
 		OR = {
 			dip = 3
 			adm = 3
@@ -164,6 +285,7 @@ country_event = {
 		add_innovativeness_small_effect = yes
 	}
 }
+
 # Norwegians interested in Norse again
 country_event = {
 	id = flavor_ice.5
@@ -172,10 +294,15 @@ country_event = {
 	picture = ST_PETERS_CHURCH_eventPicture
 	fire_only_once = yes
 	trigger = {
-		tag = ICE
+		OR = {
+			tag = ICE
+			tag = FRO
+		}
 		has_country_modifier = ice_norse_influx
 		has_country_flag = screw_pope
-		NOT = { is_year = 1500 }
+		NOT = {
+			is_year = 1500
+		}
 		OR = {
 			dip = 3
 			adm = 3
