@@ -25,6 +25,14 @@ on_startup = {
 	}
 	if = {
 		limit = {
+			NOT = { has_global_flag = empire_of_china_dismantled_on_start_once }
+			NOT = { has_global_flag = empire_of_china_dismantled }
+		}
+		set_global_flag = empire_of_china_dismantled_on_start_once
+		set_global_flag = empire_of_china_dismantled
+	}
+	if = {
+		limit = {
 			is_emperor_of_china = yes
 		}
 		save_global_event_target_as = EmperorOfChina

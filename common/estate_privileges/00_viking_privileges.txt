@@ -1406,60 +1406,6 @@ estate_wartaxes = {
 	}
 }
 
-estate_patronage_of_the_arts = {
-	icon = privilege_build_jain_temple
-	max_absolutism = -5
-	loyalty = 0.05
-	influence = 0.05
-	is_valid = {
-		NOT = {
-			has_estate_privilege = estate_patronage_of_the_arts
-		}
-	}
-	can_select = {
-		NOT = {
-			has_estate_privilege = estate_patronage_of_the_arts
-		}
-	}
-	penalties = {
-		global_tax_modifier = -0.05
-	}
-	benefits = {
-		prestige = 0.5
-	}
-	on_granted = {
-		if = {
-			limit = {
-				prestige = 50
-			}
-			add_prestige = 10
-		}
-		else_if = {
-			limit = {
-				prestige = 0
-			}
-			add_prestige = 15
-		}
-		else_if = {
-			limit = {
-				prestige = -25
-			}
-			add_prestige = 20
-		}
-		else_if = {
-			limit = {
-				prestige = -50
-			}
-			add_prestige = 25
-		}
-		else = {
-			add_prestige = 30
-		}
-	}
-	ai_will_do = {
-		factor = 0
-	}
-}
 
 #DLC Privileges
 estate_supremacy_over_crown = {

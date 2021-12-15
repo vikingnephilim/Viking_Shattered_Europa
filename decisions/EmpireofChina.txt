@@ -4,7 +4,6 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			has_dlc = "Mandate of Heaven"
-			always = no			#Deprecated
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -17,6 +16,11 @@ country_decisions = {
 					is_former_colonial_nation = yes
 					ai = no
 				}
+			}
+			OR = {
+				culture_group = plains_east_asian
+				culture_group = mountain_east_asian
+				culture_group = east_asian
 			}
 			OR = {
 				religion_group = eastern
@@ -39,11 +43,12 @@ country_decisions = {
 			adm_power = 50
 			mil_power = 50
 			dip_power = 50
-			num_of_cities = 30
+			num_of_cities = 50
 			owns_core_province = 1816
 			owns_core_province = 1821
 			owns_core_province = 700
 			owns_core_province = 1836
+			owns_core_province = 667
 		}
 		effect = {
 			set_emperor_of_china = ROOT
@@ -57,6 +62,10 @@ country_decisions = {
 			add_adm_power = -50
 			add_dip_power = -50
 			add_mil_power = -50
+			add_government_reform = celestial_empire
+			hidden_effect = {
+				add_government_reform = celestial_empire
+			}
 		}
 		ai_will_do = {
 			factor = 1
