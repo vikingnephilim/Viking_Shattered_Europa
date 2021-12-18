@@ -5,7 +5,6 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			has_dlc = "Mandate of Heaven"
 			OR = {
-				ai = no
 				is_playing_custom_nation = no
 			}
 			is_emperor_of_china = no
@@ -27,6 +26,9 @@ country_decisions = {
 				religion_group = asian_pagan
 			}
 			has_global_flag = empire_of_china_dismantled
+			NOT = {
+				has_global_flag = eoc_created_in_game
+			}
 		}
 		allow = {
 			is_at_war = no
@@ -53,6 +55,7 @@ country_decisions = {
 		effect = {
 			set_emperor_of_china = ROOT
 			restore_country_name_effect = yes
+			clr_global_flag = empire_of_china_dismantled
 			if = {
 				limit = {
 					has_global_flag = empire_of_china_dismantled
@@ -66,6 +69,7 @@ country_decisions = {
 			hidden_effect = {
 				add_government_reform = celestial_empire
 			}
+			set_global_flag = eoc_created_in_game
 		}
 		ai_will_do = {
 			factor = 1

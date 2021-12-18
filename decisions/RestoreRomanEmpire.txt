@@ -138,7 +138,8 @@ country_decisions = {
 				}
 				country_event = {
 					id = ideagroups.1
-				}				#Swap Ideas
+				}
+				#Swap Ideas
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -246,7 +247,6 @@ country_decisions = {
 			}
 		}
 		effect = {
-
 			118 = {
 				move_capital_effect = yes
 			}
@@ -292,7 +292,8 @@ country_decisions = {
 				}
 				country_event = {
 					id = ideagroups.1
-				}				#Swap Ideas
+				}
+				#Swap Ideas
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -445,7 +446,8 @@ country_decisions = {
 				}
 				country_event = {
 					id = ideagroups.1
-				}				#Swap Ideas
+				}
+				#Swap Ideas
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -598,7 +600,8 @@ country_decisions = {
 				}
 				country_event = {
 					id = ideagroups.1
-				}				#Swap Ideas
+				}
+				#Swap Ideas
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -612,6 +615,69 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+	}
+	restore_papal_roman_empire = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			tag = PAP
+		}
+		provinces_to_highlight = {
+			superregion = europe_superregion
+			NOT = {
+				owned_by = ROOT
+			}
+		}
+		allow = {
+			europe_superregion = {
+				type = all
+				owned_by = ROOT
+			}
+			all_core_province = {
+				religion = catholic
+			}
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			118 = {
+				is_state = yes
+			}
+		}
+		effect = {
+			118 = {
+				move_capital_effect = yes
+			}
+			restore_country_name_effect = yes
+			every_owned_province = {
+				limit = {
+					OR = {
+						has_owner_accepted_culture = yes
+						has_owner_culture = yes
+					}
+				}
+				change_culture = roman
+			}
+			change_primary_culture = roman
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						is_part_of_hre = yes
+					}
+					set_in_empire = no
+				}
+			}
+			add_prestige = 100
+			add_core = 118
+			add_country_modifier = {
+				name = "catholic_europe_papacy"
+				duration = -1
+			}
+			override_country_name = PAP_Empire
+			set_country_flag = restored_rome_flag
+		}
+		ai_will_do = {
+			factor = 400
 		}
 	}
 }
