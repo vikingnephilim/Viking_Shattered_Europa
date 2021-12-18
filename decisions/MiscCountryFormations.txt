@@ -1,4 +1,187 @@
 country_decisions = {
+	pontic_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			NOT = {
+				has_country_flag = formed_pontus_flag
+			}
+			was_never_end_game_tag_trigger = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			capital_scope = {
+				OR = {
+					region = crimea_region
+					region = caucasia_region
+					region = anatolia_region
+					area = thrace_area
+					area = silistria_area
+				}
+			}
+			NOT = {
+				exists = PON
+			}
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				tag = TRE
+			}
+			NOT = {
+				tag = BYZ
+			}
+			NOT = {
+				tag = GRE
+			}
+			NOT = {
+				tag = MAC
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 159
+				province_id = 284
+				province_id = 285
+				province_id = 286
+				province_id = 287
+				province_id = 325
+				province_id = 328
+				province_id = 330
+				province_id = 462
+				province_id = 1756
+				province_id = 1764
+				province_id = 1846
+				province_id = 1856
+				province_id = 1974
+				province_id = 2195
+				province_id = 2196
+				province_id = 2304
+				province_id = 2410
+				province_id = 2447
+				province_id = 4315
+				province_id = 4706
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_free_or_tributary_trigger = yes
+			is_nomad = no
+			crimea_area = {
+				type = all
+				owned_by = ROOT
+			}
+			owns_core_province = 159
+			owns_core_province = 286
+			owns_core_province = 287
+			owns_core_province = 325
+			owns_core_province = 328
+			owns_core_province = 330
+			owns_core_province = 462
+			owns_core_province = 1756
+			owns_core_province = 1764
+			owns_core_province = 1846
+			owns_core_province = 1856
+			owns_core_province = 1974
+			owns_core_province = 2195
+			owns_core_province = 2196
+			owns_core_province = 2304
+			owns_core_province = 4315
+			owns_core_province = 4706
+		}
+		effect = {
+			change_tag = PON
+			restore_country_name_effect = yes
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						government = monarchy
+					}
+					is_revolutionary = no
+				}
+				change_government_to_monarchy = yes
+			}
+			anatolia_region = {
+				limit = {
+					NOT = {
+						area = cukurova_area
+					}
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = PON
+			}
+			caucasia_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = PON
+			}
+			crimea_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = PON
+			}
+			151 = {
+				add_permanent_claim = PON
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					NOT = {
+						primary_culture = pontic_greek
+					}
+				}
+				change_primary_culture = pontic_greek
+			}
+			set_country_flag = formed_pontus_flag
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		ai_importance = 400
+	}
 	vandal_nation = {
 		major = yes
 		potential = {
