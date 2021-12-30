@@ -1,0 +1,39 @@
+country_event = {
+	id = varangian_order.1
+	title = varangian_order.1_title
+	desc = varangian_order.1_desc
+	picture = BUDDHA_eventPicture
+	hidden = yes
+	is_triggered_only = yes
+	option = {
+		name = varangian_order.1_option
+		crimea_area = {
+			add_core = VGO
+		}
+		crimea_area = {
+			culture = varangian
+		}
+		release = VGO
+		BYZ = {
+			create_march = VGO
+		}
+		VGO = {
+			capital_scope = {
+				build_to_forcelimit = {
+					infantry = 1
+					cavalry = 0.5
+				}
+			}
+			random_owned_province = {
+				limit = {
+					has_port = yes
+				}
+				build_to_forcelimit = {
+					galley = 1
+					light_ship = 1
+					transport = 1
+				}
+			}
+		}
+	}
+}

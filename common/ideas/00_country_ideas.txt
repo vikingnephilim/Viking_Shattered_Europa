@@ -33,7 +33,40 @@ PON_ideas = {
 		land_morale = 0.15
 	}
 }
-
+VGO_ideas = {
+	start = {
+		discipline = 0.05
+		shock_damage = 0.2
+	}
+	bonus = {
+		missionaries = 1
+	}
+	trigger = {
+		tag = VGO
+	}
+	free = yes
+	VGO_tax = {
+		global_tax_modifier = 0.15
+	}
+	VGO_morale = {
+		land_morale = 0.20
+	}
+	VGO_trade = {
+		trade_efficiency = 0.15
+	}
+	VGO_loot = {
+		loot_amount = 1
+	}
+	VGO_manpower = {
+		global_manpower_modifier = 0.20
+	}
+	VGO_production = {
+		production_efficiency = 0.15
+	}
+	VGO_conversion = {
+		global_missionary_strength = 0.04
+	}
+}
 AGD_ideas = {
 	start = {
 		idea_cost = -0.1
@@ -876,7 +909,7 @@ ACH_ideas = {
 AEG_ideas = {
 	start = {
 		global_sailors_modifier = 0.15
-		global_ship_cost = 0.1
+		global_ship_cost = -0.1
 	}
 	bonus = {
 		leader_naval_fire = 1
@@ -33586,5 +33619,77 @@ ABA_ideas = {
 	}
 	aba_ossian = {
 		global_unrest = -2
+	}
+}
+
+BDA_ideas = {
+	start = {
+		global_trade_power = 0.2
+		improve_relation_modifier = 0.05
+	}
+	bonus = {
+		production_efficiency = 0.1
+	}
+	trigger = {
+		tag = BDA
+	}
+	free = yes
+	BDA_viswamitri_trade = {
+		trade_efficiency = 0.1
+	}
+	BDA_center_of_art_and_culture = {
+		prestige = 0.5
+	}
+	BDA_legacy_of_the_dodiya = {
+		special_unit_forcelimit = 0.5		# This should be multiplicative, if it is not please nerf it
+	}
+	BDA_sultans_from_delhi = {
+		legitimacy = 1.5
+	}
+	BDA_jain_patronage = {
+		estate_jains_loyalty_modifier = 0.1
+		estate_jains_influence_modifier = 0.1
+	}
+	BDA_diplomatic_ambitions = {
+		diplomatic_upkeep = 1
+	}
+	BDA_bank_of_baroda = {
+		# Yeah ok this one's a bit of a joke but it has to be done, you ask anyone about baroda they'll bring up the bank
+		interest = -1
+	}
+}
+
+BIH_ideas = {
+	start = {
+		global_trade_power = 0.05
+		land_morale = 0.1
+	}
+	bonus = {
+		prestige_decay = -0.5
+	}
+	trigger = {
+		tag = BIH
+	}
+	free = yes
+	BIH_fertile_plains = {
+		development_cost = -0.075
+	}
+	BIH_birthplace_of_empires = {
+		core_creation = -0.15
+	}
+	BIH_cultural_center_of_india = {
+		num_accepted_cultures = 2
+	}
+	BIH_ganga_trade = {
+		center_of_trade_upgrade_cost = -0.33
+	}
+	BIH_riches_of_patna = {
+		global_tax_modifier = 0.1
+	}
+	BIH_legacy_of_the_golden_age = {
+		technology_cost = -0.05
+	}
+	BIH_religious_diversity = {
+		tolerance_heathen = 1
 	}
 }

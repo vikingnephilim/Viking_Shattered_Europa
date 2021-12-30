@@ -1,0 +1,763 @@
+country_decisions = {
+  heir_adm_1 = {
+    potential = {
+      government = monarchy
+      is_lesser_in_union = no
+      has_heir = yes
+      heir_age = 6
+      NOT = { heir_age = 15 }
+      heir_adm = 0
+      NOT = { heir_adm = 1 }
+    }
+    allow = {
+      adm_power = 20
+      NOT = { has_country_modifier = heir_improving }
+    }
+    effect = {
+      add_legitimacy = -1
+      add_adm_power = -20
+      add_heir_claim = -1
+      change_heir_adm = 1
+      add_country_modifier = {
+	name = "heir_improving"
+	duration = 400
+      }
+    }
+    ai_will_do = {
+	factor = 0.5
+	modifier = {
+		factor = 0
+		NOT = { adm_power = 50 }
+	}
+	modifier = {
+		factor = 0.1
+		adm_power = 100
+	}
+	modifier = {
+		factor = 0.2
+		adm_power = 400
+	}
+	modifier = {
+		factor = 0.1
+                NOT = { legitimacy = 60 }
+	}
+    }
+  }
+
+  heir_adm_2 = {
+    potential = {
+      government = monarchy
+      is_lesser_in_union = no
+      has_heir = yes
+      heir_age = 6
+      NOT = { heir_age = 15 }
+      heir_adm = 1
+      NOT = { heir_adm = 2 }
+    }
+    allow = {
+      adm_power = 40
+      NOT = { has_country_modifier = heir_improving }
+    }
+    effect = {
+      change_heir_adm = 1
+      add_legitimacy = -2
+      add_adm_power = -40
+      add_heir_claim = -2
+      add_country_modifier = {
+              name = "heir_improving"
+              duration = 500
+      }
+    }
+    ai_will_do = {
+	factor = 0.3
+	modifier = {
+		factor = 0
+		NOT = { adm_power = 75 }
+	}
+	modifier = {
+		factor = 0.1
+		adm_power = 150
+	}
+	modifier = {
+		factor = 0.2
+		adm_power = 300
+	}
+	modifier = {
+		factor = 0.1
+                NOT = { legitimacy = 60 }
+	}
+    }
+  }
+
+  heir_adm_3 = {
+    potential = {
+      government = monarchy
+      is_lesser_in_union = no
+      has_heir = yes
+      heir_age = 6
+      NOT = { heir_age = 15 }
+      heir_adm = 2
+      NOT = { heir_adm = 3 }
+    }
+    allow = {
+      adm_power = 60
+      NOT = { has_country_modifier = heir_improving }
+    }
+    effect = {
+      change_heir_adm = 1
+      add_legitimacy = -3
+      add_adm_power = -60
+      add_heir_claim = -3
+      add_country_modifier = {
+              name = "heir_improving"
+              duration = 600
+      }
+    }
+    ai_will_do = {
+	factor = 0.1
+	modifier = {
+		factor = 0
+		NOT = { adm_power = 100 }
+	}
+	modifier = {
+		factor = 0.1
+		adm_power = 200
+	}
+	modifier = {
+		factor = 0.2
+		adm_power = 400
+	}
+	modifier = {
+		factor = 0.1
+                NOT = { legitimacy = 60 }
+	}
+    }
+  }
+
+  heir_adm_4 = {
+    potential = {
+      government = monarchy
+      is_lesser_in_union = no
+      has_heir = yes
+      heir_age = 6
+      NOT = { heir_age = 15 }
+      heir_adm = 3
+      NOT = { heir_adm = 4 }
+    }
+    allow = {
+      adm_power = 80
+      NOT = { has_country_modifier = heir_improving }
+    }
+    effect = {
+      change_heir_adm = 1
+      add_legitimacy = -4
+      add_adm_power = -80
+      add_heir_claim = -4
+      add_country_modifier = {
+              name = "heir_improving"
+              duration = 700
+      }
+    }
+    ai_will_do = {
+	factor = 0.1
+	modifier = {
+		factor = 0
+		NOT = { adm_power = 150 }
+	}
+	modifier = {
+		factor = 0.1
+		adm_power = 300
+	}
+	modifier = {
+		factor = 0.2
+		adm_power = 500
+	}
+	modifier = {
+		factor = 0
+                NOT = { legitimacy = 50 }
+	}
+    }
+  }
+
+  heir_adm_5 = {
+    potential = {
+      government = monarchy
+      is_lesser_in_union = no
+      has_heir = yes
+      heir_age = 6
+      NOT = { heir_age = 15 }
+      heir_adm = 4
+      NOT = { heir_adm = 5 }
+    }
+    allow = {
+      adm_power = 100
+      NOT = { has_country_modifier = heir_improving }
+    }
+    effect = {
+      change_heir_adm = 1
+      add_legitimacy = -5
+      add_adm_power = -100
+      add_heir_claim = -5
+      add_country_modifier = {
+              name = "heir_improving"
+              duration = 800
+      }
+    }
+    ai_will_do = {
+	factor = 0.05
+	modifier = {
+		factor = 0
+		NOT = { adm_power = 200 }
+	}
+	modifier = {
+		factor = 0.1
+		adm_power = 400
+	}
+	modifier = {
+		factor = 0.2
+		adm_power = 800
+	}
+	modifier = {
+		factor = 0
+                NOT = { legitimacy = 50 }
+	}
+    }
+  }
+
+  heir_adm_6 = {
+    potential = {
+      government = monarchy
+      is_lesser_in_union = no
+      has_heir = yes
+      heir_age = 6
+      NOT = { heir_age = 15 }
+      heir_adm = 5
+      NOT = { heir_adm = 6 }
+    }
+    allow = {
+      adm_power = 120
+      NOT = { has_country_modifier = heir_improving }
+    }
+    effect = {
+      change_heir_adm = 1
+      add_legitimacy = -6
+      add_adm_power = -120
+      add_heir_claim = -6
+      add_country_modifier = {
+              name = "heir_improving"
+              duration = 900
+      }
+    }
+    ai_will_do = {
+	factor = 0
+    }
+  }
+
+  heir_dip_1 = {
+    potential = {
+      government = monarchy
+      is_lesser_in_union = no
+      has_heir = yes
+      heir_age = 6
+      NOT = { heir_age = 15 }
+      heir_dip = 0
+      NOT = { heir_dip = 1 }
+    }
+    allow = {
+      dip_power = 20
+      NOT = { has_country_modifier = heir_improving }
+    }
+    effect = {
+      add_legitimacy = -1
+      add_dip_power = -20
+      add_heir_claim = -1
+      change_heir_dip = 1
+      add_country_modifier = {
+	name = "heir_improving"
+	duration = 400
+      }
+    }
+    ai_will_do = {
+	factor = 0.5
+	modifier = {
+		factor = 0
+		NOT = { dip_power = 50 }
+	}
+	modifier = {
+		factor = 0.1
+		dip_power = 100
+	}
+	modifier = {
+		factor = 0.2
+		dip_power = 400
+	}
+	modifier = {
+		factor = 0.1
+                NOT = { legitimacy = 60 }
+	}
+    }
+  }
+
+  heir_dip_2 = {
+    potential = {
+      government = monarchy
+      is_lesser_in_union = no
+      has_heir = yes
+      heir_age = 6
+      NOT = { heir_age = 15 }
+      heir_dip = 1
+      NOT = { heir_dip = 2 }
+    }
+    allow = {
+      dip_power = 40
+      NOT = { has_country_modifier = heir_improving }
+    }
+    effect = {
+      change_heir_dip = 1
+      add_legitimacy = -2
+      add_dip_power = -40
+      add_heir_claim = -2
+      add_country_modifier = {
+              name = "heir_improving"
+              duration = 500
+      }
+    }
+    ai_will_do = {
+	factor = 0.3
+	modifier = {
+		factor = 0
+		NOT = { dip_power = 75 }
+	}
+	modifier = {
+		factor = 0.1
+		dip_power = 150
+	}
+	modifier = {
+		factor = 0.2
+		dip_power = 300
+	}
+	modifier = {
+		factor = 0.1
+                NOT = { legitimacy = 60 }
+	}
+    }
+  }
+
+  heir_dip_3 = {
+    potential = {
+      government = monarchy
+      is_lesser_in_union = no
+      has_heir = yes
+      heir_age = 6
+      NOT = { heir_age = 15 }
+      heir_dip = 2
+      NOT = { heir_dip = 3 }
+    }
+    allow = {
+      dip_power = 60
+      NOT = { has_country_modifier = heir_improving }
+    }
+    effect = {
+      change_heir_dip = 1
+      add_legitimacy = -3
+      add_dip_power = -60
+      add_heir_claim = -3
+      add_country_modifier = {
+              name = "heir_improving"
+              duration = 600
+      }
+    }
+    ai_will_do = {
+	factor = 0.1
+	modifier = {
+		factor = 0
+		NOT = { dip_power = 100 }
+	}
+	modifier = {
+		factor = 0.1
+		dip_power = 200
+	}
+	modifier = {
+		factor = 0.2
+		dip_power = 400
+	}
+	modifier = {
+		factor = 0.1
+                NOT = { legitimacy = 60 }
+	}
+    }
+  }
+
+  heir_dip_4 = {
+    potential = {
+      government = monarchy
+      is_lesser_in_union = no
+      has_heir = yes
+      heir_age = 6
+      NOT = { heir_age = 15 }
+      heir_dip = 3
+      NOT = { heir_dip = 4 }
+    }
+    allow = {
+      dip_power = 80
+      NOT = { has_country_modifier = heir_improving }
+    }
+    effect = {
+      change_heir_dip = 1
+      add_legitimacy = -4
+      add_dip_power = -80
+      add_heir_claim = -4
+      add_country_modifier = {
+              name = "heir_improving"
+              duration = 700
+      }
+    }
+    ai_will_do = {
+	factor = 0.1
+	modifier = {
+		factor = 0
+		NOT = { dip_power = 150 }
+	}
+	modifier = {
+		factor = 0.1
+		dip_power = 300
+	}
+	modifier = {
+		factor = 0.2
+		dip_power = 500
+	}
+	modifier = {
+		factor = 0
+                NOT = { legitimacy = 50 }
+	}
+    }
+  }
+
+  heir_dip_5 = {
+    potential = {
+      government = monarchy
+      is_lesser_in_union = no
+      has_heir = yes
+      heir_age = 6
+      NOT = { heir_age = 15 }
+      heir_dip = 4
+      NOT = { heir_dip = 5 }
+    }
+    allow = {
+      dip_power = 100
+      NOT = { has_country_modifier = heir_improving }
+    }
+    effect = {
+      change_heir_dip = 1
+      add_legitimacy = -5
+      add_dip_power = -100
+      add_heir_claim = -5
+      add_country_modifier = {
+              name = "heir_improving"
+              duration = 800
+      }
+    }
+    ai_will_do = {
+	factor = 0.05
+	modifier = {
+		factor = 0
+		NOT = { dip_power = 200 }
+	}
+	modifier = {
+		factor = 0.1
+		dip_power = 400
+	}
+	modifier = {
+		factor = 0.2
+		dip_power = 800
+	}
+	modifier = {
+		factor = 0
+                NOT = { legitimacy = 50 }
+	}
+    }
+  }
+
+  heir_dip_6 = {
+    potential = {
+      government = monarchy
+      is_lesser_in_union = no
+      has_heir = yes
+      heir_age = 6
+      NOT = { heir_age = 15 }
+      heir_dip = 5
+      NOT = { heir_dip = 6 }
+    }
+    allow = {
+      dip_power = 120
+      NOT = { has_country_modifier = heir_improving }
+    }
+    effect = {
+      change_heir_dip = 1
+      add_legitimacy = -6
+      add_dip_power = -120
+      add_heir_claim = -6
+      add_country_modifier = {
+              name = "heir_improving"
+              duration = 900
+      }
+    }
+    ai_will_do = {
+	factor = 0
+    }
+  }
+
+  heir_mil_1 = {
+    potential = {
+      government = monarchy
+      is_lesser_in_union = no
+      has_heir = yes
+      heir_age = 6
+      NOT = { heir_age = 15 }
+      heir_mil = 0
+      NOT = { heir_mil = 1 }
+    }
+    allow = {
+      mil_power = 20
+      NOT = { has_country_modifier = heir_improving }
+    }
+    effect = {
+      add_legitimacy = -1
+      add_mil_power = -20
+      add_heir_claim = -1
+      change_heir_mil = 1
+      add_country_modifier = {
+	name = "heir_improving"
+	duration = 400
+      }
+    }
+    ai_will_do = {
+	factor = 0.5
+	modifier = {
+		factor = 0
+		NOT = { mil_power = 50 }
+	}
+	modifier = {
+		factor = 0.1
+		mil_power = 100
+	}
+	modifier = {
+		factor = 0.2
+		mil_power = 400
+	}
+	modifier = {
+		factor = 0.1
+                NOT = { legitimacy = 60 }
+	}
+    }
+  }
+
+  heir_mil_2 = {
+    potential = {
+      government = monarchy
+      is_lesser_in_union = no
+      has_heir = yes
+      heir_age = 6
+      NOT = { heir_age = 15 }
+      heir_mil = 1
+      NOT = { heir_mil = 2 }
+    }
+    allow = {
+      mil_power = 40
+      NOT = { has_country_modifier = heir_improving }
+    }
+    effect = {
+      change_heir_mil = 1
+      add_legitimacy = -2
+      add_mil_power = -40
+      add_heir_claim = -2
+      add_country_modifier = {
+              name = "heir_improving"
+              duration = 500
+      }
+    }
+    ai_will_do = {
+	factor = 0.3
+	modifier = {
+		factor = 0
+		NOT = { mil_power = 75 }
+	}
+	modifier = {
+		factor = 0.1
+		mil_power = 150
+	}
+	modifier = {
+		factor = 0.2
+		mil_power = 300
+	}
+	modifier = {
+		factor = 0.1
+                NOT = { legitimacy = 60 }
+	}
+    }
+  }
+
+  heir_mil_3 = {
+    potential = {
+      government = monarchy
+      is_lesser_in_union = no
+      has_heir = yes
+      heir_age = 6
+      NOT = { heir_age = 15 }
+      heir_mil = 2
+      NOT = { heir_mil = 3 }
+    }
+    allow = {
+      mil_power = 60
+      NOT = { has_country_modifier = heir_improving }
+    }
+    effect = {
+      change_heir_mil = 1
+      add_legitimacy = -3
+      add_mil_power = -60
+      add_heir_claim = -3
+      add_country_modifier = {
+              name = "heir_improving"
+              duration = 600
+      }
+    }
+    ai_will_do = {
+	factor = 0.1
+	modifier = {
+		factor = 0
+		NOT = { mil_power = 100 }
+	}
+	modifier = {
+		factor = 0.1
+		mil_power = 200
+	}
+	modifier = {
+		factor = 0.2
+		mil_power = 400
+	}
+	modifier = {
+		factor = 0.1
+                NOT = { legitimacy = 60 }
+	}
+    }
+  }
+
+  heir_mil_4 = {
+    potential = {
+      government = monarchy
+      is_lesser_in_union = no
+      has_heir = yes
+      heir_age = 6
+      NOT = { heir_age = 15 }
+      heir_mil = 3
+      NOT = { heir_mil = 4 }
+    }
+    allow = {
+      mil_power = 80
+      NOT = { has_country_modifier = heir_improving }
+    }
+    effect = {
+      change_heir_mil = 1
+      add_legitimacy = -4
+      add_mil_power = -80
+      add_heir_claim = -4
+      add_country_modifier = {
+              name = "heir_improving"
+              duration = 700
+      }
+    }
+    ai_will_do = {
+	factor = 0.1
+	modifier = {
+		factor = 0
+		NOT = { mil_power = 150 }
+	}
+	modifier = {
+		factor = 0.1
+		mil_power = 300
+	}
+	modifier = {
+		factor = 0.2
+		mil_power = 500
+	}
+	modifier = {
+		factor = 0
+                NOT = { legitimacy = 50 }
+	}
+    }
+  }
+
+  heir_mil_5 = {
+    potential = {
+      government = monarchy
+      is_lesser_in_union = no
+      has_heir = yes
+      heir_age = 6
+      NOT = { heir_age = 15 }
+      heir_mil = 4
+      NOT = { heir_mil = 5 }
+    }
+    allow = {
+      mil_power = 100
+      NOT = { has_country_modifier = heir_improving }
+    }
+    effect = {
+      change_heir_mil = 1
+      add_legitimacy = -5
+      add_mil_power = -100
+      add_heir_claim = -5
+      add_country_modifier = {
+              name = "heir_improving"
+              duration = 800
+      }
+    }
+    ai_will_do = {
+	factor = 0.05
+	modifier = {
+		factor = 0
+		NOT = { mil_power = 200 }
+	}
+	modifier = {
+		factor = 0.1
+		mil_power = 400
+	}
+	modifier = {
+		factor = 0.2
+		mil_power = 800
+	}
+	modifier = {
+		factor = 0
+                NOT = { legitimacy = 50 }
+	}
+    }
+  }
+
+  heir_mil_6 = {
+    potential = {
+      government = monarchy
+      is_lesser_in_union = no
+      has_heir = yes
+      heir_age = 6
+      NOT = { heir_age = 15 }
+      heir_mil = 5
+      NOT = { heir_mil = 6 }
+    }
+    allow = {
+      mil_power = 120
+      NOT = { has_country_modifier = heir_improving }
+    }
+    effect = {
+      change_heir_mil = 1
+      add_legitimacy = -6
+      add_mil_power = -120
+      add_heir_claim = -6
+      add_country_modifier = {
+              name = "heir_improving"
+              duration = 900
+      }
+    }
+    ai_will_do = {
+	factor = 0
+    }
+  }
+}

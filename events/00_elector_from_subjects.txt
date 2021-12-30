@@ -1,0 +1,23 @@
+namespace = elector_from_subjects
+country_event = {
+	id = elector_from_subjects.1
+	title = "elector_from_subjects_title"
+	desc = "elector_from_subjects_desc"
+	picture = HRE_eventPicture
+	trigger = {
+		overlord = {
+			has_country_flag = subjectbecomeselector
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = "elector_from_subjects.option"
+		ai_chance = {
+			factor = 100
+		}
+		is_subject = yes
+		elector = no
+	}
+}

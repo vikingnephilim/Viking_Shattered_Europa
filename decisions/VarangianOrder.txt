@@ -1,0 +1,71 @@
+country_decisions = {
+	the_varangian_order = {
+		major = yes
+		potential = {
+			culture_group = byzantine
+			has_country_flag = byzvarangianguard
+			tag = BYZ
+			OR = {
+				religion = iconoclast
+				religion = paulician
+				religion = orthodox
+				religion = bogomilist
+				religion = mariavite
+				religion = monophysite
+				religion = monothelite
+			}
+			NOT = {
+				has_country_flag = formvarangianorder
+			}
+		}
+		allow = {
+			stability = 3
+			crimea_area = {
+				type = all
+				owned_by = BYZ
+			}
+		}
+		effect = {
+			crimea_area = {
+				add_core = VGO
+			}
+			2410 = {
+				change_culture = varangian
+			}
+			set_country_flag = formvarangianorder
+			hidden_effect = {
+				release = VGO
+				VGO = {
+					change_primary_culture = varangian
+					change_government = theocracy
+					add_government_reform = monastic_order_reform
+					adopt_reform_progress = BYZ
+					set_government_rank = 2
+					add_army_professionalism = 0.2
+					capital_scope = {
+						build_to_forcelimit = {
+							infantry = 0.7
+							cavalry = 0.3
+						}
+					}
+					random_owned_province = {
+						limit = {
+							has_port = yes
+						}
+						build_to_forcelimit = {
+							galley = 0.5
+							light_ship = 0.2
+							transport = 0.3
+						}
+					}
+				}
+			}
+			BYZ = {
+				create_march = VGO
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

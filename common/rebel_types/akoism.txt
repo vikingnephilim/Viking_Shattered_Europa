@@ -2,21 +2,25 @@
 # Akan rebels. Disgruntled fanatics.
 ######################################################################
 akan_rebels = {
-	color = { 230 175 175 }
-	area = nation 					# Sticks to provinces of their nation
-	government = theocracy 			# Desires Theocracy
+	color = {
+		230
+		175
+		175
+	}
+	area = nation	# Sticks to provinces of their nation
+	government = theocracy	# Desires Theocracy
 	religion = akan
-	defection = none				# Will not defect
-	defect_delay = 120				# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
-	independence = none				# Does not strive for independence
+	defection = none	# Will not defect
+	defect_delay = 120	# Held provinces will auto-defect after 18 months, regardless of accept/enforce demands.
+	independence = none	# Does not strive for independence
 	unit_transfer = no
 	gfx_type = culture_province
 	will_relocate = yes
-			resilient = no
+	resilient = no
 	reinforcing = yes
 	general = yes
 	smart = yes
-	artillery = 0.0
+	artillery = 0
 	infantry = 0.7
 	cavalry = 0.3
 	morale = 1.1
@@ -25,7 +29,7 @@ akan_rebels = {
 	handle_action_stability = yes
 	handle_action_build_core = yes
 	handle_action_send_missionary = yes
-			# The rebel type with the highest modifier for this province gets picked
+	# The rebel type with the highest modifier for this province gets picked
 	spawn_chance = {
 		factor = 1
 		modifier = {
@@ -33,12 +37,16 @@ akan_rebels = {
 			is_overseas = yes
 		}
 		modifier = {
-			factor = 0.0
-			owner = { religion = ROOT }
+			factor = 0
+			owner = {
+				religion = ROOT
+			}
 		}
 		modifier = {
-			factor = 0.0
-			NOT = { religion = akan }
+			factor = 0
+			NOT = {
+				religion = akan
+			}
 		}
 		modifier = {
 			factor = 0.001
@@ -49,27 +57,35 @@ akan_rebels = {
 			tolerance_to_this = 2
 		}
 		modifier = {
-			factor = 5.0
-			owner = { has_disaster = religious_turmoil }
+			factor = 5
+			owner = {
+				has_disaster = religious_turmoil
+			}
 		}
-				modifier = {
+		modifier = {
 			factor = 2000
 			has_missionary = yes
 		}
 		modifier = {
 			factor = 2
-			NOT = { tolerance_to_this = 1 }
+			NOT = {
+				tolerance_to_this = 1
+			}
 		}
 		modifier = {
 			factor = 2
-			NOT = { tolerance_to_this = -1 }
+			NOT = {
+				tolerance_to_this = -1
+			}
 		}
 		modifier = {
 			factor = 2
-			NOT = { tolerance_to_this = -2 }
+			NOT = {
+				tolerance_to_this = -2
+			}
 		}
 	}
- 	# This is checked for EACH province in the Area of Operations
+	# This is checked for EACH province in the Area of Operations
 	movement_evaluation = {
 		factor = 1
 		modifier = {
@@ -81,18 +97,24 @@ akan_rebels = {
 			controlled_by = REB
 		}
 		modifier = {
-			factor = 0.0
+			factor = 0
 			religion = akan
-			owner = { religion = akan }
+			owner = {
+				religion = akan
+			}
 		}
 		modifier = {
-			factor = 2.0
-			NOT = { religion = akan }
+			factor = 2
+			NOT = {
+				religion = akan
+			}
 			any_neighbor_province = {
-	 			religion = akan
-	 			NOT = { has_province_modifier = "forced_conversion" }
-	 		}
-	 	}
+				religion = akan
+				NOT = {
+					has_province_modifier = "forced_conversion"
+				}
+			}
+		}
 		modifier = {
 			factor = 5
 			has_missionary = yes
@@ -111,15 +133,15 @@ akan_rebels = {
 			unrest = 6
 		}
 	}
- 	# Province Scope
- 	siege_won_trigger = {
+	# Province Scope
+	siege_won_trigger = {
 		NOT = {
 			AND = {
 				owned_by = PAP
 				is_capital = yes
 			}
 		}
- 	}
+	}
 	siege_won_effect = {
 		custom_tooltip = religious_rebels_seige_effect_tooltip
 		hidden_effect = {
@@ -128,7 +150,9 @@ akan_rebels = {
 					OR = {
 						religion = akan
 						is_reformation_center = yes
-						owner = { religion = akan }
+						owner = {
+							religion = akan
+						}
 					}
 				}
 				add_province_modifier = {
@@ -138,9 +162,15 @@ akan_rebels = {
 			}
 			if = {
 				limit = {
-					NOT = { religion = akan }
+					NOT = {
+						religion = akan
+					}
 					is_reformation_center = no
-					NOT = { owner = { religion = akan } }
+					NOT = {
+						owner = {
+							religion = akan
+						}
+					}
 				}
 				change_religion = akan
 				add_province_modifier = {
@@ -152,7 +182,7 @@ akan_rebels = {
 		owner = {
 			change_estate_land_share = {
 				estate = estate_church
-				share = 10.0
+				share = 10
 				province = ROOT
 			}
 		}
@@ -171,7 +201,7 @@ akan_rebels = {
 	# Localisation for their demands
 	demands_description = "akan_rebels_demand"
 	# Country Scope
-			demands_enforced_effect = {
+	demands_enforced_effect = {
 		hidden_effect = {
 			add_country_modifier = {
 				name = just_lost_to_rebels
@@ -181,7 +211,9 @@ akan_rebels = {
 		}
 		if = {
 			limit = {
-				NOT = { religion_group = african_pagan }
+				NOT = {
+					religion_group = african_pagan
+				}
 			}
 			add_prestige = -50
 			every_owned_province = {
@@ -208,7 +240,9 @@ akan_rebels = {
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = akan }
+				NOT = {
+					religion = akan
+				}
 				dominant_religion = akan
 			}
 			change_religion = akan
@@ -216,10 +250,16 @@ akan_rebels = {
 		}
 		else_if = {
 			limit = {
-				NOT = { religion = akan }
-				NOT = { dominant_religion = akan }
+				NOT = {
+					religion = akan
+				}
+				NOT = {
+					dominant_religion = akan
+				}
 				religion_group = african_pagan
-				NOT = { has_country_modifier = heretic_tolerance }
+				NOT = {
+					has_country_modifier = heretic_tolerance
+				}
 			}
 			add_country_modifier = {
 				name = "heretic_tolerance"
@@ -227,7 +267,9 @@ akan_rebels = {
 			}
 			add_stability = -1
 		}
-		else = { add_stability = -1 }
+		else = {
+			add_stability = -1
+		}
 		if = {
 			limit = {
 				religion = akan
@@ -248,7 +290,7 @@ akan_rebels = {
 		}
 		change_estate_land_share = {
 			estate = estate_church
-			share = 10.0
+			share = 10
 		}
 	}
 }

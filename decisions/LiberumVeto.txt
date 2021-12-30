@@ -1,9 +1,12 @@
 country_decisions = {
-
 	liberum_veto = {
 		potential = {
-			NOT = { has_country_flag = librium_veto }
-			NOT = { colony = 1 }
+			NOT = {
+				has_country_flag = librium_veto
+			}
+			NOT = {
+				colony = 1
+			}
 			religion_group = christian
 			technology_group = eastern
 			government = monarchy
@@ -20,7 +23,9 @@ country_decisions = {
 			add_army_tradition = 30
 			add_mil_power = 100
 			random_owned_province = {
-				limit = { controlled_by = ROOT  }
+				limit = {
+					controlled_by = ROOT
+				}
 				cavalry = ROOT
 				cavalry = ROOT
 				cavalry = ROOT
@@ -42,5 +47,32 @@ country_decisions = {
 			factor = 1
 		}
 	}
-
+	you_get_elector_from_vassal = {
+		major = yes
+		potential = {
+			AND = {
+				is_part_of_hre = yes
+				any_subject_country = {
+					is_elector = yes
+				}
+				is_elector = no
+				is_emperor = no
+			}
+		}
+		allow = {
+			AND = {
+				is_at_war = no
+				is_subject = no
+			}
+		}
+		effect = {
+			elector = yes
+			add_prestige = -10
+			add_legitimacy = 10
+			set_country_flag = subjectbecomeselector
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

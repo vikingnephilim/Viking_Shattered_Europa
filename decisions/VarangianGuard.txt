@@ -1,0 +1,106 @@
+country_decisions = {
+	reform_varangian_guard_byz = {
+		major = yes
+		potential = {
+			culture_group = byzantine
+			NOT = {
+				has_country_flag = byzvarangianguard
+				has_country_flag = nobyzvarangianguard
+				tag = VGO
+			}
+			tag = BYZ
+			OR = {
+				religion = iconoclast
+				religion = paulician
+				religion = orthodox
+				religion = bogomilist
+				religion = mariavite
+				religion = monophysite
+				religion = monothelite
+			}
+		}
+		allow = {
+			stability = 2
+			any_country = {
+				AND = {
+					culture_group = scandinavian
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = varangian_byz
+				duration = -1
+			}
+			set_country_flag = byzvarangianguard
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	reform_varangian_guard_any = {
+		major = yes
+		potential = {
+			culture_group = byzantine
+			NOT = {
+				has_country_flag = nobyzvarangianguard
+				tag = BYZ
+				tag = VGO
+			}
+			religion = orthodox
+		}
+		allow = {
+			stability = 2
+			any_country = {
+				AND = {
+					culture_group = scandinavian
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = varangian_any
+				duration = -1
+			}
+			prestige = 10
+			set_country_flag = nobyzvarangianguard
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	upgrade_varangian_guard_byz = {
+		major = yes
+		potential = {
+			culture_group = byzantine
+			has_country_flag = nobyzvarangianguard
+			tag = BYZ
+			religion = orthodox
+			NOT = {
+				has_country_flag = byzvarangianguard
+			}
+		}
+		allow = {
+			stability = 3
+		}
+		effect = {
+			add_country_modifier = {
+				name = varangian_byz
+				duration = -1
+			}
+			remove_country_modifier = varangian_any
+			set_country_flag = byzvarangianguard
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

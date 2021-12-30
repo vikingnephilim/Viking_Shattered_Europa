@@ -7907,9 +7907,7 @@ estate_nobles_build_manufactory_in_y = {
 		}
 		modifier = {
 			factor = 0.5
-			NOT = {
-				monthly_income = 40
-			}
+			NOT = { monthly_income = 40 }
 		}
 		modifier = {
 			factor = 2
@@ -7918,9 +7916,7 @@ estate_nobles_build_manufactory_in_y = {
 		modifier = {
 			factor = 2
 			is_institution_enabled = manufactories
-			NOT = {
-				has_institution = manufactories
-			}
+			NOT = { has_institution = manufactories }
 		}
 	}
 	pre_effect = {
@@ -7956,99 +7952,97 @@ estate_nobles_build_manufactory_in_y = {
 	}
 	fail_if = {
 		event_target:agenda_province = {
-			NOT = {
-				owned_by = root
-			}
+			NOT = { owned_by = root }
 		}
 	}
-	task_requirements = {
+    task_requirements = {
 		event_target:agenda_province = {
 			custom_trigger_tooltip = {
 				tooltip = has_manufactory_trigger_tooltip
 				OR = {
-				if = {
-					limit = {
-						OR = {
-							trade_goods = naval_supplies
-							trade_goods = fish
-							trade_goods = salt
+					if = {
+						limit = {
+							OR = {
+								trade_goods = naval_supplies
+								trade_goods = fish
+								trade_goods = salt
+							}
 						}
+						has_building = wharf
 					}
-					has_building = wharf
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = copper
-							trade_goods = iron
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = copper
+								trade_goods = iron
+							}
 						}
+						has_building = weapons
 					}
-					has_building = weapons
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = wool
-							trade_goods = cloth
-							trade_goods = silk
-							trade_goods = dyes
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = wool
+								trade_goods = cloth
+								trade_goods = silk
+								trade_goods = dyes
+							}
 						}
+						has_building = textile
 					}
-					has_building = textile
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = ivory
-							trade_goods = slaves
-							trade_goods = spices
-							trade_goods = cloves
-							trade_goods = fur
-							trade_goods = incense
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = ivory
+								trade_goods = slaves
+								trade_goods = spices
+								trade_goods = cloves
+								trade_goods = fur
+								trade_goods = incense
+							}
 						}
+						has_building = tradecompany
 					}
-					has_building = tradecompany
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = grain
-							trade_goods = livestock
-							trade_goods = wine
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = grain
+								trade_goods = livestock
+								trade_goods = wine
+							}
 						}
+						has_building = farm_estate
 					}
-					has_building = farm_estate
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = paper
-							trade_goods = gems
-							trade_goods = tropical_wood
-							trade_goods = glass
-							trade_goods = chinaware
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = paper
+								trade_goods = gems
+								trade_goods = tropical_wood
+								trade_goods = glass
+								trade_goods = chinaware
+							}
 						}
+						has_building = mills
 					}
-					has_building = mills
-				}
-				else_if = {
-					limit = {
-						trade_goods = coal
+					else_if = {
+						limit = {
+							trade_goods = coal
+						}
+						has_building = furnace
 					}
-					has_building = furnace
+					else = {
+						has_building = plantations
+					}
+					has_building = ramparts
+					has_building = soldier_households
+					has_building = impressment_offices
+					has_building = state_house
 				}
-				else = {
-					has_building = plantations
-				}
-				has_building = ramparts
-				has_building = soldier_households
-				has_building = impressment_offices
-				has_building = state_house
-			}
 			}
 		}
-	}
-	task_completed_effect = {
+    }
+    task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_nobles
 			loyalty = 10
@@ -8060,26 +8054,24 @@ estate_nobles_build_manufactory_in_y = {
 				duration = 5475
 			}
 		}
-	}
-	failing_effect = {
+    }
+    failing_effect = {
 		event_target:agenda_province = {
 			if = {
-				limit = {
-					owned_by = root
-				}
+				limit = { owned_by = root }
 				add_named_unrest = {
 					name = local_nobles_displeased
 					value = 5
 				}
 			}
 		}
-		add_estate_loyalty_modifier = {
-			estate = estate_nobles
+        add_estate_loyalty_modifier = {
+            estate = estate_nobles
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-		}
-	}
+        }
+    }
 }
 
 estate_rajput_build_manufactory_in_y = {
@@ -8102,9 +8094,7 @@ estate_rajput_build_manufactory_in_y = {
 		}
 		modifier = {
 			factor = 0.5
-			NOT = {
-				monthly_income = 40
-			}
+			NOT = { monthly_income = 40 }
 		}
 		modifier = {
 			factor = 2
@@ -8113,9 +8103,7 @@ estate_rajput_build_manufactory_in_y = {
 		modifier = {
 			factor = 2
 			is_institution_enabled = manufactories
-			NOT = {
-				has_institution = manufactories
-			}
+			NOT = { has_institution = manufactories }
 		}
 	}
 	pre_effect = {
@@ -8151,99 +8139,97 @@ estate_rajput_build_manufactory_in_y = {
 	}
 	fail_if = {
 		event_target:agenda_province = {
-			NOT = {
-				owned_by = root
-			}
+			NOT = { owned_by = root }
 		}
 	}
-	task_requirements = {
+    task_requirements = {
 		event_target:agenda_province = {
 			custom_trigger_tooltip = {
 				tooltip = has_manufactory_trigger_tooltip
 				OR = {
-				if = {
-					limit = {
-						OR = {
-							trade_goods = naval_supplies
-							trade_goods = fish
-							trade_goods = salt
+					if = {
+						limit = {
+							OR = {
+								trade_goods = naval_supplies
+								trade_goods = fish
+								trade_goods = salt
+							}
 						}
+						has_building = wharf
 					}
-					has_building = wharf
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = copper
-							trade_goods = iron
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = copper
+								trade_goods = iron
+							}
 						}
+						has_building = weapons
 					}
-					has_building = weapons
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = wool
-							trade_goods = cloth
-							trade_goods = silk
-							trade_goods = dyes
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = wool
+								trade_goods = cloth
+								trade_goods = silk
+								trade_goods = dyes
+							}
 						}
+						has_building = textile
 					}
-					has_building = textile
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = ivory
-							trade_goods = slaves
-							trade_goods = spices
-							trade_goods = cloves
-							trade_goods = fur
-							trade_goods = incense
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = ivory
+								trade_goods = slaves
+								trade_goods = spices
+								trade_goods = cloves
+								trade_goods = fur
+								trade_goods = incense
+							}
 						}
+						has_building = tradecompany
 					}
-					has_building = tradecompany
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = grain
-							trade_goods = livestock
-							trade_goods = wine
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = grain
+								trade_goods = livestock
+								trade_goods = wine
+							}
 						}
+						has_building = farm_estate
 					}
-					has_building = farm_estate
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = paper
-							trade_goods = gems
-							trade_goods = tropical_wood
-							trade_goods = glass
-							trade_goods = chinaware
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = paper
+								trade_goods = gems
+								trade_goods = tropical_wood
+								trade_goods = glass
+								trade_goods = chinaware
+							}
 						}
+						has_building = mills
 					}
-					has_building = mills
-				}
-				else_if = {
-					limit = {
-						trade_goods = coal
+					else_if = {
+						limit = {
+							trade_goods = coal
+						}
+						has_building = furnace
 					}
-					has_building = furnace
+					else = {
+						has_building = plantations
+					}
+					has_building = ramparts
+					has_building = soldier_households
+					has_building = impressment_offices
+					has_building = state_house
 				}
-				else = {
-					has_building = plantations
-				}
-				has_building = ramparts
-				has_building = soldier_households
-				has_building = impressment_offices
-				has_building = state_house
-			}
 			}
 		}
-	}
-	task_completed_effect = {
+    }
+    task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_rajput
 			loyalty = 10
@@ -8255,26 +8241,24 @@ estate_rajput_build_manufactory_in_y = {
 				duration = 5475
 			}
 		}
-	}
-	failing_effect = {
+    }
+    failing_effect = {
 		event_target:agenda_province = {
 			if = {
-				limit = {
-					owned_by = root
-				}
+				limit = { owned_by = root }
 				add_named_unrest = {
 					name = local_rajputs_displeased
 					value = 5
 				}
 			}
 		}
-		add_estate_loyalty_modifier = {
-			estate = estate_rajput
+        add_estate_loyalty_modifier = {
+            estate = estate_rajput
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-		}
-	}
+        }
+    }
 }
 
 estate_maratha_build_manufactory_in_y = {
@@ -8297,9 +8281,7 @@ estate_maratha_build_manufactory_in_y = {
 		}
 		modifier = {
 			factor = 0.5
-			NOT = {
-				monthly_income = 40
-			}
+			NOT = { monthly_income = 40 }
 		}
 		modifier = {
 			factor = 2
@@ -8308,9 +8290,7 @@ estate_maratha_build_manufactory_in_y = {
 		modifier = {
 			factor = 2
 			is_institution_enabled = manufactories
-			NOT = {
-				has_institution = manufactories
-			}
+			NOT = { has_institution = manufactories }
 		}
 	}
 	pre_effect = {
@@ -8346,99 +8326,97 @@ estate_maratha_build_manufactory_in_y = {
 	}
 	fail_if = {
 		event_target:agenda_province = {
-			NOT = {
-				owned_by = root
-			}
+			NOT = { owned_by = root }
 		}
 	}
-	task_requirements = {
+    task_requirements = {
 		event_target:agenda_province = {
 			custom_trigger_tooltip = {
 				tooltip = has_manufactory_trigger_tooltip
 				OR = {
-				if = {
-					limit = {
-						OR = {
-							trade_goods = naval_supplies
-							trade_goods = fish
-							trade_goods = salt
+					if = {
+						limit = {
+							OR = {
+								trade_goods = naval_supplies
+								trade_goods = fish
+								trade_goods = salt
+							}
 						}
+						has_building = wharf
 					}
-					has_building = wharf
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = copper
-							trade_goods = iron
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = copper
+								trade_goods = iron
+							}
 						}
+						has_building = weapons
 					}
-					has_building = weapons
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = wool
-							trade_goods = cloth
-							trade_goods = silk
-							trade_goods = dyes
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = wool
+								trade_goods = cloth
+								trade_goods = silk
+								trade_goods = dyes
+							}
 						}
+						has_building = textile
 					}
-					has_building = textile
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = ivory
-							trade_goods = slaves
-							trade_goods = spices
-							trade_goods = cloves
-							trade_goods = fur
-							trade_goods = incense
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = ivory
+								trade_goods = slaves
+								trade_goods = spices
+								trade_goods = cloves
+								trade_goods = fur
+								trade_goods = incense
+							}
 						}
+						has_building = tradecompany
 					}
-					has_building = tradecompany
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = grain
-							trade_goods = livestock
-							trade_goods = wine
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = grain
+								trade_goods = livestock
+								trade_goods = wine
+							}
 						}
+						has_building = farm_estate
 					}
-					has_building = farm_estate
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = paper
-							trade_goods = gems
-							trade_goods = tropical_wood
-							trade_goods = glass
-							trade_goods = chinaware
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = paper
+								trade_goods = gems
+								trade_goods = tropical_wood
+								trade_goods = glass
+								trade_goods = chinaware
+							}
 						}
+						has_building = mills
 					}
-					has_building = mills
-				}
-				else_if = {
-					limit = {
-						trade_goods = coal
+					else_if = {
+						limit = {
+							trade_goods = coal
+						}
+						has_building = furnace
 					}
-					has_building = furnace
+					else = {
+						has_building = plantations
+					}
+					has_building = ramparts
+					has_building = soldier_households
+					has_building = impressment_offices
+					has_building = state_house
 				}
-				else = {
-					has_building = plantations
-				}
-				has_building = ramparts
-				has_building = soldier_households
-				has_building = impressment_offices
-				has_building = state_house
-			}
 			}
 		}
-	}
-	task_completed_effect = {
+    }
+    task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_maratha
 			loyalty = 10
@@ -8450,26 +8428,24 @@ estate_maratha_build_manufactory_in_y = {
 				duration = 5475
 			}
 		}
-	}
-	failing_effect = {
+    }
+    failing_effect = {
 		event_target:agenda_province = {
 			if = {
-				limit = {
-					owned_by = root
-				}
+				limit = { owned_by = root }
 				add_named_unrest = {
 					name = local_marathas_displeased
 					value = 5
 				}
 			}
 		}
-		add_estate_loyalty_modifier = {
-			estate = estate_maratha
+        add_estate_loyalty_modifier = {
+            estate = estate_maratha
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-		}
-	}
+        }
+    }
 }
 
 #should be 2x as likely
@@ -8493,9 +8469,7 @@ estate_burghers_build_manufactory_in_y = {
 		}
 		modifier = {
 			factor = 0.5
-			NOT = {
-				monthly_income = 40
-			}
+			NOT = { monthly_income = 40 }
 		}
 		modifier = {
 			factor = 2
@@ -8504,9 +8478,7 @@ estate_burghers_build_manufactory_in_y = {
 		modifier = {
 			factor = 2
 			is_institution_enabled = manufactories
-			NOT = {
-				has_institution = manufactories
-			}
+			NOT = { has_institution = manufactories }
 		}
 	}
 	pre_effect = {
@@ -8542,99 +8514,97 @@ estate_burghers_build_manufactory_in_y = {
 	}
 	fail_if = {
 		event_target:agenda_province = {
-			NOT = {
-				owned_by = root
-			}
+			NOT = { owned_by = root }
 		}
 	}
-	task_requirements = {
+    task_requirements = {
 		event_target:agenda_province = {
 			custom_trigger_tooltip = {
 				tooltip = has_manufactory_trigger_tooltip
 				OR = {
-				if = {
-					limit = {
-						OR = {
-							trade_goods = naval_supplies
-							trade_goods = fish
-							trade_goods = salt
+					if = {
+						limit = {
+							OR = {
+								trade_goods = naval_supplies
+								trade_goods = fish
+								trade_goods = salt
+							}
 						}
+						has_building = wharf
 					}
-					has_building = wharf
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = copper
-							trade_goods = iron
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = copper
+								trade_goods = iron
+							}
 						}
+						has_building = weapons
 					}
-					has_building = weapons
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = wool
-							trade_goods = cloth
-							trade_goods = silk
-							trade_goods = dyes
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = wool
+								trade_goods = cloth
+								trade_goods = silk
+								trade_goods = dyes
+							}
 						}
+						has_building = textile
 					}
-					has_building = textile
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = ivory
-							trade_goods = slaves
-							trade_goods = spices
-							trade_goods = cloves
-							trade_goods = fur
-							trade_goods = incense
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = ivory
+								trade_goods = slaves
+								trade_goods = spices
+								trade_goods = cloves
+								trade_goods = fur
+								trade_goods = incense
+							}
 						}
+						has_building = tradecompany
 					}
-					has_building = tradecompany
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = grain
-							trade_goods = livestock
-							trade_goods = wine
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = grain
+								trade_goods = livestock
+								trade_goods = wine
+							}
 						}
+						has_building = farm_estate
 					}
-					has_building = farm_estate
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = paper
-							trade_goods = gems
-							trade_goods = tropical_wood
-							trade_goods = glass
-							trade_goods = chinaware
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = paper
+								trade_goods = gems
+								trade_goods = tropical_wood
+								trade_goods = glass
+								trade_goods = chinaware
+							}
 						}
+						has_building = mills
 					}
-					has_building = mills
-				}
-				else_if = {
-					limit = {
-						trade_goods = coal
+					else_if = {
+						limit = {
+							trade_goods = coal
+						}
+						has_building = furnace
 					}
-					has_building = furnace
+					else = {
+						has_building = plantations
+					}
+					has_building = ramparts
+					has_building = soldier_households
+					has_building = impressment_offices
+					has_building = state_house
 				}
-				else = {
-					has_building = plantations
-				}
-				has_building = ramparts
-				has_building = soldier_households
-				has_building = impressment_offices
-				has_building = state_house
-			}
 			}
 		}
-	}
-	task_completed_effect = {
+    }
+    task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_burghers
 			loyalty = 10
@@ -8646,26 +8616,24 @@ estate_burghers_build_manufactory_in_y = {
 				duration = 5475
 			}
 		}
-	}
-	failing_effect = {
+    }
+    failing_effect = {
 		event_target:agenda_province = {
 			if = {
-				limit = {
-					owned_by = root
-				}
+				limit = { owned_by = root }
 				add_named_unrest = {
 					name = local_burghers_displeased
 					value = 5
 				}
 			}
 		}
-		add_estate_loyalty_modifier = {
-			estate = estate_burghers
+        add_estate_loyalty_modifier = {
+            estate = estate_burghers
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-		}
-	}
+        }
+    }
 }
 
 estate_vaisyas_build_manufactory_in_y = {
@@ -8688,9 +8656,7 @@ estate_vaisyas_build_manufactory_in_y = {
 		}
 		modifier = {
 			factor = 0.5
-			NOT = {
-				monthly_income = 40
-			}
+			NOT = { monthly_income = 40 }
 		}
 		modifier = {
 			factor = 2
@@ -8699,9 +8665,7 @@ estate_vaisyas_build_manufactory_in_y = {
 		modifier = {
 			factor = 2
 			is_institution_enabled = manufactories
-			NOT = {
-				has_institution = manufactories
-			}
+			NOT = { has_institution = manufactories }
 		}
 	}
 	pre_effect = {
@@ -8737,99 +8701,97 @@ estate_vaisyas_build_manufactory_in_y = {
 	}
 	fail_if = {
 		event_target:agenda_province = {
-			NOT = {
-				owned_by = root
-			}
+			NOT = { owned_by = root }
 		}
 	}
-	task_requirements = {
+    task_requirements = {
 		event_target:agenda_province = {
 			custom_trigger_tooltip = {
 				tooltip = has_manufactory_trigger_tooltip
 				OR = {
-				if = {
-					limit = {
-						OR = {
-							trade_goods = naval_supplies
-							trade_goods = fish
-							trade_goods = salt
+					if = {
+						limit = {
+							OR = {
+								trade_goods = naval_supplies
+								trade_goods = fish
+								trade_goods = salt
+							}
 						}
+						has_building = wharf
 					}
-					has_building = wharf
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = copper
-							trade_goods = iron
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = copper
+								trade_goods = iron
+							}
 						}
+						has_building = weapons
 					}
-					has_building = weapons
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = wool
-							trade_goods = cloth
-							trade_goods = silk
-							trade_goods = dyes
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = wool
+								trade_goods = cloth
+								trade_goods = silk
+								trade_goods = dyes
+							}
 						}
+						has_building = textile
 					}
-					has_building = textile
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = ivory
-							trade_goods = slaves
-							trade_goods = spices
-							trade_goods = cloves
-							trade_goods = fur
-							trade_goods = incense
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = ivory
+								trade_goods = slaves
+								trade_goods = spices
+								trade_goods = cloves
+								trade_goods = fur
+								trade_goods = incense
+							}
 						}
+						has_building = tradecompany
 					}
-					has_building = tradecompany
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = grain
-							trade_goods = livestock
-							trade_goods = wine
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = grain
+								trade_goods = livestock
+								trade_goods = wine
+							}
 						}
+						has_building = farm_estate
 					}
-					has_building = farm_estate
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = paper
-							trade_goods = gems
-							trade_goods = tropical_wood
-							trade_goods = glass
-							trade_goods = chinaware
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = paper
+								trade_goods = gems
+								trade_goods = tropical_wood
+								trade_goods = glass
+								trade_goods = chinaware
+							}
 						}
+						has_building = mills
 					}
-					has_building = mills
-				}
-				else_if = {
-					limit = {
-						trade_goods = coal
+					else_if = {
+						limit = {
+							trade_goods = coal
+						}
+						has_building = furnace
 					}
-					has_building = furnace
-				}
-				else = {
-					has_building = plantations
-				}
-				has_building = ramparts
-				has_building = soldier_households
-				has_building = impressment_offices
-				has_building = state_house
+					else = {
+						has_building = plantations
+					}
+					has_building = ramparts
+					has_building = soldier_households
+					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
-	}
-	task_completed_effect = {
+    }
+    task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_vaisyas
 			loyalty = 10
@@ -8841,26 +8803,24 @@ estate_vaisyas_build_manufactory_in_y = {
 				duration = 5475
 			}
 		}
-	}
-	failing_effect = {
+    }
+    failing_effect = {
 		event_target:agenda_province = {
 			if = {
-				limit = {
-					owned_by = root
-				}
+				limit = { owned_by = root }
 				add_named_unrest = {
 					name = local_vaisyas_displeased
 					value = 5
 				}
 			}
 		}
-		add_estate_loyalty_modifier = {
-			estate = estate_vaisyas
+        add_estate_loyalty_modifier = {
+            estate = estate_vaisyas
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-		}
-	}
+        }
+    }
 }
 
 estate_jains_build_manufactory_in_y = {
@@ -8883,9 +8843,7 @@ estate_jains_build_manufactory_in_y = {
 		}
 		modifier = {
 			factor = 0.5
-			NOT = {
-				monthly_income = 40
-			}
+			NOT = { monthly_income = 40 }
 		}
 		modifier = {
 			factor = 2
@@ -8894,9 +8852,7 @@ estate_jains_build_manufactory_in_y = {
 		modifier = {
 			factor = 2
 			is_institution_enabled = manufactories
-			NOT = {
-				has_institution = manufactories
-			}
+			NOT = { has_institution = manufactories }
 		}
 	}
 	pre_effect = {
@@ -8932,99 +8888,97 @@ estate_jains_build_manufactory_in_y = {
 	}
 	fail_if = {
 		event_target:agenda_province = {
-			NOT = {
-				owned_by = root
-			}
+			NOT = { owned_by = root }
 		}
 	}
-	task_requirements = {
+    task_requirements = {
 		event_target:agenda_province = {
 			custom_trigger_tooltip = {
 				tooltip = has_manufactory_trigger_tooltip
 				OR = {
-				if = {
-					limit = {
-						OR = {
-							trade_goods = naval_supplies
-							trade_goods = fish
-							trade_goods = salt
+					if = {
+						limit = {
+							OR = {
+								trade_goods = naval_supplies
+								trade_goods = fish
+								trade_goods = salt
+							}
 						}
+						has_building = wharf
 					}
-					has_building = wharf
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = copper
-							trade_goods = iron
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = copper
+								trade_goods = iron
+							}
 						}
+						has_building = weapons
 					}
-					has_building = weapons
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = wool
-							trade_goods = cloth
-							trade_goods = silk
-							trade_goods = dyes
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = wool
+								trade_goods = cloth
+								trade_goods = silk
+								trade_goods = dyes
+							}
 						}
+						has_building = textile
 					}
-					has_building = textile
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = ivory
-							trade_goods = slaves
-							trade_goods = spices
-							trade_goods = cloves
-							trade_goods = fur
-							trade_goods = incense
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = ivory
+								trade_goods = slaves
+								trade_goods = spices
+								trade_goods = cloves
+								trade_goods = fur
+								trade_goods = incense
+							}
 						}
+						has_building = tradecompany
 					}
-					has_building = tradecompany
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = grain
-							trade_goods = livestock
-							trade_goods = wine
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = grain
+								trade_goods = livestock
+								trade_goods = wine
+							}
 						}
+						has_building = farm_estate
 					}
-					has_building = farm_estate
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = paper
-							trade_goods = gems
-							trade_goods = tropical_wood
-							trade_goods = glass
-							trade_goods = chinaware
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = paper
+								trade_goods = gems
+								trade_goods = tropical_wood
+								trade_goods = glass
+								trade_goods = chinaware
+							}
 						}
+						has_building = mills
 					}
-					has_building = mills
-				}
-				else_if = {
-					limit = {
-						trade_goods = coal
+					else_if = {
+						limit = {
+							trade_goods = coal
+						}
+						has_building = furnace
 					}
-					has_building = furnace
+					else = {
+						has_building = plantations
+					}
+					has_building = ramparts
+					has_building = soldier_households
+					has_building = impressment_offices
+					has_building = state_house
 				}
-				else = {
-					has_building = plantations
-				}
-				has_building = ramparts
-				has_building = soldier_households
-				has_building = impressment_offices
-				has_building = state_house
-			}
 			}
 		}
-	}
-	task_completed_effect = {
+    }
+    task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_jains
 			loyalty = 10
@@ -9036,26 +8990,24 @@ estate_jains_build_manufactory_in_y = {
 				duration = 5475
 			}
 		}
-	}
-	failing_effect = {
+    }
+    failing_effect = {
 		event_target:agenda_province = {
 			if = {
-				limit = {
-					owned_by = root
-				}
+				limit = { owned_by = root }
 				add_named_unrest = {
 					name = local_jains_displeased
 					value = 5
 				}
 			}
 		}
-		add_estate_loyalty_modifier = {
-			estate = estate_jains
+        add_estate_loyalty_modifier = {
+            estate = estate_jains
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-		}
-	}
+        }
+    }
 }
 
 estate_church_build_manufactory_in_y = {
@@ -9082,9 +9034,7 @@ estate_church_build_manufactory_in_y = {
 		}
 		modifier = {
 			factor = 0.5
-			NOT = {
-				monthly_income = 40
-			}
+			NOT = { monthly_income = 40 }
 		}
 		modifier = {
 			factor = 2
@@ -9093,9 +9043,7 @@ estate_church_build_manufactory_in_y = {
 		modifier = {
 			factor = 2
 			is_institution_enabled = manufactories
-			NOT = {
-				has_institution = manufactories
-			}
+			NOT = { has_institution = manufactories }
 		}
 	}
 	pre_effect = {
@@ -9131,99 +9079,97 @@ estate_church_build_manufactory_in_y = {
 	}
 	fail_if = {
 		event_target:agenda_province = {
-			NOT = {
-				owned_by = root
-			}
+			NOT = { owned_by = root }
 		}
 	}
-	task_requirements = {
+    task_requirements = {
 		event_target:agenda_province = {
 			custom_trigger_tooltip = {
 				tooltip = has_manufactory_trigger_tooltip
 				OR = {
-				if = {
-					limit = {
-						OR = {
-							trade_goods = naval_supplies
-							trade_goods = fish
-							trade_goods = salt
+					if = {
+						limit = {
+							OR = {
+								trade_goods = naval_supplies
+								trade_goods = fish
+								trade_goods = salt
+							}
 						}
+						has_building = wharf
 					}
-					has_building = wharf
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = copper
-							trade_goods = iron
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = copper
+								trade_goods = iron
+							}
 						}
+						has_building = weapons
 					}
-					has_building = weapons
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = wool
-							trade_goods = cloth
-							trade_goods = silk
-							trade_goods = dyes
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = wool
+								trade_goods = cloth
+								trade_goods = silk
+								trade_goods = dyes
+							}
 						}
+						has_building = textile
 					}
-					has_building = textile
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = ivory
-							trade_goods = slaves
-							trade_goods = spices
-							trade_goods = cloves
-							trade_goods = fur
-							trade_goods = incense
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = ivory
+								trade_goods = slaves
+								trade_goods = spices
+								trade_goods = cloves
+								trade_goods = fur
+								trade_goods = incense
+							}
 						}
+						has_building = tradecompany
 					}
-					has_building = tradecompany
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = grain
-							trade_goods = livestock
-							trade_goods = wine
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = grain
+								trade_goods = livestock
+								trade_goods = wine
+							}
 						}
+						has_building = farm_estate
 					}
-					has_building = farm_estate
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = paper
-							trade_goods = gems
-							trade_goods = tropical_wood
-							trade_goods = glass
-							trade_goods = chinaware
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = paper
+								trade_goods = gems
+								trade_goods = tropical_wood
+								trade_goods = glass
+								trade_goods = chinaware
+							}
 						}
+						has_building = mills
 					}
-					has_building = mills
-				}
-				else_if = {
-					limit = {
-						trade_goods = coal
+					else_if = {
+						limit = {
+							trade_goods = coal
+						}
+						has_building = furnace
 					}
-					has_building = furnace
+					else = {
+						has_building = plantations
+					}
+					has_building = ramparts
+					has_building = soldier_households
+					has_building = impressment_offices
+					has_building = state_house
 				}
-				else = {
-					has_building = plantations
-				}
-				has_building = ramparts
-				has_building = soldier_households
-				has_building = impressment_offices
-				has_building = state_house
-			}
 			}
 		}
-	}
-	task_completed_effect = {
+    }
+    task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_church
 			loyalty = 10
@@ -9235,26 +9181,24 @@ estate_church_build_manufactory_in_y = {
 				duration = 5475
 			}
 		}
-	}
-	failing_effect = {
+    }
+    failing_effect = {
 		event_target:agenda_province = {
 			if = {
-				limit = {
-					owned_by = root
-				}
+				limit = { owned_by = root }
 				add_named_unrest = {
 					name = local_clergy_displeased
 					value = 5
 				}
 			}
 		}
-		add_estate_loyalty_modifier = {
-			estate = estate_church
+        add_estate_loyalty_modifier = {
+            estate = estate_church
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-		}
-	}
+        }
+    }
 }
 
 estate_brahmins_build_manufactory_in_y = {
@@ -9281,9 +9225,7 @@ estate_brahmins_build_manufactory_in_y = {
 		}
 		modifier = {
 			factor = 0.5
-			NOT = {
-				monthly_income = 40
-			}
+			NOT = { monthly_income = 40 }
 		}
 		modifier = {
 			factor = 2
@@ -9292,9 +9234,7 @@ estate_brahmins_build_manufactory_in_y = {
 		modifier = {
 			factor = 2
 			is_institution_enabled = manufactories
-			NOT = {
-				has_institution = manufactories
-			}
+			NOT = { has_institution = manufactories }
 		}
 	}
 	pre_effect = {
@@ -9330,99 +9270,97 @@ estate_brahmins_build_manufactory_in_y = {
 	}
 	fail_if = {
 		event_target:agenda_province = {
-			NOT = {
-				owned_by = root
-			}
+			NOT = { owned_by = root }
 		}
 	}
-	task_requirements = {
+    task_requirements = {
 		event_target:agenda_province = {
 			custom_trigger_tooltip = {
 				tooltip = has_manufactory_trigger_tooltip
 				OR = {
-				if = {
-					limit = {
-						OR = {
-							trade_goods = naval_supplies
-							trade_goods = fish
-							trade_goods = salt
+					if = {
+						limit = {
+							OR = {
+								trade_goods = naval_supplies
+								trade_goods = fish
+								trade_goods = salt
+							}
 						}
+						has_building = wharf
 					}
-					has_building = wharf
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = copper
-							trade_goods = iron
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = copper
+								trade_goods = iron
+							}
 						}
+						has_building = weapons
 					}
-					has_building = weapons
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = wool
-							trade_goods = cloth
-							trade_goods = silk
-							trade_goods = dyes
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = wool
+								trade_goods = cloth
+								trade_goods = silk
+								trade_goods = dyes
+							}
 						}
+						has_building = textile
 					}
-					has_building = textile
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = ivory
-							trade_goods = slaves
-							trade_goods = spices
-							trade_goods = cloves
-							trade_goods = fur
-							trade_goods = incense
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = ivory
+								trade_goods = slaves
+								trade_goods = spices
+								trade_goods = cloves
+								trade_goods = fur
+								trade_goods = incense
+							}
 						}
+						has_building = tradecompany
 					}
-					has_building = tradecompany
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = grain
-							trade_goods = livestock
-							trade_goods = wine
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = grain
+								trade_goods = livestock
+								trade_goods = wine
+							}
 						}
+						has_building = farm_estate
 					}
-					has_building = farm_estate
-				}
-				else_if = {
-					limit = {
-						OR = {
-							trade_goods = paper
-							trade_goods = gems
-							trade_goods = tropical_wood
-							trade_goods = glass
-							trade_goods = chinaware
+					else_if = {
+						limit = {
+							OR = {
+								trade_goods = paper
+								trade_goods = gems
+								trade_goods = tropical_wood
+								trade_goods = glass
+								trade_goods = chinaware
+							}
 						}
+						has_building = mills
 					}
-					has_building = mills
-				}
-				else_if = {
-					limit = {
-						trade_goods = coal
+					else_if = {
+						limit = {
+							trade_goods = coal
+						}
+						has_building = furnace
 					}
-					has_building = furnace
-				}
-				else = {
-					has_building = plantations
-				}
-				has_building = ramparts
-				has_building = soldier_households
-				has_building = impressment_offices
-				has_building = state_house
+					else = {
+						has_building = plantations
+					}
+					has_building = ramparts
+					has_building = soldier_households
+					has_building = impressment_offices
+					has_building = state_house
 				}
 			}
 		}
-	}
-	task_completed_effect = {
+    }
+    task_completed_effect = {
 		add_estate_loyalty = {
 			estate = estate_brahmins
 			loyalty = 10
@@ -9434,26 +9372,24 @@ estate_brahmins_build_manufactory_in_y = {
 				duration = 5475
 			}
 		}
-	}
-	failing_effect = {
+    }
+    failing_effect = {
 		event_target:agenda_province = {
 			if = {
-				limit = {
-					owned_by = root
-				}
+				limit = { owned_by = root }
 				add_named_unrest = {
 					name = local_brahmins_displeased
 					value = 5
 				}
 			}
 		}
-		add_estate_loyalty_modifier = {
-			estate = estate_brahmins
+        add_estate_loyalty_modifier = {
+            estate = estate_brahmins
 			desc = EST_VAL_AGENDA_DENIED
 			loyalty = -5
 			duration = 7300
-		}
-	}
+        }
+    }
 }
 
 #Universities

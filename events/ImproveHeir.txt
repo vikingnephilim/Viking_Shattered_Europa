@@ -1,0 +1,31 @@
+namespace = improve_heir
+country_event = {
+	id = improve_heir.1
+	title = "improve_heir.1.name"
+	desc = "improve_heir.1.desc"
+	picture = REFORM_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		name = "improve_heir.1.a"
+		remove_country_modifier = ruler_improving
+		if = {
+			limit = {
+				has_new_dynasty = yes
+			}
+			remove_country_modifier = heir_improving
+		}
+		if = {
+			limit = {
+				has_new_dynasty = no
+				has_regency = no
+				has_country_modifier = heir_improving
+			}
+			remove_country_modifier = heir_improving
+			add_country_modifier = {
+				name = "ruler_improving"
+				duration = 350
+			}
+		}
+	}
+}

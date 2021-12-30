@@ -1,0 +1,36 @@
+namespace = culturespread_event_namespace
+
+#spread of your culture in your country
+province_event = {
+	id = culturespread_event_namespace.1
+	title = "SpreadTitle"
+	desc = "SpreadPrimary"
+	picture = DIPLOMACY_eventPicture
+	fire_only_once = no
+	trigger = {
+		NOT = {
+			culture = owner
+		}
+		controlled_by = owner
+	}
+	mean_time_to_happen = {
+		years = 30
+		modifier = {
+			factor = 2
+			not = { owner = { prestige = 75 }}
+		}
+		modifier = {
+			factor = 0.8
+			owner = { prestige = 90 }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { stability = 0 }
+		}
+	}
+	#let the spread happen
+	option = {
+		name = "ApproveSpread"
+		change_culture = owner
+	}
+}

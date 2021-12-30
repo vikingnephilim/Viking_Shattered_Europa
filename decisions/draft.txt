@@ -1,0 +1,33 @@
+country_decisions = {
+	draft = {
+		potential = {
+			exists = yes
+		}
+		allow = {
+			NOT = {
+				manpower_percentage = 0.1
+			}
+			OR = {
+				is_at_war = yes
+				num_of_rebel_armies = 1
+			}
+			any_owned_province = {
+				development = 4
+			}
+		}
+		effect = {
+			add_manpower = 5
+			random_owned_province = {
+				limit = {
+					development = 4
+				}
+				add_base_tax = -1
+				add_base_production = -1
+				add_base_manpower = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
