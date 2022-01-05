@@ -1,0 +1,49 @@
+#Return To The Old Gods
+namespace = old_gods
+country_event = {
+id = old_gods.1
+title = "old_gods.1.t"
+desc = "old_gods.1.d"
+picture= BIG_BOOK_eventPicture
+
+trigger = {
+	religion_group = christian
+	NOT = {
+		has_country_flag = old_gods
+	}
+	OR = {
+		culture_group = germanic
+		culture_group = scandinavian
+	}
+	current_age = age_of_discovery
+}
+
+mean_time_to_happen = {
+	months = 500
+	modifier = {
+		factor = 0.5
+		NOT = { culture_group = germanic }
+	}
+}
+
+immediate = {
+	set_country_flag = old_gods
+	}
+
+option = { #Christ is Our Lord
+	name = "old_gods.1.a"
+	ai_chance = {factor = 95 }
+	add_stability = 1
+	}
+
+option = { #Return to the Old Gods
+	name = "old_gods.1.b"
+	ai_chance = {factor = 5 }
+	add_stability = -1
+	change_religion = norse_pagan_reformed
+	add_country_modifier = {
+		name = "conversion_zeal"
+		duration = 3650
+		}
+	}
+}

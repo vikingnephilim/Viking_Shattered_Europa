@@ -160,7 +160,7 @@ sufri_rebels = {
 	# Country scope
 	can_negotiate_trigger = {
 		OR = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			dominant_religion = sufri
 		}
 	}
@@ -181,7 +181,7 @@ sufri_rebels = {
 		}
 		if = {
 			limit = {
-				NOT = { is_muslim_viking_mod = yes }
+				NOT = { religion_group = muslim }
 			}
 			add_prestige = -50
 			every_owned_province = {
@@ -219,7 +219,7 @@ sufri_rebels = {
 			limit = {
 				NOT = { religion = sufri }
 				NOT = { dominant_religion = sufri }
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 				NOT = { has_country_modifier = heretic_tolerance }
 			}
 			add_country_modifier = {

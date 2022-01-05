@@ -731,7 +731,7 @@ ottoman_marches = {
 	}
 	trigger = {
 		is_march = yes
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		overlord = {
 			primary_culture = turkish
 		}
@@ -762,7 +762,7 @@ ottoman_vassals = {
 	}
 	trigger = {
 		government = monarchy
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = {
 			is_march = yes
 		}
@@ -852,6 +852,7 @@ gov_papal_government_elector = {
 		is_elector = yes
 	}
 }
+
 gov_papal_empire = {
 	rank = {
 		1 = PAPACY
@@ -883,6 +884,7 @@ gov_papal_empire = {
 		has_country_flag = restored_rome_flag
 	}
 }
+
 palatine_electorate = {
 	rank = {
 		1 = ELECTORAL_PALATINATE
@@ -1049,7 +1051,8 @@ holy_roman_electors_monarchy = {
 		is_emperor = no
 		NOT = {
 			tag = HAB
-		}		#Archdukes
+		}
+		#Archdukes
 	}
 }
 
@@ -1195,7 +1198,7 @@ islamic_syncretism_kingdoms = {
 	trigger = {
 		government = monarchy
 		NOT = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 		has_country_flag = sultan_titles_for_non_muslims
 	}
@@ -1286,7 +1289,7 @@ sharifs_of_mecca = {
 		3 = SHARIFZADE
 	}
 	trigger = {
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		OR = {
 			tag = HED
 			tag = MDA
@@ -1416,7 +1419,7 @@ dais_of_najran = {
 		3 = HEIR_fem
 	}
 	trigger = {
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		tag = NJR
 	}
 }
@@ -1500,7 +1503,7 @@ arabic_tribal = {
 		3 = SHAHZADE
 	}
 	trigger = {
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		primary_culture = bedouin_arabic
 		government = tribal
 	}
@@ -1543,7 +1546,7 @@ muslim_tribal = {
 		3 = SHAHZADE
 	}
 	trigger = {
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		government = tribal
 		NOT = {
 			has_reform = steppe_horde
@@ -2587,7 +2590,7 @@ egyptian_monarchy = {
 			has_reform = regional_representation_reform
 		}
 		primary_culture = al_misr_arabic		#Egyptian
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 	}
 }
 
@@ -2929,7 +2932,7 @@ muslim_indian_monarchy = {
 			culture_group = eastern_aryan
 			has_reform = indian_sultanate_reform
 		}
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 	}
 }
 
@@ -4395,7 +4398,7 @@ muslim_monarchy = {
 		NOT = {
 			has_reform = steppe_horde
 		}
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = {
 			has_reform = feudal_theocracy
 		}
@@ -4446,10 +4449,7 @@ iberian_colonial_government = {
 		1 = VICEREINE
 	}
 	trigger = {
-		OR = {
-			culture_group = celtic_iberian
-			culture_group = iberian
-		}
+		culture_group = iberian
 		OR = {
 			has_reform = colonial_government
 			has_reform = crown_colony_government
@@ -4779,7 +4779,7 @@ muslim_republic = {
 	}
 	trigger = {
 		government = republic
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 	}
 }
 

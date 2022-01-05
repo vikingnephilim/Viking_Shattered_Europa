@@ -92,7 +92,7 @@ estate_dhimmi_develop_x = {
 	can_select = {
 		any_owned_province = {
 			NOT = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 			is_state_core = root
 		}
@@ -762,7 +762,7 @@ estate_dhimmi_stop_converting_province_x = {
 		any_owned_province = {
 			has_missionary = yes
 			NOT = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 			missionary_strength = 0.01
 		}
@@ -776,7 +776,7 @@ estate_dhimmi_stop_converting_province_x = {
 			limit = {
 				has_missionary = yes
 				NOT = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 				missionary_strength = 0.01
 			}
@@ -800,7 +800,7 @@ estate_dhimmi_stop_converting_province_x = {
 		event_target:agenda_province = {
 			has_missionary = no
 			NOT = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 		}
 	}
@@ -835,7 +835,7 @@ estate_dhimmi_increase_autonomy_in_province_x = {
 				local_autonomy = 75
 			}
 			NOT = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 			is_capital = no
 			NOT = {
@@ -861,7 +861,7 @@ estate_dhimmi_increase_autonomy_in_province_x = {
 					local_autonomy = 75
 				}
 				NOT = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 				is_capital = no
 				NOT = {

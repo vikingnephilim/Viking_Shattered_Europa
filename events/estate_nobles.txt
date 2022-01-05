@@ -1053,7 +1053,7 @@ country_event = {
 		trigger = {
 			OR = {
 				AND = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					has_estate = estate_brahmins
 					estate_loyalty = {
 						estate = estate_brahmins
@@ -1592,7 +1592,7 @@ country_event = {
 		name = nobles_estate_events.10.c.2 # Brahmins dhimmi
 		trigger = { 
 			has_estate = estate_brahmins
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 		ai_chance = {
 			factor = 25

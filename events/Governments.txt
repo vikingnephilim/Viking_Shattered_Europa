@@ -99,7 +99,7 @@ country_event = {
 	picture = COURT_eventPicture
 	
 	trigger = {
-		NOT = { is_muslim_viking_mod = yes }
+		NOT = { religion_group = muslim }
 		OR = {
 			has_reform = iqta
 			has_reform = mamluk_government

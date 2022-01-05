@@ -56,10 +56,10 @@ scholar_from_our_school_trigger = {
 	has_country_modifier = $school$_scholar_modifier
 	ROOT = {
 		religious_school = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			OR = {
-				school = $school$_school_sunni
-				school = $school$_school_shia
+				school = $school$_school
+				school = $school$_school
 				school = $school$_school
 			}
 		}
@@ -71,10 +71,10 @@ our_scholar_matches_their_school_trigger = {
 		has_country_modifier = $school$_scholar_modifier
 	}
 	religious_school = {
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		OR = {
-			school = $school$_school_sunni
-			school = $school$_school_shia
+			school = $school$_school
+			school = $school$_school
 			school = $school$_school
 		}
 	}
@@ -85,20 +85,20 @@ our_scholar_matches_their_school_trigger = {
 has_shia_school_trigger = {
 	OR = {
 		religious_school = {
-			group = shia_muslim
-			school = ismaili_school_shia
+			group = muslim
+			school = ismaili_school
 		}
 		religious_school = {
-			group = shia_muslim
-			school = alawite_school_shia
+			group = muslim
+			school = alawite_school
 		}
 		religious_school = {
-			group = shia_muslim
-			school = kharijite_school_shia
+			group = muslim
+			school = kharijite_school
 		}
 		religious_school = {
-			group = shia_muslim
-			school = zikri_school_shia
+			group = muslim
+			school = zikri_school
 		}
 	}
 }
@@ -108,20 +108,20 @@ has_shia_school_trigger = {
 has_sunni_school_trigger = {
 	OR = {
 		religious_school = {
-			group = sunni_muslim
-			school = ashari_school_sunni
+			group = muslim
+			school = ashari_school
 		}
 		religious_school = {
-			group = sunni_muslim
-			school = hurufi_school_sunni
+			group = muslim
+			school = hurufi_school
 		}
 		religious_school = {
-			group = sunni_muslim
-			school = qarmatian_school_sunni
+			group = muslim
+			school = qarmatian_school
 		}
 		religious_school = {
-			group = sunni_muslim
-			school = sufri_school_sunni
+			group = muslim
+			school = sufri_school
 		}
 	}
 }

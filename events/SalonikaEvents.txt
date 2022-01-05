@@ -12,7 +12,7 @@ country_event = {
 	
 	trigger = {
 		owns_core_province = 148
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		148 = {
 			NOT = { religion = ROOT }
 		}
@@ -78,7 +78,7 @@ country_event = {
 	
 	trigger = {
 		NOT = {	num_of_estate_privileges = { estate = estate_dhimmi	value = 4 } }
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		148 = {
 			NOT = { religion = ROOT }
 			owned_by = ROOT

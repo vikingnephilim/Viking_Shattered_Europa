@@ -334,7 +334,7 @@ country_event = {
 		hidden_effect = {
 			every_country = {
 				limit = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 				add_opinion = {
 					who = ROOT
@@ -460,7 +460,7 @@ province_event = {
 		}
 		OR = {
 			religion_group = christian
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 		is_core = ROOT
 	}

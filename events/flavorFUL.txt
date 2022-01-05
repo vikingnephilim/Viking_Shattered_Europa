@@ -24,7 +24,7 @@ province_event = {
 		NOT = { has_province_flag = ful_marabout_happened }
 		owner = {
 			OR = {
-				NOT = { is_muslim_viking_mod = yes }
+				NOT = { religion_group = muslim }
 				NOT = { piety = -0.3 }
 			}
 		}
@@ -52,7 +52,7 @@ province_event = {
 		ai_chance = { factor = 1 }
 		if = {
 			limit = {
-				NOT = { is_muslim_viking_mod = yes }
+				NOT = { religion_group = muslim }
 			}
 			change_religion = sunni
 		}
@@ -91,7 +91,7 @@ country_event = {
 			primary_culture = fulani
 			any_owned_province = {
 				culture = fulani
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 		}
 		OR = {
@@ -111,7 +111,7 @@ country_event = {
 			factor = 0.5
 			any_owned_province = {
 				culture = fulani
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 		}
 	}
@@ -135,7 +135,7 @@ country_event = {
 			}
 		}
 		if = {
-			limit = { NOT = { is_muslim_viking_mod = yes } }
+			limit = { NOT = { religion_group = muslim } }
 			change_religion = sunni
 		}
 		define_ruler = {
@@ -184,7 +184,7 @@ country_event = {
 
 	trigger = {
 		has_country_flag = fulani_jihad_state
-		NOT = { is_muslim_viking_mod = yes }
+		NOT = { religion_group = muslim }
 		NOT = { tag = SOK }
 	}
 	

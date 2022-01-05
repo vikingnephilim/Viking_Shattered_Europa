@@ -171,7 +171,7 @@ country_event = {
 		has_church_aspect = judaism_diplomatic_rabbi_aspect
 		any_known_country = {
 			OR = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 				religion_group = christian
 			}
 			NOT = {
@@ -191,7 +191,7 @@ country_event = {
 		every_known_country = {
 			limit = {
 				OR = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					religion_group = christian
 				}
 				NOT = {

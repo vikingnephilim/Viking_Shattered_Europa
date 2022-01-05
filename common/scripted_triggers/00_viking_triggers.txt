@@ -79,16 +79,14 @@ is_pagan_allow_inti_viking_mod = {
 
 is_muslim_viking_mod = {
 	OR = {
-		religion_group = sunni_muslim
-		religion_group = shia_muslim
-		religion_group = quranist_muslim
+		religion_group = muslim
+		religion_group = muslim
+		religion_group = muslim
 	}
 }
 
 is_abrahamic_viking_mod = {
-	religion_group = sunni_muslim
-	religion_group = shia_muslim
-	religion_group = quranist_muslim
+	religion_group = muslim
 	religion_group = christian
 	religion_group = jewish_group
 }
@@ -108,18 +106,269 @@ fervor_religions = {
 	}
 }
 
+province_is_islamic_or_accepts_islam = {
+	OR = {
+		religion_group = muslim
+		AND = {
+			is_chinese_religion_viking_mod = yes
+			owner = {
+				OR = {
+					has_harmonized_with = muslim
+				}
+			}
+		}
+		AND = {
+			religion_group = african_pagan
+			owner = {
+				has_unlocked_cult = islam_cult
+			}
+		}
+		AND = {
+			religion = dreamtime
+			owner = {
+				has_unlocked_cult = islam_story
+			}
+		}
+	}
+	has_owner_religion = yes
+}
+
+province_is_christian_or_accepts_christianity = {
+	OR = {
+		religion_group = christian
+		AND = {
+			is_chinese_religion_viking_mod = yes
+			owner = {
+				OR = {
+					has_harmonized_with = christian
+				}
+			}
+		}
+		AND = {
+			religion_group = african_pagan
+			owner = {
+				has_unlocked_cult = christianity_cult
+			}
+		}
+	}
+	has_owner_religion = yes
+}
+
+province_is_jewish_or_accepts_jewish = {
+	OR = {
+		religion_group = jewish_group
+		AND = {
+			is_chinese_religion_viking_mod = yes
+			owner = {
+				OR = {
+					has_harmonized_with = jewish_group
+				}
+			}
+		}
+		AND = {
+			religion_group = african_pagan
+			owner = {
+				has_unlocked_cult = jewish_cult
+			}
+		}
+	}
+	has_owner_religion = yes
+}
+
+province_is_shinto_or_accepts_shinto = {
+	OR = {
+		religion = shinto
+		AND = {
+			is_chinese_religion_viking_mod = yes
+			owner = {
+				OR = {
+					has_harmonized_with = shinto
+				}
+			}
+		}
+	}
+	has_owner_religion = yes
+}
+
+province_is_ancient_pagan_or_accepts_ancient_pagan = {
+	OR = {
+		religion_group = ancient_pagan
+		AND = {
+			is_chinese_religion_viking_mod = yes
+			owner = {
+				OR = {
+					has_harmonized_with = ancient_pagan
+				}
+			}
+		}
+	}
+	has_owner_religion = yes
+}
+
+province_is_asian_pagan_or_accepts_asian_pagan = {
+	OR = {
+		religion_group = asian_pagan
+		AND = {
+			is_chinese_religion_viking_mod = yes
+			owner = {
+				OR = {
+					has_harmonized_with = asian_pagan
+				}
+			}
+		}
+	}
+	has_owner_religion = yes
+}
+
+province_is_african_pagan_or_accepts_african_pagan = {
+	OR = {
+		religion_group = african_pagan
+		AND = {
+			is_chinese_religion_viking_mod = yes
+			owner = {
+				OR = {
+					has_harmonized_with = african_pagan
+				}
+			}
+		}
+	}
+	has_owner_religion = yes
+}
+
+province_is_european_pagan_or_accepts_european_pagan = {
+	OR = {
+		religion_group = european_pagan
+		AND = {
+			is_chinese_religion_viking_mod = yes
+			owner = {
+				OR = {
+					has_harmonized_with = european_pagan
+				}
+			}
+		}
+		AND = {
+			religion_group = african_pagan
+			owner = {
+				has_unlocked_cult = norse_cult
+			}
+		}
+	}
+	has_owner_religion = yes
+}
+
+province_is_central_american_pagan_or_accepts_central_american_pagan = {
+	OR = {
+		religion_group = central_american_pagan
+		AND = {
+			is_chinese_religion_viking_mod = yes
+			owner = {
+				OR = {
+					has_harmonized_with = central_american_pagan
+				}
+			}
+		}
+		AND = {
+			religion_group = african_pagan
+			owner = {
+				has_unlocked_cult = south_central_american_cult
+			}
+		}
+	}
+	has_owner_religion = yes
+}
+
+province_is_south_american_pagan_or_accepts_south_american_pagan = {
+	OR = {
+		religion_group = south_american_pagan
+		AND = {
+			is_chinese_religion_viking_mod = yes
+			owner = {
+				OR = {
+					has_harmonized_with = south_american_pagan
+				}
+			}
+		}
+		AND = {
+			religion_group = african_pagan
+			owner = {
+				has_unlocked_cult = south_central_american_cult
+			}
+		}
+	}
+	has_owner_religion = yes
+}
+
+province_is_north_american_pagan_or_accepts_north_american_pagan = {
+	OR = {
+		religion_group = north_american_pagan
+		AND = {
+			is_chinese_religion_viking_mod = yes
+			owner = {
+				OR = {
+					has_harmonized_with = north_american_pagan
+				}
+			}
+		}
+	}
+	has_owner_religion = yes
+}
+
+province_is_zoroastrian_or_accepts_zoroastrian = {
+	OR = {
+		religion_group = zoroastrian_group
+		AND = {
+			is_chinese_religion_viking_mod = yes
+			owner = {
+				OR = {
+					has_harmonized_with = zoroastrian_group
+				}
+			}
+		}
+		AND = {
+			religion_group = african_pagan
+			owner = {
+				has_unlocked_cult = zoroastrian_cult
+			}
+		}
+	}
+	has_owner_religion = yes
+}
+
+province_is_dharmic_or_accepts_dharmic = {
+	OR = {
+		religion_group = dharmic
+		AND = {
+			is_chinese_religion_viking_mod = yes
+			owner = {
+				OR = {
+					has_harmonized_with = dharmic
+				}
+			}
+		}
+		AND = {
+			religion_group = african_pagan
+			owner = {
+				has_unlocked_cult = dharmic_cult
+			}
+		}
+		AND = {
+			religion = dreamtime
+			owner = {
+				has_unlocked_cult = dharma_story
+			}
+		}
+	}
+	has_owner_religion = yes
+}
+
 is_south_african_primary = {
 	OR = {
-		primary_culture = west_germanic_south_african
 		primary_culture = british_south_african
 		primary_culture = iberian_south_african
-		primary_culture = celtic_iberian_south_african
 		primary_culture = celtic_south_african
 		primary_culture = latin_south_african
 		primary_culture = french_south_african
-		primary_culture = south_french_south_african
 		primary_culture = scandinavian_south_african
-		primary_culture = old_norse_south_african
 		primary_culture = maghrebi_south_african
 	}
 }
@@ -926,7 +1175,12 @@ is_culture_to_latin_american = {
 		$cond$ = tuscan
 		$cond$ = romagnan
 		$cond$ = roman
+		$cond$ = etrurian
 		$cond$ = corsican
+		$cond$ = calibrese
+		$cond$ = neapolitan
+		$cond$ = sardinian
+		$cond$ = umbrian
 		$cond$ = latin_south_african
 	}
 }
@@ -945,7 +1199,12 @@ is_culture_to_latin_australian = {
 		$cond$ = tuscan
 		$cond$ = romagnan
 		$cond$ = roman
+		$cond$ = etrurian
 		$cond$ = corsican
+		$cond$ = calibrese
+		$cond$ = neapolitan
+		$cond$ = sardinian
+		$cond$ = umbrian
 		$cond$ = latin_south_african
 	}
 }
@@ -967,7 +1226,12 @@ is_culture_to_latin_central_american = {
 		$cond$ = tuscan
 		$cond$ = romagnan
 		$cond$ = roman
+		$cond$ = etrurian
 		$cond$ = corsican
+		$cond$ = calibrese
+		$cond$ = neapolitan
+		$cond$ = sardinian
+		$cond$ = umbrian
 		$cond$ = latin_south_african
 	}
 }
@@ -984,7 +1248,12 @@ is_culture_to_latin_west_indies = {
 		$cond$ = tuscan
 		$cond$ = romagnan
 		$cond$ = roman
+		$cond$ = etrurian
 		$cond$ = corsican
+		$cond$ = calibrese
+		$cond$ = neapolitan
+		$cond$ = sardinian
+		$cond$ = umbrian
 		$cond$ = latin_south_african
 	}
 }
@@ -1005,7 +1274,12 @@ is_culture_to_latin_new_zealander = {
 		$cond$ = tuscan
 		$cond$ = romagnan
 		$cond$ = roman
+		$cond$ = etrurian
 		$cond$ = corsican
+		$cond$ = calibrese
+		$cond$ = neapolitan
+		$cond$ = sardinian
+		$cond$ = umbrian
 		$cond$ = latin_south_african
 	}
 }
@@ -1022,7 +1296,12 @@ is_culture_to_latin_south_american = {
 		$cond$ = tuscan
 		$cond$ = romagnan
 		$cond$ = roman
+		$cond$ = etrurian
 		$cond$ = corsican
+		$cond$ = calibrese
+		$cond$ = neapolitan
+		$cond$ = sardinian
+		$cond$ = umbrian
 		$cond$ = latin_south_african
 	}
 }
@@ -1039,7 +1318,13 @@ is_culture_to_latin_south_african = {
 		$cond$ = tuscan
 		$cond$ = romagnan
 		$cond$ = roman
+		$cond$ = etrurian
 		$cond$ = corsican
+		$cond$ = calibrese
+		$cond$ = neapolitan
+		$cond$ = sardinian
+		$cond$ = umbrian
+		$cond$ = latin_south_african
 	}
 }
 

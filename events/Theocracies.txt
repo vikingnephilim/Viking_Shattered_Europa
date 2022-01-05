@@ -628,7 +628,7 @@ country_event = {
 		trigger = {
 			NOT = { has_country_flag = KOL_secondogeniture_of_BAV }
 			NOT = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 		}
 		if = {
@@ -827,7 +827,7 @@ country_event = {
 		name = theocracy.1.g		# A Local Imam Khatib
 		trigger = {
 			NOT = { has_country_flag = KOL_secondogeniture_of_BAV }
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 		set_country_flag = theo_imam_khatib_flag # USED IN DEVOTION.TXT
 		if = {

@@ -4,14 +4,10 @@ mug_sufis = {
 	ai = yes
 	potential = {
 		AND = {
-			OR = {
-				culture_group = iranian
-				culture_group = east_iranian
-				culture_group = west_persian
-			}
+			culture_group = iranian
 			OR = {
 				religion_group = zoroastrian_group
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 				religion = zun_pagan_reformed
 			}
 		}
@@ -48,7 +44,7 @@ mug_sufis = {
 		trigger = {
 			if = {
 				limit = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					has_estate = estate_church
 				}
 				estate_influence = {
@@ -80,7 +76,7 @@ mug_sufis = {
 		effect = {
 			if = {
 				limit = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					has_estate = estate_church
 				}
 				add_piety = -0.25
@@ -106,14 +102,10 @@ mug_rajput_branch = {
 	ai = yes
 	potential = {
 		AND = {
-			OR = {
-				culture_group = iranian
-				culture_group = east_iranian
-				culture_group = west_persian
-			}
+			culture_group = iranian
 			OR = {
 				religion_group = zoroastrian_group
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 				religion = zun_pagan_reformed
 			}
 		}
@@ -365,14 +357,10 @@ mug_hyderabad_branch = {
 	ai = yes
 	potential = {
 		AND = {
-			OR = {
-				culture_group = iranian
-				culture_group = east_iranian
-				culture_group = west_persian
-			}
+			culture_group = iranian
 			OR = {
 				religion_group = zoroastrian_group
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 				religion = zun_pagan_reformed
 			}
 		}

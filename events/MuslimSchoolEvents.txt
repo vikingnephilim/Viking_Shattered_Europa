@@ -291,7 +291,7 @@ country_event = {
 	desc = muslim_school_events.1.d
 	picture = MUSLIM_SCHOLAR_WRITING_eventPicture
 	trigger = {
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		has_dlc = "Cradle of Civilization"
 		has_religious_school = yes
 		any_owned_province = {
@@ -521,7 +521,7 @@ country_event = {
 			}
 			NOT = {
 				religious_school = {
-					group = quranist_muslim
+					group = muslim
 					school = alawite_school
 				}
 			}
@@ -606,7 +606,7 @@ country_event = {
 			}
 			NOT = {
 				religious_school = {
-					group = quranist_muslim
+					group = muslim
 					school = alawite_school
 				}
 			}
@@ -651,7 +651,7 @@ country_event = {
 	picture = BIG_ARABIAN_CITY_eventPicture
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		any_owned_province = {
 			is_capital = no
 			has_building = temple
@@ -763,12 +763,12 @@ country_event = {
 	picture = QIZILBASH_CAVALRY_CHARGING_eventPicture
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		at_war_with_religious_enemy = yes
 		has_border_with_religious_enemy = yes
 		any_country = {
 			NOT = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 			war_with = ROOT
 			num_of_cities = ROOT
@@ -779,7 +779,7 @@ country_event = {
 			random_country = {
 				limit = {
 					NOT = {
-						is_muslim_viking_mod = yes
+						religion_group = muslim
 					}
 					war_with = ROOT
 					num_of_cities = ROOT
@@ -874,27 +874,27 @@ country_event = {
 	}
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		OR = {
 			owns_core_province = 379			#Jerusalem
 			owns_core_province = 384			#Medina
 			owns_core_province = 385			#Mecca
 			AND = {
-				religion_group = shia_muslim
+				religion_group = muslim
 				owns_core_province = 2311				#Najaf
 			}
 			AND = {
-				religion_group = shia_muslim
+				religion_group = muslim
 				owns_core_province = 409				#Karbala
 			}
 			AND = {
-				religion_group = shia_muslim
+				religion_group = muslim
 				owns_core_province = 2211				#Mashhad
 			}
 			AND = {
 				NOT = {
 					religious_school = {
-						group = quranist_muslim
+						group = muslim
 						school = alawite_school
 					}
 				}
@@ -949,19 +949,19 @@ country_event = {
 						province_id = 385						#Mecca
 						AND = {
 							owner = {
-								religion_group = shia_muslim
+								religion_group = muslim
 							}
 							province_id = 2311							#Najaf
 						}
 						AND = {
 							owner = {
-								religion_group = shia_muslim
+								religion_group = muslim
 							}
 							province_id = 409							#Karbala
 						}
 						AND = {
 							owner = {
-								religion_group = shia_muslim
+								religion_group = muslim
 							}
 							province_id = 2211							#Mashhad
 						}
@@ -969,8 +969,8 @@ country_event = {
 							owner = {
 								NOT = {
 									religious_school = {
-										group = sunni_muslim
-										school = alawite_school_sunni
+										group = muslim
+										school = alawite_school
 									}
 								}
 							}
@@ -989,19 +989,19 @@ country_event = {
 						province_id = 385						#Mecca
 						AND = {
 							owner = {
-								religion_group = shia_muslim
+								religion_group = muslim
 							}
 							province_id = 2311							#Najaf
 						}
 						AND = {
 							owner = {
-								religion_group = shia_muslim
+								religion_group = muslim
 							}
 							province_id = 409							#Karbala
 						}
 						AND = {
 							owner = {
-								religion_group = shia_muslim
+								religion_group = muslim
 							}
 							province_id = 2211							#Mashhad
 						}
@@ -1017,19 +1017,19 @@ country_event = {
 						province_id = 385						#Mecca
 						AND = {
 							owner = {
-								religion_group = shia_muslim
+								religion_group = muslim
 							}
 							province_id = 2311							#Najaf
 						}
 						AND = {
 							owner = {
-								religion_group = shia_muslim
+								religion_group = muslim
 							}
 							province_id = 409							#Karbala
 						}
 						AND = {
 							owner = {
-								religion_group = shia_muslim
+								religion_group = muslim
 							}
 							province_id = 2211							#Mashhad
 						}
@@ -1075,7 +1075,7 @@ country_event = {
 				owns_core_province = 385				#Mecca
 			}
 			NOT = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			NOT = {
 				owns_core_province = 2311				#Najaf
@@ -1404,7 +1404,7 @@ country_event = {
 	picture = PRAYER_IN_MOSQUE_eventPicture
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		religion_group = shia_muslim
+		religion_group = muslim
 		is_free_or_tributary_trigger = yes
 		piety = 0.75
 		OR = {
@@ -1539,13 +1539,13 @@ country_event = {
 	picture = MYSTIC_IN_PRAYER_eventPicture
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = {
 			has_global_flag = neo_sufism
 		}
 		any_owned_province = {
 			NOT = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 			NOT = {
 				has_province_modifier = local_sufi
@@ -1560,7 +1560,7 @@ country_event = {
 			random_owned_province = {
 				limit = {
 					NOT = {
-						is_muslim_viking_mod = yes
+						religion_group = muslim
 					}
 					NOT = {
 						has_province_modifier = local_sufi
@@ -1574,7 +1574,7 @@ country_event = {
 			random_owned_province = {
 				limit = {
 					NOT = {
-						is_muslim_viking_mod = yes
+						religion_group = muslim
 					}
 					NOT = {
 						has_province_modifier = local_sufi
@@ -1689,7 +1689,7 @@ country_event = {
 	desc = muslim_school_events.8.d
 	picture = MUSLIM_SCHOLAR_WRITING_eventPicture
 	trigger = {
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		has_religious_scholars_trigger = yes
 		any_known_country = {
 			has_opinion = {
@@ -1745,7 +1745,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 				OR = {
 					has_country_modifier = ismaili_scholar_modifier
 					has_country_modifier = kharijite_scholar_modifier
@@ -1756,7 +1756,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				religion_group = quranist_muslim
+				religion_group = muslim
 			}
 			add_piety = 0.15
 		}
@@ -1789,7 +1789,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 				OR = {
 					has_country_modifier = ismaili_scholar_modifier
 					has_country_modifier = kharijite_scholar_modifier
@@ -1800,7 +1800,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				religion_group = quranist_muslim
+				religion_group = muslim
 			}
 			add_piety = 0.15
 		}
@@ -1823,14 +1823,14 @@ country_event = {
 	picture = MUSLIM_SCHOLAR_WRITING_eventPicture
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		has_religious_scholars_trigger = yes
 	}
 	immediate = {
 		hidden_effect = {
 			random_known_country = {
 				limit = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					has_religious_scholars_trigger = yes
 				}
 				save_event_target_as = scholar_country
@@ -1856,7 +1856,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 				OR = {
 					has_country_modifier = ismaili_scholar_modifier
 					has_country_modifier = kharijite_scholar_modifier
@@ -1867,7 +1867,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				religion_group = quranist_muslim
+				religion_group = muslim
 			}
 			add_piety = 0.15
 		}
@@ -1892,7 +1892,7 @@ country_event = {
 	picture = MUSLIM_SCHOLAR_WRITING_eventPicture
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		has_religious_scholars_trigger = yes
 	}
 	mean_time_to_happen = {
@@ -1922,7 +1922,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.9
-			religion_group = shia_muslim
+			religion_group = muslim
 			OR = {
 				has_country_modifier = ashari_scholar_modifier
 				has_country_modifier = alawite_scholar_modifier
@@ -1962,9 +1962,9 @@ country_event = {
 	picture = TRADE_GOODS_eventPicture
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = {
-			religion_group = shia_muslim
+			religion_group = muslim
 		}
 		any_owned_province = {
 			is_state = yes
@@ -2064,9 +2064,9 @@ country_event = {
 	picture = MYSTICS_DANCING_eventPicture
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = {
-			religion_group = shia_muslim
+			religion_group = muslim
 		}
 		any_owned_province = {
 			is_state = yes
@@ -2173,7 +2173,7 @@ country_event = {
 	goto = protest_province
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		any_owned_province = {
 			is_state = yes
 			is_capital = no
@@ -2281,7 +2281,7 @@ country_event = {
 	goto = urbanization_province
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		any_owned_province = {
 			is_state = yes
 			is_capital = no
@@ -2433,7 +2433,7 @@ country_event = {
 	}
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = {
 			has_country_modifier = "upkeep_of_holy_cities"
 		}
@@ -2442,22 +2442,22 @@ country_event = {
 			owns_core_province = 384			#Medina
 			owns_core_province = 385			#Mecca
 			AND = {
-				religion_group = shia_muslim
+				religion_group = muslim
 				owns_core_province = 2311				#Najaf
 			}
 			AND = {
-				religion_group = shia_muslim
+				religion_group = muslim
 				owns_core_province = 409				#Karbala
 			}
 			AND = {
-				religion_group = shia_muslim
+				religion_group = muslim
 				owns_core_province = 2211				#Mashhad
 			}
 			AND = {
 				NOT = {
 					religious_school = {
-						group = shia_muslim
-						school = alawite_school_shia
+						group = muslim
+						school = alawite_school
 					}
 				}
 				any_owned_province = {
@@ -2478,19 +2478,19 @@ country_event = {
 						province_id = 385						#Mecca
 						AND = {
 							owner = {
-								religion_group = shia_muslim
+								religion_group = muslim
 							}
 							province_id = 2311							#Najaf
 						}
 						AND = {
 							owner = {
-								religion_group = shia_muslim
+								religion_group = muslim
 							}
 							province_id = 409							#Karbala
 						}
 						AND = {
 							owner = {
-								religion_group = shia_muslim
+								religion_group = muslim
 							}
 							province_id = 2211							#Mashhad
 						}
@@ -2498,7 +2498,7 @@ country_event = {
 							owner = {
 								NOT = {
 									religious_school = {
-										group = quranist_muslim
+										group = muslim
 										school = alawite_school
 									}
 								}
@@ -2518,19 +2518,19 @@ country_event = {
 						province_id = 385						#Mecca
 						AND = {
 							owner = {
-								religion_group = shia_muslim
+								religion_group = muslim
 							}
 							province_id = 2311							#Najaf
 						}
 						AND = {
 							owner = {
-								religion_group = shia_muslim
+								religion_group = muslim
 							}
 							province_id = 409							#Karbala
 						}
 						AND = {
 							owner = {
-								religion_group = shia_muslim
+								religion_group = muslim
 							}
 							province_id = 2211							#Mashhad
 						}
@@ -2546,19 +2546,19 @@ country_event = {
 						province_id = 385						#Mecca
 						AND = {
 							owner = {
-								religion_group = shia_muslim
+								religion_group = muslim
 							}
 							province_id = 2311							#Najaf
 						}
 						AND = {
 							owner = {
-								religion_group = shia_muslim
+								religion_group = muslim
 							}
 							province_id = 409							#Karbala
 						}
 						AND = {
 							owner = {
-								religion_group = shia_muslim
+								religion_group = muslim
 							}
 							province_id = 2211							#Mashhad
 						}
@@ -2589,7 +2589,7 @@ country_event = {
 				owns_core_province = 385				#Mecca
 			}
 			NOT = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			NOT = {
 				owns_core_province = 2311				#Najaf
@@ -2664,7 +2664,7 @@ country_event = {
 	picture = PRAYER_IN_MOSQUE_eventPicture
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		has_religious_scholars_trigger = yes
 		any_owned_province = {
 			is_state = yes
@@ -2754,7 +2754,7 @@ country_event = {
 	picture = MYSTIC_IN_PRAYER_eventPicture
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = {
 			has_ruler_modifier = sought_sufi_sheikh
 		}
@@ -2864,7 +2864,7 @@ country_event = {
 	picture = PRAYER_IN_MOSQUE_eventPicture
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		religion_group = shia_muslim
+		religion_group = muslim
 		any_owned_province = {
 			is_capital = no
 			nationalism = 1
@@ -2928,7 +2928,7 @@ country_event = {
 	picture = MUSLIM_SCHOLAR_WRITING_eventPicture
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = {
 			stability = 3
 		}
@@ -2982,43 +2982,43 @@ country_event = {
 	picture = MYSTIC_IN_PRAYER_eventPicture
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		OR = {
 			has_religious_school = no
 			AND = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 				has_sunni_school_trigger = yes
 			}
 			AND = {
-				religion_group = shia_muslim
+				religion_group = muslim
 				has_sunni_school_trigger = yes
 			}
 			AND = {
-				religion_group = quranist_muslim
+				religion_group = muslim
 				has_sunni_school_trigger = yes
 			}
 			AND = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 				has_shia_school_trigger = yes
 			}
 			AND = {
-				religion_group = shia_muslim
+				religion_group = muslim
 				has_shia_school_trigger = yes
 			}
 			AND = {
-				religion_group = quranist_muslim
+				religion_group = muslim
 				has_shia_school_trigger = yes
 			}
 			AND = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 				has_quranist_school_trigger = yes
 			}
 			AND = {
-				religion_group = shia_muslim
+				religion_group = muslim
 				has_quranist_school_trigger = yes
 			}
 			AND = {
-				religion_group = quranist_muslim
+				religion_group = muslim
 				has_quranist_school_trigger = yes
 			}
 		}
@@ -3031,25 +3031,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = alawite_school_sunni
+				group = muslim
+				school = alawite_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = alawite_school_shia
+				group = muslim
+				school = alawite_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = alawite_school
 			}
 		}
@@ -3061,25 +3061,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = ashari_school_sunni
+				group = muslim
+				school = ashari_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = ashari_school_shia
+				group = muslim
+				school = ashari_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = ashari_school
 			}
 		}
@@ -3091,25 +3091,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = druze_school_sunni
+				group = muslim
+				school = druze_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = druze_school_shia
+				group = muslim
+				school = druze_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = druze_school
 			}
 		}
@@ -3121,25 +3121,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = fiqh_school_sunni
+				group = muslim
+				school = fiqh_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = fiqh_school_shia
+				group = muslim
+				school = fiqh_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = fiqh_school
 			}
 		}
@@ -3151,25 +3151,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = hurufi_school_sunni
+				group = muslim
+				school = hurufi_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = hurufi_school_shia
+				group = muslim
+				school = hurufi_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = hurufi_school
 			}
 		}
@@ -3181,25 +3181,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = ibadi_school_sunni
+				group = muslim
+				school = ibadi_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = ibadi_school_shia
+				group = muslim
+				school = ibadi_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = ibadi_school
 			}
 		}
@@ -3211,25 +3211,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = ismaili_school_sunni
+				group = muslim
+				school = ismaili_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = ismaili_school_shia
+				group = muslim
+				school = ismaili_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = ismaili_school
 			}
 		}
@@ -3241,25 +3241,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = kharijite_school_sunni
+				group = muslim
+				school = kharijite_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = kharijite_school_shia
+				group = muslim
+				school = kharijite_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = kharijite_school
 			}
 		}
@@ -3271,25 +3271,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = qarmatian_school_sunni
+				group = muslim
+				school = qarmatian_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = qarmatian_school_shia
+				group = muslim
+				school = qarmatian_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = qarmatian_school
 			}
 		}
@@ -3301,25 +3301,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = shabazzi_school_sunni
+				group = muslim
+				school = shabazzi_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = shabazzi_school_shia
+				group = muslim
+				school = shabazzi_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = shabazzi_school
 			}
 		}
@@ -3331,25 +3331,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = sufri_school_sunni
+				group = muslim
+				school = sufri_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = sufri_school_shia
+				group = muslim
+				school = sufri_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = sufri_school
 			}
 		}
@@ -3361,25 +3361,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = yazidi_school_sunni
+				group = muslim
+				school = yazidi_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = yazidi_school_shia
+				group = muslim
+				school = yazidi_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = yazidi_school
 			}
 		}
@@ -3391,25 +3391,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = zikri_school_sunni
+				group = muslim
+				school = zikri_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = zikri_school_shia
+				group = muslim
+				school = zikri_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = zikri_school
 			}
 		}
@@ -3438,7 +3438,7 @@ country_event = {
 		}
 		any_owned_province = {
 			NOT = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 			tolerance_to_this = 3
 		}
@@ -3486,7 +3486,7 @@ country_event = {
 		}
 		uses_piety = yes
 		religious_school = {
-			group = quranist_muslim
+			group = muslim
 			school = alawite_school
 		}
 		piety = 0.65
@@ -3513,7 +3513,7 @@ country_event = {
 	picture = MYSTIC_IN_PRAYER_eventPicture
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		OR = {
 			has_pious_sheikh_ul_islam_trigger = yes
 			has_global_flag = neo_sufism
@@ -3608,25 +3608,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = alawite_school_sunni
+				group = muslim
+				school = alawite_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = alawite_school_shia
+				group = muslim
+				school = alawite_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = alawite_school
 			}
 		}
@@ -3638,25 +3638,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = ashari_school_sunni
+				group = muslim
+				school = ashari_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = ashari_school_shia
+				group = muslim
+				school = ashari_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = ashari_school
 			}
 		}
@@ -3668,25 +3668,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = druze_school_sunni
+				group = muslim
+				school = druze_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = druze_school_shia
+				group = muslim
+				school = druze_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = druze_school
 			}
 		}
@@ -3698,25 +3698,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = fiqh_school_sunni
+				group = muslim
+				school = fiqh_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = fiqh_school_shia
+				group = muslim
+				school = fiqh_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = fiqh_school
 			}
 		}
@@ -3728,25 +3728,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = hurufi_school_sunni
+				group = muslim
+				school = hurufi_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = hurufi_school_shia
+				group = muslim
+				school = hurufi_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = hurufi_school
 			}
 		}
@@ -3758,25 +3758,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = ibadi_school_sunni
+				group = muslim
+				school = ibadi_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = ibadi_school_shia
+				group = muslim
+				school = ibadi_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = ibadi_school
 			}
 		}
@@ -3788,25 +3788,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = ismaili_school_sunni
+				group = muslim
+				school = ismaili_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = ismaili_school_shia
+				group = muslim
+				school = ismaili_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = ismaili_school
 			}
 		}
@@ -3818,25 +3818,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = kharijite_school_sunni
+				group = muslim
+				school = kharijite_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = kharijite_school_shia
+				group = muslim
+				school = kharijite_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = kharijite_school
 			}
 		}
@@ -3848,25 +3848,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = qarmatian_school_sunni
+				group = muslim
+				school = qarmatian_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = qarmatian_school_shia
+				group = muslim
+				school = qarmatian_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = qarmatian_school
 			}
 		}
@@ -3878,25 +3878,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = shabazzi_school_sunni
+				group = muslim
+				school = shabazzi_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = shabazzi_school_shia
+				group = muslim
+				school = shabazzi_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = shabazzi_school
 			}
 		}
@@ -3908,25 +3908,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = sufri_school_sunni
+				group = muslim
+				school = sufri_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = sufri_school_shia
+				group = muslim
+				school = sufri_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = sufri_school
 			}
 		}
@@ -3938,25 +3938,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = yazidi_school_sunni
+				group = muslim
+				school = yazidi_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = yazidi_school_shia
+				group = muslim
+				school = yazidi_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = yazidi_school
 			}
 		}
@@ -3968,25 +3968,25 @@ country_event = {
 		}
 		if = {
 			limit = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = sunni_muslim
-				school = zikri_school_sunni
+				group = muslim
+				school = zikri_school
 			}
 		}
 		else_if = {
 			limit = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			set_religious_school = {
-				group = shia_muslim
-				school = zikri_school_shia
+				group = muslim
+				school = zikri_school
 			}
 		}
 		else = {
 			set_religious_school = {
-				group = quranist_muslim
+				group = muslim
 				school = zikri_school
 			}
 		}

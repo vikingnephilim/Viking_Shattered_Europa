@@ -78,9 +78,7 @@ check_if_non_state_advisor_effect = {
 					OR = {
 						superregion = persia_superregion
 						superregion = india_superregion
-						religion_group = sunni_muslim
-						religion_group = shia_muslim
-						religion_group = quranist_muslim
+						religion_group = muslim
 						religion_group = dharmic
 					}
 				}
@@ -132,13 +130,7 @@ check_if_non_state_advisor_effect = {
 					religion_group = christian
 				}
 				NOT = {
-					religion_group = sunni_muslim
-				}
-				NOT = {
-					religion_group = shia_muslim
-				}
-				NOT = {
-					religion_group = quranist_muslim
+					religion_group = muslim
 				}
 				capital_scope = {
 					continent = asia					#Except the above parts of it
@@ -729,7 +721,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = sunni_muslim
+					religion_group = muslim
 				}
 				define_advisor = {
 					type = $advisor_type_if_not_state$
@@ -740,7 +732,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = shia_muslim
+					religion_group = muslim
 				}
 				define_advisor = {
 					type = $advisor_type_if_not_state$
@@ -751,7 +743,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = quranist_muslim
+					religion_group = muslim
 				}
 				define_advisor = {
 					type = $advisor_type_if_not_state$
@@ -865,7 +857,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = sunni_muslim
+					religion_group = muslim
 				}
 				define_advisor = {
 					type = $advisor_type_if_not_state$
@@ -877,7 +869,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = shia_muslim
+					religion_group = muslim
 				}
 				define_advisor = {
 					type = $advisor_type_if_not_state$
@@ -889,7 +881,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = quranist_muslim
+					religion_group = muslim
 				}
 				define_advisor = {
 					type = $advisor_type_if_not_state$
@@ -980,7 +972,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = sunni_muslim
+					religion_group = muslim
 				}
 				define_advisor = {
 					type = $advisor_type_if_not_state$
@@ -991,7 +983,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = shia_muslim
+					religion_group = muslim
 				}
 				define_advisor = {
 					type = $advisor_type_if_not_state$
@@ -1002,7 +994,7 @@ internal_advisor_generation_effect = {
 			}
 			else_if = {
 				limit = {
-					religion_group = quranist_muslim
+					religion_group = muslim
 				}
 				define_advisor = {
 					type = $advisor_type_if_not_state$

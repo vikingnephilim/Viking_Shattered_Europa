@@ -19,14 +19,14 @@ sun_1 = {
 		trigger = {
 			num_of_owned_provinces_with = {
 				value = 4
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 		}
 		effect = {
 			if = {
 				limit = {
 					NOT = {
-						is_muslim_viking_mod = yes
+						religion_group = muslim
 					}
 				}
 				country_event = {

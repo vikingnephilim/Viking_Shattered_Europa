@@ -21,7 +21,7 @@ country_event = {
 		if = {
 			limit = {
 				capital_scope = {
-					NOT = { is_muslim_viking_mod = yes }
+					NOT = { religion_group = muslim }
 				}
 			}
 			capital_scope = {
@@ -31,14 +31,14 @@ country_event = {
 		random_owned_province = {
 			limit = {
 				superregion = east_indies_superregion
-				NOT = { is_muslim_viking_mod = yes }
+				NOT = { religion_group = muslim }
 			}
 			change_religion = sunni
 		}
 		random_owned_province = {
 			limit = {
 				superregion = east_indies_superregion
-				NOT = { is_muslim_viking_mod = yes }
+				NOT = { religion_group = muslim }
 			}
 			change_religion = sunni
 		}

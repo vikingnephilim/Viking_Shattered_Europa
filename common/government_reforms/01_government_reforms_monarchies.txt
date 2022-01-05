@@ -199,12 +199,12 @@ indian_sultanate_reform = {
 			}
 			has_reform = indian_sultanate_reform
 		}
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
 	nation_designer_trigger = {
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		capital_scope = {
 			superregion = india_superregion
 		}
@@ -465,12 +465,12 @@ iqta = {
 	icon = "muslim"
 	allow_normal_conversion = yes
 	potential = {
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
 	nation_designer_trigger = {
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 	}
 	legacy_equivalent = iqta_legacy
 	queen = no
@@ -535,7 +535,7 @@ ottoman_government = {
 	allow_normal_conversion = yes
 	icon = "ottoman_government"
 	potential = {
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		OR = {
 			AND = {
 				tag = TUR
@@ -558,7 +558,7 @@ ottoman_government = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 20
 	nation_designer_trigger = {
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 	}
 	legacy_equivalent = ottoman_government_legacy
 	maintain_dynasty = yes
@@ -669,9 +669,7 @@ principality = {
 	potential = {
 		OR = {
 			culture_group = east_slavic
-			culture_group = novgorod_group
 			culture_group = ruthenian_group
-			culture_group = ruthenian_south_group
 			culture = mordvin
 		}
 		NOT = {
@@ -686,9 +684,7 @@ principality = {
 	nation_designer_trigger = {
 		OR = {
 			culture_group = east_slavic
-			culture_group = novgorod_group
 			culture_group = ruthenian_group
-			culture_group = ruthenian_south_group
 			culture = mordvin
 		}
 		religion_group = christian
@@ -714,9 +710,7 @@ tsardom = {
 	potential = {
 		OR = {
 			culture_group = east_slavic
-			culture_group = novgorod_group
 			culture_group = ruthenian_group
-			culture_group = ruthenian_south_group
 			culture = mordvin
 		}
 		NOT = {
@@ -749,9 +743,7 @@ tsardom = {
 	nation_designer_trigger = {
 		OR = {
 			culture_group = east_slavic
-			culture_group = novgorod_group
 			culture_group = ruthenian_group
-			culture_group = ruthenian_south_group
 			culture = mordvin
 		}
 		religion_group = christian
@@ -777,7 +769,7 @@ mamluk_government = {
 	icon = "mamluk_government"
 	allow_normal_conversion = yes
 	potential = {
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		OR = {
 			AND = {
 				tag = MAM
@@ -793,7 +785,7 @@ mamluk_government = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 60
 	nation_designer_trigger = {
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 	}
 	modifiers = {
 		num_accepted_cultures = 3
@@ -827,7 +819,7 @@ feudal_theocracy = {
 		OR = {
 			AND = {
 				OR = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					religion_group = zoroastrian_group
 				}
 				OR = {
@@ -846,7 +838,7 @@ feudal_theocracy = {
 			is_pagan_viking_mod = yes
 		}
 		OR = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			religion_group = zoroastrian_group
 		}
 	}
@@ -917,9 +909,6 @@ mughal_government = {
 		baltic = {
 			naval_forcelimit_modifier = 0.05
 		}
-		basque_g = {
-			rebel_support_efficiency = 0.5
-		}
 		british = {
 			ship_durability = 0.05
 		}
@@ -940,9 +929,6 @@ mughal_government = {
 		}
 		caucasian = {
 			mercenary_discipline = 0.05
-		}
-		celtic_iberian = {
-			range = 0.5
 		}
 		central_algonquian = {
 			native_assimilation = 0.25
@@ -965,29 +951,14 @@ mughal_government = {
 		east_asian = {
 			state_maintenance_modifier = -0.2
 		}
-		east_iranian = {
-			global_heathen_missionary_strength = 0.03
-		}
-		east_maghrebi = {
-			advisor_pool = 1
-		}
-		east_malay = {
-			enforce_religion_cost = -0.5
-		}
 		east_slavic = {
 			land_forcelimit_modifier = 0.1
-		}
-		east_turkic_g = {
-			global_heretic_missionary_strength = 0.03
 		}
 		eastern_algonquian = {
 			discovered_relations_impact = -0.1
 		}
 		eastern_aryan = {
 			production_efficiency = 0.05
-		}
-		egyptian_g = {
-			global_missionary_strength = 0.03
 		}
 		eskaleut = {
 			global_spy_defence = 0.1
@@ -1012,9 +983,6 @@ mughal_government = {
 		}
 		great_lakes_group = {
 			loot_amount = 0.5
-		}
-		hayhurum = {
-			war_exhaustion_cost = -0.1
 		}
 		hindusthani = {
 			core_creation = -0.1
@@ -1076,26 +1044,11 @@ mughal_government = {
 		maya = {
 			global_tariffs = 0.25
 		}
-		mountain_east_asian = {
-			siege_ability = 0.1
-		}
-		mozarabic = {
-			same_culture_advisor_cost = -0.25
-		}
 		muskogean = {
 			shock_damage_received = -0.1
 		}
 		na_dene = {
 			recover_army_morale_speed = 0.1
-		}
-		north_malay = {
-			siege_blockade_progress = 1
-		}
-		novgorod_group = {
-			reserves_organisation = 0.1
-		}
-		old_norse_culture = {
-			global_regiment_recruit_speed = -0.1
 		}
 		otomanguean = {
 			rival_border_fort_maintenance = -0.1
@@ -1112,20 +1065,11 @@ mughal_government = {
 		plains_algonquian = {
 			diplomatic_annexation_cost = -0.2
 		}
-		plains_east_asian = {
-			diplomatic_upkeep = 1
-		}
 		ruthenian_group = {
 			envoy_travel_time = -0.2
 		}
-		ruthenian_south_group = {
-			years_of_nationalism = -5
-		}
 		sahelian = {
 			movement_speed = 0.1
-		}
-		sapmi = {
-			mercenary_manpower = 0.5
 		}
 		scandinavian = {
 			mil_advisor_cost = -0.1
@@ -1139,23 +1083,11 @@ mughal_government = {
 		southeastasian_group = {
 			development_cost = -0.05
 		}
-		south_germanic = {
-			discipline = 0.05
-		}
 		south_slavic = {
 			warscore_cost_vs_other_religion = -0.1
 		}
 		southern_african = {
 			inflation_reduction = 0.05
-		}
-		south_arab = {
-			inflation_action_cost = -0.1
-		}
-		south_french = {
-			core_decay_on_your_own = -0.1
-		}
-		south_latin = {
-			build_time = -0.25
 		}
 		sudanese = {
 			caravan_power = 0.1
@@ -1169,20 +1101,11 @@ mughal_government = {
 		tibetan_group = {
 			prestige_per_development_from_conversion = 0.5
 		}
-		turkish_g = {
-			institution_spread_from_true_faith = 0.1
-		}
 		turko_semitic = {
 			cavalry_power = 0.1
 		}
 		west_african = {
 			global_autonomy = -0.01
-		}
-		west_germanic = {
-			innovativeness_gain = 0.5
-		}
-		west_persian = {
-			yearly_corruption = -0.1
 		}
 		west_slavic = {
 			leader_land_fire = 1
@@ -1267,7 +1190,7 @@ mandala_reform = {
 		OR = {
 			religion_group = eastern
 			religion_group = dharmic
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			religion = animism
 		}
 		technology_group = chinese
@@ -1288,7 +1211,7 @@ mandala_reform = {
 		OR = {
 			religion_group = eastern
 			religion_group = dharmic
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 		technology_group = chinese
 		OR = {
@@ -1601,7 +1524,7 @@ bengali_reform = {
 	potential = {
 		has_dlc = "Dharma"
 		primary_culture = bengali
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 	}
 	modifiers = {
 		merchants = 1
@@ -1618,7 +1541,7 @@ sufi_syncretism_reform = {
 	potential = {
 		has_dlc = "Dharma"
 		primary_culture = bengali
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 	}
 	modifiers = {
 		global_missionary_strength = 0.01
@@ -1674,7 +1597,7 @@ deccani_society_reform = {
 		has_dlc = "Dharma"
 		is_revolutionary = no
 		technology_group = indian
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		OR = {
 			culture_group = dravidian
 			primary_culture = marathi
@@ -1791,7 +1714,7 @@ sidhi_recruitment = {
 	potential = {
 		has_dlc = "Dharma"
 		technology_group = indian
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		OR = {
 			culture_group = dravidian
 			primary_culture = marathi
@@ -2003,7 +1926,7 @@ meritocratic_focus_reform = {
 			factor = 0.1
 			OR = {
 				AND = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					OR = {
 						estate_influence = {
 							estate = estate_rajput
@@ -2017,7 +1940,7 @@ meritocratic_focus_reform = {
 				}
 				AND = {
 					NOT = {
-						is_muslim_viking_mod = yes
+						religion_group = muslim
 					}
 					estate_influence = {
 						estate = estate_vaisyas
@@ -2039,7 +1962,7 @@ dakhni_culture_reform = {
 	potential = {
 		has_dlc = "Dharma"
 		technology_group = indian
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		OR = {
 			culture_group = dravidian
 			primary_culture = marathi

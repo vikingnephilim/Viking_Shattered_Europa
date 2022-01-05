@@ -22,11 +22,11 @@ atj_1 = {
 					NOT = { has_building = temple }
 					NOT = { has_building = cathedral }
 				}
-				NOT = { is_muslim_viking_mod = yes }
+				NOT = { religion_group = muslim }
 			}
 		}
 		trigger = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			if = {
 				limit = {
 					has_estate = estate_church
@@ -38,7 +38,7 @@ atj_1 = {
 			}
 			617 = {
 				owned_by = ROOT
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 				OR = {
 					has_building = temple
 					has_building = cathedral
@@ -67,7 +67,7 @@ atj_1 = {
 		provinces_to_highlight = {
 			owner = {
 				primary_culture = sumatran
-				NOT = { is_muslim_viking_mod = yes }
+				NOT = { religion_group = muslim }
 			}
 		}
 		trigger = {
@@ -76,7 +76,7 @@ atj_1 = {
 				NOT = {
 					any_country = {
 						primary_culture = sumatran
-						NOT = { is_muslim_viking_mod = yes }
+						NOT = { religion_group = muslim }
 					}
 				}
 			}
@@ -94,7 +94,7 @@ atj_1 = {
 					primary_culture = sundanese
 					primary_culture = javanese
 				}
-				NOT = { is_muslim_viking_mod = yes }
+				NOT = { religion_group = muslim }
 			}
 		}
 		trigger = {
@@ -106,7 +106,7 @@ atj_1 = {
 							primary_culture = sundanese
 							primary_culture = javanese
 						}
-						NOT = { is_muslim_viking_mod = yes }
+						NOT = { religion_group = muslim }
 					}
 				}
 			}
@@ -124,7 +124,7 @@ atj_1 = {
 					primary_culture = sulawesi
 					primary_culture = moluccan
 				}
-				NOT = { is_muslim_viking_mod = yes }
+				NOT = { religion_group = muslim }
 			}
 		}
 		trigger = {
@@ -136,7 +136,7 @@ atj_1 = {
 							primary_culture = sulawesi
 							primary_culture = moluccan
 						}
-						NOT = { is_muslim_viking_mod = yes }
+						NOT = { religion_group = muslim }
 					}
 				}
 			}
@@ -187,7 +187,7 @@ atj_2 = {
 			}
 			else = {
 				any_country = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					total_development = 300
 					alliance_with = ROOT
 				}

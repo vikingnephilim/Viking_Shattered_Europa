@@ -26,7 +26,7 @@ mali_pick_religious_direction_slot = {
 					has_country_flag = mal_decide_for_tolerance
 				}
 			}
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 		effect = {
 			custom_tooltip = mal_pick_a_religious_direction_tt
@@ -1089,7 +1089,7 @@ mali_empire_slot = {
 		trigger = {
 			if = {
 				limit = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 				326 = {
 					OR = {
@@ -1188,7 +1188,7 @@ mali_empire_slot = {
 		effect = {
 			if = {
 				limit = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 				country_event = {
 					id = flavor_mal.37

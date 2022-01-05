@@ -620,7 +620,7 @@ country_event = {
 						}
 					}
 					AND = {
-						is_muslim_viking_mod = yes
+						religion_group = muslim
 						ROOT = {
 							NOT = {
 								has_unlocked_cult = islam_cult
@@ -704,7 +704,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					ROOT = {
 						NOT = {
 							has_unlocked_cult = islam_cult
@@ -828,7 +828,7 @@ country_event = {
 					}
 				}
 				AND = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					ROOT = {
 						NOT = {
 							has_unlocked_cult = islam_cult
@@ -1159,7 +1159,7 @@ country_event = {
 						}
 					}
 					AND = {
-						is_muslim_viking_mod = yes
+						religion_group = muslim
 						ROOT = {
 							NOT = {
 								has_unlocked_cult = islam_cult
@@ -1243,7 +1243,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					ROOT = {
 						NOT = {
 							has_unlocked_cult = islam_cult
@@ -1366,7 +1366,7 @@ country_event = {
 					}
 				}
 				AND = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					ROOT = {
 						NOT = {
 							has_unlocked_cult = islam_cult
@@ -4124,7 +4124,7 @@ province_event = {
 	desc = fetishist_flavor.457.d
 	picture = POPE_PREACHING_eventPicture
 	trigger = {
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		owner = {
 			religion = shamanism
 			has_adopted_cult = islam_cult
@@ -4185,7 +4185,7 @@ province_event = {
 		owner = {
 			has_adopted_cult = islam_cult
 			any_known_country = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 				num_of_cities = 3
 				num_of_ports = 1
 			}
@@ -4196,7 +4196,7 @@ province_event = {
 			owner = {
 				random_known_country = {
 					limit = {
-						is_muslim_viking_mod = yes
+						religion_group = muslim
 						num_of_cities = 3
 						num_of_ports = 1
 					}
@@ -4221,7 +4221,7 @@ province_event = {
 		modifier = {
 			factor = 0.9
 			any_neighbor_province = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 		}
 	}
@@ -5261,7 +5261,7 @@ country_event = {
 			any_known_country = {
 				OR = {
 					has_unlocked_cult = islam_cult
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 			}
 		}

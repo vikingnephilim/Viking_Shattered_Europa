@@ -23,7 +23,7 @@ country_event = {
 					has_dlc = "Cradle of Civilization"
 				}
 				NOT = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 			}
 		}
@@ -32,7 +32,7 @@ country_event = {
 	picture = {
 		trigger = {
 			has_dlc = "Cradle of Civilization"
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 		picture = MUSLIM_SCHOLAR_WRITING_eventPicture
 	}
@@ -114,7 +114,7 @@ country_event = {
 					has_dlc = "Cradle of Civilization"
 				}
 				NOT = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 			}
 		}
@@ -123,7 +123,7 @@ country_event = {
 	picture = {
 		trigger = {
 			has_dlc = "Cradle of Civilization"
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 		picture = MUSLIM_SCHOLAR_WRITING_eventPicture
 	}
@@ -4217,7 +4217,7 @@ province_event = {
 	desc = {
 		trigger = {
 			owner = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 		}
 		desc = institution_events.73.db		#Shadowplay
@@ -4225,7 +4225,7 @@ province_event = {
 	#desc = {
 	#	trigger = {
 	#		owner = {
-	#			NOT = { is_muslim_viking_mod = yes }
+	#			NOT = { religion_group = muslim }
 	#			NOT = { religion_group = christian }
 	#		}
 	#	}
@@ -4255,7 +4255,7 @@ province_event = {
 			}
 		}
 		OR = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			religion_group = christian
 		}
 		religion_group = owner

@@ -14,11 +14,11 @@ province_event = {
 			AND = {
 				is_indic_viking_mod = yes
 				any_neighbor_province = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 			}
 			AND = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 				any_neighbor_province = {
 					is_indic_viking_mod = yes
 				}
@@ -527,7 +527,7 @@ province_event = {
 		months = 800
 		modifier = {
 			factor = 0.8
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			NOT = { owner = { piety = -0.25 } }
 		}
 		modifier = {
@@ -554,11 +554,11 @@ province_event = {
 				AND = {
 					is_indic_viking_mod = yes
 					any_neighbor_province = {
-						is_muslim_viking_mod = yes
+						religion_group = muslim
 					}
 				}
 				AND = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					any_neighbor_province = {
 						is_indic_viking_mod = yes
 					}

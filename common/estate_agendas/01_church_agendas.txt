@@ -548,7 +548,7 @@ estate_church_root_out_heresy = {
 		is_free_or_tributary_trigger = yes
 		num_of_cities = 10
 		OR = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			religion_group = christian
 			full_idea_group = religious_ideas
 		}
@@ -1341,7 +1341,7 @@ estate_church_protect_brethren = {
 estate_church_propagate_religion = {
 	can_select = {
 		has_dlc = "Cradle of Civilization"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		dominant_religion = root
 		any_active_trade_node = {
 			trade_share = {
@@ -1352,7 +1352,7 @@ estate_church_propagate_religion = {
 			any_trade_node_member_province = {
 				is_city = yes
 				NOT = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 				NOT = {
 					religion_group = christian
@@ -1386,7 +1386,7 @@ estate_church_propagate_religion = {
 				any_trade_node_member_province = {
 					is_city = yes
 					NOT = {
-						is_muslim_viking_mod = yes
+						religion_group = muslim
 					}
 					NOT = {
 						religion_group = christian
@@ -1411,7 +1411,7 @@ estate_church_propagate_religion = {
 		}
 		is_city = yes
 		NOT = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 		NOT = {
 			religion_group = christian
@@ -1427,7 +1427,7 @@ estate_church_propagate_religion = {
 				all_trade_node_member_province = {
 					OR = {
 						religion = root
-						is_muslim_viking_mod = yes
+						religion_group = muslim
 						religion_group = christian
 						religion_group = jewish_group
 						is_city = no
@@ -1449,7 +1449,7 @@ estate_church_propagate_religion = {
 	fail_if = {
 		OR = {
 			NOT = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 			event_target:agenda_trade_node = {
 				all_trade_node_member_province = {

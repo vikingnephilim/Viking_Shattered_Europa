@@ -373,7 +373,7 @@ country_event = {
 				1 = {
 					trigger = {
 						NOT = {
-							is_muslim_viking_mod = yes
+							religion_group = muslim
 						}
 						has_consort = yes
 					}
@@ -382,7 +382,7 @@ country_event = {
 				1 = {
 					trigger = {
 						NOT = {
-							is_muslim_viking_mod = yes
+							religion_group = muslim
 						}
 						NOT = {
 							has_dlc = "Rights of Man"
@@ -1826,7 +1826,7 @@ country_event = {
 		OR = {
 			religion = catholic
 			religion = orthodox
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 		NOT = {
 			tag = PAP
@@ -1871,7 +1871,7 @@ country_event = {
 		reduce_estate_church_loyalty_effect = yes
 		if = {
 			limit = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 			add_piety = -0.1
 		}
@@ -1903,7 +1903,7 @@ country_event = {
 		add_estate_church_loyalty_effect = yes
 		if = {
 			limit = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 			add_piety = 0.2
 		}
@@ -1932,7 +1932,7 @@ country_event = {
 		add_estate_church_loyalty_effect = yes
 		if = {
 			limit = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 			add_piety = 0.1
 		}
@@ -12445,7 +12445,7 @@ country_event = {
 	option = {
 		name = "random_event.EVTOPTC13"
 		trigger = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			has_estate = estate_church
 		}
 		ai_chance = {

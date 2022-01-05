@@ -381,7 +381,7 @@ country_event = {
 			NOT = { piety = 0 }
 			any_owned_province = {
 				OR = {
-					religion_group = shia_muslim
+					religion_group = muslim
 					has_province_modifier = sufi_shrine
 				}
 				NOT = { has_province_modifier = religious_heterodoxy }
@@ -389,7 +389,7 @@ country_event = {
 			}
 		}
 		any_owned_province = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			NOT = { has_province_modifier = religious_heterodoxy }
 			NOT = { has_province_modifier = imposed_religious_orthodoxy }
 		}
@@ -399,7 +399,7 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					NOT = { has_province_modifier = religious_heterodoxy }
 					NOT = { has_province_modifier = imposed_religious_orthodoxy }
 				}
@@ -408,7 +408,7 @@ country_event = {
 			random_owned_province = {
 				limit = {
 					OR = {
-						religion_group = shia_muslim
+						religion_group = muslim
 						has_province_modifier = sufi_shrine
 					}
 					NOT = { has_province_modifier = religious_heterodoxy }

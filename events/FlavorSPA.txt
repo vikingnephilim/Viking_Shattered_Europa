@@ -218,7 +218,7 @@ country_event = {
 		is_at_war = no
 		any_owned_province = {
 			region = iberia_region
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 	}
 
@@ -246,7 +246,7 @@ country_event = {
 		every_owned_province = {
 			limit = {
 				region = iberia_region
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 			change_religion = catholic
 			add_province_modifier = {
@@ -256,7 +256,7 @@ country_event = {
 		}	
 		random_country = {
 			limit = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 				any_owned_province = {
 					sea_zone = {
 						any_neighbor_province = {
@@ -881,7 +881,7 @@ country_event = {
 		}
 		random_country = {
 			limit = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 				any_owned_province = {
 					sea_zone = {
 						any_neighbor_province = {
@@ -2047,7 +2047,7 @@ country_event = {
 				has_province_flag = alpujarras_centre_of_revolt
 			}
 			if = {
-				limit = { NOT = { is_muslim_viking_mod = yes } }
+				limit = { NOT = { religion_group = muslim } }
 				change_religion = sunni #Crypto-Muslims
 			}
 			spawn_rebels = {
@@ -2064,7 +2064,7 @@ country_event = {
 				has_province_flag = alpujarras_revolt
 			}
 			if = {
-				limit = { NOT = { is_muslim_viking_mod = yes } }
+				limit = { NOT = { religion_group = muslim } }
 				change_religion = sunni #Crypto-Muslims
 			}
 			spawn_rebels = {
@@ -2134,7 +2134,7 @@ country_event = {
 		#Repeat of effect from earlier persecutions:
 		random_country = {
 			limit = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 				any_owned_province = {
 					sea_zone = {
 						any_neighbor_province = {

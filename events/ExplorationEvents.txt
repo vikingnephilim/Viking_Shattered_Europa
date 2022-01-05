@@ -435,7 +435,7 @@ province_event = {
 		has_dlc = "El Dorado"
 		is_empty = yes
 		FROM = {
-			NOT = { is_muslim_viking_mod = yes }
+			NOT = { religion_group = muslim }
 			NOT = { has_country_modifier = drunken_explorer }
 		}
 	}

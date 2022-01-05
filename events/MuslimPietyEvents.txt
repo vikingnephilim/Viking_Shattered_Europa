@@ -66,8 +66,8 @@ country_event = {
 			modifier = {
 				factor = 2
 				religious_school = {
-					group = sunni_muslim
-					school = alawite_school_sunni
+					group = muslim
+					school = alawite_school
 				}
 			}
 			modifier = {
@@ -145,14 +145,14 @@ country_event = {
 			}
 			NOT = {
 				religious_school = {
-					group = sunni_muslim
-					school = ismaili_school_sunni
+					group = muslim
+					school = ismaili_school
 				}
 			}
 			NOT = {
 				religious_school = {
-					group = sunni_muslim
-					school = zikri_school_sunni
+					group = muslim
+					school = zikri_school
 				}
 			}
 		}
@@ -190,8 +190,8 @@ country_event = {
 			modifier = {
 				factor = 2
 				religious_school = {
-					group = shia_muslim
-					school = ashari_school_shia
+					group = muslim
+					school = ashari_school
 				}
 			}
 			modifier = {
@@ -298,7 +298,7 @@ country_event = {
 			modifier = {
 				factor = 2
 				religious_school = {
-					group = quranist_muslim
+					group = muslim
 					school = hurufi_school
 				}
 			}
@@ -421,7 +421,7 @@ country_event = {
 			modifier = {
 				factor = 2
 				religious_school = {
-					group = quranist_muslim
+					group = muslim
 					school = hurufi_school
 				}
 			}
@@ -491,7 +491,7 @@ country_event = {
 		piety = 0.25
 		any_owned_province = {
 			NOT = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 		}
 	}
@@ -524,8 +524,8 @@ country_event = {
 			modifier = {
 				factor = 2
 				religious_school = {
-					group = sunni_muslim
-					school = hurufi_school_sunni
+					group = muslim
+					school = hurufi_school
 				}
 			}
 			modifier = {
@@ -628,8 +628,8 @@ country_event = {
 			modifier = {
 				factor = 2
 				religious_school = {
-					group = sunni_muslim
-					school = alawite_school_sunni
+					group = muslim
+					school = alawite_school
 				}
 			}
 			modifier = {
@@ -729,8 +729,8 @@ country_event = {
 			modifier = {
 				factor = 2
 				religious_school = {
-					group = sunni_muslim
-					school = druze_school_sunni
+					group = muslim
+					school = druze_school
 				}
 			}
 			modifier = {
@@ -827,7 +827,7 @@ country_event = {
 			modifier = {
 				factor = 2
 				religious_school = {
-					group = quranist_muslim
+					group = muslim
 					school = fiqh_school
 				}
 			}
@@ -925,8 +925,8 @@ country_event = {
 			modifier = {
 				factor = 2
 				religious_school = {
-					group = shia_muslim
-					school = hurufi_school_shia
+					group = muslim
+					school = hurufi_school
 				}
 			}
 			modifier = {
@@ -1031,7 +1031,7 @@ country_event = {
 			modifier = {
 				factor = 2
 				religious_school = {
-					group = quranist_muslim
+					group = muslim
 					school = shabazzi_school
 				}
 			}
@@ -1174,7 +1174,7 @@ country_event = {
 			modifier = {
 				factor = 2
 				religious_school = {
-					group = quranist_muslim
+					group = muslim
 					school = shabazzi_school
 				}
 			}
@@ -1250,7 +1250,7 @@ country_event = {
 		any_owned_province = {
 			is_state = yes
 			is_capital = no
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			NOT = {
 				has_province_modifier = social_unrest_mysticism
 			}
@@ -1265,7 +1265,7 @@ country_event = {
 				limit = {
 					is_state = yes
 					is_capital = no
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					NOT = {
 						has_province_modifier = social_unrest_mysticism
 					}
@@ -1276,7 +1276,7 @@ country_event = {
 				limit = {
 					is_state = yes
 					is_capital = no
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					development = 10
 					NOT = {
 						has_province_modifier = social_unrest_mysticism
@@ -1288,7 +1288,7 @@ country_event = {
 				limit = {
 					is_state = yes
 					is_capital = no
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					development = 15
 					NOT = {
 						has_province_modifier = social_unrest_mysticism
@@ -1300,7 +1300,7 @@ country_event = {
 				limit = {
 					is_state = yes
 					is_capital = no
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					development = 20
 					NOT = {
 						has_province_modifier = social_unrest_mysticism
@@ -1336,8 +1336,8 @@ country_event = {
 			modifier = {
 				factor = 2
 				religious_school = {
-					group = sunni_muslim
-					school = hurufi_school_sunni
+					group = muslim
+					school = hurufi_school
 				}
 			}
 			modifier = {
@@ -1472,8 +1472,8 @@ country_event = {
 			modifier = {
 				factor = 2
 				religious_school = {
-					group = shia_muslim
-					school = hurufi_school_shia
+					group = muslim
+					school = hurufi_school
 				}
 			}
 			modifier = {
@@ -1609,7 +1609,7 @@ country_event = {
 			modifier = {
 				factor = 2
 				religious_school = {
-					group = quranist_muslim
+					group = muslim
 					school = hurufi_school
 				}
 			}
@@ -1797,13 +1797,13 @@ country_event = {
 		NOT = {
 			has_dlc = "Star and Crescent"
 		}
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		owns = 151		# Thrace/Constantinople/Istanbul
 		NOT = {
 			has_global_flag = hagia_sophia_now_mosque
 		}
 		151 = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 	}
 	mean_time_to_happen = {
@@ -1869,7 +1869,7 @@ country_event = {
 	picture = PRAYING_eventPicture
 	is_triggered_only = yes
 	trigger = {
-		religion_group = shia_muslim
+		religion_group = muslim
 		num_of_cities = 20
 		NOT = {
 			has_country_flag = shiite_friday_prayer

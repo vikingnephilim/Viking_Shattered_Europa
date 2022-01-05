@@ -1585,7 +1585,7 @@ country_event = {
 		# Muslim
 		if = {
 			limit = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 			add_piety = -0.15
 			random_owned_province = {
@@ -1605,7 +1605,7 @@ country_event = {
 					religion_group = christian
 				}
 				NOT = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 			}
 			random_owned_province = {
@@ -1808,7 +1808,7 @@ country_event = {
 		}
 		OR = {
 			religion_group = christian
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 	}
 	mean_time_to_happen = {
@@ -2604,7 +2604,7 @@ country_event = {
 	option = {
 		name = ideagroups.604.b
 		trigger = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 		add_piety = 0.5
 	}
@@ -7584,7 +7584,7 @@ country_event = {
 		# Muslim
 		if = {
 			limit = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 			random_owned_province = {
 				limit = {
@@ -7603,7 +7603,7 @@ country_event = {
 					religion_group = christian
 				}
 				NOT = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 			}
 			random_owned_province = {
@@ -8248,7 +8248,7 @@ country_event = {
 		}
 		else_if = {
 			limit = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 			add_piety = 0.05
 		}

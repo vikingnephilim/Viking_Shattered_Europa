@@ -422,7 +422,7 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = MAL
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 	}
 	mean_time_to_happen = {
 		months = 12
@@ -617,7 +617,7 @@ country_event = {
 			exists = KBU
 		}
 		is_year = 1475
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		any_owned_province = {
 			is_core = KBU
 			culture = senegambian
@@ -961,7 +961,7 @@ country_event = {
 			estate = estate_church
 			influence = 30
 		}
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = {
 			estate_loyalty = {
 				estate = estate_church
@@ -1057,7 +1057,7 @@ country_event = {
 		NOT = {
 			has_country_modifier = mal_radical_dhimmi
 		}
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		has_estate = estate_dhimmi
 		estate_influence = {
 			estate = estate_dhimmi

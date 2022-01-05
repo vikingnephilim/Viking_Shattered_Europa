@@ -12,14 +12,14 @@ initialize_schools_effect = {
 			#Ismailis are disliked by all Sunnis at start.
 			limit = {
 				religious_school = {
-					group = shia_muslim
+					group = muslim
 					school = ismaili_school
 				}
 			}
 			random_country = {
 				limit = {
 					religious_school = {
-						group = sunni_muslim
+						group = muslim
 						school = ashari_school
 					}
 				}
@@ -31,8 +31,8 @@ initialize_schools_effect = {
 			random_country = {
 				limit = {
 					religious_school = {
-						group = shia_muslim
-						school = alawite_school_shia
+						group = muslim
+						school = alawite_school
 					}
 				}
 				set_school_opinion = {
@@ -43,7 +43,7 @@ initialize_schools_effect = {
 			random_country = {
 				limit = {
 					religious_school = {
-						group = quranist_muslim
+						group = muslim
 						school = fiqh_school
 					}
 				}
@@ -55,7 +55,7 @@ initialize_schools_effect = {
 			random_country = {
 				limit = {
 					religious_school = {
-						group = quranist_muslim
+						group = muslim
 						school = ibadi_school
 					}
 				}
@@ -69,14 +69,14 @@ initialize_schools_effect = {
 			#Jafaris are disliked by all Sunnis at start.
 			limit = {
 				religious_school = {
-					group = shia_muslim
+					group = muslim
 					school = kharijite_school
 				}
 			}
 			random_country = {
 				limit = {
 					religious_school = {
-						group = sunni_muslim
+						group = muslim
 						school = ashari_school
 					}
 				}
@@ -88,8 +88,8 @@ initialize_schools_effect = {
 			random_country = {
 				limit = {
 					religious_school = {
-						group = shia_muslim
-						school = alawite_school_shia
+						group = muslim
+						school = alawite_school
 					}
 				}
 				set_school_opinion = {
@@ -100,7 +100,7 @@ initialize_schools_effect = {
 			random_country = {
 				limit = {
 					religious_school = {
-						group = quranist_muslim
+						group = muslim
 						school = fiqh_school
 					}
 				}
@@ -112,7 +112,7 @@ initialize_schools_effect = {
 			random_country = {
 				limit = {
 					religious_school = {
-						group = quranist_muslim
+						group = muslim
 						school = ibadi_school
 					}
 				}
@@ -126,14 +126,14 @@ initialize_schools_effect = {
 			#Zaidis are disliked by all Sunnis at start.
 			limit = {
 				religious_school = {
-					group = shia_muslim
+					group = muslim
 					school = zikri_school
 				}
 			}
 			random_country = {
 				limit = {
 					religious_school = {
-						group = sunni_muslim
+						group = muslim
 						school = ashari_school
 					}
 				}
@@ -145,8 +145,8 @@ initialize_schools_effect = {
 			random_country = {
 				limit = {
 					religious_school = {
-						group = shia_muslim
-						school = alawite_school_shia
+						group = muslim
+						school = alawite_school
 					}
 				}
 				set_school_opinion = {
@@ -157,7 +157,7 @@ initialize_schools_effect = {
 			random_country = {
 				limit = {
 					religious_school = {
-						group = quranist_muslim
+						group = muslim
 						school = fiqh_school
 					}
 				}
@@ -169,7 +169,7 @@ initialize_schools_effect = {
 			random_country = {
 				limit = {
 					religious_school = {
-						group = quranist_muslim
+						group = muslim
 						school = ibadi_school
 					}
 				}
@@ -588,7 +588,7 @@ battle_cult_spreading_effect = {
 			}
 			FROM = {
 				OR = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					has_unlocked_cult = islam_cult
 				}
 			}
@@ -610,7 +610,7 @@ battle_cult_spreading_effect = {
 			ROOT = {
 				OR = {
 					has_unlocked_cult = islam_cult
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 			}
 		}

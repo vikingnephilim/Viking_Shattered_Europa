@@ -196,12 +196,12 @@ country_event = {
 			legitimacy = 75
 		}
 		629 = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			owned_by = ROOT
 		}
 		num_of_owned_provinces_with = {
 			value = 4
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			region = indonesia_region
 		}
 	}
@@ -312,12 +312,12 @@ country_event = {
 			exists = MTR
 		}
 		2690 = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			owned_by = ROOT
 		}
 		num_of_owned_provinces_with = {
 			value = 4
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			region = indonesia_region
 		}
 	}
@@ -566,7 +566,7 @@ country_event = {
 				629 = {
 					owned_by = ROOT
 					NOT = {
-						is_muslim_viking_mod = yes
+						religion_group = muslim
 					}
 				}
 			}
@@ -610,7 +610,7 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		OR = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			NOT = {
 				has_country_flag = maj_no_more_bad_religion_events
 			}
@@ -619,12 +619,12 @@ country_event = {
 		any_owned_province = {
 			region = indonesia_region
 			NOT = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 			OR = {
 				has_port = yes
 				any_neighbor_province = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 			}
 		}
@@ -635,12 +635,12 @@ country_event = {
 				limit = {
 					region = indonesia_region
 					NOT = {
-						is_muslim_viking_mod = yes
+						religion_group = muslim
 					}
 					OR = {
 						has_port = yes
 						any_neighbor_province = {
-							is_muslim_viking_mod = yes
+							religion_group = muslim
 						}
 					}
 				}

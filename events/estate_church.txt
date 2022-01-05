@@ -364,7 +364,7 @@ country_event = {
 	picture = CHURCH_ESTATE_2_eventPicture
 	trigger = {
 		has_estate = estate_church
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		estate_influence = {
 			estate = estate_church
 			influence = 25
@@ -481,7 +481,7 @@ country_event = {
 	trigger = {
 		has_estate = estate_church
 		NOT = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 		NOT = {
 			religion_group = christian

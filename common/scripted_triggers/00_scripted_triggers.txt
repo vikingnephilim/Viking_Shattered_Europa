@@ -1092,7 +1092,7 @@ has_church_trade_good_trigger = {
 			trade_goods = wine
 			ROOT = {
 				NOT = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 			}
 		}
@@ -2134,19 +2134,19 @@ has_religion_of_increased_opinion_for_scope = {
 			}
 		}
 		AND = {
-			religion_group = sunni_muslim
+			religion_group = muslim
 			$who$ = {
 				has_country_flag = has_increased_sunni_opinion
 			}
 		}
 		AND = {
-			religion_group = shia_muslim
+			religion_group = muslim
 			$who$ = {
 				has_country_flag = has_increased_shiite_opinion
 			}
 		}
 		AND = {
-			religion_group = quranist_muslim
+			religion_group = muslim
 			$who$ = {
 				has_country_flag = has_increased_ibadi_opinion
 			}
@@ -2308,19 +2308,19 @@ reverse_has_religion_of_increased_opinion_for_scope = {
 		}
 		AND = {
 			$who$ = {
-				religion_group = sunni_muslim
+				religion_group = muslim
 			}
 			has_country_flag = has_increased_sunni_opinion
 		}
 		AND = {
 			$who$ = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 			has_country_flag = has_increased_shiite_opinion
 		}
 		AND = {
 			$who$ = {
-				religion_group = quranist_muslim
+				religion_group = muslim
 			}
 			has_country_flag = has_increased_ibadi_opinion
 		}
@@ -2786,6 +2786,20 @@ province_is_buddhist_or_accepts_buddhism = {
 		religion = buddhism
 		religion = vajrayana
 		religion = mahayana
+		religion = arivada
+		religion = sinhalavada
+		AND = {
+			is_chinese_religion_viking_mod = yes
+			owner = {
+				OR = {
+					has_harmonized_with = arivada
+					has_harmonized_with = buddhism
+					has_harmonized_with = sinhalavada
+					has_harmonized_with = vajrayana
+					has_harmonized_with = mahayana
+				}
+			}
+		}
 		AND = {
 			religion = hinduism
 			owner = {

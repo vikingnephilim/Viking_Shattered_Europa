@@ -1771,7 +1771,7 @@ ottoman_government_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 20
 	nation_designer_trigger = {
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 	}
 	modifiers = {
 		governing_capacity = 250
@@ -1838,7 +1838,7 @@ iqta_legacy = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
 	nation_designer_trigger = {
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 	}
 	monarchy = yes
 	modifiers = {
@@ -1901,7 +1901,7 @@ indian_sultanate_legacy = {
 		capital_scope = {
 			superregion = india_superregion
 		}
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 	}
 	monarchy = yes
 	modifiers = {
@@ -2232,9 +2232,7 @@ principality_legacy = {
 	nation_designer_trigger = {
 		OR = {
 			culture_group = east_slavic
-			culture_group = novgorod_group
 			culture_group = ruthenian_group
-			culture_group = ruthenian_south_group
 		}
 		religion_group = christian
 	}
@@ -2270,9 +2268,7 @@ tsardom_legacy = {
 	nation_designer_trigger = {
 		OR = {
 			culture_group = east_slavic
-			culture_group = novgorod_group
 			culture_group = ruthenian_group
-			culture_group = ruthenian_south_group
 		}
 		religion_group = christian
 	}
@@ -2365,7 +2361,7 @@ sacred_kingdom_legacy = {
 			religion_group = christian
 		}
 		NOT = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 		NOT = {
 			religion_group = jewish_group

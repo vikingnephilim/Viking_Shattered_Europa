@@ -17,16 +17,12 @@ country_event = {
 			limit = {
 				region = south_africa_region
 				OR = {
-					culture = west_germanic_south_african
 					culture = british_south_african
-					culture = south_french_south_african
 					culture = french_south_african
 					culture = iberian_south_african
-					culture = celtic_iberian_south_african
 					culture = latin_south_african
 					culture = celtic_south_african
 					culture = scandinavian_south_african
-					culture = old_norse_south_african
 					culture = maghrebi_south_african
 				}
 			}
@@ -44,16 +40,12 @@ country_event = {
 				}
 				region = south_africa_region
 				OR = {
-					culture = west_germanic_south_african
 					culture = british_south_african
-					culture = south_french_south_african
 					culture = french_south_african
 					culture = iberian_south_african
-					culture = celtic_iberian_south_african
 					culture = latin_south_african
 					culture = celtic_south_african
 					culture = scandinavian_south_african
-					culture = old_norse_south_african
 					culture = maghrebi_south_african
 				}
 			}
@@ -71,16 +63,12 @@ country_event = {
 				limit = {
 					owned_by = ROOT
 					OR = {
-						culture = west_germanic_south_african
 						culture = british_south_african
-						culture = south_french_south_african
 						culture = french_south_african
 						culture = iberian_south_african
-						culture = celtic_iberian_south_african
 						culture = latin_south_african
 						culture = celtic_south_african
 						culture = scandinavian_south_african
-						culture = old_norse_south_african
 						culture = maghrebi_south_african
 						NOT = {
 							religion = ROOT
@@ -116,16 +104,12 @@ country_event = {
 				local_autonomy = 90
 			}
 			OR = {
-				culture = west_germanic_south_african
 				culture = british_south_african
-				culture = south_french_south_african
 				culture = french_south_african
 				culture = iberian_south_african
-				culture = celtic_iberian_south_african
 				culture = latin_south_african
 				culture = celtic_south_african
 				culture = scandinavian_south_african
-				culture = old_norse_south_african
 				culture = maghrebi_south_african
 			}
 		}
@@ -136,16 +120,12 @@ country_event = {
 				limit = {
 					region = south_africa_region
 					OR = {
-						culture = west_germanic_south_african
 						culture = british_south_african
-						culture = south_french_south_african
 						culture = french_south_african
 						culture = iberian_south_african
-						culture = celtic_iberian_south_african
 						culture = latin_south_african
 						culture = celtic_south_african
 						culture = scandinavian_south_african
-						culture = old_norse_south_african
 						culture = maghrebi_south_african
 						is_core = SAA
 					}
@@ -225,26 +205,10 @@ country_event = {
 				hidden_effect = {
 					if = {
 						limit = {
-							culture = west_germanic_south_african
-						}
-						PREV = {
-							change_primary_culture = west_germanic_south_african
-						}
-					}
-					else_if = {
-						limit = {
 							culture = british_south_african
 						}
 						PREV = {
 							change_primary_culture = british_south_african
-						}
-					}
-					else_if = {
-						limit = {
-							culture = south_french_south_african
-						}
-						PREV = {
-							change_primary_culture = south_french_south_african
 						}
 					}
 					else_if = {
@@ -261,14 +225,6 @@ country_event = {
 						}
 						PREV = {
 							change_primary_culture = iberian_south_african
-						}
-					}
-					else_if = {
-						limit = {
-							culture = celtic_iberian_south_african
-						}
-						PREV = {
-							change_primary_culture = celtic_iberian_south_african
 						}
 					}
 					else_if = {
@@ -293,14 +249,6 @@ country_event = {
 						}
 						PREV = {
 							change_primary_culture = scandinavian_south_african
-						}
-					}
-					else_if = {
-						limit = {
-							culture = old_norse_south_african
-						}
-						PREV = {
-							change_primary_culture = old_norse_south_african
 						}
 					}
 					else_if = {
@@ -394,16 +342,12 @@ country_event = {
 				has_province_flag = no_south_african_revolt
 			}
 			OR = {
-				culture = west_germanic_south_african
 				culture = british_south_african
-				culture = south_french_south_african
 				culture = french_south_african
 				culture = iberian_south_african
-				culture = celtic_iberian_south_african
 				culture = latin_south_african
 				culture = celtic_south_african
 				culture = scandinavian_south_african
-				culture = old_norse_south_african
 				culture = maghrebi_south_african
 			}
 		}
@@ -423,16 +367,12 @@ country_event = {
 						has_province_flag = no_south_african_revolt
 					}
 					OR = {
-						culture = west_germanic_south_african
 						culture = british_south_african
-						culture = south_french_south_african
 						culture = french_south_african
 						culture = iberian_south_african
-						culture = celtic_iberian_south_african
 						culture = latin_south_african
 						culture = celtic_south_african
 						culture = scandinavian_south_african
-						culture = old_norse_south_african
 						culture = maghrebi_south_african
 					}
 				}

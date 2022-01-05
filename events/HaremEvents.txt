@@ -1256,7 +1256,7 @@ country_event = {
 		trigger = {
 			event_target:enemy_neighbor_ottomans = {
 				NOT = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 			}
 		}
@@ -1265,7 +1265,7 @@ country_event = {
 	desc = {
 		trigger = {
 			event_target:enemy_neighbor_ottomans = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 		}
 		desc = harem_events.15.db
@@ -1287,7 +1287,7 @@ country_event = {
 			limit = {
 				event_target:enemy_neighbor_ottomans = {
 					NOT = {
-						is_muslim_viking_mod = yes
+						religion_group = muslim
 					}
 				}
 				has_estate = estate_church

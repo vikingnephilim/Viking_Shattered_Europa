@@ -374,7 +374,7 @@ tribe_becomes_monarchy_reform = {
 			limit = {
 				technology_group = nomad_group
 				OR = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					secondary_religion = sunni
 					secondary_religion = shiite
 					secondary_religion = ibadi
@@ -430,7 +430,7 @@ tribe_becomes_monarchy_reform = {
 			limit = {
 				technology_group = nomad_group
 				NOT = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 				NOT = {
 					religion_group = christian
@@ -488,7 +488,7 @@ tribe_becomes_republic_reform = {
 			limit = {
 				technology_group = nomad_group
 				OR = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					secondary_religion = sunni
 					secondary_religion = shiite
 					secondary_religion = ibadi
@@ -544,7 +544,7 @@ tribe_becomes_republic_reform = {
 			limit = {
 				technology_group = nomad_group
 				NOT = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 				NOT = {
 					religion_group = christian
@@ -630,7 +630,7 @@ tribe_becomes_theocracy_reform = {
 			limit = {
 				technology_group = nomad_group
 				OR = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					secondary_religion = sunni
 					secondary_religion = shiite
 					secondary_religion = ibadi
@@ -686,7 +686,7 @@ tribe_becomes_theocracy_reform = {
 			limit = {
 				technology_group = nomad_group
 				NOT = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 				NOT = {
 					religion_group = christian
@@ -729,7 +729,7 @@ tribe_becomes_theocracy_reform = {
 				has_reform = steppe_horde
 				has_reform = great_mongol_state_reform
 				NOT = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 			}
 		}

@@ -35,7 +35,7 @@ non_catholic_rome = {
 			}
 			OR = {
 				religion_group = christian
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 		}
 	}
@@ -64,7 +64,7 @@ religious_center = {
 			limit = {
 				province_id = 385				# Mecca
 			}
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 		else_if = {
 			limit = {
@@ -435,7 +435,7 @@ jerusalem_held = {
 		owner = {
 			OR = {
 				religion_group = christian
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 				religion = jewish
 			}
 		}
@@ -458,7 +458,7 @@ alandalus_returns = {
 	#}
 	trigger = {
 		owner = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 	}
 	prestige = 0.5
@@ -677,7 +677,7 @@ great_mosque_djenne_modifier = {
 		}
 	}
 	trigger = {
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		has_owner_religion = yes
 	}
 	missionaries = 1

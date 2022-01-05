@@ -160,7 +160,7 @@ ismaelism_rebels = {
 	# Country scope
 	can_negotiate_trigger = {
 		OR = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			dominant_religion = ismaelism
 		}
 	}
@@ -181,7 +181,7 @@ ismaelism_rebels = {
 		}
 		if = {
 			limit = {
-				NOT = { is_muslim_viking_mod = yes }
+				NOT = { religion_group = muslim }
 			}
 			add_prestige = -50
 			every_owned_province = {
@@ -219,7 +219,7 @@ ismaelism_rebels = {
 			limit = {
 				NOT = { religion = ismaelism }
 				NOT = { dominant_religion = ismaelism }
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 				NOT = { has_country_modifier = heretic_tolerance }
 			}
 			add_country_modifier = {

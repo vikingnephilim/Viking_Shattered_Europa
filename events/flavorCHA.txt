@@ -17,7 +17,7 @@ country_event = {
 			limit = {
 				capital_scope = {
 					NOT = {
-						is_muslim_viking_mod = yes
+						religion_group = muslim
 					}
 				}
 			}
@@ -28,7 +28,7 @@ country_event = {
 		random_owned_province = {
 			limit = {
 				NOT = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 			}
 			change_religion = sunni
@@ -36,7 +36,7 @@ country_event = {
 		random_owned_province = {
 			limit = {
 				NOT = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 			}
 			change_religion = sunni
@@ -44,7 +44,7 @@ country_event = {
 		every_known_country = {
 			limit = {
 				culture_group = malay
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 			add_opinion = {
 				who = ROOT
@@ -59,7 +59,7 @@ country_event = {
 		}
 		trigger = {
 			NOT = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 		}
 		add_stability_or_adm_power = yes

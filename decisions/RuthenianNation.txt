@@ -4,18 +4,23 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_ruthenia_flag }
+			NOT = {
+				has_country_flag = formed_ruthenia_flag
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = { tag = PAP }
-			NOT = { tag = HLR }
-			NOT = { exists = UKR }
-			OR = {
-				culture_group = ruthenian_group
-				culture_group = ruthenian_south_group
+			NOT = {
+				tag = PAP
 			}
+			NOT = {
+				tag = HLR
+			}
+			NOT = {
+				exists = UKR
+			}
+			culture_group = ruthenian_group
 			OR = {
 				ai = no
 				AND = {
@@ -35,25 +40,35 @@ country_decisions = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					ROOT = { DIP = 5 }
+					ROOT = {
+						DIP = 5
+					}
 					OR = {
-						province_id = 280		#Kiev -center
-					province_id = 283		#Zaporozhie -eastern/southern center of rebellions
+						province_id = 280						#Kiev -center
+						province_id = 283						#Zaporozhie -eastern/southern center of rebellions
 					}
 				}
 				AND = {
-					ROOT = { NOT = { DIP = 5 } }
+					ROOT = {
+						NOT = {
+							DIP = 5
+						}
+					}
 					OR = {
-						province_id = 280		#Kiev -center
-						province_id = 283		#Zaporozhie -eastern/southern center of rebellions
-						province_id = 261		#Ruthenia/Lvov -western
-						province_id = 279		#Volhynia -western
+						province_id = 280						#Kiev -center
+						province_id = 283						#Zaporozhie -eastern/southern center of rebellions
+						province_id = 261						#Ruthenia/Lvov -western
+						province_id = 279						#Volhynia -western
 					}
 				}
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		allow = {
@@ -62,15 +77,15 @@ country_decisions = {
 			OR = {
 				#owns everything
 				AND = {
-					owns_core_province = 280		#Kiev -center
-					owns_core_province = 261		#Ruthenia/Lvov -western
-					owns_core_province = 279		#Volhynia -western
-					owns_core_province = 283		#Zaporozhie -eastern/southern center of rebellions
+					owns_core_province = 280					#Kiev -center
+					owns_core_province = 261					#Ruthenia/Lvov -western
+					owns_core_province = 279					#Volhynia -western
+					owns_core_province = 283					#Zaporozhie -eastern/southern center of rebellions
 				}
 				#or owns only core-core stuff but has god like ruler
 				AND = {
-					owns_core_province = 280		#Kiev -center
-					owns_core_province = 283		#Zaporozhie -eastern/southern center of rebellions
+					owns_core_province = 280					#Kiev -center
+					owns_core_province = 283					#Zaporozhie -eastern/southern center of rebellions
 					dip = 5
 				}
 			}
@@ -82,15 +97,23 @@ country_decisions = {
 			}
 			ruthenia_region = {
 				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = UKR
 			}
 			red_ruthenia_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_claim = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_claim = ROOT
+					}
 				}
 				add_permanent_claim = UKR
 			}
@@ -107,17 +130,23 @@ country_decisions = {
 				}
 				set_government_rank = 3
 				if = {
-					limit = { is_revolutionary = no }
+					limit = {
+						is_revolutionary = no
+					}
 					change_government_to_monarchy = yes
 					add_government_reform = tsardom
 				}
 			}
 			set_country_flag = formed_ruthenia_flag
 			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}				#Swap Ideas
 			}
 		}
-		ai_importance = 500	
-			}
+		ai_importance = 500
+	}
 }

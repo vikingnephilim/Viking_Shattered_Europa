@@ -25,12 +25,12 @@ country_event = {
 			full_idea_group = innovativeness_ideas
 			full_idea_group = administrative_ideas
 		}
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		151 = {
 			owned_by = TUR
 		}
 		TUR = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			has_ruler_modifier = khalifah
 			NOT = { war_with = ROOT }
 		}
@@ -495,7 +495,7 @@ province_event = {
 		has_dlc = "Art of War"
 		has_missionary = yes
 		religion_group = african_pagan
-		owner = { is_muslim_viking_mod = yes }
+		owner = { religion_group = muslim }
 		owner = { NOT = { has_country_modifier = animist_syncretism } }
 	}
 
@@ -535,7 +535,7 @@ country_event = {
 		has_dlc = "Art of War"
 		religion_group = african_pagan
 		any_neighbor_country = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 		NOT = { has_country_modifier = animist_syncretism }
 	}
@@ -548,7 +548,7 @@ country_event = {
 	option = {
 		name = "west_african.12.a"
 		random_neighbor_country = {
-			limit = { is_muslim_viking_mod = yes }
+			limit = { religion_group = muslim }
 			add_opinion = {
 				who = ROOT
 				modifier = renounced_our_faith
@@ -566,7 +566,7 @@ country_event = {
 		random_owned_province = {
 			limit = {
 				any_neighbor_province = {
-					owner = { is_muslim_viking_mod = yes }
+					owner = { religion_group = muslim }
 				}
 				religion_group = african_pagan
 				NOT = { is_religious_center_province = yes }
@@ -586,7 +586,7 @@ country_event = {
 
 	trigger = {
 		has_dlc = "Art of War"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = { has_country_modifier = animist_syncretism }
 		OR = {
 			num_of_religion = {
@@ -689,7 +689,7 @@ country_event = {
 			culture_group = mande
 			culture_group = west_african
 		}
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		has_idea_group = religious_ideas
 		advisor = theologian
 	}

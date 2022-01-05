@@ -402,7 +402,7 @@ country_decisions = {
 			NOT = {
 				has_ruler_modifier = khalifah
 			}
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			NOT = {
 				tag = MAM
 			}
@@ -438,7 +438,7 @@ country_decisions = {
 			NOT = {
 				has_ruler_modifier = sect_practices
 			}
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 		allow = {
 			dip = 3
@@ -466,7 +466,7 @@ country_decisions = {
 			NOT = {
 				has_ruler_modifier = islamic_scholarly_centre
 			}
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			adm_tech = 8
 		}
 		allow = {
@@ -493,7 +493,7 @@ country_decisions = {
 	#jizya_tax = {
 	#	potential = {
 	#		NOT = { has_ruler_modifier = per_capita_tax }
-	#		is_muslim_viking_mod = yes
+	#		religion_group = muslim
 	#		any_owned_province = {
 	#			has_owner_religion = no
 	#		}
@@ -551,13 +551,13 @@ country_decisions = {
 	adopt_wahabism = {
 		potential = {
 			has_dlc = "Cradle of Civilization"
-			religion_group = sunni_muslim
+			religion_group = muslim
 			has_reform = tribal_federation
 			has_global_flag = wahabism_founded
 			NOT = {
 				religious_school = {
-					group = sunni_muslim
-					school = alawite_school_sunni
+					group = muslim
+					school = alawite_school
 				}
 			}
 		}
@@ -568,8 +568,8 @@ country_decisions = {
 			add_stability = -3
 			add_legitimacy = 30
 			set_religious_school = {
-				group = sunni_muslim
-				school = alawite_school_sunni
+				group = muslim
+				school = alawite_school
 			}
 		}
 		ai_will_do = {
@@ -580,10 +580,10 @@ country_decisions = {
 		potential = {
 			has_dlc = "Cradle of Civilization"
 			NOT = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 			capital_scope = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 				is_node_in_trade_company_region = yes
 			}
 		}
@@ -845,7 +845,7 @@ country_decisions = {
 			NOT = {
 				has_country_modifier = house_of_worship
 			}
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 		allow = {
 			full_idea_group = innovativeness_ideas
@@ -871,7 +871,7 @@ country_decisions = {
 			OR = {
 				AND = {
 					tag = MUG
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					any_owned_province = {
 						is_indic_viking_mod = yes
 					}
@@ -879,7 +879,7 @@ country_decisions = {
 				AND = {
 					is_indic_viking_mod = yes
 					any_owned_province = {
-						is_muslim_viking_mod = yes
+						religion_group = muslim
 					}
 				}
 			}
@@ -910,10 +910,10 @@ country_decisions = {
 				has_country_modifier = muslim_resistance
 			}
 			NOT = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 			any_neighbor_country = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 		}
 		allow = {
@@ -1879,7 +1879,7 @@ country_decisions = {
 				religion = tengri_pagan_reformed
 			}
 			any_owned_province = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 		}
 		allow = {
@@ -2059,7 +2059,7 @@ country_decisions = {
 	}
 	muslim_conversion_to_sikhism = {
 		potential = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			any_owned_province = {
 				religion = sikhism
 			}

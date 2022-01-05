@@ -15,7 +15,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Star and Crescent"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		is_month = 6
 		NOT = { is_month = 8 }
 		NOT = {
@@ -61,7 +61,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Star and Crescent"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		had_country_flag = { flag = ramadan_flag days = 30 }
 	}
 	
@@ -86,7 +86,7 @@ country_event = {
 		add_years_of_income = -0.5
 		every_neighbor_country = {
 			limit = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 			}
 			tooltip = {
 				add_opinion = {
@@ -143,7 +143,7 @@ country_event = {
 		has_dlc = "Star and Crescent"
 		OR = {
 			AND = {
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 				NOT = {
 					piety = 0.75
 				}
@@ -216,7 +216,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Star and Crescent"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		has_ruler_modifier = muslim_hajj
 		had_country_flag = { flag = hajj_flag days = 30 }
 		NOT = {
@@ -250,7 +250,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Star and Crescent"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		has_country_flag = hajj_flag
 		had_country_flag = { flag = hajj_almost_completed days = 30 }
 	}
@@ -263,7 +263,7 @@ country_event = {
 		name = "muslim_dlc.EVTOPTA6"
 		every_known_country = {
 			limit = { 
-				is_muslim_viking_mod = yes 
+				religion_group = muslim 
 			} 
 			add_opinion = { 
 				who = ROOT
@@ -290,7 +290,7 @@ country_event = {
 		has_dlc = "Star and Crescent"
 		is_year = 1500
 		NOT = { is_year = 1600 }
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		treasury = 200
 		owns = 385 # Mecca
 		NOT = { has_ruler_modifier = repaired_masjid_al_haram }
@@ -350,7 +350,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Star and Crescent"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = { has_country_modifier = chisti_timer }
 		NOT = { has_country_modifier = qadiriyya_timer }
 		NOT = { has_country_modifier = suhrawardiyya_timer }
@@ -393,7 +393,7 @@ country_event = {
 		has_dlc = "Star and Crescent"
 		is_year = 1650
 		NOT = { is_year = 1750 }
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		OR = {
 			NOT = { dip = 3 }
 			NOT = { adm = 3 }
@@ -601,7 +601,7 @@ country_event = {
 		NOT = {
 			is_year = 1800
 		}
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = {
 			piety = 0.75
 		}
@@ -823,7 +823,7 @@ country_event = {
 		NOT = {
 			is_year = 1600
 		}
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = { has_country_modifier = celestial_globe }
 		NOT = { has_country_modifier = tahtawi_timer }
 	}
@@ -875,7 +875,7 @@ country_event = {
 		NOT = {
 			is_year = 1635
 		}
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		owns = 507 # Punjab/Lahore
 	}
 	
@@ -925,7 +925,7 @@ country_event = {
 		NOT = {
 			is_year = 1700
 		}
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		owns = 151 # Thrace/Constantinople/Istanbul
 	}
 	
@@ -945,7 +945,7 @@ country_event = {
 		every_owned_province = {
 			limit = {
 				NOT = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 			}
 			add_province_modifier = {
@@ -967,7 +967,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Star and Crescent"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = { has_country_modifier = chisti_timer }
 		NOT = { has_country_modifier = qadiriyya_timer }
 		NOT = { has_country_modifier = suhrawardiyya_timer }
@@ -1009,7 +1009,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Star and Crescent"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = { has_country_modifier = chisti_timer }
 		NOT = { has_country_modifier = qadiriyya_timer }
 		NOT = { has_country_modifier = suhrawardiyya_timer }
@@ -1052,7 +1052,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Star and Crescent"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		revolt_percentage = 0.1
 		OR = { 
 			dip = 3 
@@ -1180,7 +1180,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Star and Crescent"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = { has_country_modifier = ghulam_timer }
 		OR = {
 			is_at_war = yes
@@ -1233,7 +1233,7 @@ country_event = {
 		has_dlc = "Star and Crescent"
 		is_year = 1585
 		NOT = { is_year = 1635 }
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = { is_advisor_employed = 961 }
 	}
 	
@@ -1277,7 +1277,7 @@ country_event = {
 		has_dlc = "Star and Crescent"
 		is_year = 1570
 		NOT = { is_year = 1618 }
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 	}
 	
 	mean_time_to_happen = {
@@ -1320,11 +1320,11 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Star and Crescent"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = { has_global_flag = hagia_sophia_now_mosque }
 		owns = 151 # Thrace/Constantinople/Istanbul
 		151 = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 	}
 	
@@ -1382,7 +1382,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Star and Crescent"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = { has_country_modifier = muslim_madrassa }
 		NOT = { 
 			any_owned_province = {
@@ -1401,7 +1401,7 @@ country_event = {
 			random_owned_province = {
 				limit = {
 					is_core = owner
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 				}
 				set_province_flag = madrassa_flag1
 			}
@@ -1516,14 +1516,14 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Star and Crescent"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		385 = { # Mecca
-			is_muslim_viking_mod = yes
-			owner = { is_muslim_viking_mod = yes }
+			religion_group = muslim
+			owner = { religion_group = muslim }
 		}
 		384 = { # Medina
-			is_muslim_viking_mod = yes
-			owner = { is_muslim_viking_mod = yes }
+			religion_group = muslim
+			owner = { religion_group = muslim }
 		}
 		NOT = {
 			has_ruler_modifier = darb_zubaidah
@@ -1561,7 +1561,7 @@ country_event = {
 	trigger = {
 		has_dlc = "Star and Crescent"
 		NOT = { is_year = 1468 }
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 	}
 	
 	mean_time_to_happen = {
@@ -1604,7 +1604,7 @@ country_event = {
 		has_dlc = "Star and Crescent"
 		is_year = 1470
 		NOT = { is_year = 1530 }
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 	}
 	
 	mean_time_to_happen = {
@@ -1645,7 +1645,7 @@ province_event = {
 	
 	trigger = {
 		has_dlc = "Star and Crescent"
-		owner = { is_muslim_viking_mod = yes }
+		owner = { religion_group = muslim }
 		OR = {
 			religion_group = christian
 			religion_group = jewish_group
@@ -1700,7 +1700,7 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Star and Crescent"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = { has_country_modifier = mahdi_timer }
 	}
 	
@@ -1740,15 +1740,15 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Star and Crescent"
-		religion_group = shia_muslim
+		religion_group = muslim
 		num_of_owned_provinces_with = {
 			value = 10
-			religion_group = shia_muslim
+			religion_group = muslim
 			is_state = yes
 		}
 		num_of_owned_provinces_with = {
 			value = 10
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			is_state = yes
 		}
 	}
@@ -1757,14 +1757,14 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					is_state = yes
 				}
 				save_event_target_as = sunni_province
 			}
 			random_owned_province = {
 				limit = {
-					religion_group = shia_muslim
+					religion_group = muslim
 					is_state = yes
 				}
 				save_event_target_as = shia_province
@@ -1813,15 +1813,15 @@ country_event = {
 	
 	trigger = {
 		has_dlc = "Star and Crescent"
-		religion_group = shia_muslim
+		religion_group = muslim
 		num_of_owned_provinces_with = {
 			value = 10
-			religion_group = shia_muslim
+			religion_group = muslim
 			is_state = yes
 		}
 		num_of_owned_provinces_with = {
 			value = 10
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			is_state = yes
 		}
 	}
@@ -1830,14 +1830,14 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					is_state = yes
 				}
 				save_event_target_as = sunni_province
 			}
 			random_owned_province = {
 				limit = {
-					religion_group = shia_muslim
+					religion_group = muslim
 					is_state = yes
 				}
 				save_event_target_as = shia_province

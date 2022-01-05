@@ -1,41 +1,41 @@
 south_african_revolt_disaster = {
 	potential = {
 		normal_or_historical_nations = yes
-		NOT = { has_global_flag = south_african_revolt }
+		NOT = {
+			has_global_flag = south_african_revolt
+		}
 		num_of_owned_provinces_with = {
 			value = 5
 			region = south_africa_region
 			OR = {
-				culture = west_germanic_south_african
 				culture = british_south_african
-				culture = south_french_south_african
 				culture = french_south_african
 				culture = iberian_south_african
-				culture = celtic_iberian_south_african
 				culture = latin_south_african
 				culture = celtic_south_african
 				culture = scandinavian_south_african
-				culture = old_norse_south_african
 				culture = maghrebi_south_african
 			}
 		}
 		NOT = {
 			OR = {
-				primary_culture = west_germanic_south_african
 				primary_culture = british_south_african
-				primary_culture = south_french_south_african
 				primary_culture = french_south_african
 				primary_culture = iberian_south_african
-				primary_culture = celtic_iberian_south_african
 				primary_culture = latin_south_african
 				primary_culture = celtic_south_african
 				primary_culture = scandinavian_south_african
-				primary_culture = old_norse_south_african
 				primary_culture = maghrebi_south_african
 			}
 		}
-		NOT = { exists = SAA }
-		NOT = { capital_scope = { region = south_africa_region } }
+		NOT = {
+			exists = SAA
+		}
+		NOT = {
+			capital_scope = {
+				region = south_africa_region
+			}
+		}
 		is_free_or_tributary_trigger = yes
 		num_of_cities = 6
 	}
@@ -45,75 +45,67 @@ south_african_revolt_disaster = {
 				south_africa_region = {
 					owned_by = ROOT
 				}
-				NOT = { full_idea_group = humanist_ideas }
+				NOT = {
+					full_idea_group = humanist_ideas
+				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = south_african_revolt_disaster_tt
 				AND = {
 					any_owned_province = {
-						culture = west_germanic_south_african
-					}
-					NOT = { accepted_culture = west_germanic_south_african }
-				}
-				AND = {
-					any_owned_province = {
 						culture = british_south_african
 					}
-					NOT = { accepted_culture = british_south_african }
-				}
-				AND = {
-					any_owned_province = {
-						culture = south_french_south_african
+					NOT = {
+						accepted_culture = british_south_african
 					}
-					NOT = { accepted_culture = south_french_south_african }
 				}
 				AND = {
 					any_owned_province = {
 						culture = french_south_african
 					}
-					NOT = { accepted_culture = french_south_african }
+					NOT = {
+						accepted_culture = french_south_african
+					}
 				}
 				AND = {
 					any_owned_province = {
 						culture = iberian_south_african
 					}
-					NOT = { accepted_culture = iberian_south_african }
-				}
-				AND = {
-					any_owned_province = {
-						culture = celtic_iberian_south_african
+					NOT = {
+						accepted_culture = iberian_south_african
 					}
-					NOT = { accepted_culture = celtic_iberian_south_african }
 				}
 				AND = {
 					any_owned_province = {
 						culture = latin_south_african
 					}
-					NOT = { accepted_culture = latin_south_african }
+					NOT = {
+						accepted_culture = latin_south_african
+					}
 				}
 				AND = {
 					any_owned_province = {
 						culture = celtic_south_african
 					}
-					NOT = { accepted_culture = celtic_south_african }
+					NOT = {
+						accepted_culture = celtic_south_african
+					}
 				}
 				AND = {
 					any_owned_province = {
 						culture = scandinavian_south_african
 					}
-					NOT = { accepted_culture = scandinavian_south_african }
-				}
-				AND = {
-					any_owned_province = {
-						culture = old_norse_south_african
+					NOT = {
+						accepted_culture = scandinavian_south_african
 					}
-					NOT = { accepted_culture = old_norse_south_african }
 				}
 				AND = {
 					any_owned_province = {
 						culture = maghrebi_south_african
 					}
-					NOT = { accepted_culture =maghrebi_south_african }
+					NOT = {
+						accepted_culture = maghrebi_south_african
+					}
 				}
 			}
 		}
@@ -131,13 +123,17 @@ south_african_revolt_disaster = {
 			factor = 1
 			any_owned_province = {
 				region = south_africa_region
-				NOT = { province_religion = ROOT }
+				NOT = {
+					province_religion = ROOT
+				}
 			}
 			NOT = {
 				num_of_owned_provinces_with = {
 					value = 3
 					region = south_africa_region
-					NOT = { province_religion = ROOT }
+					NOT = {
+						province_religion = ROOT
+					}
 				}
 			}
 		}
@@ -146,13 +142,17 @@ south_african_revolt_disaster = {
 			num_of_owned_provinces_with = {
 				value = 3
 				region = south_africa_region
-				NOT = { province_religion = ROOT }
+				NOT = {
+					province_religion = ROOT
+				}
 			}
 			NOT = {
 				num_of_owned_provinces_with = {
 					value = 5
 					region = south_africa_region
-					NOT = { province_religion = ROOT }
+					NOT = {
+						province_religion = ROOT
+					}
 				}
 			}
 		}
@@ -161,7 +161,9 @@ south_african_revolt_disaster = {
 			num_of_owned_provinces_with = {
 				value = 5
 				region = south_africa_region
-				NOT = { province_religion = ROOT }
+				NOT = {
+					province_religion = ROOT
+				}
 			}
 		}
 		modifier = {
@@ -204,83 +206,71 @@ south_african_revolt_disaster = {
 		modifier = {
 			factor = 2
 			any_owned_province = {
-				culture = west_germanic_south_african
-			}
-			NOT = { accepted_culture = west_germanic_south_african }
-		}
-		modifier = {
-			factor = 2
-			any_owned_province = {
 				culture = british_south_african
 			}
-			NOT = { accepted_culture = british_south_african }
-		}
-		modifier = {
-			factor = 2
-			any_owned_province = {
-				culture = south_french_south_african
+			NOT = {
+				accepted_culture = british_south_african
 			}
-			NOT = { accepted_culture = south_french_south_african }
 		}
 		modifier = {
 			factor = 2
 			any_owned_province = {
 				culture = french_south_african
 			}
-			NOT = { accepted_culture = french_south_african }
+			NOT = {
+				accepted_culture = french_south_african
+			}
 		}
 		modifier = {
 			factor = 2
 			any_owned_province = {
 				culture = iberian_south_african
 			}
-			NOT = { accepted_culture = iberian_south_african }
-		}
-		modifier = {
-			factor = 2
-			any_owned_province = {
-				culture = celtic_iberian_south_african
+			NOT = {
+				accepted_culture = iberian_south_african
 			}
-			NOT = { accepted_culture = celtic_iberian_south_african }
 		}
 		modifier = {
 			factor = 2
 			any_owned_province = {
 				culture = latin_south_african
 			}
-			NOT = { accepted_culture = latin_south_african }
+			NOT = {
+				accepted_culture = latin_south_african
+			}
 		}
 		modifier = {
 			factor = 2
 			any_owned_province = {
 				culture = celtic_south_african
 			}
-			NOT = { accepted_culture = celtic_south_african }
+			NOT = {
+				accepted_culture = celtic_south_african
+			}
 		}
 		modifier = {
 			factor = 2
 			any_owned_province = {
 				culture = scandinavian_south_african
 			}
-			NOT = { accepted_culture = scandinavian_south_african }
-		}
-		modifier = {
-			factor = 2
-			any_owned_province = {
-				culture = old_norse_south_african
+			NOT = {
+				accepted_culture = scandinavian_south_african
 			}
-			NOT = { accepted_culture = old_norse_south_african }
 		}
 		modifier = {
 			factor = 2
 			any_owned_province = {
 				culture = maghrebi_south_african
 			}
-			NOT = { accepted_culture = maghrebi_south_african }
+			NOT = {
+				accepted_culture = maghrebi_south_african
+			}
 		}
 		modifier = {
 			factor = 2
-			NOT = { stability = 3 }
+			NOT = {
+				stability = 3
+			}
 		}
 	}
 	can_end = {
@@ -291,11 +281,15 @@ south_african_revolt_disaster = {
 					tooltip = had_disaster_for_x_years_south_african
 					had_global_flag = {
 						flag = south_african_revolt
-						days = 7300 # 20 years
+						days = 7300						# 20 years
 					}
 				}
-				NOT = { num_of_rebel_armies = 1 }
-				NOT = { num_of_rebel_controlled_provinces = 1 }
+				NOT = {
+					num_of_rebel_armies = 1
+				}
+				NOT = {
+					num_of_rebel_controlled_provinces = 1
+				}
 				stability = 1
 			}
 			NOT = {
@@ -303,16 +297,12 @@ south_african_revolt_disaster = {
 					value = 5
 					region = south_africa_region
 					OR = {
-						culture = west_germanic_south_african
 						culture = british_south_african
-						culture = south_french_south_african
 						culture = french_south_african
 						culture = iberian_south_african
-						culture = celtic_iberian_south_african
 						culture = latin_south_african
 						culture = celtic_south_african
 						culture = scandinavian_south_african
-						culture = old_norse_south_african
 						culture = maghrebi_south_african
 					}
 				}
@@ -320,17 +310,17 @@ south_african_revolt_disaster = {
 		}
 	}
 	modifier = {
-		stability_cost_modifier = 0.50
+		stability_cost_modifier = 0.5
 	}
 	on_start = disaster_events_viking.1
 	on_end = disaster_events_viking.7
 	on_monthly = {
 		events = {
-			disaster_events_viking.2 # netherlands declare independence
+			disaster_events_viking.2			# netherlands declare independence
 		}
 		random_events = {
 			100 = 0
-			5 = disaster_events_viking.6 # random rebels spawn
+			5 = disaster_events_viking.6			# random rebels spawn
 		}
-			}
+	}
 }

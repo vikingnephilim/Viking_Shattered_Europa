@@ -53,7 +53,7 @@ country_event = {
 					has_discovered = ROOT #We must know of it
 					trade_goods = slaves
 					owner = { #They must be willing to sell to us
-						is_muslim_viking_mod = yes
+						religion_group = muslim
 						NOT = { war_with = ROOT }
 						NOT = { is_rival = ROOT }
 						NOT = { is_enemy = ROOT }
@@ -802,7 +802,7 @@ country_event = {
 
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		OR = {
 			has_reform = mamluk_government
 			has_reform = iqta
@@ -889,7 +889,7 @@ country_event = {
 
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		OR = {
 			has_reform = mamluk_government
 			has_reform = iqta
@@ -1021,7 +1021,7 @@ country_event = {
 
 	trigger = {
 		has_dlc = "Cradle of Civilization"
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		OR = {
 			has_reform = mamluk_government
 			has_reform = iqta

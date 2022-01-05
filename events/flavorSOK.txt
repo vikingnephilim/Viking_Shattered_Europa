@@ -20,7 +20,7 @@ country_event = {
 		owns = 1148 #Gobir
 		is_year = 1770
 		OR = {
-			NOT = { is_muslim_viking_mod = yes }
+			NOT = { religion_group = muslim }
 			NOT = { piety = -0.3 }
 		}
 		NOT = { exists = SOK }
@@ -47,7 +47,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				not = { is_muslim_viking_mod = yes }
+				not = { religion_group = muslim }
 			}
 			change_religion = sunni
 		}
@@ -94,7 +94,7 @@ country_event = {
 			every_known_country = {
 				limit = {
 					has_country_flag = fulani_jihad_state
-					is_muslim_viking_mod = yes
+					religion_group = muslim
 					NOT = { has_country_flag = sok_dan_fodio_happened }
 				}
 				set_country_flag = sok_dan_fodio_happened

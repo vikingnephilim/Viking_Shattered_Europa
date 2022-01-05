@@ -438,7 +438,7 @@ mnd_maj_3 = {
 			set_country_flag = maj_no_more_bad_religion_events
 			if = {
 				limit = {
-					NOT = { is_muslim_viking_mod = yes }
+					NOT = { religion_group = muslim }
 				}
 				custom_tooltip = maj_no_more_bad_religion_events_tt
 			}
@@ -516,9 +516,9 @@ mnd_maj_3 = {
 				}
 				AND = {
 					is_capital = yes
-					ROOT = { is_muslim_viking_mod = yes }
+					ROOT = { religion_group = muslim }
 					owner = {
-						NOT = { is_muslim_viking_mod = yes }
+						NOT = { religion_group = muslim }
 						capital_scope = {
 							OR = {
 								region = malaya_region
@@ -529,9 +529,9 @@ mnd_maj_3 = {
 				}
 				AND = {
 					is_capital = yes
-					ROOT = { NOT = { is_muslim_viking_mod = yes } }
+					ROOT = { NOT = { religion_group = muslim } }
 					owner = {
-						is_muslim_viking_mod = yes
+						religion_group = muslim
 						capital_scope = {
 							OR = {
 								region = malaya_region
@@ -545,13 +545,13 @@ mnd_maj_3 = {
 		trigger = {
 			if = {
 				limit = {
-					NOT = { is_muslim_viking_mod = yes }
+					NOT = { religion_group = muslim }
 				}
 				custom_trigger_tooltip = {
 					tooltip = no_more_muslims_tt
 					NOT = {
 						any_country = {
-							is_muslim_viking_mod = yes
+							religion_group = muslim
 							capital_scope = {
 								OR = {
 									region = malaya_region
@@ -567,7 +567,7 @@ mnd_maj_3 = {
 					tooltip = all_muslims_tt
 					NOT = {
 						any_country = {
-							NOT = { is_muslim_viking_mod = yes }
+							NOT = { religion_group = muslim }
 							capital_scope = {
 								OR = {
 									region = malaya_region
@@ -589,7 +589,7 @@ mnd_maj_3 = {
 		effect = {
 			if = {
 				limit = {
-					NOT = { is_muslim_viking_mod = yes }
+					NOT = { religion_group = muslim }
 				}
 				if = {
 					limit = {
@@ -601,7 +601,7 @@ mnd_maj_3 = {
 				every_province = {
 					limit = {
 						area = north_sumatra_area
-						is_muslim_viking_mod = yes
+						religion_group = muslim
 					}
 					change_religion = ROOT
 				}

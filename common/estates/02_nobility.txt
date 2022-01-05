@@ -10,7 +10,7 @@ estate_nobles = {
 		NOT = { has_reform = revolutionary_empire_reform }
 		if = {
 			limit = {
-				NOT = { is_muslim_viking_mod = yes }
+				NOT = { religion_group = muslim }
 				NOT = { religion = sikhism }
 				NOT = { religion = buddhism }
 				NOT = { religion = vajrayana }
@@ -296,7 +296,7 @@ estate_nobles = {
 	custom_name = {
 		desc = estate_amirs
 		trigger = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			NOT = { technology_group = ottoman } #Should possibly be more restricted
 		}
 	}

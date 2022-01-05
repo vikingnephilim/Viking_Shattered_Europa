@@ -14,7 +14,7 @@ country_event = {
 	fire_only_once = yes
 	trigger = {
 		tag = ZAN
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = {
 			piety = -0.05
 		}
@@ -36,7 +36,7 @@ country_event = {
 		every_known_country = {
 			limit = {
 				num_of_ports = 1
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 				NOT = {
 					tag = PTE
 				}
@@ -85,7 +85,7 @@ country_event = {
 		every_known_country = {
 			limit = {
 				num_of_ports = 1
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 				NOT = {
 					tag = PTE
 				}
@@ -136,7 +136,7 @@ country_event = {
 		NOT = {
 			is_year = 1520
 		}
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		has_country_flag = zan_shirazi_islam_confirmed
 	}
 	mean_time_to_happen = {
@@ -185,7 +185,7 @@ country_event = {
 		NOT = {
 			is_year = 1590
 		}
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		has_country_flag = zan_moving_away_from_shirazi_islam
 	}
 	mean_time_to_happen = {
@@ -236,7 +236,7 @@ country_event = {
 		every_known_country = {
 			limit = {
 				num_of_ports = 1
-				religion_group = quranist_muslim
+				religion_group = muslim
 			}
 			add_opinion = {
 				who = ZAN
@@ -257,7 +257,7 @@ country_event = {
 		every_known_country = {
 			limit = {
 				num_of_ports = 1
-				is_muslim_viking_mod = yes
+				religion_group = muslim
 				NOT = {
 					tag = PTE
 				}

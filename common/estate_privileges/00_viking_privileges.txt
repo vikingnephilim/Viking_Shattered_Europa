@@ -689,13 +689,7 @@ estate_enforced_interfaith_dialogue = {
 				religion = root
 			}
 			NOT = {
-				religion_group = sunni_muslim
-			}
-			NOT = {
-				religion_group = shia_muslim
-			}
-			NOT = {
-				religion_group = quranist_muslim
+				religion_group = muslim
 			}
 		}
 		OR = {
@@ -2344,7 +2338,7 @@ estate_monopoly_of_wine = {
 	is_valid = {
 		has_dlc = "Emperor"
 		NOT = {
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 		any_owned_province = {
 			trade_goods = wine
@@ -2823,7 +2817,7 @@ estate_church_strengthen_qadis = {
 	icon = privilege_build_jain_temple
 	max_absolutism = -5
 	influence = 0.05
-  is_valid = { is_muslim_viking_mod = yes }
+  is_valid = { religion_group = muslim }
   can_select = {
 		piety = -0.50
 		NOT = { has_estate_privilege = estate_church_sufi_advisors }
@@ -2831,7 +2825,7 @@ estate_church_strengthen_qadis = {
 	conditional_modifier = {
 		trigger = {
 			has_dlc = "Cradle of Civilization"
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 		modifier = {
 			monthly_piety = +0.001
@@ -2868,7 +2862,7 @@ estate_church_sufi_advisors = {
 	icon = privilege_build_jain_temple
 	max_absolutism = -5
 	influence = 0.05
-  is_valid = { is_muslim_viking_mod = yes }
+  is_valid = { religion_group = muslim }
   can_select = {
 		NOT = { piety = 0.51 }
 		NOT = { has_estate_privilege = estate_church_strengthen_qadis }
@@ -2876,7 +2870,7 @@ estate_church_sufi_advisors = {
 	conditional_modifier = {
 		trigger = {
 			has_dlc = "Cradle of Civilization"
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 		}
 		modifier = {
 			monthly_piety = -0.001

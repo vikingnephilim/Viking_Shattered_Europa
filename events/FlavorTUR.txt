@@ -222,7 +222,7 @@ country_event = {
 		NOT = {
 			is_year = 1500
 		}
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 	}
 	mean_time_to_happen = {
 		months = 150
@@ -310,7 +310,7 @@ country_event = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
-					religion_group = shia_muslim
+					religion_group = muslim
 				}
 				set_province_flag = shiite_revolt
 			}
@@ -688,7 +688,7 @@ country_event = {
 		any_owned_province = {
 			is_capital = no
 			OR = {
-				religion_group = shia_muslim
+				religion_group = muslim
 			}
 		}
 	}
@@ -700,7 +700,7 @@ country_event = {
 			random_owned_province = {
 				limit = {
 					is_capital = no
-					religion_group = shia_muslim
+					religion_group = muslim
 				}
 				set_province_flag = celali_uprising
 			}
@@ -747,7 +747,7 @@ country_event = {
 		owns = 358		# Alexandria
 		owns = 382		# Damascus
 		owns = 379		# Jerusalem
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		any_owned_province = {
 			province_id = 361			# Cairo
 		}
@@ -1648,7 +1648,7 @@ country_event = {
 	trigger = {
 		is_turkish_beylik = yes
 		capital = 151
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = {
 			exists = BYZ
 		}

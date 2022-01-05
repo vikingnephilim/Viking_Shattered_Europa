@@ -177,8 +177,14 @@ nieuw_amsterdam_haven_monument = {
 	#can we build it?
 	build_trigger = {
 		FROM = {
-			culture_group = west_germanic
-			has_institution = global_trade}
+			OR = {
+				primary_culture = dutch
+				primary_culture = flemish
+				primary_culture = frisian
+				primary_culture = luxembourgian
+			}
+			has_institution = global_trade
+		}
 	}
 	#what to do when it's built
 	on_built = {

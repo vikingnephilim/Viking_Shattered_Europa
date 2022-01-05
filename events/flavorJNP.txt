@@ -20,7 +20,7 @@ country_event = {
 		tag = JNP
 		not = { is_year = 1448 }
 		NOT = { owns = 522 } #Delhi
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		exists = DLH
 	}
 	
@@ -49,7 +49,7 @@ country_event = {
 	trigger = {
 		tag = JNP
 		not = { is_year = 1520 }
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		OR = {
 			owns_core_province = 2063
 			owns_core_province = 524
@@ -87,7 +87,7 @@ country_event = {
 	trigger = {
 		tag = JNP
 		not = { is_year = 1518 }
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		owns_core_province = 2095
 	}
 	
@@ -117,7 +117,7 @@ country_event = {
 	trigger = {
 		tag = JNP
 		not = { is_year = 1480 }
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		owns_core_province = 555 #Jaunpur
 		555 = {
 			fort_level = 1
@@ -162,7 +162,7 @@ country_event = {
 	trigger = {
 		tag = JNP
 		not = { is_year = 1490 }
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		owns_core_province = 555 #Jaunpur
 	}
 	
@@ -196,7 +196,7 @@ country_event = {
 	trigger = {
 		tag = JNP
 		not = { is_year = 1564 }
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		owns_core_province = 2095 #Varanasi
 	}
 	
@@ -229,7 +229,7 @@ country_event = {
 
 	trigger = {
 		tag = JNP
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		owns_core_province = 555 #Jaunpur
 		owns_core_province = 556 #Allahabad
 		owns_core_province = 2063 #Etawah
@@ -271,12 +271,12 @@ country_event = {
 		tag = JNP
 		NOT = { is_year = 1455 }
 		is_subject = no
-		is_muslim_viking_mod = yes
+		religion_group = muslim
 		NOT = { owns = 2059 }
 		exists = MLW
 		MLW = {
 			is_subject = no
-			is_muslim_viking_mod = yes
+			religion_group = muslim
 			NOT = { alliance_with = JNP }
 		}
 		BND = {
