@@ -876,6 +876,44 @@ country_event = {
 		}
 		IF = {
 			limit = {
+				AZV = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = greek_vassal
+				subject = AZV
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				AZV = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+		IF = {
+			limit = {
+				CND = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = greek_vassal
+				subject = CND
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				CND = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+		IF = {
+			limit = {
 				CEP = {
 					has_country_flag = hail_hegemon
 				}
@@ -983,25 +1021,6 @@ country_event = {
 		ELSE_IF = {
 			limit = {
 				NAX = {
-					has_country_flag = screw_hegemon
-				}
-			}
-			add_stability = -1
-		}
-		IF = {
-			limit = {
-				CND = {
-					has_country_flag = hail_hegemon
-				}
-			}
-			create_subject = {
-				subject_type = greek_vassal
-				subject = CND
-			}
-		}
-		ELSE_IF = {
-			limit = {
-				CND = {
 					has_country_flag = screw_hegemon
 				}
 			}
