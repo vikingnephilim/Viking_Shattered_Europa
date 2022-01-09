@@ -1,7 +1,5 @@
 # Pirate events by Daniel Tolman
-
 namespace = pirates
-
 # Pirate elections
 country_event = {
 	id = pirates.1
@@ -9,8 +7,12 @@ country_event = {
 	picture = BUCCANEERS_eventPicture
 	desc = {
 		trigger = {
-			NOT = { has_country_flag = pirate_death_election }
-			NOT = { has_country_flag = pirate_mutineer_council }
+			NOT = {
+				has_country_flag = pirate_death_election
+			}
+			NOT = {
+				has_country_flag = pirate_mutineer_council
+			}
 		}
 		desc = "pirates.1.desc"
 	}
@@ -26,9 +28,7 @@ country_event = {
 		}
 		desc = "pirates.1.desc3"
 	}
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		OR = {
 			has_reform = pirate_republic_reform
@@ -43,30 +43,39 @@ country_event = {
 			republican_tradition = 50
 		}
 	}
-	option = { # Current ruler
+	option = {
+		# Current ruler
 		name = "pirates.1.keep"
 		trigger = {
 			has_regency = no
-			NOT = { has_country_flag = pirate_death_election }
+			NOT = {
+				has_country_flag = pirate_death_election
+			}
 		}
-		ai_chance = { 
+		ai_chance = {
 			factor = 60
 			modifier = {
 				factor = 0
-				NOT = { republican_tradition = 25 }
-			}	
+				NOT = {
+					republican_tradition = 25
+				}
+			}
 			modifier = {
 				factor = 0.5
-				NOT = { republican_tradition = 50 }
-			}				
+				NOT = {
+					republican_tradition = 50
+				}
+			}
 			modifier = {
 				factor = 0.5
-				NOT = { republican_tradition = 75 }
-			}	
+				NOT = {
+					republican_tradition = 75
+				}
+			}
 			modifier = {
-				factor = 2.0
+				factor = 2
 				republican_tradition = 90
-			}		
+			}
 		}
 		custom_tooltip = remains_ruler
 		if = {
@@ -80,18 +89,20 @@ country_event = {
 		change_mil = 1
 		if = {
 			limit = {
-				NOT = { has_ruler_flag = historical_pirate }
+				NOT = {
+					has_ruler_flag = historical_pirate
+				}
 			}
 			add_scaled_republican_tradition = -10
 		}
 		if = {
 			limit = {
-				faction_in_power = pr_buccaneers 
+				faction_in_power = pr_buccaneers
 			}
 			add_faction_influence = {
 				faction = pr_buccaneers
 				influence = -10
-			}	
+			}
 		}
 		random_list = {
 			10 = {
@@ -106,103 +117,125 @@ country_event = {
 		}
 		add_karma = -5
 	}
-	option = { # Buccaneer candidate
+	option = {
+		# Buccaneer candidate
 		name = "pirates.1.a"
-		ai_chance = { factor = 20 }
+		ai_chance = {
+			factor = 20
+		}
 		if = {
-			limit = { has_active_policy = mandatory_service }
+			limit = {
+				has_active_policy = mandatory_service
+			}
 			define_ruler = {
 				mil = 1
 				adm = 4
 				dip = 1
-				random_gender = yes # Allows random gender for republics
+				random_gender = yes				# Allows random gender for republics
 			}
 		}
 		else = {
 			define_ruler = {
 				mil = 1
 				adm = 4
-				dip = 1					
+				dip = 1
 			}
 		}
 		if = {
-			limit = { 
-				has_faction = pr_buccaneers 
+			limit = {
+				has_faction = pr_buccaneers
 			}
 			add_faction_influence = {
 				faction = pr_buccaneers
 				influence = 20
-			}				
+			}
 		}
 		add_karma = 10
 	}
-	option = { # Smugglers candidate
+	option = {
+		# Smugglers candidate
 		name = "pirates.1.b"
-		ai_chance = { factor = 20 }
+		ai_chance = {
+			factor = 20
+		}
 		if = {
-			limit = { has_active_policy = mandatory_service }
+			limit = {
+				has_active_policy = mandatory_service
+			}
 			define_ruler = {
 				dip = 4
 				adm = 1
-				mil = 1					
-				random_gender = yes # Allows random gender for republics
+				mil = 1
+				random_gender = yes				# Allows random gender for republics
 			}
 		}
 		else = {
 			define_ruler = {
 				dip = 4
 				adm = 1
-				mil = 1					
+				mil = 1
 			}
 		}
 		if = {
-			limit = { 
-				has_faction = pr_smugglers 
+			limit = {
+				has_faction = pr_smugglers
 			}
 			add_faction_influence = {
 				faction = pr_smugglers
 				influence = 20
-			}				
+			}
 		}
 		add_karma = 10
 	}
-	option = { # Captains candidate
+	option = {
+		# Captains candidate
 		name = "pirates.1.c"
-		ai_chance = { factor = 20 }
+		ai_chance = {
+			factor = 20
+		}
 		if = {
-			limit = { has_active_policy = mandatory_service }
+			limit = {
+				has_active_policy = mandatory_service
+			}
 			define_ruler = {
 				mil = 4
 				adm = 1
-				dip = 1					
-				random_gender = yes # Allows random gender for republics
+				dip = 1
+				random_gender = yes				# Allows random gender for republics
 			}
 		}
 		else = {
 			define_ruler = {
 				mil = 4
 				adm = 1
-				dip = 1					
+				dip = 1
 			}
 		}
 		if = {
-			limit = { 
-				has_faction = pr_captains 
+			limit = {
+				has_faction = pr_captains
 			}
 			add_faction_influence = {
 				faction = pr_captains
 				influence = 20
-			}				
+			}
 		}
 		add_karma = 10
 	}
-	option = { # Blackbeard!
+	option = {
+		# Blackbeard!
 		name = "pirates.1.d"
-		ai_chance = { factor = 1000 }
+		ai_chance = {
+			factor = 1000
+		}
 		trigger = {
-			NOT = { has_global_flag = blackbeard_flag }
+			NOT = {
+				has_global_flag = blackbeard_flag
+			}
 			is_year = 1700
-			NOT = { is_year = 1720 }
+			NOT = {
+				is_year = 1720
+			}
 			capital_scope = {
 				region = carribeans_region
 			}
@@ -222,7 +255,7 @@ country_event = {
 				}
 			}
 			capital_scope = {
-				create_flagship = {	
+				create_flagship = {
 					name = "Queen Anne's Revenge"
 					type = heavy_ship
 				}
@@ -245,13 +278,20 @@ country_event = {
 		set_ruler_flag = historical_pirate
 		set_global_flag = blackbeard_flag
 	}
-	option = { # Calico Jack
+	option = {
+		# Calico Jack
 		name = "pirates.1.e"
-		ai_chance = { factor = 500 }
+		ai_chance = {
+			factor = 500
+		}
 		trigger = {
-			NOT = { has_global_flag = calico_jack }
+			NOT = {
+				has_global_flag = calico_jack
+			}
 			is_year = 1702
-			NOT = { is_year = 1720 }
+			NOT = {
+				is_year = 1720
+			}
 			capital_scope = {
 				region = carribeans_region
 			}
@@ -271,7 +311,7 @@ country_event = {
 				}
 			}
 			capital_scope = {
-				create_flagship = {	
+				create_flagship = {
 					name = "Kingston"
 					type = heavy_ship
 				}
@@ -294,13 +334,20 @@ country_event = {
 		set_ruler_flag = historical_pirate
 		set_global_flag = calico_jack
 	}
-	option = { # Anne Bonny
+	option = {
+		# Anne Bonny
 		name = "pirates.1.f"
-		ai_chance = { factor = 500 }
+		ai_chance = {
+			factor = 500
+		}
 		trigger = {
-			NOT = { has_global_flag = anne_bonny }
+			NOT = {
+				has_global_flag = anne_bonny
+			}
 			is_year = 1716
-			NOT = { is_year = 1782 }
+			NOT = {
+				is_year = 1782
+			}
 			capital_scope = {
 				region = carribeans_region
 			}
@@ -321,7 +368,7 @@ country_event = {
 				}
 			}
 			capital_scope = {
-				create_flagship = {	
+				create_flagship = {
 					name = "William"
 					type = heavy_ship
 				}
@@ -344,13 +391,20 @@ country_event = {
 		set_ruler_flag = historical_pirate
 		set_global_flag = anne_bonny
 	}
-	option = { # Mary Read
+	option = {
+		# Mary Read
 		name = "pirates.1.g"
-		ai_chance = { factor = 500 }
+		ai_chance = {
+			factor = 500
+		}
 		trigger = {
-			NOT = { has_global_flag = mary_read }
+			NOT = {
+				has_global_flag = mary_read
+			}
 			is_year = 1703
-			NOT = { is_year = 1721 }
+			NOT = {
+				is_year = 1721
+			}
 			capital_scope = {
 				region = carribeans_region
 			}
@@ -367,13 +421,20 @@ country_event = {
 		set_ruler_flag = historical_pirate
 		set_global_flag = mary_read
 	}
-	option = { # Charles Vane
+	option = {
+		# Charles Vane
 		name = "pirates.1.h"
-		ai_chance = { factor = 500 }
+		ai_chance = {
+			factor = 500
+		}
 		trigger = {
-			NOT = { has_global_flag = charles_vane }
+			NOT = {
+				has_global_flag = charles_vane
+			}
 			is_year = 1702
-			NOT = { is_year = 1720 }
+			NOT = {
+				is_year = 1720
+			}
 			capital_scope = {
 				region = carribeans_region
 			}
@@ -393,7 +454,7 @@ country_event = {
 				}
 			}
 			capital_scope = {
-				create_flagship = {	
+				create_flagship = {
 					name = "Ranger"
 					type = heavy_ship
 				}
@@ -416,13 +477,20 @@ country_event = {
 		set_ruler_flag = historical_pirate
 		set_global_flag = charles_vane
 	}
-	option = { # Black Caesar
+	option = {
+		# Black Caesar
 		name = "pirates.1.i"
-		ai_chance = { factor = 500 }
+		ai_chance = {
+			factor = 500
+		}
 		trigger = {
-			NOT = { has_global_flag = black_caesar }
+			NOT = {
+				has_global_flag = black_caesar
+			}
 			is_year = 1702
-			NOT = { is_year = 1720 }
+			NOT = {
+				is_year = 1720
+			}
 			capital_scope = {
 				region = carribeans_region
 			}
@@ -438,11 +506,16 @@ country_event = {
 		set_ruler_flag = historical_pirate
 		set_global_flag = black_caesar
 	}
-	option = { # Ching Shih
+	option = {
+		# Ching Shih
 		name = "pirates.1.j"
-		ai_chance = { factor = 500 }
+		ai_chance = {
+			factor = 500
+		}
 		trigger = {
-			NOT = { has_global_flag = ching_shih }
+			NOT = {
+				has_global_flag = ching_shih
+			}
 			is_year = 1795
 			capital_scope = {
 				OR = {
@@ -468,7 +541,7 @@ country_event = {
 				}
 			}
 			capital_scope = {
-				create_flagship = {	
+				create_flagship = {
 					name = "Red Flag"
 					type = heavy_ship
 				}
@@ -491,13 +564,20 @@ country_event = {
 		set_ruler_flag = historical_pirate
 		set_global_flag = ching_shih
 	}
-	option = { # Jack Ward
+	option = {
+		# Jack Ward
 		name = "pirates.1.k"
-		ai_chance = { factor = 500 }
+		ai_chance = {
+			factor = 500
+		}
 		trigger = {
-			NOT = { has_global_flag = jack_ward }
+			NOT = {
+				has_global_flag = jack_ward
+			}
 			is_year = 1605
-			NOT = { is_year = 1610 }
+			NOT = {
+				is_year = 1610
+			}
 			capital_scope = {
 				region = maghreb_region
 			}
@@ -517,7 +597,7 @@ country_event = {
 				}
 			}
 			capital_scope = {
-				create_flagship = {	
+				create_flagship = {
 					name = "Gift"
 					type = heavy_ship
 				}
@@ -540,13 +620,20 @@ country_event = {
 		set_ruler_flag = historical_pirate
 		set_global_flag = jack_ward
 	}
-	option = { # Laurens de Graaf
+	option = {
+		# Laurens de Graaf
 		name = "pirates.1.l"
-		ai_chance = { factor = 500 }
+		ai_chance = {
+			factor = 500
+		}
 		trigger = {
-			NOT = { has_global_flag = laurens_de_graaf }
+			NOT = {
+				has_global_flag = laurens_de_graaf
+			}
 			is_year = 1682
-			NOT = { is_year = 1704 }
+			NOT = {
+				is_year = 1704
+			}
 			capital_scope = {
 				region = carribeans_region
 			}
@@ -566,7 +653,7 @@ country_event = {
 				}
 			}
 			capital_scope = {
-				create_flagship = {	
+				create_flagship = {
 					name = "Tigre"
 					type = heavy_ship
 				}
@@ -589,13 +676,20 @@ country_event = {
 		set_ruler_flag = historical_pirate
 		set_global_flag = laurens_de_graaf
 	}
-	option = { # Michel de Grammont
+	option = {
+		# Michel de Grammont
 		name = "pirates.1.m"
-		ai_chance = { factor = 500 }
+		ai_chance = {
+			factor = 500
+		}
 		trigger = {
-			NOT = { has_global_flag = michel_de_gramont }
+			NOT = {
+				has_global_flag = michel_de_gramont
+			}
 			is_year = 1670
-			NOT = { is_year = 1686 }
+			NOT = {
+				is_year = 1686
+			}
 			capital_scope = {
 				region = carribeans_region
 			}
@@ -615,7 +709,7 @@ country_event = {
 				}
 			}
 			capital_scope = {
-				create_flagship = {	
+				create_flagship = {
 					name = "Hardi"
 					type = heavy_ship
 				}
@@ -638,13 +732,20 @@ country_event = {
 		set_ruler_flag = historical_pirate
 		set_global_flag = michel_de_gramont
 	}
-	option = { # Pieter Pietersen Heyn
+	option = {
+		# Pieter Pietersen Heyn
 		name = "pirates.1.n"
-		ai_chance = { factor = 500 }
+		ai_chance = {
+			factor = 500
+		}
 		trigger = {
-			NOT = { has_global_flag = piet_hein }
+			NOT = {
+				has_global_flag = piet_hein
+			}
 			is_year = 1607
-			NOT = { is_year = 1629 }
+			NOT = {
+				is_year = 1629
+			}
 			primary_culture = dutch
 		}
 		define_ruler = {
@@ -662,7 +763,7 @@ country_event = {
 				}
 			}
 			capital_scope = {
-				create_flagship = {	
+				create_flagship = {
 					name = "Hollandia"
 					type = heavy_ship
 				}
@@ -685,28 +786,46 @@ country_event = {
 		set_ruler_flag = historical_pirate
 		set_global_flag = piet_hein
 	}
-	option = { # Grace O'Malley
+	option = {
+		# Grace O'Malley
 		name = "pirates.1.o"
-		ai_chance = { factor = 500 }
+		ai_chance = {
+			factor = 500
+		}
 		trigger = {
-			NOT = { has_global_flag = grace_omalley_flag }
-			NOT = { has_global_flag = wih_grainnenimhaille_flag }
+			NOT = {
+				has_global_flag = grace_omalley_flag
+			}
+			NOT = {
+				has_global_flag = wih_grainnenimhaille_flag
+			}
 			is_year = 1530
-			NOT = { is_year = 1605 }
+			NOT = {
+				is_year = 1605
+			}
 			primary_culture = irish
 		}
 		custom_tooltip = historical_pirate_tooltip
 		set_ruler_flag = historical_pirate
 		set_global_flag = grace_omalley_flag
-		country_event = { id = women_history_events.22 }
+		country_event = {
+			id = women_history_events.22
+		}
 	}
-	option = { # François l'Olonnais
+	option = {
+		# François l'Olonnais
 		name = "pirates.1.p"
-		ai_chance = { factor = 500 }
+		ai_chance = {
+			factor = 500
+		}
 		trigger = {
-			NOT = { has_global_flag = francois_olonnais }
+			NOT = {
+				has_global_flag = francois_olonnais
+			}
 			is_year = 1650
-			NOT = { is_year = 1669 }
+			NOT = {
+				is_year = 1669
+			}
 			capital_scope = {
 				region = carribeans_region
 			}
@@ -729,16 +848,13 @@ country_event = {
 }
 
 ###### Faction events ######
-
 # Sunken Treasure
 country_event = {
 	id = pirates.10
 	title = "pirates.10.t"
 	picture = FLAGSHIP_SUNK_eventPicture
 	desc = "pirates.10.d"
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		has_dlc = "Golden Century"
 		has_reform = pirate_republic_reform
@@ -757,7 +873,8 @@ country_event = {
 			capital_scope = {
 				continent = europe
 			}
-			any_subject_country = { # potosi or mexico
+			any_subject_country = {
+				# potosi or mexico
 				OR = {
 					owns_core_province = 852
 					owns_core_province = 795
@@ -765,7 +882,6 @@ country_event = {
 			}
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			random_country = {
@@ -773,7 +889,8 @@ country_event = {
 					capital_scope = {
 						continent = europe
 					}
-					any_subject_country = { # potosi or mexico
+					any_subject_country = {
+						# potosi or mexico
 						OR = {
 							owns_core_province = 852
 							owns_core_province = 795
@@ -784,7 +901,6 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
 		name = "pirates.10.a"
 		add_faction_influence = {
@@ -792,7 +908,6 @@ country_event = {
 			influence = 10
 		}
 	}
-	
 	option = {
 		name = "pirates.10.b"
 		add_faction_influence = {
@@ -810,21 +925,18 @@ country_event = {
 		}
 	}
 }
-		
+
 # Tyrant Captain
 country_event = {
 	id = pirates.11
 	title = "pirates.11.t"
 	picture = PIRATE_CAPTAINS_eventPicture
 	desc = "pirates.11.d"
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		has_dlc = "Golden Century"
 		has_reform = pirate_republic_reform
 	}
-	
 	immediate = {
 		hidden_effect = {
 			set_saved_name = {
@@ -834,8 +946,8 @@ country_event = {
 			}
 		}
 	}
-	
-	option = { # mutiny!
+	option = {
+		# mutiny!
 		name = "pirates.11.a"
 		add_stability = -1
 		add_faction_influence = {
@@ -847,7 +959,8 @@ country_event = {
 			influence = -10
 		}
 	}
-	option = { # the captain's word is law
+	option = {
+		# the captain's word is law
 		name = "pirates.11.b"
 		add_scaled_republican_tradition = -10
 		add_faction_influence = {
@@ -867,15 +980,12 @@ country_event = {
 	title = "pirates.12.t"
 	picture = BUCCANEERS_eventPicture
 	desc = "pirates.12.d"
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		has_dlc = "Golden Century"
 		has_reform = pirate_republic_reform
 		has_privateers = yes
 	}
-	
 	option = {
 		name = "pirates.12.a"
 		add_adm_power = 50
@@ -916,14 +1026,11 @@ country_event = {
 	title = "pirates.13.t"
 	picture = SMUGGLERS_eventPicture
 	desc = "pirates.13.d"
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		has_dlc = "Golden Century"
 		has_reform = pirate_republic_reform
 	}
-	
 	immediate = {
 		hidden_effect = {
 			set_saved_name = {
@@ -933,7 +1040,6 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
 		name = "pirates.13.a"
 		add_faction_influence = {
@@ -959,16 +1065,17 @@ country_event = {
 	title = "pirates.14.t"
 	picture = PIRATE_CAPTAINS_eventPicture
 	desc = "pirates.14.d"
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		has_dlc = "Golden Century"
 		has_reform = pirate_republic_reform
 		any_country = {
 			num_of_heavy_ship = 3
 			any_trade_node = {
-				privateer_power = { country = prev share = 1 }
+				privateer_power = {
+					country = prev
+					share = 1
+				}
 			}
 			capital_scope = {
 				has_discovered = ROOT
@@ -978,14 +1085,16 @@ country_event = {
 			has_port = yes
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			random_country = {
 				limit = {
 					num_of_heavy_ship = 3
 					any_trade_node = {
-						privateer_power = { country = prev share = 1 }
+						privateer_power = {
+							country = prev
+							share = 1
+						}
 					}
 					capital_scope = {
 						has_discovered = ROOT
@@ -1002,7 +1111,6 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
 		name = "pirates.14.a"
 		add_faction_influence = {
@@ -1044,9 +1152,7 @@ country_event = {
 	title = "pirates.15.t"
 	picture = BUCCANEERS_eventPicture
 	desc = "pirates.15.d"
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		has_dlc = "Golden Century"
 		has_reform = pirate_republic_reform
@@ -1063,7 +1169,6 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
 		name = "pirates.15.a"
 		add_yearly_manpower = 1
@@ -1076,7 +1181,9 @@ country_event = {
 	option = {
 		name = "pirates.15.b"
 		trigger = {
-			NOT = { has_reform = war_against_the_world_doctrine_reform }
+			NOT = {
+				has_reform = war_against_the_world_doctrine_reform
+			}
 		}
 		add_years_of_income = 0.5
 		add_faction_influence = {
@@ -1096,24 +1203,26 @@ country_event = {
 	title = "pirates.16.t"
 	picture = PIRATE_CAPTAINS_eventPicture
 	desc = "pirates.16.d"
-	
 	is_triggered_only = yes
-	
-	trigger = {	
+	trigger = {
 		has_dlc = "Golden Century"
 		has_reform = pirate_republic_reform
 		navy_size = 5
-		NOT = { has_country_modifier = thorough_careening }
-		NOT = { has_country_modifier = relaxed_careening }
+		NOT = {
+			has_country_modifier = thorough_careening
+		}
+		NOT = {
+			has_country_modifier = relaxed_careening
+		}
 	}
-	
 	option = {
 		name = "pirates.16.a"
 		add_faction_influence = {
 			faction = pr_captains
 			influence = 10
 		}
-		add_country_modifier = { # ship durability
+		add_country_modifier = {
+			# ship durability
 			name = "thorough_careening"
 			duration = 3650
 		}
@@ -1124,7 +1233,8 @@ country_event = {
 			faction = pr_buccaneers
 			influence = 10
 		}
-		add_country_modifier = { # naval morale
+		add_country_modifier = {
+			# naval morale
 			name = "relaxed_careening"
 			duration = 3650
 		}
@@ -1137,15 +1247,14 @@ country_event = {
 	title = "pirates.17.t"
 	picture = SMUGGLERS_eventPicture
 	desc = "pirates.17.d"
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		has_dlc = "Golden Century"
 		has_reform = pirate_republic_reform
-		NOT = { has_country_modifier = smugglers_struggling }
+		NOT = {
+			has_country_modifier = smugglers_struggling
+		}
 	}
-	
 	option = {
 		name = "pirates.17.a"
 		add_faction_influence = {
@@ -1165,15 +1274,12 @@ country_event = {
 	title = "pirates.18.t"
 	picture = BUCCANEERS_eventPicture
 	desc = "pirates.18.d"
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		has_dlc = "Golden Century"
 		has_reform = pirate_republic_reform
 		has_flagship = yes
 	}
-	
 	immediate = {
 		hidden_effect = {
 			set_saved_name = {
@@ -1188,8 +1294,8 @@ country_event = {
 			}
 		}
 	}
-	
-	option = { # A spokesman for the crew
+	option = {
+		# A spokesman for the crew
 		name = "pirates.18.a"
 		define_advisor = {
 			type = quartermaster
@@ -1207,8 +1313,8 @@ country_event = {
 			influence = -10
 		}
 	}
-	
-	option = { # The captain's puppet
+	option = {
+		# The captain's puppet
 		name = "pirates.18.b"
 		define_advisor = {
 			type = naval_reformer
@@ -1234,14 +1340,11 @@ country_event = {
 	title = "pirates.19.t"
 	picture = SMUGGLERS_eventPicture
 	desc = "pirates.19.d"
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		has_dlc = "Golden Century"
 		has_reform = pirate_republic_reform
 	}
-	
 	option = {
 		name = "pirates.19.a"
 		add_country_modifier = {
@@ -1257,7 +1360,6 @@ country_event = {
 			influence = -10
 		}
 	}
-	
 	option = {
 		name = "pirates.19.b"
 		add_prestige = -10

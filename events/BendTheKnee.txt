@@ -400,3 +400,631 @@ country_event = {
 		}
 	}
 }
+
+# The DYNASTYNAME theocratic_autocracy has fallen!
+province_event = {
+	id = bendtheknee.9
+	title = "bendtheknee.9.t"
+	picture = COURT_eventPicture
+	major = yes
+	is_triggered_only = yes
+	desc = {
+		trigger = {
+			owner = {
+				has_reform = theocratic_autocracy
+			}
+			FROM = {
+				has_reform = theocratic_autocracy
+			}
+		}
+		desc = bendtheknee.9.da
+	}
+	desc = {
+		trigger = {
+			owner = {
+				has_reform = theocratic_autocracy
+			}
+			FROM = {
+				NOT = {
+					has_reform = theocratic_autocracy
+				}
+			}
+		}
+		desc = bendtheknee.9.db
+	}
+	desc = {
+		trigger = {
+			owner = {
+				NOT = {
+					has_reform = theocratic_autocracy
+				}
+			}
+		}
+		desc = bendtheknee.9.dc
+	}
+	trigger = {
+		# OBS! These checks are also hard coded in WouldBecometheocratic_autocracyIfTaking() for AI and interface reasons. Change code too if this trigger changes.
+		province_id = 151
+		#owner = {
+		#	OR = {
+		#		has_reform = grk_demo
+		#		has_reform = oligarchic_reform
+		#	}
+		#}
+	}
+	immediate = {
+		#Save new owner as theocratic_autocracy if valid
+		hidden_effect = {
+			owner = {
+				if = {
+					limit = {
+						has_reform = grk_demo
+						culture_group = byzantine
+					}
+					add_core = 151
+					set_capital = 151
+					#There was a bug, which made it possible that the new theocratic_autocracy remained a grk_demo despite having Constantinople
+					#I couldn't replicate it though, so I hope the line below might fix it - in the worst case it does nothing
+					grant_independence = yes
+					change_government_to_monarchy = yes
+					add_government_reform = theocratic_autocracy
+					add_government_reform = theocratic_autocracy
+					save_event_target_as = new_theocratic_autocracy
+				}
+			}
+		}
+		#Handle grk_demo transfer
+		hidden_effect = {
+			#Case - new owner is the new theocratic_autocracy, previous still lives -> all grk_demos get transferred from the previous to the new one
+			if = {
+				limit = {
+					FROM = {
+						exists = yes
+					}
+					owner = {
+						has_reform = theocratic_autocracy
+					}
+					FROM = {
+						has_reform = theocratic_autocracy
+					}
+				}
+				#Degrade the previous theocratic_autocracy to grk_demo level
+				FROM = {
+					every_subject_country = {
+						limit = {
+							is_subject_of_type = greek_vassal
+						}
+						set_country_flag = tobe_grk_demo_of_new_theocratic_autocracy
+						grant_independence = yes
+					}
+					event_target:new_theocratic_autocracy = {
+						create_subject = {
+							subject_type = greek_vassal
+							subject = FROM
+						}
+					}
+					set_government_rank = 1
+					add_government_reform = grk_demo
+				}
+				#Vassalize all of the former grk_demos
+				#NOTE: originally, it was intended that grk_demos, who are at war with the theocratic_autocracy, should not be vassalized
+				every_country = {
+					limit = {
+						has_country_flag = tobe_grk_demo_of_new_theocratic_autocracy
+					}
+					event_target:new_theocratic_autocracy = {
+						create_subject = {
+							subject_type = greek_vassal
+							subject = PREV
+						}
+					}
+				}
+				owner = {
+					country_event = {
+						id = bendtheknee.12
+						days = 1
+					}
+				}
+			}
+			#Case - new owner is not the new theocratic_autocracy, previous still lives -> all grk_demos get free
+			if = {
+				limit = {
+					FROM = {
+						exists = yes
+					}
+					NOT = {
+						owner = {
+							has_reform = theocratic_autocracy
+						}
+					}
+					FROM = {
+						has_reform = theocratic_autocracy
+					}
+				}
+				FROM = {
+					every_subject_country = {
+						limit = {
+							is_subject_of_type = greek_vassal
+						}
+						grant_independence = yes
+						if = {
+							limit = {
+								has_reform = grk_demo
+							}
+							add_government_reform = oligarchic_republic
+						}
+					}
+					add_government_reform = oligarchic_republic
+				}
+			}
+			#Case - new owner is theocratic_autocracy, previous theocratic_autocracy is dead -> all grk_demos become subjects of the new theocratic_autocracy
+			if = {
+				limit = {
+					NOT = {
+						FROM = {
+							exists = yes
+						}
+					}
+					owner = {
+						has_reform = theocratic_autocracy
+					}
+				}
+				every_country = {
+					limit = {
+						has_reform = grk_demo
+						NOT = {
+							war_with = event_target:new_theocratic_autocracy
+						}
+					}
+					event_target:new_theocratic_autocracy = {
+						create_subject = {
+							subject_type = greek_vassal
+							subject = PREV
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						has_reform = grk_demo
+						war_with = event_target:new_theocratic_autocracy
+					}
+					add_government_reform = oligarchic_republic
+				}
+			}
+			#Case - new owner is not the new theocratic_autocracy, previous one is dead -> all former grk_demos become independent grk_demo
+			if = {
+				limit = {
+					NOT = {
+						FROM = {
+							exists = yes
+						}
+					}
+					NOT = {
+						owner = {
+							has_reform = theocratic_autocracy
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						has_reform = grk_demo
+					}
+					overlord = {
+						free_vassal = PREV
+					}
+					add_government_reform = oligarchic_republic
+				}
+			}
+		}
+		#Catch all remaining grk_demos and let them free
+		hidden_effect = {
+			if = {
+				limit = {
+					any_country = {
+						is_subject_of_type = greek_vassal
+						NOT = {
+							overlord = {
+								has_reform = theocratic_autocracy
+							}
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						is_subject_of_type = greek_vassal
+						NOT = {
+							overlord = {
+								has_reform = theocratic_autocracy
+							}
+						}
+					}
+					overlord = {
+						free_vassal = PREV
+					}
+					if = {
+						limit = {
+							has_reform = grk_demo
+						}
+						remove_government_reform = grk_demo
+						add_government_reform = oligarchic_republic
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "japan.EVTOPTA1"
+		if = {
+			limit = {
+				owner = {
+					has_reform = grk_demo
+				}
+			}
+			custom_tooltip = claiming_the_theocratic_autocracy_tooltip
+		}
+		if = {
+			limit = {
+				NOT = {
+					owner = {
+						has_reform = theocratic_autocracy
+					}
+				}
+			}
+			owner = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = destroyed_theocratic_autocracy
+						}
+					}
+					add_prestige = 20
+					add_adm_power = 50
+					add_dip_power = 50
+					add_mil_power = 50
+					set_country_flag = destroyed_theocratic_autocracy
+				}
+			}
+		}
+	}
+}
+
+# I couldn't actually find a way to get this event to fire from the last one, so I assume that the NOT = { exists = FROM } bit is actually unused. But just in case I missed something, it seems better to add this anyway.
+# New theocratic_autocracy - join or not?
+country_event = {
+	id = bendtheknee.10
+	title = bendtheknee.10.name
+	desc = bendtheknee.10.desc
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	option = {
+		#be a grk_demo
+		name = bendtheknee.10.A
+		event_target:new_theocratic_autocracy = {
+			create_subject = {
+				subject_type = greek_vassal
+				subject = ROOT
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		#don't be a grk_demo
+		name = bendtheknee.10.B
+		event_target:new_theocratic_autocracy = {
+			add_opinion = {
+				who = root
+				modifier = opinion_defy_new_theocratic_autocracy
+			}
+			country_event = {
+				id = bendtheknee.11
+				days = 1
+			}
+			add_casus_belli = {
+				target = ROOT
+				type = cb_vassalize_mission
+				months = 300
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1
+				NOT = {
+					num_of_cities = 10
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = bendtheknee.11
+	title = bendtheknee.11.name
+	desc = bendtheknee.11.desc
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	option = {
+		#be a grk_demo
+		name = bendtheknee.11.opt
+		event_target:new_theocratic_autocracy = {
+			create_subject = {
+				subject_type = greek_vassal
+				subject = ROOT
+			}
+		}
+	}
+}
+
+country_event = {
+	id = bendtheknee.12
+	title = bendtheknee.12.t
+	desc = bendtheknee.12.desc
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		#We don't follow a bully
+		name = bendtheknee.12.a
+		every_country = {
+			limit = {
+				has_country_flag = tobe_grk_demo_of_new_theocratic_autocracy
+			}
+			clr_country_flag = tobe_grk_demo_of_new_theocratic_autocracy
+			if = {
+				limit = {
+					war_with = ROOT
+					is_subject_of = ROOT
+				}
+				grant_independence = yes
+				if = {
+					limit = {
+						has_reform = grk_demo
+					}
+					add_government_reform = oligarchic_republic
+				}
+				#The Shogun should be able to retake his defected grk_demos
+				reverse_add_casus_belli = {
+					target = ROOT
+					type = cb_vassalize_mission
+					months = 300
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = bendtheknee.13
+	title = "bendtheknee.13.t"
+	desc = "bendtheknee.13.d"
+	picture = POPE_PREACHING_eventPicture
+	trigger = {
+		AND = {
+			culture_group = byzantine
+			NOT = {
+				has_reform = theocratic_autocracy
+			}
+		}
+		NOT = {
+			has_country_flag = screw_hegemon
+		}
+		NOT = {
+			has_country_flag = hail_hegemon
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		BYZ = {
+			set_country_flag = byz_asks_for_subjects
+		}
+	}
+	option = {
+		name = "bendtheknee.13.a"
+		set_country_flag = hail_hegemon
+		ai_chance = {
+			factor = 95
+		}
+	}
+	option = {
+		name = "bendtheknee.7.b"
+		set_country_flag = screw_hegemon
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = bendtheknee.14
+	title = "bendtheknee.14.t"
+	desc = "bendtheknee.14.d"
+	picture = POPE_PREACHING_eventPicture
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = byz_asks_for_subjects
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "bendtheknee.14.a"
+		IF = {
+			limit = {
+				AEG = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = greek_vassal
+				subject = AEG
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				AEG = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+		IF = {
+			limit = {
+				CEP = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = greek_vassal
+				subject = CEP
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				CEP = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+		IF = {
+			limit = {
+				CRT = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = greek_vassal
+				subject = CRT
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				CRT = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+		IF = {
+			limit = {
+				EPI = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = greek_vassal
+				subject = EPI
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				EPI = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+		IF = {
+			limit = {
+				MAC = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = greek_vassal
+				subject = MAC
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				MAC = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+		IF = {
+			limit = {
+				MOE = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = greek_vassal
+				subject = MOE
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				MOE = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+		IF = {
+			limit = {
+				NAX = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = greek_vassal
+				subject = NAX
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				NAX = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+		IF = {
+			limit = {
+				CND = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = greek_vassal
+				subject = CND
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				CND = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+		IF = {
+			limit = {
+				TRE = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = greek_vassal
+				subject = TRE
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				TRE = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+	}
+}

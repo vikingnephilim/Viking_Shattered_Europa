@@ -1,16 +1,12 @@
 # Hussite Events by Daniel Tolman
-
 namespace = hussite
-
 # Pacifism (at war)		
 country_event = {
 	id = hussite.1
 	title = hussite.1.t
 	desc = hussite.1.d
 	picture = HUSSITE_eventPicture
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		religion = hussite
 		if = {
@@ -26,7 +22,6 @@ country_event = {
 			has_country_modifier = conscripting_pacifists
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			random_country = {
@@ -40,14 +35,15 @@ country_event = {
 			save_event_target_as = pacifist_target
 		}
 	}
-	
-	option = { # let them follow their beliefs
+	option = {
+		# let them follow their beliefs
 		name = "hussite.1.a"
 		add_church_power = 10
-		add_war_exhaustion = -1 
+		add_war_exhaustion = -1
 		add_yearly_manpower = -1
 	}
-	option = { # all who are called must serve
+	option = {
+		# all who are called must serve
 		name = "hussite.1.b"
 		add_church_power = -20
 		add_war_exhaustion = 2
@@ -64,9 +60,7 @@ country_event = {
 	title = hussite.2.t
 	desc = hussite.2.d
 	picture = ADULT_BAPTISME_eventPicture
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		religion = hussite
 		if = {
@@ -79,9 +73,10 @@ country_event = {
 		NOT = {
 			war_exhaustion = 1
 		}
-		NOT = { had_recent_war = 5 }
+		NOT = {
+			had_recent_war = 5
+		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			set_saved_name = {
@@ -91,7 +86,6 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
 		name = "hussite.2.a"
 		add_stability_or_adm_power = yes
@@ -105,14 +99,7 @@ country_event = {
 	title = hussite.3.t
 	desc = hussite.3.d
 	picture = ADULT_BAPTISME_eventPicture
-	
 	is_triggered_only = yes
-	
-	trigger = {
-		religion = hussite
-		has_estate = estate_church
-	}
-	
 	trigger = {
 		religion = hussite
 		if = {
@@ -123,17 +110,15 @@ country_event = {
 		}
 		has_estate = estate_church
 	}
-	
 	# encourage vows of poverty
 	option = {
 		name = "hussite.3.a"
 		add_church_power = -25
 		change_estate_land_share = {
 			estate = estate_church
-			share = -5.0
+			share = -5
 		}
 	}
-	
 	# powerful church is a good thing
 	option = {
 		name = "hussite.3.b"
@@ -149,11 +134,9 @@ country_event = {
 country_event = {
 	id = hussite.4
 	title = hussite.4.t
-	desc = hussite.4.d #GetRandom_Sin
+	desc = hussite.4.d	#GetRandom_Sin
 	picture = ADULT_BAPTISME_eventPicture
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		religion = hussite
 		if = {
@@ -171,7 +154,6 @@ country_event = {
 			}
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			set_saved_name = {
@@ -181,8 +163,8 @@ country_event = {
 			}
 		}
 	}
-	
-	option = { # none are above the laws of God
+	option = {
+		# none are above the laws of God
 		name = "hussite.4.a"
 		add_church_power = 20
 		add_estate_loyalty = {
@@ -196,8 +178,8 @@ country_event = {
 			duration = 3650
 		}
 	}
-	
-	option = { # symbolic punishments only
+	option = {
+		# symbolic punishments only
 		name = "hussite.4.b"
 		add_church_power = -20
 		add_estate_loyalty = {
@@ -209,9 +191,8 @@ country_event = {
 			loyalty = -10
 		}
 	}
-	
 	after = {
-		clear_saved_name =  sinful_noble
+		clear_saved_name = sinful_noble
 	}
 }
 
@@ -219,11 +200,9 @@ country_event = {
 country_event = {
 	id = hussite.5
 	title = hussite.5.t
-	desc = hussite.5.d # defenestration has become a popular form of public execution
+	desc = hussite.5.d	# defenestration has become a popular form of public execution
 	picture = HUSSITE_eventPicture
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		religion = hussite
 		if = {
@@ -236,25 +215,24 @@ country_event = {
 			has_country_modifier = entertaining_defenestrations
 		}
 	}
-	
-	option = { # people enjoy the spectacle
+	option = {
+		# people enjoy the spectacle
 		name = "hussite.5.a"
-		add_country_modifier = { # unrest reduction
+		add_country_modifier = {
+			# unrest reduction
 			name = entertaining_defenestrations
 			duration = 3650
 		}
 	}
 }
-	
+
 # Utraquists vs radicals
 country_event = {
 	id = hussite.6
 	title = hussite.6.t
 	desc = hussite.6.d
 	picture = ADULT_BAPTISME_eventPicture
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		religion = hussite
 		if = {
@@ -266,11 +244,15 @@ country_event = {
 				has_church_aspect = freedom_to_preach_aspect
 			}
 		}
-		NOT = { has_country_modifier = taborite_radicals }
-		NOT = { has_country_modifier = utraquist_moderates }
+		NOT = {
+			has_country_modifier = taborite_radicals
+		}
+		NOT = {
+			has_country_modifier = utraquist_moderates
+		}
 	}
-	
-	option = { # embrace the radicals
+	option = {
+		# embrace the radicals
 		name = "hussite.6.a"
 		add_church_power = -15
 		# missionary cost
@@ -279,7 +261,8 @@ country_event = {
 			duration = 3650
 		}
 	}
-	option = { # support the utraquists
+	option = {
+		# support the utraquists
 		name = "hussite.6.b"
 		add_church_power = 15
 		# stability cost
@@ -296,9 +279,7 @@ country_event = {
 	title = hussite.7.t
 	desc = hussite.7.d
 	picture = HUSSITE_eventPicture
-	
 	is_triggered_only = yes
-	
 	trigger = {
 		religion = hussite
 		if = {
@@ -307,7 +288,9 @@ country_event = {
 			}
 			has_church_aspect = orphan_hetmans_aspect
 		}
-		NOT = { is_year = 1550 }
+		NOT = {
+			is_year = 1550
+		}
 		NOT = {
 			has_country_modifier = war_wagons
 		}
@@ -315,7 +298,6 @@ country_event = {
 			has_country_modifier = less_war_wagons
 		}
 	}
-	
 	option = {
 		name = "hussite.7.a"
 		# receive and deal less shock damage

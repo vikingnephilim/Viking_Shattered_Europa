@@ -22,13 +22,15 @@ french_minor_missions = {
 			tag = PRS
 			tag = POI
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	french_minors_independence = {
 		icon = mission_empire
-		required_missions = {  }
+		required_missions = {
+		}
 		provinces_to_highlight = {
 		}
 		trigger = {
@@ -37,20 +39,24 @@ french_minor_missions = {
 		effect = {
 			add_prestige = 25
 			add_legitimacy = 25
-			capital_scope = {
-				area = {
-					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+			france_region = {
+				limit = {
+					NOT = {
+						is_core = ROOT
 					}
-					add_permanent_claim = ROOT
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
+				add_permanent_claim = ROOT
 			}
 		}
 	}
 	french_minors_claim_state = {
 		icon = mission_unite_home_region
-		required_missions = { french_minors_independence }
+		required_missions = {
+			french_minors_independence
+		}
 		provinces_to_highlight = {
 			OR = {
 				area_for_scope_province = {
@@ -58,7 +64,9 @@ french_minor_missions = {
 				}
 				is_core = ROOT
 			}
-			NOT = { owned_by = ROOT }
+			NOT = {
+				owned_by = ROOT
+			}
 		}
 		trigger = {
 			if = {
@@ -80,7 +88,9 @@ french_minor_missions = {
 						NOT = {
 							any_province = {
 								is_core = ROOT
-								NOT = { owned_by = ROOT }
+								NOT = {
+									owned_by = ROOT
+								}
 							}
 						}
 					}
@@ -96,11 +106,17 @@ french_minor_missions = {
 			}
 		}
 		effect = {
-			create_general = { tradition = 100 }
+			create_general = {
+				tradition = 100
+			}
 			ile_de_france_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -108,12 +124,18 @@ french_minor_missions = {
 	}
 	french_minors_paris = {
 		icon = mission_early_modern_university
-		required_missions = { french_minors_claim_state }
+		required_missions = {
+			french_minors_claim_state
+		}
 		provinces_to_highlight = {
 			province_id = 183
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		trigger = {
@@ -128,7 +150,9 @@ french_minor_missions = {
 	}
 	french_minors_become_france = {
 		icon = mission_monarch_in_throne_room
-		required_missions = { french_minors_paris }
+		required_missions = {
+			french_minors_paris
+		}
 		provinces_to_highlight = {
 			owned_by = FRA
 		}
@@ -190,15 +214,19 @@ french_minor_missions = {
 			}
 			if = {
 				limit = {
-					NOT = { government_rank = 2 }
+					NOT = {
+						government_rank = 2
+					}
 				}
 				set_government_rank = 2
 			}
 			france_region = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
-				add_permanent_claim = FRA
+				add_core = FRA
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -209,7 +237,9 @@ french_minor_missions = {
 				limit = {
 					has_custom_ideas = no
 				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				country_event = {
+					id = ideagroups.1
+				}				#Swap Ideas
 			}
 			set_country_flag = formed_france_flag
 		}

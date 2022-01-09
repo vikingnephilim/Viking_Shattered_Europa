@@ -8,7 +8,7 @@ country_decisions = {
 				has_country_flag = formed_ireland_flag
 			}
 			OR = {
-				ai = no
+				ai = yes
 				is_playing_custom_nation = no
 			}
 			NOT = {
@@ -20,8 +20,10 @@ country_decisions = {
 			NOT = {
 				tag = HLR
 			}
-			primary_culture = irish
-			primary_culture = ulster_scottish
+			OR = {
+				primary_culture = irish
+				primary_culture = ulster_scottish
+			}
 			OR = {
 				ai = no
 				AND = {

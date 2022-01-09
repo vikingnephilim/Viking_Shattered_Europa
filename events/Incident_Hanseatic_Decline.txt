@@ -1,14 +1,11 @@
 namespace = hansa_incident
-
 # For Lubeck
 country_event = {
 	id = hansa_incident.1
 	title = hansa_incident.1.t
 	picture = GOOD_WITH_MONARCH_eventPicture
 	desc = hansa_incident.1.d
-	
 	fire_only_once = yes
-	
 	trigger = {
 		tag = HSA
 		has_dlc = "Emperor"
@@ -32,15 +29,15 @@ country_event = {
 		NOT = {
 			current_age = age_of_discovery
 		}
-		NOT = { active_imperial_incident = any }
+		NOT = {
+			active_imperial_incident = any
+		}
 		has_reform = merchants_reform
 		is_subject = no
 	}
-	
 	mean_time_to_happen = {
 		months = 36
 	}
-	
 	immediate = {
 		hidden_effect = {
 			45 = {
@@ -51,15 +48,20 @@ country_event = {
 			}
 		}
 	}
-	
-	option = { # ask the emperor
-		ai_chance = { factor = 1 }
+	option = {
+		# ask the emperor
+		ai_chance = {
+			factor = 1
+		}
 		name = hansa_incident.1.a
 		set_imperial_incident = incident_hansa
 	}
-	option = { # consolidate the league
+	option = {
+		# consolidate the league
 		name = hansa_incident.1.b
-		ai_chance = { factor = 0 }
+		ai_chance = {
+			factor = 0
+		}
 		if = {
 			limit = {
 				has_dlc = "Mare Nostrum"
@@ -86,11 +88,9 @@ country_event = {
 	title = hansa_incident.t
 	picture = GOOD_WITH_MONARCH_eventPicture
 	desc = hansa_incident.2.d
-	
 	fire_only_once = yes
 	is_triggered_only = yes
 	major = yes
-	
 	immediate = {
 		hidden_effect = {
 			random_country = {
@@ -101,8 +101,8 @@ country_event = {
 			}
 		}
 	}
-	
-	option = { # do nothing for them
+	option = {
+		# do nothing for them
 		name = hansa_incident.2.a
 		ai_chance = {
 			factor = 20
@@ -134,13 +134,15 @@ country_event = {
 			}
 		}
 	}
-	
-	option = { # create a league out of the free cities
+	option = {
+		# create a league out of the free cities
 		name = hansa_incident.2.b
 		trigger = {
 			any_country = {
 				has_reform = free_city
-				NOT = { is_in_trade_league_with = HSA }
+				NOT = {
+					is_in_trade_league_with = HSA
+				}
 			}
 			OR = {
 				has_dlc = "Mare Nostrum"
@@ -164,10 +166,15 @@ country_event = {
 		every_country = {
 			limit = {
 				has_reform = free_city
-				NOT = { is_in_trade_league_with = HSA }
+				NOT = {
+					is_in_trade_league_with = HSA
+				}
 			}
 			hidden_effect = {
-				country_event = { id = hansa_incident.3 days = 3 }
+				country_event = {
+					id = hansa_incident.3
+					days = 3
+				}
 			}
 			custom_tooltip = may_join_hansa_tt
 		}
@@ -187,8 +194,8 @@ country_event = {
 			}
 		}
 	}
-	
-	option = { # trade sactions against lubeck trade controller
+	option = {
+		# trade sactions against lubeck trade controller
 		name = hansa_incident.2.c
 		ai_chance = {
 			factor = 10
@@ -240,13 +247,12 @@ country_event = {
 			}
 		}
 		event_target:lubeck_trade_power = {
-			country_event = { 
+			country_event = {
 				id = hansa_incident.4
 				days = 1
 			}
 		}
 	}
-
 	after = {
 		clear_global_event_target = lubeck_trade_power
 	}
@@ -258,9 +264,7 @@ country_event = {
 	title = hansa_incident.3.t
 	picture = GOOD_WITH_MONARCH_eventPicture
 	desc = hansa_incident.3.d
-	
 	is_triggered_only = yes
-	
 	option = {
 		name = hansa_incident.3.a
 		ai_chance = {
@@ -278,7 +282,9 @@ country_event = {
 			modifier = {
 				factor = 0
 				45 = {
-					NOT = { trade_range = ROOT }
+					NOT = {
+						trade_range = ROOT
+					}
 				}
 			}
 		}
@@ -302,7 +308,6 @@ country_event = {
 			add_imperial_influence = 5
 		}
 	}
-	
 	option = {
 		name = hansa_incident.3.b
 		ai_chance = {
@@ -320,9 +325,7 @@ country_event = {
 	title = hansa_incident.4.t
 	picture = HRE_eventPicture
 	desc = hansa_incident.4.d
-	
 	is_triggered_only = yes
-	
 	option = {
 		name = hansa_incident.4.a
 	}

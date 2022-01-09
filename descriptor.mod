@@ -2,6 +2,8 @@ name="Viking Nephilims Shattered World - 1.32 WORKING"
 replace_path="history/wars"
 replace_path="common/religion"
 replace_path="missions"
+replace_path="gfx/sprite_packs_order"
+replace_path="dlc"
 tags={
 	"National Ideas"
 	"Missions And Decisions"

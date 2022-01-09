@@ -1780,37 +1780,289 @@ theocratic_autocracy = {
 	icon = "pope_highlighted"
 	allow_normal_conversion = no
 	potential = {
-		OR = {
-			tag = BYZ
-			tag = ROM
-			tag = ERM
-			tag = WRM
-		}
 		NOT = {
 			is_pagan_viking_mod = yes
 		}
+		OR = {
+			AND = {
+				capital_scope = {
+					province_id = 151
+				}
+				culture_group = byzantine
+				have_had_reform = theocratic_autocracy
+				OR = {
+					tag = BYZ
+					tag = ROM
+					tag = ERM
+					tag = WRM
+					have_had_reform = theocratic_autocracy
+				}
+			}
+			AND = {
+				is_playing_custom_nation = yes
+				have_had_reform = theocratic_autocracy
+			}
+		}
 	}
 	trigger = {
+		capital_scope = {
+			province_id = 151
+		}
 		OR = {
 			tag = BYZ
 			tag = ROM
 			tag = ERM
 			tag = WRM
+			have_had_reform = theocratic_autocracy
 		}
 		NOT = {
 			is_pagan_viking_mod = yes
 		}
 	}
 	valid_for_nation_designer = yes
-	fixed_rank = 1
+	fixed_rank = 3
 	nation_designer_cost = 100
+	maintain_dynasty = yes
 	modifiers = {
 		administrative_efficiency = 0.05
 		governing_capacity = 150
 	}
+	government_abilities = {
+		feudal_theocracy_mechanic
+	}
 	custom_attributes = {
 		is_elective = yes
 		has_parliament = yes
+	}
+	assimilation_cultures = {
+		aboriginal_australian = {
+			relation_with_heretics = 20
+		}
+		african = {
+			global_tax_income = 10
+		}
+		altaic = {
+			artillery_cost = -0.1
+		}
+		andean_group = {
+			treasure_fleet_income = 0.1
+		}
+		apachean = {
+			leader_land_shock = 1
+		}
+		araucanian = {
+			defensiveness = 0.1
+		}
+		aridoamerican = {
+			global_manpower_modifier = 0.1
+		}
+		baltic = {
+			naval_forcelimit_modifier = 0.05
+		}
+		british = {
+			ship_durability = 0.05
+		}
+		burman = {
+			free_leader_pool = 1
+		}
+		byzantine = {
+			legitimacy = 0.25
+		}
+		caddoan = {
+			spy_offence = 0.1
+		}
+		carpathian = {
+			mercenary_cost = -0.1
+		}
+		carribean = {
+			global_spy_defence = 0.1
+		}
+		caucasian = {
+			mercenary_discipline = 0.05
+		}
+		central_algonquian = {
+			native_assimilation = 0.25
+		}
+		central_american = {
+			native_uprising_chance = -0.25
+		}
+		central_indic = {
+			land_attrition = -0.1
+		}
+		chibchan = {
+			expel_minorities_cost = -0.1
+		}
+		cushitic = {
+			missionaries = 1
+		}
+		dravidian = {
+			global_trade_goods_size_modifier = 0.05
+		}
+		east_asian = {
+			state_maintenance_modifier = -0.2
+		}
+		east_slavic = {
+			land_forcelimit_modifier = 0.1
+		}
+		eastern_algonquian = {
+			discovered_relations_impact = -0.1
+		}
+		eastern_aryan = {
+			production_efficiency = 0.05
+		}
+		eskaleut = {
+			global_spy_defence = 0.1
+		}
+		evenks = {
+			cavalry_flanking = 0.2
+		}
+		finnic = {
+			leader_land_manuever = 1
+		}
+		finno_ugric = {
+			prestige_decay = -0.01
+		}
+		french = {
+			diplomats = 1
+		}
+		gaelic = {
+			shock_damage = 0.05
+		}
+		germanic = {
+			global_institution_spread = 0.15
+		}
+		great_lakes_group = {
+			loot_amount = 0.5
+		}
+		hindusthani = {
+			core_creation = -0.1
+		}
+		iberian = {
+			global_colonial_growth = 10
+		}
+		illyrian = {
+			fort_maintenance_modifier = -0.1
+		}
+		iranian = {
+			advisor_cost = -0.1
+		}
+		iroquoian = {
+			global_garrison_growth = 0.1
+		}
+		japanese_g = {
+			land_morale = 0.1
+		}
+		je = {
+			global_supply_limit_modifier = 0.1
+		}
+		je_tupi = {
+			global_regiment_recruit_speed = -0.1
+		}
+		kamchatkan_g = {
+			hostile_attrition = 1
+		}
+		kongo_group = {
+			heir_chance = 0.5
+		}
+		korean_g = {
+			idea_cost = -0.05
+		}
+		latin = {
+			embracement_cost = -0.1
+		}
+		lost_cultures_group = {
+			vassal_income = 0.2
+		}
+		madagascan_g = {
+			vassal_forcelimit_bonus = 0.2
+		}
+		maghrebi = {
+			privateer_efficiency = 0.25
+		}
+		malay = {
+			merchants = 1
+		}
+		mande = {
+			tolerance_heretic = 1
+		}
+		maranon = {
+			improve_relation_modifier = 0.2
+		}
+		mataco = {
+			fabricate_claims_cost = -0.2
+		}
+		maya = {
+			global_tariffs = 0.25
+		}
+		muskogean = {
+			shock_damage_received = -0.1
+		}
+		na_dene = {
+			recover_army_morale_speed = 0.1
+		}
+		otomanguean = {
+			rival_border_fort_maintenance = -0.1
+		}
+		pacific = {
+			global_sailors_modifier = 0.1
+		}
+		penutian = {
+			leader_cost = -0.1
+		}
+		phoenician_g = {
+			naval_tradition_from_trade = 0.1
+		}
+		plains_algonquian = {
+			diplomatic_annexation_cost = -0.2
+		}
+		ruthenian_group = {
+			envoy_travel_time = -0.2
+		}
+		sahelian = {
+			movement_speed = 0.1
+		}
+		scandinavian = {
+			mil_advisor_cost = -0.1
+		}
+		siouan = {
+			enemy_core_creation = 0.2
+		}
+		sonoran = {
+			rival_change_cost = -0.2
+		}
+		southeastasian_group = {
+			development_cost = -0.05
+		}
+		south_slavic = {
+			warscore_cost_vs_other_religion = -0.1
+		}
+		southern_african = {
+			inflation_reduction = 0.05
+		}
+		sudanese = {
+			caravan_power = 0.1
+		}
+		tartar = {
+			cavalry_cost = -0.15
+		}
+		thai_group = {
+			build_cost = -0.05
+		}
+		tibetan_group = {
+			prestige_per_development_from_conversion = 0.5
+		}
+		turko_semitic = {
+			cavalry_power = 0.1
+		}
+		west_african = {
+			global_autonomy = -0.01
+		}
+		west_slavic = {
+			leader_land_fire = 1
+		}
+		western_aryan = {
+			trade_efficiency = 0.05
+		}
 	}
 }
 
@@ -4153,7 +4405,12 @@ grk_demo = {
 	icon = "peasants"
 	allow_normal_conversion = yes
 	potential = {
-		culture_group = byzantine
+		OR = {
+			culture_group = byzantine
+			overlord = {
+				has_reform = theocratic_autocracy
+			}
+		}
 	}
 	republican_name = yes
 	republic = yes

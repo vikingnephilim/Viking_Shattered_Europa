@@ -1,34 +1,85 @@
-namespace = culturespread_event_namespace
-
+namespace = culturespread_event
 #spread of your culture in your country
 province_event = {
-	id = culturespread_event_namespace.1
+	id = culturespread_event.1
 	title = "SpreadTitle"
 	desc = "SpreadPrimary"
 	picture = DIPLOMACY_eventPicture
 	fire_only_once = no
 	trigger = {
+		is_core = owner
+		controlled_by = owner
 		NOT = {
 			culture = owner
 		}
-		controlled_by = owner
 	}
-	mean_time_to_happen = {
-		years = 30
-		modifier = {
-			factor = 2
-			not = { owner = { prestige = 75 }}
-		}
-		modifier = {
-			factor = 0.8
-			owner = { prestige = 90 }
-		}
-		modifier = {
-			factor = 1.5
-			owner = { stability = 0 }
-		}
-	}
-	#let the spread happen
+    mean_time_to_happen = {
+        years = 60
+        modifier = {
+            factor = 2
+            not = {
+                owner = {
+                    prestige = 25
+                }
+            }
+        }
+        modifier = {
+            factor = 1.5
+            not = {
+                owner = {
+                    prestige = 50
+                }
+            }
+        }
+        modifier = {
+            factor = 1.1
+            owner = {
+                prestige = 75
+            }
+        }
+        modifier = {
+            factor = 2.5
+            not = {
+                owner = {
+                    stability = -3
+                }
+            }
+        }
+        modifier = {
+            factor = 2.25
+            not = {
+                owner = {
+                    stability = -2
+                }
+            }
+        }
+        modifier = {
+            factor = 2
+            not = {
+                owner = {
+                    stability = -1
+                }
+            }
+        }
+        modifier = {
+            factor = 1.75
+            owner = {
+                stability = 1
+            }
+        }
+        modifier = {
+            factor = 1.5
+            owner = {
+                stability = 2
+            }
+        }
+        modifier = {
+            factor = 1.1
+            owner = {
+                stability = 3
+            }
+        }
+    }
 	option = {
 		name = "ApproveSpread"
 		change_culture = owner

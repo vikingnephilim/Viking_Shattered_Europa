@@ -1,16 +1,11 @@
-
 #By Pierre du Plessis
-
 namespace = pretty_colonial_borders
-
 country_event = {
 	id = pretty_colonial_borders.1
 	title = none
 	desc = none
 	picture = none
-
 	hidden = yes
-
 	trigger = {
 		num_of_subjects = 2
 		any_subject_country = {
@@ -27,9 +22,9 @@ country_event = {
 			has_country_modifier = had_pretty_colonial_borders_timer
 		}
 	}
-
-	mean_time_to_happen = { days = 14600 }
-
+	mean_time_to_happen = {
+		days = 14600
+	}
 	immediate = {
 		every_subject_country = {
 			limit = {
@@ -42,10 +37,11 @@ country_event = {
 					ai = yes
 				}
 			}
-			country_event = { id = pretty_colonial_borders.2 }
+			country_event = {
+				id = pretty_colonial_borders.2
+			}
 		}
 	}
-
 	option = {
 	}
 }
@@ -55,19 +51,15 @@ country_event = {
 	title = none
 	desc = none
 	picture = none
-
 	hidden = yes
 	is_triggered_only = yes
-
 	trigger = {
-
 		FROM = {
 			NOT = {
 				has_country_modifier = had_pretty_colonial_borders_timer
 			}
 		}
 	}
-
 	immediate = {
 		capital_scope = {
 			save_event_target_as = colonial_capital
@@ -76,7 +68,6 @@ country_event = {
 			save_event_target_as = overlord_country
 		}
 		save_event_target_as = colonial_country_1
-
 		if = {
 			limit = {
 				any_owned_province = {
@@ -137,17 +128,17 @@ country_event = {
 							duration = 7300
 							hidden = yes
 						}
-						country_event = { id = pretty_colonial_borders.3 }
+						country_event = {
+							id = pretty_colonial_borders.3
+						}
 					}
 				}
 			}
 		}
 	}
-
 	option = {
 	}
 }
-
 
 country_event = {
 	id = pretty_colonial_borders.3
@@ -155,19 +146,16 @@ country_event = {
 	desc = pretty_colonial_borders.3.desc
 	picture = BORDER_TENSION_eventPicture
 	goto = pretty_colonial_province
-
 	is_triggered_only = yes
-
-	option = { #side with colonial_country_1
+	option = {
+		#side with colonial_country_1
 		name = pretty_colonial_borders.3.A
-
 		event_target:colonial_country_1 = {
 			add_liberty_desire = -15
 		}
 		event_target:colonial_country_2 = {
 			add_liberty_desire = 15
 		}
-
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -185,7 +173,9 @@ country_event = {
 			modifier = {
 				factor = 1.5
 				event_target:colonial_country_2 = {
-					NOT = { liberty_desire = 15 }
+					NOT = {
+						liberty_desire = 15
+					}
 				}
 			}
 			modifier = {
@@ -202,11 +192,10 @@ country_event = {
 			}
 		}
 	}
-	option = { #side with colonial_country_2
+	option = {
+		#side with colonial_country_2
 		name = pretty_colonial_borders.3.B
-		
 		custom_tooltip = pretty_colonial_borders.3.B.tooltip
-
 		hidden_effect = {
 			event_target:pretty_colonial_province = {
 				add_core = event_target:colonial_country_2
@@ -227,21 +216,22 @@ country_event = {
 						add_core = event_target:colonial_country_2
 						remove_core = event_target:colonial_country_1
 						cede_province = event_target:colonial_country_2
-
 						#anti-bordergore
 						if = {
 							limit = {
 								any_neighbor_province = {
 									colonial_region = prev
 									owned_by = event_target:colonial_country_1
-									NOT = { province_id = event_target:pretty_colonial_province }
+									NOT = {
+										province_id = event_target:pretty_colonial_province
+									}
 									NOT = {
 										any_neighbor_province = {
 											owned_by = event_target:colonial_country_1
 											NOT = {
 												province_id = prev
 											}
-												NOT = {
+											NOT = {
 												province_id = event_target:pretty_colonial_province
 											}
 										}
@@ -252,14 +242,16 @@ country_event = {
 								limit = {
 									colonial_region = prev
 									owned_by = event_target:colonial_country_1
-									NOT = { province_id = event_target:pretty_colonial_province }
+									NOT = {
+										province_id = event_target:pretty_colonial_province
+									}
 									NOT = {
 										any_neighbor_province = {
 											owned_by = event_target:colonial_country_1
 											NOT = {
 												province_id = prev
 											}
-												NOT = {
+											NOT = {
 												province_id = event_target:pretty_colonial_province
 											}
 										}
@@ -274,15 +266,12 @@ country_event = {
 				}
 			}
 		}
-
-
 		event_target:colonial_country_1 = {
 			add_liberty_desire = 15
 		}
 		event_target:colonial_country_2 = {
 			add_liberty_desire = -15
 		}
-		
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -300,7 +289,9 @@ country_event = {
 			modifier = {
 				factor = 1.5
 				event_target:colonial_country_1 = {
-					NOT = { liberty_desire = 15 }
+					NOT = {
+						liberty_desire = 15
+					}
 				}
 			}
 			modifier = {
@@ -319,18 +310,13 @@ country_event = {
 	}
 }
 
-
-
-
 #to test it
 country_event = {
 	id = pretty_colonial_borders.90
 	title = none
 	desc = none
 	picture = none
-
 	is_triggered_only = yes
-
 	immediate = {
 		random_subject_country = {
 			limit = {
@@ -378,13 +364,16 @@ country_event = {
 			}
 		}
 	}
-
-	option = { #do nothing
+	option = {
+		#do nothing
 		name = papacy_events.1.b
 	}
-	option = { #go ahead
+	option = {
+		#go ahead
 		name = flavor_may.1.a
 		remove_country_modifier = had_pretty_colonial_borders_timer
-		country_event = { id = pretty_colonial_borders.1 }
+		country_event = {
+			id = pretty_colonial_borders.1
+		}
 	}
 }

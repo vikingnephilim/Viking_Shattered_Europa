@@ -3,17 +3,21 @@ swiss_missions_1 = {
 	generic = no
 	ai = yes
 	potential_on_load = {
-		 has_dlc = "Emperor"
+		has_dlc = "Emperor"
 	}
 	potential = {
 		tag = SWI
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		has_dlc = "Emperor"
 	}
 	has_country_shield = yes
 	emp_swi_vaud_wallis = {
 		icon = vaud_and_wallis
-		required_missions = { emp_swi_start }
+		required_missions = {
+			emp_swi_start
+		}
 		position = 2
 		provinces_to_highlight = {
 			OR = {
@@ -25,47 +29,78 @@ swiss_missions_1 = {
 			}
 		}
 		trigger = {
-			1867 = { owned_by = ROOT }
-			1871 = { owned_by = ROOT }
+			1867 = {
+				owned_by = ROOT
+			}
+			1871 = {
+				owned_by = ROOT
+			}
 		}
 		effect = {
-			1867 = { add_base_tax = 1 add_base_production = 1 add_base_manpower = 1 }
-			1871 = { add_base_tax = 1 add_base_production = 1 add_base_manpower = 1 }
+			1867 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
+			1871 = {
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+			}
 		}
 	}
 	emp_swi_geneva = {
 		icon = sway_geneva
-		required_missions = { emp_swi_vaud_wallis }
+		required_missions = {
+			emp_swi_vaud_wallis
+		}
 		position = 2
 		provinces_to_highlight = {
 			province_id = 4720
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		trigger = {
 			SWI = {
-				NOT = { 
-					is_subject_of = GNV 
+				NOT = {
+					is_subject_of = GNV
 				}
 			}
 			OR = {
-				4720 = { country_or_non_sovereign_subject_holds = ROOT }
+				4720 = {
+					country_or_non_sovereign_subject_holds = ROOT
+				}
 				GNV = {
 					is_at_war = no
-					NOT = { is_subject_of = ROOT }
-					has_opinion = { who = ROOT value = 100 }
-					NOT = { num_of_cities = 2 }
+					NOT = {
+						is_subject_of = ROOT
+					}
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+					NOT = {
+						num_of_cities = 2
+					}
 				}
 			}
 		}
 		effect = {
 			if = {
 				limit = {
-					NOT = { owns = 4720 }
+					NOT = {
+						owns = 4720
+					}
 					GNV = {
-						NOT = { is_subject_of = ROOT }
+						NOT = {
+							is_subject_of = ROOT
+						}
 					}
 				}
 				custom_tooltip = swi_geneva_mission_tt
@@ -74,27 +109,43 @@ swiss_missions_1 = {
 				limit = {
 					GNV = {
 						is_subject = no
-						has_opinion = { who = ROOT value = 100 }
-						NOT = { num_of_cities = 2 }
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
+						NOT = {
+							num_of_cities = 2
+						}
 						is_at_war = no
 					}
 				}
-				country_event = { id = emp_mission_events.2 }		
+				country_event = {
+					id = emp_mission_events.2
+				}
 			}
 			else_if = {
 				limit = {
 					GNV = {
 						is_subject = yes
 						is_at_war = no
-						NOT = { is_subject_of = ROOT }
-						NOT = { num_of_cities = 2 }
-						has_opinion = { who = ROOT value = 100 }
+						NOT = {
+							is_subject_of = ROOT
+						}
+						NOT = {
+							num_of_cities = 2
+						}
+						has_opinion = {
+							who = ROOT
+							value = 100
+						}
 					}
 				}
 				GNV = {
 					add_liberty_desire = 100
 					overlord = {
-						country_event = { id = emp_mission_events.4 }
+						country_event = {
+							id = emp_mission_events.4
+						}
 					}
 				}
 				support_independence_of = GNV
@@ -113,13 +164,16 @@ swiss_missions_2 = {
 	}
 	potential = {
 		tag = SWI
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		has_dlc = "Emperor"
 	}
 	has_country_shield = yes
 	emp_swi_start = {
 		icon = consolidate_switzerland
-		required_missions = { }
+		required_missions = {
+		}
 		provinces_to_highlight = {
 		}
 		trigger = {
@@ -129,21 +183,27 @@ swiss_missions_2 = {
 		effect = {
 			switzerland_area = {
 				limit = {
-					NOT = { is_core = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_core = ROOT
 			}
 			romandie_area = {
 				limit = {
-					NOT = { is_core = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_core = ROOT
-			}			
+			}
 		}
 	}
 	emp_swi_three_leagues = {
 		icon = integrate_the_three_leagues
-		required_missions = { emp_swi_start }
+		required_missions = {
+			emp_swi_start
+		}
 		provinces_to_highlight = {
 			area = switzerland_area
 			NOT = {
@@ -175,7 +235,10 @@ swiss_missions_2 = {
 	}
 	emp_swi_confederacy = {
 		icon = reorganize_the_confederacy
-		required_missions = { emp_swi_three_leagues emp_swi_geneva }
+		required_missions = {
+			emp_swi_three_leagues
+			emp_swi_geneva
+		}
 		position = 4
 		provinces_to_highlight = {
 			OR = {
@@ -210,29 +273,45 @@ swiss_missions_2 = {
 			}
 			upper_swabia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			lower_swabia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			alsace_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			upper_rhineland_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -253,7 +332,9 @@ swiss_missions_2 = {
 	}
 	emp_swi_imperial_status = {
 		icon = switzerland_and_the_empire
-		required_missions = { emp_swi_confederacy }
+		required_missions = {
+			emp_swi_confederacy
+		}
 		provinces_to_highlight = {
 		}
 		trigger = {
@@ -262,7 +343,9 @@ swiss_missions_2 = {
 					tooltip = swi_empire_tt
 					has_country_flag = swi_empire_incident_flag
 				}
-				NOT = { is_part_of_hre = yes }
+				NOT = {
+					is_part_of_hre = yes
+				}
 				AND = {
 					is_part_of_hre = yes
 					current_age = age_of_revolutions
@@ -285,13 +368,16 @@ swiss_missions_3 = {
 	}
 	potential = {
 		tag = SWI
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		has_dlc = "Emperor"
 	}
 	has_country_shield = yes
 	emp_swi_swiss_guard = {
 		icon = expand_the_swiss_guard
-		required_missions = { }
+		required_missions = {
+		}
 		provinces_to_highlight = {
 			owned_by = PAP
 		}
@@ -301,7 +387,10 @@ swiss_missions_3 = {
 					exists = PAP
 				}
 				PAP = {
-					has_opinion = { who = ROOT value = 100 }
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
 				}
 				OR = {
 					is_in_war = {
@@ -312,7 +401,8 @@ swiss_missions_3 = {
 						attackers = PAP
 						attackers = ROOT
 					}
-					custom_trigger_tooltip = { # see on_war_won on_action
+					custom_trigger_tooltip = {
+						# see on_war_won on_action
 						tooltip = hirde_to_pope_tt
 						has_country_flag = hired_to_pope
 					}
@@ -325,7 +415,7 @@ swiss_missions_3 = {
 		effect = {
 			if = {
 				limit = {
-					religion = catholic 
+					religion = catholic
 				}
 				add_papal_influence = 20
 			}
@@ -337,7 +427,9 @@ swiss_missions_3 = {
 	}
 	emp_swi_mercenaries = {
 		icon = mercenary_companies
-		required_missions = { emp_swi_swiss_guard }
+		required_missions = {
+			emp_swi_swiss_guard
+		}
 		provinces_to_highlight = {
 		}
 		position = 3
@@ -354,7 +446,7 @@ swiss_missions_3 = {
 					}
 					custom_trigger_tooltip = {
 						tooltip = swi_won_condottiere_war_tt
-						has_country_flag = won_condottiere_war # see on_war_won on_action
+						has_country_flag = won_condottiere_war						# see on_war_won on_action
 					}
 				}
 			}
@@ -370,7 +462,9 @@ swiss_missions_3 = {
 	}
 	emp_swi_swabia = {
 		icon = expand_the_confederacy
-		required_missions = { emp_swi_confederacy }
+		required_missions = {
+			emp_swi_confederacy
+		}
 		position = 5
 		provinces_to_highlight = {
 			OR = {
@@ -414,17 +508,22 @@ swiss_missions_4 = {
 	}
 	potential = {
 		tag = SWI
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		has_dlc = "Emperor"
 	}
 	has_country_shield = yes
 	emp_swi_mountain_forts = {
 		icon = fortress_switzerland
-		required_missions = { }
+		required_missions = {
+		}
 		provinces_to_highlight = {
 			has_terrain = mountain
 			owned_by = ROOT
-			NOT = { fort_level = 3 }
+			NOT = {
+				fort_level = 3
+			}
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
@@ -442,14 +541,20 @@ swiss_missions_4 = {
 	}
 	emp_swi_protect_against_austria = {
 		icon = protect_against_austria
-		required_missions = { emp_swi_mountain_forts }
+		required_missions = {
+			emp_swi_mountain_forts
+		}
 		provinces_to_highlight = {
-			owner = { tag = HAB }
+			owner = {
+				tag = HAB
+			}
 		}
 		position = 3
 		trigger = {
 			OR = {
-				NOT = { exists = HAB }
+				NOT = {
+					exists = HAB
+				}
 				AND = {
 					HAB = {
 						any_rival_country = {
@@ -467,8 +572,12 @@ swiss_missions_4 = {
 			add_dip_power = 100
 			tirol_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -476,7 +585,9 @@ swiss_missions_4 = {
 	}
 	emp_swi_end_the_habsburgs = {
 		icon = end_the_habsburgs
-		required_missions = { emp_swi_protect_against_austria }
+		required_missions = {
+			emp_swi_protect_against_austria
+		}
 		provinces_to_highlight = {
 			owner = {
 				dynasty = "von Habsburg"
@@ -484,7 +595,9 @@ swiss_missions_4 = {
 		}
 		position = 5
 		trigger = {
-			NOT = { exists = HAB }
+			NOT = {
+				exists = HAB
+			}
 			NOT = {
 				any_country = {
 					dynasty = "von Habsburg"
@@ -509,19 +622,23 @@ swiss_missions_5 = {
 	}
 	potential = {
 		tag = SWI
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 		has_dlc = "Emperor"
 	}
 	has_country_shield = yes
 	emp_swi_reformation = {
 		icon = join_the_reformation
-		required_missions = { }
+		required_missions = {
+		}
 		provinces_to_highlight = {
 		}
 		trigger = {
 			OR = {
 				religion = reformed
 				religion = protestant
+				religion = waldensian
 				religion = hussite
 				council_position = concilatory
 				council_position = harsh
@@ -556,6 +673,7 @@ swiss_missions_5 = {
 					OR = {
 						religion = reformed
 						religion = protestant
+						religion = waldensian
 						religion = hussite
 					}
 				}
@@ -573,7 +691,9 @@ swiss_missions_5 = {
 	}
 	emp_swi_convert = {
 		icon = religious_resolution
-		required_missions = { emp_swi_reformation }
+		required_missions = {
+			emp_swi_reformation
+		}
 		provinces_to_highlight = {
 		}
 		position = 3
@@ -581,16 +701,22 @@ swiss_missions_5 = {
 			religious_unity = 1
 		}
 		effect = {
-			if = {	
+			if = {
 				limit = {
-					religion = reformed
+					OR = {
+						religion = reformed
+						religion = waldensian
+					}
 					has_dlc = "Wealth of Nations"
 				}
 				add_fervor = 100
 			}
 			else_if = {
 				limit = {
-					religion = protestant
+					OR = {
+						religion = protestant
+						religion = hussite
+					}
 					has_dlc = "Common Sense"
 				}
 				add_church_power = 100
@@ -606,20 +732,27 @@ swiss_missions_5 = {
 			}
 		}
 	}
-	emp_swi_evangelize = { # Geneva Conventions
+	emp_swi_evangelize = {
+		# Geneva Conventions
 		icon = evengelize_the_faith
-		required_missions = { emp_swi_convert }
+		required_missions = {
+			emp_swi_convert
+		}
 		provinces_to_highlight = {
 		}
 		position = 5
 		trigger = {
 			owns_core_province = 4720
-			4720 = { religion = ROOT }
+			4720 = {
+				religion = ROOT
+			}
 			if = {
 				limit = {
 					OR = {
 						religion = protestant
 						religion = reformed
+						religion = waldensian
+						religion = hussite
 					}
 				}
 				calc_true_if = {
@@ -628,6 +761,8 @@ swiss_missions_5 = {
 						OR = {
 							religion = protestant
 							religion = reformed
+							religion = waldensian
+							religion = hussite
 						}
 						capital_scope = {
 							continent = europe
@@ -665,9 +800,12 @@ swiss_missions_5 = {
 					OR = {
 						religion = reformed
 						religion = protestant
+						religion = waldensian
 					}
 				}
-				country_event = { id = emp_mission_events.3 }
+				country_event = {
+					id = emp_mission_events.3
+				}
 			}
 			4720 = {
 				add_base_tax = 2

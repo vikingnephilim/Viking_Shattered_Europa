@@ -335,14 +335,6 @@ estate_levies = {
 	icon = privilege_demand_more_troops
 	max_absolutism = -5
 	influence = 0.1
-	is_valid = {
-		NOT = {
-			has_estate_privilege = estate_nobles_golden_liberty
-		}
-		NOT = {
-			has_estate_privilege = estate_levies
-		}
-	}
 	can_select = {
 		NOT = {
 			has_estate_privilege = estate_nobles_golden_liberty
@@ -454,11 +446,6 @@ estate_advisors = {
 	max_absolutism = -5
 	influence = 0.1
 	loyalty = 0.05
-	is_valid = {
-		NOT = {
-			has_estate_privilege = estate_advisors
-		}
-	}
 	can_select = {
 		NOT = {
 			has_estate_privilege = estate_advisors
@@ -494,11 +481,6 @@ estate_right_of_counsel = {
 	max_absolutism = -10
 	loyalty = 0.1
 	influence = 0.1
-	is_valid = {
-		NOT = {
-			has_estate_privilege = estate_right_of_counsel
-		}
-	}
 	can_select = {
 		NOT = {
 			has_estate_privilege = estate_right_of_counsel
@@ -522,11 +504,6 @@ estate_religious_state = {
 	land_share = 10
 	max_absolutism = -5
 	loyalty = -0.05
-	is_valid = {
-		NOT = {
-			has_estate_privilege = estate_religious_state
-		}
-	}
 	can_select = {
 		NOT = {
 			has_estate_privilege = estate_religious_state
@@ -595,11 +572,6 @@ estate_independent_inquisition = {
 	max_absolutism = -5
 	influence = 0.1
 	loyalty = 0.05
-	is_valid = {
-		NOT = {
-			has_estate_privilege = estate_independent_inquisition
-		}
-	}
 	can_select = {
 		NOT = {
 			has_estate_privilege = estate_independent_inquisition
@@ -635,7 +607,7 @@ estate_new_world_mission = {
 	max_absolutism = -5
 	loyalty = 0.05
 	influence = 0.05
-	is_valid = {
+	can_select = {
 		OR = {
 			num_of_colonists = 1
 			num_of_colonies = 1
@@ -656,11 +628,6 @@ estate_clerical_oversight = {
 	max_absolutism = -10
 	loyalty = 0.1
 	influence = 0.1
-	is_valid = {
-		NOT = {
-			has_estate_privilege = estate_clerical_oversight
-		}
-	}
 	can_select = {
 		NOT = {
 			has_estate_privilege = estate_clerical_oversight
@@ -683,23 +650,6 @@ estate_enforced_interfaith_dialogue = {
 	icon = privilege_promoto_dhimmi_nobles
 	max_absolutism = -5
 	loyalty = 0.05
-	is_valid = {
-		any_owned_province = {
-			NOT = {
-				religion = root
-			}
-			NOT = {
-				religion_group = muslim
-			}
-		}
-		OR = {
-			has_estate_privilege = estate_burghers_enforced_interfaith_dialogue
-			has_estate_privilege = estate_enforced_interfaith_dialogue
-			NOT = {
-				has_estate = estate_dhimmi
-			}
-		}
-	}
 	can_select = {
 		NOT = {
 			has_estate_privilege = estate_church_enforced_one_faith
@@ -724,13 +674,6 @@ estate_enforced_one_faith = {
 	icon = privilege_recruit_inouisitor
 	max_absolutism = -5
 	loyalty = 0.1
-	is_valid = {
-		any_owned_province = {
-			NOT = {
-				religion = root
-			}
-		}
-	}
 	can_select = {
 		NOT = {
 			has_estate_privilege = estate_burghers_enforced_interfaith_dialogue
@@ -767,11 +710,6 @@ estate_land_of_commerce = {
 	land_share = 10
 	max_absolutism = -5
 	loyalty = -0.05
-	is_valid = {
-		NOT = {
-			has_estate_privilege = estate_land_of_commerce
-		}
-	}
 	can_select = {
 		NOT = {
 			has_estate_privilege = estate_land_of_commerce
@@ -861,11 +799,6 @@ estate_commercial_board_of_advice = {
 	max_absolutism = -5
 	influence = 0.1
 	loyalty = 0.05
-	is_valid = {
-		NOT = {
-			has_estate_privilege = estate_commercial_board_of_advice
-		}
-	}
 	can_select = {
 		NOT = {
 			has_estate_privilege = estate_commercial_board_of_advice
@@ -901,12 +834,6 @@ estate_new_world_charter = {
 	max_absolutism = -5
 	loyalty = 0.05
 	influence = 0.05
-	is_valid = {
-		OR = {
-			num_of_colonists = 1
-			num_of_colonies = 1
-		}
-	}
 	penalties = {
 		global_tariffs = -0.1
 	}
@@ -940,17 +867,6 @@ estate_indebted_to_estate = {
 	max_absolutism = -5
 	loyalty = 0.05
 	influence = 0.05
-	is_valid = {
-		NOT = {
-			has_estate_privilege = estate_indebted_to_estate
-		}
-		NOT = {
-			has_estate_privilege = estate_jains_indebted_to_jains
-		}
-		NOT = {
-			has_estate_privilege = estate_burghers_indebted_to_burghers
-		}
-	}
 	can_select = {
 		NOT = {
 			has_estate_privilege = estate_indebted_to_estate
@@ -1011,11 +927,6 @@ estate_free_enterprise = {
 	max_absolutism = -10
 	loyalty = 0.1
 	influence = 0.1
-	is_valid = {
-		NOT = {
-			has_estate_privilege = estate_free_enterprise
-		}
-	}
 	can_select = {
 		NOT = {
 			has_estate_privilege = estate_free_enterprise
@@ -1040,6 +951,11 @@ estate_exploration_expedition = {
 	max_absolutism = -5
 	loyalty = 0.05
 	influence = 0.05
+	can_select = {
+		NOT = {
+			has_estate_privilege = estate_exploration_expedition
+		}
+	}
 	on_granted = {
 		custom_tooltip = estate_exploration_expedition_effect_tooltip
 	}
@@ -1120,6 +1036,11 @@ estate_self_governance = {
 	max_absolutism = -10
 	loyalty = 0.1
 	influence = 0.1
+	can_select = {
+		NOT = {
+			has_estate_privilege = estate_self_governance
+		}
+	}
 	penalties = {
 	}
 	benefits = {
@@ -1138,16 +1059,6 @@ estate_taxes = {
 	max_absolutism = -5
 	influence = 0.05
 	can_select = {
-		NOT = {
-			has_estate_privilege = estate_taxes
-		}
-		any_owned_province = {
-			NOT = {
-				religion_group = root
-			}
-		}
-	}
-	is_valid = {
 		NOT = {
 			has_estate_privilege = estate_taxes
 		}
@@ -1215,11 +1126,6 @@ estate_share_of_the_spoils = {
 	max_absolutism = -5
 	loyalty = 0.05
 	influence = -0.025
-	is_valid = {
-		NOT = {
-			has_estate_privilege = estate_share_of_the_spoils
-		}
-	}
 	can_select = {
 		NOT = {
 			has_estate_privilege = estate_share_of_the_spoils
@@ -1240,11 +1146,6 @@ estate_legitimacy_to_rule = {
 	max_absolutism = -5
 	influence = 0.05
 	loyalty = -0.025
-	is_valid = {
-		NOT = {
-			has_estate_privilege = estate_legitimacy_to_rule
-		}
-	}
 	can_select = {
 		NOT = {
 			has_estate_privilege = estate_legitimacy_to_rule
@@ -1301,11 +1202,6 @@ estate_diplomacy = {
 	land_share = 10
 	max_absolutism = -5
 	loyalty = -0.05
-	is_valid = {
-		NOT = {
-			has_estate_privilege = estate_diplomacy
-		}
-	}
 	can_select = {
 		NOT = {
 			has_estate_privilege = estate_diplomacy
@@ -1373,11 +1269,6 @@ estate_wartaxes = {
 	icon = privilege_exempt_officers_from_jaziya
 	max_absolutism = -5
 	loyalty = -0.05
-	is_valid = {
-		NOT = {
-			has_estate_privilege = estate_wartaxes
-		}
-	}
 	can_select = {
 		NOT = {
 			has_estate_privilege = estate_wartaxes
@@ -1400,18 +1291,12 @@ estate_wartaxes = {
 	}
 }
 
-
 #DLC Privileges
 estate_supremacy_over_crown = {
 	icon = privilege_empty_throne
 	max_absolutism = -5
 	influence = 0.1
 	loyalty = 0.1
-	is_valid = {
-		NOT = {
-			has_estate_privilege = estate_supremacy_over_crown
-		}
-	}
 	can_select = {
 		NOT = {
 			has_estate_privilege = estate_supremacy_over_crown
@@ -1434,15 +1319,6 @@ estate_monopoly_of_textiles = {
 	icon = privilege_monopoly_of_goods_cloth
 	max_absolutism = -10
 	loyalty = 0.1
-	is_valid = {
-		has_dlc = "Emperor"
-		any_owned_province = {
-			OR = {
-				trade_goods = cloth
-				trade_goods = silk
-			}
-		}
-	}
 	can_select = {
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
@@ -1542,12 +1418,6 @@ estate_monopoly_of_dyes = {
 	icon = privilege_monopoly_of_goods_dyes
 	max_absolutism = -10
 	loyalty = 0.1
-	is_valid = {
-		has_dlc = "Emperor"
-		any_owned_province = {
-			trade_goods = dyes
-		}
-	}
 	can_select = {
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
@@ -1640,12 +1510,6 @@ estate_monopoly_of_glass = {
 	icon = privilege_monopoly_of_goods_glass
 	max_absolutism = -10
 	loyalty = 0.1
-	is_valid = {
-		has_dlc = "Emperor"
-		any_owned_province = {
-			trade_goods = glass
-		}
-	}
 	can_select = {
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
@@ -1738,12 +1602,6 @@ estate_monopoly_of_paper = {
 	icon = privilege_monopoly_of_goods_paper
 	max_absolutism = -10
 	loyalty = 0.1
-	is_valid = {
-		has_dlc = "Emperor"
-		any_owned_province = {
-			trade_goods = paper
-		}
-	}
 	can_select = {
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
@@ -1943,12 +1801,6 @@ estate_monopoly_of_livestock = {
 	icon = privilege_monopoly_of_goods_livestock
 	max_absolutism = -10
 	loyalty = 0.1
-	is_valid = {
-		has_dlc = "Emperor"
-		any_owned_province = {
-			trade_goods = livestock
-		}
-	}
 	can_select = {
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
@@ -2041,12 +1893,6 @@ estate_monopoly_of_gems = {
 	icon = privilege_monopoly_of_goods_gems
 	max_absolutism = -10
 	loyalty = 0.1
-	is_valid = {
-		has_dlc = "Emperor"
-		any_owned_province = {
-			trade_goods = gems
-		}
-	}
 	can_select = {
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
@@ -2139,12 +1985,6 @@ estate_monopoly_of_incense = {
 	icon = privilege_monopoly_of_goods_incence
 	max_absolutism = -10
 	loyalty = 0.1
-	is_valid = {
-		has_dlc = "Emperor"
-		any_owned_province = {
-			trade_goods = incense
-		}
-	}
 	can_select = {
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
@@ -2237,12 +2077,6 @@ estate_monopoly_of_wool = {
 	icon = privilege_monopoly_of_goods_wool
 	max_absolutism = -10
 	loyalty = 0.1
-	is_valid = {
-		has_dlc = "Emperor"
-		any_owned_province = {
-			trade_goods = wool
-		}
-	}
 	can_select = {
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
@@ -2335,15 +2169,6 @@ estate_monopoly_of_wine = {
 	icon = privilege_monopoly_of_goods_wine
 	max_absolutism = -10
 	loyalty = 0.1
-	is_valid = {
-		has_dlc = "Emperor"
-		NOT = {
-			religion_group = muslim
-		}
-		any_owned_province = {
-			trade_goods = wine
-		}
-	}
 	can_select = {
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
@@ -2436,13 +2261,6 @@ estate_monopoly_of_slaves = {
 	icon = privilege_monopoly_of_goods_slaves
 	max_absolutism = -10
 	loyalty = 0.1
-	is_valid = {
-		has_dlc = "Emperor"
-		religion = nahuatl
-		any_owned_province = {
-			trade_goods = slaves
-		}
-	}
 	can_select = {
 		custom_trigger_tooltip = {
 			tooltip = unavailable_during_revolution_disaster
@@ -2536,8 +2354,10 @@ estate_control_over_monetary_policy = {
 	max_absolutism = -10
 	influence = 0.05
 	loyalty = 0.05
-	is_valid = {
-		has_dlc = "Emperor"
+	can_select = {
+		NOT = {
+			has_estate_privilege = estate_control_over_monetary_policy
+		}
 	}
 	penalties = {
 		all_power_cost = 0.05
@@ -2568,12 +2388,10 @@ estate_private_trade_fleets = {
 	max_absolutism = -5
 	influence = 0.1
 	loyalty = 0.05
-	is_valid = {
-		has_dlc = "Emperor"
-		any_owned_province = {
-			has_port = yes
+	can_select = {
+		NOT = {
+			has_estate_privilege = estate_private_trade_fleets
 		}
-		navy_size = 1
 	}
 	penalties = {
 	}
@@ -2599,8 +2417,10 @@ estate_statutory_rights = {
 	icon = privilege_grant_autonomy
 	max_absolutism = -5
 	influence = 0.1
-	is_valid = {
-		has_estate_privilege = estate_statutory_rights
+	can_select = {
+		NOT = {
+			has_estate_privilege = estate_statutory_rights
+		}
 	}
 	on_granted = {
 		change_estate_land_share = {
@@ -2624,7 +2444,10 @@ estate_better_integration = {
 	max_absolutism = -10
 	influence = 0.15
 	loyalty = 0
-	is_valid = {
+	can_select = {
+		NOT = {
+			has_estate_privilege = estate_better_integration
+		}
 		any_subject_country = {
 			OR = {
 				is_subject_of_type = vassal
@@ -2632,8 +2455,6 @@ estate_better_integration = {
 				is_subject_of_type = daimyo_vassal
 			}
 		}
-	}
-	can_select = {
 	}
 	on_granted = {
 		disable_annexation_penalty = yes
@@ -2660,9 +2481,10 @@ estate_religious_diplomats = {
 	max_absolutism = -10
 	influence = 0.3
 	loyalty = 0
-	is_valid = {
-	}
 	can_select = {
+		NOT = {
+			has_estate_privilege = estate_religious_diplomats
+		}
 	}
 	on_granted = {
 		add_increase_same_religion_opinion = yes
@@ -2687,9 +2509,10 @@ estate_one_faith_one_culture = {
 	max_absolutism = -5
 	influence = 0.15
 	loyalty = 0.2
-	is_valid = {
-	}
 	can_select = {
+		NOT = {
+			has_estate_privilege = estate_one_faith_one_culture
+		}
 	}
 	on_granted = {
 		custom_tooltip = estate_church_one_faith_one_culture_gta
@@ -2784,15 +2607,12 @@ estate_neighbor_raids = {
 	max_absolutism = -10
 	influence = 0.3
 	loyalty = 0
-	is_valid = {
-		NOT = {
-			has_country_modifier = the_abolish_slavery_act
-		}
-		technology_group = central_african
-	}
 	can_select = {
 		NOT = {
 			has_country_modifier = the_abolish_slavery_act
+		}
+		NOT = {
+			has_estate_privilege = estate_neighbor_raids
 		}
 		slaves = 1
 	}
@@ -2808,96 +2628,6 @@ estate_neighbor_raids = {
 	penalties = {
 	}
 	benefits = {
-	}
-	ai_will_do = {
-		factor = 0
-	}
-}
-estate_church_strengthen_qadis = {
-	icon = privilege_build_jain_temple
-	max_absolutism = -5
-	influence = 0.05
-  is_valid = { religion_group = muslim }
-  can_select = {
-		piety = -0.50
-		NOT = { has_estate_privilege = estate_church_sufi_advisors }
-	}
-	conditional_modifier = {
-		trigger = {
-			has_dlc = "Cradle of Civilization"
-			religion_group = muslim
-		}
-		modifier = {
-			monthly_piety = +0.001
-		}
-	}
-	penalties = {
-  global_tax_modifier = -0.10
-	}
-	benefits = {
-	}
-  on_granted = {
-		if = {
-			limit = { piety = -0.50 }
-			add_piety = 0.25
-		}
-		else_if = {
-			limit = { piety = 0.00 }
-			add_piety = 0.20
-		}
-		else_if = {
-			limit = { piety = 0.25 }
-			add_piety = 0.15
-		}
-		else_if = {
-			limit = { piety = 0.50 }
-			add_piety = 0.10
-		}
-	}
-	ai_will_do = {
-		factor = 0
-	}
-}
-estate_church_sufi_advisors = {
-	icon = privilege_build_jain_temple
-	max_absolutism = -5
-	influence = 0.05
-  is_valid = { religion_group = muslim }
-  can_select = {
-		NOT = { piety = 0.51 }
-		NOT = { has_estate_privilege = estate_church_strengthen_qadis }
-	}
-	conditional_modifier = {
-		trigger = {
-			has_dlc = "Cradle of Civilization"
-			religion_group = muslim
-		}
-		modifier = {
-			monthly_piety = -0.001
-		}
-	}
-	penalties = {
-  global_autonomy = 0.025
-	}
-	benefits = {
-	}
-  on_granted = {
-		if = {
-			limit = { piety = 0.50 }
-			add_piety = -0.25
-		}
-		else_if = {
-			limit = { piety = 0.00 }
-			add_piety = -0.20
-		}
-		else_if = {
-			limit = { piety = -0.25 }
-			add_piety = -0.15
-		}
-		else_if = {
-			limit = { piety = -0.50 }
-			add_piety = -0.10
-		}
 	}
 	ai_will_do = {
 		factor = 0
