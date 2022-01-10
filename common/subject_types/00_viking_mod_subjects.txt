@@ -725,7 +725,7 @@ greek_vassal = {
 	separatists_become_subjects = yes
 	allows_taking_land_without_independence = yes
 	can_have_subjects_of_other_types = yes
-	can_be_integrated = no
+	can_be_integrated = yes
 	can_be_annexed = no
 	can_use_claims = yes
 	forms_trade_companies = no
@@ -744,8 +744,8 @@ greek_vassal = {
 	grant_core_claim = yes
 	grant_province = yes
 	place_relative_on_throne = yes
-	enforce_religion = no
-	enforce_culture = no
+	enforce_religion = yes
+	enforce_culture = yes
 	seize_territory = no
 	can_send_tribute = yes
 	#(enable)
@@ -806,5 +806,99 @@ greek_vassal = {
 	}
 	modifier_subject = {
 		modifier = greek_subject_modifier
+	}
+}
+
+beylik_vassal = {
+	copy_from = vassal
+	count = vassal
+	# Properties:
+	has_power_projection = no
+	takes_diplo_slot = no
+	gets_help_with_rebels = yes
+	separatists_become_subjects = yes
+	allows_taking_land_without_independence = yes
+	can_have_subjects_of_other_types = yes
+	can_be_integrated = yes
+	can_be_annexed = no
+	can_use_claims = yes
+	forms_trade_companies = no
+	can_concentrate_development = yes
+	trust_on_start = 25
+	base_liberty_desire = -10
+	military_focus = 1
+	relative_power_class = 1
+	should_quit_wars_on_activation = yes
+	restoration_cb = cb_disloyal_vassal
+	# Subject Interactions:
+	scutage = no
+	divert_trade = no
+	# Subject Interactions
+	#(disable)
+	grant_core_claim = yes
+	grant_province = yes
+	place_relative_on_throne = yes
+	enforce_religion = yes
+	enforce_culture = yes
+	seize_territory = no
+	can_send_tribute = yes
+	#(enable)
+	contribute_to_capital = yes
+	return_land = yes
+	conscript_general = yes
+	#(special)
+	subsidize_armies = no
+	fortify_march = no
+	send_officers = no
+	# Modifiers
+	modifier_overlord = clear	#We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear	#Ditto
+	can_fight = {
+		same_overlord = beylik_vassal
+	}
+	can_rival = {
+		same_overlord = beylik_vassal
+	}
+	can_ally = {
+		same_overlord = beylik_vassal
+	}
+	can_marry = {
+		same_overlord = beylik_vassal
+	}
+	modifier_subject = {
+		modifier = tributary_state_behind_overlord_tech_adm
+		trigger = {
+			ROOT = {
+				NOT = {
+					adm_tech = FROM
+				}
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = tributary_state_behind_overlord_tech_dip
+		trigger = {
+			ROOT = {
+				NOT = {
+					dip_tech = FROM
+				}
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = tributary_state_behind_overlord_tech_mil
+		trigger = {
+			ROOT = {
+				NOT = {
+					mil_tech = FROM
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = beylik_overlord_modifier
+	}
+	modifier_subject = {
+		modifier = beylik_subject_modifier
 	}
 }

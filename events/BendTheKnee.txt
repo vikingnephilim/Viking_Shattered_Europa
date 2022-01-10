@@ -1047,3 +1047,682 @@ country_event = {
 		}
 	}
 }
+
+# The DYNASTYNAME beylik_autocracy has fallen!
+province_event = {
+	id = bendtheknee.15
+	title = "bendtheknee.15.t"
+	picture = COURT_eventPicture
+	major = yes
+	is_triggered_only = yes
+	desc = {
+		trigger = {
+			owner = {
+				has_reform = beylik_autocracy
+			}
+			FROM = {
+				has_reform = beylik_autocracy
+			}
+		}
+		desc = bendtheknee.15.da
+	}
+	desc = {
+		trigger = {
+			owner = {
+				has_reform = beylik_autocracy
+			}
+			FROM = {
+				NOT = {
+					has_reform = beylik_autocracy
+				}
+			}
+		}
+		desc = bendtheknee.15.db
+	}
+	desc = {
+		trigger = {
+			owner = {
+				NOT = {
+					has_reform = beylik_autocracy
+				}
+			}
+		}
+		desc = bendtheknee.15.dc
+	}
+	trigger = {
+		# OBS! These checks are also hard coded in WouldBecomebeylik_autocracyIfTaking() for AI and interface reasons. Change code too if this trigger changes.
+		province_id = 326
+		#owner = {
+		#		has_reform = expanded_devshirme_reform
+		#	}
+		#}
+	}
+	immediate = {
+		#Save new owner as beylik_autocracy if valid
+		hidden_effect = {
+			owner = {
+				if = {
+					limit = {
+						has_reform = expanded_devshirme_reform
+						OR = {
+							culture = osman
+							culture = karamanli
+							culture = eretnid
+							culture = cillician
+							culture = sahili
+						}
+					}
+					add_core = 326
+					set_capital = 326
+					#There was a bug, which made it possible that the new beylik_autocracy remained a expanded_devshirme_reform despite having Constantinople
+					#I couldn't replicate it though, so I hope the line below might fix it - in the worst case it does nothing
+					grant_independence = yes
+					change_government_to_monarchy = yes
+					add_government_reform = beylik_autocracy
+					add_government_reform = beylik_autocracy
+					save_event_target_as = new_beylik_autocracy
+				}
+			}
+		}
+		#Handle expanded_devshirme_reform transfer
+		hidden_effect = {
+			#Case - new owner is the new beylik_autocracy, previous still lives -> all expanded_devshirme_reforms get transferred from the previous to the new one
+			if = {
+				limit = {
+					FROM = {
+						exists = yes
+					}
+					owner = {
+						has_reform = beylik_autocracy
+					}
+					FROM = {
+						has_reform = beylik_autocracy
+					}
+				}
+				#Degrade the previous beylik_autocracy to expanded_devshirme_reform level
+				FROM = {
+					every_subject_country = {
+						limit = {
+							is_subject_of_type = beylik_vassal
+						}
+						set_country_flag = tobe_expanded_devshirme_reform_of_new_beylik_autocracy
+						grant_independence = yes
+					}
+					event_target:new_beylik_autocracy = {
+						create_subject = {
+							subject_type = beylik_vassal
+							subject = FROM
+						}
+					}
+					set_government_rank = 1
+					add_government_reform = expanded_devshirme_reform
+				}
+				#Vassalize all of the former expanded_devshirme_reforms
+				#NOTE: originally, it was intended that expanded_devshirme_reforms, who are at war with the beylik_autocracy, should not be vassalized
+				every_country = {
+					limit = {
+						has_country_flag = tobe_expanded_devshirme_reform_of_new_beylik_autocracy
+					}
+					event_target:new_beylik_autocracy = {
+						create_subject = {
+							subject_type = beylik_vassal
+							subject = PREV
+						}
+					}
+				}
+				owner = {
+					country_event = {
+						id = bendtheknee.18
+						days = 1
+					}
+				}
+			}
+			#Case - new owner is not the new beylik_autocracy, previous still lives -> all expanded_devshirme_reforms get free
+			if = {
+				limit = {
+					FROM = {
+						exists = yes
+					}
+					NOT = {
+						owner = {
+							has_reform = beylik_autocracy
+						}
+					}
+					FROM = {
+						has_reform = beylik_autocracy
+					}
+				}
+				FROM = {
+					every_subject_country = {
+						limit = {
+							is_subject_of_type = beylik_vassal
+						}
+						grant_independence = yes
+						if = {
+							limit = {
+								has_reform = expanded_devshirme_reform
+							}
+							add_government_reform = beylik
+						}
+					}
+					add_government_reform = beylik
+				}
+			}
+			#Case - new owner is beylik_autocracy, previous beylik_autocracy is dead -> all expanded_devshirme_reforms become subjects of the new beylik_autocracy
+			if = {
+				limit = {
+					NOT = {
+						FROM = {
+							exists = yes
+						}
+					}
+					owner = {
+						has_reform = beylik_autocracy
+					}
+				}
+				every_country = {
+					limit = {
+						has_reform = expanded_devshirme_reform
+						NOT = {
+							war_with = event_target:new_beylik_autocracy
+						}
+					}
+					event_target:new_beylik_autocracy = {
+						create_subject = {
+							subject_type = beylik_vassal
+							subject = PREV
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						has_reform = expanded_devshirme_reform
+						war_with = event_target:new_beylik_autocracy
+					}
+					add_government_reform = beylik
+				}
+			}
+			#Case - new owner is not the new beylik_autocracy, previous one is dead -> all former expanded_devshirme_reforms become independent expanded_devshirme_reform
+			if = {
+				limit = {
+					NOT = {
+						FROM = {
+							exists = yes
+						}
+					}
+					NOT = {
+						owner = {
+							has_reform = beylik_autocracy
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						has_reform = expanded_devshirme_reform
+					}
+					overlord = {
+						free_vassal = PREV
+					}
+					add_government_reform = beylik
+				}
+			}
+		}
+		#Catch all remaining expanded_devshirme_reforms and let them free
+		hidden_effect = {
+			if = {
+				limit = {
+					any_country = {
+						is_subject_of_type = beylik_vassal
+						NOT = {
+							overlord = {
+								has_reform = beylik_autocracy
+							}
+						}
+					}
+				}
+				every_country = {
+					limit = {
+						is_subject_of_type = beylik_vassal
+						NOT = {
+							overlord = {
+								has_reform = beylik_autocracy
+							}
+						}
+					}
+					overlord = {
+						free_vassal = PREV
+					}
+					if = {
+						limit = {
+							has_reform = expanded_devshirme_reform
+						}
+						remove_government_reform = expanded_devshirme_reform
+						add_government_reform = beylik
+					}
+				}
+			}
+		}
+	}
+	option = {
+		name = "japan.EVTOPTA1"
+		if = {
+			limit = {
+				owner = {
+					has_reform = expanded_devshirme_reform
+				}
+			}
+			custom_tooltip = claiming_the_beylik_autocracy_tooltip
+		}
+		if = {
+			limit = {
+				NOT = {
+					owner = {
+						has_reform = beylik_autocracy
+					}
+				}
+			}
+			owner = {
+				if = {
+					limit = {
+						NOT = {
+							has_country_flag = destroyed_beylik_autocracy
+						}
+					}
+					add_prestige = 20
+					add_adm_power = 50
+					add_dip_power = 50
+					add_mil_power = 50
+					set_country_flag = destroyed_beylik_autocracy
+				}
+			}
+		}
+	}
+}
+
+# I couldn't actually find a way to get this event to fire from the last one, so I assume that the NOT = { exists = FROM } bit is actually unused. But just in case I missed something, it seems better to add this anyway.
+# New beylik_autocracy - join or not?
+country_event = {
+	id = bendtheknee.16
+	title = bendtheknee.16.name
+	desc = bendtheknee.16.desc
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	option = {
+		#be a expanded_devshirme_reform
+		name = bendtheknee.16.A
+		event_target:new_beylik_autocracy = {
+			create_subject = {
+				subject_type = beylik_vassal
+				subject = ROOT
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+	option = {
+		#don't be a expanded_devshirme_reform
+		name = bendtheknee.16.B
+		event_target:new_beylik_autocracy = {
+			add_opinion = {
+				who = root
+				modifier = opinion_defy_new_beylik_autocracy
+			}
+			country_event = {
+				id = bendtheknee.17
+				days = 1
+			}
+			add_casus_belli = {
+				target = ROOT
+				type = cb_vassalize_mission
+				months = 300
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 1
+				NOT = {
+					num_of_cities = 10
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = bendtheknee.17
+	title = bendtheknee.17.name
+	desc = bendtheknee.17.desc
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	option = {
+		#be a expanded_devshirme_reform
+		name = bendtheknee.17.opt
+		event_target:new_beylik_autocracy = {
+			create_subject = {
+				subject_type = beylik_vassal
+				subject = ROOT
+			}
+		}
+	}
+}
+
+country_event = {
+	id = bendtheknee.18
+	title = bendtheknee.18.t
+	desc = bendtheknee.18.desc
+	picture = COURT_eventPicture
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		#We don't follow a bully
+		name = bendtheknee.18.a
+		every_country = {
+			limit = {
+				has_country_flag = tobe_expanded_devshirme_reform_of_new_beylik_autocracy
+			}
+			clr_country_flag = tobe_expanded_devshirme_reform_of_new_beylik_autocracy
+			if = {
+				limit = {
+					war_with = ROOT
+					is_subject_of = ROOT
+				}
+				grant_independence = yes
+				if = {
+					limit = {
+						has_reform = expanded_devshirme_reform
+					}
+					add_government_reform = beylik
+				}
+				#The Shogun should be able to retake his defected expanded_devshirme_reforms
+				reverse_add_casus_belli = {
+					target = ROOT
+					type = cb_vassalize_mission
+					months = 300
+				}
+			}
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+country_event = {
+	id = bendtheknee.19
+	title = "bendtheknee.19.t"
+	desc = "bendtheknee.19.d"
+	picture = POPE_PREACHING_eventPicture
+	trigger = {
+		AND = {
+			OR = {
+				culture = osman
+				culture = karamanli
+				culture = eretnid
+				culture = cillician
+				culture = sahili
+				tag = AKK
+				tag = BTL
+				tag = HSN
+			}
+			NOT = {
+				has_reform = beylik_autocracy
+			}
+		}
+		NOT = {
+			has_country_flag = screw_hegemon
+		}
+		NOT = {
+			has_country_flag = hail_hegemon
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	immediate = {
+		OSM = {
+			set_country_flag = osm_asks_for_subjects
+		}
+	}
+	option = {
+		name = "bendtheknee.19.a"
+		set_country_flag = hail_hegemon
+		ai_chance = {
+			factor = 95
+		}
+	}
+	option = {
+		name = "bendtheknee.7.b"
+		set_country_flag = screw_hegemon
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+
+country_event = {
+	id = bendtheknee.20
+	title = "bendtheknee.20.t"
+	desc = "bendtheknee.20.d"
+	picture = POPE_PREACHING_eventPicture
+	fire_only_once = yes
+	trigger = {
+		has_country_flag = osm_asks_for_subjects
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "bendtheknee.20.a"
+		IF = {
+			limit = {
+				AYD = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = beylik_vassal
+				subject = AYD
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				AYD = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+		IF = {
+			limit = {
+				AKK = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = beylik_vassal
+				subject = AKK
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				AKK = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+		IF = {
+			limit = {
+				BTL = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = beylik_vassal
+				subject = BTL
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				BTL = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+		IF = {
+			limit = {
+				DUL = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = beylik_vassal
+				subject = DUL
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				DUL = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+		IF = {
+			limit = {
+				ERE = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = beylik_vassal
+				subject = ERE
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				ERE = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+		IF = {
+			limit = {
+				GRM = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = beylik_vassal
+				subject = GRM
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				GRM = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+		IF = {
+			limit = {
+				HSN = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = beylik_vassal
+				subject = HSN
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				HSN = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+		IF = {
+			limit = {
+				KAR = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = beylik_vassal
+				subject = KAR
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				KAR = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+		IF = {
+			limit = {
+				MEN = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = beylik_vassal
+				subject = MEN
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				MEN = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+		IF = {
+			limit = {
+				RAM = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = beylik_vassal
+				subject = RAM
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				RAM = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+		IF = {
+			limit = {
+				SRU = {
+					has_country_flag = hail_hegemon
+				}
+			}
+			create_subject = {
+				subject_type = beylik_vassal
+				subject = SRU
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				SRU = {
+					has_country_flag = screw_hegemon
+				}
+			}
+			add_stability = -1
+		}
+	}
+}
