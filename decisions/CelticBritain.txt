@@ -4,14 +4,22 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_celbri_flag }
+			NOT = {
+				has_country_flag = formed_celbri_flag
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = { tag = ENG }
-			NOT = { tag = DAN }
-			NOT = { exists = BHR }
+			NOT = {
+				tag = ENG
+			}
+			NOT = {
+				tag = DAN
+			}
+			NOT = {
+				exists = BHR
+			}
 			culture_group = gaelic
 			OR = {
 				ai = no
@@ -44,14 +52,22 @@ country_decisions = {
 				province_id = 172
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		allow = {
 			is_at_war = no
-			NOT = { exists = GBR }
-			NOT = { exists = ENG }
+			NOT = {
+				exists = GBR
+			}
+			NOT = {
+				exists = ENG
+			}
 			owns_core_province = 248
 			owns_core_province = 242
 			owns_core_province = 251
@@ -88,31 +104,41 @@ country_decisions = {
 			}
 			if = {
 				limit = {
-					NOT = { government_rank = 3 }
+					NOT = {
+						government_rank = 3
+					}
 				}
 				set_government_rank = 3
 			}
 			british_isles_region = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = BHR
 			}
 			brittany_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = BHR
 			}
 			asturias_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = BHR
 			}
 			galicia_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = BHR
 			}
@@ -123,8 +149,13 @@ country_decisions = {
 			add_prestige = 25
 			set_country_flag = formed_celbri_flag
 			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
 			}
 		}
 	}

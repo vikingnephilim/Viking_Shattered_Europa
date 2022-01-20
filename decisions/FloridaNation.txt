@@ -1,18 +1,29 @@
 country_decisions = {
-
 	florida_nation = {
 		major = yes
 		potential = {
-			NOT = { has_country_flag = changed_from_colonial_nation }
+			NOT = {
+				has_country_flag = changed_from_colonial_nation
+			}
 			was_never_end_game_tag_trigger = yes
 			is_free_or_tributary_trigger = yes
 			is_nomad = no
 			is_random_new_world = no
-			NOT = { tag = HLR }
-			NOT = { tag = VIN }
-			NOT = { tag = NPH }
-			NOT = { tag = MRL }
-			NOT = { tag = PAP }
+			NOT = {
+				tag = HLR
+			}
+			NOT = {
+				tag = VIN
+			}
+			NOT = {
+				tag = NPH
+			}
+			NOT = {
+				tag = MRL
+			}
+			NOT = {
+				tag = PAP
+			}
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
@@ -47,7 +58,7 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 3	
+					num_of_cities = 3
 				}
 			}
 		}
@@ -58,8 +69,12 @@ country_decisions = {
 				area = west_florida_area
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 				is_city = no
 			}
 		}
@@ -82,59 +97,79 @@ country_decisions = {
 				is_core = root
 				is_city = yes
 			}
-			NOT = { exists = FLO }
+			NOT = {
+				exists = FLO
+			}
 		}
 		effect = {
 			hidden_effect = {
 				if = {
 					limit = {
-						NOT = { is_former_colonial_nation = yes }
+						NOT = {
+							is_former_colonial_nation = yes
+						}
 					}
-					ROOT = { save_event_target_as = old_tag_target }
+					ROOT = {
+						save_event_target_as = old_tag_target
+					}
 				}
 			}
 			change_tag = FLO
 			if = {
 				limit = {
-					NOT = { is_former_colonial_nation = yes }
+					NOT = {
+						is_former_colonial_nation = yes
+					}
 				}
 				restore_old_nation_on_formation_effect = yes
 				remove_non_electors_emperors_from_empire_effect = yes
 			}
 			if = {
 				limit = {
-					NOT = { government_rank = 2 }
+					NOT = {
+						government_rank = 2
+					}
 				}
 				set_government_rank = 2
 			}
 			if = {
 				limit = {
 					culture_group = british
-					NOT = { primary_culture = british_american }
+					NOT = {
+						primary_culture = british_american
+					}
 				}
 				change_primary_culture = british_american
 			}
 			florida_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = FLO
 			}
 			north_florida_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = FLO
 			}
 			west_florida_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = FLO
 			}
 			lucayan_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = FLO
 			}
@@ -144,11 +179,19 @@ country_decisions = {
 				duration = 7300
 			}
 			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
+			}
 			set_country_flag = changed_from_colonial_nation
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
-
 }

@@ -4,14 +4,22 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_italy_flag }
+			NOT = {
+				has_country_flag = formed_italy_flag
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = { exists = ITA }
-			NOT = { tag = PAP }
-			NOT = { tag = HLR }
+			NOT = {
+				exists = ITA
+			}
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				tag = HLR
+			}
 			culture_group = latin
 			OR = {
 				ai = no
@@ -47,22 +55,26 @@ country_decisions = {
 						owns_core_province = 118
 					}
 				}
-				province_id = 101	# Genoa
-				province_id = 104	# Milan
-				province_id = 116	# Firenze
-				province_id = 118	# Roma
+				province_id = 101				# Genoa
+				province_id = 104				# Milan
+				province_id = 116				# Firenze
+				province_id = 118				# Roma
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		allow = {
 			is_at_war = no
-			owns_core_province = 101	# Genoa
-			owns_core_province = 104	# Milan
-			owns_core_province = 116	# Firenze
-			owns_core_province = 118	# Roma
+			owns_core_province = 101			# Genoa
+			owns_core_province = 104			# Milan
+			owns_core_province = 116			# Firenze
+			owns_core_province = 118			# Roma
 			num_of_owned_provinces_with = {
 				value = 20
 				region = italy_region
@@ -85,12 +97,16 @@ country_decisions = {
 				}
 				set_in_empire = no
 				emperor = {
-					country_event = { id = hre_event.5 }
+					country_event = {
+						id = hre_event.5
+					}
 				}
 			}
 			if = {
 				limit = {
-					NOT = { government_rank = 2 }
+					NOT = {
+						government_rank = 2
+					}
 				}
 				set_government_rank = 2
 			}
@@ -99,7 +115,9 @@ country_decisions = {
 			add_government_reform = italian_signoria_reform
 			italy_region = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = ITA
 			}
@@ -108,8 +126,13 @@ country_decisions = {
 				set_capital = 118
 			}
 			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
 			}
 			swap_non_generic_missions = yes
 			set_country_flag = formed_italy_flag
@@ -126,9 +149,13 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = { exists = ITA }
+			NOT = {
+				exists = ITA
+			}
 			tag = PAP
-			NOT = { has_country_flag = is_kingdom_of_god_flag }
+			NOT = {
+				has_country_flag = is_kingdom_of_god_flag
+			}
 			OR = {
 				ai = no
 				AND = {
@@ -139,54 +166,100 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 101	# Genoa
-				province_id = 103	# Torino
-				province_id = 104	# Milano
-				province_id = 106	# Modena
-				province_id = 110	# Trento
-				province_id = 111	# Udine / Aquileia
-				province_id = 112	# Venice
-				province_id = 114	# Bologna + Ravenna
-				province_id = 116	# Firenze
-				province_id = 115	# Pisa
-				province_id = 119	# Ancona + Fermo
-				province_id = 2976	# Perugia
-				province_id = 2977	# Pesaro
+				province_id = 101				# Genoa
+				province_id = 103				# Torino
+				province_id = 104				# Milano
+				province_id = 106				# Modena
+				province_id = 110				# Trento
+				province_id = 111				# Udine / Aquileia
+				province_id = 112				# Venice
+				province_id = 114				# Bologna + Ravenna
+				province_id = 116				# Firenze
+				province_id = 115				# Pisa
+				province_id = 119				# Ancona + Fermo
+				province_id = 2976				# Perugia
+				province_id = 2977				# Pesaro
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		allow = {
 			is_nomad = no
 			is_at_war = no
 			#Ecclesiastical provinces of Northern Italy
-			owns_core_province = 101	# Genoa
-			owns_core_province = 103	# Torino
-			owns_core_province = 104	# Milano
-			owns_core_province = 106	# Modena
-			owns_core_province = 110	# Trento
-			owns_core_province = 111	# Udine / Aquileia
-			owns_core_province = 112	# Venice
-			owns_core_province = 114	# Bologna + Ravenna
-			owns_core_province = 116	# Firenze
-			owns_core_province = 115	# Pisa
-			owns_core_province = 119	# Ancona + Fermo
-			owns_core_province = 2976	# Perugia
-			owns_core_province = 2977	# Pesaro
+			owns_core_province = 101			# Genoa
+			owns_core_province = 103			# Torino
+			owns_core_province = 104			# Milano
+			owns_core_province = 106			# Modena
+			owns_core_province = 110			# Trento
+			owns_core_province = 111			# Udine / Aquileia
+			owns_core_province = 112			# Venice
+			owns_core_province = 114			# Bologna + Ravenna
+			owns_core_province = 116			# Firenze
+			owns_core_province = 115			# Pisa
+			owns_core_province = 119			# Ancona + Fermo
+			owns_core_province = 2976			# Perugia
+			owns_core_province = 2977			# Pesaro
 		}
 		effect = {
-			country_event  = { id = catholic_flavor.2 }
+			country_event = {
+				id = catholic_flavor.2
+			}
 			every_province = {
 				limit = {
 					region = italy_region
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			override_country_name = KINGDOM_OF_GOD
 			set_country_flag = is_kingdom_of_god_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	reign_in_french_piemontese = {
+		major = yes
+		potential = {
+			NOT = {
+				has_global_flag = reign_in_piedmont
+			}
+			culture_group = latin
+			tag = ITA
+		}
+		allow = {
+			SPI = {
+				exists = no
+			}
+			piedmont_area = {
+				owned_by = ITA
+				is_core = ITA
+			}
+			accepted_culture = piedmontese_new
+			accepted_culture = piedmontese
+		}
+		effect = {
+			if = {
+				limit = {
+					culture_group = latin
+				}
+				every_owned_province = {
+					limit = {
+						culture = piedmontese
+					}
+					change_culture = piedmontese_new
+				}
+			}
+			set_global_flag = reign_in_piedmont
 		}
 		ai_will_do = {
 			factor = 1

@@ -214,4 +214,42 @@ country_decisions = {
 			factor = 1
 		}
 	}
+	reign_in_italian_piemontese = {
+		major = yes
+		potential = {
+			NOT = {
+				has_global_flag = reign_in_piedmont
+			}
+			culture_group = french
+			tag = FRA
+		}
+		allow = {
+			SPI = {
+				exists = no
+			}
+			piedmont_area = {
+				owned_by = FRA
+				is_core = FRA
+			}
+			accepted_culture = piedmontese
+			accepted_culture = piedmontese_new
+		}
+		effect = {
+			if = {
+				limit = {
+					culture_group = french
+				}
+				every_owned_province = {
+					limit = {
+						culture = piedmontese_new
+					}
+					change_culture = piedmontese
+				}
+			}
+			set_global_flag = reign_in_piedmont
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

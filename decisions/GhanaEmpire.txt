@@ -4,12 +4,16 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_ghana_flag }
+			NOT = {
+				has_country_flag = formed_ghana_flag
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = { exists = GHA }
+			NOT = {
+				exists = GHA
+			}
 			OR = {
 				culture_group = mande
 				culture_group = sahelian
@@ -42,18 +46,26 @@ country_decisions = {
 				province_id = 1125
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		allow = {
 			is_at_war = no
 			capital = 1131
 			OR = {
-				NOT = { exists = MAL }
+				NOT = {
+					exists = MAL
+				}
 				tag = MAL
 			}
-			1131 = { development = 40 }
+			1131 = {
+				development = 40
+			}
 			total_development = 1000
 			owns_core_province = 1131
 			owns_core_province = 1132
@@ -68,13 +80,17 @@ country_decisions = {
 			change_tag = GHA
 			if = {
 				limit = {
-					NOT = { government_rank = 3 }
+					NOT = {
+						government_rank = 3
+					}
 				}
 				set_government_rank = 3
 			}
 			sahel_region = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = GHA
 			}
@@ -86,8 +102,13 @@ country_decisions = {
 			add_prestige = 25
 			set_country_flag = formed_ghana_flag
 			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
 			}
 		}
 	}

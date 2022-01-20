@@ -5067,12 +5067,6 @@ country_event = {
 		name = colonial_nation.184.a
 		add_adm_power = -100
 		add_dip_power = -100
-		area = {
-			limit = {
-				owned_by = ROOT
-			}
-			add_unrest = -1
-		}
 		add_corruption = -0.5
 	}
 	option = {
@@ -5441,49 +5435,6 @@ country_event = {
 	}
 }
 
-# Absent Governor
-country_event = {
-	id = colonial_nation.190
-	title = colonial_nation.190.t
-	desc = colonial_nation.190.d
-	picture = REVOLUTION_eventPicture
-	goto = absent_governor_province
-	trigger = {
-		any_owned_province = {
-			is_colony = yes
-			NOT = {
-				has_province_flag = absent_governor
-			}
-		}
-		has_dlc = "Leviathan"
-		OR = {
-			is_colonial_nation = yes
-			owner = {
-				is_colonial_nation = yes
-			}
-		}
-	}
-	immediate = {
-		hidden_effect = {
-			random_owned_province = {
-				limit = {
-					is_colony = yes
-				}
-				save_event_target_as = absent_governor_province
-			}
-			set_province_flag = absent_governor
-		}
-	}
-	mean_time_to_happen = {
-		months = 300
-	}
-	option = {
-		name = colonial_nation.190.a
-		event_target:absent_governor_province = {
-			add_unrest = 2
-		}
-	}
-}
 
 # Miracle in Colonial Province
 province_event = {

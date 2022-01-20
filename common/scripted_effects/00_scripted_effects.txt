@@ -1734,7 +1734,28 @@ add_inflation_scaled_to_trade = {
 	hidden_effect = {
 		export_to_variable = {
 			which = trade_income_variable
-			value = trade_income_percentage
+			value = trigger_value:trade_income_percentage
+		}
+		multiply_variable = {
+			which = trade_income_variable
+			value = 100
+		}
+		multiply_variable = {
+			which = trade_income_variable
+			value = $inflation$
+		}
+		while = {
+			limit = {
+				check_variable = {
+					which = trade_income_variable
+					value = 1
+				}
+			}
+			add_inflation = 1
+			subtract_variable = {
+				which = trade_income_variable
+				value = 1
+			}
 		}
 		multiply_variable = {
 			which = trade_income_variable
@@ -1747,7 +1768,7 @@ add_inflation_scaled_to_trade = {
 					value = 1
 				}
 			}
-			add_inflation = $inflation$
+			add_inflation = 0.01
 			subtract_variable = {
 				which = trade_income_variable
 				value = 1
@@ -3267,7 +3288,7 @@ add_years_of_trade_income = {
 		}
 		export_to_variable = {
 			which = percentage_of_yearly_trade_income
-			value = trade_income_percentage
+			value = trigger_value:trade_income_percentage
 		}
 		export_to_variable = {
 			which = yearly_trade_income
@@ -4058,7 +4079,7 @@ select_biggest_country_of_region = {
 				save_event_target_as = selected_biggest_country_of_region
 			}
 		}
-		else = {
+		else_if = {
 			limit = {
 				any_country = {
 					capital_scope = {

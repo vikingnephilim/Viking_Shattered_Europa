@@ -1974,7 +1974,7 @@ on_loan_repaid_estate_privileges_effect = {
 		limit = {
 			has_estate_privilege = estate_burghers_indebted_to_burghers
 			NOT = {
-				has_estate_loan = 1
+				has_estate_loan = no
 			}
 		}
 		remove_estate_privilege = estate_burghers_indebted_to_burghers
@@ -1983,7 +1983,7 @@ on_loan_repaid_estate_privileges_effect = {
 		limit = {
 			has_estate_privilege = estate_jains_indebted_to_jains
 			NOT = {
-				has_estate_loan = 1
+				has_estate_loan = no
 			}
 		}
 		remove_estate_privilege = estate_jains_indebted_to_jains

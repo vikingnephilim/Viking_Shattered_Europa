@@ -4,14 +4,22 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_mossi_flag }
+			NOT = {
+				has_country_flag = formed_mossi_flag
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = { tag = KIT }
-			NOT = { tag = HLR }
-			NOT = { tag = PAP }
+			NOT = {
+				tag = KIT
+			}
+			NOT = {
+				tag = HLR
+			}
+			NOT = {
+				tag = PAP
+			}
 			culture_group = great_lakes_group
 			is_colonial_nation = no
 			OR = {
@@ -35,12 +43,18 @@ country_decisions = {
 				province_id = 4072
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		allow = {
-			NOT = { exists = KIT }
+			NOT = {
+				exists = KIT
+			}
 			is_at_war = no
 			is_nomad = no
 			uganda_area = {
@@ -66,7 +80,11 @@ country_decisions = {
 			change_tag = KIT
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
-				limit = { NOT = { government_rank = 2 } }
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
 				set_government_rank = 2
 			}
 			set_capital = 4064
@@ -74,9 +92,14 @@ country_decisions = {
 			if = {
 				limit = {
 					has_custom_ideas = no
-					NOT = { has_idea_group = KIT_ideas }
+					NOT = {
+						has_idea_group = KIT_ideas
+					}
 				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
 			}
 			set_country_flag = formed_mossi_flag
 			create_colony_mission_reward = {
@@ -98,7 +121,6 @@ country_decisions = {
 		ai_will_do = {
 			factor = 1
 		}
-		ai_importance = 400 #
+		ai_importance = 400		#
 	}
-	
 }

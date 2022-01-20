@@ -4,13 +4,17 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_courland_flag }
+			NOT = {
+				has_country_flag = formed_courland_flag
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
 			culture_group = baltic
-			NOT = { exists = KUR }
+			NOT = {
+				exists = KUR
+			}
 			OR = {
 				ai = no
 				is_religion_enabled = protestant
@@ -19,12 +23,16 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 39	 # Kurland
-				province_id = 1935	 # Semigallia
+				province_id = 39				# Kurland
+				province_id = 1935				# Semigallia
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		allow = {
@@ -34,18 +42,24 @@ country_decisions = {
 				religion = reformed
 				religion = protestant
 			}
-			owns_core_province = 39	 # Kurland
-			owns_core_province = 1935	 # Semigallia
+			owns_core_province = 39			# Kurland
+			owns_core_province = 1935			# Semigallia
 		}
 		effect = {
-			1935 = { # Semigallia
+			1935 = {
+				# Semigallia
 				move_capital_effect = yes
 			}
 			change_tag = KUR
 			add_prestige = 10
 			if = {
-				limit = { has_custom_ideas = no }
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"

@@ -1,11 +1,16 @@
 country_decisions = {
-
 	unite_fiji = {
 		major = yes
 		potential = {
-			NOT = { tag = HLR }
-			NOT = { tag = PAP }
-			NOT = { tag = VIT }
+			NOT = {
+				tag = HLR
+			}
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				tag = VIT
+			}
 			primary_culture = melanesian
 			capital_scope = {
 				area = fiji_area
@@ -18,7 +23,7 @@ country_decisions = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 2	
+					num_of_cities = 2
 				}
 			}
 		}
@@ -28,7 +33,9 @@ country_decisions = {
 				province_id = 4938
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
 				is_city = no
 			}
 		}
@@ -43,14 +50,18 @@ country_decisions = {
 				area = fiji_area
 				is_city = yes
 			}
-			NOT = { exists = VIT }
+			NOT = {
+				exists = VIT
+			}
 		}
 		effect = {
 			change_tag = VIT
 			restore_country_name_effect = yes
 			if = {
 				limit = {
-					NOT = { government_rank = 2 }
+					NOT = {
+						government_rank = 2
+					}
 				}
 				set_government_rank = 2
 			}
@@ -58,11 +69,16 @@ country_decisions = {
 				limit = {
 					has_custom_ideas = no
 				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
 			}
 			fiji_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = VIT
 			}

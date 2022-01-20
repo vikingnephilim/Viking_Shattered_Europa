@@ -3,30 +3,40 @@
 #
 # written by Henrik Lohmander
 ##########################################################################
-
 namespace = culture_religion_events
-
 # [Root.Heir.GetName] and the [Root.given_teacher_culture.GetCultureName] people
 country_event = {
 	id = culture_religion_events.1
 	title = "culture_religion_events.1.t"
 	desc = "culture_religion_events.1.d"
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = INVENTION_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = HEIR_AND_FOREIGN_ADVISOR_eventPicture
 	}
-	
 	trigger = {
 		has_heir = yes
 		has_regency = no
 		has_consort_regency = no
-		NOT = { has_reform = elective_monarchy }
+		NOT = {
+			has_reform = elective_monarchy
+		}
+		NOT = {
+			has_reform = theocratic_autocracy
+		}
 		heir_age = 13
-		NOT = { heir_age = 25 }
+		NOT = {
+			heir_age = 25
+		}
 		employed_advisor = {
 			category = ADM
 		}
@@ -71,7 +81,6 @@ country_event = {
 			}
 		}
 	}
-
 	immediate = {
 		hidden_effect = {
 			export_to_variable = {
@@ -85,20 +94,25 @@ country_event = {
 			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		months = 800
 		modifier = {
 			factor = 0.8
-			heir_has_personality_ancestor = { key = well_connected }
+			heir_has_personality_ancestor = {
+				key = well_connected
+			}
 		}
 		modifier = {
 			factor = 0.8
-			heir_has_personality_ancestor = { key = free_thinker }
+			heir_has_personality_ancestor = {
+				key = free_thinker
+			}
 		}
 		modifier = {
 			factor = 0.8
-			heir_has_personality_ancestor = { key = tolerant }
+			heir_has_personality_ancestor = {
+				key = tolerant
+			}
 		}
 		modifier = {
 			factor = 0.8
@@ -118,16 +132,17 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.2
-			heir_has_personality_ancestor = { key = zealot }
+			heir_has_personality_ancestor = {
+				key = zealot
+			}
 		}
 		modifier = {
 			factor = 1.2
 			heir_has_personality = malevolent_personality
 		}
 	}
-
 	option = {
-		name = "culture_religion_events.1.a" #
+		name = "culture_religion_events.1.a"		#
 		remove_advisor_by_category = ADM
 		add_adm_power = -50
 		define_advisor = {
@@ -139,7 +154,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "culture_religion_events.1.b" #
+		name = "culture_religion_events.1.b"		#
 		set_heir_culture = variable:given_teacher_culture
 		add_heir_claim = -25
 		custom_tooltip = culture_religion_events.1.b.tt
@@ -155,7 +170,6 @@ country_event = {
 			}
 		}
 	}
-	
 	after = {
 		clear_saved_name = capital_noble
 		hidden_effect = {
@@ -166,7 +180,6 @@ country_event = {
 		}
 	}
 }
-
 
 # Triggers within a few years of succession.
 country_event = {
@@ -181,7 +194,9 @@ country_event = {
 	picture = {
 		trigger = {
 			has_regency = no
-			NOT = { has_dlc = "Cradle of Civilization" }
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
 		}
 		picture = ACCUSATION_eventPicture
 	}
@@ -192,13 +207,16 @@ country_event = {
 		}
 		picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 	}
-	
 	desc = {
-		desc = "culture_religion_events.2.da" #Different Culture - But we have subjects of it
+		desc = "culture_religion_events.2.da"		#Different Culture - But we have subjects of it
 		trigger = {
 			has_regency = no
-			NOT = { has_reform = mamluk_government }
-			NOT = { ruler_culture = ROOT }
+			NOT = {
+				has_reform = mamluk_government
+			}
+			NOT = {
+				ruler_culture = ROOT
+			}
 			ruler_religion = ROOT
 			any_owned_province = {
 				culture = variable:From:new_ruler_culture
@@ -206,11 +224,15 @@ country_event = {
 		}
 	}
 	desc = {
-		desc = "culture_religion_events.2.db" #Different Culture - And we have no subjects of it
+		desc = "culture_religion_events.2.db"		#Different Culture - And we have no subjects of it
 		trigger = {
 			has_regency = no
-			NOT = { has_reform = mamluk_government }
-			NOT = { ruler_culture = ROOT }
+			NOT = {
+				has_reform = mamluk_government
+			}
+			NOT = {
+				ruler_culture = ROOT
+			}
 			ruler_religion = ROOT
 			NOT = {
 				any_owned_province = {
@@ -220,42 +242,56 @@ country_event = {
 		}
 	}
 	desc = {
-		desc = "culture_religion_events.2.dc" #Different Heathen Religion
+		desc = "culture_religion_events.2.dc"		#Different Heathen Religion
 		trigger = {
 			has_regency = no
-			NOT = { has_reform = mamluk_government }
+			NOT = {
+				has_reform = mamluk_government
+			}
 			ruler_culture = ROOT
-			NOT = { ruler_religion = ROOT }
-			NOT = { religion_group = variable:new_ruler_religion }
+			NOT = {
+				ruler_religion = ROOT
+			}
+			NOT = {
+				religion_group = variable:new_ruler_religion
+			}
 		}
 	}
 	desc = {
-		desc = "culture_religion_events.2.dda" #Different Heretic Religion
+		desc = "culture_religion_events.2.dda"		#Different Heretic Religion
 		trigger = {
 			has_regency = no
-			NOT = { has_reform = mamluk_government }
+			NOT = {
+				has_reform = mamluk_government
+			}
 			ruler_culture = ROOT
-			NOT = { ruler_religion = ROOT }
+			NOT = {
+				ruler_religion = ROOT
+			}
 			religion_group = variable:new_ruler_religion
 		}
 	}
-	
 	desc = {
-		desc = "culture_religion_events.2.de" #Different Culture and Different Religion
+		desc = "culture_religion_events.2.de"		#Different Culture and Different Religion
 		trigger = {
 			has_regency = no
-			NOT = { has_reform = mamluk_government }
-			NOT = { ruler_culture = ROOT }
-			NOT = { ruler_religion = ROOT }
+			NOT = {
+				has_reform = mamluk_government
+			}
+			NOT = {
+				ruler_culture = ROOT
+			}
+			NOT = {
+				ruler_religion = ROOT
+			}
 		}
 	}
-	
 	desc = {
-		desc = "culture_religion_events.2.df" #What's this then? Well the event triggers with a delay from the day of succession.It is possible for someone to usurp the throne before this event happens or for other triggers to no longer be true.
+		desc = "culture_religion_events.2.df"		#What's this then? Well the event triggers with a delay from the day of succession.It is possible for someone to usurp the throne before this event happens or for other triggers to no longer be true.
 		trigger = {
 			OR = {
-				has_regency = yes #It is also possible to enter a regency
-				has_reform = mamluk_government #It is even possible to suddenly get the Mamluk Government form.
+				has_regency = yes				#It is also possible to enter a regency
+				has_reform = mamluk_government				#It is even possible to suddenly get the Mamluk Government form.
 				AND = {
 					ruler_culture = ROOT
 					ruler_religion = ROOT
@@ -263,16 +299,20 @@ country_event = {
 			}
 		}
 	}
-	
-	is_triggered_only = yes #Triggers in on_action for new ruler.
-	
+	is_triggered_only = yes	#Triggers in on_action for new ruler.
 	immediate = {
 		hidden_effect = {
 			clr_country_flag = had_culture_religion_reaction_event_flag
 			random_list = {
-				15 = { set_country_flag = strong_effect } #Harsh Reception
-				35 = { set_country_flag = medium_effect } #Average Reception
-				50 = { set_country_flag = small_effect }  #Mild Reception
+				15 = {
+					set_country_flag = strong_effect
+				}				#Harsh Reception
+				35 = {
+					set_country_flag = medium_effect
+				}				#Average Reception
+				50 = {
+					set_country_flag = small_effect
+				}				#Mild Reception
 			}
 			export_to_variable = {
 				variable_name = new_ruler_culture
@@ -282,20 +322,24 @@ country_event = {
 				variable_name = new_ruler_religion
 				value = ruler_religion
 			}
-			set_saved_name = { #Not actually used as a preacher in all event versions
+			set_saved_name = {
+				#Not actually used as a preacher in all event versions
 				key = rebel_preacher
 				type = advisor
 				scope = ROOT
 			}
 		}
 	}
-
 	option = {
-		name = "culture_religion_events.2.a" #Different Culture
+		name = "culture_religion_events.2.a"		#Different Culture
 		trigger = {
 			has_regency = no
-			NOT = { has_reform = mamluk_government }
-			NOT = { ruler_culture = ROOT }
+			NOT = {
+				has_reform = mamluk_government
+			}
+			NOT = {
+				ruler_culture = ROOT
+			}
 			ruler_religion = ROOT
 		}
 		if = {
@@ -307,7 +351,7 @@ country_event = {
 					amount = 8
 				}
 			}
-			custom_tooltip  = culture_opinion_tooltip
+			custom_tooltip = culture_opinion_tooltip
 			hidden_effect = {
 				every_known_country = {
 					limit = {
@@ -366,7 +410,9 @@ country_event = {
 					}
 				}
 				else_if = {
-					limit = { monthly_income = 30 }
+					limit = {
+						monthly_income = 30
+					}
 					define_advisor = {
 						type = recruitmaster
 						skill = 3
@@ -419,7 +465,9 @@ country_event = {
 					}
 				}
 				else_if = {
-					limit = { monthly_income = 30 }
+					limit = {
+						monthly_income = 30
+					}
 					define_advisor = {
 						type = recruitmaster
 						skill = 2
@@ -472,7 +520,9 @@ country_event = {
 					}
 				}
 				else_if = {
-					limit = { monthly_income = 30 }
+					limit = {
+						monthly_income = 30
+					}
 					define_advisor = {
 						type = grand_captain
 						skill = 3
@@ -495,13 +545,19 @@ country_event = {
 		}
 	}
 	option = {
-		name = "culture_religion_events.2.b" #Different Heathen Religion - This is harder to get.
+		name = "culture_religion_events.2.b"		#Different Heathen Religion - This is harder to get.
 		trigger = {
 			has_regency = no
-			NOT = { has_reform = mamluk_government }
+			NOT = {
+				has_reform = mamluk_government
+			}
 			ruler_culture = ROOT
-			NOT = { ruler_religion = ROOT }
-			NOT = { religion_group = variable:new_ruler_religion }
+			NOT = {
+				ruler_religion = ROOT
+			}
+			NOT = {
+				religion_group = variable:new_ruler_religion
+			}
 		}
 		if = {
 			limit = {
@@ -512,7 +568,7 @@ country_event = {
 					amount = 8
 				}
 			}
-			custom_tooltip  = religion_opinion_tooltip
+			custom_tooltip = religion_opinion_tooltip
 			hidden_effect = {
 				every_known_country = {
 					limit = {
@@ -540,7 +596,9 @@ country_event = {
 			on_trigger = has_country_flag
 			medium_effect = {
 				if = {
-					limit = { monthly_income = 30 }
+					limit = {
+						monthly_income = 30
+					}
 					define_advisor = {
 						type = theologian
 						skill = 3
@@ -601,7 +659,9 @@ country_event = {
 			}
 			small_effect = {
 				if = {
-					limit = { monthly_income = 30 }
+					limit = {
+						monthly_income = 30
+					}
 					define_advisor = {
 						type = theologian
 						skill = 3
@@ -662,7 +722,9 @@ country_event = {
 			}
 			strong_effect = {
 				if = {
-					limit = { monthly_income = 30 }
+					limit = {
+						monthly_income = 30
+					}
 					define_advisor = {
 						type = theologian
 						skill = 2
@@ -724,12 +786,16 @@ country_event = {
 		}
 	}
 	option = {
-		name = "culture_religion_events.2.c" #Different Heretic Religion - This is harder to get (but not as hard as heathen).
+		name = "culture_religion_events.2.c"		#Different Heretic Religion - This is harder to get (but not as hard as heathen).
 		trigger = {
 			has_regency = no
-			NOT = { has_reform = mamluk_government }
+			NOT = {
+				has_reform = mamluk_government
+			}
 			ruler_culture = ROOT
-			NOT = { ruler_religion = ROOT }
+			NOT = {
+				ruler_religion = ROOT
+			}
 			religion_group = variable:new_ruler_religion
 		}
 		if = {
@@ -741,7 +807,7 @@ country_event = {
 					amount = 8
 				}
 			}
-			custom_tooltip  = religion_opinion_tooltip
+			custom_tooltip = religion_opinion_tooltip
 			hidden_effect = {
 				every_known_country = {
 					limit = {
@@ -769,7 +835,9 @@ country_event = {
 			on_trigger = has_country_flag
 			medium_effect = {
 				if = {
-					limit = { monthly_income = 30 }
+					limit = {
+						monthly_income = 30
+					}
 					define_advisor = {
 						type = theologian
 						skill = 3
@@ -820,7 +888,9 @@ country_event = {
 			}
 			small_effect = {
 				if = {
-					limit = { monthly_income = 30 }
+					limit = {
+						monthly_income = 30
+					}
 					define_advisor = {
 						type = theologian
 						skill = 3
@@ -871,7 +941,9 @@ country_event = {
 			}
 			strong_effect = {
 				if = {
-					limit = { monthly_income = 30 }
+					limit = {
+						monthly_income = 30
+					}
 					define_advisor = {
 						type = theologian
 						skill = 2
@@ -933,12 +1005,18 @@ country_event = {
 		}
 	}
 	option = {
-		name = "culture_religion_events.2.dd" #Different Culture and Different Religion
+		name = "culture_religion_events.2.dd"		#Different Culture and Different Religion
 		trigger = {
 			has_regency = no
-			NOT = { has_reform = mamluk_government }
-			NOT = { ruler_culture = ROOT }
-			NOT = { ruler_religion = ROOT }
+			NOT = {
+				has_reform = mamluk_government
+			}
+			NOT = {
+				ruler_culture = ROOT
+			}
+			NOT = {
+				ruler_religion = ROOT
+			}
 		}
 		if = {
 			limit = {
@@ -952,7 +1030,7 @@ country_event = {
 					amount = 8
 				}
 			}
-			custom_tooltip  = culture_and_religion_opinion_tooltip
+			custom_tooltip = culture_and_religion_opinion_tooltip
 			hidden_effect = {
 				every_known_country = {
 					limit = {
@@ -976,14 +1054,14 @@ country_event = {
 		}
 		else = {
 			every_known_country = {
-					limit = {
-						religion = variable:From:new_ruler_religion
-					}
-					add_opinion = {
-						modifier = opinion_ruler_of_our_religion
-						who = ROOT
-					}
+				limit = {
+					religion = variable:From:new_ruler_religion
 				}
+				add_opinion = {
+					modifier = opinion_ruler_of_our_religion
+					who = ROOT
+				}
+			}
 			every_known_country = {
 				limit = {
 					primary_culture = variable:From:new_ruler_culture
@@ -1186,8 +1264,14 @@ country_event = {
 					}
 					random_owned_province = {
 						limit = {
-							owner = { government = monarchy }
-							NOT = { owner ={ has_reform = ottoman_government } }
+							owner = {
+								government = monarchy
+							}
+							NOT = {
+								owner = {
+									has_reform = ottoman_government
+								}
+							}
 							is_state = yes
 							OR = {
 								has_owner_culture = yes
@@ -1209,8 +1293,8 @@ country_event = {
 		name = "culture_religion_events.2.e"
 		trigger = {
 			OR = {
-				has_regency = yes #It is also possible to enter a regency
-				has_reform = mamluk_government #It is even possible to suddenly get the Mamluk Government form.
+				has_regency = yes				#It is also possible to enter a regency
+				has_reform = mamluk_government				#It is even possible to suddenly get the Mamluk Government form.
 				AND = {
 					ruler_culture = ROOT
 					ruler_religion = ROOT
@@ -1218,9 +1302,7 @@ country_event = {
 			}
 		}
 		add_stability_or_adm_power = yes
-		
 	}
-	
 	after = {
 		hidden_effect = {
 			set_variable = {
@@ -1242,32 +1324,43 @@ country_event = {
 	title = culture_religion_events.3.t
 	desc = culture_religion_events.3.d
 	picture = RELIGIOUS_CONVERSION_eventPicture
-	
 	is_triggered_only = yes
-
 	trigger = {
-		NOT = { ruler_religion = ROOT }
-		NOT = { has_ruler_modifier = increased_tolerance_of_heretics }
-		NOT = { has_ruler_modifier = supressing_personal_faith }
+		NOT = {
+			ruler_religion = ROOT
+		}
+		NOT = {
+			has_ruler_modifier = increased_tolerance_of_heretics
+		}
+		NOT = {
+			has_ruler_modifier = supressing_personal_faith
+		}
 		religion_group = new_variable:ruler_religion
 		any_owned_province = {
 			has_owner_religion = yes
 			is_capital = no
 			is_reformation_center = no
-			NOT = { is_religious_center_province = yes }
-			NOT = { has_province_modifier = religious_center }
-			NOT = { has_province_modifier = religious_zeal_at_conv }
-			NOT = { has_province_modifier = supressed_religious_minority }
+			NOT = {
+				is_religious_center_province = yes
+			}
+			NOT = {
+				has_province_modifier = religious_center
+			}
+			NOT = {
+				has_province_modifier = religious_zeal_at_conv
+			}
+			NOT = {
+				has_province_modifier = supressed_religious_minority
+			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
-			export_to_variable = { #Primarily for localization
+			export_to_variable = {
+				#Primarily for localization
 				variable_name = new_ruler_religion
 				value = ruler_religion
 			}
@@ -1276,18 +1369,25 @@ country_event = {
 					has_owner_religion = yes
 					is_capital = no
 					is_reformation_center = no
-					NOT = { is_religious_center_province = yes }
-					NOT = { has_province_modifier = religious_center }
-					NOT = { has_province_modifier = religious_zeal_at_conv }
-					NOT = { has_province_modifier = supressed_religious_minority }
+					NOT = {
+						is_religious_center_province = yes
+					}
+					NOT = {
+						has_province_modifier = religious_center
+					}
+					NOT = {
+						has_province_modifier = religious_zeal_at_conv
+					}
+					NOT = {
+						has_province_modifier = supressed_religious_minority
+					}
 				}
 				save_event_target_as = conversion_province
 			}
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.3.a #Wonderful!
+		name = culture_religion_events.3.a		#Wonderful!
 		ai_chance = {
 			factor = 10
 		}
@@ -1303,7 +1403,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = culture_religion_events.3.b #We must attempt to stem the subversive powers of the [Root.Monarch.GetTitle].
+		name = culture_religion_events.3.b		#We must attempt to stem the subversive powers of the [Root.Monarch.GetTitle].
 		ai_chance = {
 			factor = 90
 		}
@@ -1331,23 +1431,31 @@ country_event = {
 	title = culture_religion_events.4.t
 	desc = culture_religion_events.4.d
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = BAD_WITH_MONARCH_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 	}
-	
 	is_triggered_only = yes
-
 	trigger = {
-		NOT = { ruler_religion = ROOT }
+		NOT = {
+			ruler_religion = ROOT
+		}
 		religion_group = new_variable:ruler_religion
 		num_of_cities = 3
 		any_owned_province = {
 			religion = new_variable:FROM:ruler_religion
-			NOT = { tolerance_to_this = 0 }
+			NOT = {
+				tolerance_to_this = 0
+			}
 		}
 		any_owned_province = {
 			is_state = yes
@@ -1355,7 +1463,6 @@ country_event = {
 			is_in_capital_area = yes
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 		modifier = {
@@ -1366,7 +1473,9 @@ country_event = {
 			factor = 1.25
 			any_owned_province = {
 				religion = new_variable:FROM:ruler_religion
-				NOT = { tolerance_to_this = -2 }
+				NOT = {
+					tolerance_to_this = -2
+				}
 			}
 		}
 		modifier = {
@@ -1378,10 +1487,9 @@ country_event = {
 			piety = 0.01
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
-			set_saved_name = { 
+			set_saved_name = {
 				key = noblezealot
 				type = advisor
 				scope = ROOT
@@ -1427,9 +1535,8 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.4.a #Traitors Must Die
+		name = culture_religion_events.4.a		#Traitors Must Die
 		add_piety = -0.25
 		add_church_power = -15
 		add_fervor = -15
@@ -1440,7 +1547,9 @@ country_event = {
 		add_papal_influence = -10
 		event_target:rebel_province = {
 			if = {
-				limit = { religion = ROOT }
+				limit = {
+					religion = ROOT
+				}
 				spawn_rebels = {
 					size = 1
 					leader = noblezealot
@@ -1468,26 +1577,38 @@ country_event = {
 	title = culture_religion_events.5.t
 	desc = culture_religion_events.5.d
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = BAD_WITH_MONARCH_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 	}
-	
 	is_triggered_only = yes
-
 	trigger = {
-		NOT = { ruler_religion = ROOT }
-		NOT = { religion_group = new_variable:ruler_religion }
+		NOT = {
+			ruler_religion = ROOT
+		}
+		NOT = {
+			religion_group = new_variable:ruler_religion
+		}
 		num_of_cities = 3
 		any_owned_province = {
 			religion = new_variable:FROM:ruler_religion
-			NOT = { tolerance_to_this = 0 }
+			NOT = {
+				tolerance_to_this = 0
+			}
 		}
 		NOT = {
-			any_owned_province = { has_province_modifier = heathen_ruler_religious_tensions }
+			any_owned_province = {
+				has_province_modifier = heathen_ruler_religious_tensions
+			}
 		}
 		any_owned_province = {
 			is_state = yes
@@ -1499,7 +1620,6 @@ country_event = {
 			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 		modifier = {
@@ -1511,15 +1631,15 @@ country_event = {
 			piety = 0.01
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
-			set_saved_name = { 
+			set_saved_name = {
 				key = antimonarchistpriest
 				type = advisor
 				scope = ROOT
 			}
-			export_to_variable = { #Primarily for localization
+			export_to_variable = {
+				#Primarily for localization
 				variable_name = heathen_ruler
 				value = ruler_religion
 			}
@@ -1532,18 +1652,21 @@ country_event = {
 						religion = new_variable:FROM:ruler_religion
 						has_owner_religion = yes
 					}
-					NOT = { has_province_modifier = heathen_ruler_religious_tensions }
+					NOT = {
+						has_province_modifier = heathen_ruler_religious_tensions
+					}
 				}
 				save_event_target_as = rebelprovince
 			}
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.5.a #Extensive use of force sounds fitting.
+		name = culture_religion_events.5.a		#Extensive use of force sounds fitting.
 		event_target:rebelprovince = {
 			if = {
-				limit = { religion = ROOT }
+				limit = {
+					religion = ROOT
+				}
 				spawn_rebels = {
 					type = religious_rebels
 					religion = ROOT
@@ -1560,7 +1683,9 @@ country_event = {
 				}
 			}
 			area = {
-				limit = { owned_by = ROOT }
+				limit = {
+					owned_by = ROOT
+				}
 				add_province_modifier = {
 					name = "heathen_ruler_religious_tensions"
 					duration = 3650
@@ -1569,11 +1694,13 @@ country_event = {
 		}
 	}
 	option = {
-		name = culture_religion_events.5.b #Let us not escalate the situation.
+		name = culture_religion_events.5.b		#Let us not escalate the situation.
 		add_dip_power = -25
 		event_target:rebelprovince = {
 			area = {
-				limit = { owned_by = ROOT }
+				limit = {
+					owned_by = ROOT
+				}
 				add_province_modifier = {
 					name = "heathen_ruler_religious_tensions"
 					duration = 1825
@@ -1596,59 +1723,72 @@ country_event = {
 	title = culture_religion_events.6.t
 	desc = culture_religion_events.6.d
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = GOOD_WITH_MONARCH_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 	}
-	
 	is_triggered_only = yes
-
 	trigger = {
-		NOT = { ruler_religion = ROOT }
+		NOT = {
+			ruler_religion = ROOT
+		}
 		has_regency = no
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
-			save_event_target_as = advisor_origin #Fallback
-			random_country = { #Better origin
+			save_event_target_as = advisor_origin			#Fallback
+			random_country = {
+				#Better origin
 				limit = {
 					religion = new_variable:FROM:ruler_religion
 				}
 				save_event_target_as = advisor_origin
 			}
-			set_saved_name = { 
+			set_saved_name = {
 				key = advisor_attracted_by_ruler
 				type = advisor
 				scope = event_target:advisor_origin
 			}
-			export_to_variable = { #Primarily for localization
+			export_to_variable = {
+				#Primarily for localization
 				variable_name = new_monarch_religion
 				value = ruler_religion
 			}
 			random_list = {
-				33 = { set_country_flag = philosopher_flag }
-				33 = { set_country_flag = master_of_mint_flag }
-				33 = { set_country_flag = recruitmaster_flag }
+				33 = {
+					set_country_flag = philosopher_flag
+				}
+				33 = {
+					set_country_flag = master_of_mint_flag
+				}
+				33 = {
+					set_country_flag = recruitmaster_flag
+				}
 			}
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.6.a #Come one come all.
+		name = culture_religion_events.6.a		#Come one come all.
 		trigger_switch = {
 			on_trigger = has_country_flag
 			philosopher_flag = {
 				if = {
 					limit = {
-						NOT = { monthly_income = 30 }
+						NOT = {
+							monthly_income = 30
+						}
 					}
 					define_advisor = {
 						type = philosopher
@@ -1671,7 +1811,9 @@ country_event = {
 			master_of_mint_flag = {
 				if = {
 					limit = {
-						NOT = { monthly_income = 30 }
+						NOT = {
+							monthly_income = 30
+						}
 					}
 					define_advisor = {
 						type = master_of_mint
@@ -1694,7 +1836,9 @@ country_event = {
 			recruitmaster_flag = {
 				if = {
 					limit = {
-						NOT = { monthly_income = 30 }
+						NOT = {
+							monthly_income = 30
+						}
 					}
 					define_advisor = {
 						type = recruitmaster
@@ -1717,7 +1861,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = culture_religion_events.6.b #
+		name = culture_religion_events.6.b		#
 		trigger = {
 			any_owned_province = {
 				religion = new_variable:From:ruler_religion
@@ -1830,46 +1974,52 @@ country_event = {
 		desc = culture_religion_events.7.dc
 	}
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = BAD_WITH_MONARCH_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 	}
-	
 	is_triggered_only = yes
-
 	trigger = {
-		NOT = { ruler_culture = ROOT }
-		NOT = { has_reform = mamluk_government }
+		NOT = {
+			ruler_culture = ROOT
+		}
+		NOT = {
+			has_reform = mamluk_government
+		}
 		accepted_culture = new_variable:ruler_culture
 		has_regency = no
 		employed_advisor = {
 			culture = ROOT
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
-			export_to_variable = { #Primarily for localization
+			export_to_variable = {
+				#Primarily for localization
 				variable_name = new_monarch_culture
 				value = ruler_culture
 			}
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.7.a #We must try to remedy this situation.
+		name = culture_religion_events.7.a		#We must try to remedy this situation.
 		add_adm_power = -35
 		add_legitimacy = 5
 	}
 	option = {
-		name = culture_religion_events.7.b #There is nothing we can do.
+		name = culture_religion_events.7.b		#There is nothing we can do.
 		add_legitimacy = -10
 		if = {
 			limit = {
@@ -1907,38 +2057,46 @@ country_event = {
 	title = culture_religion_events.8.t
 	desc = culture_religion_events.8.d
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = BAD_WITH_MONARCH_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 	}
-	
 	is_triggered_only = yes
-
 	trigger = {
-		NOT = { has_reform = mamluk_government }
-		NOT = { ruler_culture = ROOT }
-		NOT = { accepted_culture = new_variable:ruler_culture }
+		NOT = {
+			has_reform = mamluk_government
+		}
+		NOT = {
+			ruler_culture = ROOT
+		}
+		NOT = {
+			accepted_culture = new_variable:ruler_culture
+		}
 		has_regency = no
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
-			export_to_variable = { #Primarily for localization
+			export_to_variable = {
+				#Primarily for localization
 				variable_name = new_monarch_culture
 				value = ruler_culture
 			}
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.8.a #
+		name = culture_religion_events.8.a		#
 		reduce_legitimacy_small_effect = yes
 		if = {
 			limit = {
@@ -1949,7 +2107,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = culture_religion_events.8.b #
+		name = culture_religion_events.8.b		#
 		add_dip_power = -15
 	}
 	after = {
@@ -1966,33 +2124,42 @@ country_event = {
 	title = culture_religion_events.9.t
 	desc = culture_religion_events.9.d
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = GOOD_WITH_MONARCH_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 	}
-	
 	is_triggered_only = yes
-
 	trigger = {
-		NOT = { has_reform = mamluk_government }
-		NOT = { ruler_culture = ROOT }
-		NOT = { accepted_culture = new_variable:ruler_culture }
+		NOT = {
+			has_reform = mamluk_government
+		}
+		NOT = {
+			ruler_culture = ROOT
+		}
+		NOT = {
+			accepted_culture = new_variable:ruler_culture
+		}
 		has_regency = no
 		any_known_country = {
 			primary_culture = new_variable:FROM:ruler_culture
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
-			export_to_variable = { #Primarily for localization
+			export_to_variable = {
+				#Primarily for localization
 				variable_name = new_monarch_culture
 				value = ruler_culture
 			}
@@ -2005,9 +2172,8 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.9.a #
+		name = culture_religion_events.9.a		#
 		every_known_country = {
 			limit = {
 				primary_culture = new_variable:FROM:ruler_culture
@@ -2019,10 +2185,12 @@ country_event = {
 		}
 	}
 	option = {
-		name = culture_religion_events.9.b #
+		name = culture_religion_events.9.b		#
 		trigger = {
 			has_saved_event_target = advanced_country
-			NOT = { has_ruler_modifier = learning_from_cultural_brethren }
+			NOT = {
+				has_ruler_modifier = learning_from_cultural_brethren
+			}
 		}
 		add_ruler_modifier = {
 			name = "learning_from_cultural_brethren"
@@ -2046,7 +2214,9 @@ country_event = {
 			employed_advisor = {
 				category = ADM
 			}
-			NOT = { primary_culture = new_variable:adm_advisor_culture }
+			NOT = {
+				primary_culture = new_variable:adm_advisor_culture
+			}
 		}
 		desc = culture_religion_events.10.da
 	}
@@ -2057,13 +2227,17 @@ country_event = {
 					employed_advisor = {
 						category = ADM
 					}
-					NOT = { primary_culture = new_variable:adm_advisor_culture }
+					NOT = {
+						primary_culture = new_variable:adm_advisor_culture
+					}
 				}
 			}
 			employed_advisor = {
 				category = DIP
 			}
-			NOT = { primary_culture = new_variable:dip_advisor_culture }
+			NOT = {
+				primary_culture = new_variable:dip_advisor_culture
+			}
 		}
 		desc = culture_religion_events.10.db
 	}
@@ -2074,7 +2248,9 @@ country_event = {
 					employed_advisor = {
 						category = ADM
 					}
-					NOT = { primary_culture = new_variable:adm_advisor_culture }
+					NOT = {
+						primary_culture = new_variable:adm_advisor_culture
+					}
 				}
 			}
 			NOT = {
@@ -2082,27 +2258,35 @@ country_event = {
 					employed_advisor = {
 						category = DIP
 					}
-					NOT = { primary_culture = new_variable:dip_advisor_culture }
+					NOT = {
+						primary_culture = new_variable:dip_advisor_culture
+					}
 				}
 			}
 			employed_advisor = {
 				category = MIL
 			}
-			NOT = { primary_culture = new_variable:mil_advisor_culture }
+			NOT = {
+				primary_culture = new_variable:mil_advisor_culture
+			}
 		}
 		desc = culture_religion_events.10.dc
 	}
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = BAD_WITH_MONARCH_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 	}
-	
 	is_triggered_only = yes
-
 	trigger = {
 		OR = {
 			AND = {
@@ -2131,7 +2315,7 @@ country_event = {
 				employed_advisor = {
 					category = MIL
 				}
-				NOT ={
+				NOT = {
 					employed_advisor = {
 						category = MIL
 						culture = ROOT
@@ -2142,11 +2326,9 @@ country_event = {
 		has_regency = no
 		legitimacy_equivalent = 10
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			if = {
@@ -2161,7 +2343,8 @@ country_event = {
 						}
 					}
 				}
-				export_to_variable = { #Primarily for localization
+				export_to_variable = {
+					#Primarily for localization
 					variable_name = other_advisor_culture
 					value = adm_advisor_culture
 				}
@@ -2178,13 +2361,15 @@ country_event = {
 						}
 					}
 				}
-				export_to_variable = { #Primarily for localization
+				export_to_variable = {
+					#Primarily for localization
 					variable_name = other_advisor_culture
 					value = dip_advisor_culture
 				}
 			}
 			else = {
-				export_to_variable = { #Primarily for localization
+				export_to_variable = {
+					#Primarily for localization
 					variable_name = other_advisor_culture
 					value = mil_advisor_culture
 				}
@@ -2196,9 +2381,8 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.10.a #
+		name = culture_religion_events.10.a		#
 		if = {
 			limit = {
 				employed_advisor = {
@@ -2256,7 +2440,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = culture_religion_events.10.b #
+		name = culture_religion_events.10.b		#
 		reduce_legitimacy_medium_effect = yes
 		if = {
 			limit = {
@@ -2275,7 +2459,6 @@ country_event = {
 	}
 }
 
-
 # Rising support among the [Root.other_advisor_culture.GetCultureName] Population
 country_event = {
 	id = culture_religion_events.11
@@ -2285,7 +2468,9 @@ country_event = {
 			employed_advisor = {
 				category = ADM
 			}
-			NOT = { primary_culture = new_variable:adm_advisor_culture }
+			NOT = {
+				primary_culture = new_variable:adm_advisor_culture
+			}
 			any_owned_province = {
 				culture = new_variable:From:adm_advisor_culture
 			}
@@ -2305,7 +2490,9 @@ country_event = {
 			employed_advisor = {
 				category = DIP
 			}
-			NOT = { primary_culture = new_variable:dip_advisor_culture }
+			NOT = {
+				primary_culture = new_variable:dip_advisor_culture
+			}
 			any_owned_province = {
 				culture = new_variable:From:dip_advisor_culture
 			}
@@ -2333,7 +2520,9 @@ country_event = {
 			employed_advisor = {
 				category = MIL
 			}
-			NOT = { primary_culture = new_variable:mil_advisor_culture }
+			NOT = {
+				primary_culture = new_variable:mil_advisor_culture
+			}
 			any_owned_province = {
 				culture = new_variable:From:mil_advisor_culture
 			}
@@ -2341,18 +2530,23 @@ country_event = {
 		desc = culture_religion_events.11.dc
 	}
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = GOOD_WITH_MONARCH_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 	}
-	
 	is_triggered_only = yes
-
 	trigger = {
-		OR = { #Somewhere we have an advisor that will match.
+		OR = {
+			#Somewhere we have an advisor that will match.
 			AND = {
 				employed_advisor = {
 					category = ADM
@@ -2375,7 +2569,7 @@ country_event = {
 					}
 				}
 			}
-			AND ={
+			AND = {
 				employed_advisor = {
 					category = MIL
 				}
@@ -2387,24 +2581,31 @@ country_event = {
 				}
 			}
 		}
-		if = { #ADM advisor is the one we want
+		if = {
+			#ADM advisor is the one we want
 			limit = {
-				employed_advisor = { #We have an ADM Advisor
+				employed_advisor = {
+					#We have an ADM Advisor
 					category = ADM
 				}
 				NOT = {
-					employed_advisor = { #His culture is not ours
+					employed_advisor = {
+						#His culture is not ours
 						category = ADM
 						culture = ROOT
 					}
 				}
 			}
-			any_owned_province = { #This is his home
+			any_owned_province = {
+				#This is his home
 				culture = new_variable:From:adm_advisor_culture
-				NOT = { has_province_modifier = support_for_advisor } #event hasn't hit here before
+				NOT = {
+					has_province_modifier = support_for_advisor
+				}				#event hasn't hit here before
 			}
 		}
-		if = { #DIP advisor is the one we want
+		if = {
+			#DIP advisor is the one we want
 			limit = {
 				OR = {
 					NOT = {
@@ -2417,24 +2618,31 @@ country_event = {
 						culture = ROOT
 					}
 				}
-				employed_advisor = { #We do have a DIP advisor
+				employed_advisor = {
+					#We do have a DIP advisor
 					category = DIP
 				}
 				NOT = {
-					employed_advisor = { #His culture is not ours
+					employed_advisor = {
+						#His culture is not ours
 						category = DIP
 						culture = ROOT
 					}
 				}
 			}
-			any_owned_province = { #This is his home
+			any_owned_province = {
+				#This is his home
 				culture = new_variable:From:dip_advisor_culture
-				NOT = { has_province_modifier = support_for_advisor } #Event hasn't hit here before
+				NOT = {
+					has_province_modifier = support_for_advisor
+				}				#Event hasn't hit here before
 			}
 		}
-		if = { #MIL advisor is the one we want
+		if = {
+			#MIL advisor is the one we want
 			limit = {
-				OR = { #No matching adm advisor
+				OR = {
+					#No matching adm advisor
 					NOT = {
 						employed_advisor = {
 							category = ADM
@@ -2445,7 +2653,8 @@ country_event = {
 						culture = ROOT
 					}
 				}
-				OR = { #No matching dip advisor
+				OR = {
+					#No matching dip advisor
 					NOT = {
 						employed_advisor = {
 							category = DIP
@@ -2456,27 +2665,30 @@ country_event = {
 						culture = ROOT
 					}
 				}
-				employed_advisor = { #We do have a Mil advisor
+				employed_advisor = {
+					#We do have a Mil advisor
 					category = MIL
 				}
-				NOT = { 
-					employed_advisor = { #His culture is not ours
+				NOT = {
+					employed_advisor = {
+						#His culture is not ours
 						category = MIL
 						culture = ROOT
 					}
 				}
 			}
-			any_owned_province = { #This is his home
+			any_owned_province = {
+				#This is his home
 				culture = new_variable:From:mil_advisor_culture
-				NOT = { has_province_modifier = support_for_advisor } #Event hasn't hit here before
+				NOT = {
+					has_province_modifier = support_for_advisor
+				}				#Event hasn't hit here before
 			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			if = {
@@ -2494,7 +2706,8 @@ country_event = {
 						culture = new_variable:From:adm_advisor_culture
 					}
 				}
-				export_to_variable = { #Primarily for localization
+				export_to_variable = {
+					#Primarily for localization
 					variable_name = other_advisor_culture
 					value = adm_advisor_culture
 				}
@@ -2514,28 +2727,31 @@ country_event = {
 						culture = new_variable:From:dip_advisor_culture
 					}
 				}
-				export_to_variable = { #Primarily for localization
+				export_to_variable = {
+					#Primarily for localization
 					variable_name = other_advisor_culture
 					value = dip_advisor_culture
 				}
 			}
 			else = {
-				export_to_variable = { #Primarily for localization
+				export_to_variable = {
+					#Primarily for localization
 					variable_name = other_advisor_culture
 					value = mil_advisor_culture
 				}
 			}
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.11.a #
+		name = culture_religion_events.11.a		#
 		if = {
 			limit = {
 				calc_true_if = {
 					all_owned_province = {
 						culture = variable:From:other_advisor_culture
-						NOT = { has_province_modifier = support_for_advisor }
+						NOT = {
+							has_province_modifier = support_for_advisor
+						}
 					}
 					amount = 6
 				}
@@ -2545,7 +2761,9 @@ country_event = {
 				every_owned_province = {
 					limit = {
 						culture = variable:From:other_advisor_culture
-						NOT = { has_province_modifier = support_for_advisor }
+						NOT = {
+							has_province_modifier = support_for_advisor
+						}
 					}
 					add_province_modifier = {
 						name = support_for_advisor
@@ -2558,7 +2776,9 @@ country_event = {
 			every_owned_province = {
 				limit = {
 					culture = variable:From:other_advisor_culture
-					NOT = { has_province_modifier = support_for_advisor }
+					NOT = {
+						has_province_modifier = support_for_advisor
+					}
 				}
 				add_province_modifier = {
 					name = support_for_advisor
@@ -2625,26 +2845,28 @@ country_event = {
 		desc = culture_religion_events.12.dc
 	}
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = GOOD_WITH_MONARCH_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 	}
-	
 	is_triggered_only = yes
-
 	trigger = {
 		employed_advisor = {
 			religion = heretic
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			if = {
@@ -2654,7 +2876,8 @@ country_event = {
 						religion = heretic
 					}
 				}
-				export_to_variable = { #Primarily for localization
+				export_to_variable = {
+					#Primarily for localization
 					variable_name = other_advisor_religion
 					value = adm_advisor_religion
 				}
@@ -2673,14 +2896,16 @@ country_event = {
 						religion = heretic
 					}
 				}
-				export_to_variable = { #Primarily for localization
+				export_to_variable = {
+					#Primarily for localization
 					variable_name = other_advisor_religion
 					value = dip_advisor_religion
 				}
 				set_country_flag = dip_advisor_heretic
 			}
 			else = {
-				export_to_variable = { #Primarily for localization
+				export_to_variable = {
+					#Primarily for localization
 					variable_name = other_advisor_religion
 					value = mil_advisor_religion
 				}
@@ -2688,20 +2913,25 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.12.a #One day you might all rise to be like [Root.AdmAdvisor.GetName].
-		trigger = { has_country_flag = adm_advisor_heretic }
+		name = culture_religion_events.12.a		#One day you might all rise to be like [Root.AdmAdvisor.GetName].
+		trigger = {
+			has_country_flag = adm_advisor_heretic
+		}
 		add_stability_or_adm_power = yes
 	}
 	option = {
-		name = culture_religion_events.12.b #One day you might all rise to be like [Root.DipAdvisor.GetName].
-		trigger = { has_country_flag = dip_advisor_heretic }
+		name = culture_religion_events.12.b		#One day you might all rise to be like [Root.DipAdvisor.GetName].
+		trigger = {
+			has_country_flag = dip_advisor_heretic
+		}
 		add_stability_or_adm_power = yes
 	}
 	option = {
-		name = culture_religion_events.12.c #One day you might all rise to be like [Root.MilAdvisor.GetName].
-		trigger = { has_country_flag = mil_advisor_heretic }
+		name = culture_religion_events.12.c		#One day you might all rise to be like [Root.MilAdvisor.GetName].
+		trigger = {
+			has_country_flag = mil_advisor_heretic
+		}
 		add_stability_or_adm_power = yes
 	}
 	after = {
@@ -2711,9 +2941,15 @@ country_event = {
 		}
 		trigger_switch = {
 			on_trigger = has_country_flag
-			adm_advisor_heretic = { clr_country_flag = adm_advisor_heretic }
-			dip_advisor_heretic = { clr_country_flag = dip_advisor_heretic }
-			mil_advisor_heretic = { clr_country_flag = mil_advisor_heretic }
+			adm_advisor_heretic = {
+				clr_country_flag = adm_advisor_heretic
+			}
+			dip_advisor_heretic = {
+				clr_country_flag = dip_advisor_heretic
+			}
+			mil_advisor_heretic = {
+				clr_country_flag = mil_advisor_heretic
+			}
 		}
 	}
 }
@@ -2768,26 +3004,28 @@ country_event = {
 		desc = culture_religion_events.13.dc
 	}
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = BAD_WITH_MONARCH_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 	}
-	
 	is_triggered_only = yes
-
 	trigger = {
 		employed_advisor = {
 			religion = heathen
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			if = {
@@ -2797,7 +3035,8 @@ country_event = {
 						religion = heathen
 					}
 				}
-				export_to_variable = { #Primarily for localization
+				export_to_variable = {
+					#Primarily for localization
 					variable_name = other_advisor_religion
 					value = adm_advisor_religion
 				}
@@ -2816,14 +3055,16 @@ country_event = {
 						religion = heathen
 					}
 				}
-				export_to_variable = { #Primarily for localization
+				export_to_variable = {
+					#Primarily for localization
 					variable_name = other_advisor_religion
 					value = dip_advisor_religion
 				}
 				set_country_flag = dip_advisor_heathen
 			}
 			else = {
-				export_to_variable = { #Primarily for localization
+				export_to_variable = {
+					#Primarily for localization
 					variable_name = other_advisor_religion
 					value = mil_advisor_religion
 				}
@@ -2831,27 +3072,32 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.13.a #It is time we let [Root.AdmAdvisor.GetName] go.
-		trigger = { has_country_flag = adm_advisor_heathen }
+		name = culture_religion_events.13.a		#It is time we let [Root.AdmAdvisor.GetName] go.
+		trigger = {
+			has_country_flag = adm_advisor_heathen
+		}
 		remove_advisor_by_category = ADM
 		add_adm_power = -25
 	}
 	option = {
-		name = culture_religion_events.13.b #It is time we let [Root.DipAdvisor.GetName] go.
-		trigger = { has_country_flag = dip_advisor_heathen }
+		name = culture_religion_events.13.b		#It is time we let [Root.DipAdvisor.GetName] go.
+		trigger = {
+			has_country_flag = dip_advisor_heathen
+		}
 		remove_advisor_by_category = DIP
 		add_dip_power = -25
 	}
 	option = {
-		name = culture_religion_events.13.c #It is time we let [Root.MilAdvisor.GetName] go.
-		trigger = { has_country_flag = mil_advisor_heathen }
+		name = culture_religion_events.13.c		#It is time we let [Root.MilAdvisor.GetName] go.
+		trigger = {
+			has_country_flag = mil_advisor_heathen
+		}
 		remove_advisor_by_category = MIL
 		add_mil_power = -25
 	}
 	option = {
-		name = culture_religion_events.13.e #We do not bow to the demands of petty dilettantes.
+		name = culture_religion_events.13.e		#We do not bow to the demands of petty dilettantes.
 		if = {
 			limit = {
 				calc_true_if = {
@@ -2893,9 +3139,15 @@ country_event = {
 		}
 		trigger_switch = {
 			on_trigger = has_country_flag
-			adm_advisor_heathen = { clr_country_flag = adm_advisor_heathen }
-			dip_advisor_heathen = { clr_country_flag = dip_advisor_heathen }
-			mil_advisor_heathen = { clr_country_flag = mil_advisor_heathen }
+			adm_advisor_heathen = {
+				clr_country_flag = adm_advisor_heathen
+			}
+			dip_advisor_heathen = {
+				clr_country_flag = dip_advisor_heathen
+			}
+			mil_advisor_heathen = {
+				clr_country_flag = mil_advisor_heathen
+			}
 		}
 	}
 }
@@ -2950,26 +3202,28 @@ country_event = {
 		desc = culture_religion_events.14.dc
 	}
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = BAD_WITH_MONARCH_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 	}
-	
 	is_triggered_only = yes
-
 	trigger = {
 		employed_advisor = {
 			religion = heretic
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			if = {
@@ -2979,7 +3233,8 @@ country_event = {
 						religion = heretic
 					}
 				}
-				export_to_variable = { #Primarily for localization
+				export_to_variable = {
+					#Primarily for localization
 					variable_name = other_advisor_religion
 					value = adm_advisor_religion
 				}
@@ -2998,14 +3253,16 @@ country_event = {
 						religion = heretic
 					}
 				}
-				export_to_variable = { #Primarily for localization
+				export_to_variable = {
+					#Primarily for localization
 					variable_name = other_advisor_religion
 					value = dip_advisor_religion
 				}
 				set_country_flag = dip_advisor_heretic
 			}
 			else = {
-				export_to_variable = { #Primarily for localization
+				export_to_variable = {
+					#Primarily for localization
 					variable_name = other_advisor_religion
 					value = mil_advisor_religion
 				}
@@ -3013,30 +3270,35 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.14.a #It is time we let [Root.AdmAdvisor.GetName] go.
-		trigger = { has_country_flag = adm_advisor_heretic }
+		name = culture_religion_events.14.a		#It is time we let [Root.AdmAdvisor.GetName] go.
+		trigger = {
+			has_country_flag = adm_advisor_heretic
+		}
 		remove_advisor_by_category = ADM
 		add_adm_power = -25
 		add_estate_church_loyalty_effect = yes
 	}
 	option = {
-		name = culture_religion_events.14.b #It is time we let [Root.DipAdvisor.GetName] go.
-		trigger = { has_country_flag = dip_advisor_heretic }
+		name = culture_religion_events.14.b		#It is time we let [Root.DipAdvisor.GetName] go.
+		trigger = {
+			has_country_flag = dip_advisor_heretic
+		}
 		remove_advisor_by_category = DIP
 		add_dip_power = -25
 		add_estate_church_loyalty_effect = yes
 	}
 	option = {
-		name = culture_religion_events.14.c #It is time we let [Root.MilAdvisor.GetName] go.
-		trigger = { has_country_flag = mil_advisor_heretic }
+		name = culture_religion_events.14.c		#It is time we let [Root.MilAdvisor.GetName] go.
+		trigger = {
+			has_country_flag = mil_advisor_heretic
+		}
 		remove_advisor_by_category = MIL
 		add_mil_power = -25
 		add_estate_church_loyalty_effect = yes
 	}
 	option = {
-		name = culture_religion_events.14.e #Preposterous.
+		name = culture_religion_events.14.e		#Preposterous.
 		reduce_estate_church_loyalty_effect = yes
 		add_legitimacy = -5
 		add_prestige = -5
@@ -3048,13 +3310,18 @@ country_event = {
 		}
 		trigger_switch = {
 			on_trigger = has_country_flag
-			adm_advisor_heretic = { clr_country_flag = adm_advisor_heretic }
-			dip_advisor_heretic = { clr_country_flag = dip_advisor_heretic }
-			mil_advisor_heretic = { clr_country_flag = mil_advisor_heretic }
+			adm_advisor_heretic = {
+				clr_country_flag = adm_advisor_heretic
+			}
+			dip_advisor_heretic = {
+				clr_country_flag = dip_advisor_heretic
+			}
+			mil_advisor_heretic = {
+				clr_country_flag = mil_advisor_heretic
+			}
 		}
 	}
 }
-
 
 # [Root.foreign_leader.GetName] and the [foreign_culture_province.Culture.GetName] People
 country_event = {
@@ -3062,42 +3329,51 @@ country_event = {
 	title = culture_religion_events.15.t
 	desc = culture_religion_events.15.d
 	goto = foreign_culture_province
-	
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = GOOD_WITH_MONARCH_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 	}
-	
 	is_triggered_only = yes
-
 	trigger = {
 		stability = 1
 		any_owned_province = {
 			has_owner_culture = no
 			has_owner_accepted_culture = no
-			NOT = { has_province_modifier = influential_power_holder }
+			NOT = {
+				has_province_modifier = influential_power_holder
+			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
 					has_owner_culture = no
 					has_owner_accepted_culture = no
-					NOT = { has_province_modifier = influential_power_holder }
+					NOT = {
+						has_province_modifier = influential_power_holder
+					}
 				}
 				save_event_target_as = foreign_culture_province
 				random_core_country = {
-					limit = { NOT = { tag = ROOT } }
+					limit = {
+						NOT = {
+							tag = ROOT
+						}
+					}
 					save_event_target_as = foreign_tag
 				}
 			}
@@ -3120,12 +3396,15 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.15.a #[Root.foreign_leader.GetName] will be a welcome addition to the Cabinet.
+		name = culture_religion_events.15.a		#[Root.foreign_leader.GetName] will be a welcome addition to the Cabinet.
 		add_prestige = -10
 		if = {
-			limit = { NOT = { monthly_income = 30 } }
+			limit = {
+				NOT = {
+					monthly_income = 30
+				}
+			}
 			define_advisor = {
 				name = foreign_leader
 				skill = 2
@@ -3147,11 +3426,13 @@ country_event = {
 		}
 	}
 	option = {
-		name = culture_religion_events.15.b #He serves us better as a local leader of our [foreign_culture_province.Culture.GetName] subjects.
+		name = culture_religion_events.15.b		#He serves us better as a local leader of our [foreign_culture_province.Culture.GetName] subjects.
 		event_target:foreign_culture_province = {
 			area = {
 				limit = {
-					NOT = { has_province_modifier = influential_power_holder }
+					NOT = {
+						has_province_modifier = influential_power_holder
+					}
 					owned_by = ROOT
 				}
 				add_province_modifier = {
@@ -3172,27 +3453,31 @@ country_event = {
 	title = culture_religion_events.16.t
 	desc = culture_religion_events.16.d
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = GOOD_WITH_MONARCH_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = HEIR_AND_FOREIGN_ADVISOR_eventPicture
 	}
-	
 	is_triggered_only = yes
-
 	trigger = {
 		stability = 1
 		any_owned_province = {
-			NOT = { religion_group = ROOT }
+			NOT = {
+				religion_group = ROOT
+			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			set_saved_name = {
@@ -3201,26 +3486,41 @@ country_event = {
 				scope = ROOT
 			}
 			random_owned_province = {
-				limit = { NOT = { religion_group = ROOT } }
+				limit = {
+					NOT = {
+						religion_group = ROOT
+					}
+				}
 				save_event_target_as = wrong_religion_province
 			}
 			random_list = {
-				25 = { set_country_flag = trader_flag }
-				25 = { set_country_flag = spymaster_flag }
-				25 = { set_country_flag = recruitmaster_flag }
-				25 = { set_country_flag = treasurer_flag }
+				25 = {
+					set_country_flag = trader_flag
+				}
+				25 = {
+					set_country_flag = spymaster_flag
+				}
+				25 = {
+					set_country_flag = recruitmaster_flag
+				}
+				25 = {
+					set_country_flag = treasurer_flag
+				}
 			}
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.16.a #Let us make an exception for the good of the country.
+		name = culture_religion_events.16.a		#Let us make an exception for the good of the country.
 		add_prestige = -5
 		trigger_switch = {
 			on_trigger = has_country_flag
 			trader_flag = {
 				if = {
-					limit = { NOT = { monthly_income = 30 } }
+					limit = {
+						NOT = {
+							monthly_income = 30
+						}
+					}
 					define_advisor = {
 						name = rising_star_advisor
 						skill = 2
@@ -3241,7 +3541,11 @@ country_event = {
 			}
 			spymaster_flag = {
 				if = {
-					limit = { NOT = { monthly_income = 30 } }
+					limit = {
+						NOT = {
+							monthly_income = 30
+						}
+					}
 					define_advisor = {
 						name = rising_star_advisor
 						skill = 2
@@ -3262,7 +3566,11 @@ country_event = {
 			}
 			recruitmaster_flag = {
 				if = {
-					limit = { NOT = { monthly_income = 30 } }
+					limit = {
+						NOT = {
+							monthly_income = 30
+						}
+					}
 					define_advisor = {
 						name = rising_star_advisor
 						skill = 2
@@ -3283,7 +3591,11 @@ country_event = {
 			}
 			treasurer_flag = {
 				if = {
-					limit = { NOT = { monthly_income = 30 } }
+					limit = {
+						NOT = {
+							monthly_income = 30
+						}
+					}
 					define_advisor = {
 						name = rising_star_advisor
 						skill = 2
@@ -3305,7 +3617,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = culture_religion_events.16.b #A remarkable individual, but we all have our place in life.
+		name = culture_religion_events.16.b		#A remarkable individual, but we all have our place in life.
 		add_prestige = 10
 	}
 	after = {
@@ -3334,42 +3646,49 @@ country_event = {
 	title = culture_religion_events.17.t
 	desc = culture_religion_events.17.d
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = BAD_WITH_MONARCH_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 	}
-	
 	is_triggered_only = yes
-
 	trigger = {
-		NOT = { stability = 0 }
+		NOT = {
+			stability = 0
+		}
 		any_owned_province = {
 			has_owner_culture = no
-			NOT = { culture_group = ROOT }
+			NOT = {
+				culture_group = ROOT
+			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
 				limit = {
 					has_owner_culture = no
-					NOT = { culture_group = ROOT }
+					NOT = {
+						culture_group = ROOT
+					}
 				}
 				save_event_target_as = wrong_culture_province
 			}
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.17.a #We have ministers who can communicate with these Barbarians
+		name = culture_religion_events.17.a		#We have ministers who can communicate with these Barbarians
 		trigger = {
 			employed_advisor = {
 				culture = event_target:wrong_culture_province
@@ -3397,31 +3716,37 @@ country_event = {
 		}
 	}
 	option = {
-		name = culture_religion_events.17.b #[Root.Monarch.GetName] [Root.Monarch.GetHerselfHimself] might be able to sway them.
+		name = culture_religion_events.17.b		#[Root.Monarch.GetName] [Root.Monarch.GetHerselfHimself] might be able to sway them.
 		trigger = {
 			ruler_culture = event_target:wrong_culture_province
 		}
 		add_prestige = -5
 	}
 	option = {
-		name = culture_religion_events.17.c #[Root.Heir.GetName] has always had a way with these people.
+		name = culture_religion_events.17.c		#[Root.Heir.GetName] has always had a way with these people.
 		trigger = {
 			heir_culture = event_target:wrong_culture_province
-			NOT = { ruler_culture = event_target:wrong_culture_province }
+			NOT = {
+				ruler_culture = event_target:wrong_culture_province
+			}
 		}
 		add_prestige = -5
 	}
 	option = {
-		name = culture_religion_events.17.e #Perhaps [Root.Consort.GetName] can convince them of our good will?
+		name = culture_religion_events.17.e		#Perhaps [Root.Consort.GetName] can convince them of our good will?
 		trigger = {
 			consort_culture = event_target:wrong_culture_province
-			NOT = { heir_culture = event_target:wrong_culture_province }
-			NOT = { ruler_culture = event_target:wrong_culture_province }
+			NOT = {
+				heir_culture = event_target:wrong_culture_province
+			}
+			NOT = {
+				ruler_culture = event_target:wrong_culture_province
+			}
 		}
 		add_prestige = -5
 	}
 	option = {
-		name = culture_religion_events.17.f #Best send in soldiers before this escalates.
+		name = culture_religion_events.17.f		#Best send in soldiers before this escalates.
 		event_target:wrong_culture_province = {
 			spawn_rebels = {
 				type = nationalist_rebels
@@ -3430,7 +3755,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = culture_religion_events.17.g #Perhaps some tax exemptions could ease their burden.
+		name = culture_religion_events.17.g		#Perhaps some tax exemptions could ease their burden.
 		add_years_of_income = -0.15
 	}
 }
@@ -3441,29 +3766,35 @@ country_event = {
 	title = culture_religion_events.18.t
 	desc = culture_religion_events.18.d
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = BAD_WITH_MONARCH_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 	}
-	
 	is_triggered_only = yes
-
 	trigger = {
 		government = monarchy
 		has_heir = yes
 		heir_age = 15
-		NOT = { heir_religion = ROOT }
+		NOT = {
+			heir_religion = ROOT
+		}
 		religion_group = new_variable:heir_religion
-		NOT = { has_heir_flag = legitimacy_questioned }
+		NOT = {
+			has_heir_flag = legitimacy_questioned
+		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			set_saved_name = {
@@ -3478,20 +3809,25 @@ country_event = {
 			set_heir_flag = legitimacy_questioned
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.18.a #
+		name = culture_religion_events.18.a		#
 		set_heir_religion = ROOT
 		if = {
-			limit = { heir_dip = 2 }
+			limit = {
+				heir_dip = 2
+			}
 			change_heir_dip = -1
 		}
 		else_if = {
-			limit = { heir_mil = 2 }
+			limit = {
+				heir_mil = 2
+			}
 			change_heir_mil = -1
 		}
 		else_if = {
-			limit = { heir_adm = 2 }
+			limit = {
+				heir_adm = 2
+			}
 			change_heir_adm = -1
 		}
 		else = {
@@ -3499,7 +3835,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = culture_religion_events.18.b #
+		name = culture_religion_events.18.b		#
 		add_heir_claim = -15
 	}
 	after = {
@@ -3517,29 +3853,37 @@ country_event = {
 	title = culture_religion_events.19.t
 	desc = culture_religion_events.19.d
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = BAD_WITH_MONARCH_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 	}
-	
 	is_triggered_only = yes
-
 	trigger = {
 		government = monarchy
 		has_heir = yes
 		heir_age = 15
-		NOT = { heir_religion = ROOT }
-		NOT = { religion_group = new_variable:heir_religion }
-		NOT = { has_heir_flag = legitimacy_questioned }
+		NOT = {
+			heir_religion = ROOT
+		}
+		NOT = {
+			religion_group = new_variable:heir_religion
+		}
+		NOT = {
+			has_heir_flag = legitimacy_questioned
+		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			export_to_variable = {
@@ -3549,24 +3893,29 @@ country_event = {
 			set_heir_flag = legitimacy_questioned
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.19.a #What harm could come of this?
+		name = culture_religion_events.19.a		#What harm could come of this?
 		add_heir_claim = -25
 	}
 	option = {
-		name = culture_religion_events.19.b #This is something [Root.Heir.SheHe] will have to keep to [Root.Heir.HerselfHimself].
+		name = culture_religion_events.19.b		#This is something [Root.Heir.SheHe] will have to keep to [Root.Heir.HerselfHimself].
 		set_heir_religion = ROOT
 		if = {
-			limit = { heir_dip = 2 }
+			limit = {
+				heir_dip = 2
+			}
 			change_heir_dip = -1
 		}
 		else_if = {
-			limit = { heir_mil = 2 }
+			limit = {
+				heir_mil = 2
+			}
 			change_heir_mil = -1
 		}
 		else_if = {
-			limit = { heir_adm = 2 }
+			limit = {
+				heir_adm = 2
+			}
 			change_heir_adm = -1
 		}
 		else = {
@@ -3587,34 +3936,42 @@ country_event = {
 	title = culture_religion_events.20.t
 	desc = culture_religion_events.20.d
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = BAD_WITH_MONARCH_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 	}
-	
 	is_triggered_only = yes
-
 	trigger = {
 		government = monarchy
 		has_regency = no
 		has_heir = no
-		NOT = { has_reform = ottoman_government }
-		NOT = { has_reform = mamluk_government }
-		NOT = { has_reform = states_general_reform }
+		NOT = {
+			has_reform = ottoman_government
+		}
+		NOT = {
+			has_reform = mamluk_government
+		}
+		NOT = {
+			has_reform = states_general_reform
+		}
 		is_lesser_in_union = no
 		has_government_attribute = heir
 		any_owned_province = {
 			has_owner_culture = no
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
@@ -3651,9 +4008,8 @@ country_event = {
 			set_heir_flag = legitimacy_questioned
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.20.a #A capital idea!
+		name = culture_religion_events.20.a		#A capital idea!
 		define_heir = {
 			age = 20
 			name = young_heir
@@ -3663,7 +4019,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = culture_religion_events.20.b #We will never see a [family_holdings.Culture.GetName] noble on our throne.
+		name = culture_religion_events.20.b		#We will never see a [family_holdings.Culture.GetName] noble on our throne.
 		add_legitimacy = 5
 	}
 	after = {
@@ -3677,28 +4033,34 @@ country_event = {
 	title = culture_religion_events.21.t
 	desc = culture_religion_events.21.d
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = BAD_WITH_MONARCH_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 	}
-	
 	is_triggered_only = yes
-
 	trigger = {
-		NOT = { has_ruler_flag = faith_question }
+		NOT = {
+			has_ruler_flag = faith_question
+		}
 		government = monarchy
-		NOT = { ruler_religion = ROOT }
+		NOT = {
+			ruler_religion = ROOT
+		}
 		legitimacy = 90
 		stability = 2
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			set_ruler_flag = faith_question
@@ -3708,9 +4070,8 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.21.a #[Root.Capital.GetCapitalName] shall be a [Root.new_monarch_religion.GetReligionName] city.
+		name = culture_religion_events.21.a		#[Root.Capital.GetCapitalName] shall be a [Root.new_monarch_religion.GetReligionName] city.
 		ai_chance = {
 			factor = 5
 			modifier = {
@@ -3723,7 +4084,7 @@ country_event = {
 		add_legitimacy = -30
 	}
 	option = {
-		name = culture_religion_events.21.b #We could never take such a risk.
+		name = culture_religion_events.21.b		#We could never take such a risk.
 		ai_chance = {
 			factor = 95
 		}
@@ -3743,29 +4104,35 @@ country_event = {
 	title = culture_religion_events.22.t
 	desc = culture_religion_events.22.d
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = BAD_WITH_MONARCH_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 	}
-	
 	is_triggered_only = yes
-
 	trigger = {
-		NOT = { has_ruler_flag = culture_question }
+		NOT = {
+			has_ruler_flag = culture_question
+		}
 		government = monarchy
-		NOT = { ruler_culture = ROOT }
+		NOT = {
+			ruler_culture = ROOT
+		}
 		heir_culture = new_variable:ruler_culture
 		legitimacy = 90
 		stability = 2
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			set_ruler_flag = culture_question
@@ -3775,9 +4142,8 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.22.a #
+		name = culture_religion_events.22.a		#
 		ai_chance = {
 			factor = 5
 			modifier = {
@@ -3787,8 +4153,12 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = { accepted_culture = new_variable:ruler_culture }
-				NOT = { culture_group = new_variable:ruler_culture }
+				NOT = {
+					accepted_culture = new_variable:ruler_culture
+				}
+				NOT = {
+					culture_group = new_variable:ruler_culture
+				}
 			}
 			add_stability = -3
 			add_legitimacy = -30
@@ -3800,7 +4170,7 @@ country_event = {
 		change_primary_culture = new_variable:ruler_culture
 	}
 	option = {
-		name = culture_religion_events.22.b #
+		name = culture_religion_events.22.b		#
 		ai_chance = {
 			factor = 95
 		}
@@ -3814,26 +4184,31 @@ country_event = {
 	}
 }
 
-
 # [Culture] immigration
 country_event = {
 	id = culture_religion_events.23
 	title = culture_religion_events.23.t
 	desc = culture_religion_events.23.d
 	picture = {
-		trigger = { NOT = { has_dlc = "Cradle of Civilization" } }
+		trigger = {
+			NOT = {
+				has_dlc = "Cradle of Civilization"
+			}
+		}
 		picture = GOOD_WITH_MONARCH_eventPicture
 	}
 	picture = {
-		trigger = { has_dlc = "Cradle of Civilization" }
+		trigger = {
+			has_dlc = "Cradle of Civilization"
+		}
 		picture = KING_OF_FOREIGN_CUSTOMS_eventPicture
 	}
-	
 	is_triggered_only = yes
-
 	trigger = {
 		government = monarchy
-		NOT = { ruler_culture = ROOT }
+		NOT = {
+			ruler_culture = ROOT
+		}
 		heir_culture = new_variable:ruler_culture
 		legitimacy = 90
 		stability = 2
@@ -3847,11 +4222,9 @@ country_event = {
 			is_capital = no
 		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
 			export_to_variable = {
@@ -3868,9 +4241,8 @@ country_event = {
 			}
 		}
 	}
-	
 	option = {
-		name = culture_religion_events.23.a #
+		name = culture_religion_events.23.a		#
 		ai_chance = {
 			factor = 5
 		}
@@ -3880,7 +4252,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = culture_religion_events.23.b #
+		name = culture_religion_events.23.b		#
 		ai_chance = {
 			factor = 95
 		}
@@ -3893,4 +4265,3 @@ country_event = {
 		}
 	}
 }
-

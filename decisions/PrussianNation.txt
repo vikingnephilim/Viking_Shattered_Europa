@@ -1,21 +1,21 @@
 country_decisions = {
-
 	institute_prussian_republic = {
 		major = yes
 		potential = {
 			always = no
 			NOT = {
 				OR = {
-					has_dlc = "Dharma" 
+					has_dlc = "Dharma"
 					has_dlc = "Emperor"
 				}
 			}
 			normal_or_historical_nations = yes
 			tag = PRU
 			government = republic
-			NOT = { has_reform = prussian_republic }
+			NOT = {
+				has_reform = prussian_republic
+			}
 		}
-
 		allow = {
 			is_revolutionary = no
 			OR = {
@@ -29,28 +29,27 @@ country_decisions = {
 				religion = waldensian
 			}
 		}
-
 		effect = {
 			add_government_reform = prussian_republic
 		}
 	}
-	
 	institute_prussian_monarchy = {
 		major = yes
 		potential = {
 			always = no
 			NOT = {
 				OR = {
-					has_dlc = "Dharma" 
+					has_dlc = "Dharma"
 					has_dlc = "Emperor"
 				}
 			}
 			normal_or_historical_nations = yes
 			tag = PRU
 			government = monarchy
-			NOT = { has_reform = prussian_monarchy_legacy }
+			NOT = {
+				has_reform = prussian_monarchy_legacy
+			}
 		}
-
 		allow = {
 			is_revolutionary = no
 			OR = {
@@ -64,26 +63,30 @@ country_decisions = {
 				religion = waldensian
 			}
 		}
-
 		effect = {
 			add_government_reform = prussian_monarchy
 		}
 	}
-
 	form_kingdom_of_prussia = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_prussia_flag }
+			NOT = {
+				has_country_flag = formed_prussia_flag
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = { has_reform = celestial_empire } 
+			NOT = {
+				has_reform = celestial_empire
+			}
 			tag = BRA
 			OR = {
-				NOT = { exists = PRU }
+				NOT = {
+					exists = PRU
+				}
 				ai = no
 			}
 			OR = {
@@ -95,23 +98,37 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 41	# Königsberg
+				province_id = 41				# Königsberg
 				AND = {
-					province_id = 43	# Danzig
-					ROOT = { NOT = { owns_core_province = 2995 } }
+					province_id = 43					# Danzig
+					ROOT = {
+						NOT = {
+							owns_core_province = 2995
+						}
+					}
 				}
 				AND = {
 					province_id = 2995
-					ROOT = { NOT = { owns_core_province = 2995 } }
+					ROOT = {
+						NOT = {
+							owns_core_province = 2995
+						}
+					}
 				}
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		allow = {
-			NOT = { exists = PRU }
+			NOT = {
+				exists = PRU
+			}
 			OR = {
 				religion = protestant
 				religion = reformed
@@ -124,8 +141,8 @@ country_decisions = {
 			}
 			owns_core_province = 41			# Königsberg
 			OR = {
-				owns_core_province = 43		# Danzig
-				owns_core_province = 2995	# Stolp
+				owns_core_province = 43				# Danzig
+				owns_core_province = 2995				# Stolp
 			}
 			is_at_war = no
 		}
@@ -137,19 +154,30 @@ country_decisions = {
 			if = {
 				limit = {
 					OR = {
-						NOT = { has_dlc = "Emperor" }
-						NOT = { hre_size = 1 }
+						NOT = {
+							has_dlc = "Emperor"
+						}
+						NOT = {
+							hre_size = 1
+						}
 					}
-					NOT = { government_rank = 2 }
+					NOT = {
+						government_rank = 2
+					}
 				}
 				set_government_rank = 2
 			}
 			if = {
 				limit = {
 					has_custom_ideas = no
-					NOT = { has_idea_group = PRU_ideas }
+					NOT = {
+						has_idea_group = PRU_ideas
+					}
 				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
 			}
 			random_owned_province = {
 				limit = {
@@ -165,7 +193,7 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 3650
 			}
-			if =  {
+			if = {
 				limit = {
 					NOT = {
 						government = republic
@@ -191,25 +219,29 @@ country_decisions = {
 			change_primary_culture = prussian
 			PRU = {
 				random_owned_province = {
-					limit = { 
-						is_capital = no 
+					limit = {
+						is_capital = no
 						OR = {
 							culture = saxon
 							culture = pommeranian
 						}
-					} 
+					}
 					change_culture = prussian
 				}
 			}
 			west_prussia_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = PRU
 			}
 			east_prussia_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = PRU
 			}
@@ -222,21 +254,26 @@ country_decisions = {
 			factor = 1
 		}
 	}
-	
 	prussian_nation = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_prussia_flag }
+			NOT = {
+				has_country_flag = formed_prussia_flag
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
 			tag = TEU
-			NOT = { has_reform = celestial_empire } 
+			NOT = {
+				has_reform = celestial_empire
+			}
 			OR = {
-				NOT = { exists = PRU }
+				NOT = {
+					exists = PRU
+				}
 				ai = no
 			}
 			OR = {
@@ -255,14 +292,20 @@ country_decisions = {
 			}
 		}
 		provinces_to_highlight = {
-			province_id = 41	# Königsberg
+			province_id = 41			# Königsberg
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		allow = {
-			NOT = { exists = PRU }
+			NOT = {
+				exists = PRU
+			}
 			is_at_war = no
 			OR = {
 				religion = protestant
@@ -274,8 +317,9 @@ country_decisions = {
 				religion = lollard
 				religion = waldensian
 			}
-			owns_core_province = 41 # Königsberg
-			41 = { 					# Königsberg
+			owns_core_province = 41			# Königsberg
+			41 = {
+				# Königsberg
 				is_state = yes
 			}
 		}
@@ -288,18 +332,22 @@ country_decisions = {
 			swap_non_generic_missions = yes
 			east_prussia_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = PRU
 			}
 			west_prussia_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = PRU
 			}
 			add_prestige = 25
-			if =  {
+			if = {
 				limit = {
 					is_revolutionary = no
 					NOT = {
@@ -322,15 +370,25 @@ country_decisions = {
 				remove_government_reform = states_general_reform
 			}
 			every_neighbor_country = {
-				limit = { government = monarchy }
-				add_opinion = { who = ROOT modifier = secularized_monastic_order }
+				limit = {
+					government = monarchy
+				}
+				add_opinion = {
+					who = ROOT
+					modifier = secularized_monastic_order
+				}
 			}
 			if = {
 				limit = {
 					has_custom_ideas = no
-					NOT = { has_idea_group = PRU_ideas }
+					NOT = {
+						has_idea_group = PRU_ideas
+					}
 				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -342,13 +400,14 @@ country_decisions = {
 			factor = 1
 		}
 	}
-	
 	prussian_nation_general = {
 		major = yes
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_prussia_flag }
+			NOT = {
+				has_country_flag = formed_prussia_flag
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -364,21 +423,37 @@ country_decisions = {
 				primary_culture = saxon
 				primary_culture = prussian
 			}
-			NOT = { tag = PRU }
+			NOT = {
+				tag = PRU
+			}
 			OR = {
-				NOT = { exists = PRU }
+				NOT = {
+					exists = PRU
+				}
 				ai = no
 			}
-			NOT = { tag = GER }
-			NOT = { tag = HLR }
-			NOT = { tag = BRA }
-			NOT = { has_reform = celestial_empire }
-			NOT = { tag = TEU }
-			NOT = {	government = theocracy }
+			NOT = {
+				tag = GER
+			}
+			NOT = {
+				tag = HLR
+			}
+			NOT = {
+				tag = BRA
+			}
+			NOT = {
+				has_reform = celestial_empire
+			}
+			NOT = {
+				tag = TEU
+			}
+			NOT = {
+				government = theocracy
+			}
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 41	# Königsberg
+				province_id = 41				# Königsberg
 				AND = {
 					OR = {
 						area = west_prussia_area
@@ -398,12 +473,18 @@ country_decisions = {
 				}
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		allow = {
-			NOT = { exists = PRU }
+			NOT = {
+				exists = PRU
+			}
 			is_nomad = no
 			is_at_war = no
 			OR = {
@@ -428,26 +509,36 @@ country_decisions = {
 			if = {
 				limit = {
 					OR = {
-						NOT = { has_dlc = "Emperor" }
-						NOT = { hre_size = 1 }
+						NOT = {
+							has_dlc = "Emperor"
+						}
+						NOT = {
+							hre_size = 1
+						}
 					}
-					NOT = { government_rank = 2 }
+					NOT = {
+						government_rank = 2
+					}
 				}
 				set_government_rank = 2
 			}
 			east_prussia_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = PRU
 			}
 			west_prussia_area = {
 				limit = {
-					NOT = { owned_by = ROOT }
+					NOT = {
+						owned_by = ROOT
+					}
 				}
 				add_permanent_claim = PRU
 			}
-			if =  {
+			if = {
 				limit = {
 					is_revolutionary = no
 					NOT = {
@@ -475,21 +566,26 @@ country_decisions = {
 				change_culture = prussian
 			}
 			random_owned_province = {
-				limit = { 
-					is_capital = no 
+				limit = {
+					is_capital = no
 					OR = {
 						culture = saxon
 						culture = pommeranian
 					}
-				} 
+				}
 				change_culture = prussian
 			}
 			if = {
 				limit = {
 					has_custom_ideas = no
-					NOT = { has_idea_group = PRU_ideas }
+					NOT = {
+						has_idea_group = PRU_ideas
+					}
 				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -501,5 +597,4 @@ country_decisions = {
 			factor = 1
 		}
 	}
-
 }

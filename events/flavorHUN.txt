@@ -3,19 +3,15 @@
 #
 # written by Johan Andersson & Henrik Lohmander
 ########################################
-
 namespace = flavor_hun
 normal_or_historical_nations = yes
-
 # Diet of 1445
 country_event = {
 	id = flavor_hun.1
 	title = flavor_hun.1.t
 	desc = flavor_hun.1.d
 	picture = DEBATE_REPUBLICAN_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		has_regency = yes
@@ -23,18 +19,22 @@ country_event = {
 		is_lesser_in_union = no
 		has_leader = "János Hunyadi"
 		is_year = 1445
-		NOT = { is_year = 1470 }
+		NOT = {
+			is_year = 1470
+		}
 		has_government_attribute = heir
 	}
-
 	mean_time_to_happen = {
 		months = 6
 	}
-
 	option = {
-		ai_chance = { factor = 50 }
+		ai_chance = {
+			factor = 50
+		}
 		trigger = {
-			HAB = { has_heir = "Ladislaus Postumus" }
+			HAB = {
+				has_heir = "Ladislaus Postumus"
+			}
 		}
 		name = flavor_hun.1.a
 		define_ruler = {
@@ -56,7 +56,11 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man"
 			}
-			hidden_effect = { add_ruler_personality_ancestor = { key = bold_fighter } }
+			hidden_effect = {
+				add_ruler_personality_ancestor = {
+					key = bold_fighter
+				}
+			}
 		}
 		define_heir = {
 			name = "Ladislaus Postumus"
@@ -69,10 +73,14 @@ country_event = {
 			birth_date = 1440.2.22
 		}
 		custom_tooltip = hun_ladislaus_postumus_warning_tooltip
-		hidden_effect = { set_country_flag = hun_ladislaus_postumus_heir }
+		hidden_effect = {
+			set_country_flag = hun_ladislaus_postumus_heir
+		}
 		every_country = {
 			limit = {
-				NOT = { tag = ROOT }
+				NOT = {
+					tag = ROOT
+				}
 				dynasty = "von Habsburg"
 			}
 			add_opinion = {
@@ -88,9 +96,13 @@ country_event = {
 	option = {
 		name = flavor_hun.1.b
 		trigger = {
-			HAB = { has_heir = "Ladislaus Postumus" }
+			HAB = {
+				has_heir = "Ladislaus Postumus"
+			}
 		}
-		ai_chance = { factor = 50 }
+		ai_chance = {
+			factor = 50
+		}
 		add_stability_or_adm_power = yes
 		define_heir = {
 			name = "Ladislaus Postumus"
@@ -110,17 +122,24 @@ country_event = {
 			}
 		}
 		custom_tooltip = hun_ladislaus_postumus_warning_tooltip
-		hidden_effect = { set_country_flag = hun_ladislaus_postumus_heir }
+		hidden_effect = {
+			set_country_flag = hun_ladislaus_postumus_heir
+		}
 		add_estate_loyalty = {
 			estate = estate_nobles
 			loyalty = -15
 		}
-
 	}
 	option = {
-		ai_chance = { factor = 1 }
+		ai_chance = {
+			factor = 1
+		}
 		trigger = {
-			HAB = { NOT = { has_heir = "Ladislaus Postumus" } }
+			HAB = {
+				NOT = {
+					has_heir = "Ladislaus Postumus"
+				}
+			}
 		}
 		name = flavor_hun.1.c
 		define_ruler = {
@@ -155,7 +174,11 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man"
 			}
-			hidden_effect = { add_ruler_personality_ancestor = { key = bold_fighter } }
+			hidden_effect = {
+				add_ruler_personality_ancestor = {
+					key = bold_fighter
+				}
+			}
 		}
 		add_estate_loyalty = {
 			estate = estate_nobles
@@ -170,13 +193,13 @@ country_event = {
 	title = flavor_hun.2.t
 	desc = flavor_hun.2.d
 	picture = ELECTION_REPUBLICAN_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		is_year = 1450
-		NOT = { is_year = 1457 }
+		NOT = {
+			is_year = 1457
+		}
 		OR = {
 			heir_age = 15
 			has_heir = no
@@ -185,7 +208,9 @@ country_event = {
 			limit = {
 				has_heir = no
 			}
-			NOT = { has_country_flag = hun_matyas_already_existed }
+			NOT = {
+				has_country_flag = hun_matyas_already_existed
+			}
 		}
 		has_regency = no
 		is_lesser_in_union = no
@@ -195,21 +220,22 @@ country_event = {
 			has_regency = no
 		}
 		has_government_attribute = heir
-		NOT = { has_country_flag = hun_has_had_matthias_corvinus_event }
+		NOT = {
+			has_country_flag = hun_has_had_matthias_corvinus_event
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 1
 	}
-
 	immediate = {
 		hidden_effect = {
-			set_country_flag = hun_has_had_matthias_corvinus_event #for missions
+			set_country_flag = hun_has_had_matthias_corvinus_event			#for missions
 		}
 	}
-
 	option = {
-		ai_chance = { factor = 75 }
+		ai_chance = {
+			factor = 75
+		}
 		trigger = {
 			OR = {
 				has_heir = no
@@ -218,8 +244,12 @@ country_event = {
 		}
 		name = flavor_hun.2.a
 		remove_historical_friend = HAB
-		HAB = { remove_historical_friend = HUN }
-		hidden_effect = { clr_country_flag = hun_ladislaus_postumus_heir }
+		HAB = {
+			remove_historical_friend = HUN
+		}
+		hidden_effect = {
+			clr_country_flag = hun_ladislaus_postumus_heir
+		}
 		define_heir = {
 			name = "Mátyás"
 			culture = hungarian
@@ -234,7 +264,11 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man"
 			}
-			hidden_effect = { add_heir_personality_ancestor = { key = just } }
+			hidden_effect = {
+				add_heir_personality_ancestor = {
+					key = just
+				}
+			}
 		}
 		set_country_flag = hun_keep_ladislaus_alive
 		define_ruler = {
@@ -252,24 +286,34 @@ country_event = {
 				}
 			}
 			hidden_effect = {
-				country_event = { id = flavor_hun.10 days = 1 }
+				country_event = {
+					id = flavor_hun.10
+					days = 1
+				}
 			}
 		}
 	}
 	option = {
 		name = flavor_hun.2.b
-		ai_chance = { factor = 25 }
+		ai_chance = {
+			factor = 25
+		}
 		add_stability_or_adm_power = yes
 		HUN = {
 			if = {
-				limit = { senior_union_with = CRO }
+				limit = {
+					senior_union_with = CRO
+				}
 				inherit = CRO
 			}
 		}
 		HAB = {
 			create_union = HUN
 			hidden_effect = {
-				country_event = { id = flavor_hun.3 days = 1 }
+				country_event = {
+					id = flavor_hun.3
+					days = 1
+				}
 			}
 		}
 	}
@@ -277,8 +321,12 @@ country_event = {
 		name = flavor_hun.2.c
 		trigger = {
 			has_heir = yes
-			NOT = { has_heir = "Ladislaus Postumus" }
-			NOT = { dynasty = HAB }
+			NOT = {
+				has_heir = "Ladislaus Postumus"
+			}
+			NOT = {
+				dynasty = HAB
+			}
 		}
 		ai_chance = {
 			factor = 25
@@ -290,7 +338,9 @@ country_event = {
 			}
 		}
 		remove_historical_friend = HAB
-		HAB = { remove_historical_friend = HUN }
+		HAB = {
+			remove_historical_friend = HUN
+		}
 		kill_ruler = yes
 		HAB = {
 			tooltip = {
@@ -301,7 +351,10 @@ country_event = {
 				}
 			}
 			hidden_effect = {
-				country_event = { id = flavor_hun.10 days = 1 }
+				country_event = {
+					id = flavor_hun.10
+					days = 1
+				}
 			}
 		}
 	}
@@ -332,17 +385,16 @@ country_event = {
 		desc = flavor_hun.201.d.heir
 	}
 	picture = DEATH_OF_HEIR_eventPicture
-
 	mean_time_to_happen = {
-		years = 20 #so it should happen about 1/3 of games
+		years = 20		#so it should happen about 1/3 of games
 	}
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		is_year = 1450
-		NOT = { is_year = 1457 }
+		NOT = {
+			is_year = 1457
+		}
 		OR = {
 			has_heir = "Ladislaus Postumus"
 			has_ruler = "Ladislaus Postumus I"
@@ -353,23 +405,30 @@ country_event = {
 				has_ruler = "Ladislaus Postumus"
 			}
 		}
-		NOT = { has_country_flag = hun_has_had_matthias_corvinus_event }
+		NOT = {
+			has_country_flag = hun_has_had_matthias_corvinus_event
+		}
 		is_lesser_in_union = no
 	}
-
 	immediate = {
 		set_country_flag = hun_has_had_matthias_corvinus_event
 	}
-
-	option = { #Heir dies, get Matyas
+	option = {
+		#Heir dies, get Matyas
 		name = flavor_hun.201.a
-		ai_chance = { factor = 1 }
+		ai_chance = {
+			factor = 1
+		}
 		trigger = {
 			has_heir = "Ladislaus Postumus"
 		}
 		remove_historical_friend = HAB
-		HAB = { remove_historical_friend = HUN }
-		kill_heir = { allow_new_heir = no }
+		HAB = {
+			remove_historical_friend = HUN
+		}
+		kill_heir = {
+			allow_new_heir = no
+		}
 		define_heir = {
 			name = "Mátyás"
 			culture = hungarian
@@ -384,7 +443,11 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man"
 			}
-			hidden_effect = { add_heir_personality_ancestor = { key = just } }
+			hidden_effect = {
+				add_heir_personality_ancestor = {
+					key = just
+				}
+			}
 		}
 		HAB = {
 			tooltip = {
@@ -395,22 +458,31 @@ country_event = {
 				}
 			}
 			hidden_effect = {
-				country_event = { id = flavor_hun.10 days = 1 }
+				country_event = {
+					id = flavor_hun.10
+					days = 1
+				}
 			}
 		}
 	}
-	option = { #Ruler dies, keep his heir
+	option = {
+		#Ruler dies, keep his heir
 		name = flavor_hun.201.b
-		ai_chance = { factor = 1 }
+		ai_chance = {
+			factor = 1
+		}
 		trigger = {
 			has_ruler = "Ladislaus Postumus I"
 			has_heir = yes
 		}
 		kill_ruler = yes
 	}
-	option = { #Ruler dies with no heir, take a union
+	option = {
+		#Ruler dies with no heir, take a union
 		name = flavor_hun.201.c
-		ai_chance = { factor = 1 }
+		ai_chance = {
+			factor = 1
+		}
 		trigger = {
 			has_ruler = "Ladislaus Postumus I"
 			has_heir = no
@@ -419,26 +491,36 @@ country_event = {
 		kill_ruler = yes
 		HUN = {
 			if = {
-				limit = { senior_union_with = CRO }
+				limit = {
+					senior_union_with = CRO
+				}
 				inherit = CRO
 			}
 		}
 		HAB = {
 			create_union = HUN
 			hidden_effect = {
-				country_event = { id = flavor_hun.3 days = 1 }
+				country_event = {
+					id = flavor_hun.3
+					days = 1
+				}
 			}
 		}
 	}
-	option = { #Ruler dies with no heir, take Matyas
+	option = {
+		#Ruler dies with no heir, take Matyas
 		name = flavor_hun.201.d
-		ai_chance = { factor = 3 }
+		ai_chance = {
+			factor = 3
+		}
 		trigger = {
 			has_ruler = "Ladislaus Postumus I"
 			has_heir = no
 		}
 		remove_historical_friend = HAB
-		HAB = { remove_historical_friend = HUN }
+		HAB = {
+			remove_historical_friend = HUN
+		}
 		define_heir = {
 			name = "Mátyás"
 			culture = hungarian
@@ -453,7 +535,11 @@ country_event = {
 			limit = {
 				has_dlc = "Rights of Man"
 			}
-			hidden_effect = { add_heir_personality_ancestor = { key = just } }
+			hidden_effect = {
+				add_heir_personality_ancestor = {
+					key = just
+				}
+			}
 		}
 		kill_ruler = yes
 		HAB = {
@@ -465,7 +551,10 @@ country_event = {
 				}
 			}
 			hidden_effect = {
-				country_event = { id = flavor_hun.10 days = 1 }
+				country_event = {
+					id = flavor_hun.10
+					days = 1
+				}
 			}
 		}
 	}
@@ -477,10 +566,8 @@ country_event = {
 	title = flavor_hun.3.t
 	desc = flavor_hun.3.d
 	picture = DIPLOMACY_eventPicture
-
 	fire_only_once = yes
 	is_triggered_only = yes
-
 	option = {
 		name = flavor_hun.3.a
 		add_legitimacy = 5
@@ -494,12 +581,11 @@ country_event = {
 	title = flavor_hun.10.t
 	desc = flavor_hun.10.d
 	picture = DIPLOMACY_eventPicture
-
 	is_triggered_only = yes
-
 	option = {
 		name = flavor_hun.10.a
-		if = { #Only add if we haven't got one already.
+		if = {
+			#Only add if we haven't got one already.
 			limit = {
 				has_casus_belli = {
 					type = cb_restore_personal_union
@@ -530,27 +616,29 @@ country_event = {
 	title = flavor_hun.4.t
 	desc = flavor_hun.4.d
 	picture = REFORM_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		is_year = 1466
-		NOT = { is_year = 1470 }
+		NOT = {
+			is_year = 1470
+		}
 		has_regency = no
 		dynasty = "Hunyadi"
 	}
-
 	mean_time_to_happen = {
 		months = 18
 	}
-
 	option = {
-		ai_chance = { factor = 50 }
+		ai_chance = {
+			factor = 50
+		}
 		name = flavor_hun.4.a
 		if = {
 			limit = {
-				NOT = { has_completed_all_reforms_trigger = yes }
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
 			}
 			add_reform_progress_small_effect = yes
 		}
@@ -561,11 +649,15 @@ country_event = {
 		}
 	}
 	option = {
-		ai_chance = { factor = 50 }
+		ai_chance = {
+			factor = 50
+		}
 		name = flavor_hun.4.b
 		if = {
 			limit = {
-				NOT = { has_completed_all_reforms_trigger = yes }
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
 			}
 			add_reform_progress_small_effect = yes
 		}
@@ -583,28 +675,26 @@ country_event = {
 	title = flavor_hun.5.t
 	desc = flavor_hun.5.d
 	picture = UNIVERSITY_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		is_year = 1465
 		has_regency = no
-		owns = 1772 #Pressburg
+		owns = 1772		#Pressburg
 		dynasty = "Hunyadi"
 		religion = catholic
 	}
-
 	mean_time_to_happen = {
 		months = 12
 	}
-
 	option = {
 		name = flavor_hun.5.a
 		add_prestige = 10
 		if = {
 			limit = {
-				NOT = { has_completed_all_reforms_trigger = yes }
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
 			}
 			add_reform_progress_small_effect = yes
 		}
@@ -621,19 +711,17 @@ country_event = {
 	title = flavor_hun.6.t
 	desc = flavor_hun.6.d
 	picture = INVENTION_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		is_year = 1473
-		NOT = { is_year = 1500 }
+		NOT = {
+			is_year = 1500
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 12
 	}
-
 	option = {
 		name = flavor_hun.6.a
 		add_adm_power = 50
@@ -646,22 +734,22 @@ country_event = {
 	title = flavor_hun.7.t
 	desc = flavor_hun.7.d
 	picture = COURT_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		is_year = 1490
-		NOT = { is_year = 1530 }
+		NOT = {
+			is_year = 1530
+		}
 		is_neighbor_of = TUR
 		has_regency = no
-		NOT = { ADM = 5 }
+		NOT = {
+			ADM = 5
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 12
 	}
-
 	option = {
 		name = flavor_hun.7.a
 		add_ruler_modifier = {
@@ -682,7 +770,6 @@ country_event = {
 			estate = estate_nobles
 			loyalty = -25
 		}
-
 	}
 }
 
@@ -692,28 +779,30 @@ country_event = {
 	title = flavor_hun.8.t
 	desc = flavor_hun.8.d
 	picture = ANGRY_MOB_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		is_year = 1614
-		NOT = { is_year = 1620 }
+		NOT = {
+			is_year = 1620
+		}
 		government = monarchy
 	}
-
 	mean_time_to_happen = {
 		months = 12
 	}
-
 	option = {
 		name = flavor_hun.8.a
 		if = {
-			limit = { is_lesser_in_union = yes }
+			limit = {
+				is_lesser_in_union = yes
+			}
 			add_prestige = -10
 		}
 		if = {
-			limit = { is_lesser_in_union = no }
+			limit = {
+				is_lesser_in_union = no
+			}
 			add_legitimacy = -10
 		}
 	}
@@ -729,9 +818,7 @@ country_event = {
 	title = flavor_hun.9.t
 	desc = flavor_hun.9.d
 	picture = BATTLE_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		truce_with = TUR
@@ -748,22 +835,24 @@ country_event = {
 				previous_owner = HUN
 			}
 		}
-		NOT = { is_year = 1650 }
+		NOT = {
+			is_year = 1650
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 12
 	}
-
 	option = {
 		name = flavor_hun.9.a
 		every_owned_province = {
 			limit = {
-				NOT = { is_core = TRA }
+				NOT = {
+					is_core = TRA
+				}
 				OR = {
 					area = transylvania_area
 					area = southern_transylvania_area
-					area = alfold_area #Additional just to be sure:
+					area = alfold_area					#Additional just to be sure:
 					area = wallachia_area
 					area = moldavia_area
 					area = bulgaria_area
@@ -776,12 +865,13 @@ country_event = {
 		}
 		every_owned_province = {
 			limit = {
-				NOT = { is_core = TRA }
+				NOT = {
+					is_core = TRA
+				}
 			}
 			add_permanent_claim = HAB
 		}
 	}
-
 }
 
 #magyar Peasant Revolt
@@ -791,19 +881,17 @@ country_event = {
 	title = flavor_hun.11.t
 	desc = flavor_hun.11.d
 	picture = BATTLE_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
-		NOT = { stability = 3 }
+		NOT = {
+			stability = 3
+		}
 		has_ruler_modifier = hun_power_to_magnates
 	}
-
 	mean_time_to_happen = {
 		months = 60
 	}
-
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
@@ -821,18 +909,21 @@ country_event = {
 				random_neighbor_province = {
 					limit = {
 						is_capital = no
-						not = { has_province_flag = hun_peasant_revolt }
+						not = {
+							has_province_flag = hun_peasant_revolt
+						}
 					}
 					set_province_flag = hun_peasant_revolt2
 				}
 			}
 		}
 	}
-
 	option = {
-		name = flavor_hun.11.a #Ok.
+		name = flavor_hun.11.a		#Ok.
 		random_owned_province = {
-			limit = { has_province_flag = hun_peasant_revolt }
+			limit = {
+				has_province_flag = hun_peasant_revolt
+			}
 			spawn_rebels = {
 				type = anti_tax_rebels
 				size = 2
@@ -841,7 +932,9 @@ country_event = {
 			clr_province_flag = hun_peasant_revolt
 		}
 		every_owned_province = {
-			limit = { has_province_flag = hun_peasant_revolt2 }
+			limit = {
+				has_province_flag = hun_peasant_revolt2
+			}
 			spawn_rebels = {
 				type = anti_tax_rebels
 				size = 1
@@ -857,25 +950,25 @@ country_event = {
 	title = flavor_hun.12.t
 	desc = flavor_hun.12.d
 	picture = ADVISOR_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		is_year = 1490
-		NOT = { is_year = 1520 }
+		NOT = {
+			is_year = 1520
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 90
 	}
-
 	option = {
 		name = flavor_hun.12.a
 		add_adm_power = 100
 		if = {
 			limit = {
-				NOT = { has_completed_all_reforms_trigger = yes }
+				NOT = {
+					has_completed_all_reforms_trigger = yes
+				}
 			}
 			add_reform_progress_small_effect = yes
 		}
@@ -905,10 +998,8 @@ country_event = {
 				}
 			}
 		}
-
 	}
 }
-
 
 #The Catholics in Bohemia seek our aid
 country_event = {
@@ -916,11 +1007,8 @@ country_event = {
 	title = flavor_hun.13.t
 	desc = flavor_hun.13.d
 	picture = BAD_WITH_MONARCH_eventPicture
-
 	fire_only_once = yes
-
 	is_triggered_only = yes
-
 	option = {
 		name = flavor_hun.13.a
 		ai_chance = {
@@ -949,19 +1037,25 @@ country_event = {
 		add_prestige = 10
 		if = {
 			limit = {
-				265 = { #Moravia
+				265 = {
+					#Moravia
 					owned_by = BOH
 				}
 			}
-			265 = { add_permanent_claim = HUN }
+			265 = {
+				add_permanent_claim = HUN
+			}
 		}
 		if = {
 			limit = {
-				4237 = { #Moravia
+				4237 = {
+					#Moravia
 					owned_by = BOH
 				}
 			}
-			4237 = { add_permanent_claim = HUN }
+			4237 = {
+				add_permanent_claim = HUN
+			}
 		}
 		if = {
 			limit = {
@@ -970,7 +1064,9 @@ country_event = {
 				}
 			}
 			silesia_area = {
-				limit = { country_or_non_sovereign_subject_holds = BOH }
+				limit = {
+					country_or_non_sovereign_subject_holds = BOH
+				}
 				add_permanent_claim = HUN
 			}
 		}
@@ -990,7 +1086,9 @@ country_event = {
 				}
 			}
 			hidden_effect = {
-				country_event = { id = flavor_hun.14 }
+				country_event = {
+					id = flavor_hun.14
+				}
 			}
 		}
 	}
@@ -1028,11 +1126,8 @@ country_event = {
 	title = flavor_hun.14.t
 	desc = flavor_hun.14.d
 	picture = BAD_WITH_MONARCH_eventPicture
-
 	fire_only_once = yes
-
 	is_triggered_only = yes
-
 	option = {
 		name = flavor_hun.14.a
 		add_opinion = {
@@ -1042,19 +1137,25 @@ country_event = {
 		tooltip = {
 			if = {
 				limit = {
-					265 = { #Moravia
+					265 = {
+						#Moravia
 						owned_by = BOH
 					}
 				}
-				265 = { add_permanent_claim = HUN }
+				265 = {
+					add_permanent_claim = HUN
+				}
 			}
 			if = {
 				limit = {
-					4237 = { #Moravia
+					4237 = {
+						#Moravia
 						owned_by = BOH
 					}
 				}
-				4237 = { add_permanent_claim = HUN }
+				4237 = {
+					add_permanent_claim = HUN
+				}
 			}
 			if = {
 				limit = {
@@ -1063,7 +1164,9 @@ country_event = {
 					}
 				}
 				silesia_area = {
-					limit = { country_or_non_sovereign_subject_holds = BOH }
+					limit = {
+						country_or_non_sovereign_subject_holds = BOH
+					}
 					add_permanent_claim = HUN
 				}
 			}
@@ -1072,16 +1175,12 @@ country_event = {
 }
 
 #Banditry in Slovakia
-
 country_event = {
 	id = flavor_hun.15
 	title = flavor_hun.15.t
 	desc = flavor_hun.15.d
 	picture = BAD_WITH_MONARCH_eventPicture
-
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		is_at_war = no
@@ -1090,21 +1189,20 @@ country_event = {
 			owned_by = ROOT
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 39
 	}
-
 	immediate = {
 		hidden_effect = {
 			set_country_flag = hun_had_mercenaries_in_slovakia
 		}
 	}
-
 	option = {
-		name = flavor_hun.15.a #We must crush these bandits!
+		name = flavor_hun.15.a		#We must crush these bandits!
 		slovakia_area = {
-			limit = { owned_by = ROOT }
+			limit = {
+				owned_by = ROOT
+			}
 			add_province_modifier = {
 				name = "hun_curtailing_banditry_in_upper_hungary"
 				duration = 3650
@@ -1114,7 +1212,9 @@ country_event = {
 		random_owned_province = {
 			limit = {
 				area = slovakia_area
-				NOT = { fort_level = 1 }
+				NOT = {
+					fort_level = 1
+				}
 			}
 			spawn_rebels = {
 				type = nationalist_rebels
@@ -1124,9 +1224,11 @@ country_event = {
 		}
 	}
 	option = {
-		name = flavor_hun.15.b #Leave it to the local lords to handle.
+		name = flavor_hun.15.b		#Leave it to the local lords to handle.
 		slovakia_area = {
-			limit = { owned_by = ROOT }
+			limit = {
+				owned_by = ROOT
+			}
 			add_province_modifier = {
 				name = "hun_banditry_in_upper_hungary"
 				duration = 3650
@@ -1136,16 +1238,13 @@ country_event = {
 	}
 }
 
-
 #Black Army
 country_event = {
 	id = flavor_hun.16
 	title = flavor_hun.16.t
 	desc = flavor_hun.16.d
 	picture = SIEGE_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		has_regency = no
@@ -1153,18 +1252,17 @@ country_event = {
 			has_country_flag = hun_had_mercenaries_in_slovakia
 			is_year = 1455
 		}
-		NOT = { is_year = 1470 }
+		NOT = {
+			is_year = 1470
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 45
-
 		modifier = {
 			factor = 0.5
 			has_country_flag = hun_had_mercenaries_in_slovakia
 		}
 	}
-
 	option = {
 		name = flavor_hun.16.a
 		add_years_of_income = -0.75
@@ -1201,16 +1299,15 @@ country_event = {
 	title = flavor_hun.17.t
 	desc = flavor_hun.17.d
 	picture = BAD_WITH_MONARCH_eventPicture
-
 	is_triggered_only = yes
-
 	trigger = {
 		tag = HUN
 		has_regency = no
 		has_country_modifier = hun_black_army
-		NOT = { has_reform = black_army_reform }
+		NOT = {
+			has_reform = black_army_reform
+		}
 	}
-
 	option = {
 		name = flavor_hun.17.a
 		remove_country_modifier = hun_black_army
@@ -1226,10 +1323,10 @@ country_event = {
 			}
 			hidden_effect = {
 				add_estate_influence_modifier = {
-						estate = estate_nobles
-						desc = EST_VAL_ABOLISHED_BLACK_ARMY
-						influence = 5
-						duration = 3650
+					estate = estate_nobles
+					desc = EST_VAL_ABOLISHED_BLACK_ARMY
+					influence = 5
+					duration = 3650
 				}
 			}
 		}
@@ -1255,19 +1352,17 @@ country_event = {
 	title = flavor_hun.18.t
 	desc = flavor_hun.18.d
 	picture = MILITARY_CAMP_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		current_age = age_of_reformation
 		has_country_modifier = hun_black_army
-		NOT = { has_reform = black_army_reform }
+		NOT = {
+			has_reform = black_army_reform
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 12
 	}
-
 	option = {
 		name = flavor_hun.18.a
 		remove_country_modifier = hun_black_army
@@ -1281,7 +1376,8 @@ country_event = {
 			custom_tooltip = end_of_black_army_tooltip
 		}
 	}
-	option = { # new option, keep the black army
+	option = {
+		# new option, keep the black army
 		name = flavor_hun.18.b
 		trigger = {
 			is_subject = no
@@ -1307,24 +1403,31 @@ country_event = {
 	title = flavor_hun.19.t
 	desc = flavor_hun.19.d
 	picture = MILITARY_CAMP_eventPicture
-
 	trigger = {
 		has_country_modifier = hun_black_army
 		OR = {
-			NOT = { has_country_flag = had_black_army_mutiny }
-			had_country_flag = { flag = had_black_army_mutiny days = 7300 }
+			NOT = {
+				has_country_flag = had_black_army_mutiny
+			}
+			had_country_flag = {
+				flag = had_black_army_mutiny
+				days = 7300
+			}
 		}
 		is_at_war = yes
 		num_of_cities = 5
 		any_owned_province = {
 			is_capital = no
 			is_in_capital_area = yes
-			NOT = { has_province_modifier = mercenary_concessions }
+			NOT = {
+				has_province_modifier = mercenary_concessions
+			}
 		}
 		num_of_mercenaries = 1
-		NOT = { has_reform = black_army_reform }
+		NOT = {
+			has_reform = black_army_reform
+		}
 	}
-
 	immediate = {
 		hidden_effect = {
 			set_country_flag = had_black_army_mutiny
@@ -1332,7 +1435,9 @@ country_event = {
 				limit = {
 					is_capital = no
 					is_in_capital_area = yes
-					NOT = { has_province_modifier = mercenary_concessions }
+					NOT = {
+						has_province_modifier = mercenary_concessions
+					}
 				}
 				save_event_target_as = mercenary_mutiny_province
 			}
@@ -1341,7 +1446,9 @@ country_event = {
 					is_capital = no
 					is_in_capital_area = yes
 					development = 6
-					NOT = { has_province_modifier = mercenary_concessions }
+					NOT = {
+						has_province_modifier = mercenary_concessions
+					}
 				}
 				save_event_target_as = mercenary_mutiny_province
 			}
@@ -1350,17 +1457,17 @@ country_event = {
 					is_capital = no
 					is_in_capital_area = yes
 					development = 10
-					NOT = { has_province_modifier = mercenary_concessions }
+					NOT = {
+						has_province_modifier = mercenary_concessions
+					}
 				}
 				save_event_target_as = mercenary_mutiny_province
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 80
 	}
-
 	option = {
 		name = flavor_hun.19.a
 		event_target:mercenary_mutiny_province = {
@@ -1382,25 +1489,27 @@ country_event = {
 	}
 }
 
-
 #Walls of Belgrade and the Ottoman Threat
 country_event = {
 	id = flavor_hun.20
 	title = flavor_hun.20.t
 	desc = flavor_hun.20.d
 	picture = MILITARY_CAMP_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		owns = 4239
 		is_year = 1450
-		NOT = { is_year = 1500 }
-		OR = { #Big threathening power in the south, probably Ottomans
+		NOT = {
+			is_year = 1500
+		}
+		OR = {
+			#Big threathening power in the south, probably Ottomans
 			AND = {
 				is_neighbor_of = TUR
-				NOT = { num_of_cities = TUR }
+				NOT = {
+					num_of_cities = TUR
+				}
 			}
 			any_rival_country = {
 				exists = yes
@@ -1413,9 +1522,9 @@ country_event = {
 			}
 		}
 	}
-
 	immediate = {
-		hidden_effect = { #Used in Loc
+		hidden_effect = {
+			#Used in Loc
 			if = {
 				limit = {
 					any_neighbor_country = {
@@ -1423,7 +1532,9 @@ country_event = {
 						num_of_cities = ROOT
 					}
 				}
-				TUR = { save_event_target_as = threat_to_hungary }
+				TUR = {
+					save_event_target_as = threat_to_hungary
+				}
 				else = {
 					random_rival_country = {
 						limit = {
@@ -1438,10 +1549,11 @@ country_event = {
 					}
 				}
 			}
-			4239 = { save_event_target_as = belgrade_localized }
+			4239 = {
+				save_event_target_as = belgrade_localized
+			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 150
 		modifier = {
@@ -1453,7 +1565,6 @@ country_event = {
 			war_with = TUR
 		}
 	}
-
 	option = {
 		name = flavor_hun.20.a
 		add_years_of_income = -0.75
@@ -1482,51 +1593,54 @@ country_event = {
 	}
 }
 
-
 #Fall of Serbia
 country_event = {
 	id = flavor_hun.21
 	title = flavor_hun.21.t
 	desc = flavor_hun.21.d
 	picture = BORDER_TENSION_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		owns = 4239
 		religion_group = christian
-		NOT = { exists = SER }
-		NOT = { alliance_with = TUR }
+		NOT = {
+			exists = SER
+		}
+		NOT = {
+			alliance_with = TUR
+		}
 		4239 = {
 			culture = serbian
-			any_neighbor_province = { #Best not have this event triggering from conquering Serbia yourself...
+			any_neighbor_province = {
+				#Best not have this event triggering from conquering Serbia yourself...
 				owned_by = TUR
 				culture = serbian
 			}
 		}
 	}
-
 	immediate = {
 		hidden_effect = {
-			4239 = { save_event_target_as = belgrade_localized }
+			4239 = {
+				save_event_target_as = belgrade_localized
+			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 48
 	}
-
 	option = {
 		name = flavor_hun.21.a
 		4239 = {
-			add_devastation = 25 #Chaos
+			add_devastation = 25			#Chaos
 			add_base_manpower = 2
 			add_base_tax = 1
 			add_base_production = 1
 			if = {
 				limit = {
-					NOT = { religion = orthodox }
+					NOT = {
+						religion = orthodox
+					}
 				}
 				change_religion = orthodox
 			}
@@ -1540,9 +1654,7 @@ country_event = {
 	title = flavor_hun.22.t
 	desc = flavor_hun.22.d
 	picture = BORDER_TENSION_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		OR = {
 			tag = HUN
@@ -1550,11 +1662,12 @@ country_event = {
 		}
 		religion = catholic
 		is_year = 1560
-		NOT = { is_year = 1570 }
+		NOT = {
+			is_year = 1570
+		}
 		is_religion_enabled = reformed
 		owns = 1953
 	}
-
 	immediate = {
 		hidden_effect = {
 			if = {
@@ -1570,7 +1683,9 @@ country_event = {
 				else = {
 					random_owned_province = {
 						limit = {
-							NOT = { religion = reformed }
+							NOT = {
+								religion = reformed
+							}
 						}
 						set_province_flag = synod_of_debrecen_flag_start
 						save_event_target_as = debrecen_province
@@ -1579,10 +1694,16 @@ country_event = {
 			}
 			random_owned_province = {
 				limit = {
-					NOT = { has_province_flag = synod_of_debrecen_flag_start }
-					NOT = { has_province_modifier = religious_zeal_at_conv }
+					NOT = {
+						has_province_flag = synod_of_debrecen_flag_start
+					}
+					NOT = {
+						has_province_modifier = religious_zeal_at_conv
+					}
 					is_in_capital_area = yes
-					NOT = { religion = reformed }
+					NOT = {
+						religion = reformed
+					}
 					any_neighbor_province = {
 						OR = {
 							religion = reformed
@@ -1594,11 +1715,19 @@ country_event = {
 			}
 			random_owned_province = {
 				limit = {
-					NOT = { has_province_flag = synod_of_debrecen_flag_start }
-					NOT = { has_province_flag = synod_of_debrecen_flag }
-					NOT = { has_province_modifier = religious_zeal_at_conv }
+					NOT = {
+						has_province_flag = synod_of_debrecen_flag_start
+					}
+					NOT = {
+						has_province_flag = synod_of_debrecen_flag
+					}
+					NOT = {
+						has_province_modifier = religious_zeal_at_conv
+					}
 					is_in_capital_area = yes
-					NOT = { religion = reformed }
+					NOT = {
+						religion = reformed
+					}
 					any_neighbor_province = {
 						OR = {
 							religion = reformed
@@ -1611,11 +1740,19 @@ country_event = {
 			}
 			random_owned_province = {
 				limit = {
-					NOT = { has_province_flag = synod_of_debrecen_flag_start }
-					NOT = { has_province_flag = synod_of_debrecen_flag }
-					NOT = { has_province_modifier = religious_zeal_at_conv }
+					NOT = {
+						has_province_flag = synod_of_debrecen_flag_start
+					}
+					NOT = {
+						has_province_flag = synod_of_debrecen_flag
+					}
+					NOT = {
+						has_province_modifier = religious_zeal_at_conv
+					}
 					is_in_capital_area = yes
-					NOT = { religion = reformed }
+					NOT = {
+						religion = reformed
+					}
 					any_neighbor_province = {
 						OR = {
 							religion = reformed
@@ -1631,19 +1768,19 @@ country_event = {
 					is_reformation_center = yes
 					religion = reformed
 				}
-				save_event_target_as = reformed_origin #Used in localization
+				save_event_target_as = reformed_origin				#Used in localization
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 30
 	}
-
 	option = {
 		name = flavor_hun.22.a
 		random_owned_province = {
-			limit = { has_province_flag = synod_of_debrecen_flag_start }
+			limit = {
+				has_province_flag = synod_of_debrecen_flag_start
+			}
 			spawn_rebels = {
 				type = reformed_rebels
 				size = 1
@@ -1652,13 +1789,17 @@ country_event = {
 			clr_province_flag = synod_of_debrecen_flag_start
 		}
 		every_owned_province = {
-			limit = { has_province_flag = synod_of_debrecen_flag }
+			limit = {
+				has_province_flag = synod_of_debrecen_flag
+			}
 			change_religion = reformed
 			clr_province_flag = synod_of_debrecen_flag
 		}
 		add_papal_influence = 10
 		if = {
-			limit = { exists = PAP }
+			limit = {
+				exists = PAP
+			}
 			add_opinion = {
 				who = PAP
 				modifier = hun_invited_jesuits
@@ -1719,20 +1860,17 @@ country_event = {
 	title = flavor_hun.23.t
 	desc = flavor_hun.23.d
 	picture = ADVISOR_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		is_year = 1530
-		NOT = { is_year = 1555 }
+		NOT = {
+			is_year = 1555
+		}
 	}
-
-
 	mean_time_to_happen = {
 		months = 75
 	}
-
 	option = {
 		name = flavor_hun.23.a
 		add_adm_power = 50
@@ -1778,16 +1916,18 @@ country_event = {
 	title = flavor_hun.24.t
 	desc = flavor_hun.24.d
 	picture = BAD_WITH_MONARCH_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		exists = HAB
 		is_subject = no
 		government = monarchy
-		NOT = { exists = TRA }
-		NOT = { num_of_cities = 25 }
+		NOT = {
+			exists = TRA
+		}
+		NOT = {
+			num_of_cities = 25
+		}
 		any_owned_province = {
 			is_core = TRA
 		}
@@ -1795,11 +1935,11 @@ country_event = {
 			is_permanent_claim = HAB
 		}
 		TUR = {
-			owns = 153 #Pest
-			num_of_cities = HAB #Ottomans are bigger than Austria
+			owns = 153			#Pest
+			num_of_cities = HAB			#Ottomans are bigger than Austria
 		}
 		HAB = {
-			num_of_cities = HUN #Austria is bigger than Hungary
+			num_of_cities = HUN			#Austria is bigger than Hungary
 		}
 		capital_scope = {
 			OR = {
@@ -1816,15 +1956,14 @@ country_event = {
 			amount = 6
 		}
 	}
-
-
 	mean_time_to_happen = {
 		months = 24
 	}
-
 	option = {
 		name = flavor_hun.24.a
-		ai_chance = { factor = 25 }
+		ai_chance = {
+			factor = 25
+		}
 		set_global_flag = hungary_inherited
 		change_tag = TRA
 		define_ruler = {
@@ -1857,16 +1996,25 @@ country_event = {
 			}
 		}
 		HAB = {
-			country_event = { id = flavor_hun.25 }
+			country_event = {
+				id = flavor_hun.25
+			}
 		}
 		if = {
-			limit = { has_custom_ideas = no }
-			country_event = { id = ideagroups.1 } #Swap Ideas
+			limit = {
+				has_custom_ideas = no
+			}
+			country_event = {
+				id = ideagroups.1
+			}
+			#Swap Ideas
 		}
 	}
 	option = {
 		name = flavor_hun.24.b
-		ai_chance = { factor = 75 }
+		ai_chance = {
+			factor = 75
+		}
 		release = TRA
 	}
 }
@@ -1877,14 +2025,13 @@ country_event = {
 	title = flavor_hun.25.t
 	desc = flavor_hun.25.d
 	picture = BORDER_TENSION_eventPicture
-
 	fire_only_once = yes
-
 	is_triggered_only = yes
-
 	option = {
 		name = flavor_hun.25.a
-		ai_chance = { factor = 100 }
+		ai_chance = {
+			factor = 100
+		}
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
@@ -1899,7 +2046,8 @@ country_event = {
 		}
 		custom_tooltip = flavor_hun.25.a.tt
 		tooltip = {
-			add_country_modifier = { #Consciously set to "wrong" scope to give prettier tooltip.
+			add_country_modifier = {
+				#Consciously set to "wrong" scope to give prettier tooltip.
 				name = "hab_royal_hungary"
 				duration = 18250
 			}
@@ -1907,7 +2055,9 @@ country_event = {
 	}
 	option = {
 		name = flavor_hun.25.b
-		ai_chance = { factor = 0 }
+		ai_chance = {
+			factor = 0
+		}
 		every_owned_province = {
 			limit = {
 				has_province_flag = royal_hungary_flag
@@ -1915,7 +2065,9 @@ country_event = {
 			clr_province_flag = royal_hungary_flag
 		}
 		release = HUN
-		HAB = { create_union = HUN }
+		HAB = {
+			create_union = HUN
+		}
 	}
 }
 
@@ -1925,9 +2077,7 @@ country_event = {
 	title = flavor_hun.26.t
 	desc = flavor_hun.26.d
 	picture = BORDER_TENSION_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		OR = {
 			AND = {
@@ -1938,9 +2088,15 @@ country_event = {
 		}
 		exists = TUR
 		is_neighbor_of = TUR
-		NOT = { num_of_cities = TUR }
-		NOT = { alliance_with = TUR }
-		NOT = { is_subject_of = TUR }
+		NOT = {
+			num_of_cities = TUR
+		}
+		NOT = {
+			alliance_with = TUR
+		}
+		NOT = {
+			is_subject_of = TUR
+		}
 		any_owned_province = {
 			region = balkan_region
 			any_neighbor_province = {
@@ -1948,11 +2104,12 @@ country_event = {
 			}
 		}
 	}
-
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
-				limit = { region = balkan_region }
+				limit = {
+					region = balkan_region
+				}
 				set_province_flag = hun_military_frontier
 				if = {
 					limit = {
@@ -1962,17 +2119,26 @@ country_event = {
 						}
 					}
 					random_list = {
-							40 = { set_province_flag = will_be_orthodox_flag }
-							10 = { set_province_flag = will_be_reformed_flag }
-							10 = { set_province_flag = will_be_protestant_flag }
-							40 = { }
+						40 = {
+							set_province_flag = will_be_orthodox_flag
+						}
+						10 = {
+							set_province_flag = will_be_reformed_flag
+						}
+						10 = {
+							set_province_flag = will_be_protestant_flag
+						}
+						40 = {
+						}
 					}
 				}
 			}
 			random_owned_province = {
 				limit = {
 					region = balkan_region
-					NOT = { has_province_flag = hun_military_frontier }
+					NOT = {
+						has_province_flag = hun_military_frontier
+					}
 				}
 				if = {
 					limit = {
@@ -1982,10 +2148,17 @@ country_event = {
 						}
 					}
 					random_list = {
-							40 = { set_province_flag = will_be_orthodox_flag }
-							15 = { set_province_flag = will_be_reformed_flag }
-							15 = { set_province_flag = will_be_protestant_flag }
-							30 = { }
+						40 = {
+							set_province_flag = will_be_orthodox_flag
+						}
+						15 = {
+							set_province_flag = will_be_reformed_flag
+						}
+						15 = {
+							set_province_flag = will_be_protestant_flag
+						}
+						30 = {
+						}
 					}
 				}
 				set_province_flag = hun_military_frontier
@@ -1993,7 +2166,9 @@ country_event = {
 			random_owned_province = {
 				limit = {
 					region = balkan_region
-					NOT = { has_province_flag = hun_military_frontier }
+					NOT = {
+						has_province_flag = hun_military_frontier
+					}
 				}
 				if = {
 					limit = {
@@ -2003,24 +2178,31 @@ country_event = {
 						}
 					}
 					random_list = {
-							40 = { set_province_flag = will_be_orthodox_flag }
-							10 = { set_province_flag = will_be_reformed_flag }
-							10 = { set_province_flag = will_be_protestant_flag }
-							40 = { }
+						40 = {
+							set_province_flag = will_be_orthodox_flag
+						}
+						10 = {
+							set_province_flag = will_be_reformed_flag
+						}
+						10 = {
+							set_province_flag = will_be_protestant_flag
+						}
+						40 = {
+						}
 					}
 				}
 				set_province_flag = hun_military_frontier
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 120
 	}
-
 	option = {
 		name = flavor_hun.26.a
-		ai_chance = { factor = 75 }
+		ai_chance = {
+			factor = 75
+		}
 		every_owned_province = {
 			limit = {
 				has_province_flag = hun_military_frontier
@@ -2029,7 +2211,9 @@ country_event = {
 			if = {
 				limit = {
 					has_province_flag = will_be_orthodox_flag
-					NOT = { religion = orthodox }
+					NOT = {
+						religion = orthodox
+					}
 				}
 				clr_province_flag = will_be_orthodox_flag
 				change_religion = orthodox
@@ -2037,11 +2221,15 @@ country_event = {
 			if = {
 				limit = {
 					has_province_flag = will_be_reformed_flag
-					NOT = { religion = reformed }
+					NOT = {
+						religion = reformed
+					}
 				}
 				clr_province_flag = will_be_reformed_flag
 				if = {
-					limit = { is_religion_enabled = reformed }
+					limit = {
+						is_religion_enabled = reformed
+					}
 					change_religion = reformed
 					else = {
 						change_religion = orthodox
@@ -2051,11 +2239,15 @@ country_event = {
 			if = {
 				limit = {
 					has_province_flag = will_be_protestant_flag
-					NOT = { religion = protestant }
+					NOT = {
+						religion = protestant
+					}
 				}
 				clr_province_flag = will_be_protestant_flag
 				if = {
-					limit = { is_religion_enabled = protestant }
+					limit = {
+						is_religion_enabled = protestant
+					}
 					change_religion = protestant
 					else = {
 						change_religion = orthodox
@@ -2071,7 +2263,9 @@ country_event = {
 	}
 	option = {
 		name = flavor_hun.26.b
-		ai_chance = { factor = 25 }
+		ai_chance = {
+			factor = 25
+		}
 		every_owned_province = {
 			limit = {
 				has_province_flag = hun_military_frontier
@@ -2095,26 +2289,24 @@ country_event = {
 	title = flavor_hun.27.t
 	desc = flavor_hun.27.d
 	picture = ANGRY_MOB_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		OR = {
 			tag = HUN
 			tag = TRA
 		}
-		NOT = { primary_culture = romanian }
+		NOT = {
+			primary_culture = romanian
+		}
 		is_year = 1750
 		any_owned_province = {
 			culture = transylvanian
 			is_capital = no
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 210
 	}
-
 	option = {
 		name = flavor_hun.27.a
 		every_owned_province = {
@@ -2126,8 +2318,12 @@ country_event = {
 			}
 			if = {
 				limit = {
-					NOT = { province_id = 158 }
-					NOT = { province_id = 4128 }
+					NOT = {
+						province_id = 158
+					}
+					NOT = {
+						province_id = 4128
+					}
 				}
 				change_culture = romanian
 			}
@@ -2146,27 +2342,24 @@ country_event = {
 	}
 }
 
-
 # Tamás Erdödy
 country_event = {
 	id = flavor_hun.28
 	title = flavor_hun.28.t
 	desc = flavor_hun.28.d
 	picture = ADVISOR_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		is_year = 1583
-		NOT = { is_year = 1610 }
+		NOT = {
+			is_year = 1610
+		}
 		owns = 131
 	}
-
 	mean_time_to_happen = {
 		months = 12
 	}
-
 	option = {
 		name = flavor_hun.28.a
 		define_advisor = {
@@ -2178,7 +2371,6 @@ country_event = {
 			type = grand_captain
 		}
 	}
-
 	option = {
 		name = flavor_hun.28.b
 		define_general = {
@@ -2192,20 +2384,19 @@ country_event = {
 	}
 }
 
-
 # Matthias Dévay
 country_event = {
 	id = flavor_hun.29
 	title = flavor_hun.29.t
 	desc = flavor_hun.29.d
 	picture = ADVISOR_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		is_year = 1530
-		NOT = { is_year = 1540 }
+		NOT = {
+			is_year = 1540
+		}
 		owns = 131
 		is_religion_enabled = protestant
 		any_owned_province = {
@@ -2213,11 +2404,9 @@ country_event = {
 			culture = hungarian
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 30
 	}
-
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
@@ -2234,15 +2423,15 @@ country_event = {
 						culture = hungarian
 						culture = slovak
 					}
-					NOT = { has_province_flag = magyar_reform }
+					NOT = {
+						has_province_flag = magyar_reform
+					}
 				}
 				set_province_flag = magyar_reform
 			}
 		}
 	}
-
 	#AI picks randomly here
-
 	option = {
 		name = flavor_hun.29.a
 		define_advisor = {
@@ -2254,17 +2443,22 @@ country_event = {
 			type = inquisitor
 		}
 		every_owned_province = {
-			limit = { has_province_flag = magyar_reform }
+			limit = {
+				has_province_flag = magyar_reform
+			}
 			change_religion = protestant
 			clr_province_flag = magyar_reform
 		}
 	}
-
 	option = {
 		name = flavor_hun.29.b
-		trigger = { religion = catholic }
+		trigger = {
+			religion = catholic
+		}
 		every_owned_province = {
-			limit = { has_province_flag = magyar_reform }
+			limit = {
+				has_province_flag = magyar_reform
+			}
 			clr_province_flag = magyar_reform
 		}
 		define_advisor = {
@@ -2284,28 +2478,27 @@ country_event = {
 	title = flavor_hun.30.t
 	desc = flavor_hun.30.d
 	picture = ADVISOR_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		is_institution_enabled = renaissance
 		is_year = 1450
-		NOT = { is_year = 1470 }
+		NOT = {
+			is_year = 1470
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 60
 	}
-
-
 	option = {
 		name = flavor_hun.30.a
 		add_prestige = 25
 		if = {
 			limit = {
 				capital_scope = {
-					NOT = { renaissance = 50 }
+					NOT = {
+						renaissance = 50
+					}
 				}
 			}
 			capital_scope = {
@@ -2316,7 +2509,11 @@ country_event = {
 			}
 			else = {
 				random_owned_province = {
-					limit = { NOT = { renaissance = 50 } }
+					limit = {
+						NOT = {
+							renaissance = 50
+						}
+					}
 					add_institution_embracement = {
 						which = renaissance
 						value = 50
@@ -2333,7 +2530,6 @@ country_event = {
 			discount = yes
 		}
 	}
-
 }
 
 # City leagues of Upper Hungary
@@ -2342,22 +2538,19 @@ country_event = {
 	title = flavor_hun.31.t
 	desc = flavor_hun.31.d
 	picture = CITY_VIEW_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		is_year = 1580
-		NOT = { is_year = 1640 }
+		NOT = {
+			is_year = 1640
+		}
 		owns = 154
 		owns = 1318
 	}
-
 	mean_time_to_happen = {
 		months = 180
 	}
-
-
 	option = {
 		name = flavor_hun.31.a
 		every_owned_province = {
@@ -2400,23 +2593,20 @@ country_event = {
 	title = flavor_hun.32.t
 	desc = flavor_hun.32.d
 	picture = WESTERNISATION_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
-		NOT = { exists = SLO }
+		NOT = {
+			exists = SLO
+		}
 		is_year = 1750
 		slovakia_area = {
 			owned_by = ROOT
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 210
 	}
-
-
 	option = {
 		name = flavor_hun.32.a
 		slovakia_area = {
@@ -2425,13 +2615,17 @@ country_event = {
 			}
 			if = {
 				limit = {
-					NOT = { is_core = SLO }
+					NOT = {
+						is_core = SLO
+					}
 				}
 				add_core = SLO
 			}
 			if = {
 				limit = {
-					NOT = { culture = slovak }
+					NOT = {
+						culture = slovak
+					}
 				}
 				change_culture = slovak
 			}
@@ -2450,13 +2644,17 @@ country_event = {
 			}
 			if = {
 				limit = {
-					NOT = { is_core = SLO }
+					NOT = {
+						is_core = SLO
+					}
 				}
 				add_core = SLO
 			}
 			if = {
 				limit = {
-					NOT = { culture = slovak }
+					NOT = {
+						culture = slovak
+					}
 				}
 				change_culture = slovak
 			}
@@ -2474,23 +2672,20 @@ country_event = {
 	title = flavor_hun.33.t
 	desc = flavor_hun.33.d
 	picture = BORDER_TENSION_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		is_year = 1600
-		NOT = { is_year = 1700 }
+		NOT = {
+			is_year = 1700
+		}
 		any_owned_province = {
 			devastation = 25
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 300
 	}
-
-
 	option = {
 		name = flavor_hun.33.a
 		add_prestige = -5
@@ -2519,7 +2714,6 @@ country_event = {
 	}
 }
 
-
 #Francis (II) Rákóczi
 #Event for independent Hungary
 country_event = {
@@ -2527,23 +2721,20 @@ country_event = {
 	title = flavor_hun.34.t
 	desc = flavor_hun.34.d
 	picture = ELECTION_REPUBLICAN_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		is_subject = no
 		has_regency = yes
 		government = monarchy
 		is_year = 1694
-		NOT = { is_year = 1730 }
+		NOT = {
+			is_year = 1730
+		}
 	}
-
 	mean_time_to_happen = {
-		months = 54 #Lower due to triggers being somewhat rare
+		months = 54		#Lower due to triggers being somewhat rare
 	}
-
-
 	option = {
 		name = flavor_hun.34.a
 		ai_chance = {
@@ -2571,7 +2762,9 @@ country_event = {
 		}
 		add_stability_or_adm_power = yes
 		random_owned_province = {
-			limit = { is_in_capital_area = yes }
+			limit = {
+				is_in_capital_area = yes
+			}
 			spawn_rebels = {
 				type = pretender_rebels
 				size = 2
@@ -2590,28 +2783,28 @@ country_event = {
 	title = flavor_hun.35.t
 	desc = flavor_hun.35.d
 	picture = ELECTION_REPUBLICAN_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HUN
 		is_subject_other_than_tributary_trigger = yes
 		government = monarchy
 		is_year = 1694
-		NOT = { is_year = 1730 }
+		NOT = {
+			is_year = 1730
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 108
 	}
-
 	option = {
 		name = flavor_hun.35.a
 		ai_chance = {
 			factor = 0
 		}
 		overlord = {
-			country_event = { id = flavor_hun.36 }
+			country_event = {
+				id = flavor_hun.36
+			}
 			tooltip = {
 				ROOT = {
 					declare_war_with_cb = {
@@ -2642,7 +2835,9 @@ country_event = {
 			factor = 100
 		}
 		random_owned_province = {
-			limit = { is_in_capital_area = yes }
+			limit = {
+				is_in_capital_area = yes
+			}
 			spawn_rebels = {
 				type = pretender_rebels
 				culture = hungarian
@@ -2661,9 +2856,7 @@ country_event = {
 	title = flavor_hun.36.t
 	desc = flavor_hun.36.d
 	picture = ELECTION_REPUBLICAN_eventPicture
-
 	is_triggered_only = yes
-
 	option = {
 		name = flavor_hun.36.a
 		HUN = {
@@ -2685,7 +2878,6 @@ country_event = {
 	}
 }
 
-
 #Francis (II) Rákóczi
 #Event for subjected Hungary
 country_event = {
@@ -2693,23 +2885,23 @@ country_event = {
 	title = flavor_hun.36.t
 	desc = flavor_hun.36.d
 	picture = ELECTION_REPUBLICAN_eventPicture
-
 	fire_only_once = yes
-
 	trigger = {
 		tag = HAB
-		NOT = { exists = HUN }
+		NOT = {
+			exists = HUN
+		}
 		any_owned_province = {
 			culture = hungarian
 		}
 		is_year = 1694
-		NOT = { is_year = 1730 }
+		NOT = {
+			is_year = 1730
+		}
 	}
-
 	mean_time_to_happen = {
 		months = 108
 	}
-
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
@@ -2737,12 +2929,15 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
 		name = flavor_hun.36.a
 		event_target:rakoczy_spawn_province = {
 			if = {
-				limit = { NOT = { is_core = HUN } }
+				limit = {
+					NOT = {
+						is_core = HUN
+					}
+				}
 				add_core = HUN
 			}
 			spawn_rebels = {
@@ -2754,31 +2949,26 @@ country_event = {
 	}
 }
 
-
 ########################################
 # More Events for Hungary
 #
 # written by Pierre du Plessis
 ########################################
-
 namespace = new_flavour_hun
-
 #Ask the Emperor to become part of the Empire?
 country_event = {
 	id = new_flavour_hun.1
 	title = new_flavour_hun.1.name
 	desc = new_flavour_hun.1.desc
 	picture = HRE_eventPicture
-
 	immediate = {
 		hidden_effect = {
 			save_event_target_as = Hungary
 		}
 	}
-
 	is_triggered_only = yes
-
-	option = { #Go for it
+	option = {
+		#Go for it
 		name = new_flavour_hun.1.A
 		set_country_flag = hungary_flag_incident
 		set_imperial_incident = incident_hungary_mission
@@ -2787,9 +2977,13 @@ country_event = {
 			modifier = {
 				factor = 0
 				OR = {
-					NOT = { prestige = 0 }
+					NOT = {
+						prestige = 0
+					}
 					emperor = {
-						NOT = { tag = HAB }
+						NOT = {
+							tag = HAB
+						}
 					}
 				}
 				emperor = {
@@ -2811,11 +3005,10 @@ country_event = {
 			}
 		}
 	}
-	option = { #Nah
+	option = {
+		#Nah
 		name = new_flavour_hun.1.B
-
 		add_prestige = 15
-
 		ai_chance = {
 			factor = 1
 		}
@@ -2828,9 +3021,7 @@ country_event = {
 	title = new_flavour_hun.2.name
 	desc = new_flavour_hun.2.desc
 	picture = HRE_eventPicture
-
 	is_triggered_only = yes
-
 	immediate = {
 		hidden_effect = {
 			random_country = {
@@ -2841,10 +3032,9 @@ country_event = {
 			}
 		}
 	}
-
-	option = { #Sure
+	option = {
+		#Sure
 		name = new_flavour_hun.2.A
-
 		BOH = {
 			elector = no
 		}
@@ -2864,7 +3054,6 @@ country_event = {
 				modifier = opinion_bav_repealed_electorate
 			}
 		}
-
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -2928,9 +3117,9 @@ country_event = {
 			}
 		}
 	}
-	option = { #No way in h...
+	option = {
+		#No way in h...
 		name = new_flavour_hun.2.B
-
 		event_target:hungary_country = {
 			add_opinion = {
 				who = root
@@ -2943,27 +3132,38 @@ country_event = {
 			}
 			austria_proper_area = {
 				limit = {
-					NOT = { is_claim = event_target:hungary_country }
-					NOT = { is_core = event_target:hungary_country }
+					NOT = {
+						is_claim = event_target:hungary_country
+					}
+					NOT = {
+						is_core = event_target:hungary_country
+					}
 				}
 				add_claim = event_target:hungary_country
 			}
 			inner_austria_area = {
 				limit = {
-					NOT = { is_claim = event_target:hungary_country }
-					NOT = { is_core = event_target:hungary_country }
+					NOT = {
+						is_claim = event_target:hungary_country
+					}
+					NOT = {
+						is_core = event_target:hungary_country
+					}
 				}
 				add_claim = event_target:hungary_country
 			}
 			carinthia_area = {
 				limit = {
-					NOT = { is_claim = event_target:hungary_country }
-					NOT = { is_core = event_target:hungary_country }
+					NOT = {
+						is_claim = event_target:hungary_country
+					}
+					NOT = {
+						is_core = event_target:hungary_country
+					}
 				}
 				add_claim = event_target:hungary_country
 			}
 		}
-
 		ai_chance = {
 			factor = 1
 			modifier = {
@@ -2983,35 +3183,30 @@ country_event = {
 	}
 }
 
-
 #The Greeks in Constantinople (used by Austria too)
 country_event = {
 	id = new_flavour_hun.3
 	title = new_flavour_hun.3.name
 	desc = new_flavour_hun.3.desc
 	picture = CITY_VIEW_eventPicture
-
 	is_triggered_only = yes
-
-	option = { #Bring back the Greeks
+	option = {
+		#Bring back the Greeks
 		name = new_flavour_hun.3.A
-
 		151 = {
 			change_culture = greek
 			change_religion = orthodox
 		}
-
 		ai_chance = {
 			factor = 1
 		}
 	}
-	option = { #Leave it as is
+	option = {
+		#Leave it as is
 		name = new_flavour_hun.3.B
-
 		151 = {
 			add_nationalism = -5
 		}
-
 		ai_chance = {
 			factor = 0
 		}

@@ -20,6 +20,7 @@ country_decisions = {
 				tag = SAR
 				primary_culture = sardinian
 				primary_culture = piedmontese
+				primary_culture = piedmontese_new
 			}
 			is_colonial_nation = no
 			OR = {
@@ -66,6 +67,7 @@ country_decisions = {
 					OR = {
 						primary_culture = sardinian
 						primary_culture = piedmontese
+						primary_culture = piedmontese_new
 					}
 					NOT = {
 						exists = SAV
@@ -116,20 +118,47 @@ country_decisions = {
 			if = {
 				limit = {
 					primary_culture = sardinian
-					NOT = {
-						accepted_culture = piedmontese
+					OR = {
+						NOT = {
+							accepted_culture = piedmontese
+						}
+						NOT = {
+							accepted_culture = piedmontese_new
+						}
 					}
 				}
 				add_accepted_culture = piedmontese
+				add_accepted_culture = piedmontese_new
 			}
 			else_if = {
 				limit = {
 					primary_culture = piedmontese
-					NOT = {
-						accepted_culture = sardinian
+					OR = {
+						NOT = {
+							accepted_culture = sardinian
+						}
+						NOT = {
+							accepted_culture = piedmontese_new
+						}
 					}
 				}
 				add_accepted_culture = sardinian
+				add_accepted_culture = piedmontese_new
+			}
+			else_if = {
+				limit = {
+					primary_culture = piedmontese_new
+					OR = {
+						NOT = {
+							accepted_culture = sardinian
+						}
+						NOT = {
+							accepted_culture = piedmontese
+						}
+					}
+				}
+				add_accepted_culture = sardinian
+				add_accepted_culture = piedmontese
 			}
 			if = {
 				limit = {
@@ -137,7 +166,8 @@ country_decisions = {
 				}
 				country_event = {
 					id = ideagroups.1
-				}				#Swap Ideas
+				}
+				#Swap Ideas
 			}
 			if = {
 				limit = {
@@ -204,7 +234,8 @@ country_decisions = {
 						}
 						NOT = {
 							num_of_cities = 12
-						}						#Original 7 + 5
+						}
+						#Original 7 + 5
 					}
 				}
 				AND = {
@@ -219,7 +250,8 @@ country_decisions = {
 						owns_core_province = 2986						# Cagliari
 						NOT = {
 							num_of_cities = 8
-						}						#Original 3 + 5
+						}
+						#Original 3 + 5
 					}
 				}
 			}
@@ -255,20 +287,47 @@ country_decisions = {
 			if = {
 				limit = {
 					primary_culture = sardinian
-					NOT = {
-						accepted_culture = piedmontese
+					OR = {
+						NOT = {
+							accepted_culture = piedmontese
+						}
+						NOT = {
+							accepted_culture = piedmontese_new
+						}
 					}
 				}
 				add_accepted_culture = piedmontese
+				add_accepted_culture = piedmontese_new
 			}
 			else_if = {
 				limit = {
 					primary_culture = piedmontese
-					NOT = {
-						accepted_culture = sardinian
+					OR = {
+						NOT = {
+							accepted_culture = sardinian
+						}
+						NOT = {
+							accepted_culture = piedmontese_new
+						}
 					}
 				}
 				add_accepted_culture = sardinian
+				add_accepted_culture = piedmontese_new
+			}
+			else_if = {
+				limit = {
+					primary_culture = piedmontese_new
+					OR = {
+						NOT = {
+							accepted_culture = sardinian
+						}
+						NOT = {
+							accepted_culture = piedmontese
+						}
+					}
+				}
+				add_accepted_culture = sardinian
+				add_accepted_culture = piedmontese
 			}
 			if = {
 				limit = {
@@ -276,7 +335,8 @@ country_decisions = {
 				}
 				country_event = {
 					id = ideagroups.1
-				}				#Swap Ideas
+				}
+				#Swap Ideas
 			}
 			if = {
 				limit = {

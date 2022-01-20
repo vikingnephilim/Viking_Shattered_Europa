@@ -1,35 +1,45 @@
 # Flavour events for Teutonic Order - The Prussian Confederation
 # By Daniel Tolman
-
 namespace = flavor_teu
 normal_or_historical_nations = yes
-
 # Prussian Confederation rises up
 country_event = {
 	id = flavor_teu.1
 	title = "flavor_teu.EVTNAME1"
 	desc = "flavor_teu.EVTDESC1"
 	picture = BATTLE_VISTULA_LAGOON_eventPicture
-	
 	fire_only_once = yes
-	
 	trigger = {
 		is_year = 1460
-		NOT = { is_year = 1500 }
+		NOT = {
+			is_year = 1500
+		}
 		tag = TEU
-		NOT = { has_country_flag = pru_confederation_curtailed }
-		NOT = { has_estate_privilege = estate_burghers_prussian_confederation }
+		NOT = {
+			has_country_flag = pru_confederation_curtailed
+		}
+		NOT = {
+			has_estate_privilege = estate_burghers_prussian_confederation
+		}
 		has_country_flag = pru_confederation_flag
 		is_subject = no
 		exists = POL
 		is_neighbor_of = POL
 		is_at_war = no
-		NOT = { alliance_with = POL }
-		POL = { is_subject = no }
-		POL = { num_of_cities = 10 }
+		NOT = {
+			alliance_with = POL
+		}
+		POL = {
+			is_subject = no
+		}
+		POL = {
+			num_of_cities = 10
+		}
 		num_of_cities = 5
 		OR = {
-			NOT = { exists = DNZ }
+			NOT = {
+				exists = DNZ
+			}
 			DNZ = {
 				is_subject_of = ROOT
 			}
@@ -39,10 +49,12 @@ country_event = {
 				owns = 43
 				controls = 43
 			}
-			DNZ = { owns = 43 controls = 43 }
+			DNZ = {
+				owns = 43
+				controls = 43
+			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		months = 6
 		modifier = {
@@ -50,7 +62,6 @@ country_event = {
 			is_year = 1466
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			set_country_flag = pru_confederation_happened
@@ -65,7 +76,9 @@ country_event = {
 				random_owned_province = {
 					limit = {
 						is_capital = no
-						NOT = { is_core = DNZ }
+						NOT = {
+							is_core = DNZ
+						}
 						OR = {
 							area = east_prussia_area
 							area = west_prussia_area
@@ -87,7 +100,9 @@ country_event = {
 				random_owned_province = {
 					limit = {
 						is_capital = no
-						NOT = { is_core = DNZ }
+						NOT = {
+							is_core = DNZ
+						}
 						OR = {
 							area = east_prussia_area
 							area = west_prussia_area
@@ -109,7 +124,9 @@ country_event = {
 				random_owned_province = {
 					limit = {
 						is_capital = no
-						NOT = { is_core = DNZ }
+						NOT = {
+							is_core = DNZ
+						}
 						OR = {
 							area = east_prussia_area
 							area = west_prussia_area
@@ -131,7 +148,9 @@ country_event = {
 				random_owned_province = {
 					limit = {
 						is_capital = no
-						NOT = { is_core = DNZ }
+						NOT = {
+							is_core = DNZ
+						}
 						OR = {
 							area = east_prussia_area
 							area = west_prussia_area
@@ -153,7 +172,9 @@ country_event = {
 				random_owned_province = {
 					limit = {
 						is_capital = no
-						NOT = { is_core = DNZ }
+						NOT = {
+							is_core = DNZ
+						}
 						OR = {
 							area = east_prussia_area
 							area = west_prussia_area
@@ -206,8 +227,8 @@ country_event = {
 			}
 		}
 	}
-	
-	option = { # Go to war
+	option = {
+		# Go to war
 		name = "flavor_teu.1.a"
 		ai_chance = {
 			factor = 100
@@ -218,7 +239,6 @@ country_event = {
 					war_exhaustion = 10
 				}
 			}
-			 
 		}
 		declare_war_with_cb = {
 			who = DNZ
@@ -228,22 +248,27 @@ country_event = {
 		custom_tooltip = flavor_teu.1.tooltip
 		hidden_effect = {
 			POL = {
-				country_event = { id = flavor_teu.2 }
+				country_event = {
+					id = flavor_teu.2
+				}
 			}
 			POL = {
 				create_guarantee = DNZ
 			}
 		}
 	}
-	option = { # Let them go
+	option = {
+		# Let them go
 		name = "flavor_teu.1.b"
-		ai_chance = { 
-			factor = 100 
+		ai_chance = {
+			factor = 100
 			modifier = {
 				factor = 0
 				OR = {
 					is_bankrupt = no
-					NOT = { war_exhaustion = 10 }
+					NOT = {
+						war_exhaustion = 10
+					}
 				}
 			}
 		}
@@ -258,13 +283,9 @@ country_event = {
 	title = "flavor_teu.EVTNAME2"
 	desc = "flavor_teu.EVTDESC2"
 	picture = BATTLE_VISTULA_LAGOON_eventPicture
-	
 	fire_only_once = yes
-	
 	is_triggered_only = yes
-	
 	major = yes
-	
 	option = {
 		name = "flavor_teu.2.a"
 		ai_chance = {
@@ -290,15 +311,18 @@ country_event = {
 		}
 		create_alliance = DNZ
 	}
-	option = { # stay out of this
+	option = {
+		# stay out of this
 		name = "flavor_teu.2.b"
-		ai_chance = { 
+		ai_chance = {
 			factor = 100
 			modifier = {
 				factor = 0
 				OR = {
 					is_bankrupt = no
-					NOT = { war_exhaustion = 10 }
+					NOT = {
+						war_exhaustion = 10
+					}
 				}
 			}
 		}
@@ -312,11 +336,8 @@ country_event = {
 	title = "flavor_teu.EVTNAME3"
 	desc = "flavor_teu.EVTDESC3"
 	picture = SEJM_eventPicture
-	
 	fire_only_once = yes
-	
 	is_triggered_only = yes
-	
 	option = {
 		name = "flavor_teu.3.a"
 		vassalize = DNZ
@@ -335,10 +356,18 @@ country_event = {
 		}
 		west_prussia_area = {
 			limit = {
-				NOT = { is_permanent_claim = ROOT }
-				NOT = { is_core = ROOT	}
-				NOT = { is_permanent_claim = DNZ }
-				NOT = { is_core = DNZ }
+				NOT = {
+					is_permanent_claim = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+				NOT = {
+					is_permanent_claim = DNZ
+				}
+				NOT = {
+					is_core = DNZ
+				}
 			}
 			add_permanent_claim = ROOT
 		}
@@ -351,21 +380,19 @@ country_event = {
 	title = "flavor_teu.EVTNAME4"
 	desc = "flavor_teu.EVTDESC4"
 	picture = SEJM_eventPicture
-	
 	fire_only_once = yes
-	
 	trigger = {
 		tag = TEU
 		NOT = {
 			is_year = 1450
 		}
-		NOT = { has_country_flag = pru_confederation_flag }
+		NOT = {
+			has_country_flag = pru_confederation_flag
+		}
 	}
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	option = {
 		name = "flavor_teu.4.a"
 		set_country_flag = pru_confederation_flag
@@ -380,22 +407,27 @@ country_event = {
 			influence = 10
 			duration = 7300
 		}
-		give_estate_land_share_gigantic = { estate = estate_burghers }
+		give_estate_land_share_gigantic = {
+			estate = estate_burghers
+		}
 	}
 }
-	
+
 # The End of the Teutonic State
 country_event = {
 	id = flavor_teu.5
 	title = flavor_teu.5.t
 	desc = flavor_teu.5.d
 	picture = SEJM_eventPicture
-	
 	trigger = {
 		is_year = 1460
-		NOT = { is_year = 1500 }
+		NOT = {
+			is_year = 1500
+		}
 		tag = TEU
-		NOT = { has_country_flag = pru_confederation_curtailed }
+		NOT = {
+			has_country_flag = pru_confederation_curtailed
+		}
 		has_country_flag = pru_confederation_flag
 		has_estate_privilege = estate_burghers_prussian_confederation
 		is_subject = no
@@ -404,11 +436,9 @@ country_event = {
 			exists = DNZ
 		}
 	}
-	
 	mean_time_to_happen = {
 		months = 120
 	}
-	
 	option = {
 		name = flavor_teu.5.a
 		clr_country_flag = pru_confederation_flag
@@ -419,8 +449,13 @@ country_event = {
 		add_stability = -1
 		add_prestige = -25
 		if = {
-			limit = { has_custom_ideas = no }
-			country_event = { id = ideagroups.1 } #Swap Ideas
+			limit = {
+				has_custom_ideas = no
+			}
+			country_event = {
+				id = ideagroups.1
+			}
+			#Swap Ideas
 		}
 	}
 }

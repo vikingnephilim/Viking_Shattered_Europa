@@ -1570,4 +1570,67 @@ country_decisions = {
 			set_country_flag = formed_cherokee_flag
 		}
 	}
+	choose_a_culture_SPI = {
+		major = yes
+		potential = {
+			NOT = {
+				has_global_flag = reign_in_piedmont
+			}
+			OR = {
+				culture_group = french
+				culture_group = latin
+			}
+			tag = SPI
+		}
+		allow = {
+			piedmont_area = {
+				owned_by = SPI
+				is_core = SPI
+			}
+			OR = {
+				AND = {
+					OR = {
+						primary_culture = piedmontese
+						primary_culture = sardinian
+					}
+					accepted_culture = piedmontese_new
+				}
+				AND = {
+					OR = {
+						primary_culture = piedmontese_new
+						primary_culture = sardinian
+					}
+					accepted_culture = piedmontese
+				}
+			}
+		}
+		effect = {
+			if = {
+				limit = {
+					culture_group = french
+				}
+				every_owned_province = {
+					limit = {
+						culture = piedmontese_new
+					}
+					change_culture = piedmontese
+				}
+			}
+			else_if = {
+				limit = {
+					culture_group = latin
+				}
+				every_owned_province = {
+					limit = {
+						culture = piedmontese
+					}
+					change_culture = piedmontese_new
+				}
+			}
+			set_global_flag = reign_in_piedmont
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

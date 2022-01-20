@@ -4,23 +4,43 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_netherlands_flag }
-			NOT = { has_country_flag = unified_lowlands }
-			NOT = { has_global_flag = unified_lowlands_global }
+			NOT = {
+				has_country_flag = formed_netherlands_flag
+			}
+			NOT = {
+				has_country_flag = unified_lowlands
+			}
+			NOT = {
+				has_global_flag = unified_lowlands_global
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
 			OR = {
-				NOT = { exists = NED }
-				NOT = { has_country_flag = unified_lowlands }
-				NOT = { has_global_flag = unified_lowlands_global }
-				NOT = { has_country_flag = formed_netherlands_flag }
+				NOT = {
+					exists = NED
+				}
+				NOT = {
+					has_country_flag = unified_lowlands
+				}
+				NOT = {
+					has_global_flag = unified_lowlands_global
+				}
+				NOT = {
+					has_country_flag = formed_netherlands_flag
+				}
 				ai = no
 			}
-			NOT = { tag = PAP }
-			NOT = { tag = NED }
-			NOT = { tag = HLR }
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				tag = NED
+			}
+			NOT = {
+				tag = HLR
+			}
 			OR = {
 				primary_culture = dutch
 				primary_culture = flemish
@@ -37,17 +57,17 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 90 # Brugge
-				province_id = 92 # Brussels
-				province_id = 94 # Luxembourg
-				province_id = 95 # Breda
-				province_id = 97 # Amsterdam
-				province_id = 98 # Utrecht
-				province_id = 99 # Gelre
-				province_id = 100 # Friesland
-				province_id = 1931 # East Frisia
-				province_id = 2974 # Loon
-				province_id = 4383 # Den Haag
+				province_id = 90				# Brugge
+				province_id = 92				# Brussels
+				province_id = 94				# Luxembourg
+				province_id = 95				# Breda
+				province_id = 97				# Amsterdam
+				province_id = 98				# Utrecht
+				province_id = 99				# Gelre
+				province_id = 100				# Friesland
+				province_id = 1931				# East Frisia
+				province_id = 2974				# Loon
+				province_id = 4383				# Den Haag
 				AND = {
 					region = low_countries_region
 					ROOT = {
@@ -58,40 +78,46 @@ country_decisions = {
 								is_core = root
 							}
 						}
-						owns_core_province = 90 # Brugge
-						owns_core_province = 92 # Brussels
-						owns_core_province = 94 # Luxembourg
-						owns_core_province = 95 # Breda
-						owns_core_province = 97 # Amsterdam
-						owns_core_province = 98 # Utrecht
-						owns_core_province = 99 # Gelre
-						owns_core_province = 100 # Friesland
-						owns_core_province = 1931 # East Frisia
-						owns_core_province = 2974 # Loon
-						owns_core_province = 4383 # Den Haag
+						owns_core_province = 90						# Brugge
+						owns_core_province = 92						# Brussels
+						owns_core_province = 94						# Luxembourg
+						owns_core_province = 95						# Breda
+						owns_core_province = 97						# Amsterdam
+						owns_core_province = 98						# Utrecht
+						owns_core_province = 99						# Gelre
+						owns_core_province = 100						# Friesland
+						owns_core_province = 1931						# East Frisia
+						owns_core_province = 2974						# Loon
+						owns_core_province = 4383						# Den Haag
 					}
 				}
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		allow = {
 			is_nomad = no
 			is_at_war = no
-			NOT = { exists = NED }
-			owns_core_province = 90 # Brugge
-			owns_core_province = 92 # Brussels
-			owns_core_province = 94 # Luxembourg
-			owns_core_province = 95 # Breda
-			owns_core_province = 97 # Amsterdam
-			owns_core_province = 98 # Utrecht
-			owns_core_province = 99 # Gelre
-			owns_core_province = 100 # Friesland
-			owns_core_province = 1931 # East Frisia
-			owns_core_province = 2974 # Loon
-			owns_core_province = 4383 # Den Haag
+			NOT = {
+				exists = NED
+			}
+			owns_core_province = 90			# Brugge
+			owns_core_province = 92			# Brussels
+			owns_core_province = 94			# Luxembourg
+			owns_core_province = 95			# Breda
+			owns_core_province = 97			# Amsterdam
+			owns_core_province = 98			# Utrecht
+			owns_core_province = 99			# Gelre
+			owns_core_province = 100			# Friesland
+			owns_core_province = 1931			# East Frisia
+			owns_core_province = 2974			# Loon
+			owns_core_province = 4383			# Den Haag
 			90 = {
 				is_state = yes
 			}
@@ -131,7 +157,7 @@ country_decisions = {
 				is_core = root
 			}
 		}
-	 	effect = {
+		effect = {
 			if = {
 				limit = {
 					is_elector = no
@@ -158,9 +184,15 @@ country_decisions = {
 			set_country_flag = unified_lowlands
 			low_countries_region = {
 				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { province_id = 1931 }
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						province_id = 1931
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -170,15 +202,22 @@ country_decisions = {
 						government_rank = 2
 					}
 				}
-				ROOT = { set_government_rank = 2 }
+				ROOT = {
+					set_government_rank = 2
+				}
 			}
 			add_prestige = 25
 			if = {
 				limit = {
 					has_custom_ideas = no
-					NOT = { has_idea_group = NED_ideas }
+					NOT = {
+						has_idea_group = NED_ideas
+					}
 				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
 			}
 		}
 		ai_will_do = {
@@ -190,21 +229,37 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = { has_country_flag = formed_netherlands_flag }
-			NOT = { has_global_flag = unified_lowlands_global }
+			NOT = {
+				has_country_flag = formed_netherlands_flag
+			}
+			NOT = {
+				has_global_flag = unified_lowlands_global
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
 			OR = {
-				NOT = { exists = NED }
-				NOT = { has_country_flag = unified_lowlands }
-				NOT = { has_global_flag = unified_lowlands_global }
+				NOT = {
+					exists = NED
+				}
+				NOT = {
+					has_country_flag = unified_lowlands
+				}
+				NOT = {
+					has_global_flag = unified_lowlands_global
+				}
 				ai = no
 			}
-			NOT = { tag = PAP }
-			NOT = { tag = NED }
-			NOT = { tag = HLR }
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				tag = NED
+			}
+			NOT = {
+				tag = HLR
+			}
 			OR = {
 				primary_culture = dutch
 				primary_culture = flemish
@@ -221,11 +276,11 @@ country_decisions = {
 		}
 		provinces_to_highlight = {
 			OR = {
-				province_id = 95 # Breda
-				province_id = 97 # Amsterdam
-				province_id = 98 # Utrecht
-				province_id = 99 # Gelre
-				province_id = 4383 # Den Haag
+				province_id = 95				# Breda
+				province_id = 97				# Amsterdam
+				province_id = 98				# Utrecht
+				province_id = 99				# Gelre
+				province_id = 4383				# Den Haag
 				AND = {
 					region = low_countries_region
 					ROOT = {
@@ -245,19 +300,25 @@ country_decisions = {
 				}
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
-				NOT = { is_core = ROOT }
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
 			}
 		}
 		allow = {
 			is_nomad = no
 			is_at_war = no
-			NOT = { exists = NED }
-			owns_core_province = 95 # Breda
-			owns_core_province = 98 # Utrecht
-			owns_core_province = 99 # Gelre
-			owns_core_province = 4383 # Den Haag
-			owns_core_province = 97 # Amsterdam
+			NOT = {
+				exists = NED
+			}
+			owns_core_province = 95			# Breda
+			owns_core_province = 98			# Utrecht
+			owns_core_province = 99			# Gelre
+			owns_core_province = 4383			# Den Haag
+			owns_core_province = 97			# Amsterdam
 			97 = {
 				is_state = yes
 			}
@@ -270,10 +331,12 @@ country_decisions = {
 				limit = {
 					tag = BUR
 				}
-				NOT = { has_disaster = dutch_revolt_disaster }
+				NOT = {
+					has_disaster = dutch_revolt_disaster
+				}
 			}
 		}
-	 	effect = {
+		effect = {
 			if = {
 				limit = {
 					is_elector = no
@@ -295,11 +358,11 @@ country_decisions = {
 					}
 				}
 			}
-	  		if = {
-	  			limit = {
-	  				tag = BUR
-	  			}
-	  			change_primary_culture = dutch
+			if = {
+				limit = {
+					tag = BUR
+				}
+				change_primary_culture = dutch
 				97 = {
 					move_capital_effect = yes
 				}
@@ -309,15 +372,15 @@ country_decisions = {
 					tag = BUR
 					exists = FRA
 				}
-	  			france_region = {
+				france_region = {
 					limit = {
 						owned_by = BUR
 					}
-	  				remove_core = BUR
-	  				add_core = FRA
-	  				cede_province = FRA
-	  			}
-	  		}
+					remove_core = BUR
+					add_core = FRA
+					cede_province = FRA
+				}
+			}
 			if = {
 				limit = {
 					tag = BUR
@@ -346,15 +409,21 @@ country_decisions = {
 						cede_province = FRA
 					}
 				}
-	  		}
+			}
 			restore_country_name_effect = yes
 			change_tag = NED
 			swap_non_generic_missions = yes
 			low_countries_region = {
 				limit = {
-					NOT = { owned_by = ROOT }
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { province_id = 1931 }
+					NOT = {
+						owned_by = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						province_id = 1931
+					}
 				}
 				add_permanent_claim = NED
 			}
@@ -364,16 +433,23 @@ country_decisions = {
 						government_rank = 2
 					}
 				}
-				NED = { set_government_rank = 2 }
+				NED = {
+					set_government_rank = 2
+				}
 			}
 			set_country_flag = formed_netherlands_flag
 			add_prestige = 25
 			if = {
 				limit = {
 					has_custom_ideas = no
-					NOT = { has_idea_group = NED_ideas }
+					NOT = {
+						has_idea_group = NED_ideas
+					}
 				}
-				country_event = { id = ideagroups.1 } #Swap Ideas
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
 			}
 		}
 		ai_will_do = {

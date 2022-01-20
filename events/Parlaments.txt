@@ -1,13 +1,10 @@
 namespace = parlaments
-
 province_event = {
 	id = parlaments.1
-	
 	title = parlaments.1.t
 	desc = parlaments.1.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_seat_in_parliament = no
 		development = 25
@@ -17,12 +14,9 @@ province_event = {
 			has_parliament = yes
 		}
 	}
-	
 	mean_time_to_happen = {
 		months = 720
 	}
-		
-
 	option = {
 		name = parlaments.1.a
 		ai_chance = {
@@ -45,12 +39,10 @@ province_event = {
 #Punishes awarding seat to poor and easily bribed provinces.
 province_event = {
 	id = parlaments.2
-	
 	title = parlaments.2.t
 	desc = parlaments.2.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_dlc = "Common Sense"
 		owner = {
@@ -58,8 +50,12 @@ province_event = {
 		}
 		has_seat_in_parliament = yes
 		is_capital = no
-		NOT = { has_province_modifier = rotten_borough }
-		NOT = { development = 10 }
+		NOT = {
+			has_province_modifier = rotten_borough
+		}
+		NOT = {
+			development = 10
+		}
 		owner = {
 			any_owned_province = {
 				development = 10
@@ -73,9 +69,7 @@ province_event = {
 			}
 		}
 	}
-	
 	is_mtth_scaled_to_size = 1
-
 	immediate = {
 		hidden_effect = {
 			owner = {
@@ -95,25 +89,29 @@ province_event = {
 			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		months = 200
 		modifier = {
 			factor = 0.8
-			NOT = { development = 6 }
+			NOT = {
+				development = 6
+			}
 		}
 		modifier = {
 			factor = 0.7
-			NOT = { development = 4 }
+			NOT = {
+				development = 4
+			}
 		}
 	}
-
 	option = {
 		name = parlaments.2.a
 		ai_chance = {
 			factor = 50
 		}
-		owner = { add_corruption = 0.5 }
+		owner = {
+			add_corruption = 0.5
+		}
 		custom_tooltip = "parlaments.2.a.tt"
 		add_province_modifier = {
 			name = "rotten_borough"
@@ -153,12 +151,10 @@ province_event = {
 #Punishes awarding seat to poor and easily bribed provinces.
 province_event = {
 	id = parlaments.3
-	
 	title = parlaments.2.t
 	desc = parlaments.2.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_dlc = "Common Sense"
 		owner = {
@@ -167,8 +163,12 @@ province_event = {
 		has_seat_in_parliament = yes
 		is_capital = no
 		is_year = 1500
-		NOT = { has_province_modifier = rotten_borough }
-		NOT = { development = 20 }
+		NOT = {
+			has_province_modifier = rotten_borough
+		}
+		NOT = {
+			development = 20
+		}
 		owner = {
 			any_owned_province = {
 				development = 20
@@ -182,21 +182,22 @@ province_event = {
 			}
 		}
 	}
-	
 	is_mtth_scaled_to_size = 1
-	
 	mean_time_to_happen = {
 		months = 200
 		modifier = {
 			factor = 0.8
-			NOT = { development = 6 }
+			NOT = {
+				development = 6
+			}
 		}
 		modifier = {
 			factor = 0.7
-			NOT = { development = 4 }
+			NOT = {
+				development = 4
+			}
 		}
 	}
-
 	immediate = {
 		hidden_effect = {
 			owner = {
@@ -216,13 +217,14 @@ province_event = {
 			}
 		}
 	}
-
 	option = {
 		name = parlaments.2.a
 		ai_chance = {
 			factor = 50
 		}
-		owner = { add_corruption = 0.5 }
+		owner = {
+			add_corruption = 0.5
+		}
 		add_province_modifier = {
 			name = "rotten_borough"
 			duration = -1
@@ -260,89 +262,104 @@ province_event = {
 #Corruption of Vote
 province_event = {
 	id = parlaments.4
-	
 	title = parlaments.4.t
 	desc = parlaments.4.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_dlc = "Common Sense"
 		has_province_modifier = rotten_borough
 		has_seat_in_parliament = yes
 		is_backing_current_issue = yes
 	}
-	
 	is_mtth_scaled_to_size = 1
-	
 	mean_time_to_happen = {
 		months = 120
 		modifier = {
 			factor = 0.5
-			owner = { percentage_backing_issue = 0.5 }
+			owner = {
+				percentage_backing_issue = 0.5
+			}
 		}
 	}
-
 	option = {
-		name = parlaments.4.a #Rotten
+		name = parlaments.4.a		#Rotten
 		back_current_issue = no
 	}
 	option = {
-		name = parlaments.4.b #Bribe the Landowner
-		owner = { add_corruption = 0.5 }
+		name = parlaments.4.b		#Bribe the Landowner
+		owner = {
+			add_corruption = 0.5
+		}
 	}
 }
 
 #Seat Switches to being in favour of debated issue
 #Events 5 - 10
-
 #University supports University funding
 province_event = {
 	id = parlaments.5
-	
 	title = parlaments.5.t
 	desc = parlaments.5.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_dlc = "Common Sense"
 		has_building = university
-		NOT = { has_province_modifier = rotten_borough }
+		NOT = {
+			has_province_modifier = rotten_borough
+		}
 		has_seat_in_parliament = yes
-		owner = { has_active_debate = yes }
+		owner = {
+			has_active_debate = yes
+		}
 		is_backing_current_issue = no
-		owner = { current_debate = charter_university }
+		owner = {
+			current_debate = charter_university
+		}
 	}
-	
 	is_mtth_scaled_to_size = 1
-	
 	mean_time_to_happen = {
 		months = 80
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.1 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.1
+				}
+			}
 		}
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.25 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.25
+				}
+			}
 		}
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.5 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.5
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { percentage_backing_issue = 0.5 }
+			owner = {
+				percentage_backing_issue = 0.5
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { percentage_backing_issue = 0.7 }
+			owner = {
+				percentage_backing_issue = 0.7
+			}
 		}
 	}
-
 	option = {
-		name = parlaments.5.a #
+		name = parlaments.5.a		#
 		back_current_issue = yes
 	}
 }
@@ -350,16 +367,16 @@ province_event = {
 #Seafaring province supports seafaring issues
 province_event = {
 	id = parlaments.6
-	
 	title = parlaments.6.t
 	desc = parlaments.6.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_dlc = "Common Sense"
 		has_seat_in_parliament = yes
-		NOT = { has_province_modifier = rotten_borough }
+		NOT = {
+			has_province_modifier = rotten_borough
+		}
 		OR = {
 			has_port = yes
 			has_building = wharf
@@ -370,48 +387,73 @@ province_event = {
 			has_building = trade_depot
 			has_building = stock_exchange
 		}
-		owner = { has_active_debate = yes }
+		owner = {
+			has_active_debate = yes
+		}
 		is_backing_current_issue = no
 		OR = {
-			owner = { current_debate = expand_navy }
-			owner = { current_debate = charter_trade_companies }
-			owner = { current_debate = impressment_of_sailors }
-			owner = { current_debate = issue_letters_of_marque }
+			owner = {
+				current_debate = expand_navy
+			}
+			owner = {
+				current_debate = charter_trade_companies
+			}
+			owner = {
+				current_debate = impressment_of_sailors
+			}
+			owner = {
+				current_debate = issue_letters_of_marque
+			}
 		}
 	}
-	
 	is_mtth_scaled_to_size = 1
-	
 	mean_time_to_happen = {
 		months = 80
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.1 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.1
+				}
+			}
 		}
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.25 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.25
+				}
+			}
 		}
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.5 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.5
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { percentage_backing_issue = 0.5 }
+			owner = {
+				percentage_backing_issue = 0.5
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { percentage_backing_issue = 0.75 }
+			owner = {
+				percentage_backing_issue = 0.75
+			}
 		}
 		modifier = {
 			factor = 1.8
-			owner = { percentage_backing_issue = 0.9 }
+			owner = {
+				percentage_backing_issue = 0.9
+			}
 		}
 	}
-
 	option = {
-		name = parlaments.6.a #
+		name = parlaments.6.a		#
 		back_current_issue = yes
 	}
 }
@@ -419,16 +461,16 @@ province_event = {
 #Recruitment centre or fortified province supports military issues
 province_event = {
 	id = parlaments.7
-	
 	title = parlaments.7.t
 	desc = parlaments.7.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_dlc = "Common Sense"
 		has_seat_in_parliament = yes
-		NOT = { has_province_modifier = rotten_borough }
+		NOT = {
+			has_province_modifier = rotten_borough
+		}
 		OR = {
 			has_building = weapons
 			has_building = barracks
@@ -438,49 +480,76 @@ province_event = {
 			fort_level = 1
 			base_manpower = 6
 		}
-		owner = { has_active_debate = yes }
+		owner = {
+			has_active_debate = yes
+		}
 		is_backing_current_issue = no
 		OR = {
-			owner = { current_debate = backing_war_effort }
-			owner = { current_debate = expand_the_army }
-			owner = { current_debate = extended_peacetime_officer_commissions }
-			owner = { current_debate = fortification_tax }
-			owner = { current_debate = quartering_of_troops }
+			owner = {
+				current_debate = backing_war_effort
+			}
+			owner = {
+				current_debate = expand_the_army
+			}
+			owner = {
+				current_debate = extended_peacetime_officer_commissions
+			}
+			owner = {
+				current_debate = fortification_tax
+			}
+			owner = {
+				current_debate = quartering_of_troops
+			}
 		}
 	}
-	
 	is_mtth_scaled_to_size = 1
-	
 	mean_time_to_happen = {
 		months = 80
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.1 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.1
+				}
+			}
 		}
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.25 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.25
+				}
+			}
 		}
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.5 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.5
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { percentage_backing_issue = 0.5 }
+			owner = {
+				percentage_backing_issue = 0.5
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { percentage_backing_issue = 0.75 }
+			owner = {
+				percentage_backing_issue = 0.75
+			}
 		}
 		modifier = {
 			factor = 1.8
-			owner = { percentage_backing_issue = 0.9 }
+			owner = {
+				percentage_backing_issue = 0.9
+			}
 		}
 	}
-
 	option = {
-		name = parlaments.7.a #
+		name = parlaments.7.a		#
 		back_current_issue = yes
 	}
 }
@@ -488,16 +557,16 @@ province_event = {
 #Production province supports Mercantilism
 province_event = {
 	id = parlaments.8
-	
 	title = parlaments.8.t
 	desc = parlaments.8.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_dlc = "Common Sense"
 		has_seat_in_parliament = yes
-		NOT = { has_province_modifier = rotten_borough }
+		NOT = {
+			has_province_modifier = rotten_borough
+		}
 		OR = {
 			has_building = textile
 			has_building = plantations
@@ -506,43 +575,62 @@ province_event = {
 			has_building = counting_house
 			base_production = 8
 		}
-		owner = { has_active_debate = yes }
+		owner = {
+			has_active_debate = yes
+		}
 		is_backing_current_issue = no
-		owner = { current_debate = imports_exports }
+		owner = {
+			current_debate = imports_exports
+		}
 	}
-	
 	is_mtth_scaled_to_size = 1
-	
 	mean_time_to_happen = {
 		months = 80
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.1 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.1
+				}
+			}
 		}
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.25 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.25
+				}
+			}
 		}
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.5 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.5
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { percentage_backing_issue = 0.5 }
+			owner = {
+				percentage_backing_issue = 0.5
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { percentage_backing_issue = 0.75 }
+			owner = {
+				percentage_backing_issue = 0.75
+			}
 		}
 		modifier = {
 			factor = 1.8
-			owner = { percentage_backing_issue = 0.9 }
+			owner = {
+				percentage_backing_issue = 0.9
+			}
 		}
 	}
-
 	option = {
-		name = parlaments.8.a #
+		name = parlaments.8.a		#
 		back_current_issue = yes
 	}
 }
@@ -550,58 +638,81 @@ province_event = {
 #Capital supports expansion of Administration and Centralization
 province_event = {
 	id = parlaments.9
-	
 	title = parlaments.9.t
 	desc = parlaments.9.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_dlc = "Common Sense"
 		has_seat_in_parliament = yes
 		is_capital = yes
-		owner = { has_active_debate = yes }
+		owner = {
+			has_active_debate = yes
+		}
 		is_backing_current_issue = no
 		OR = {
-			owner = { current_debate = fund_expansion_of_bureaucracy }
-			owner = { current_debate = expand_diplomatic_corps }
-			owner = { current_debate = administrative_reform }
-			owner = { current_debate = government_debt_reduction }
+			owner = {
+				current_debate = fund_expansion_of_bureaucracy
+			}
+			owner = {
+				current_debate = expand_diplomatic_corps
+			}
+			owner = {
+				current_debate = administrative_reform
+			}
+			owner = {
+				current_debate = government_debt_reduction
+			}
 		}
 	}
-	
 	is_mtth_scaled_to_size = 1
-	
 	mean_time_to_happen = {
 		months = 80
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.1 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.1
+				}
+			}
 		}
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.25 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.25
+				}
+			}
 		}
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.5 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.5
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { percentage_backing_issue = 0.5 }
+			owner = {
+				percentage_backing_issue = 0.5
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { percentage_backing_issue = 0.75 }
+			owner = {
+				percentage_backing_issue = 0.75
+			}
 		}
 		modifier = {
 			factor = 1.8
-			owner = { percentage_backing_issue = 0.9 }
+			owner = {
+				percentage_backing_issue = 0.9
+			}
 		}
 	}
-
 	option = {
-		name = parlaments.9.a #
+		name = parlaments.9.a		#
 		back_current_issue = yes
 	}
 }
@@ -609,55 +720,72 @@ province_event = {
 #Somewhat random Switch
 province_event = {
 	id = parlaments.10
-	
 	title = parlaments.10.t
 	desc = parlaments.10.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_dlc = "Common Sense"
 		has_seat_in_parliament = yes
-		NOT = { has_province_modifier = rotten_borough }
+		NOT = {
+			has_province_modifier = rotten_borough
+		}
 		owner = {
 			has_active_debate = yes
-			NOT = { stability = 0 }
+			NOT = {
+				stability = 0
+			}
 		}
 		is_backing_current_issue = no
 	}
-	
 	is_mtth_scaled_to_size = 1
-	
 	mean_time_to_happen = {
 		months = 80
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.1 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.1
+				}
+			}
 		}
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.25 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.25
+				}
+			}
 		}
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.5 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.5
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { percentage_backing_issue = 0.5 }
+			owner = {
+				percentage_backing_issue = 0.5
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { percentage_backing_issue = 0.75 }
+			owner = {
+				percentage_backing_issue = 0.75
+			}
 		}
 		modifier = {
 			factor = 1.8
-			owner = { percentage_backing_issue = 0.9 }
+			owner = {
+				percentage_backing_issue = 0.9
+			}
 		}
 	}
-
 	option = {
-		name = parlaments.10.a #
+		name = parlaments.10.a		#
 		back_current_issue = yes
 	}
 }
@@ -665,111 +793,142 @@ province_event = {
 #We trust the Ruler
 province_event = {
 	id = parlaments.29
-	
 	title = parlaments.29.t
 	desc = parlaments.29.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_dlc = "Common Sense"
 		has_seat_in_parliament = yes
-		NOT = { has_province_modifier = rotten_borough }
+		NOT = {
+			has_province_modifier = rotten_borough
+		}
 		owner = {
 			has_active_debate = yes
 			legitimacy_equivalent = 80
 		}
 		is_backing_current_issue = no
 	}
-	
 	is_mtth_scaled_to_size = 1
-	
 	mean_time_to_happen = {
 		months = 80
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.1 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.1
+				}
+			}
 		}
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.25 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.25
+				}
+			}
 		}
 		modifier = {
 			factor = 0.5
-			owner = { NOT = { percentage_backing_issue = 0.5 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.5
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { percentage_backing_issue = 0.5 }
+			owner = {
+				percentage_backing_issue = 0.5
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { percentage_backing_issue = 0.75 }
+			owner = {
+				percentage_backing_issue = 0.75
+			}
 		}
 		modifier = {
 			factor = 1.8
-			owner = { percentage_backing_issue = 0.9 }
+			owner = {
+				percentage_backing_issue = 0.9
+			}
 		}
 	}
-
 	option = {
-		name = parlaments.29.a #
+		name = parlaments.29.a		#
 		back_current_issue = yes
 	}
 }
 
 #Seat Switches to against current issue
 #Events 11 - 17
-
 #Random Switch
 province_event = {
 	id = parlaments.11
-	
 	title = parlaments.11.t
 	desc = parlaments.11.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_dlc = "Common Sense"
 		has_seat_in_parliament = yes
-		NOT = { has_province_modifier = rotten_borough }
-		owner = { has_active_debate = yes }
+		NOT = {
+			has_province_modifier = rotten_borough
+		}
+		owner = {
+			has_active_debate = yes
+		}
 		is_backing_current_issue = yes
 	}
-	
 	is_mtth_scaled_to_size = 1
-	
 	mean_time_to_happen = {
 		months = 160
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.1 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.1
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.25 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.25
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.5 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.5
+				}
+			}
 		}
 		modifier = {
 			factor = 0.8
-			owner = { percentage_backing_issue = 0.5 }
+			owner = {
+				percentage_backing_issue = 0.5
+			}
 		}
 		modifier = {
 			factor = 0.7
-			owner = { percentage_backing_issue = 0.75 }
+			owner = {
+				percentage_backing_issue = 0.75
+			}
 		}
 		modifier = {
 			factor = 0.6
-			owner = { percentage_backing_issue = 0.9 }
+			owner = {
+				percentage_backing_issue = 0.9
+			}
 		}
 	}
-
 	option = {
-		name = parlaments.11.a #
+		name = parlaments.11.a		#
 		back_current_issue = no
 	}
 }
@@ -777,62 +936,82 @@ province_event = {
 #We don't trust the ruler.
 province_event = {
 	id = parlaments.30
-	
 	title = parlaments.30.t
 	desc = parlaments.30.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_dlc = "Common Sense"
 		has_seat_in_parliament = yes
-		NOT = { has_province_modifier = rotten_borough }
+		NOT = {
+			has_province_modifier = rotten_borough
+		}
 		owner = {
 			has_active_debate = yes
 		}
 		is_backing_current_issue = yes
 	}
-	
 	is_mtth_scaled_to_size = 1
-	
 	mean_time_to_happen = {
 		months = 180
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.1 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.1
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.25 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.25
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.5 } }
-		}
-		modifier = {
-			factor = 0.8
-			owner = { percentage_backing_issue = 0.5 }
-		}
-		modifier = {
-			factor = 0.7
-			owner = { percentage_backing_issue = 0.75 }
-		}
-		modifier = {
-			factor = 0.6
-			owner = { percentage_backing_issue = 0.9 }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.5
+				}
+			}
 		}
 		modifier = {
 			factor = 0.8
 			owner = {
-				government = monarchy
-				NOT = { legitimacy = 80 }
+				percentage_backing_issue = 0.5
+			}
+		}
+		modifier = {
+			factor = 0.7
+			owner = {
+				percentage_backing_issue = 0.75
+			}
+		}
+		modifier = {
+			factor = 0.6
+			owner = {
+				percentage_backing_issue = 0.9
 			}
 		}
 		modifier = {
 			factor = 0.8
 			owner = {
 				government = monarchy
-				NOT = { legitimacy = 65 }
+				NOT = {
+					legitimacy = 80
+				}
+			}
+		}
+		modifier = {
+			factor = 0.8
+			owner = {
+				government = monarchy
+				NOT = {
+					legitimacy = 65
+				}
 			}
 		}
 		modifier = {
@@ -853,14 +1032,18 @@ province_event = {
 			factor = 0.8
 			owner = {
 				government = republic
-				NOT = { republican_tradition = 80 }
+				NOT = {
+					republican_tradition = 80
+				}
 			}
 		}
 		modifier = {
 			factor = 0.8
 			owner = {
 				government = republic
-				NOT = { republican_tradition = 65 }
+				NOT = {
+					republican_tradition = 65
+				}
 			}
 		}
 		modifier = {
@@ -878,9 +1061,8 @@ province_event = {
 			}
 		}
 	}
-
 	option = {
-		name = parlaments.30.a #
+		name = parlaments.30.a		#
 		back_current_issue = no
 	}
 }
@@ -888,27 +1070,27 @@ province_event = {
 #Rotten Borough Attempting to Protect itself
 province_event = {
 	id = parlaments.12
-	
 	title = parlaments.12.t
 	desc = parlaments.12.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_dlc = "Common Sense"
 		has_seat_in_parliament = yes
 		has_province_modifier = rotten_borough
-		owner = { has_active_debate = yes }
+		owner = {
+			has_active_debate = yes
+		}
 		is_backing_current_issue = yes
-		owner = { current_debate = rotten_borough_reform }
+		owner = {
+			current_debate = rotten_borough_reform
+		}
 	}
-	
 	mean_time_to_happen = {
 		months = 45
 	}
-
 	option = {
-		name = parlaments.12.a #
+		name = parlaments.12.a		#
 		back_current_issue = no
 	}
 }
@@ -916,56 +1098,75 @@ province_event = {
 #Capital seat against sharing power
 province_event = {
 	id = parlaments.13
-	
 	title = parlaments.13.t
 	desc = parlaments.13.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_dlc = "Common Sense"
 		has_seat_in_parliament = yes
-		owner = { has_active_debate = yes }
+		owner = {
+			has_active_debate = yes
+		}
 		is_backing_current_issue = yes
 		is_capital = yes
 		OR = {
-			owner = { current_debate = offices_to_vassals }
-			owner = { current_debate = harmonization_of_laws }
+			owner = {
+				current_debate = offices_to_vassals
+			}
+			owner = {
+				current_debate = harmonization_of_laws
+			}
 		}
 	}
-	
 	is_mtth_scaled_to_size = 1
-	
 	mean_time_to_happen = {
 		months = 140
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.1 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.1
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.25 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.25
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.5 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.5
+				}
+			}
 		}
 		modifier = {
 			factor = 0.8
-			owner = { percentage_backing_issue = 0.5 }
+			owner = {
+				percentage_backing_issue = 0.5
+			}
 		}
 		modifier = {
 			factor = 0.7
-			owner = { percentage_backing_issue = 0.75 }
+			owner = {
+				percentage_backing_issue = 0.75
+			}
 		}
 		modifier = {
 			factor = 0.6
-			owner = { percentage_backing_issue = 0.9 }
+			owner = {
+				percentage_backing_issue = 0.9
+			}
 		}
 	}
-
 	option = {
-		name = parlaments.13.a #
+		name = parlaments.13.a		#
 		back_current_issue = no
 	}
 }
@@ -973,12 +1174,10 @@ province_event = {
 #Production province opposes Free Trade
 province_event = {
 	id = parlaments.14
-	
 	title = parlaments.14.t
 	desc = parlaments.14.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_dlc = "Common Sense"
 		has_seat_in_parliament = yes
@@ -990,43 +1189,62 @@ province_event = {
 			has_building = counting_house
 			base_production = 8
 		}
-		owner = { has_active_debate = yes }
+		owner = {
+			has_active_debate = yes
+		}
 		is_backing_current_issue = yes
-		owner = { current_debate = reduce_trade_regulations }
+		owner = {
+			current_debate = reduce_trade_regulations
+		}
 	}
-	
 	is_mtth_scaled_to_size = 1
-	
 	mean_time_to_happen = {
 		months = 160
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.1 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.1
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.25 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.25
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.5 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.5
+				}
+			}
 		}
 		modifier = {
 			factor = 0.8
-			owner = { percentage_backing_issue = 0.5 }
+			owner = {
+				percentage_backing_issue = 0.5
+			}
 		}
 		modifier = {
 			factor = 0.7
-			owner = { percentage_backing_issue = 0.75 }
+			owner = {
+				percentage_backing_issue = 0.75
+			}
 		}
 		modifier = {
 			factor = 0.6
-			owner = { percentage_backing_issue = 0.9 }
+			owner = {
+				percentage_backing_issue = 0.9
+			}
 		}
 	}
-
 	option = {
-		name = parlaments.14.a #
+		name = parlaments.14.a		#
 		back_current_issue = no
 	}
 }
@@ -1034,12 +1252,10 @@ province_event = {
 #Recruitment centre or fortified province opposes naval spending
 province_event = {
 	id = parlaments.15
-	
 	title = parlaments.15.t
 	desc = parlaments.15.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_dlc = "Common Sense"
 		has_seat_in_parliament = yes
@@ -1052,62 +1268,84 @@ province_event = {
 			fort_level = 1
 			base_manpower = 6
 		}
-		owner = { has_active_debate = yes }
+		owner = {
+			has_active_debate = yes
+		}
 		is_backing_current_issue = yes
 		OR = {
-			owner = { current_debate = expand_navy }
-			owner = { current_debate = charter_trade_companies }
-			owner = { current_debate = impressment_of_sailors }
-			owner = { current_debate = issue_letters_of_marque }
+			owner = {
+				current_debate = expand_navy
+			}
+			owner = {
+				current_debate = charter_trade_companies
+			}
+			owner = {
+				current_debate = impressment_of_sailors
+			}
+			owner = {
+				current_debate = issue_letters_of_marque
+			}
 		}
 	}
-	
 	is_mtth_scaled_to_size = 1
-	
 	mean_time_to_happen = {
 		months = 160
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.1 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.1
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.25 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.25
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.5 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.5
+				}
+			}
 		}
 		modifier = {
 			factor = 0.8
-			owner = { percentage_backing_issue = 0.5 }
+			owner = {
+				percentage_backing_issue = 0.5
+			}
 		}
 		modifier = {
 			factor = 0.7
-			owner = { percentage_backing_issue = 0.75 }
+			owner = {
+				percentage_backing_issue = 0.75
+			}
 		}
 		modifier = {
 			factor = 0.6
-			owner = { percentage_backing_issue = 0.9 }
+			owner = {
+				percentage_backing_issue = 0.9
+			}
 		}
 	}
-
 	option = {
-		name = parlaments.15.a #
+		name = parlaments.15.a		#
 		back_current_issue = no
 	}
 }
 
-
 #Naval province opposes increasing military spending
 province_event = {
 	id = parlaments.16
-	
 	title = parlaments.16.t
 	desc = parlaments.16.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_dlc = "Common Sense"
 		has_seat_in_parliament = yes
@@ -1118,49 +1356,76 @@ province_event = {
 			has_building = grand_shipyard
 			has_port = yes
 		}
-		owner = { has_active_debate = yes }
+		owner = {
+			has_active_debate = yes
+		}
 		is_backing_current_issue = yes
 		OR = {
-			owner = { current_debate = backing_war_effort }
-			owner = { current_debate = expand_the_army }
-			owner = { current_debate = extended_peacetime_officer_commissions }
-			owner = { current_debate = fortification_tax }
-			owner = { current_debate = quartering_of_troops }
+			owner = {
+				current_debate = backing_war_effort
+			}
+			owner = {
+				current_debate = expand_the_army
+			}
+			owner = {
+				current_debate = extended_peacetime_officer_commissions
+			}
+			owner = {
+				current_debate = fortification_tax
+			}
+			owner = {
+				current_debate = quartering_of_troops
+			}
 		}
 	}
-	
 	is_mtth_scaled_to_size = 1
-	
 	mean_time_to_happen = {
 		months = 160
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.1 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.1
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.25 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.25
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.5 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.5
+				}
+			}
 		}
 		modifier = {
 			factor = 0.8
-			owner = { percentage_backing_issue = 0.5 }
+			owner = {
+				percentage_backing_issue = 0.5
+			}
 		}
 		modifier = {
 			factor = 0.7
-			owner = { percentage_backing_issue = 0.75 }
+			owner = {
+				percentage_backing_issue = 0.75
+			}
 		}
 		modifier = {
 			factor = 0.6
-			owner = { percentage_backing_issue = 0.9 }
+			owner = {
+				percentage_backing_issue = 0.9
+			}
 		}
 	}
-
 	option = {
-		name = parlaments.16.a #
+		name = parlaments.16.a		#
 		back_current_issue = no
 	}
 }
@@ -1168,22 +1433,30 @@ province_event = {
 #Opposition to census and land surveys
 province_event = {
 	id = parlaments.17
-	
 	title = parlaments.17.t
 	desc = parlaments.17.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_dlc = "Common Sense"
 		has_seat_in_parliament = yes
-		owner = { has_active_debate = yes }
+		owner = {
+			has_active_debate = yes
+		}
 		is_backing_current_issue = yes
 		OR = {
-			owner = { current_debate = nationwide_land_survey }
-			owner = { current_debate = nationwide_census }
-			owner = { current_debate = appropriation_of_land }
-			owner = { current_debate = development_of_infrastructure } #Land Reform
+			owner = {
+				current_debate = nationwide_land_survey
+			}
+			owner = {
+				current_debate = nationwide_census
+			}
+			owner = {
+				current_debate = appropriation_of_land
+			}
+			owner = {
+				current_debate = development_of_infrastructure
+			}			#Land Reform
 		}
 		OR = {
 			base_tax = 6
@@ -1191,39 +1464,54 @@ province_event = {
 			base_manpower = 6
 		}
 	}
-	
 	is_mtth_scaled_to_size = 1
-	
 	mean_time_to_happen = {
 		months = 160
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.1 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.1
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.25 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.25
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.5 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.5
+				}
+			}
 		}
 		modifier = {
 			factor = 0.8
-			owner = { percentage_backing_issue = 0.5 }
+			owner = {
+				percentage_backing_issue = 0.5
+			}
 		}
 		modifier = {
 			factor = 0.7
-			owner = { percentage_backing_issue = 0.75 }
+			owner = {
+				percentage_backing_issue = 0.75
+			}
 		}
 		modifier = {
 			factor = 0.6
-			owner = { percentage_backing_issue = 0.9 }
+			owner = {
+				percentage_backing_issue = 0.9
+			}
 		}
 	}
-
 	option = {
-		name = parlaments.17.a #
+		name = parlaments.17.a		#
 		back_current_issue = no
 	}
 }
@@ -1232,26 +1520,28 @@ province_event = {
 #University positive to counting and measuring the land
 province_event = {
 	id = parlaments.18
-	
 	title = parlaments.18.t
 	desc = parlaments.18.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_dlc = "Common Sense"
 		has_seat_in_parliament = yes
-		owner = { has_active_debate = yes }
+		owner = {
+			has_active_debate = yes
+		}
 		is_backing_current_issue = no
 		OR = {
-			owner = { current_debate = nationwide_land_survey }
-			owner = { current_debate = nationwide_census }
+			owner = {
+				current_debate = nationwide_land_survey
+			}
+			owner = {
+				current_debate = nationwide_census
+			}
 		}
 		has_building = university
 	}
-	
 	is_mtth_scaled_to_size = 1
-	
 	mean_time_to_happen = {
 		months = 80
 		modifier = {
@@ -1262,32 +1552,49 @@ province_event = {
 		}
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.1 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.1
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.25 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.25
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.5 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.5
+				}
+			}
 		}
 		modifier = {
 			factor = 0.8
-			owner = { percentage_backing_issue = 0.5 }
+			owner = {
+				percentage_backing_issue = 0.5
+			}
 		}
 		modifier = {
 			factor = 0.7
-			owner = { percentage_backing_issue = 0.75 }
+			owner = {
+				percentage_backing_issue = 0.75
+			}
 		}
 		modifier = {
 			factor = 0.6
-			owner = { percentage_backing_issue = 0.9 }
+			owner = {
+				percentage_backing_issue = 0.9
+			}
 		}
 	}
-
 	option = {
-		name = parlaments.18.a #
+		name = parlaments.18.a		#
 		back_current_issue = yes
 	}
 }
@@ -1295,22 +1602,22 @@ province_event = {
 #Nobody likes taxes
 province_event = {
 	id = parlaments.19
-	
 	title = parlaments.19.t
 	desc = parlaments.19.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	trigger = {
 		has_dlc = "Common Sense"
 		has_seat_in_parliament = yes
-		owner = { has_active_debate = yes }
+		owner = {
+			has_active_debate = yes
+		}
 		is_backing_current_issue = yes
-		owner = { current_debate = increase_taxes }
+		owner = {
+			current_debate = increase_taxes
+		}
 	}
-	
 	is_mtth_scaled_to_size = 1
-	
 	mean_time_to_happen = {
 		months = 140
 		modifier = {
@@ -1319,70 +1626,86 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			NOT = { development = 10 } #Poor
+			NOT = {
+				development = 10
+			}			#Poor
 		}
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.1 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.1
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.25 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.25
+				}
+			}
 		}
 		modifier = {
 			factor = 1.5
-			owner = { NOT = { percentage_backing_issue = 0.5 } }
+			owner = {
+				NOT = {
+					percentage_backing_issue = 0.5
+				}
+			}
 		}
 		modifier = {
 			factor = 0.8
-			owner = { percentage_backing_issue = 0.5 }
+			owner = {
+				percentage_backing_issue = 0.5
+			}
 		}
 		modifier = {
 			factor = 0.7
-			owner = { percentage_backing_issue = 0.75 }
+			owner = {
+				percentage_backing_issue = 0.75
+			}
 		}
 		modifier = {
 			factor = 0.6
-			owner = { percentage_backing_issue = 0.9 }
+			owner = {
+				percentage_backing_issue = 0.9
+			}
 		}
 	}
-
 	option = {
-		name = parlaments.19.a #
+		name = parlaments.19.a		#
 		back_current_issue = no
 	}
 }
 
 #What happens in Parliament
-
 #Uncomfortable MPs
 country_event = {
 	id = parlaments.20
-	
 	title = parlaments.20.t
 	desc = parlaments.20.d
 	picture = PARLIAMENT_eventPicture
-
 	trigger = {
 		has_dlc = "Common Sense"
-		has_active_debate = yes #MPs are in the capital
+		has_active_debate = yes		#MPs are in the capital
 		any_owned_province = {
 			is_backing_current_issue = yes
 		}
 	}
-	
 	mean_time_to_happen = {
 		months = 300
 		modifier = {
 			factor = 1.5
-			NOT = { percentage_backing_issue = 0.5 }
+			NOT = {
+				percentage_backing_issue = 0.5
+			}
 		}
 		modifier = {
 			factor = 0.8
 			percentage_backing_issue = 0.5
 		}
 	}
-
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
@@ -1394,14 +1717,12 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
-		name = parlaments.20.a #
+		name = parlaments.20.a		#
 		add_years_of_income = -0.1
 	}
-
 	option = {
-		name = parlaments.20.b #
+		name = parlaments.20.b		#
 		goto = recalcitrant_seat
 		event_target:recalcitrant_seat = {
 			back_current_issue = no
@@ -1412,14 +1733,12 @@ country_event = {
 #Scandal
 country_event = {
 	id = parlaments.21
-	
 	title = parlaments.21.t
 	desc = parlaments.21.d
 	picture = PARLIAMENT_eventPicture
-
 	trigger = {
 		has_dlc = "Common Sense"
-		has_active_debate = yes #MPs are in the capital
+		has_active_debate = yes		#MPs are in the capital
 		any_owned_province = {
 			is_capital = no
 			is_backing_current_issue = yes
@@ -1430,7 +1749,6 @@ country_event = {
 			}
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
@@ -1446,21 +1764,21 @@ country_event = {
 			}
 		}
 	}
-
 	mean_time_to_happen = {
 		months = 700
 		modifier = {
 			factor = 1.5
-			NOT = { percentage_backing_issue = 0.5 }
+			NOT = {
+				percentage_backing_issue = 0.5
+			}
 		}
 		modifier = {
 			factor = 0.8
 			percentage_backing_issue = 0.5
 		}
 	}
-
 	option = {
-		name = parlaments.21.a #
+		name = parlaments.21.a		#
 		add_prestige = -10
 		goto = capital
 		capital_scope = {
@@ -1470,9 +1788,8 @@ country_event = {
 			}
 		}
 	}
-
 	option = {
-		name = parlaments.21.b #
+		name = parlaments.21.b		#
 		goto = recalcitrant_seat
 		event_target:recalcitrant_seat = {
 			back_current_issue = no
@@ -1483,20 +1800,17 @@ country_event = {
 #Absenteeism
 country_event = {
 	id = parlaments.22
-	
 	title = parlaments.22.t
 	desc = parlaments.22.d
 	picture = PARLIAMENT_eventPicture
-
 	trigger = {
 		has_dlc = "Common Sense"
-		has_active_debate = yes #MPs are in the capital
+		has_active_debate = yes		#MPs are in the capital
 		num_of_owned_provinces_with = {
 			value = 2
 			is_backing_current_issue = yes
 		}
 	}
-	
 	immediate = {
 		hidden_effect = {
 			random_owned_province = {
@@ -1510,46 +1824,49 @@ country_event = {
 				limit = {
 					has_seat_in_parliament = yes
 					is_backing_current_issue = yes
-					NOT = { has_province_flag = absentee_pm }
+					NOT = {
+						has_province_flag = absentee_pm
+					}
 				}
 				set_province_flag = absentee_pm
 			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		months = 400
 		modifier = {
 			factor = 1.5
-			NOT = { percentage_backing_issue = 0.5 }
+			NOT = {
+				percentage_backing_issue = 0.5
+			}
 		}
 		modifier = {
 			factor = 0.7
 			percentage_backing_issue = 0.5
 		}
 	}
-
 	option = {
-		name = parlaments.22.a #Fine the worst excesses
+		name = parlaments.22.a		#Fine the worst excesses
 		every_owned_province = {
 			limit = {
 				has_province_flag = absentee_pm
-			} #The Punished MP will not support the state.
+			}
+			#The Punished MP will not support the state.
 			back_current_issue = no
 			add_unrest = 4
 			clr_province_flag = absentee_pm
 		}
 		add_years_of_income = 0.05
 	}
-
 	option = {
-		name = parlaments.22.b #
+		name = parlaments.22.b		#
 		add_prestige = -10
 		hidden_effect = {
 			every_owned_province = {
 				limit = {
 					has_province_flag = absentee_pm
-				} #The Punished MP will not support the state.
+				}
+				#The Punished MP will not support the state.
 				clr_province_flag = absentee_pm
 			}
 		}
@@ -1557,64 +1874,113 @@ country_event = {
 }
 
 #Events for countries that haven't got parliaments but could
-
 #Demands for Representation
 country_event = {
 	id = parlaments.23
-	
 	title = parlaments.23.t
 	desc = parlaments.23.d
 	picture = PARLIAMENT_eventPicture
-
 	trigger = {
 		has_dlc = "Common Sense"
 		adm_tech = 22
 		num_of_cities = 4
 		any_owned_province = {
-			NOT = { has_province_modifier = demands_representation }
+			NOT = {
+				has_province_modifier = demands_representation
+			}
 		}
-		NOT = { has_reform = english_monarchy }
-		NOT = { has_reform = parliamentary_reform }
-		NOT = { has_reform = steppe_horde }
-		NOT = { has_reform = tribal_despotism }
-		NOT = { has_reform = tribal_kingdom }
-		NOT = { has_reform = tribal_federation }
-		NOT = { has_reform = siberian_tribe }
-		NOT = { has_reform = elective_monarchy }
-		NOT = { has_reform = free_city }
-		NOT = { has_reform = dutch_republic }
-		NOT = { is_revolutionary_republic_trigger = yes }
-		NOT = { has_reform = presidential_despot_reform }
-		NOT = { has_reform = ambrosian_republic }
-		NOT = { has_reform = celestial_empire }
-		NOT = { has_reform = peasants_republic }
-		NOT = { has_reform = iqta }
-		NOT = { has_reform = feudal_theocracy }
-		NOT = { has_reform = mamluk_government }
-		NOT = { has_reform = daimyo }
-		NOT = { has_reform = shogunate }
-		NOT = { has_reform = colonial_government }
-		NOT = { has_reform = revolutionary_empire_reform }
-		NOT = { government = theocracy }
-		NOT = { government = native }
+		NOT = {
+			has_reform = english_monarchy
+		}
+		NOT = {
+			has_reform = parliamentary_reform
+		}
+		NOT = {
+			has_reform = steppe_horde
+		}
+		NOT = {
+			has_reform = tribal_despotism
+		}
+		NOT = {
+			has_reform = tribal_kingdom
+		}
+		NOT = {
+			has_reform = tribal_federation
+		}
+		NOT = {
+			has_reform = siberian_tribe
+		}
+		NOT = {
+			has_reform = elective_monarchy
+		}
+		NOT = {
+			has_reform = theocratic_autocracy
+		}
+		NOT = {
+			has_reform = free_city
+		}
+		NOT = {
+			has_reform = dutch_republic
+		}
+		NOT = {
+			is_revolutionary_republic_trigger = yes
+		}
+		NOT = {
+			has_reform = presidential_despot_reform
+		}
+		NOT = {
+			has_reform = ambrosian_republic
+		}
+		NOT = {
+			has_reform = celestial_empire
+		}
+		NOT = {
+			has_reform = peasants_republic
+		}
+		NOT = {
+			has_reform = iqta
+		}
+		NOT = {
+			has_reform = feudal_theocracy
+		}
+		NOT = {
+			has_reform = mamluk_government
+		}
+		NOT = {
+			has_reform = daimyo
+		}
+		NOT = {
+			has_reform = shogunate
+		}
+		NOT = {
+			has_reform = colonial_government
+		}
+		NOT = {
+			has_reform = revolutionary_empire_reform
+		}
+		NOT = {
+			government = theocracy
+		}
+		NOT = {
+			government = native
+		}
 	}
-	
 	mean_time_to_happen = {
 		months = 300
 	}
-
 	option = {
-		name = parlaments.23.a #
+		name = parlaments.23.a		#
 		add_adm_power = -75
 	}
-
 	option = {
-		name = parlaments.23.b #
+		name = parlaments.23.b		#
 		random_owned_province = {
 			limit = {
 				is_overseas = no
 				is_capital = no
-				NOT = { has_province_modifier = demands_representation }
+				NOT = {
+					has_province_modifier = demands_representation
+				}
 			}
 			add_province_modifier = {
 				name = "demands_representation"
@@ -1625,7 +1991,9 @@ country_event = {
 			limit = {
 				is_overseas = no
 				is_capital = no
-				NOT = { has_province_modifier = demands_representation }
+				NOT = {
+					has_province_modifier = demands_representation
+				}
 			}
 			add_province_modifier = {
 				name = "demands_representation"
@@ -1638,46 +2006,83 @@ country_event = {
 #Cities demand representation
 country_event = {
 	id = parlaments.24
-	
 	title = parlaments.24.t
 	desc = parlaments.24.d
 	picture = PARLIAMENT_eventPicture
-
 	trigger = {
 		has_dlc = "Common Sense"
 		adm_tech = 22
 		num_of_cities = 2
 		num_of_loans = 5
-		NOT = { treasury = 50 }
-		NOT = { government = tribal }
-		NOT = { government = native }
-		NOT = { has_reform = elective_monarchy }
-		NOT = { government = republic }
-		NOT = { has_reform = celestial_empire }
-		NOT = { has_reform = peasants_republic }
-		NOT = { has_reform = iqta }
-		NOT = { has_reform = feudal_theocracy }
-		NOT = { has_reform = mamluk_government }
-		NOT = { has_reform = daimyo }
-		NOT = { has_reform = shogunate }
-		NOT = { has_reform = colonial_government }
-		NOT = { has_reform = revolutionary_empire_reform }
-		NOT = { government = theocracy }
-		NOT = { has_country_modifier = yearning_for_representation }
-		NOT = { has_ruler_flag = cities_offered_to_help }
+		NOT = {
+			treasury = 50
+		}
+		NOT = {
+			government = tribal
+		}
+		NOT = {
+			government = native
+		}
+		NOT = {
+			has_reform = elective_monarchy
+		}
+		NOT = {
+			has_reform = theocratic_autocracy
+		}
+		NOT = {
+			government = republic
+		}
+		NOT = {
+			has_reform = celestial_empire
+		}
+		NOT = {
+			has_reform = peasants_republic
+		}
+		NOT = {
+			has_reform = iqta
+		}
+		NOT = {
+			has_reform = feudal_theocracy
+		}
+		NOT = {
+			has_reform = mamluk_government
+		}
+		NOT = {
+			has_reform = daimyo
+		}
+		NOT = {
+			has_reform = shogunate
+		}
+		NOT = {
+			has_reform = colonial_government
+		}
+		NOT = {
+			has_reform = revolutionary_empire_reform
+		}
+		NOT = {
+			government = theocracy
+		}
+		NOT = {
+			has_country_modifier = yearning_for_representation
+		}
+		NOT = {
+			has_ruler_flag = cities_offered_to_help
+		}
 	}
-	
 	mean_time_to_happen = {
 		months = 500
 		modifier = {
 			factor = 0.6
-			NOT = { has_reform = english_monarchy }
-			NOT = { has_reform = parliamentary_reform }
+			NOT = {
+				has_reform = english_monarchy
+			}
+			NOT = {
+				has_reform = parliamentary_reform
+			}
 		}
 	}
-
 	option = {
-		name = parlaments.24.a #Grant them Greater Representation
+		name = parlaments.24.a		#Grant them Greater Representation
 		trigger = {
 			OR = {
 				has_reform = english_monarchy
@@ -1698,9 +2103,8 @@ country_event = {
 		}
 		add_years_of_income = 0.25
 	}
-	
 	option = {
-		name = parlaments.24.b #Refuse their money.
+		name = parlaments.24.b		#Refuse their money.
 		trigger = {
 			OR = {
 				has_reform = english_monarchy
@@ -1719,11 +2123,9 @@ country_event = {
 			}
 			add_unrest = 2
 		}
-		
 	}
-
 	option = {
-		name = parlaments.24.c #
+		name = parlaments.24.c		#
 		trigger = {
 			NOT = {
 				has_reform = english_monarchy
@@ -1739,9 +2141,8 @@ country_event = {
 			duration = 3650
 		}
 	}
-	
 	option = {
-		name = parlaments.24.dd #
+		name = parlaments.24.dd		#
 		trigger = {
 			NOT = {
 				has_reform = english_monarchy
@@ -1758,66 +2159,103 @@ country_event = {
 #Cultural minority demands representation
 province_event = {
 	id = parlaments.25
-	
 	title = parlaments.25.t
 	desc = parlaments.25.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	is_mtth_scaled_to_size = 1
-	
 	trigger = {
 		has_dlc = "Common Sense"
 		has_owner_accepted_culture = no
 		is_overseas = no
-		NOT = { has_province_modifier = demands_representation }
+		NOT = {
+			has_province_modifier = demands_representation
+		}
 		owner = {
 			adm_tech = 22
-			NOT = { stability = 2 }
-			NOT = { has_reform = english_monarchy }
-			NOT = { has_reform = parliamentary_reform }
-			NOT = { government = tribal }
-			NOT = { government = native }
-			NOT = { has_reform = elective_monarchy }
-			NOT = { government = republic }
-			NOT = { has_reform = celestial_empire }
-			NOT = { has_reform = iqta }
-			NOT = { has_reform = feudal_theocracy }
-			NOT = { has_reform = mamluk_government }
-			NOT = { has_reform = peasants_republic }
-			NOT = { has_reform = daimyo }
-			NOT = { has_reform = shogunate }
-			NOT = { has_reform = colonial_government }
-			NOT = { has_reform = revolutionary_empire_reform }
-			NOT = { government = theocracy }
-			NOT = { has_ruler_flag = minorities_denied_representation }
+			NOT = {
+				stability = 2
+			}
+			NOT = {
+				has_reform = english_monarchy
+			}
+			NOT = {
+				has_reform = parliamentary_reform
+			}
+			NOT = {
+				government = tribal
+			}
+			NOT = {
+				government = native
+			}
+			NOT = {
+				has_reform = elective_monarchy
+			}
+			NOT = {
+				has_reform = theocratic_autocracy
+			}
+			NOT = {
+				government = republic
+			}
+			NOT = {
+				has_reform = celestial_empire
+			}
+			NOT = {
+				has_reform = iqta
+			}
+			NOT = {
+				has_reform = feudal_theocracy
+			}
+			NOT = {
+				has_reform = mamluk_government
+			}
+			NOT = {
+				has_reform = peasants_republic
+			}
+			NOT = {
+				has_reform = daimyo
+			}
+			NOT = {
+				has_reform = shogunate
+			}
+			NOT = {
+				has_reform = colonial_government
+			}
+			NOT = {
+				has_reform = revolutionary_empire_reform
+			}
+			NOT = {
+				government = theocracy
+			}
+			NOT = {
+				has_ruler_flag = minorities_denied_representation
+			}
 			num_of_owned_provinces_with = {
 				value = 2
 				culture = root
 			}
 		}
 	}
-	
 	mean_time_to_happen = {
 		months = 300
 	}
-
 	immediate = {
 		hidden_effect = {
 			owner = {
 				random_owned_province = {
 					limit = {
 						culture = ROOT
-						NOT = { province_id = root }
+						NOT = {
+							province_id = root
+						}
 					}
 					save_event_target_as = other_province
 				}
 			}
 		}
 	}
-
 	option = {
-		name = parlaments.25.a #
+		name = parlaments.25.a		#
 		add_province_modifier = {
 			name = "demands_representation"
 			duration = 3650
@@ -1829,9 +2267,8 @@ province_event = {
 			}
 		}
 	}
-
 	option = {
-		name = parlaments.25.b #
+		name = parlaments.25.b		#
 		spawn_rebels = {
 			type = revolutionary_rebels
 			size = 1
@@ -1850,28 +2287,27 @@ province_event = {
 
 province_event = {
 	id = parlaments.26
-	
 	title = parlaments.26.t
 	desc = parlaments.26.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-	
 	is_mtth_scaled_to_size = 1
-	
 	trigger = {
 		has_dlc = "Common Sense"
 		has_seat_in_parliament = yes
-		NOT = { has_province_modifier = rotten_borough }
-		owner = { has_active_debate = yes }
+		NOT = {
+			has_province_modifier = rotten_borough
+		}
+		owner = {
+			has_active_debate = yes
+		}
 		is_backing_current_issue = yes
 	}
-	
 	mean_time_to_happen = {
 		months = 300
 	}
-
 	option = {
-		name = parlaments.26.a #
+		name = parlaments.26.a		#
 		owner = {
 			add_years_of_income = 0.05
 		}
@@ -1880,28 +2316,27 @@ province_event = {
 
 province_event = {
 	id = parlaments.27
-	
 	title = parlaments.27.t
 	desc = parlaments.27.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	is_mtth_scaled_to_size = 1
-	
 	trigger = {
 		has_dlc = "Common Sense"
 		has_seat_in_parliament = yes
-		NOT = { has_province_modifier = rotten_borough }
-		owner = { has_active_debate = yes }
+		NOT = {
+			has_province_modifier = rotten_borough
+		}
+		owner = {
+			has_active_debate = yes
+		}
 		is_backing_current_issue = yes
 	}
-	
 	mean_time_to_happen = {
 		months = 300
 	}
-
 	option = {
-		name = parlaments.27.a #
+		name = parlaments.27.a		#
 		owner = {
 			increase_legitimacy_medium_effect = yes
 		}
@@ -1910,35 +2345,32 @@ province_event = {
 
 province_event = {
 	id = parlaments.28
-	
 	title = parlaments.28.t
 	desc = parlaments.28.d
 	picture = PARLIAMENT_eventPicture
 	goto = root
-
 	is_mtth_scaled_to_size = 1
-	
 	trigger = {
 		has_dlc = "Common Sense"
 		has_seat_in_parliament = yes
-		NOT = { has_province_modifier = rotten_borough }
-		owner = { has_active_debate = yes }
+		NOT = {
+			has_province_modifier = rotten_borough
+		}
+		owner = {
+			has_active_debate = yes
+		}
 		is_backing_current_issue = yes
 	}
-	
 	mean_time_to_happen = {
 		months = 300
 	}
-
 	option = {
-		name = parlaments.28.a #
+		name = parlaments.28.a		#
 		owner = {
 			add_adm_power = 50
 		}
 	}
 }
-
-
 
 #Hidden event to ensure correct localisations of guarantee_religious_tolerance
 province_event = {
@@ -1948,7 +2380,6 @@ province_event = {
 	picture = none
 	hidden = yes
 	is_triggered_only = yes
-
 	immediate = {
 		clr_province_flag = guarantee_religious_tolerance_flag
 	}

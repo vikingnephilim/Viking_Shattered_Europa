@@ -360,6 +360,15 @@ country_decisions = {
 			}
 			set_country_flag = formed_plc_flag
 			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
+			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -565,6 +574,15 @@ country_decisions = {
 			}
 			set_country_flag = formed_plc_flag
 			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
+			}
 		}
 		ai_will_do = {
 			factor = 1

@@ -660,13 +660,16 @@ dummy = {
 }
 
 papal_vassal = {
+	diplomacy_overlord_sprite = GFX_diplomacy_lead_papacy
+	diplomacy_subject_sprite = GFX_diplomacy_am_subject_papacy
 	# Properties:
-	has_power_projection = yes
+	diplomacy_view_class = 1	# See description above
+	has_power_projection = no
 	takes_diplo_slot = no
 	gets_help_with_rebels = yes
 	separatists_become_subjects = yes
 	allows_taking_land_without_independence = yes
-	can_have_subjects_of_other_types = yes
+	can_have_subjects_of_other_types = no
 	can_be_integrated = yes
 	can_use_claims = yes
 	forms_trade_companies = no
@@ -716,8 +719,7 @@ papal_vassal = {
 }
 
 greek_vassal = {
-	copy_from = vassal
-	count = vassal
+	diplomacy_view_class = 1	# See description above
 	# Properties:
 	has_power_projection = no
 	takes_diplo_slot = no
@@ -729,7 +731,10 @@ greek_vassal = {
 	can_be_annexed = no
 	can_use_claims = yes
 	forms_trade_companies = no
+	joins_overlords_wars = yes
+	joins_colonial_wars = no
 	can_concentrate_development = yes
+	overlord_protects_external = yes
 	trust_on_start = 25
 	base_liberty_desire = -10
 	military_focus = 1
@@ -810,8 +815,7 @@ greek_vassal = {
 }
 
 beylik_vassal = {
-	copy_from = vassal
-	count = vassal
+	diplomacy_view_class = 1	# See description above
 	# Properties:
 	has_power_projection = no
 	takes_diplo_slot = no
@@ -823,7 +827,10 @@ beylik_vassal = {
 	can_be_annexed = no
 	can_use_claims = yes
 	forms_trade_companies = no
+	joins_overlords_wars = yes
+	joins_colonial_wars = no
 	can_concentrate_development = yes
+	overlord_protects_external = yes
 	trust_on_start = 25
 	base_liberty_desire = -10
 	military_focus = 1
