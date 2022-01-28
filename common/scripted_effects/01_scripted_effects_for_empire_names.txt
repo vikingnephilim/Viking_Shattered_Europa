@@ -14524,6 +14524,20 @@ empire_name_effect = {
 		}
 		if = {
 			limit = {
+				tag = VGO
+			}
+			override_country_name = VGO_Empire
+		}
+		if = {
+			limit = {
+				religion_group = muslim
+				full_idea_group = religious_ideas
+				tag = VGO
+			}
+			override_country_name = VGO_Caliphate
+		}
+		if = {
+			limit = {
 				tag = GUR
 			}
 			override_country_name = GUR_Empire
@@ -14773,6 +14787,48 @@ empire_name_effect = {
 				tag = OKN
 			}
 			override_country_name = OKN_Caliphate
+		}
+		if = {
+			limit = {
+				tag = ABA
+			}
+			override_country_name = PON_Empire
+		}
+		if = {
+			limit = {
+				religion_group = muslim
+				full_idea_group = religious_ideas
+				tag = ABA
+			}
+			override_country_name = ABA_Caliphate
+		}
+		if = {
+			limit = {
+				tag = ABA
+			}
+			override_country_name = ABA_Empire
+		}
+		if = {
+			limit = {
+				religion_group = muslim
+				full_idea_group = religious_ideas
+				tag = PON
+			}
+			override_country_name = PON_Caliphate
+		}
+		if = {
+			limit = {
+				tag = TUV
+			}
+			override_country_name = TUV_Empire
+		}
+		if = {
+			limit = {
+				religion_group = muslim
+				full_idea_group = religious_ideas
+				tag = TUV
+			}
+			override_country_name = TUV_Caliphate
 		}
 	}
 }

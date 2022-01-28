@@ -2783,21 +2783,34 @@ province_is_or_accepts_culture = {
 
 province_is_buddhist_or_accepts_buddhism = {
 	OR = {
+		religion = arivada
+		religion = mahayana
+		religion = sinhalavada
+		religion = shinto
 		religion = buddhism
 		religion = vajrayana
-		religion = mahayana
-		religion = arivada
-		religion = sinhalavada
 		AND = {
 			is_chinese_religion_viking_mod = yes
 			owner = {
 				OR = {
 					has_harmonized_with = arivada
-					has_harmonized_with = buddhism
-					has_harmonized_with = sinhalavada
-					has_harmonized_with = vajrayana
 					has_harmonized_with = mahayana
+					has_harmonized_with = sinhalavada
+					has_harmonized_with = shinto
+					has_harmonized_with = buddhism
+					has_harmonized_with = vajrayana
 				}
+			}
+		}
+		AND = {
+			has_secondary_religion = yes
+			OR = {
+				secondary_religion = arivada
+				secondary_religion = mahayana
+				secondary_religion = sinhalavada
+				secondary_religion = shinto
+				secondary_religion = buddhism
+				secondary_religion = vajrayana
 			}
 		}
 		AND = {
