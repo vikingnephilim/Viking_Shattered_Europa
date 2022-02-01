@@ -146,8 +146,8 @@ ABE_ideas = {
 
 ABI_ideas = {
 	start = {
-		envoy_travel_time = -0.2
-		colonists = 1
+		may_explore = yes
+		may_establish_frontier = yes
 	}
 	bonus = {
 		global_unrest = -3
@@ -156,9 +156,6 @@ ABI_ideas = {
 		tag = ABI
 	}
 	free = yes
-	ABI_frontier_expansion = {
-		may_establish_frontier = yes
-	}
 	ABE_council_of_elders = {
 		stability_cost_to_declare_war = -1
 	}
@@ -168,6 +165,10 @@ ABI_ideas = {
 	}
 	ABI_stomp_dance = {
 		land_morale = 0.1
+	}
+	ABI_frontier_expansion = {
+		envoy_travel_time = -0.2
+		colonists = 1
 	}
 	ABI_ceremonial_peace = {
 		stability_cost_modifier = -0.5
@@ -217,6 +218,42 @@ ACH_ideas = {
 	ACH_dolmens = {
 		fabricate_claims_cost = -0.2
 		claim_duration = 0.25
+	}
+}
+
+ACO_ideas = {
+	start = {
+		may_explore = yes
+		may_establish_frontier = yes
+	}
+	bonus = {
+		dip_tech_cost_modifier = -0.1
+	}
+	trigger = {
+		tag = ACO
+	}
+	free = yes
+	ACO_arable_farming = {
+		global_institution_spread = 0.1
+	}
+	ACO_brick_buildings = {
+		build_cost = -0.2
+	}
+	ACO_raiding_tribes = {
+		movement_speed = 0.125
+	}
+	ACO_sky_city = {
+		state_governing_cost = -0.15
+	}
+	ACO_desert_land = {
+		leader_land_manuever = 2
+	}
+	ACO_theocracy = {
+		global_missionary_strength = 0.03
+		missionary_maintenance_cost = -0.1
+	}
+	ACO_fire_pits = {
+		land_morale = 0.1
 	}
 }
 
@@ -476,6 +513,45 @@ AGD_ideas = {
 		core_decay_on_your_own = -0.1
 	}
 }
+
+AGQ_ideas = {
+	start = {
+		may_explore = yes
+		may_establish_frontier = yes
+	}
+	bonus = {
+		ae_impact = -0.1
+	}
+	trigger = {
+		tag = AGQ
+	}
+	free = yes
+	AQG_native_relations = {
+		reduced_stab_impacts = yes
+		stability_cost_to_declare_war = -1
+	}
+	AQG_ethno_botany = {
+		ship_power_propagation = 0.1
+	}
+	AGQ_hunting_and_fishing = {
+		center_of_trade_upgrade_cost = -0.125
+		trade_efficiency = 0.125
+	}
+	AGQ_copper_tools = {
+		production_efficiency = 0.1
+	}
+	AQG_birch_bark_canoes = {
+		trade_range_modifier = 0.25
+		range = 0.25
+	}
+	AGQ_snow_shoes = {
+		leader_land_manuever = 1
+	}
+	AQG_sunflowers_and_tobacco = {
+		yearly_corruption = -0.1
+	}
+}
+
 
 AHM_ideas = {
 	start = {
@@ -7027,7 +7103,7 @@ COM_ideas = {
 
 COO_ideas = {
 	start = {
-		colonist_placement_chance = 0.05
+		may_explore = yes
 		may_establish_frontier = yes
 	}
 	bonus = {
@@ -7038,7 +7114,7 @@ COO_ideas = {
 	}
 	free = yes
 	ABI_migrating_and_expanding = {
-		may_explore = yes
+		colonist_placement_chance = 0.05
 	}
 	COO_coosawattee_river = {
 		development_cost = -0.1
@@ -8942,6 +9018,44 @@ EJZ_ideas = {
 	}
 	EJZ_Korean_shipwrights = {
 		global_ship_cost = -0.15
+	}
+}
+
+ELF_ideas = {
+	start = {
+		movement_speed = 0.15
+		reform_progress_growth = 0.1
+	}
+	bonus = {
+		discipline = 0.075
+	}
+	trigger = {
+		tag = ELF
+	}
+	free = yes
+	ELF_old_norse = {
+		num_accepted_cultures = 2
+	}
+	ELF_scandinavian_pride = {
+		recover_army_morale_speed = 0.25
+	}
+	LUL_norse_sami_relations = {
+		diplomats = 1
+		trade_steering = 0.1
+	}
+	ELF_elders_and_children = {
+		production_efficiency = 0.1
+		global_tax_modifier = 0.2
+	}
+	ELF_kopparbergs = {
+		monthly_gold_inflation_modifier = -0.1
+		development_cost = -0.1
+	}
+	ELF_mountain_forts = {
+		defensiveness = 0.2
+	}
+	ELF_powerful_war_machine = {
+		unjustified_demands = -0.25
 	}
 }
 
@@ -12241,6 +12355,44 @@ HSE_ideas = {
 	}
 }
 
+HSI_ideas = {
+	start = {
+		diplomatic_reputation = 1
+		global_garrison_growth = 0.1
+	}
+	bonus = {
+		state_maintenance_modifier = -0.15
+	}
+	trigger = {
+		tag = HSI
+	}
+	free = yes
+	hsi_shan_power= {
+		improve_relation_modifier = 0.25
+	}
+	hsi_ava_federation = {
+		vassal_income = 0.2
+	}
+	hsi_religious_peace = {
+		tolerance_own = 2
+		religious_unity = 0.2
+	}
+	hsi_indus_china = {
+		prestige = 1
+		yearly_absolutism = 1
+	}
+	hsi_shan_unification = {
+		culture_conversion_cost = -0.2
+	}
+	hsi_a_pledge_of_allegiance = {
+		reduced_liberty_desire = 10
+	}
+	hsi_monsoon_protection = {
+		build_cost = -0.2
+		build_time = -0.2
+	}
+}
+
 HSK_ideas = {
 	start = {
 		galley_power = 0.2
@@ -12826,6 +12978,44 @@ IMG_ideas = {
 	IMG_march_to_kyoto = {
 		unjustified_demands = -0.1
 		core_creation = -0.1
+	}
+}
+
+INA_ideas = {
+	start = {
+		movement_speed = 0.15
+		religious_unity = 0.25
+	}
+	bonus = {
+		diplomatic_upkeep = 2
+	}
+	trigger = {
+		tag = INA
+	}
+	free = yes
+	LUL_scandinavian_hardiness = {
+		max_attrition = -0.125
+	}
+	LUL_reindeer_herds = {
+		manpower_recovery_speed = 0.275
+	}
+	LUL_norse_sami_relations = {
+		diplomats = 1
+		trade_steering = 0.1
+	}
+	LUL_ukko_strength = {
+		missionaries = 1
+		missionary_maintenance_cost = -0.225
+	}
+	LUL_state_autonomy = {
+		reform_progress_growth = 0.25
+	}
+	LUL_foraging_in_winter = {
+		hostile_attrition = 1
+	}
+	LUL_continious_leadership = {
+		heir_chance = 1
+		monthly_heir_claim_increase = 0.02
 	}
 }
 
@@ -14987,6 +15177,44 @@ KHO_ideas = {
 	}
 }
 
+KHR_ideas = {
+	start = {
+		diplomatic_upkeep = 1
+		adm_tech_cost_modifier = -0.05
+	}
+	bonus = {
+		improve_relation_modifier = 0.2
+	}
+	trigger = {
+		tag = KHR
+	}
+	free = yes
+	khr_barrier = {
+		fort_maintenance_modifier = -0.25
+	}
+	khr_phu_phan_mountains = {
+		defensiveness = 0.2
+	}
+	khr_mekong_tributaries = {
+		trade_range_modifier = 0.25
+		light_ship_cost = -0.2
+	}
+	khr_drought_resistance = {
+		manpower_recovery_speed = 0.20
+	}
+	khr_chinese_mercenaries = {
+		mercenary_manpower = 0.10
+		merc_maintenance_modifier = -0.10
+	}
+	khr_sema_stones = {
+		tolerance_heretic = 2
+		tolerance_heathen = 2
+	}
+	khr_lowland_soils = {
+		years_of_nationalism = -5
+	}
+}
+
 KIC_ideas = {
 	start = {
 		global_own_trade_power = 0.1
@@ -16550,8 +16778,8 @@ KSH_ideas = {
 
 KSI_ideas = {
 	start = {
-		ae_impact = -0.1
-		idea_cost = -0.1
+		may_explore = yes
+		may_establish_frontier = yes
 	}
 	bonus = {
 		core_creation = -0.125
@@ -16567,8 +16795,8 @@ KSI_ideas = {
 		female_advisor_chance = 0.5
 	}
 	ABI_frontier_expansion = {
-		may_establish_frontier = yes
-		colonist_placement_chance = 0.05
+		ae_impact = -0.1
+		idea_cost = -0.1
 	}
 	KSI_peaceful_town = {
 		no_religion_penalty = yes
@@ -18147,6 +18375,43 @@ LRS_ideas = {
 	}
 }
 
+LUA_ideas = {
+	start = {
+		promote_culture_cost = -0.25
+		global_autonomy = -0.05
+	}
+	bonus = {
+		expand_administration_cost = -0.25
+	}
+	trigger = {
+		tag = LUA
+	}
+	free = yes
+	LUA_chinese_doctors = {
+		monarch_lifespan = 0.1
+	}
+	LUA_destruction_of_sukhotai = {
+		harsh_treatment_cost = -0.1
+	}
+	LUA_dvaravati_kingdoms = {
+		num_accepted_cultures = 3
+	}
+	LUA_muang_sua = {
+		innovativeness_gain = 1
+	}
+	LUA_chinese_gold = {
+		interest = -1
+	}
+	KHR_chinese_mercenaries = {
+		mercenary_manpower = 0.10
+		merc_maintenance_modifier = -0.10
+	}
+	LUA_muang_dynasties = {
+		prestige = 1
+		improve_relation_modifier = 0.2
+	}
+}
+
 LUB_ideas = {
 	start = {
 		hostile_attrition = 1
@@ -18216,6 +18481,43 @@ LUC_ideas = {
 	}
 	take_on_republican_reforms = {
 		yearly_corruption = -0.05
+	}
+}
+
+LUL_ideas = {
+	start = {
+		land_maintenance_modifier = -0.05
+		war_exhaustion_cost = -0.1
+	}
+	bonus = {
+		diplomatic_reputation = 1
+	}
+	trigger = {
+		tag = LUL
+	}
+	free = yes
+	LUL_reindeer_herds = {
+		movement_speed = 0.15
+	}
+	LUL_ukko_strength = {
+		missionaries = 1
+		global_missionary_strength = 0.03
+	}
+	LUL_foraging_in_winter = {
+		land_attrition = -0.10
+	}
+	LUL_continious_leadership = {
+		heir_chance = 1
+		monthly_heir_claim_increase = 0.02
+	}
+	LUL_state_autonomy = {
+		state_maintenance_modifier = -0.15
+	}
+	LUL_scandinavian_hardiness = {
+		land_morale = 0.1
+	}
+	LUL_norse_sami_relations = {
+		diplomatic_upkeep = 2
 	}
 }
 
@@ -19567,6 +19869,43 @@ MEI_ideas = {
 	}
 	albertinische_und_ernestinische_linie = {
 		diplomatic_upkeep = 1
+	}
+}
+
+MEK_ideas = {
+	start = {
+		mil_tech_cost_modifier = -0.1
+		leader_naval_shock = 2
+	}
+	bonus = {
+		build_time = -0.125
+	}
+	trigger = {
+		tag = MEK
+	}
+	free = yes
+	MEK_arable_farming = {
+		production_efficiency = 0.125
+	}
+	MEK_flooding_river = {
+		light_ship_cost = -0.1
+		light_ship_power = 0.1
+	}
+	MEK_nine_tributaries = {
+		global_sailors_modifier = 0.15
+		sailors_recovery_speed = 0.15
+	}
+	MEK_trade_delta = {
+		trade_efficiency = 0.1
+	}
+	MEK_dense_woodlands = {
+		build_cost = -0.125
+	}
+	MEK_cultural_change = {
+		num_accepted_cultures = 2
+	}
+	MEK_bio_diversity = {
+		liberty_desire_from_subject_development = -0.25
 	}
 }
 
@@ -21229,6 +21568,43 @@ MPC_ideas = {
 	}
 	mpc_idea_7 = {
 		prestige = 1
+	}
+}
+
+MPH_ideas = {
+	start = {
+		can_fabricate_for_vassals = yes
+		tolerance_own = 3
+	}
+	bonus = {
+		spy_offence = 0.25
+	}
+	trigger = {
+		tag = MPH
+	}
+	free = yes
+	MPH_multiple_tributes = {
+		liberty_desire_from_subject_development = -0.2
+	}
+	MPH_strict_administration = {
+		harsh_treatment_cost = -0.25
+	}
+	MPH_loyalty_of_estates = {
+		all_estate_loyalty_equilibrium = 0.15
+	}
+	MPH_imperial_education = {
+		monarch_admin_power = 1
+	}
+	MPH_far_reaching_merchants = {
+		trade_range_modifier = 0.25
+		envoy_travel_time = -0.2
+	}
+	MPH_theravada_buddhists = {
+		monthly_splendor = 1
+	}
+	MPH_fast_recovery = {
+		global_monthly_devastation = 0.1
+		global_prosperity_growth = 0.1
 	}
 }
 
@@ -22902,6 +23278,43 @@ NPL_ideas = {
 	}
 	envelopment_and_blockade = {
 		leader_siege = 1
+	}
+}
+
+NRG_ideas = {
+	start = {
+		global_sailors_modifier = 0.25
+		ship_durability = 0.075
+	}
+	bonus = {
+		trade_steering = 0.15
+	}
+	trigger = {
+		tag = NRG
+	}
+	free = yes
+	natural_seamanship = {
+		naval_morale = 0.1
+	}
+	call_of_our_forefathers = {
+		range = 0.25
+		may_explore = yes
+	}
+	pioneer_spirit = {
+		colonists = 2
+	}
+	nor_shipbuilding = {
+		global_ship_cost = -0.05
+	}
+	seize_the_opportunity = {
+		global_trade_power = 0.05
+	}
+	nor_fishing = {
+		production_efficiency = 0.05
+	}
+	write_new_sagas = {
+		prestige = 0.5
+		discipline = 0.025
 	}
 }
 
@@ -28928,6 +29341,44 @@ SMO_ideas = {
 	}
 	tsar_mortars = {
 		siege_ability = 0.1
+	}
+}
+
+SMT_ideas = {
+	start = {
+		movement_speed = 0.15
+		diplomatic_annexation_cost = -0.1
+	}
+	bonus = {
+		diplomatic_reputation = 1
+	}
+	trigger = {
+		tag = SMT
+	}
+	free = yes
+	LUL_reindeer_herds = {
+		land_maintenance_modifier = -0.125
+	}
+	LUL_norse_sami_relations = {
+		num_accepted_cultures = 2
+	}
+	LUL_foraging_in_winter = {
+		hostile_attrition = 1
+	}
+	LUL_continious_leadership = {
+		heir_chance = 1
+		monthly_heir_claim_increase = 0.02
+	}
+	LUL_ukko_strength = {
+		land_morale = 0.1
+		global_heathen_missionary_strength = 0.02
+	}
+	LUL_state_autonomy = {
+		global_autonomy = -0.05
+		autonomy_change_time = -0.25
+	}
+	LUL_scandinavian_hardiness = {
+		max_attrition = -0.125
 	}
 }
 

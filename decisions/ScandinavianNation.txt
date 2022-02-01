@@ -89,37 +89,13 @@ country_decisions = {
 				}
 				set_government_rank = 2
 			}
-			skaneland_area = {
+			scandinavia_region = {
 				limit = {
 					NOT = {
 						owned_by = ROOT
 					}
 				}
 				add_permanent_claim = DAN
-			}
-			jutland_area = {
-				limit = {
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_permanent_claim = DAN
-			}
-			denmark_area = {
-				limit = {
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_permanent_claim = DAN
-			}
-			gotaland_area = {
-				limit = {
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_claim = DAN
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -193,6 +169,7 @@ country_decisions = {
 			}
 			OR = {
 				primary_culture = geats
+				primary_culture = elfdalian
 				primary_culture = scanian
 				primary_culture = swedish
 				primary_culture = svealander
@@ -273,69 +250,13 @@ country_decisions = {
 				}
 				set_government_rank = 2
 			}
-			skaneland_area = {
+			scandinavia_region = {
 				limit = {
 					NOT = {
 						owned_by = ROOT
 					}
 				}
 				add_permanent_claim = SWE
-			}
-			gotaland_area = {
-				limit = {
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_permanent_claim = SWE
-			}
-			vastra_gotaland_area = {
-				limit = {
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_permanent_claim = SWE
-			}
-			norrland_area = {
-				limit = {
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_permanent_claim = SWE
-			}
-			svealand_area = {
-				limit = {
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_permanent_claim = SWE
-			}
-			ostra_svealand_area = {
-				limit = {
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_permanent_claim = SWE
-			}
-			bothnia_area = {
-				limit = {
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_claim = SWE
-			}
-			finland_area = {
-				limit = {
-					NOT = {
-						owned_by = ROOT
-					}
-				}
-				add_claim = SWE
 			}
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -354,6 +275,159 @@ country_decisions = {
 			add_prestige = 10
 			set_country_flag = formed_sweden_flag
 			add_accepted_culture = elfdalian
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	norway_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_norway_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = {
+				exists = NOR
+			}
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				tag = SCA
+			}
+			NOT = {
+				tag = DAN
+			}
+			NOT = {
+				tag = SWE
+			}
+			NOT = {
+				tag = HLR
+			}
+			OR = {
+				tag = NRG
+				tag = ELF
+			}
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 9
+				province_id = 10
+				province_id = 17
+				province_id = 20
+				province_id = 22
+				province_id = 23
+				province_id = 24
+				province_id = 2752
+				province_id = 4143
+				province_id = 4144
+				province_id = 4145
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 9
+			owns_core_province = 10
+			owns_core_province = 17
+			owns_core_province = 20
+			owns_core_province = 22
+			owns_core_province = 23
+			owns_core_province = 24
+			owns_core_province = 2752
+			owns_core_province = 4143
+			owns_core_province = 4144
+			owns_core_province = 4145
+		}
+		effect = {
+			restore_country_name_effect = yes
+			change_tag = NOR
+			change_government = monarchy
+			add_government_reform = office_of_lord_regent_reform
+			if = {
+				limit = {
+					NOT = {
+						primary_culture = norwegian
+					}
+				}
+				change_primary_culture = norwegian
+				add_accepted_culture = elfdalian
+				add_accepted_culture = svealander
+				add_accepted_culture = norrlander
+				add_accepted_culture = gotlander
+				add_accepted_culture = geats
+				add_accepted_culture = scanian
+				hidden_effect = {
+					every_owned_province = {
+						limit = {
+							culture_group = scandinavian
+						}
+						change_culture = norwegian
+					}
+				}
+			}
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
+				set_government_rank = 2
+			}
+			scandinavia_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = NOR
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
+			}
+			swap_non_generic_missions = yes
+			add_prestige = 10
+			set_country_flag = formed_norway_flag
 		}
 		ai_will_do = {
 			factor = 1

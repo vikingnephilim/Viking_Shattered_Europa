@@ -696,7 +696,7 @@ country_decisions = {
 			if = {
 				limit = {
 					NOT = {
-						has_idea_group = greek_ideas
+						has_idea_group = GRE_ideas
 					}
 					is_playing_custom_nation = no
 				}
@@ -1631,6 +1631,116 @@ country_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
+		}
+	}
+	sami_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_sami_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			OR = {
+				TAG = LUL
+				TAG = SMT
+				TAG = INA
+			}
+			NOT = {
+				exists = SMI
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 11
+				province_id = 18
+				province_id = 21
+				province_id = 315
+				province_id = 1777
+				province_id = 4113
+				province_id = 4114
+				province_id = 4151
+				province_id = 4152
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+			}
+		}
+		allow = {
+			is_at_war = no
+			is_nomad = no
+			owns_core_province = 11
+			owns_core_province = 18
+			owns_core_province = 21
+			owns_core_province = 315
+			owns_core_province = 1777
+			owns_core_province = 4113
+			owns_core_province = 4114
+			owns_core_province = 4151
+			owns_core_province = 4152
+			NOT = {
+				exists = SMI
+			}
+		}
+		effect = {
+			restore_country_name_effect = yes
+			change_tag = SMI
+			change_primary_culture = sapmi
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							culture = lule
+							culture = ter
+							culture = inari
+						}
+					}
+					change_culture = sapmi
+				}
+			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						OR = {
+							culture = lule
+							culture = ter
+							culture = inari
+						}
+					}
+					change_culture = sapmi
+				}
+			}
+			scandinavia_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = ETR
+			}
+			add_prestige = 25
+			if = {
+				limit = {
+					has_custom_ideas = no
+					NOT = {
+						has_idea_group = SMI_ideas
+					}
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
+			}
+			set_country_flag = formed_sami_flag
 		}
 	}
 }

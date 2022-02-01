@@ -1,8 +1,8 @@
-namespace = viking_south_america
+namespace = viking_americas
 country_event = {
-	id = viking_south_america.1
-	title = "viking_south_america.1.t"
-	desc = "viking_south_america.1.d"
+	id = viking_americas.1
+	title = "viking_americas.1.t"
+	desc = "viking_americas.1.d"
 	picture = NATIVES_eventPicture
 	trigger = {
 		owns_core_province = 808
@@ -22,22 +22,22 @@ country_event = {
 	}
 	# Take the Government Type
 	option = {
-		name = "viking_south_america.1.a"
+		name = "viking_americas.1.a"
 		add_government_reform = inti_empire_reform
 		set_country_flag = inti_empire_gov_change_flag
 	}
 	# Don't Take it
 	option = {
-		name = "viking_south_america.1.b"
+		name = "viking_americas.1.b"
 		add_prestige = 15
 		set_country_flag = inti_empire_no_gov_change_flag
 	}
 }
 
 country_event = {
-	id = viking_south_america.2
-	title = "viking_south_america.2.t"
-	desc = "viking_south_america.2.d"
+	id = viking_americas.2
+	title = "viking_americas.2.t"
+	desc = "viking_americas.2.d"
 	picture = NATIVES_eventPicture
 	trigger = {
 		NOT = {
@@ -82,41 +82,41 @@ country_event = {
 					}
 				}
 				#... And save them as the event target
-				save_event_target_as = viking_south_america_subject
+				save_event_target_as = viking_americas_subject
 			}
 		}
     }
 	# Let them Stay a Tributary
 	option = {
-		name = "viking_south_america.2.a"
+		name = "viking_americas.2.a"
 		hidden_effect = {
 			set_country_flag = inti_subject_stays_as_is
 			country_event = {
-				id = viking_south_america.3
+				id = viking_americas.3
 				days = 730
 				}
 		}
 		add_prestige = 10
 		add_opinion = {
-			who = event_target:viking_south_america_subject
+			who = event_target:viking_americas_subject
 			modifier = viking_inti_subject_stays_as_is
 		}
 	}
 	# Change to a Vassal, and integrate later
 	option = {
-		name = "viking_south_america.2.b"
+		name = "viking_americas.2.b"
 		hidden_effect = {
 			set_country_flag = inti_subject_becomes_vassal
 			country_event = {
-				id = viking_south_america.3
+				id = viking_americas.3
 				days = 730
 				}
 		}
 		add_opinion = {
-			who = event_target:viking_south_america_subject
+			who = event_target:viking_americas_subject
 			modifier = viking_inti_subject_change
 		}
-		event_target:viking_south_america_subject = {
+		event_target:viking_americas_subject = {
 			add_country_modifier = {
 				name = viking_inti_subject_change_modifier
 				duration = 20
@@ -124,16 +124,16 @@ country_event = {
 		}
 		create_subject = {
 			subject_type = vassal
-			subject = event_target:viking_south_america_subject
+			subject = event_target:viking_americas_subject
 		}
 	}
 	# Integrate now, and suffer some rebellions
 	option = {
-		name = "viking_south_america.2.c"
+		name = "viking_americas.2.c"
 		hidden_effect = {
 			set_country_flag = inti_subject_gets_integrated
 			country_event = {
-				id = viking_south_america.3
+				id = viking_americas.3
 				days = 730
 				}
 		}
@@ -143,30 +143,30 @@ country_event = {
 				type = leadered_peasant_rebels
 				unrest = 10
 				size = 3
-				friend = event_target:viking_south_america_subject
+				friend = event_target:viking_americas_subject
 			}
 			spawn_rebels = {
 				type = leadered_peasant_rebels
 				unrest = 10
 				size = 3
-				friend = event_target:viking_south_america_subject
+				friend = event_target:viking_americas_subject
 			}
 		}
 	}
-	custom_tooltip = viking_south_america_integrated_tt
-		inherit = event_target:viking_south_america_subject
+	custom_tooltip = viking_americas_integrated_tt
+		inherit = event_target:viking_americas_subject
 	}
 }
 
 country_event = {
-	id = viking_south_america.3
-	title = "viking_south_america.3.t"
-	desc = "viking_south_america.3.d"
+	id = viking_americas.3
+	title = "viking_americas.3.t"
+	desc = "viking_americas.3.d"
 	picture = NATIVES_eventPicture
 	is_triggered_only = yes
 	# Let them Stay a Tributary
 	option = {
-		name = "viking_south_america.3.a"
+		name = "viking_americas.3.a"
 		clr_country_flag = inti_subject_stays_as_is
 		clr_country_flag = inti_subject_becomes_vassal
 		clr_country_flag = inti_subject_gets_integrated
