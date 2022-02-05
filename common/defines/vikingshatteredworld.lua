@@ -64,6 +64,8 @@ NDefines.NCountry.GREAT_PROJECT_MOVE_COST_PER_DAY = 1 				--how much to move a g
 NDefines.NCountry.PIETY_PERCENTAGE_AT_NEW_RULER = 0.80				-- percentage of piety kept at new ruler.
 NDefines.NCountry.ADVISOR_CUT_OFF_AGE = 60 						-- _CDEF_ADVISOR_CUT_OFF_AGE = 10
 NDefines.NCountry.MAXIMUM_ADVISOR_SKILL = 10						-- Maximum advisor skill reachable through promotion
+NDefines.NCountry.ADVISOR_COST_INCREASE_PER_YEAR = 0.005			-- yearly increase in price in percent,
+NDefines.NCountry.PROMOTE_COST_MONTHS_ADVISOR_SALARY = 60.0		-- Promote advisor cost in monthly salaries
 NDefines.NCountry.CULTURE_MIN_DEVELOPMENT_TO_PROMOTE = 15			-- Minimum development required to promote the culture.
 NDefines.NCountry.MONARCH_DEATH_LEADER_STABILITY_PENALTY = 2		-- Stab hit on monarch death when a leader
 NDefines.NCountry.MIN_REGENCY_LEGITIMACY = 80
@@ -114,3 +116,4 @@ NDefines.NReligion.CONVERSION_COOLDOWN = 300						-- months before you can conve
 NDefines.NGovernment.TRIBAL_ALLEGIANCE_HUMILIATE = 100
 NDefines.NGovernment.TRIBAL_FEDERATION_ABILITY_COST = 33
 NDefines.NGovernment.PRESTIGE_TO_TRIBAL_ALLEGIANCE_FACTOR = 5
+NDefines.NEconomy.ADVISOR_COST = 3.0								-- Advisor cost modifier
