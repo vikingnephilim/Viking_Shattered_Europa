@@ -146,8 +146,8 @@ ABE_ideas = {
 
 ABI_ideas = {
 	start = {
-		may_explore = yes
-		may_establish_frontier = yes
+		discipline = 0.05
+		tolerance_own = 1
 	}
 	bonus = {
 		global_unrest = -3
@@ -223,8 +223,8 @@ ACH_ideas = {
 
 ACO_ideas = {
 	start = {
-		may_explore = yes
-		may_establish_frontier = yes
+		religious_unity = 0.1
+		movement_speed = 0.33
 	}
 	bonus = {
 		dip_tech_cost_modifier = -0.1
@@ -514,10 +514,48 @@ AGD_ideas = {
 	}
 }
 
+AGG_ideas = {
+	start = {
+		global_unrest = -3
+		build_cost = -0.1
+	}
+	bonus = {
+		envoy_travel_time = -0.2
+	}
+	trigger = {
+		tag = AGG
+	}
+	free = yes
+	AGG_nation_of_wolves= {
+		stability_cost_to_declare_war = -1
+	}
+	AGG_stationary_tribe = {
+		development_cost = -0.1
+	}
+	AGG_ritual_leadership = {
+		land_morale = 0.1
+		discipline = 0.05
+	}
+	AGG_movement_across_lakes = {
+		colonists = 1
+	}
+	AGG_ceremonial_shamans = {
+		diplomatic_reputation = 2
+		missionaries = 1
+	}
+	AGG_assistance_of_strangers = {
+		num_accepted_cultures = 2
+	}
+	AGG_fur_trade = {
+		trade_efficiency = 0.1
+		colonist_placement_chance = 0.05
+	}
+}
+
 AGQ_ideas = {
 	start = {
-		may_explore = yes
-		may_establish_frontier = yes
+		caravan_power = 0.2
+		hostile_attrition = 2
 	}
 	bonus = {
 		ae_impact = -0.1
@@ -551,7 +589,6 @@ AGQ_ideas = {
 		yearly_corruption = -0.1
 	}
 }
-
 
 AHM_ideas = {
 	start = {
@@ -1140,6 +1177,43 @@ ALS_ideas = {
 	}
 }
 
+ALT_ideas = {
+	start = {
+		stability_cost_modifier = -0.25
+		innovativeness_gain = 0.5
+	}
+	bonus = {
+		free_policy = 1
+	}
+	trigger = {
+		tag = ALT
+	}
+	free = yes
+	ALT_river_crossing = {
+		leader_land_manuever = 2
+	}
+	ALT_diplomatic_pressure = {
+		monthly_favor_modifier = 0.2
+		improve_relation_modifier = 0.2
+	}
+	ALT_growth_of_provinces = {
+		global_monthly_devastation = 0.1
+		global_prosperity_growth = 0.1
+	}
+	ALT_federation_leadership = {
+		yearly_corruption = -0.1
+	}
+	ALT_river_trade = {
+		trade_steering = 0.15
+	}
+	ALT_largest_river_and_gold = {
+		gold_depletion_chance_modifier = -0.1
+	}
+	ALT_powerful_women = {
+		female_advisor_chance = 0.5
+	}
+}
+
 ALX_ideas = {
 	start = {
 		global_missionary_strength = 0.025
@@ -1327,6 +1401,44 @@ ANJ_ideas = {
 	ANJ_peerage_of_france = {
 		prestige = 1
 		prestige_decay = -0.02
+	}
+}
+
+ANL_ideas = {
+	start = {
+		shock_damage = 0.1
+		shock_damage_received = -0.1
+	}
+	bonus = {
+		infantry_power = 0.1
+	}
+	trigger = {
+		tag = ANL
+	}
+	free = yes
+	ANL_run_through_plains = {
+		movement_speed = 0.275
+	}
+	ANL_leadership_through_peace = {
+		stability_cost_modifier = -0.2
+		global_unrest = -2
+	}
+	ANL_eagles = {
+		prestige = 1
+		prestige_from_land = 1
+	}
+	ANL_trade_power = {
+		center_of_trade_upgrade_cost = -0.25
+	}
+	ANL_mississippi_legacy = {
+		years_of_nationalism = -5
+		unjustified_demands = -0.2
+	}
+	ANL_woodlands_and_hunting = {
+		discipline = 0.075
+	}
+	ANL_rapid_buildings = {
+		build_cost = -0.2
 	}
 }
 
@@ -1549,8 +1661,8 @@ AOT_ideas = {
 
 APA_ideas = {
 	start = {
-		army_tradition_from_battle = 0.05
-		build_cost = -0.1
+		hostile_attrition = 1
+		missionary_maintenance_cost = -0.25
 	}
 	bonus = {
 		shock_damage_received = -0.1
@@ -1575,6 +1687,7 @@ APA_ideas = {
 	}
 	APA_bison_hunting = {
 		production_efficiency = 0.1
+		build_cost = -0.1
 	}
 	APA_trade_with_tribes = {
 		global_trade_goods_size_modifier = 0.1
@@ -1914,8 +2027,8 @@ ARM_ideas = {
 
 ARP_ideas = {
 	start = {
-		global_unrest = -1
-		manpower_recovery_speed = 0.1
+		mercenary_manpower = 0.5
+		num_accepted_cultures = 2
 	}
 	bonus = {
 		war_exhaustion = -0.02
@@ -1926,6 +2039,7 @@ ARP_ideas = {
 	free = yes
 	tribal_connections = {
 		mercenary_cost = -0.15
+		manpower_recovery_speed = 0.1
 	}
 	arapaho_warrior_culture = {
 		discipline = 0.05
@@ -1940,6 +2054,7 @@ ARP_ideas = {
 	}
 	prepare_for_diplomatic_shifts = {
 		diplomatic_upkeep = 1
+		global_unrest = -1
 	}
 	formalize_arapaho_divisons = {
 		free_adm_policy = 1
@@ -2021,8 +2136,8 @@ ASH_ideas = {
 
 ASI_ideas = {
 	start = {
-		improve_relation_modifier = 0.25
-		num_accepted_cultures = 1
+		leader_land_shock = 1
+		defensiveness = 0.1
 	}
 	bonus = {
 		diplomatic_reputation = 1
@@ -2036,6 +2151,7 @@ ASI_ideas = {
 	}
 	north_american_fur_trade = {
 		global_trade_goods_size_modifier = 0.1
+		improve_relation_modifier = 0.25
 	}
 	formation_of_the_iron_confederacy = {
 		colonists = 1
@@ -2043,6 +2159,7 @@ ASI_ideas = {
 	}
 	assiniboine_political_power = {
 		years_of_nationalism = -5
+		num_accepted_cultures = 1
 	}
 	semi_nomadic_traditions = {
 		movement_speed = 0.1
@@ -2233,6 +2350,44 @@ ASU_ideas = {
 	}
 	asu_early_industrialism = {
 		global_trade_goods_size_modifier = 0.1
+	}
+}
+
+ATA_ideas = {
+	start = {
+		discovered_relations_impact = -0.1
+		all_estate_loyalty_equilibrium = 0.1
+	}
+	bonus = {
+		infantry_power = 0.1
+	}
+	trigger = {
+		tag = ATA
+	}
+	free = yes
+	ATA_longevity_of_leaders = {
+		monarch_lifespan = 0.2
+		monthly_support_heir_gain = 0.2
+	}
+	ATA_embracing_of_ideals = {
+		idea_cost = 0.1
+	}
+	ATA_historic_lands = {
+		prestige = 1
+		core_decay_on_your_own = 0.1
+	}
+	ATA_development_and_growth = {
+		tribal_development_growth = 0.02
+		development_cost = -0.1
+	}
+	ATA_life_blood = {
+		years_of_nationalism = -5
+	}
+	ATA_prime_soldiers = {
+		land_morale = 0.1
+	}
+	ATA_bears_fish = {
+		global_trade_goods_size_modifier = 0.125
 	}
 }
 
@@ -3576,8 +3731,8 @@ BKJ_ideas = {
 
 BLA_ideas = {
 	start = {
-		years_of_nationalism = -5
-		diplomats = 1
+		trade_range_modifier = 0.5
+		global_autonomy = -0.05
 	}
 	bonus = {
 		land_maintenance_modifier = -0.1
@@ -3591,6 +3746,7 @@ BLA_ideas = {
 	}
 	flexible_bands_for_blackfoot_society = {
 		global_unrest = -1
+		years_of_nationalism = -5
 	}
 	promote_the_warrior_societies = {
 		land_morale = 0.1
@@ -3609,6 +3765,7 @@ BLA_ideas = {
 	}
 	neutrality_in_various_affairs = {
 		diplomatic_reputation = 1
+		diplomats = 1
 	}
 }
 
@@ -5424,6 +5581,43 @@ CAN_ideas = {
 	}
 }
 
+CAO_ideas = {
+	start = {
+		no_religion_penalty = yes
+		advisor_cost = -0.25
+	}
+	bonus = {
+		harsh_treatment_cost = -0.2
+	}
+	trigger = {
+		tag = CAO
+	}
+	free = yes
+	CAO_mound_building = {
+		build_cost = -0.2
+	}
+	CAO_agriculture_revolution = {
+		development_cost = -0.1
+		production_efficiency = 0.15
+	}
+	CAO_rivers = {
+		land_attrition = -0.1
+		migration_cost = -0.1
+	}
+	CAO_urban_centers = {
+		global_rebel_suppression_efficiency = -0.2
+	}
+	CAO_peaceful_people = {
+		num_accepted_cultures = 2
+	}
+	CAO_over_hunting = {
+		global_trade_power = 0.1
+	}
+	CAO_wooden_stockades = {
+		defensiveness = 0.25
+	}
+}
+
 CAP_ideas = {
 	start = {
 		naval_morale = 0.15
@@ -6408,7 +6602,7 @@ CHV_ideas = {
 
 CHY_ideas = {
 	start = {
-		movement_speed = 0.1
+		defensiveness = 0.2
 		army_tradition_decay = -0.01
 	}
 	bonus = {
@@ -6420,6 +6614,7 @@ CHY_ideas = {
 	free = yes
 	rival_after_rival_around_us = {
 		land_morale = 0.1
+		movement_speed = 0.1
 	}
 	cheyenne_war_societies = {
 		army_tradition = 0.5
@@ -6809,8 +7004,8 @@ CND_ideas = {
 
 CNK_ideas = {
 	start = {
-		production_efficiency = 0.15
 		global_supply_limit_modifier = 0.25
+		build_cost = -0.1
 	}
 	bonus = {
 		development_cost = -0.1
@@ -6819,9 +7014,6 @@ CNK_ideas = {
 		tag = CNK
 	}
 	free = yes
-	art_of_the_northwest = {
-		prestige_decay = -0.01
-	}
 	structured_classes_of_people = {
 		global_autonomy = -0.05
 	}
@@ -6834,6 +7026,9 @@ CNK_ideas = {
 	}
 	hunting_experience = {
 		infantry_power = 0.15
+	}
+	art_of_the_northwest = {
+		prestige_decay = -0.01
 	}
 	promote_river_based_trade = {
 		caravan_power = 0.1
@@ -7103,8 +7298,8 @@ COM_ideas = {
 
 COO_ideas = {
 	start = {
-		may_explore = yes
-		may_establish_frontier = yes
+		missionaries = 1
+		build_time = -0.2
 	}
 	bonus = {
 		province_warscore_cost = -0.25
@@ -7113,9 +7308,6 @@ COO_ideas = {
 		tag = COO
 	}
 	free = yes
-	ABI_migrating_and_expanding = {
-		colonist_placement_chance = 0.05
-	}
 	COO_coosawattee_river = {
 		development_cost = -0.1
 	}
@@ -7124,6 +7316,9 @@ COO_ideas = {
 	}
 	ABE_council_of_elders = {
 		stability_cost_to_declare_war = -1
+	}
+	ABI_migrating_and_expanding = {
+		colonist_placement_chance = 0.05
 	}
 	ABI_mother_town = {
 		build_cost = -0.1
@@ -7176,8 +7371,8 @@ COR_ideas = {
 
 COW_ideas = {
 	start = {
-		may_explore = yes
-		may_establish_frontier = yes
+		ae_impact = -0.1
+		trade_efficiency = 0.125
 	}
 	bonus = {
 		colonists = 2
@@ -7188,14 +7383,12 @@ COW_ideas = {
 	free = yes
 	COW_trading_city = {
 		center_of_trade_upgrade_cost = -0.125
-		trade_efficiency = 0.125
 	}
 	ABI_migrating_and_expanding = {
 		colonist_placement_chance = 0.05
 	}
 	ABI_frontier_expansion = {
 		province_warscore_cost = -0.25
-		ae_impact = -0.1
 	}
 	COW_strong_warriors = {
 		land_morale = 0.1
@@ -9797,8 +9990,8 @@ FOI_ideas = {
 
 FOX_ideas = {
 	start = {
-		prestige = 1
 		land_forcelimit_modifier = 0.2
+		siege_ability = 0.1
 	}
 	bonus = {
 		global_regiment_cost = -0.15
@@ -9815,6 +10008,7 @@ FOX_ideas = {
 	}
 	civil_war_ceremonial_chiefs = {
 		possible_policy = 1
+		prestige = 1
 	}
 	steady_expansion_of_lands = {
 		colonists = 1
@@ -9822,7 +10016,6 @@ FOX_ideas = {
 	}
 	improving_fighting_styles = {
 		infantry_power = 0.1
-		siege_ability = 0.1
 	}
 	population_upswing = {
 		manpower_recovery_speed = 0.1
@@ -11772,8 +11965,8 @@ HAW_ideas = {
 
 HDA_ideas = {
 	start = {
-		production_efficiency = 0.15
-		global_supply_limit_modifier = 0.25
+		trade_range_modifier = 0.5
+		leader_cost = -0.5
 	}
 	bonus = {
 		army_tradition = 0.5
@@ -11787,7 +11980,6 @@ HDA_ideas = {
 	}
 	seafarers_of_the_northwest = {
 		trade_steering = 0.2
-		trade_range_modifier = 0.5
 	}
 	traditions_of_haida_warfare = {
 		army_tradition_decay = -0.01
@@ -12091,6 +12283,41 @@ HMI_ideas = {
 	}
 	emphasis_on_cavalry = {
 		cavalry_flanking = 0.5
+	}
+}
+
+HNI_ideas = {
+	start = {
+		may_recruit_female_generals = yes
+		prestige_from_land = 1
+	}
+	bonus = {
+		global_autonomy = -0.05
+	}
+	trigger = {
+		tag = HNI
+	}
+	free = yes
+	sw_the_old_tales = {
+		idea_cost = -0.1
+	}
+	sw_four_clans = {
+		reinforce_speed = 0.15
+	}
+	sw_raiding_nomads = {
+		land_morale = 0.1
+	}
+	sw_prosperous_sedentarism = {
+		development_cost = -0.1
+	}
+	sw_the_grand_canyon = {
+		defensiveness = 0.15
+	}
+	sw_into_the_desert = {
+		hostile_attrition = 1
+	}
+	sw_far_west = {
+		ae_impact = -0.1
 	}
 }
 
@@ -12868,8 +13095,8 @@ ILK_ideas = {
 
 ILL_ideas = {
 	start = {
-		infantry_cost = -0.1
 		global_regiment_recruit_speed = -0.2
+		years_of_nationalism = -5
 	}
 	bonus = {
 		global_manpower_modifier = 0.2
@@ -12893,14 +13120,14 @@ ILL_ideas = {
 	}
 	the_tamaroa_tribe = {
 		land_morale = 0.1
+		infantry_cost = -0.1
 	}
 	assimilating_other_tribes = {
 		global_colonial_growth = 10
 		colonist_placement_chance = 0.1
 	}
 	the_illinois_confederacy = {
-		years_of_nationalism = -5
-		num_accepted_cultures = 1
+		num_accepted_cultures = 2
 	}
 }
 
@@ -14928,7 +15155,7 @@ KEL_ideas = {
 KER_ideas = {
 	start = {
 		land_morale = 0.1
-		global_garrison_growth = 0.25
+		tolerance_own = 2
 	}
 	bonus = {
 		advisor_cost = -0.15
@@ -14939,13 +15166,13 @@ KER_ideas = {
 	free = yes
 	clown_societies = {
 		religious_unity = 0.1
-		tolerance_own = 2
 	}
 	ancient_pueblo_legacy = {
 		enemy_core_creation = 0.25
 	}
 	mesa_settlements = {
 		defensiveness = 0.15
+		global_garrison_growth = 0.25
 	}
 	kachina_dolls = {
 		stability_cost_modifier = -0.1
@@ -15360,8 +15587,8 @@ KIK_ideas = {
 
 KIO_ideas = {
 	start = {
-		legitimacy = 1
-		global_regiment_cost = -0.1
+		manpower_recovery_speed = 0.1
+		leader_land_shock = 1
 	}
 	bonus = {
 		army_tradition = 0.75
@@ -15371,7 +15598,7 @@ KIO_ideas = {
 	}
 	free = yes
 	structured_life = {
-		manpower_recovery_speed = 0.1
+		global_regiment_cost = -0.1
 	}
 	religious_socities = {
 		missionaries = 1
@@ -15385,6 +15612,7 @@ KIO_ideas = {
 	}
 	the_sun_dance = {
 		global_missionary_strength = 0.02
+		legitimacy = 1
 	}
 	warrior_societies = {
 		discipline = 0.05
@@ -16778,8 +17006,8 @@ KSH_ideas = {
 
 KSI_ideas = {
 	start = {
-		may_explore = yes
-		may_establish_frontier = yes
+		leader_land_fire = 1
+		idea_cost = -0.1
 	}
 	bonus = {
 		core_creation = -0.125
@@ -16796,7 +17024,6 @@ KSI_ideas = {
 	}
 	ABI_frontier_expansion = {
 		ae_impact = -0.1
-		idea_cost = -0.1
 	}
 	KSI_peaceful_town = {
 		no_religion_penalty = yes
@@ -17575,8 +17802,8 @@ LEI_ideas = {
 
 LEN_ideas = {
 	start = {
-		trade_efficiency = 0.1
 		global_unrest = -1
+		infantry_power = 0.1
 	}
 	bonus = {
 		ae_impact = -0.2
@@ -17597,12 +17824,12 @@ LEN_ideas = {
 	}
 	mediate_by_force = {
 		years_of_nationalism = -5
+		trade_efficiency = 0.1
 	}
 	lenape_diplomatic_relations = {
 		diplomats = 1
 	}
 	resist_the_foreigners = {
-		infantry_power = 0.1
 		global_spy_defence = 0.2
 	}
 	unite_with_others = {
@@ -17723,8 +17950,8 @@ LIG_ideas = {
 
 LIP_ideas = {
 	start = {
-		loot_amount = 0.25
 		movement_speed = 0.1
+		loot_amount = 0.25
 	}
 	bonus = {
 		land_maintenance_modifier = -0.1
@@ -18959,8 +19186,8 @@ MAG_ideas = {
 
 MAH_ideas = {
 	start = {
-		state_maintenance_modifier = -0.25
 		manpower_recovery_speed = 0.1
+		state_maintenance_modifier = -0.25
 	}
 	bonus = {
 		global_unrest = -2
@@ -20416,8 +20643,8 @@ MIA_ideas = {
 
 MIK_ideas = {
 	start = {
-		movement_speed = 0.1
 		infantry_cost = -0.2
+		army_tradition = 0.25
 	}
 	bonus = {
 		global_trade_power = 0.2
@@ -20428,13 +20655,13 @@ MIK_ideas = {
 	free = yes
 	lead_on_the_move = {
 		leader_land_manuever = 1
+		movement_speed = 0.1
 	}
 	killing_moose = {
 		prestige = 1
 	}
 	hunting_tradition_and_settled_traits = {
 		global_unrest = -1
-		army_tradition = 0.25
 	}
 	refine_and_expand_the_districts = {
 		colonists = 1
@@ -20706,6 +20933,44 @@ MJZ_ideas = {
 	the_jurchen_banners = {
 		amount_of_banners = 0.15
 	}
+}
+
+MKA_ideas = {
+    start = {
+        global_monthly_devastation = -0.05
+        movement_speed = 0.15
+    }
+    bonus = {
+        global_unrest = -2
+    }
+    trigger = {
+        tag = MKA
+    }
+    free = yes
+    MKA_advantage_terrain = {
+        defensiveness = 0.25
+    }
+    MKA_twin_state = {
+        diplomatic_upkeep = 1
+    }
+    MKA_agriculture = {
+        production_efficiency = 0.1
+    }
+    MKA_yuan_and_mongols = {
+        global_manpower_modifier = 0.10
+    }
+    MKA_relentless_resistence = {
+        hostile_attrition = 1
+        liberty_desire = 15
+    }
+    MKA_northern_threat = {
+        land_maintenance_modifier = -0.10
+        loot_amount = 0.25
+    }
+    MKA_rule_kachin = {
+        num_accepted_cultures = 1
+        tolerance_heathen = 2
+    }
 }
 
 MKL_ideas = {
@@ -21139,9 +21404,47 @@ MLW_ideas = {
 	}
 }
 
+MMA_ideas = {
+    start = {
+        global_monthly_devastation = -0.05
+        idea_cost = -0.05
+    }
+    bonus = {
+        defensiveness = 0.15
+    }
+    trigger = {
+        tag = MMA
+    }
+    free = yes
+    MMA_chinese_influence = {
+        technology_cost = -0.05
+    }
+    MMA_shweli_sawleen = {
+        global_trade_power = 0.15
+        movement_speed = 0.1
+    }
+    MMA_submissive_diplo = {
+        diplomatic_reputation = 2
+    }
+    MMA_yuan_and_mongols = {
+        num_accepted_cultures = 2
+    }
+    MMA_kingdom_pong = {
+        monthly_splendor = 1
+    }
+    MMA_recover_lost_land = {
+        core_creation = -0.1
+        years_of_nationalism = -5
+    }
+    MMA_crossroad_culture = {
+        tolerance_heathen = 2
+        tolerance_heretic = 2
+    }
+}
+
 MMI_ideas = {
 	start = {
-		movement_speed = 0.1
+		leader_land_manuever = 1
 		trade_steering = 0.15
 	}
 	bonus = {
@@ -21152,7 +21455,7 @@ MMI_ideas = {
 	}
 	free = yes
 	the_nature_of_migrations = {
-		leader_land_manuever = 1
+		movement_speed = 0.1
 	}
 	the_iroquois_rivalry = {
 		army_tradition = 0.5
@@ -21283,6 +21586,44 @@ MNG_ideas = {
 	}
 	the_red_cannon = {
 		leader_land_fire = 1
+	}
+}
+
+MNI_ideas = {
+	start = {
+		global_monthly_devastation = -0.05
+		idea_cost = -0.05
+	}
+	bonus = {
+		infantry_cost = -0.1
+	}
+	trigger = {
+		tag = MNI
+	}
+	free = yes
+	MNI_clouded_myth = {
+		stability_cost_modifier = -0.2
+	}
+	MNI_pagan_dynasty = {
+		tolerance_of_heathens_capacity = 2
+		tolerance_of_heretics_capacity = 2
+	}
+	MNI_agriculture = {
+		production_efficiency = 0.1
+	}
+	MNI_yuan_and_mongols = {
+		global_autonomy = -0.075
+	}
+	MNI_indian_and_chinese_connections = {
+		innovativeness_gain = 0.25
+	}
+	MNI_buddhism = {
+		global_missionary_strength = 0.02
+	}
+	MNI_scholars = {
+		legitimacy = 1
+		republican_tradition = 0.3
+		yearly_corruption = -0.1
 	}
 }
 
@@ -21533,6 +21874,44 @@ MOS_ideas = {
 	}
 	descendants_of_byzantine_emperors = {
 		diplomatic_reputation = 1
+	}
+}
+
+MPA_ideas = {
+	start = {
+		global_monthly_devastation = -0.05
+		fort_maintenance_modifier = -0.25
+	}
+	bonus = {
+		infantry_cost = -0.1
+	}
+	trigger = {
+		tag = MPA
+	}
+	free = yes
+	MPA_clouded_myth = {
+		diplomatic_reputation = 2
+	}
+	MPA_pagan_dynasty = {
+		tolerance_of_heretics_capacity = 4
+		tolerance_heretic = 4
+	}
+	MPA_agriculture = {
+		production_efficiency = 0.1
+	}
+	MPA_yuan_and_mongols = {
+		culture_conversion_cost = -0.25
+	}
+	MPA_indian_and_chinese_connections = {
+		idea_cost = -0.05
+	}
+	MPA_buddhism = {
+		global_heathen_missionary_strength = 0.02
+	}
+	MPA_scholars = {
+		legitimacy = 1
+		republican_tradition = 0.3
+		yearly_corruption = -0.1
 	}
 }
 
@@ -21904,8 +22283,8 @@ MSA_ideas = {
 
 MSC_ideas = {
 	start = {
-		loot_amount = 0.25
-		movement_speed = 0.1
+		mercenary_cost = -0.1
+		reinforce_cost_modifier = -0.33
 	}
 	bonus = {
 		land_maintenance_modifier = -0.1
@@ -21915,7 +22294,10 @@ MSC_ideas = {
 	}
 	free = yes
 	we_are_apaches = {
-		mercenary_cost = -0.1
+		loot_amount = 0.25
+	}
+	arid_logistics = {
+		movement_speed = 0.1
 	}
 	tenuous_relations = {
 		diplomats = 1
@@ -21923,9 +22305,6 @@ MSC_ideas = {
 	spread_and_conquer = {
 		colonists = 1
 		auto_explore_adjacent_to_colony = yes
-	}
-	arid_logistics = {
-		reinforce_cost_modifier = -0.33
 	}
 	apache_cavalry = {
 		cavalry_power = 0.2
@@ -22227,6 +22606,44 @@ MVA_ideas = {
 	}
 }
 
+MYA_ideas = {
+    start = {
+        global_monthly_devastation = -0.05
+        land_forcelimit_modifier = 0.20
+    }
+    bonus = {
+        global_manpower_modifier = 0.15
+    }
+    trigger = {
+        tag = MYA
+    }
+    free = yes
+    MYA_northern_threat = {
+        shock_damage = 0.1
+        loot_amount = 0.25
+    }
+    MYA_twin_state = {
+        diplomatic_upkeep = 1
+    }
+    MYA_lead_shans = {
+        diplomatic_reputation = 1
+        reduced_liberty_desire = 10
+    }
+    MYA_yuan_and_mongols = {
+        stability_cost_modifier = -0.15
+    }
+    MYA_relentless_resistence = {
+        hostile_attrition = 1
+        liberty_desire = 15
+    }
+    MYA_advantage_terrain = {
+        defensiveness = 0.20
+    }
+    MYA_agriculture = {
+        production_efficiency = 0.1
+    }
+}
+
 MYR_ideas = {
 	start = {
 		land_attrition = -0.1
@@ -22410,7 +22827,7 @@ NAG_ideas = {
 NAH_ideas = {
 	start = {
 		development_cost = -0.1
-		diplomatic_reputation = 1
+		global_autonomy = -0.025
 	}
 	bonus = {
 		global_manpower_modifier = 0.25
@@ -22429,11 +22846,11 @@ NAH_ideas = {
 		hostile_attrition = 1.5
 	}
 	structured_clan_soceity = {
-		global_autonomy = -0.025
 		stability_cost_modifier = -0.1
 	}
 	cultivate_navajo_leadership = {
 		army_tradition = 1
+		diplomatic_reputation = 1
 	}
 	commit_to_settled_life = {
 		colonists = 1
@@ -22695,6 +23112,45 @@ NED_ideas = {
 	}
 	platoon_fire = {
 		fire_damage = 0.1
+	}
+}
+
+NEH_ideas = {
+	start = {
+		no_religion_penalty = yes
+		advisor_cost = -0.25
+	}
+	bonus = {
+		harsh_treatment_cost = -0.2
+	}
+	trigger = {
+		tag = NEH
+	}
+	free = yes
+	bow_archery = {
+		fire_damage = 0.125
+	}
+	bison_hunters = {
+		development_cost = -0.1
+		land_attrition = -0.1
+	}
+	dwellers_of_tipis = {
+		colonists = 1
+		migration_cost = -0.2
+	}
+	horse_riders = {
+		cav_to_inf_ratio = 0.1
+		cavalry_power = 0.125
+	}
+	peaceful_people = {
+		diplomatic_reputation = 2
+		power_projection_from_insults = 0.1
+	}
+	sun_dance = {
+		global_unrest = -2
+	}
+	plains_sign_language = {
+		global_autonomy = -0.05
 	}
 }
 
@@ -23392,6 +23848,45 @@ NSA_ideas = {
 	}
 }
 
+NTC_ideas = {
+	start = {
+		tolerance_own = 1
+		state_maintenance_modifier = -0.25
+	}
+	bonus = {
+		infantry_cost = -0.1
+	}
+	trigger = {
+		tag = NTC
+	}
+	free = yes
+	dwellers_of_tipis = {
+		migration_cost = -0.2
+	}
+	bow_archery = {
+		fire_damage = 0.1
+	}
+	bison_hunters = {
+		development_cost = -0.1
+		land_attrition = -0.1
+	}
+	peaceful_people = {
+		diplomatic_reputation = 1
+		stability_cost_modifier = -0.1
+	}
+	sun_dance = {
+		global_unrest = -2
+	}
+	plains_sign_language = {
+		prestige = 0.5
+	}
+	horse_riders = {
+		cav_to_inf_ratio = 0.1
+		envoy_travel_time = -0.2
+		movement_speed = 0.1
+	}
+}
+
 NUB_ideas = {
 	start = {
 		tolerance_own = 2
@@ -23867,6 +24362,43 @@ OGS_ideas = {
 	}
 }
 
+OHK_ideas = {
+	start = {
+		global_spy_defence = 0.1
+		caravan_power = 0.2
+	}
+	bonus = {
+		missionary_maintenance_cost = -0.5
+	}
+	trigger = {
+		tag = OHK
+	}
+	free = yes
+	OHK_pueblo_migration = {
+		colonists = 1
+		colonist_placement_chance = 0.05
+	}
+	OHK_cactus_and_lizards = {
+		land_attrition = -0.2
+	}
+	OHK_embracing_of_ideals = {
+		idea_cost = 0.1
+	}
+	OHK_historic_lands = {
+		prestige_decay = -0.02
+	}
+	OHK_stone_and_brick = {
+		build_cost = -0.25
+	}
+	OHK_village_of_strong = {
+		land_morale = 0.1
+		discipline = 0.05
+	}
+	OHK_rio_grande_estuary = {
+		envoy_travel_time = -0.2
+	}
+}
+
 OIR_ideas = {
 	start = {
 		cavalry_power = 0.2
@@ -23908,7 +24440,7 @@ OIR_ideas = {
 OJI_ideas = {
 	start = {
 		trade_efficiency = 0.15
-		trade_steering = 0.15
+		advisor_pool = 4
 	}
 	bonus = {
 		global_trade_goods_size_modifier = 0.1
@@ -23919,6 +24451,7 @@ OJI_ideas = {
 	free = yes
 	trade_along_the_great_lakes = {
 		caravan_power = 0.2
+		trade_steering = 0.15
 	}
 	ojibwe_population_spread = {
 		manpower_recovery_speed = 0.15
@@ -24303,8 +24836,8 @@ ORO_ideas = {
 
 OSA_ideas = {
 	start = {
-		ae_impact = -0.1
-		army_tradition_decay = -0.01
+		land_morale = 0.1
+		advisor_pool = 2
 	}
 	bonus = {
 		shock_damage_received = -0.1
@@ -24318,7 +24851,7 @@ OSA_ideas = {
 		global_spy_defence = 0.1
 	}
 	wars_with_the_iroquois = {
-		land_morale = 0.1
+		ae_impact = -0.1
 	}
 	resettle_and_reunite = {
 		colonists = 1
@@ -24326,6 +24859,7 @@ OSA_ideas = {
 	}
 	introduce_cavalry_warfare = {
 		shock_damage = 0.1
+		army_tradition_decay = -0.01
 	}
 	legacy_as_great_traders = {
 		diplomatic_reputation = 1
@@ -24885,8 +25419,8 @@ PAV_ideas = {
 
 PAW_ideas = {
 	start = {
-		global_manpower_modifier = 0.2
 		legitimacy = 1
+		global_manpower_modifier = 0.2
 	}
 	bonus = {
 		land_forcelimit_modifier = 0.25
@@ -25031,8 +25565,8 @@ PEG_ideas = {
 
 PEQ_ideas = {
 	start = {
+		province_warscore_cost = -0.1
 		free_leader_pool = 1
-		land_morale = 0.1
 	}
 	bonus = {
 		legitimacy = 1
@@ -25042,7 +25576,7 @@ PEQ_ideas = {
 	}
 	free = yes
 	fight_for_the_home = {
-		province_warscore_cost = -0.1
+		land_morale = 0.1
 	}
 	survive_to_the_next_day = {
 		war_exhaustion = -0.02
@@ -25320,8 +25854,8 @@ PIC_ideas = {
 
 PIM_ideas = {
 	start = {
-		production_efficiency = 0.1
 		hostile_attrition = 1
+		production_efficiency = 0.1
 	}
 	bonus = {
 		trade_efficiency = 0.2
@@ -25763,8 +26297,8 @@ POT_ideas = {
 
 POW_ideas = {
 	start = {
-		diplomatic_upkeep = 2
 		legitimacy = 1
+		governing_capacity_modifier = 0.1
 	}
 	bonus = {
 		num_accepted_cultures = 1
@@ -25790,7 +26324,7 @@ POW_ideas = {
 		fire_damage = 0.1
 	}
 	reforming_the_powhatan_confederacy = {
-		governing_capacity_modifier = 0.1
+		diplomatic_upkeep = 2
 	}
 	united_we_stand = {
 		global_manpower_modifier = 0.2
@@ -26708,6 +27242,42 @@ QTO_ideas = {
 	}
 	celebrate_our_lives = {
 		tolerance_own = 2
+	}
+}
+
+QUI_ideas = {
+	start = {
+		movement_speed = 0.2
+		leader_land_manuever = 2
+	}
+	bonus = {
+		fort_maintenance_modifier = -0.25
+	}
+	trigger = {
+		tag = QUI
+	}
+	free = yes
+	QUI_war_band = {
+		infantry_power = 0.15
+	}
+	QUI_language_similarities = {
+		same_culture_advisor_cost = -0.2
+	}
+	QUI_expansion_into_mississippi = {
+		colonist_placement_chance = 0.05
+	}
+	QUI_mississippi_river = {
+		global_trade_goods_size_modifier = 0.15
+	}
+	QUI_tribal_leaders = {
+		monarch_admin_power = 2
+	}
+	QUI_shamans_and_ritualism = {
+		missionary_maintenance_cost = -0.1
+	}
+	QUI_building_a_community = {
+		build_cost = -0.1
+		num_accepted_cultures = 2
 	}
 }
 
@@ -27735,8 +28305,8 @@ SAK_ideas = {
 
 SAL_ideas = {
 	start = {
-		production_efficiency = 0.15
-		global_supply_limit_modifier = 0.25
+		advisor_pool = 3
+		religious_unity = 0.15
 	}
 	bonus = {
 		global_trade_goods_size_modifier = 0.1
@@ -27745,8 +28315,9 @@ SAL_ideas = {
 		tag = SAL
 	}
 	free = yes
-	art_of_the_northwest = {
-		prestige_decay = -0.01
+	hand_combat_experience = {
+		shock_damage_received = -0.05
+		shock_damage = 0.05
 	}
 	decentralized_people = {
 		num_accepted_cultures = 2
@@ -27758,9 +28329,8 @@ SAL_ideas = {
 		colonists = 1
 		auto_explore_adjacent_to_colony = yes
 	}
-	hand_combat_experience = {
-		shock_damage_received = -0.05
-		shock_damage = 0.05
+	art_of_the_northwest = {
+		prestige_decay = -0.01
 	}
 	rock_wall_defenses = {
 		defensiveness = 0.1
@@ -28392,8 +28962,8 @@ SHN_ideas = {
 
 SHO_ideas = {
 	start = {
-		land_attrition = -0.1
-		global_regiment_recruit_speed = -0.1
+		no_religion_penalty = yes
+		army_tradition_decay = -0.01
 	}
 	bonus = {
 		num_accepted_cultures = 1
@@ -28403,7 +28973,7 @@ SHO_ideas = {
 	}
 	free = yes
 	constant_pressure = {
-		army_tradition_decay = -0.01
+		land_attrition = -0.1
 	}
 	resource_competition = {
 		years_of_nationalism = -5
@@ -28421,6 +28991,7 @@ SHO_ideas = {
 	}
 	control_of_the_plains = {
 		land_forcelimit_modifier = 0.25
+		global_regiment_recruit_speed = -0.1
 	}
 	shoshone_peace = {
 		war_exhaustion = -0.02
@@ -28760,8 +29331,8 @@ SIN_ideas = {
 
 SIO_ideas = {
 	start = {
-		advisor_pool = 1
-		free_leader_pool = 1
+		advisor_pool = 3
+		free_leader_pool = 3
 	}
 	bonus = {
 		land_forcelimit_modifier = 0.25
@@ -30482,7 +31053,7 @@ SUN_ideas = {
 SUS_ideas = {
 	start = {
 		mercenary_cost = -0.1
-		infantry_power = 0.1
+		discipline = 0.05
 	}
 	bonus = {
 		global_manpower_modifier = 0.25
@@ -30502,7 +31073,7 @@ SUS_ideas = {
 		auto_explore_adjacent_to_colony = yes
 	}
 	ruthless_warfare = {
-		discipline = 0.05
+		infantry_power = 0.1
 	}
 	recover_from_disasters = {
 		global_autonomy = -0.05
@@ -34493,8 +35064,8 @@ WBG_ideas = {
 
 WCR_ideas = {
 	start = {
-		global_manpower_modifier = 0.2
 		stability_cost_modifier = -0.15
+		global_manpower_modifier = 0.2
 	}
 	bonus = {
 		possible_policy = 1
@@ -34605,8 +35176,8 @@ WGD_ideas = {
 
 WIC_ideas = {
 	start = {
-		production_efficiency = 0.1
 		mercenary_cost = -0.15
+		production_efficiency = 0.1
 	}
 	bonus = {
 		manpower_recovery_speed = 0.2
@@ -35231,8 +35802,8 @@ YAO_ideas = {
 
 YAQ_ideas = {
 	start = {
-		global_unrest = -1
-		hostile_attrition = 1
+		reinforce_speed = 0.2
+		land_attrition = -0.2
 	}
 	bonus = {
 		defensiveness = 0.2
@@ -35242,7 +35813,7 @@ YAQ_ideas = {
 	}
 	free = yes
 	home_field_advantage = {
-		land_attrition = -0.2
+		hostile_attrition = 1
 	}
 	mesoamerican_contacts = {
 		trade_efficiency = 0.1
@@ -35256,10 +35827,10 @@ YAQ_ideas = {
 	}
 	continue_playing_ulama = {
 		prestige = 1
+		global_unrest = -1
 	}
 	master_the_arid_lands = {
 		movement_speed = 0.1
-		reinforce_speed = 0.2
 	}
 	a_yaqui_state = {
 		development_cost = -0.1
@@ -35415,7 +35986,7 @@ YEM_ideas = {
 
 YKT_ideas = {
 	start = {
-		trade_efficiency = 0.15
+		global_own_trade_power = 0.2
 		reinforce_cost_modifier = -0.33
 	}
 	bonus = {
@@ -35432,7 +36003,7 @@ YKT_ideas = {
 		global_trade_goods_size_modifier = 0.1
 	}
 	cultivate_our_wild_agriculture = {
-		global_own_trade_power = 0.2
+		trade_efficiency = 0.15
 	}
 	slow_settlments = {
 		colonists = 1
@@ -36029,7 +36600,7 @@ ZND_ideas = {
 
 ZNI_ideas = {
 	start = {
-		build_cost = -0.1
+		enemy_core_creation = 0.25
 		advisor_cost = -0.15
 	}
 	bonus = {
@@ -36040,7 +36611,7 @@ ZNI_ideas = {
 	}
 	free = yes
 	ancient_pueblo_legacy = {
-		enemy_core_creation = 0.25
+		build_cost = -0.1
 	}
 	kachina_dolls = {
 		stability_cost_modifier = -0.1
