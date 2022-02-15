@@ -425,6 +425,92 @@ celestial_empire = {
 	}
 }
 
+chinese_warlord = {
+	icon = "samurai"
+	allow_normal_conversion = no
+	potential = {
+		OR = {
+			primary_culture = bai
+			primary_culture = miao
+			primary_culture = yi
+			culture_group = east_asian
+		}
+		OR = {
+			AND = {
+				OR = {
+					primary_culture = miao
+					primary_culture = yi
+				}
+				religion = dayawism
+			}
+			AND = {
+				primary_culture = bai
+				religion = buddhism
+			}
+			religion = confucianism
+		}
+		technology_group = chinese
+		capital_scope = {
+			OR = {
+				region = north_china_region
+				region = xinan_region
+				region = south_china_region
+			}
+		}
+	}
+	maintain_dynasty = yes
+	allow_force_tributary = no
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	lock_level_when_selected = yes
+	nation_designer_trigger = {
+		OR = {
+			primary_culture = bai
+			primary_culture = miao
+			primary_culture = yi
+			culture_group = east_asian
+		}
+		technology_group = chinese
+		OR = {
+			AND = {
+				OR = {
+					primary_culture = miao
+					primary_culture = yi
+				}
+				religion = dayawism
+			}
+			AND = {
+				primary_culture = bai
+				religion = buddhism
+			}
+			religion = confucianism
+		}
+		capital_scope = {
+			OR = {
+				region = north_china_region
+				region = xinan_region
+				region = south_china_region
+			}
+		}
+	}
+	fixed_rank = 2
+
+	modifiers = {
+		manpower_recovery_speed = 0.1
+		relation_with_same_culture = -100
+		relation_with_same_culture_group = -100
+		governing_capacity = 100
+	}
+	
+	ai = {
+		factor = 1000
+	}
+
+	custom_attributes = {
+		has_unify_china_cb = yes
+	}
+}
+
 elective_monarchy = {
 	icon = "elective_monarchy"
 	allow_normal_conversion = yes
