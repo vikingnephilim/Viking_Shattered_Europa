@@ -21,6 +21,12 @@ country_decisions = {
 			NOT = {
 				tag = WRM
 			}
+			NOT = {
+				tag = GRE
+			}
+			NOT = {
+				has_country_flag = formed_ERM
+			}
 			OR = {
 				religion = bogomilist
 				religion = coptic
@@ -103,6 +109,7 @@ country_decisions = {
 			#		set_in_empire = no
 			#	}
 			#}
+			set_country_flag = formed_ERM
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300

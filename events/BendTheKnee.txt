@@ -271,6 +271,7 @@ country_event = {
 		AND = {
 			OR = {
 				tag = TKT
+				tag = RIG
 				tag = KNI
 				tag = TEU
 				tag = LIV
@@ -322,6 +323,25 @@ country_event = {
 	}
 	option = {
 		name = "bendtheknee.8.a"
+		IF = {
+			limit = {
+				RIG = {
+					has_country_flag = hail_popeman_subject
+				}
+			}
+			create_subject = {
+				subject_type = papal_vassal
+				subject = RIG
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				KNI = {
+					has_country_flag = screw_pope_subject
+				}
+			}
+			excommunicate = RIG
+		}
 		IF = {
 			limit = {
 				KNI = {

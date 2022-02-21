@@ -2,7 +2,10 @@ country_decisions = {
 	found_hall_of_worthies = {
 		potential = {
 			always = no
-			tag = KOR
+			OR = {
+				tag = KOR
+				culture_group = korean_g
+			}
 			normal_or_historical_nations = yes
 			is_playing_custom_nation = no
 			NOT = { has_country_modifier = hall_of_worthies }

@@ -29,6 +29,9 @@ country_event = {
 	}
 	option = {
 		name = "flavor_ice.EVTOPTA1"
+		ai_chance = {
+			factor = 100
+		}
 		add_country_modifier = {
 			name = ice_old_colonies
 			duration = 18250
@@ -59,6 +62,9 @@ country_event = {
 	option = {
 		name = "flavor_ice.EVTOPTA2"
 		add_years_of_income = 2
+		ai_chance = {
+			factor = 95
+		}
 		if = {
 			limit = {
 				NOT = {
@@ -188,6 +194,9 @@ country_event = {
 		name = "flavor_ice.EVTOPTB2"
 		add_prestige = -100
 		set_country_flag = vinlanders_turned_away
+		ai_chance = {
+			factor = 5
+		}
 	}
 }
 
@@ -223,6 +232,9 @@ country_event = {
 		name = "flavor_ice.EVTOPTA3"
 		add_adm_power = 10
 		add_prestige = 10
+		ai_chance = {
+			factor = 100
+		}
 		define_advisor = {
 			type = inquisitor
 			name = "Magnuz Gunnarsson"
@@ -273,6 +285,9 @@ country_event = {
 	}
 	option = {
 		name = "flavor_ice.EVTOPTA4"
+		ai_chance = {
+			factor = 95
+		}
 		add_prestige = 10
 		change_religion = norse_pagan_reformed
 		set_country_flag = screw_pope
@@ -280,6 +295,9 @@ country_event = {
 	}
 	option = {
 		name = "flavor_ice.EVTOPTB4"
+		ai_chance = {
+			factor = 5
+		}
 		set_country_flag = hail_popeman
 		add_stability_or_adm_power = yes
 		add_innovativeness_small_effect = yes
@@ -316,6 +334,12 @@ country_event = {
 		name = "flavor_ice.EVTOPTA5"
 		set_country_flag = norwegian_trader_converts
 		hidden_effect = {
+			NRG = {
+				country_event = {
+					id = flavor_nor.32
+					days = 30
+				}
+			}
 			NOR = {
 				country_event = {
 					id = flavor_nor.32

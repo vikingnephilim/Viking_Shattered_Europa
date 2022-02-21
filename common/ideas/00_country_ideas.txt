@@ -9589,6 +9589,44 @@ ERE_ideas = {
 	}
 }
 
+ERI_ideas = {
+	start = {
+		discipline = 0.05
+		global_manpower_modifier = 0.33
+	}
+	bonus = {
+		global_unrest = -1.5
+	}
+	trigger = {
+		tag = ERI
+	}
+	free = yes
+	ERI_great_lakes = {
+		trade_range_modifier = 0.5
+	}
+	ERI_fur_traders = {
+		diplomatic_reputation = 2
+		global_trade_power = 0.2
+	}
+	ERI_wyandot_linguistic_brothers = {
+		stability_cost_modifier = -0.1
+		same_culture_advisor_cost = -0.33
+	}
+	ERI_hardy_hunters = {
+		infantry_power = 0.05
+		land_forcelimit_modifier = 0.1
+	}
+	ERI_iroquois_people = {
+		production_efficiency = 0.15
+	}
+	ERI_copper_production = {
+		global_tax_modifier = 0.33
+	}
+	ERI_unity_among_people = {
+		culture_conversion_cost = -0.15
+	}
+}
+
 ERM_ideas = {
 	start = {
 		discipline = 0.05
@@ -18152,7 +18190,7 @@ LIB_ideas = {
 	}
 	free = yes
 	NSS_piracy = {
-		may_perform_slave_raid = yes
+		may_perform_slave_raid_on_same_religion = yes
 	}
 	NSS_safe_haven = {
 		monarch_lifespan = 0.1
@@ -24226,7 +24264,7 @@ NSA_ideas = {
 NSS_ideas = {
 	start = {
 		privateer_efficiency = 0.5
-		may_perform_slave_raid = yes
+		may_perform_slave_raid_on_same_religion = yes
 	}
 	bonus = {
 		dip_tech_cost_modifier = -0.05
@@ -27047,7 +27085,7 @@ PRY_ideas = {
 	}
 	free = yes
 	NSS_piracy = {
-		may_perform_slave_raid = yes
+		may_perform_slave_raid_on_same_religion = yes
 	}
 	NSS_fast_fleets = {
 		leader_naval_manuever = 1
@@ -33516,7 +33554,7 @@ TOR_ideas = {
 		move_capital_cost_modifier = -0.5
 	}
 	NSS_piracy = {
-		may_perform_slave_raid = yes
+		may_perform_slave_raid_on_same_religion = yes
 	}
 	NSS_safe_haven = {
 		advisor_cost = -0.25
