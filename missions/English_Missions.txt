@@ -142,25 +142,25 @@ eng_british_conquest_ire = {
 				area = leinster_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			munster_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			connacht_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			ulster_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			leinster_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -224,31 +224,31 @@ eng_british_conquest_scotland = {
 				province_id = 253
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			250 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4363 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4364 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			252 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4110 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			253 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			lowlands_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -326,7 +326,7 @@ eng_french_conquest = {
 						}
 					}
 					183 = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						is_core = ROOT
 					}
 				}
@@ -425,7 +425,7 @@ eng_french_conquest = {
 				}
 				else = {
 					183 = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
@@ -473,7 +473,7 @@ eng_french_conquest = {
 				province_id = 4390
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -484,13 +484,13 @@ eng_french_conquest = {
 				AND = {
 					ile_de_france_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					186 = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					4390 = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
@@ -557,7 +557,7 @@ eng_exploration_americas = {
 		provinces_to_highlight = {
 			colonial_region = colonial_eastern_america
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
@@ -586,7 +586,7 @@ eng_exploration_americas = {
 		provinces_to_highlight = {
 			colonial_region = colonial_the_carribean
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
@@ -728,7 +728,7 @@ eng_indian_ocean_exploration = {
 		provinces_to_highlight = {
 			colonial_region = colonial_australia
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}

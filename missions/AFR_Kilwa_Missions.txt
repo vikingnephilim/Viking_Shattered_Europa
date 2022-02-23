@@ -23,7 +23,7 @@ kilwa_cape_missions_slot = {
 				owned_by = SFA
 				AND = {
 					province_id = 1186
-					NOT = { owned_by = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 			}
 		}
@@ -69,7 +69,7 @@ kilwa_cape_missions_slot = {
 				area = butua_area
 				area = lower_zambezi_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -121,7 +121,7 @@ kilwa_cape_missions_slot = {
 		position = 4
 		provinces_to_highlight = {
 			region = south_africa_region
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			1177 = {
@@ -173,7 +173,7 @@ kilwa_cape_missions_slot = {
 				has_province_modifier = kongo_estuary_modifier
 				province_has_center_of_trade_of_level = 1
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -280,7 +280,7 @@ kilwa_internal_missions_slot = {
 		required_missions = {  }
 		position = 2
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			trade_goods = ivory
 			has_production_building_trigger = no
 		}
@@ -310,7 +310,7 @@ kilwa_internal_missions_slot = {
 		provinces_to_highlight = {
 			province_id = 1196
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_core = ROOT }
 				NOT = { development = 20 }
 			}
@@ -350,7 +350,7 @@ kilwa_internal_missions_slot = {
 		required_missions = { zan_expand_the_capital }
 		position = 4
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			NOT = { trade_goods = gold }
 			has_manufactory_trigger = no
 		}
@@ -443,15 +443,15 @@ kilwa_trade_conquest_missions_slot = {
 				area = northern_swahili_coast_area
 				area = mombasa_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			mombasa_area = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				type = all
 			}
 			northern_swahili_coast_area = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				type = all
 			}
 		}
@@ -485,7 +485,7 @@ kilwa_trade_conquest_missions_slot = {
 				province_id = 2782
 				province_id = 1205
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			owns_core_province = 1196
@@ -709,7 +709,7 @@ kilwa_asia_trade_missions_slot = {
 				area = sakalava_area
 				area = betsimasaraka_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -727,7 +727,7 @@ kilwa_asia_trade_missions_slot = {
 			hidden_effect = {
 				madagascar_highlands_area = {
 					limit = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					add_province_modifier = {
 						name = zan_conversion_of_fetishist
@@ -736,7 +736,7 @@ kilwa_asia_trade_missions_slot = {
 				}
 				southern_madagascar = {
 					limit = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					add_province_modifier = {
 						name = zan_conversion_of_fetishist
@@ -745,7 +745,7 @@ kilwa_asia_trade_missions_slot = {
 				}
 				sakalava_area = {
 					limit = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					add_province_modifier = {
 						name = zan_conversion_of_fetishist
@@ -754,7 +754,7 @@ kilwa_asia_trade_missions_slot = {
 				}
 				betsimasaraka_area = {
 					limit = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					add_province_modifier = {
 						name = zan_conversion_of_fetishist
@@ -1024,7 +1024,7 @@ kilwa_colonization_missions_slot = {
 		position = 5
 		provinces_to_highlight = {
 			colonial_region = colonial_australia
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {

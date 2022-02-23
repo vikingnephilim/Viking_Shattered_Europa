@@ -26,21 +26,21 @@ tib_slot_2 = {
 				area = bhutan_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			ngari_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			utsang_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			bhutan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -131,7 +131,7 @@ tib_slot_2 = {
 			area = kashmir_area
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					religion = ROOT
@@ -141,7 +141,7 @@ tib_slot_2 = {
 		trigger = {
 			kashmir_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 		}
@@ -258,7 +258,7 @@ tib_slot_2 = {
 			}
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					religion = ROOT
@@ -268,39 +268,39 @@ tib_slot_2 = {
 		trigger = {
 			shanshan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 			tarim_basin_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 			kashgaria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 			ferghana_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 			turpan_kumul_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 			zungaria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 			2125 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			461 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -336,13 +336,13 @@ tib_slot_3 = {
 		provinces_to_highlight = {
 			region = tibet_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			tibet_region = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_institution = feudalism
 		}
@@ -383,33 +383,33 @@ tib_slot_3 = {
 				province_id = 663
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			gansu_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			west_gansu_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			yun_gui_borderland_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2748 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			675 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			662 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			663 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -435,7 +435,7 @@ tib_slot_3 = {
 		provinces_to_highlight = {
 			region = xinan_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -478,7 +478,7 @@ tib_slot_3 = {
 			}
 			xinan_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -550,21 +550,21 @@ tib_slot_4 = {
 				area = tsang_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			tsang_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			amdo_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			kham_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -595,7 +595,7 @@ tib_slot_4 = {
 					religion = ROOT
 				}
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -603,7 +603,7 @@ tib_slot_4 = {
 			tibet_region = {
 				type = all
 				religion = ROOT
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			num_of_owned_provinces_with = {
 				value = 5
@@ -743,7 +743,7 @@ tib_slot_4 = {
 			}
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					religion = ROOT
@@ -753,17 +753,17 @@ tib_slot_4 = {
 		trigger = {
 			nepal_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 			himalayan_hills_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 			baisi_rajya_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 		}
@@ -828,25 +828,25 @@ tib_slot_4 = {
 				area = east_bengal_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			gaur_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			west_bengal_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			north_bengal_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			east_bengal_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

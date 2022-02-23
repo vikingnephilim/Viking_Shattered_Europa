@@ -36,13 +36,13 @@ tr_russian_minors_1 = {
 		provinces_to_highlight = {
 			area = moscow_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			moscow_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -141,7 +141,7 @@ tr_russian_minors_2 = {
 			area_for_scope_province = {
 				is_capital_of = ROOT
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			is_subject = no
@@ -149,7 +149,7 @@ tr_russian_minors_2 = {
 				fort_level = 3
 				area_for_scope_province = {
 					type = all
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -179,13 +179,13 @@ tr_russian_minors_2 = {
 		provinces_to_highlight = {
 			region = russia_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			russia_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -205,13 +205,13 @@ tr_russian_minors_2 = {
 		provinces_to_highlight = {
 			region = crimea_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			crimea_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -262,13 +262,13 @@ tr_russian_minors_3 = {
 		provinces_to_highlight = {
 			area = novgorod_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			novgorod_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}			
 		}
 		effect = {
@@ -334,13 +334,13 @@ tr_russian_minors_3 = {
 		provinces_to_highlight = {
 			area = zaporizhia_area
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			zaporizhia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -454,13 +454,13 @@ tr_russian_minors_4 = {
 		provinces_to_highlight = {
 			area = east_dniepr_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			east_dniepr_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -491,17 +491,17 @@ tr_russian_minors_4 = {
 				area = red_ruthenia_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			ruthenia_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			red_ruthenia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -510,7 +510,7 @@ tr_russian_minors_4 = {
 			add_mil_power = 100
 			ruthenia_region = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "ruthenian_integration"
@@ -559,13 +559,13 @@ tr_russian_minors_5 = {
 		provinces_to_highlight = {
 			area = west_dniepr_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			west_dniepr_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

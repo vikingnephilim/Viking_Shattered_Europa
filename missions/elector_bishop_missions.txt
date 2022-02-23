@@ -109,7 +109,7 @@ bishop_elector_group_2 = {
 			NOT = {
 				OR = {
 					AND = {
-						owned_by = root
+						country_or_subject_holds = ROOT
 						is_core = root
 					}
 					owner = {
@@ -189,7 +189,7 @@ bishop_elector_group_2 = {
 			NOT = {
 				OR = {
 					AND = {
-						owned_by = root
+						country_or_subject_holds = ROOT
 						is_core = root
 						religion = root
 					}
@@ -307,7 +307,7 @@ mai_group_1 = {
 		provinces_to_highlight = {
 			province_id = 63
 			OR = {
-				NOT = { owned_by = root }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_core = root }
 			}
 		}
@@ -368,18 +368,18 @@ kol_group_1 = {
 				province_id = 82
 			}
 			OR = {
-				NOT = { owned_by = root }
+				NOT = { country_or_subject_holds = ROOT }
 				is_in_capital_area = no
 			}
 		}
 
 		trigger = {
 			85 = {
-				owned_by = root
+				country_or_subject_holds = ROOT
 				is_in_capital_area = yes
 			}
 			82 = {
-				owned_by = root
+				country_or_subject_holds = ROOT
 				is_in_capital_area = yes
 			}
 		}
@@ -400,13 +400,13 @@ kol_group_1 = {
 
 		provinces_to_highlight = {
 			area = north_westphalia_area
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 
 		trigger = {
 			north_westphalia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_subject_holds = ROOT
 			}
 		}
 
@@ -462,7 +462,7 @@ tri_group_1 = {
 				AND = {
 					province_id = 80
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { country_or_subject_holds = ROOT }
 						NOT = { development = 15 }
 						has_tax_building_trigger = no
 						has_courthouse_building_trigger = no
@@ -477,7 +477,7 @@ tri_group_1 = {
 		trigger = {
 			has_institution = renaissance
 			80 = {
-				owned_by = root
+				country_or_subject_holds = ROOT
 				development = 15
 				has_tax_building_trigger = yes
 				has_courthouse_building_trigger = yes

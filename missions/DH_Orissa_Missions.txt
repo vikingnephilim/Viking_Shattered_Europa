@@ -19,7 +19,7 @@ ori_garjat_missions = {
 		provinces_to_highlight = {
 			owned_by = GRJ
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -87,24 +87,24 @@ ori_garjat_missions = {
 				area = jharkhand_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			2049 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			garjat_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			upper_mahanadi_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			jharkhand_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -140,25 +140,25 @@ ori_garjat_missions = {
 				area = maidan_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			berar_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			ahmednagar_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			raichur_doab_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			maidan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -194,16 +194,16 @@ ori_missions_south = {
 				province_id = 4419
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			andhra_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4419 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -254,17 +254,17 @@ ori_missions_south = {
 				area = golconda_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			telingana_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			golconda_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -418,21 +418,21 @@ ori_missions_west = {
 				area = tanjore_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			south_carnatic_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			north_carnatic_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			tanjore_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -473,13 +473,13 @@ ori_missions_west = {
 		provinces_to_highlight = {
 			area = lower_burma_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			lower_burma_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -517,27 +517,27 @@ ori_bengal_missions = {
 				province_id = 4477
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			561 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2039 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4475 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			564 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4474 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4477 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -605,13 +605,13 @@ ori_bengal_missions = {
 		provinces_to_highlight = {
 			area = arakan_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			arakan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -666,7 +666,7 @@ ori_religious_missions = {
 			province_id = 552
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					OR = {
@@ -770,25 +770,25 @@ ori_religious_missions = {
 				area = east_bengal_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			gaur_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			west_bengal_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			north_bengal_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			east_bengal_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

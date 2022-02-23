@@ -27,17 +27,17 @@ tau_slot_1 = {
 				area = karenni_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			shan_hill_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			karenni_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -71,7 +71,7 @@ tau_slot_1 = {
 			}
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				local_autonomy = 30
 			}
@@ -79,7 +79,7 @@ tau_slot_1 = {
 		trigger = {
 			shan_hill_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					local_autonomy = 30
 				}
@@ -89,7 +89,7 @@ tau_slot_1 = {
 			}
 			karenni_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					local_autonomy = 30
 				}
@@ -99,7 +99,7 @@ tau_slot_1 = {
 			}
 			chindwin_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					local_autonomy = 30
 				}
@@ -109,7 +109,7 @@ tau_slot_1 = {
 			}
 			kachin_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					local_autonomy = 30
 				}
@@ -188,25 +188,25 @@ tau_slot_1 = {
 				area = khorat_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			champasak_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			vientiane_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			north_laos_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			khorat_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -259,14 +259,14 @@ tau_slot_2 = {
 					ROOT = { tag = TAU }
 					province_id = 4396
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				AND = {
 					ROOT = { tag = BPR }
 					province_id = 585
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				AND = {
@@ -290,7 +290,7 @@ tau_slot_2 = {
 					tag = TAU
 				}
 				4396 = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			else_if = {
@@ -298,7 +298,7 @@ tau_slot_2 = {
 					tag = BPR
 				}
 				585 = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			else = {
@@ -349,17 +349,17 @@ tau_slot_2 = {
 				area = upper_burma_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			central_burma_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			upper_burma_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -382,7 +382,7 @@ tau_slot_2 = {
 				area = 	chindwin_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -390,31 +390,31 @@ tau_slot_2 = {
 			legitimacy = 90
 			kachin_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			upper_burma_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			lower_burma_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			shan_hill_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			karenni_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			central_burma_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			chindwin_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -434,13 +434,13 @@ tau_slot_2 = {
 		provinces_to_highlight = {
 			area = northern_thai_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			northern_thai_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -506,14 +506,14 @@ tau_slot_2 = {
 		provinces_to_highlight = {
 			region = indo_china_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			legitimacy = 90
 			indo_china_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -564,13 +564,13 @@ tau_slot_3 = {
 		provinces_to_highlight = {
 			area = lower_burma_area
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			lower_burma_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -602,7 +602,7 @@ tau_slot_3 = {
 			586 = {
 				is_capital = yes
 				development = 20
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -630,21 +630,21 @@ tau_slot_3 = {
 				area = sukhothai_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			central_thai_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			north_tenasserim_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			sukhothai_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -716,13 +716,13 @@ tau_slot_4 = {
 		provinces_to_highlight = {
 			area = arakan_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			arakan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -769,37 +769,37 @@ tau_slot_4 = {
 				province_id = 568
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			gaur_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			west_bengal_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			north_bengal_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			east_bengal_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			naga_hills_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			assam_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			tripura_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -859,18 +859,18 @@ tau_slot_4 = {
 				area = south_lanka_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			lanka_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 			south_lanka_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 		}
@@ -909,12 +909,12 @@ tau_slot_5 = {
 		provinces_to_highlight = {
 			province_id = 2041
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			2041 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -985,7 +985,7 @@ tau_slot_5 = {
 		provinces_to_highlight = {
 			region = xinan_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -1004,7 +1004,7 @@ tau_slot_5 = {
 			}
 			xinan_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

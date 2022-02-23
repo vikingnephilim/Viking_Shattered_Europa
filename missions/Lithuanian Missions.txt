@@ -26,7 +26,7 @@ lithuanian_missions_1 = {
 		}
 		effect = {
 			ruthenia_region = {
-				limit = { owned_by = root }
+				limit = { country_or_subject_holds = ROOT }
 				add_province_modifier = {
 					name = restored_ruthenia
 					duration = -1
@@ -178,7 +178,7 @@ lithuanian_missions_2 = {
 				area = west_prussia_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -190,15 +190,15 @@ lithuanian_missions_2 = {
 				AND = {
 					malopolska_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					mazovia_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					west_prussia_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
@@ -217,7 +217,7 @@ lithuanian_missions_2 = {
 			province_id = 262
 			NOT = {
 				AND = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					has_building = university
 				}
 			}
@@ -281,7 +281,7 @@ lithuanian_missions_slot = {
 			}
 			else = {
 				282 = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					is_state = yes
 					NOT = {
 						unrest = 1
@@ -291,7 +291,7 @@ lithuanian_missions_slot = {
 					}
 				}
 				2406 = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					is_state = yes
 					NOT = {
 						unrest = 1
@@ -301,7 +301,7 @@ lithuanian_missions_slot = {
 					}
 				}
 				283 = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					is_state = yes
 					NOT = {
 						unrest = 1
@@ -354,25 +354,25 @@ lithuanian_missions_slot = {
 				area = azov_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			zaporizhia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			yedisan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			crimea_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			azov_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			owns_core_province = 285
 		}
@@ -459,21 +459,21 @@ lithuanian_missions_slot = {
 				area = curonia_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			livonia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			estonia_ingria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			curonia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {		
@@ -546,14 +546,14 @@ lithuanian_missions_slot = {
 		provinces_to_highlight = {
 			area = novgorod_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			OR = {
 				novgorod_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT	
+					country_or_subject_holds = ROOT	
 				}
 				NOV = {
 					OR = {
@@ -644,29 +644,29 @@ lithuanian_missions_slot = {
 				area = ryazan_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			moscow_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			oka_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}			
 			vladimir_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			suzdal_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 			ryazan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {

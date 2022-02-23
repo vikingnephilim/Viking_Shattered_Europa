@@ -25,15 +25,15 @@ swiss_missions_1 = {
 				province_id = 1871
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			1867 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1871 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -59,7 +59,7 @@ swiss_missions_1 = {
 			province_id = 4720
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					is_core = ROOT
@@ -74,7 +74,7 @@ swiss_missions_1 = {
 			}
 			OR = {
 				4720 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				GNV = {
 					is_at_war = no
@@ -207,14 +207,14 @@ swiss_missions_2 = {
 		provinces_to_highlight = {
 			area = switzerland_area
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			OR = {
 				switzerland_area = {
 					type = all
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				TTL = {
 					is_subject_of = ROOT
@@ -246,7 +246,7 @@ swiss_missions_2 = {
 				area = romandie_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -259,11 +259,11 @@ swiss_missions_2 = {
 			}
 			switzerland_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			romandie_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -475,7 +475,7 @@ swiss_missions_3 = {
 				province_id = 4710
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -520,7 +520,7 @@ swiss_missions_4 = {
 		}
 		provinces_to_highlight = {
 			has_terrain = mountain
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			NOT = {
 				fort_level = 3
 			}

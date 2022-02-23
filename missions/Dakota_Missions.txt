@@ -86,7 +86,7 @@ sioux_1 = {
 				area = south_dakota_area
 				area = dakota_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
@@ -97,11 +97,11 @@ sioux_1 = {
 			}
 			dakota_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			south_dakota_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -215,30 +215,30 @@ sioux_1 = {
 				province_id = 2512
 				province_id = 2517
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			904 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			906 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			907 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			908 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2510 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2512 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2517 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		

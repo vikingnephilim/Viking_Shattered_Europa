@@ -44,13 +44,13 @@ bli_1 = {
 		provinces_to_highlight = {
 			province_id = 2693
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				is_city = no
 			}
 		}
 		trigger = {
 			2693 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_city = yes
 			}
 		}
@@ -139,20 +139,20 @@ bli_2 = {
 				area = surabaya_area
 				area = central_java_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			east_java_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			surabaya_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			central_java_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

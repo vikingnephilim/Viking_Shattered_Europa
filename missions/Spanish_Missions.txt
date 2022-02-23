@@ -54,7 +54,7 @@ spa_colonial_group = {
 		
 		provinces_to_highlight = {
 			colonial_region = colonial_the_carribean
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = yes
 		}
 		
@@ -85,7 +85,7 @@ spa_colonial_group = {
 		
 		provinces_to_highlight = {
 			colonial_region = colonial_la_plata
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = yes
 		}
 		
@@ -137,32 +137,32 @@ spa_colonial_group_rnw_off = {
 				province_id = 794
 				province_id = 2837
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = yes
 		}
 		
 		trigger = {
 			upper_peru = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			potosi_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			antisuyu_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			kuntisuyu_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			794 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2837 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			
 		}
@@ -212,7 +212,7 @@ spa_colonial_group_rnw_off = {
 				province_id = 2821
 				province_id = 2822
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = yes
 		}
 		
@@ -222,30 +222,30 @@ spa_colonial_group_rnw_off = {
 			}
 			huanuco_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			cajamarca_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			quito_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2823 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2826 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			812 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2821 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2822 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -305,7 +305,7 @@ spa_colonial_group_two = {
 		
 		provinces_to_highlight = {
 			colonial_region = colonial_colombia
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = yes
 		}
 		
@@ -487,7 +487,7 @@ spa_colonial_group_two_rnw_off = {
 				area = mexico_area
 				owned_by = AZT
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = yes
 		}
 			
@@ -497,7 +497,7 @@ spa_colonial_group_two_rnw_off = {
 			}
 			mexico_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -583,7 +583,7 @@ spa_colonial_group_three_rnw_off = {
 				area = michoacan_area
 				owned_by = TAR
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = yes
 		}
 		
@@ -593,7 +593,7 @@ spa_colonial_group_three_rnw_off = {
 			}
 			michoacan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -653,13 +653,13 @@ spa_reconquista = {
 		
 		provinces_to_highlight = {
 			area = upper_andalucia_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			upper_andalucia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -714,21 +714,21 @@ spa_reconquista = {
 				area = catalonia_area
 				area = aragon_area
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			valencia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			catalonia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			aragon_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -745,13 +745,13 @@ spa_reconquista = {
 		
 		provinces_to_highlight = {
 			area = northern_morocco_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			northern_morocco_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -803,17 +803,17 @@ spa_reconquista_por = {
 				area = beieras_area
 				area = alentejo_area
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			beieras_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			alentejo_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -831,12 +831,12 @@ spa_reconquista_por = {
 		
 		provinces_to_highlight = {
 			province_id = 126
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			126 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			num_of_galley = TUR
 		}
@@ -885,25 +885,25 @@ spa_reconquista_por = {
 				area = naples_area
 				area = apulia_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			sicily_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			calabria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			naples_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			apulia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		

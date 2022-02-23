@@ -45,13 +45,13 @@ bur_conquest = {
 		
 		provinces_to_highlight = {
 			area = lorraine_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			lorraine_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -83,21 +83,21 @@ bur_conquest = {
 				province_id = 2974
 				province_id = 1742
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			93 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1878 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2974 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1742 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -124,13 +124,13 @@ bur_conquest = {
 		
 		provinces_to_highlight = {
 			area = frisia_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			frisia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -173,15 +173,15 @@ bur_arles = {
 				province_id = 191
 				province_id = 181
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			191 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			181 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -213,19 +213,19 @@ bur_arles = {
 				province_id = 205
 				province_id = 4719
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			romandie_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			205 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4719 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -261,7 +261,7 @@ bur_arles = {
 				area = savoy_dauphine_area
 				province_id = 102
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			NOT = {
 				ROOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {

@@ -58,13 +58,13 @@ gen_north_india_2 = {
 		
 		provinces_to_highlight = {
 			area = upper_doab_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			upper_doab_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -197,7 +197,7 @@ gen_north_india_2 = {
 			}
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				province_id = 507
 			}
@@ -209,56 +209,56 @@ gen_north_india_2 = {
 			}
 			lahore_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					devastation = 1
 				}
 			}
 			sirhind_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					devastation = 1
 				}
 			}
 			upper_doab_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					devastation = 1
 				}
 			}
 			lower_doab_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					devastation = 1
 				}
 			}
 			purvanchal_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					devastation = 1
 				}
 			}
 			bihar_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					devastation = 1
 				}
 			}
 			gaur_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					devastation = 1
 				}
 			}
 			east_bengal_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					devastation = 1
 				}
@@ -417,13 +417,13 @@ gen_south_india_2 = {
 		required_missions = { gen_south_india_forts }
 		provinces_to_highlight = {
 			area = desh_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			desh_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			OR = {
 				accepted_culture = marathi
@@ -509,34 +509,34 @@ gen_south_india_2 = {
 				area = gondwana_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
 		trigger = {
 			konkan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			maidan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			ahmednagar_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			telingana_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			berar_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			gondwana_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -855,31 +855,31 @@ gen_hindu = {
 		
 		trigger = {
 			4495 = { 
-				owned_by = ROOT 
+				country_or_subject_holds = ROOT 
 				is_indic_viking_mod = yes
 			} #Ayodhya
 			524 = { 
-				owned_by = ROOT 
+				country_or_subject_holds = ROOT 
 				is_indic_viking_mod = yes
 			} #Mathura
 			511 = { 
-				owned_by = ROOT 
+				country_or_subject_holds = ROOT 
 				is_indic_viking_mod = yes
 			}#Haridwar
 			4417 = { 
-				owned_by = ROOT 
+				country_or_subject_holds = ROOT 
 				is_indic_viking_mod = yes
 			} #Kanchipuram
 			558 = { 
-				owned_by = ROOT 
+				country_or_subject_holds = ROOT 
 				is_indic_viking_mod = yes
 			} #Varanasi
 			2052 = { 
-				owned_by = ROOT 
+				country_or_subject_holds = ROOT 
 				is_indic_viking_mod = yes
 			} #Dwarkadhish
 			4461 = {
-				owned_by = ROOT 
+				country_or_subject_holds = ROOT 
 				is_indic_viking_mod = yes
 			}#Ujjain
 		}
@@ -1196,26 +1196,26 @@ gen_indian_muslim = {
 				province_id = 567
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { religion = ROOT }
 			}
 		}
 		
 		trigger = {
 			2087 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}# Ajmer
 			522 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			} # Delhi
 			4513 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			} # Pakpattan
 			567 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			} # Silhet
 		}
@@ -1286,7 +1286,7 @@ gen_indian_sikh = {
 		effect = {
 			lahore_area = {
 				limit = {
-					NOT = { owned_by = ROOT	}
+					NOT = { country_or_subject_holds = ROOT	}
 					NOT = { is_core = ROOT	}
 				}
 				add_core = ROOT
@@ -1300,14 +1300,14 @@ gen_indian_sikh = {
 		provinces_to_highlight = {
 			area = lahore_area
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
 		trigger = {
 			lahore_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -1329,7 +1329,7 @@ gen_indian_sikh = {
 		trigger = {
 			lahore_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				religion = sikhism
 			}
 			2075 = {
@@ -1392,26 +1392,26 @@ gen_indian_sikh = {
 				area = sirhind_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
 		trigger = {
 			multan_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			kashmir_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			sind_sagar_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			sirhind_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -1454,18 +1454,18 @@ gen_indian_sikh = {
 				area = ahmednagar_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
 		trigger = {
 			bihar_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			ahmednagar_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4437 = {
 				religion = sikhism
@@ -1863,11 +1863,11 @@ gen_south_india_5 = {
 		position = 4
 		provinces_to_highlight = {
 			province_id = 542
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
-			542 = { owned_by = ROOT }
+			542 = { country_or_subject_holds = ROOT }
 			production_leader = {
 				trade_goods = gems
 			}

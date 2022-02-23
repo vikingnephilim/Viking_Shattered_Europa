@@ -67,7 +67,7 @@ mongol_missions_1 = {
 				region = north_china_region
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			NOT = {
 				is_core = ROOT
@@ -92,7 +92,7 @@ mongol_missions_1 = {
 			xinan_region = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -106,7 +106,7 @@ mongol_missions_1 = {
 			south_china_region = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -130,7 +130,7 @@ mongol_missions_1 = {
 				region = south_china_region
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -175,7 +175,7 @@ mongol_missions_1 = {
 				}
 				korea_region = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -222,12 +222,12 @@ mongol_missions_1 = {
 		provinces_to_highlight = {
 			province_id = 1020
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			1020 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -276,7 +276,7 @@ mongol_missions_2 = {
 				province_id = 2190
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			NOT = {
 				is_core = ROOT
@@ -325,7 +325,7 @@ mongol_missions_2 = {
 				culture = oirats
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -393,7 +393,7 @@ mongol_missions_2 = {
 		provinces_to_highlight = {
 			region = central_asia_region
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		position = 4
@@ -403,10 +403,10 @@ mongol_missions_2 = {
 				value = 30
 			}
 			469 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			441 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -456,7 +456,7 @@ mongol_missions_2 = {
 				region = khorasan_region
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -469,10 +469,10 @@ mongol_missions_2 = {
 				value = 30
 			}
 			4338 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4293 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -521,7 +521,7 @@ mongol_missions_2 = {
 				region = mashriq_region
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -563,7 +563,7 @@ mongol_missions_3 = {
 		provinces_to_highlight = {
 			region = tibet_region
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		position = 3
@@ -573,7 +573,7 @@ mongol_missions_3 = {
 				value = 10
 			}
 			677 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -607,7 +607,7 @@ mongol_missions_3 = {
 		provinces_to_highlight = {
 			region = crimea_region
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -703,7 +703,7 @@ mongol_missions_3 = {
 				region = khorasan_region
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -713,27 +713,27 @@ mongol_missions_3 = {
 			}
 			mongolia_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			north_china_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			central_asia_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			crimea_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			persia_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			khorasan_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -772,7 +772,7 @@ mongol_missions_4 = {
 				region = russia_region
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		position = 6
@@ -785,10 +785,10 @@ mongol_missions_4 = {
 				value = 30
 			}
 			280 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			295 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

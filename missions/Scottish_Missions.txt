@@ -98,20 +98,20 @@ sco_free_missions_2 = {
 		provinces_to_highlight = {
 			area = scottish_marches_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			scottish_marches_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
 			set_country_flag = adv_frontier_free
 			add_mil_power = 100
 			scottish_marches_area  = {
-				limit = { owned_by = ROOT }
+				limit = { country_or_subject_holds = ROOT }
 				add_province_modifier = {
 					name = faster_integration
 					duration = 7300
@@ -165,20 +165,20 @@ sco_free_missions_3 = {
 				province_id = 1978
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			highlands_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			kingdom_of_the_isles_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1978 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

@@ -31,7 +31,7 @@ mutapa_vassal_missions_slot = {
 					province_id = 1185
 					OR = {
 						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
+						NOT = { country_or_subject_holds = ROOT }
 					}
 				}
 			}
@@ -88,12 +88,12 @@ mutapa_vassal_missions_slot = {
 			region = south_africa_region
 			OR = {
 				NOT = { is_core = ROOT }
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 			}
 		}
 		trigger = {
 			south_africa_region = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 				type = all
 			}
@@ -167,7 +167,7 @@ mutapa_conquer_africa_missions_slot = {
 		required_missions = {  }
 		position = 1
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			has_tax_building_trigger = no
 		}
 		trigger = {
@@ -208,7 +208,7 @@ mutapa_conquer_africa_missions_slot = {
 				province_id = 4040
 				province_id = 4039
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			owns = 4039
@@ -338,7 +338,7 @@ mutapa_restore_zimbabwe_missions_slot = {
 		provinces_to_highlight = {
 			province_id = 1184
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_core = ROOT }
 			}
 		}
@@ -410,7 +410,7 @@ mutapa_restore_zimbabwe_missions_slot = {
 		provinces_to_highlight = {
 			province_id = 1184
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_core = ROOT }
 			}
 		}
@@ -460,24 +460,24 @@ mutapa_restore_zimbabwe_missions_slot = {
 				area = zimbabwe_area
 				area = quelimane_area
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			total_development = 400
 			butua_area = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				type = all
 			}
 			lower_zambezi_area = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				type = all
 			}
 			zimbabwe_area = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				type = all
 			}
 			quelimane_area = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				type = all
 			}
 		}
@@ -554,7 +554,7 @@ mutapa_trade_missions_slot = {
 		position = 1
 		provinces_to_highlight = {
 			trade_goods = gold
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			NOT = { development = 10 }
 		}
 		trigger = {
@@ -589,7 +589,7 @@ mutapa_trade_missions_slot = {
 		position = 2
 		provinces_to_highlight = {
 			province_id = 1186
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			owns_or_non_sovereign_subject_of = 1186
@@ -663,7 +663,7 @@ mutapa_trade_missions_slot = {
 			OR = {
 				AND = {
 					region = horn_of_africa_region
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 					has_port = yes
 				}
 				province_id = 4346
@@ -932,17 +932,17 @@ mutapa_modernize_missions_slot = {
 				province_id = 1181
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { base_manpower = 8 }
 			}
 		}
 		trigger = {
 			789 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				base_manpower = 8
 			}
 			1181 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				base_manpower = 8
 			}
 			if = {	#For the case you want to have the Zulu on the map, the country should not be lost to them
@@ -968,7 +968,7 @@ mutapa_modernize_missions_slot = {
 		provinces_to_highlight = {
 			has_discovered = ROOT
 			culture = nguni
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			OR = {
 				NOT = { base_manpower = 5 }
 				has_manpower_building_trigger = no

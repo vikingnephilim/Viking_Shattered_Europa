@@ -113,21 +113,21 @@ guj_maritime_conquest = {
 				province_id = 4480
 				province_id = 515
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 
 		trigger = {
 			owns_core_province = 515 #Girnar / Junnagadh Fort
 			saurashtra_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			ahmedabad_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4480 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 
@@ -198,7 +198,7 @@ guj_maritime_conquest = {
 						province_id = 2231
 						province_id = 2999
 					}
-					NOT = { owned_by = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 				province_id = 504
 			}
@@ -256,12 +256,12 @@ guj_rajputana_frontier_series = {
 
 		provinces_to_highlight = {
 			province_id = 2067
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 
 		trigger = {
 			2067 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 
@@ -323,7 +323,7 @@ guj_malwa_focus = {
 
 		trigger = {
 			2056 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 		}
@@ -355,7 +355,7 @@ guj_malwa_focus = {
 
 		trigger = {
 			2056 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				OR = {
 					has_building = temple
 					has_building = cathedral
@@ -418,17 +418,17 @@ guj_malwa_focus = {
 				area = malwa_area
 				area = khandesh_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 
 		trigger = {
 			malwa_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			khandesh_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 
@@ -536,7 +536,7 @@ guj_rajputana_conquest = {
 			OR = {
 				AND = {
 					area = mewar_area
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 				AND = {
 					province_id = 2087
@@ -549,7 +549,7 @@ guj_rajputana_conquest = {
 			owns_core_province = 2087
 			mewar_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 
@@ -628,26 +628,26 @@ guj_rajputana_conquest = {
 				area = jaipur_area
 				area = gird_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 
 		trigger = {
 			owns_core_province = 2087
 			marwar_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			jangladesh_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			jaipur_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			gird_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 
@@ -810,7 +810,7 @@ guj_mercantile = {
 					}
 				}
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			is_sea = no
 		}
 
@@ -875,7 +875,7 @@ guj_mercantile = {
 				province_id = 1177
 				province_id = 1179
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 
 		trigger = {
@@ -922,7 +922,7 @@ guj_mercantile_and_industry = {
 
 		provinces_to_highlight = {
 			area = ahmedabad_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			OR = {
@@ -932,7 +932,7 @@ guj_mercantile_and_industry = {
 			}
 			ahmedabad_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -957,12 +957,12 @@ guj_mercantile_and_industry = {
 
 		provinces_to_highlight = {
 			area = konkan_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			konkan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1035,7 +1035,7 @@ guj_mercantile_and_industry = {
 				province_id = 1248
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -1154,17 +1154,17 @@ guj_into_africa = {
 				area = lower_zambezi_area
 				area = butua_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 
 		trigger = {
 			lower_zambezi_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			butua_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

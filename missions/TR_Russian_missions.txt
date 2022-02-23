@@ -79,7 +79,7 @@ tr_russia_exclusive_church = {
 				AND = {
 					province_id = 295
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
@@ -92,7 +92,7 @@ tr_russia_exclusive_church = {
 			}
 			religion = orthodox
 			295 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				has_state_patriach = yes
 			}
 		}
@@ -138,21 +138,21 @@ tr_muscovy_conquest = {
 				area = livonia_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			curonia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			estonia_ingria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			livonia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -175,25 +175,25 @@ tr_muscovy_conquest = {
 				area = sandomierz_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			malopolska_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			red_ruthenia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			mazovia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			sandomierz_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -380,44 +380,44 @@ tr_russia_conquest_1 = {
 				province_id = 1961
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			novgorod_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			beloozero_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			pomor_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			north_karelia = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			arkhangelsk_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4148 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1777 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			33 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			34 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1961 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -458,37 +458,37 @@ tr_russia_conquest_1 = {
 				province_id = 274
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			# integrate minors
 			294 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			308 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			300 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1778 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4147 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			312 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			301 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4116 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			274 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -604,19 +604,19 @@ tr_russia_conquest_1 = {
 		provinces_to_highlight = {
 			region = ruthenia_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			ruthenia_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
 			ruthenia_region = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "ruthenian_integration"
@@ -720,17 +720,17 @@ tr_russia_exclusive_1 = {
 				area = moldavia_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			wallachia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			moldavia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -783,13 +783,13 @@ tr_russia_exclusive_1 = {
 						area = silistria_area
 					}
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				AND = {
 					province_id = 151
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
@@ -797,15 +797,15 @@ tr_russia_exclusive_1 = {
 		trigger = {
 			bulgaria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			silistria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			thrace_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			owns = 151
 		}
@@ -906,21 +906,21 @@ tr_russia_conquest_2 = {
 				area = laponia_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			finland_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			bothnia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			laponia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -961,7 +961,7 @@ tr_russia_exclusive_2 = {
 				area = sakhalin_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
@@ -972,19 +972,19 @@ tr_russia_exclusive_2 = {
 			}
 			furdan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			ilan_hala_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			central_jilin_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			sakhalin_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1107,7 +1107,7 @@ tr_russia_conquest_3 = {
 		provinces_to_highlight = {
 			area = tambov_area
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			NOT = {
 			OR = {
@@ -1118,7 +1118,7 @@ tr_russia_conquest_3 = {
 	}
 		trigger = {
 			tambov_area = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				OR = {
 					religion = ROOT
 					culture = ROOT
@@ -1230,31 +1230,31 @@ tr_russia_conquest_3 = {
 				area = saratov_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			tambov_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			lower_don_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			astrakhan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			saratov_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
 			tambov_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "convert_the_steppes"
@@ -1263,7 +1263,7 @@ tr_russia_conquest_3 = {
 			}
 			lower_don_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "convert_the_steppes"
@@ -1272,7 +1272,7 @@ tr_russia_conquest_3 = {
 			}
 			astrakhan_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "convert_the_steppes"
@@ -1281,7 +1281,7 @@ tr_russia_conquest_3 = {
 			}
 			saratov_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "convert_the_steppes"
@@ -1332,13 +1332,13 @@ tr_russia_conquest_3 = {
 		provinces_to_highlight = {
 			region = crimea_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			crimea_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1348,7 +1348,7 @@ tr_russia_conquest_3 = {
 			}
 			crimea_region = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "convert_the_steppes"
@@ -1367,20 +1367,20 @@ tr_russia_conquest_3 = {
 		provinces_to_highlight = {
 			region = west_siberia_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
 		trigger = {
 			1074 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1075 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			west_siberia_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1397,7 +1397,7 @@ tr_russia_conquest_3 = {
 			west_siberia_region = {
 				limit = {
 					trade_goods = fur
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "siberian_fur_production"
@@ -1415,21 +1415,21 @@ tr_russia_conquest_3 = {
 		provinces_to_highlight = {
 			region = east_siberia_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
 		trigger = {
 			east_siberia_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
 			east_siberia_region = {
 				limit = {
 					trade_goods = fur
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "siberian_fur_production"
@@ -1575,31 +1575,31 @@ tr_siberia_missions = {
 				area = samara_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			kazan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			volga_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			kama_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			samara_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
 			kazan_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "convert_the_steppes"
@@ -1608,7 +1608,7 @@ tr_siberia_missions = {
 			}
 			volga_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "convert_the_steppes"
@@ -1617,7 +1617,7 @@ tr_siberia_missions = {
 			}
 			kama_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "convert_the_steppes"
@@ -1626,7 +1626,7 @@ tr_siberia_missions = {
 			}
 			samara_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "convert_the_steppes"
@@ -1679,18 +1679,18 @@ tr_siberia_missions = {
 				}
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
 		trigger = {
 			nogai_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			lower_yik_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			custom_trigger_tooltip = {
 				tooltip = remaining_steppe_1.tooltip
@@ -1698,7 +1698,7 @@ tr_siberia_missions = {
 					type = all
 					OR = {
 						is_empty = yes
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
@@ -1708,7 +1708,7 @@ tr_siberia_missions = {
 					type = all
 					OR = {
 						is_empty = yes
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
@@ -1720,7 +1720,7 @@ tr_siberia_missions = {
 			}
 			ural_region = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "convert_the_steppes"
@@ -1729,7 +1729,7 @@ tr_siberia_missions = {
 			}
 			west_siberia_region = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "convert_the_steppes"
@@ -1738,7 +1738,7 @@ tr_siberia_missions = {
 			}
 			nogai_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "convert_the_steppes"
@@ -1747,7 +1747,7 @@ tr_siberia_missions = {
 			}
 			lower_yik_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "convert_the_steppes"
@@ -1765,13 +1765,13 @@ tr_siberia_missions = {
 		provinces_to_highlight = {
 			area = perm_area
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			perm_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1788,7 +1788,7 @@ tr_siberia_missions = {
 			region = west_siberia_region
 			has_discovered = ROOT
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -1818,7 +1818,7 @@ tr_siberia_missions = {
 			region = east_siberia_region
 			has_discovered = ROOT
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -1910,14 +1910,14 @@ tr_siberia_missions = {
 		provinces_to_highlight = {
 			colonial_region = colonial_alaska
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
 		trigger = {
 			colonial_alaska = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

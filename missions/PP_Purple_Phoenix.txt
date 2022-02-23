@@ -19,7 +19,7 @@ GRE_missions_4 = {
 		provinces_to_highlight = {
 			culture = ROOT
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -32,7 +32,7 @@ GRE_missions_4 = {
 			thrace_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -52,12 +52,12 @@ GRE_missions_4 = {
 		provinces_to_highlight = {
 			province_id = 2348
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			2348 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -75,12 +75,12 @@ GRE_missions_4 = {
 		provinces_to_highlight = {
 			province_id = 321
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			321 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -200,7 +200,7 @@ GRE_missions_4 = {
 			}
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					religion = ROOT
@@ -211,12 +211,12 @@ GRE_missions_4 = {
 			religion = ROOT
 			aydin_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 			hudavendigar_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 		}
@@ -258,17 +258,17 @@ GRE_missions_4 = {
 				area = syria_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			aleppo_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			syria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -305,13 +305,13 @@ GRE_missions_4 = {
 		provinces_to_highlight = {
 			area = palestine_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			palestine_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -363,7 +363,7 @@ GRE_missions_4 = {
 				area = vostani_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		required_missions = {
@@ -372,15 +372,15 @@ GRE_missions_4 = {
 		trigger = {
 			delta_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			bahari_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			vostani_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -446,7 +446,7 @@ GRE_missions_4 = {
 				province_id = 2313
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -478,7 +478,7 @@ GRE_missions_4 = {
 			province_id = 118
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					religion = ROOT
@@ -603,12 +603,12 @@ GRE_missions_5 = {
 		provinces_to_highlight = {
 			province_id = 151
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			151 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -652,7 +652,7 @@ GRE_missions_5 = {
 					has_manufactory_trigger = no
 				}
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					base_production = 6
@@ -662,7 +662,7 @@ GRE_missions_5 = {
 		trigger = {
 			2348 = {
 				has_manufactory_trigger = yes
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				base_production = 6
 			}
 		}
@@ -687,17 +687,17 @@ GRE_missions_5 = {
 				area = macedonia_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			albania_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			macedonia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -762,25 +762,25 @@ GRE_missions_5 = {
 				area = bosnia_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			east_adriatic_coast_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			rascia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			serbia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			bosnia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -825,17 +825,17 @@ GRE_missions_5 = {
 				area = croatia_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			carinthia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			croatia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -862,13 +862,13 @@ GRE_missions_5 = {
 		provinces_to_highlight = {
 			area = venetia_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			venetia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -890,13 +890,13 @@ GRE_missions_5 = {
 		provinces_to_highlight = {
 			area = aegean_archipelago_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			aegean_archipelago_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -938,20 +938,20 @@ GRE_missions_5 = {
 				province_id = 333
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			corsica_sardinia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			baleares_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			126 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -991,17 +991,17 @@ GRE_missions_5 = {
 				area = djerba_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			tripolitania_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			djerba_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1041,17 +1041,17 @@ GRE_missions_5 = {
 				area = kabylia_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			tunisia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			kabylia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1091,17 +1091,17 @@ GRE_missions_5 = {
 				area = upper_andalucia_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			lower_andalucia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			upper_andalucia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1118,7 +1118,7 @@ GRE_missions_5 = {
 			}
 			upper_andalucia_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "faster_integration"
@@ -1127,7 +1127,7 @@ GRE_missions_5 = {
 			}
 			lower_andalucia_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "faster_integration"
@@ -1149,21 +1149,21 @@ GRE_missions_5 = {
 				area = cukurova_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			karaman_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			rum_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			cukurova_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1203,17 +1203,17 @@ GRE_missions_5 = {
 				area = erzurum_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			dulkadir_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			erzurum_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

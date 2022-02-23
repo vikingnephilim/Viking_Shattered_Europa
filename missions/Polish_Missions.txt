@@ -18,14 +18,14 @@ polish_missions_main_slot = {
 		provinces_to_highlight = {
 			area = west_prussia_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			OR = {
 				west_prussia_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT	
+					country_or_subject_holds = ROOT	
 				}
 				AND = {
 					custom_trigger_tooltip = {
@@ -100,7 +100,7 @@ polish_missions_main_slot = {
 			}
 			NOT = {
 				AND = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					is_core = ROOT
 				}
 			}
@@ -108,12 +108,12 @@ polish_missions_main_slot = {
 		trigger = {
 			west_prussia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			kuyavia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 		}
@@ -152,13 +152,13 @@ polish_missions_main_slot = {
 		provinces_to_highlight = {
 			area = east_prussia_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			east_prussia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -214,7 +214,7 @@ plc_missions_1 = {
 			province_id = 43
 			NOT = {
 				AND = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					OR = {
 						has_building = dock
 						has_building = drydock
@@ -228,7 +228,7 @@ plc_missions_1 = {
 		}
 		trigger = {
 			43 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				OR = {
 					has_building = dock
 					has_building = drydock
@@ -268,17 +268,17 @@ plc_missions_1 = {
 				area = gotaland_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			ostra_svealand_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			gotaland_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -312,7 +312,7 @@ polish_missions_branch_slot = {
 				AND = {
 					area = bulgaria_area
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				AND = {
@@ -327,7 +327,7 @@ polish_missions_branch_slot = {
 		trigger = {
 			bulgaria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			carpathia_region = {
 				type = all
@@ -372,7 +372,7 @@ polish_missions_slot_3 = {
 		provinces_to_highlight = {
 			province_id = 257
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -467,25 +467,25 @@ polish_missions_slot_3 = {
 				area = pripyat_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			lithuania_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			minsk_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			west_dniepr_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			pripyat_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -541,20 +541,20 @@ polish_missions_slot_3 = {
 				area = transdanubia_area
 				area = alfold_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			slovakia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			transdanubia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			alfold_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -573,13 +573,13 @@ polish_missions_slot_3 = {
 		provinces_to_highlight = {
 			area = silesia_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			silesia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -635,20 +635,20 @@ polish_missions_slot_3 = {
 				area = moravia_area
 				area = erzgebirge_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			bohemia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			moravia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			erzgebirge_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -684,11 +684,11 @@ polish_missions_slot_4 = {
 		trigger = {
 			west_dniepr_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			east_dniepr_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			280 = {
 				development = 20
@@ -798,7 +798,7 @@ polish_missions_slot_5 = {
 		}
 		trigger = {
 			262 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = { unrest = 1 }
 				NOT = { devastation = 1 }
 				OR = {
@@ -913,7 +913,7 @@ polish_missions_slot_5 = {
 			# goods produced and local trade power
 			sandomierz_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "invested_in_eastern_poland"
@@ -922,7 +922,7 @@ polish_missions_slot_5 = {
 			}
 			red_ruthenia_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "invested_in_eastern_poland"

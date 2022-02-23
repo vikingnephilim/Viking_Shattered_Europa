@@ -14,7 +14,7 @@ mnd_mlc_1 = {
 			OR = {
 				AND = {
 					province_id = 598
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 				AND = {
 					owner = {
@@ -26,7 +26,7 @@ mnd_mlc_1 = {
 		}
 		trigger = {
 			598 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			OR = {
 				PAH = { is_subject_of = ROOT }
@@ -128,16 +128,16 @@ mnd_mlc_1 = {
 				area = malaya_area
 				area = north_malaya_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			malaya_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			north_malaya_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -239,11 +239,11 @@ mnd_mlc_1 = {
 		trigger = {
 			jambi_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT 
+				country_or_subject_holds = ROOT 
 			}
 			central_sumatra_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT 
+				country_or_subject_holds = ROOT 
 			}
 		}
 		effect = {
@@ -314,7 +314,7 @@ mnd_mlc_1 = {
 						area = tenasserim_area
 						area = north_tenasserim_area
 					}
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 			}
 		}
@@ -324,11 +324,11 @@ mnd_mlc_1 = {
 				AND = {
 					tenasserim_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					north_tenasserim_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
@@ -441,7 +441,7 @@ mnd_mlc_2 = {
 						CHA = { is_free_or_tributary_trigger = no }
 					}
 					area = champa_area
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 			}
 		}
@@ -465,7 +465,7 @@ mnd_mlc_2 = {
 			else = {
 				champa_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -605,7 +605,7 @@ mnd_mlc_2 = {
 			NOT = { exists = MAJ }
 			surabaya_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

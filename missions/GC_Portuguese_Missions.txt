@@ -24,7 +24,7 @@ gc_por_1 = {
 		provinces_to_highlight = {
 			colonial_region = colonial_brazil
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
@@ -60,7 +60,7 @@ gc_por_1 = {
 		provinces_to_highlight = {
 			colonial_region = colonial_brazil
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
@@ -90,7 +90,7 @@ gc_por_1 = {
 				area = sao_paolo_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -113,15 +113,15 @@ gc_por_1 = {
 			}
 			minas_gerais_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			rio_de_janeiro_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			sao_paolo_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -220,7 +220,7 @@ gc_por_1_b = {
 		provinces_to_highlight = {
 			trade_goods = wine
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			NOT = {
 				OR = {
@@ -297,14 +297,14 @@ gc_por_1_b = {
 				has_building = university
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			university = 8
 			227 = {
 				has_building = university
-				owned_by = ROOt
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -364,7 +364,7 @@ gc_por_2 = {
 			OR = {
 				is_city = no
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			has_discovered = ROOT
@@ -373,7 +373,7 @@ gc_por_2 = {
 			custom_trigger_tooltip = {
 				tooltip = miss_colonize_west_africa
 				guinea_region = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					is_city = yes
 				}
 			}
@@ -394,7 +394,7 @@ gc_por_2 = {
 		provinces_to_highlight = {
 			region = kongo_region
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
@@ -408,7 +408,7 @@ gc_por_2 = {
 			custom_trigger_tooltip = {
 				tooltip = miss_colonize_kongo
 				kongo_region = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					is_city = yes
 				}
 			}
@@ -521,17 +521,17 @@ gc_por_2_c = {
 				area = butua_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			zimbabwe_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			butua_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -593,17 +593,17 @@ gc_por_2_c = {
 				area = south_lanka_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			lanka_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			south_lanka_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -621,17 +621,17 @@ gc_por_2_c = {
 				area = lower_burma_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			arakan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			lower_burma_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -771,7 +771,7 @@ gc_por_3_b = {
 		provinces_to_highlight = {
 			colonial_region = colonial_the_carribean
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
@@ -885,7 +885,7 @@ gc_por_3_c = {
 				area = mozambique_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
@@ -897,14 +897,14 @@ gc_por_3_c = {
 				}
 			}
 			1186 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1192 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			mozambique_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -956,13 +956,13 @@ gc_por_3_c = {
 		provinces_to_highlight = {
 			province_id = 1201
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
 		trigger = {
 			1201 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -984,13 +984,13 @@ gc_por_3_c = {
 		provinces_to_highlight = {
 			area = malabar_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			malabar_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1069,18 +1069,18 @@ gc_por_3_c = {
 				province_id = 517
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			529 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4430 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			517 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1237,29 +1237,29 @@ gc_por_4 = {
 				area = asturias_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			leon_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			extremadura_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			lower_andalucia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			galicia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			asturias_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1284,13 +1284,13 @@ gc_por_4 = {
 		provinces_to_highlight = {
 			region = iberia_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			iberia_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1391,7 +1391,7 @@ gc_por_4 = {
 		provinces_to_highlight = {
 			region = malaya_region
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
@@ -1405,7 +1405,7 @@ gc_por_4 = {
 			custom_trigger_tooltip = {
 				tooltip = miss_colonize_malaya
 				malaya_region = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					is_city = yes
 				}
 			}
@@ -1479,7 +1479,7 @@ gc_por_4 = {
 			}
 			668 = {
 				OR = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					owner = {
 						is_subject = no
 						has_opinion = {
@@ -1497,7 +1497,7 @@ gc_por_4 = {
 					limit = {
 						668 = {
 							NOT = {
-								country_or_non_sovereign_subject_holds = ROOT
+								country_or_subject_holds = ROOT
 							}
 							owner = {
 								is_subject = no
@@ -1531,7 +1531,7 @@ gc_por_4 = {
 				AND = {
 					province_id = 4182
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					owner = {
 						NOT = {
@@ -1550,7 +1550,7 @@ gc_por_4 = {
 			}
 			4182 = {
 				OR = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					owner = {
 						is_subject = no
 						has_opinion = {
@@ -1568,7 +1568,7 @@ gc_por_4 = {
 					limit = {
 						4182 = {
 							NOT = {
-								country_or_non_sovereign_subject_holds = ROOT
+								country_or_subject_holds = ROOT
 							}
 							owner = {
 								is_subject = no
@@ -1641,7 +1641,7 @@ gc_por_5 = {
 		provinces_to_highlight = {
 			province_id = 334
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -1683,19 +1683,19 @@ gc_por_5 = {
 		provinces_to_highlight = {
 			area = western_morocco_area
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			western_morocco_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
 			western_morocco_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "buffer_zone_commerce"
@@ -1704,7 +1704,7 @@ gc_por_5 = {
 			}
 			northern_morocco_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "buffer_zone_commerce"
@@ -1713,7 +1713,7 @@ gc_por_5 = {
 			}
 			southern_morocco_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "buffer_zone_commerce"
@@ -1732,13 +1732,13 @@ gc_por_5 = {
 		provinces_to_highlight = {
 			province_id = 2999
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
 		trigger = {
 			2999 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1773,13 +1773,13 @@ gc_por_5 = {
 				AND = {
 					area = mascat_area
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				AND = {
 					province_id = 400
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
@@ -1787,17 +1787,17 @@ gc_por_5 = {
 		trigger = {
 			mascat_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			400 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
 			if = {
 				limit = {
 					2999 = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				2999 = {
@@ -1823,7 +1823,7 @@ gc_por_5 = {
 		provinces_to_highlight = {
 			province_id = 596
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {

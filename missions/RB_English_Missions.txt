@@ -79,7 +79,7 @@ eng_rb_gibraltar = {
 		
 		provinces_to_highlight = {
 			province_id = 226
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		ai_weight = {
@@ -97,7 +97,7 @@ eng_rb_gibraltar = {
 		
 		trigger = {
 			226 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -147,16 +147,16 @@ eng_rb_islands_med = {
 				area = corsica_sardinia_area
 				province_id = 4559
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			4559 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			corsica_sardinia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -190,18 +190,18 @@ eng_rb_islands_med = {
 				province_id = 163
 				province_id = 321
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			126 = { 
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			163 = { 
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			321 = { 
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -245,13 +245,13 @@ eng_rb_egypt = {
 		
 		provinces_to_highlight = {
 			area = delta_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			delta_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -279,16 +279,16 @@ eng_rb_egypt = {
 				area = bahari_area
 				province_id = 2315
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			bahari_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2315 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -430,7 +430,7 @@ eng_rb_burgundy = {
 				area = bourgogne_area
 				area = west_burgundy_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		ai_weight = {
@@ -447,15 +447,15 @@ eng_rb_burgundy = {
 		trigger = {
 			picardy_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			west_burgundy_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			bourgogne_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -505,7 +505,7 @@ gbr_rb_canada_group = {
 		
 		provinces_to_highlight = {
 			colonial_region = colonial_canada
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
@@ -611,11 +611,11 @@ eng_rb_buildings_group = {
 		
 		trigger = {
 			237 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				has_building = university
 			}
 			4370 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				has_building = university
 			}
 		}
@@ -686,16 +686,16 @@ eng_rb_buildings_group = {
 				amount = 20
 			}
 			1861 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			241 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}	
 			4375 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}	
 			246 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}	
 		}
 		
@@ -751,19 +751,19 @@ eng_rb_buildings_group = {
 		
 		trigger = {
 			1861 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				has_building = furnace
 			}
 			241 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				has_building = furnace
 			}
 			4375 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				has_building = furnace
 			}
 			246 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				has_building = furnace
 			}
 		}
@@ -802,7 +802,7 @@ eng_rb_conquest_europe = {
 		
 		provinces_to_highlight = {
 			area = brittany_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		ai_weight = {
@@ -823,7 +823,7 @@ eng_rb_conquest_europe = {
 		trigger = {
 			brittany_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -895,33 +895,33 @@ eng_rb_conquest_europe = {
 				province_id = 195
 				province_id = 4697
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			pyrenees_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			poitou_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			loire_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			199 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			194 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			195 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4697 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -1077,7 +1077,7 @@ gbr_rb_spice_islands_group = {
 				trade_company_region = trade_company_indonesia
 			}
 			is_sea = no
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
@@ -1086,11 +1086,11 @@ gbr_rb_spice_islands_group = {
 				tooltip = eng_rb_spice_islands.tooltip
 				OR = {
 					trade_company_moluccas = { 
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						is_city = yes
 					}
 					trade_company_indonesia = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						is_city = yes
 					}
 				}
@@ -1150,7 +1150,7 @@ gbr_rb_indian_group = {
 		
 		provinces_to_highlight = {
 			area = west_bengal_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
@@ -1161,7 +1161,7 @@ gbr_rb_indian_group = {
 		trigger = {
 			west_bengal_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -1227,18 +1227,18 @@ gbr_rb_indian_group = {
 				area = orissa_area
 				area = andhra_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
 		trigger = {
 			orissa_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			andhra_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -1286,26 +1286,26 @@ gbr_rb_indian_group = {
 				area = oudh_area
 				area = gaur_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
 		trigger = {
 			bihar_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			purvanchal_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			oudh_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			gaur_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -1346,37 +1346,37 @@ gbr_rb_india_princes = {
 				area = jharkhand_area
 				area = upper_mahanadi_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
 		trigger = {
 			jharkhand_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			golconda_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			maidan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			garjat_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			upper_mahanadi_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
 		effect = {
 			golconda_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "gbr_inland_trade"
@@ -1385,7 +1385,7 @@ gbr_rb_india_princes = {
 			}
 			maidan_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "gbr_inland_trade"
@@ -1394,7 +1394,7 @@ gbr_rb_india_princes = {
 			}
 			gondwana_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "gbr_inland_trade"
@@ -1403,7 +1403,7 @@ gbr_rb_india_princes = {
 			}
 			garjat_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "gbr_inland_trade"
@@ -1441,7 +1441,7 @@ gbr_rb_northern_colonial = {
 				province_id = 1978
 				province_id = 1979
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		ai_priority = {
@@ -1450,13 +1450,13 @@ gbr_rb_northern_colonial = {
 		
 		trigger = {
 			369 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1978 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1979 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -1481,7 +1481,7 @@ gbr_rb_northern_colonial = {
 		
 		provinces_to_highlight = {
 			area = greenland_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
@@ -1500,7 +1500,7 @@ gbr_rb_northern_colonial = {
 				tooltip = miss_colonize_greenland
 				greenland_area = { 
 					type = all
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					is_city = yes
 				}
 			}
@@ -1604,7 +1604,7 @@ eng_rb_thirteen_colonies_group = {
 		
 		provinces_to_highlight = {
 			colonial_region = colonial_eastern_america
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
@@ -1709,7 +1709,7 @@ eng_rb_trade_in_home_cot_group = {
 				province_id = 1874
 				province_id = 45
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		ai_weight = {
@@ -1733,10 +1733,10 @@ eng_rb_trade_in_home_cot_group = {
 		
 		trigger = { 
 			1874 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			45 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 	
@@ -1766,7 +1766,7 @@ eng_rb_trade_in_home_cot_group = {
 				province_id = 43
 				province_id = 38
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		ai_weight = {
@@ -1790,10 +1790,10 @@ eng_rb_trade_in_home_cot_group = {
 		
 		trigger = { 
 			43 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			38 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 	

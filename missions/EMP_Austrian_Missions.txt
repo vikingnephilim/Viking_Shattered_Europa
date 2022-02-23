@@ -26,7 +26,7 @@ emp_hab_poland_branch = {
 				NOT = {
 					poland_region = {
 						type = all
-						country_or_non_sovereign_subject_holds = root
+						country_or_subject_holds = ROOT
 					}
 				}
 				NOT = {
@@ -39,7 +39,7 @@ emp_hab_poland_branch = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			if = {
@@ -50,7 +50,7 @@ emp_hab_poland_branch = {
 					PLC = { is_subject_of = root }
 					poland_region = {
 						type = all
-						country_or_non_sovereign_subject_holds = root
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
@@ -62,14 +62,14 @@ emp_hab_poland_branch = {
 					POL = { is_subject_of = root }
 					poland_region = {
 						type = all
-						country_or_non_sovereign_subject_holds = root
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
 			else = {
 				poland_region = {
 					type = all
-					country_or_non_sovereign_subject_holds = root
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -636,7 +636,7 @@ emp_hab_prestige_branch = {
 						}
 					}
 					has_manufactory_trigger = no
-					owned_by = root
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -670,7 +670,7 @@ emp_hab_prestige_branch = {
 				}
 				AND = {
 					continent = europe
-					owned_by = root
+					country_or_subject_holds = ROOT
 					development = 20
 					OR = {
 						NOT = { development = 30 }
@@ -722,14 +722,14 @@ emp_hab_prestige_branch = {
 		provinces_to_highlight = {
 			province_id = 134
 			OR = {
-				NOT = { owned_by = root }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { development = 50 }
 				NOT = { num_of_buildings_in_province = 6 }
 			}
 		}
 		trigger = {
 			134 = {
-				owned_by = root
+				country_or_subject_holds = ROOT
 				development = 50
 				num_of_buildings_in_province = 6
 			}
@@ -778,7 +778,7 @@ emp_hab_minorities_branch = {
 						area = alfold_area
 					}
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { country_or_subject_holds = ROOT }
 						NOT = { unrest = 1 }
 						NOT = { nationalism = 1 }
 						NOT = { local_autonomy = 1 }
@@ -802,14 +802,14 @@ emp_hab_minorities_branch = {
 				AND = {
 					province_id = 153
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { country_or_subject_holds = ROOT }
 						NOT = { is_core = root }
 					}
 				}
 				AND = {
 					province_id = 1772
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { country_or_subject_holds = ROOT }
 						NOT = { is_core = root }
 					}
 				}
@@ -886,7 +886,7 @@ emp_hab_minorities_branch = {
 		icon = multicultural_empire
 		required_missions = { emp_hab_the_hungarian_question }
 		provinces_to_highlight = {
-			owned_by = root
+			country_or_subject_holds = ROOT
 			NOT = { culture_group = root }
 			OR = {
 				unrest = 1
@@ -976,7 +976,7 @@ emp_hab_german_expansion_branch = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -1052,7 +1052,7 @@ emp_hab_german_expansion_branch = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -1095,7 +1095,7 @@ emp_hab_german_expansion_branch = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -1109,7 +1109,7 @@ emp_hab_german_expansion_branch = {
 		}
 		effect = {
 			upper_swabia_area = {
-				limit = { country_or_non_sovereign_subject_holds = root }
+				limit = { country_or_subject_holds = ROOT }
 				add_nationalism = -5
 				add_province_modifier = {
 					name = hab_holdings_in_swabia
@@ -1117,7 +1117,7 @@ emp_hab_german_expansion_branch = {
 				}
 			}
 			lower_swabia_area = {
-				limit = { country_or_non_sovereign_subject_holds = root }
+				limit = { country_or_subject_holds = ROOT }
 				add_nationalism = -5
 				add_province_modifier = {
 					name = hab_holdings_in_swabia
@@ -1125,7 +1125,7 @@ emp_hab_german_expansion_branch = {
 				}
 			}
 			upper_rhineland_area = {
-				limit = { country_or_non_sovereign_subject_holds = root }
+				limit = { country_or_subject_holds = ROOT }
 				add_nationalism = -5
 				add_province_modifier = {
 					name = hab_holdings_in_swabia
@@ -1161,7 +1161,7 @@ emp_hab_german_expansion_branch_2 = {
 			OR = {
 				AND = {
 					area = mittelmark_area
-					NOT = { country_or_non_sovereign_subject_holds = root }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 				AND = {
 					exists = BRA
@@ -1177,7 +1177,7 @@ emp_hab_german_expansion_branch_2 = {
 				NOT = {
 					mittelmark_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = root
+						country_or_subject_holds = ROOT
 					}
 				}
 				NOT = {
@@ -1245,7 +1245,7 @@ emp_hab_german_expansion_branch_2 = {
 				OR = {
 					mittelmark_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = root
+						country_or_subject_holds = ROOT
 					}
 					BRA = {
 						if = {
@@ -1278,7 +1278,7 @@ emp_hab_german_expansion_branch_2 = {
 				OR = {
 					mittelmark_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = root
+						country_or_subject_holds = ROOT
 					}
 					PRU = {
 						if = {
@@ -1307,7 +1307,7 @@ emp_hab_german_expansion_branch_2 = {
 			else = {
 				mittelmark_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = root
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -1394,13 +1394,13 @@ emp_hab_western_expansion_branch = {
 		provinces_to_highlight = {
 			province_id = 1880
 			OR = {
-				NOT = { owned_by = root }
+				NOT = { country_or_subject_holds = ROOT }
 				is_in_capital_area = no
 			}
 		}
 		trigger = {
 			1880 = {
-				owned_by = root
+				country_or_subject_holds = ROOT
 				is_in_capital_area = yes
 			}
 		}
@@ -1454,7 +1454,7 @@ emp_hab_western_expansion_branch = {
 						area = romandie_area
 						area = switzerland_area
 					}
-					NOT = { country_or_non_sovereign_subject_holds = root }
+					NOT = { country_or_subject_holds = ROOT }
 					ROOT = {
 						NOT = {
 							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -1531,16 +1531,16 @@ emp_hab_western_expansion_branch = {
 				area = bourgogne_area
 				area = lorraine_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			bourgogne_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_subject_holds = ROOT
 			}
 			lorraine_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1644,7 +1644,7 @@ emp_hab_balkans = {
 			OR = {
 				AND = {
 					province_id = 3002
-					NOT = { owned_by = root }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 				AND = {
 					OR = {
@@ -1664,12 +1664,12 @@ emp_hab_balkans = {
 							}
 						}
 					}
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 			}
 		}
 		trigger = {
-			3002 = { owned_by = root }
+			3002 = { country_or_subject_holds = ROOT }
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 12 #out of 15
 				OR = {
@@ -1739,20 +1739,20 @@ emp_hab_balkans_2 = {
 				area = silistria_area
 				area = bulgaria_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			wallachia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			silistria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			bulgaria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1878,7 +1878,7 @@ emp_hab_more_italy_branch = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			owns_or_non_sovereign_subject_of = 104
@@ -1982,7 +1982,7 @@ emp_hab_more_italy_branch = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			owns_or_non_sovereign_subject_of = 121
@@ -2054,11 +2054,11 @@ emp_hab_diplo_branch = {
 			else = {
 				OR = {
 					AND = {
-						owned_by = root
+						country_or_subject_holds = ROOT
 						root = { is_great_power = no }
 					}
 					AND = {
-						NOT = { owned_by = root }
+						NOT = { country_or_subject_holds = ROOT }
 						owner = {
 							is_great_power = yes
 							NOT = { alliance_with = root }
@@ -2334,7 +2334,7 @@ emp_hab_diplo_branch = {
 				}
 				is_subject = no
 			}
-			NOT = { owned_by = root }
+			NOT = { country_or_subject_holds = ROOT }
 			NOT = {
 				owner = {
 					OR = {
@@ -2391,7 +2391,7 @@ emp_hab_diplo_branch = {
 					NOT = { region = anatolia_region }
 					NOT = { region = caucasia_region }
 					OR = {
-						owned_by = root
+						country_or_subject_holds = ROOT
 						owner = {
 							OR = {
 								is_subject_of = ROOT
@@ -2483,11 +2483,11 @@ emp_hab_diplo_branch = {
 			is_capital = yes
 			OR = {
 				AND = {
-					owned_by = root
+					country_or_subject_holds = ROOT
 					root = { is_great_power = no }
 				}
 				AND = {
-					NOT = { owned_by = root }
+					NOT = { country_or_subject_holds = ROOT }
 					owner = {
 						capital_scope = { continent = europe }
 						OR = {

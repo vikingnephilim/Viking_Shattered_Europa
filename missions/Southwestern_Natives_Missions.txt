@@ -24,7 +24,7 @@ southwest = {
 			area_for_scope_province = {
 				is_capital_of = ROOT
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
@@ -34,7 +34,7 @@ southwest = {
 			capital_scope = {
 				area_for_scope_province = {
 					type = all
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -65,7 +65,7 @@ southwest = {
 			region_for_scope_province = {
 				is_capital_of = ROOT
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			owner = {
 				NOT = { tag = HNI }
 			}
@@ -79,7 +79,7 @@ southwest = {
 						region = california_region
 						region = rio_grande_region
 					}
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -110,7 +110,7 @@ southwest = {
 						trade_goods = salt
 						trade_goods = gold
 					}
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -123,7 +123,7 @@ southwest = {
 						trade_goods = salt
 						trade_goods = gold
 					}
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = sw_turquoise
@@ -142,7 +142,7 @@ southwest = {
 		}
 		trigger = {
 			2492 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				has_building = native_storehouse				
 			}
 		}
@@ -165,7 +165,7 @@ southwest = {
 		}
 		trigger = {
 			4644 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				has_building = native_longhouse
 				has_building = native_ceremonial_fire_pit
 			}

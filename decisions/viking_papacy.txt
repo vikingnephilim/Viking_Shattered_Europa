@@ -7,13 +7,39 @@ country_decisions = {
 			}
 		}
 		allow = {
-			curia_treasury_size = 500
+			OR = {
+				AND = {
+					invested_papal_influence = 50
+					papal_influence = 50
+				}
+				AND = {
+					tag = PAP
+					treasury = 200
+				}
+			}
 		}
 		effect = {
-			add_curia_treasury = -500
-			add_country_modifier = {
-				name = viking_delegate_nunzio_apostolico_modifier
-				duration = 10950
+			IF = {
+				LIMIT = {
+					NOT = {
+						tag = PAP
+					}
+				}
+				add_papal_influence = -50
+				add_country_modifier = {
+					name = viking_delegate_nunzio_apostolico_modifier
+					duration = 10950
+				}
+			}
+			ELSE_IF = {
+				LIMIT = {
+						tag = PAP
+				}
+				add_treasury = -200
+				add_country_modifier = {
+					name = viking_delegate_nunzio_apostolico_modifier
+					duration = 10950
+				}
 			}
 		}
 	}
@@ -25,17 +51,48 @@ country_decisions = {
 			}
 		}
 		allow = {
-			curia_treasury_size = 1500
+			OR = {
+				AND = {
+					invested_papal_influence = 50
+					papal_influence = 50
+				}
+				AND = {
+					tag = PAP
+					treasury = 200
+				}
+			}
 		}
 		effect = {
-			add_curia_treasury = -1500
-			every_country = {
-				limit = {
-					religion = catholic
+			IF = {
+				LIMIT = {
+					NOT = {
+						tag = PAP
+					}
 				}
-				add_country_modifier = {
-					name = viking_support_fighting_heresy_modifier
-					duration = 7300
+				add_papal_influence = -50
+				every_country = {
+					limit = {
+						religion = catholic
+					}
+					add_country_modifier = {
+						name = viking_support_fighting_heresy_modifier
+						duration = 7300
+					}
+				}
+			}
+			ELSE_IF = {
+				LIMIT = {
+						tag = PAP
+				}
+				add_treasury = -200
+				every_country = {
+					limit = {
+						religion = catholic
+					}
+					add_country_modifier = {
+						name = viking_support_fighting_heresy_modifier
+						duration = 7300
+					}
 				}
 			}
 		}
@@ -54,18 +111,50 @@ country_decisions = {
 			}
 		}
 		allow = {
-			curia_treasury_size = 1000
+			OR = {
+				AND = {
+					invested_papal_influence = 50
+					papal_influence = 50
+				}
+				AND = {
+					tag = PAP
+					treasury = 200
+				}
+			}
 		}
 		effect = {
-			add_curia_treasury = -1000
-			every_country = {
-				limit = {
-					religion = catholic
-					num_of_colonists = 1
+			IF = {
+				LIMIT = {
+					NOT = {
+						tag = PAP
+					}
 				}
-				add_country_modifier = {
-					name = viking_intensified_new_world_missions_modifier
-					duration = 7300
+				add_papal_influence = -50
+				every_country = {
+					limit = {
+						religion = catholic
+						num_of_colonists = 1
+					}
+					add_country_modifier = {
+						name = viking_intensified_new_world_missions_modifier
+						duration = 7300
+					}
+				}
+			}
+			ELSE_IF = {
+				LIMIT = {
+						tag = PAP
+				}
+				add_treasury = -200
+				every_country = {
+					limit = {
+						religion = catholic
+						num_of_colonists = 1
+					}
+					add_country_modifier = {
+						name = viking_intensified_new_world_missions_modifier
+						duration = 7300
+					}
 				}
 			}
 		}
@@ -78,13 +167,39 @@ country_decisions = {
 			}
 		}
 		allow = {
-			curia_treasury_size = 1000
+			OR = {
+				AND = {
+					invested_papal_influence = 50
+					papal_influence = 50
+				}
+				AND = {
+					tag = PAP
+					treasury = 200
+				}
+			}
 		}
 		effect = {
-			add_curia_treasury = -1000
-			add_country_modifier = {
-				name = viking_exactionem_in_overlord_fides_modifier
-				duration = 7300
+			IF = {
+				LIMIT = {
+					NOT = {
+						tag = PAP
+					}
+				}
+				add_papal_influence = -50
+				add_country_modifier = {
+					name = viking_exactionem_in_overlord_fides_modifier
+					duration = 7300
+				}
+			}
+			ELSE_IF = {
+				LIMIT = {
+						tag = PAP
+				}
+				add_treasury = -200
+				add_country_modifier = {
+					name = viking_exactionem_in_overlord_fides_modifier
+					duration = 7300
+				}
 			}
 		}
 	}
@@ -98,13 +213,38 @@ country_decisions = {
 			}
 		}
 		allow = {
-			curia_treasury_size = 500
+			OR = {
+				AND = {
+					invested_papal_influence = 50
+					papal_influence = 50
+				}
+				AND = {
+					tag = PAP
+					treasury = 200
+				}
+			}
 		}
 		effect = {
-			capital_scope = {
-				add_building = cathedral
+			IF = {
+				LIMIT = {
+					NOT = {
+						tag = PAP
+					}
+				}
+				add_papal_influence = -50
+				capital_scope = {
+					add_building = cathedral
+				}
 			}
-			add_curia_treasury = -500
+			ELSE_IF = {
+				LIMIT = {
+						tag = PAP
+				}
+				add_treasury = -200
+				capital_scope = {
+					add_building = cathedral
+				}
+			}
 		}
 	}
 	viking_get_acces_to_the_vatican_library = {
@@ -116,20 +256,47 @@ country_decisions = {
 			}
 		}
 		allow = {
-			treasury = 3000
-			NOT = {
-				num_of_loans = 5
+			OR = {
+				AND = {
+					invested_papal_influence = 50
+					papal_influence = 50
+				}
+				AND = {
+					tag = PAP
+					treasury = 200
+				}
 			}
 		}
 		effect = {
-			hidden_effect = {
-				set_ruler_flag = viking_acces_to_vatican_library
+			IF = {
+				LIMIT = {
+					NOT = {
+						tag = PAP
+					}
+				}
+				add_papal_influence = -50
+				hidden_effect = {
+					set_ruler_flag = viking_acces_to_vatican_library
+				}
+				add_treasury = -3000
+				add_curia_treasury = 3000
+				change_adm = 1
+				change_dip = 1
+				change_mil = 1
 			}
-			add_treasury = -3000
-			add_curia_treasury = 3000
-			change_adm = 1
-			change_dip = 1
-			change_mil = 1
+			ELSE_IF = {
+				LIMIT = {
+						tag = PAP
+				}
+				hidden_effect = {
+					set_ruler_flag = viking_acces_to_vatican_library
+				}
+				add_treasury = -3200
+				add_curia_treasury = 3200
+				change_adm = 1
+				change_dip = 1
+				change_mil = 1
+			}
 		}
 	}
 	viking_root_inquisition = {
@@ -147,16 +314,45 @@ country_decisions = {
 			}
 		}
 		allow = {
-			curia_treasury_size = 1500
+			OR = {
+				AND = {
+					invested_papal_influence = 50
+					papal_influence = 50
+				}
+				AND = {
+					tag = PAP
+					treasury = 200
+				}
+			}
 		}
 		effect = {
-			hidden_effect = {
-				set_country_flag = viking_root_inquisition_done
+			IF = {
+				LIMIT = {
+					NOT = {
+						tag = PAP
+					}
+				}
+				hidden_effect = {
+					set_country_flag = viking_root_inquisition_done
+				}
+				add_papal_influence = -50
+				add_country_modifier = {
+					duration = 7300
+					name = viking_root_inquisition_modifier
+				}
 			}
-			add_curia_treasury = -1500
-			add_country_modifier = {
-				duration = 7300
-				name = viking_root_inquisition_modifier
+			ELSE_IF = {
+				LIMIT = {
+						tag = PAP
+				}
+				add_treasury = -200
+				hidden_effect = {
+					set_country_flag = viking_root_inquisition_done
+				}
+				add_country_modifier = {
+					duration = 7300
+					name = viking_root_inquisition_modifier
+				}
 			}
 		}
 	}
@@ -169,21 +365,56 @@ country_decisions = {
 			}
 		}
 		allow = {
-			curia_treasury_size = 2500
+			OR = {
+				AND = {
+					invested_papal_influence = 50
+					papal_influence = 50
+				}
+				AND = {
+					tag = PAP
+					treasury = 200
+				}
+			}
 		}
 		effect = {
-			add_curia_treasury = -2500
-			add_country_modifier = {
-				duration = 7300
-				name = viking_use_curias_treasury_to_fund_new_building_modifier
-			}
-			every_country = {
-				limit = {
-					religion = catholic
+			IF = {
+				LIMIT = {
+					NOT = {
+						tag = PAP
+					}
 				}
-				add_opinion = {
-					who = ROOT
-					modifier = viking_using_curias_treasury_for_self_benefit
+				add_papal_influence = -50
+				add_country_modifier = {
+					duration = 7300
+					name = viking_use_curias_treasury_to_fund_new_building_modifier
+				}
+				every_country = {
+					limit = {
+						religion = catholic
+					}
+					add_opinion = {
+						who = ROOT
+						modifier = viking_using_curias_treasury_for_self_benefit
+					}
+				}
+			}
+			ELSE_IF = {
+				LIMIT = {
+						tag = PAP
+				}
+				add_treasury = -200
+				add_country_modifier = {
+					duration = 7300
+					name = viking_use_curias_treasury_to_fund_new_building_modifier
+				}
+				every_country = {
+					limit = {
+						religion = catholic
+					}
+					add_opinion = {
+						who = ROOT
+						modifier = viking_using_curias_treasury_for_self_benefit
+					}
 				}
 			}
 		}

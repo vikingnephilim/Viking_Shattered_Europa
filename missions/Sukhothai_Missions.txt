@@ -13,7 +13,7 @@ suk_1 = {
 		provinces_to_highlight = {
 			province_id = 601
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_core = ROOT }
 			}
 		}
@@ -53,13 +53,13 @@ suk_1 = {
 		required_missions = { suk_restore_sukhothai }
 		provinces_to_highlight = {
 			area = central_thai_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			NOT = { exists = AYU }
 			central_thai_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -92,12 +92,12 @@ suk_1 = {
 		required_missions = { suk_absorb_ayu }
 		provinces_to_highlight = {
 			area = northern_thai_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			northern_thai_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

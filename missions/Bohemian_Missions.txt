@@ -59,14 +59,14 @@ boh_hussite_group = {
 		
 		provinces_to_highlight = {
 			area = silesia_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			NOT = { has_country_modifier = boh_hussite_revolt }
 			silesia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			is_subject = no
 		}
@@ -89,13 +89,13 @@ boh_hussite_group = {
 		
 		provinces_to_highlight = {
 			area = wielkopolska_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			wielkopolska_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			is_subject = no
 		}
@@ -128,21 +128,21 @@ boh_hussite_group = {
 				province_id = 2995
 				province_id = 43
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			2963 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2997 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2995 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			43 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -184,7 +184,7 @@ boh_development_group = {
 			if = {
 				limit = {
 					263 = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				263 = {
@@ -196,7 +196,7 @@ boh_development_group = {
 			if = {
 				limit = {
 					4237 = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				4237 = {

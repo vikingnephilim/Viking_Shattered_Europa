@@ -86,7 +86,7 @@ ABB_ideas = {
 		state_maintenance_modifier = -0.33
 	}
 	ABB_aksumite_coinage = {
-		inflation_reduction = -1
+		inflation_reduction = 1
 		inflation_action_cost = -0.1
 	}
 	ABB_cultural_crossroads = {
@@ -2069,28 +2069,25 @@ ARW_ideas = {
 		stability_cost_modifier = -0.1
 		land_forcelimit_modifier = 0.2
 	}
-	
 	bonus = {
 		land_maintenance_modifier = -0.05
 	}
-	
 	trigger = {
 		tag = ARW
 	}
 	free = yes
-	
 	guajiro_warrior_culture = {
-		infantry_cost = -0.10
+		infantry_cost = -0.1
 	}
 	guajiro_land_cultivation = {
-		production_efficiency = 0.1	
+		production_efficiency = 0.1
 	}
 	orinoco_trade = {
 		global_trade_power = 0.1
 	}
 	tribal_tolerance = {
 		num_accepted_cultures = 1
-		tolerance_heretic = 1		
+		tolerance_heretic = 1
 	}
 	guajiro_raiders = {
 		infantry_power = 0.1
@@ -4864,7 +4861,7 @@ BSC_ideas = {
 BSG_ideas = {
 	start = {
 		global_missionary_strength = 0.02
-		global_supply_limit_modifier = -0.3
+		global_supply_limit_modifier = 0.3
 	}
 	bonus = {
 		global_prosperity_growth = 0.15
@@ -6205,34 +6202,33 @@ CHC_ideas = {
 
 CHD_ideas = {
 	start = {
-		hostile_attrition = 1.0
-		prestige = 1.0
+		hostile_attrition = 1
+		prestige = 1
 	}
-	
 	bonus = {
-		global_trade_goods_size_modifier = 0.10
+		global_trade_goods_size_modifier = 0.1
 	}
-	
 	trigger = {
 		tag = CHD
 	}
 	free = yes
-	
 	tribes_of_chandrapur = {
-		manpower_recovery_speed = 0.10
+		manpower_recovery_speed = 0.1
 	}
 	memories_of_great_empires = {
 		legitimacy = 1
 	}
-	gondi_knowledge_sharing = { #Same for Gondi Kingdoms
-		idea_cost = -0.10
+	gondi_knowledge_sharing = {
+		#Same for Gondi Kingdoms
+		idea_cost = -0.1
 	}
-	gondi_hinduism = { #Same for Gondi Kingdoms
-		religious_unity = 0.20
+	gondi_hinduism = {
+		#Same for Gondi Kingdoms
+		religious_unity = 0.2
 		tolerance_heathen = 2
 	}
 	natural_terrain_knowledge = {
-		defensiveness = 0.20
+		defensiveness = 0.2
 	}
 	chiefs_into_kings_into_emperors = {
 		army_tradition = 0.5
@@ -17334,7 +17330,7 @@ KSJ_ideas = {
 		development_cost = -0.1
 	}
 	KSJ_jungle_movement = {
-		movement_speed = -0.2
+		movement_speed = 0.2
 	}
 }
 
@@ -18222,10 +18218,7 @@ LIC_ideas = {
 		global_manpower_modifier = 0.25
 	}
 	trigger = {
-		OR = {
-			culture_group = east_asian			#Chinese
-			tag = CGS			#Changsheng
-		}
+		tag = LIC
 	}
 	free = yes
 	keju_examination = {
@@ -27012,7 +27005,7 @@ PRS_ideas = {
 	}
 	free = yes
 	french_men_of_trade = {
-		global_own_trade_power = 0.10
+		global_own_trade_power = 0.1
 	}
 	french_renaissance_palaces = {
 		prestige_decay = -0.01
@@ -28394,31 +28387,33 @@ RTT_ideas = {
 		free_leader_pool = 1
 	}
 	bonus = {
-		development_cost = -0.10
+		development_cost = -0.1
 	}
 	trigger = {
 		tag = RTT
 	}
 	free = yes
 	building_up_ratnapura = {
-		build_cost = -0.20
+		build_cost = -0.2
 	}
 	feudatory_mandala_traditions = {
 		diplomatic_reputation = 1
 		diplomatic_upkeep = 1
 	}
-	gondi_knowledge_sharing = { #Same for Gondi Kingdoms
-		idea_cost = -0.10
+	gondi_knowledge_sharing = {
+		#Same for Gondi Kingdoms
+		idea_cost = -0.1
 	}
-	gondi_hinduism = { #Same for Gondi Kingdoms
-		religious_unity = 0.20
+	gondi_hinduism = {
+		#Same for Gondi Kingdoms
+		religious_unity = 0.2
 		tolerance_heathen = 2
 	}
 	defend_the_land_of_ratnapura = {
 		defensiveness = 0.15
 	}
 	ratnapura_coinage_reform = {
-		inflation_reduction = 0.10
+		inflation_reduction = 0.1
 	}
 	finances_of_the_court_in_ratnapura = {
 		interest = -0.5

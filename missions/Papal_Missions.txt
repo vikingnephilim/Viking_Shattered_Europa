@@ -16,7 +16,7 @@ papal_missions_slot = {
 		provinces_to_highlight = {
 			province_id = 2977
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -44,13 +44,13 @@ papal_missions_slot = {
 		provinces_to_highlight = {
 			area = emilia_romagna_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			emilia_romagna_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

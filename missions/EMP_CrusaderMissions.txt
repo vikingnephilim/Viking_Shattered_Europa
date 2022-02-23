@@ -20,7 +20,7 @@ EMP_crusader_1 = {
 		position = 2
 		provinces_to_highlight = {
 			province_id = 2313
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			owns = 2313
@@ -147,7 +147,7 @@ EMP_crusader_2 = {
 		position = 2
 		provinces_to_highlight = {
 			province_id = 379
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			owns = 379
@@ -177,20 +177,20 @@ EMP_crusader_2 = {
 				area = syrian_desert_area
 				area = trans_jordan_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			syria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			syrian_desert_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			trans_jordan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -248,13 +248,13 @@ EMP_crusader_2 = {
 				AND = {
 					region = egypt_region
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				AND = {
 					province_id = 358
 					OR = {
-						NOT = { owned_by = ROOT }
+						NOT = { country_or_subject_holds = ROOT }
 						NOT = { is_core = ROOT }
 					}
 				}
@@ -379,7 +379,7 @@ EMP_crusader_3 = {
 				area = morea_area
 				area = aegean_archipelago_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			custom_trigger_tooltip = {
@@ -436,13 +436,13 @@ EMP_crusader_3 = {
 			}
 			OR = {
 				AND = {
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 					NOT = { province_id = 151 }
 				}
 				AND = {
 					province_id = 151
 					OR = {
-						NOT = { owned_by = ROOT }
+						NOT = { country_or_subject_holds = ROOT }
 						NOT = { is_core = ROOT }
 					}
 				}
@@ -452,19 +452,19 @@ EMP_crusader_3 = {
 			owns_core_province = 151
 			northern_greece_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			macedonia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			thrace_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			hudavendigar_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -541,7 +541,7 @@ EMP_crusader_4 = {
 		required_missions = { }
 		provinces_to_highlight = {
 			province_id = 126
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			is_subject = no
@@ -555,7 +555,7 @@ EMP_crusader_4 = {
 					}
 				}
 				OR = {
-					126 = { country_or_non_sovereign_subject_holds = ROOT }
+					126 = { country_or_subject_holds = ROOT }
 					126 = {
 						owner = {
 							alliance_with = ROOT
@@ -572,7 +572,7 @@ EMP_crusader_4 = {
 					NOT = { has_global_flag = knights_malta_event_flag }
 				}
 				OR = {
-					126 = { country_or_non_sovereign_subject_holds = ROOT }
+					126 = { country_or_subject_holds = ROOT }
 					126 = {
 						owner = {
 							overlord = {
@@ -587,14 +587,14 @@ EMP_crusader_4 = {
 				}
 			}
 			else = {
-				126 = { country_or_non_sovereign_subject_holds = ROOT }
+				126 = { country_or_subject_holds = ROOT }
 			}
 		}
 		effect = {
 			if = {
 				limit = {
 					NOT = {
-						126 = { country_or_non_sovereign_subject_holds = ROOT }
+						126 = { country_or_subject_holds = ROOT }
 					}
 					126 = {
 						owner = { is_subject = no }
@@ -611,7 +611,7 @@ EMP_crusader_4 = {
 			else_if = {
 				limit = {
 					NOT = {
-						126 = { country_or_non_sovereign_subject_holds = ROOT }
+						126 = { country_or_subject_holds = ROOT }
 					}
 					126 = {
 						owner = { is_subject = yes }
@@ -659,7 +659,7 @@ EMP_crusader_4 = {
 				if = {
 					limit = {
 						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 					add_permanent_claim = ROOT
@@ -669,7 +669,7 @@ EMP_crusader_4 = {
 				if = {
 					limit = {
 						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 					add_permanent_claim = ROOT
@@ -679,7 +679,7 @@ EMP_crusader_4 = {
 				if = {
 					limit = {
 						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 					add_permanent_claim = ROOT
@@ -689,7 +689,7 @@ EMP_crusader_4 = {
 				if = {
 					limit = {
 						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 					add_permanent_claim = ROOT
@@ -707,14 +707,14 @@ EMP_crusader_4 = {
 				province_id = 2954
 				province_id = 341
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			OR = {
-				2453 = { country_or_non_sovereign_subject_holds = ROOT }
-				354 = { country_or_non_sovereign_subject_holds = ROOT }
-				2954 = { country_or_non_sovereign_subject_holds = ROOT }
-				341 = { country_or_non_sovereign_subject_holds = ROOT }
+				2453 = { country_or_subject_holds = ROOT }
+				354 = { country_or_subject_holds = ROOT }
+				2954 = { country_or_subject_holds = ROOT }
+				341 = { country_or_subject_holds = ROOT }
 			}
 		}
 		effect = {
@@ -761,7 +761,7 @@ EMP_crusader_4 = {
 		provinces_to_highlight = {
 			region = maghreb_region
 			has_port = yes
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			custom_trigger_tooltip = {
@@ -809,7 +809,7 @@ EMP_crusader_5 = {
 				continent = south_america
 				continent = new_world
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 			is_sea = no
 		}
@@ -820,16 +820,16 @@ EMP_crusader_5 = {
 				}
 				OR = {
 					north_america = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					south_america = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
 			else = {
 				new_world = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -870,13 +870,13 @@ EMP_crusader_5 = {
 				}
 				any_province = {
 					has_province_modifier = sce_life_water
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			else = {
 				amazon_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}

@@ -17,12 +17,12 @@ pueblo_1 = {
 		required_missions = {  }
 		provinces_to_highlight = {
 			province_id = 875
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {	
 			875 = {
-				owned_by = ROOT 
+				country_or_subject_holds = ROOT 
 				is_core = ROOT
 				has_great_project = {
 					type = mesa_verde
@@ -42,7 +42,7 @@ pueblo_1 = {
 							is_core = ROOT
 						}
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 					add_permanent_claim = ROOT
@@ -58,7 +58,7 @@ pueblo_1 = {
 							is_core = ROOT
 						}
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 					add_permanent_claim = ROOT
@@ -74,7 +74,7 @@ pueblo_1 = {
 							is_core = ROOT
 						}
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 					add_permanent_claim = ROOT
@@ -97,7 +97,7 @@ pueblo_1 = {
 				province_id = 4631
 				province_id = 2495
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {	
@@ -106,15 +106,15 @@ pueblo_1 = {
 				OR = {
 					AND = {
 						880 = {
-							owned_by = ROOT 
+							country_or_subject_holds = ROOT 
 							is_core = ROOT
 						}
 						4631 = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							is_core = ROOT
 						}
 						2495 = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							is_core = ROOT
 						}
 					}
@@ -143,7 +143,7 @@ pueblo_1 = {
 		trigger = {	
 			2495 = { 
 				NOT = { local_autonomy = 10 }
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 				development = 20
 			}
@@ -166,7 +166,7 @@ pueblo_1 = {
 							is_core = ROOT
 						}
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 					add_permanent_claim = ROOT
@@ -182,7 +182,7 @@ pueblo_1 = {
 							is_core = ROOT
 						}
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 					add_permanent_claim = ROOT
@@ -228,21 +228,21 @@ pueblo_2 = {
 					government = native
 				}
 				2493 = {
-					owned_by = ROOT 
+					country_or_subject_holds = ROOT 
 					has_building = native_great_trail
 				}
 				2494 = {
-					owned_by = ROOT 
+					country_or_subject_holds = ROOT 
 					has_building = native_great_trail
 				}
 				2495 = {
-					owned_by = ROOT 
+					country_or_subject_holds = ROOT 
 					has_building = native_great_trail
 				}
 			}
 			else = {
 				2493 = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					OR = {
 						has_building = marketplace
 						has_building = trade_depot
@@ -250,7 +250,7 @@ pueblo_2 = {
 					}
 				}
 				2494 = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					OR = {
 						has_building = marketplace
 						has_building = trade_depot
@@ -258,7 +258,7 @@ pueblo_2 = {
 					}
 				}
 				2495 = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					OR = {
 						has_building = marketplace
 						has_building = trade_depot
@@ -281,7 +281,7 @@ pueblo_2 = {
 		position = 2
 		required_missions = { pue_chaco_roads }
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			NOT = { has_building = native_irrigation }
 			NOT = { has_building = workshop }
 			NOT = { has_building = counting_house }
@@ -334,7 +334,7 @@ pueblo_2 = {
 		
 		trigger = {	
 			875 = {
-				owned_by = ROOT 
+				country_or_subject_holds = ROOT 
 				is_core = ROOT
 				has_great_project = {
 					type = mesa_verde 
@@ -369,34 +369,34 @@ pueblo_2 = {
 				province_id = 2494
 				province_id = 2495
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			OR = {
 				AND = {
 					875 = {
-						owned_by = ROOT 
+						country_or_subject_holds = ROOT 
 						is_core = ROOT
 					}
 					880 = {
-						owned_by = ROOT 
+						country_or_subject_holds = ROOT 
 						is_core = ROOT
 					}
 					4631 = {
-						owned_by = ROOT 
+						country_or_subject_holds = ROOT 
 						is_core = ROOT
 					}
 					2495 = {
-						owned_by = ROOT 
+						country_or_subject_holds = ROOT 
 						is_core = ROOT
 					}
 					2493 = {
-						owned_by = ROOT 
+						country_or_subject_holds = ROOT 
 						is_core = ROOT
 					}
 					2494 = {
-						owned_by = ROOT 
+						country_or_subject_holds = ROOT 
 						is_core = ROOT
 					}
 				}

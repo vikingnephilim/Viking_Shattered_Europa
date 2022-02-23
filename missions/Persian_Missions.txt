@@ -38,7 +38,7 @@ mug_sufis = {
 				province_id = 563				#Gaur & Pandua
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -129,7 +129,7 @@ mug_rajput_branch = {
 				AND = {
 					province_id = 518
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -138,7 +138,7 @@ mug_rajput_branch = {
 				AND = {
 					province_id = 2087
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -146,7 +146,7 @@ mug_rajput_branch = {
 				}
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -157,23 +157,23 @@ mug_rajput_branch = {
 			}
 			marwar_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			jangladesh_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			jaipur_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			bundelkhand_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			baghelkhand_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -266,7 +266,7 @@ mug_rajput_branch = {
 				}
 			}
 			524 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				has_building = cathedral
 				OR = {
 					is_capital = yes
@@ -382,25 +382,25 @@ mug_hyderabad_branch = {
 				area = mysore_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			maidan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			rayalaseema_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			mysore_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			raichur_doab_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -426,7 +426,7 @@ mug_hyderabad_branch = {
 			}
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					is_core = ROOT

@@ -21,7 +21,7 @@ sco_rb_adm_missions = {
 				province_id = 4364
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -107,7 +107,7 @@ sco_rb_adm_missions = {
 		provinces_to_highlight = {
 			province_id = 249
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -233,13 +233,13 @@ sco_rb_conquest_missions = {
 		provinces_to_highlight = {
 			area = scottish_marches_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			scottish_marches_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -253,7 +253,7 @@ sco_rb_conquest_missions = {
 				add_prestige = 10
 			}
 			scottish_marches_area  = {
-				limit = { owned_by = ROOT }
+				limit = { country_or_subject_holds = ROOT }
 				add_province_modifier = {
 					name = faster_integration
 					duration = 7300
@@ -292,21 +292,21 @@ sco_rb_conquest_missions = {
 				area = west_midlands_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			yorkshire_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			east_midlands_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			west_midlands_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -335,17 +335,17 @@ sco_rb_conquest_missions = {
 				area = home_counties_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			east_anglia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			home_counties_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -372,13 +372,13 @@ sco_rb_conquest_missions = {
 		provinces_to_highlight = {
 			region = british_isles_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			british_isles_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -412,13 +412,13 @@ sco_rb_conquest_missions_2 = {
 		provinces_to_highlight = {
 			area = ulster_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			ulster_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -457,21 +457,21 @@ sco_rb_conquest_missions_2 = {
 				area = leinster_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			munster_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			connacht_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			leinster_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -505,7 +505,7 @@ sco_rb_colonial = {
 		provinces_to_highlight = {
 			province_id = 1975
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -532,7 +532,7 @@ sco_rb_colonial = {
 		provinces_to_highlight = {
 			area = panama_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
@@ -576,20 +576,20 @@ sco_rb_colonial_2 = {
 				province_id = 1978
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			highlands_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			kingdom_of_the_isles_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1978 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -617,13 +617,13 @@ sco_rb_colonial_2 = {
 		provinces_to_highlight = {
 			area = subarctic_islands_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			subarctic_islands_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -642,7 +642,7 @@ sco_rb_colonial_2 = {
 		provinces_to_highlight = {
 			colonial_region = colonial_canada
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}

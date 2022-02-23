@@ -46,7 +46,7 @@ gc_morocco_2 = {
 		provinces_to_highlight = {
 			province_id = 227
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			NOT = {
 				controlled_by = ROOT
@@ -58,7 +58,7 @@ gc_morocco_2 = {
 					controlled_by = ROOT
 				}
 				227 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -118,33 +118,33 @@ gc_morocco_2 = {
 				area = kanem_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			azbin_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			zazzau_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			katsina_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			hausa_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			bornu_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			kanem_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -254,25 +254,25 @@ gc_morocco_3 = {
 				area = tafilalt_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			algiers_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			barbary_coast_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			hautes_plaines_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			tafilalt_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -401,7 +401,7 @@ gc_morocco_3 = {
 				province_id = 371
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -457,7 +457,7 @@ gc_morocco_3 = {
 				area = subarctic_islands_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -469,11 +469,11 @@ gc_morocco_3 = {
 			}
 			kingdom_of_the_isles_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			subarctic_islands_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -509,12 +509,12 @@ gc_morocco_4 = {
 		provinces_to_highlight = {
 			province_id = 1751
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			1751 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -556,13 +556,13 @@ gc_morocco_4 = {
 		provinces_to_highlight = {
 			area = upper_andalucia_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			upper_andalucia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -581,7 +581,7 @@ gc_morocco_4 = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							is_core = ROOT
@@ -594,7 +594,7 @@ gc_morocco_4 = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							is_core = ROOT
@@ -607,7 +607,7 @@ gc_morocco_4 = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							is_core = ROOT
@@ -632,25 +632,25 @@ gc_morocco_4 = {
 				area = tripolitania_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			kabylia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			tunisia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			djerba_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			tripolitania_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -689,16 +689,16 @@ gc_morocco_5 = {
 				province_id = 4565
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			num_of_explorers = 1
 			366 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4565 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -719,7 +719,7 @@ gc_morocco_5 = {
 			OR = {
 				is_city = no
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			has_discovered = ROOT
@@ -764,7 +764,7 @@ gc_morocco_5 = {
 			OR = {
 				is_city = no
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			has_discovered = ROOT
@@ -835,22 +835,22 @@ gc_morocco_5 = {
 				province_id = 218
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			lower_andalucia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			221 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4547 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			218 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

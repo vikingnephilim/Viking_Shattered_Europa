@@ -12,13 +12,13 @@ mnd_bei_1 = {
 		required_missions = { }
 		provinces_to_highlight = {
 			area = kalimantan_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			calc_true_if  = {
 				amount = 4
 				all_province = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					area = kalimantan_area
 				}
 			}
@@ -30,7 +30,7 @@ mnd_bei_1 = {
 					OR = {
 						is_empty = yes
 						AND = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							is_colony = yes
 						}
 					}
@@ -58,28 +58,28 @@ mnd_bei_1 = {
 				area = brunei_area
 				area = kutai_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			kalimantan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			banjar_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			sabah_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			brunei_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			kutai_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -158,13 +158,13 @@ mnd_bei_1 = {
 				area = mindanao_area
 				area = west_mindanao_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			calc_true_if  = {
 				amount = 3
 				all_province = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					OR = {
 						area = mindanao_area
 						area = west_mindanao_area
@@ -198,7 +198,7 @@ mnd_bei_1 = {
 					OR = {
 						is_empty = yes
 						AND = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							is_colony = yes
 						}
 					}
@@ -226,14 +226,14 @@ mnd_bei_1 = {
 				area = visayas_area
 				area = palawan_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		position = 6
 		trigger = {
 			calc_true_if  = {
 				amount = 13
 				all_province = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					OR = {
 						area = mindanao_area
 						area = west_mindanao_area
@@ -252,7 +252,7 @@ mnd_bei_1 = {
 					OR = {
 						is_empty = yes
 						AND = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							is_colony = yes
 						}
 					}
@@ -287,13 +287,13 @@ mnd_bei_2 = {
 				area = sabah_area
 				area = kutai_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			calc_true_if  = {
 				amount = 5
 				all_province = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					OR = {
 						area = sabah_area
 						area = kutai_area
@@ -438,13 +438,13 @@ mnd_bei_2 = {
 				area = luzon_area
 				area = southern_luzon_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			calc_true_if  = {
 				amount = 5
 				all_province = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					OR = {
 						area = luzon_area
 						area = southern_luzon_area
@@ -475,7 +475,7 @@ mnd_bei_2 = {
 					OR = {
 						is_empty = yes
 						AND = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							is_colony = yes
 						}
 					}

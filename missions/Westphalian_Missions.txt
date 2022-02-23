@@ -36,7 +36,7 @@ westfalian_group_1 = {
 					area_for_scope_province = {
 						is_capital_of = ROOT
 					}
-					NOT = { owned_by = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 				AND = {
 					is_capital_of = ROOT
@@ -60,7 +60,7 @@ westfalian_group_1 = {
 			capital_scope = {
 				area_for_scope_province = {
 					type = all
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -105,12 +105,12 @@ westfalian_group_1 = {
 
 		provinces_to_highlight = {
 			province_id = 82
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			82 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_state_core = ROOT
 			}
 			num_of_owned_provinces_with = {
@@ -171,29 +171,29 @@ westfalian_group_1 = {
 				area = lower_rhineland_area
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_core = ROOT }
 			}
 		}
 		
 		trigger = {
 			westphalia_area = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			north_westphalia_area = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			hesse_area = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			palatinate_area = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			north_rhine_area = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			lower_rhineland_area = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -219,7 +219,7 @@ westfalian_group_1 = {
 			culture = lower_saxon
 			continent = europe
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_core = ROOT }
 			}
 		}
@@ -231,7 +231,7 @@ westfalian_group_1 = {
 					any_province = {
 						culture = lower_saxon
 						continent = europe
-						NOT = { country_or_non_sovereign_subject_holds = ROOT }
+						NOT = { country_or_subject_holds = ROOT }
 					}
 				}
 			}
@@ -468,7 +468,7 @@ westfalian_group_3 = {
 						province_id = 69
 					}
 					OR = {
-						NOT = { owned_by = ROOT }
+						NOT = { country_or_subject_holds = ROOT }
 						NOT = { is_core = ROOT }
 					}
 				}

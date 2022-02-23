@@ -90,7 +90,7 @@ emp_ven_slot_2 = {
 		
 		trigger = {
 			112 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				grown_by_development = 10
 			}
 		}
@@ -308,20 +308,20 @@ emp_ven_slot_3 = {
 				area = po_valley_area
 				area = emilia_romagna_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			lombardy_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			po_valley_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			emilia_romagna_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -342,12 +342,12 @@ emp_ven_slot_3 = {
 		
 		provinces_to_highlight = {
 			area = tirol_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			tirol_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -506,11 +506,11 @@ emp_ven_slot_4 = {
 		
 		provinces_to_highlight = {
 			province_id = 151
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			151 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -607,16 +607,16 @@ emp_ven_slot_5 = {
 				area = morea_area
 				area = aegean_archipelago_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 		morea_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			aegean_archipelago_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -657,12 +657,12 @@ emp_ven_slot_5 = {
 		provinces_to_highlight = {
 			province_id = 321
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			321 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -697,16 +697,16 @@ emp_ven_slot_5 = {
 				area = delta_area
 				area = aleppo_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			delta_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			aleppo_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -741,7 +741,7 @@ emp_ven_slot_5 = {
 				trade_company_region = trade_company_west_india
 			}
 			is_sea = no
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		trigger = {
@@ -749,15 +749,15 @@ emp_ven_slot_5 = {
 				tooltip = emp_ven_this_mythical_realm_tt
 				OR = {
 					trade_company_east_india = { 
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						is_city = yes
 					}
 					trade_company_coromandel = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						is_city = yes
 					}
 					trade_company_west_india = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						is_city = yes
 					}
 				}
@@ -779,7 +779,7 @@ emp_ven_slot_5 = {
 				superregion = east_indies_superregion
 			}
 			is_sea = no
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		trigger = {

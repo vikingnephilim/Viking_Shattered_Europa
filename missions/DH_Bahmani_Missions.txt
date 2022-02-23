@@ -76,11 +76,11 @@ bah_indigenization = {
 				influence = 15
 			}
 			544 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				has_building = workshop
 			}
 			569 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				has_building = workshop
 			}
 		}
@@ -128,7 +128,7 @@ bah_indigenization = {
 		}
 		provinces_to_highlight = {
 			is_capital = yes
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 		}
 		trigger = {
 			capital_scope = {
@@ -186,7 +186,7 @@ bah_gharbians = {
 				province_id = 2089
 				province_id = 4429
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			owns = 530
@@ -210,7 +210,7 @@ bah_gharbians = {
 		}
 		trigger = {
 			2089 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				has_building = marketplace
 				province_has_center_of_trade_of_level = 2
 			}
@@ -248,7 +248,7 @@ bah_gharbians = {
 		position = 4
 		provinces_to_highlight = {
 			is_capital = yes
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 		}
 		trigger = {
 			capital_scope = {
@@ -295,7 +295,7 @@ bah_gharbians = {
 			}
 			NOT = {
 				AND = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					NOT = { devastation = 1 }
 				}
 			}
@@ -318,31 +318,31 @@ bah_gharbians = {
 				
 			}
 			409 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = { devastation = 1 }
 			}
 			410 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = { devastation = 1 }
 			}
 			429 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = { devastation = 1 }
 			}
 			432 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = { devastation = 1 }
 			}
 			446 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = { devastation = 1 }
 			}
 			2218 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = { devastation = 1 }
 			}
 			2221 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = { devastation = 1 }
 			}
 
@@ -390,12 +390,12 @@ bah_persian_branch = {
 		required_missions = {  }
 		provinces_to_highlight = {
 			area = khandesh_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			khandesh_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -456,27 +456,27 @@ bah_persian_branch = {
 				area = saurashtra_area
 				province_id = 529
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			ahmedabad_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			patan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			tapti_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			saurashtra_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			529 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -500,7 +500,7 @@ bah_persian_branch = {
 				province_id = 504
 				province_id = 2999
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			owns = 400
@@ -549,15 +549,15 @@ bah_persian_branch = {
 		trigger = {
 			basra_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			khuzestan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			persian_gulf_coast = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -664,12 +664,12 @@ bah_vijayanagari_branch = {
 		required_missions = { city_of_victory }
 		provinces_to_highlight = {
 			area = rayalaseema_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			rayalaseema_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -715,7 +715,7 @@ bah_vijayanagari_branch = {
 				area = malabar_area
 				area = kanara_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			if = {
@@ -726,19 +726,19 @@ bah_vijayanagari_branch = {
 			}
 			mysore_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			kongu_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			malabar_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			kanara_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -781,16 +781,16 @@ bah_delhi_branch = {
 				area = malwa_area
 				area = gird_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			malwa_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			gird_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -811,7 +811,7 @@ bah_delhi_branch = {
 		trigger = {
 			522 = {
 				OR = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					AND = {
 						controlled_by = ROOT
 						owner = { NOT = { army_size = ROOT } }
@@ -867,14 +867,14 @@ bah_coromandel_branch = {
 		provinces_to_highlight = {
 			area = golconda_area
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				local_autonomy = 30
 			}
 		}
 		trigger = {
 			golconda_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = { local_autonomy = 30 }
 			}
 		}
@@ -894,12 +894,12 @@ bah_coromandel_branch = {
 		required_missions = { rein_in_the_velamas }
 		provinces_to_highlight = {
 			area = andhra_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			andhra_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -923,20 +923,20 @@ bah_coromandel_branch = {
 		trigger = {
 			542 = {
 				province_has_center_of_trade_of_level = 3
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			if = {
 				limit = {
 					NOT = {
 						andhra_area = {
 							type = all
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 				}
 				andhra_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -989,24 +989,24 @@ bah_coromandel_branch = {
 				area = tanjore_area
 				area = madura_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			north_carnatic_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			south_carnatic_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			tanjore_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			madura_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

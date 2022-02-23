@@ -181,31 +181,31 @@ mnd_dai_1 = {
 				AND = {
 					NOT = {
 						667 = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 					province_id = 667
 				}
 				AND = {
 					667 = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					region = south_china_region
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
 		}
 		trigger = {
 			667 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			calc_true_if = {
 				amount = 15
 				all_province = {
 					region = south_china_region
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -246,7 +246,7 @@ mnd_dai_1 = {
 					}
 					superregion = china_superregion
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
@@ -341,7 +341,7 @@ mnd_dai_2 = {
 				area = red_river_delta_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -354,11 +354,11 @@ mnd_dai_2 = {
 			stability = 2
 			vietnam_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			red_river_delta_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -537,7 +537,7 @@ mnd_dai_3 = {
 		}
 		provinces_to_highlight = {
 			is_capital = yes
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 		}
 		trigger = {
 			university = 10
@@ -665,11 +665,11 @@ mnd_dai_3 = {
 		trigger = {
 			2373 = {
 				development = 30
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			613 = {
 				development = 30
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -721,7 +721,7 @@ mnd_dai_4 = {
 			area = champa_area
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					culture = vietnamese
@@ -731,7 +731,7 @@ mnd_dai_4 = {
 		trigger = {
 			champa_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				culture = vietnamese
 			}
 		}
@@ -757,13 +757,13 @@ mnd_dai_4 = {
 		provinces_to_highlight = {
 			area = mekong_area
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			mekong_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -816,17 +816,17 @@ mnd_dai_4 = {
 				area = cambodia_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			angkor_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			cambodia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -861,12 +861,12 @@ mnd_dai_5 = {
 		provinces_to_highlight = {
 			province_id = 1844
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			1844 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -931,21 +931,21 @@ mnd_dai_5 = {
 				area = vientiane_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			north_laos_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			champasak_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			vientiane_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -984,13 +984,13 @@ mnd_dai_5 = {
 		provinces_to_highlight = {
 			area = northern_thai_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			northern_thai_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1043,17 +1043,17 @@ mnd_dai_5 = {
 				area = sukhothai_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			central_thai_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			sukhothai_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

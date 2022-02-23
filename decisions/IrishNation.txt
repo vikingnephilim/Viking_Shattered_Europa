@@ -73,6 +73,14 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = IRE
+			if = {
+				limit = {
+					NOT = {
+						government = monarchy
+					}
+				}
+				change_government_to_monarchy = yes
+			}
 			add_government_reform = irish_high_king
 			remove_non_electors_emperors_from_empire_effect = yes
 			swap_non_generic_missions = yes

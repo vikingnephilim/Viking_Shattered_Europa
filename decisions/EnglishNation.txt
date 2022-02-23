@@ -69,6 +69,14 @@ country_decisions = {
 			change_primary_culture = english
 			set_ruler_culture = english
 			set_heir_culture = english
+			if = {
+				limit = {
+					NOT = {
+						government = monarchy
+					}
+				}
+				change_government_to_monarchy = yes
+			}
 			add_government_reform = english_monarchy
 			set_country_flag = lancaster_estate
 			set_country_flag = plantagenet_estate

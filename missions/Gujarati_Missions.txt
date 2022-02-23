@@ -40,12 +40,12 @@ guj_conquest = {
 		
 		provinces_to_highlight = {
 			province_id = 2056
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			2056 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		

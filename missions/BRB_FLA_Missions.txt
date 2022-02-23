@@ -32,21 +32,21 @@ fla_reconquest_group = {
 				area = north_brabant_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			flanders_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			brabant_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			north_brabant_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -123,22 +123,22 @@ fla_reconquest_group = {
 				province_id = 87
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			wallonia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1743 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			88 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			87 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -182,17 +182,17 @@ fla_reconquest_group = {
 				area = frisia_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			holland_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			frisia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -244,7 +244,7 @@ fla_slot4_branch = {
 		}
 		position = 2
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			region = low_countries_region
 			NOT = {
 				development = 20
@@ -274,7 +274,7 @@ fla_slot4_branch = {
 		}
 		position = 3
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			region = low_countries_region
 			OR = {
 				has_trade_building_trigger = no
@@ -309,7 +309,7 @@ fla_slot4_branch = {
 		}
 		position = 4
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			region = low_countries_region
 			has_manufactory_trigger = no
 		}

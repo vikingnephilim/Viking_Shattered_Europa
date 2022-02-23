@@ -30,7 +30,7 @@ GRE_missions_1 = {
 		provinces_to_highlight = {
 			area = northern_greece_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			NOT = {
 				province_is_on_an_island = yes
@@ -41,7 +41,7 @@ GRE_missions_1 = {
 				type = all
 				OR = {
 					province_is_on_an_island = yes
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -58,7 +58,7 @@ GRE_missions_1 = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							is_core = ROOT
@@ -70,7 +70,7 @@ GRE_missions_1 = {
 			macedonia_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -92,15 +92,15 @@ GRE_missions_1 = {
 				province_id = 148
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			142 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			148 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -114,7 +114,7 @@ GRE_missions_1 = {
 			aegean_archipelago_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -126,7 +126,7 @@ GRE_missions_1 = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							is_core = ROOT
@@ -138,7 +138,7 @@ GRE_missions_1 = {
 			calabria_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -150,7 +150,7 @@ GRE_missions_1 = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							is_core = ROOT
@@ -172,7 +172,7 @@ GRE_missions_1 = {
 				AND = {
 					province_id = 164
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				AND = {
@@ -181,7 +181,7 @@ GRE_missions_1 = {
 						area = morea_area
 					}
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						province_is_on_an_island = yes
@@ -194,18 +194,18 @@ GRE_missions_1 = {
 				type = all
 				OR = {
 					province_is_on_an_island = yes
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			morea_area = {
 				type = all
 				OR = {
 					province_is_on_an_island = yes
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			164 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -217,7 +217,7 @@ GRE_missions_1 = {
 			thrace_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -236,12 +236,12 @@ GRE_missions_1 = {
 		provinces_to_highlight = {
 			province_id = 151
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			151 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -268,7 +268,7 @@ GRE_missions_1 = {
 			bulgaria_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -279,7 +279,7 @@ GRE_missions_1 = {
 			silistria_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -298,20 +298,20 @@ GRE_missions_1 = {
 		provinces_to_highlight = {
 			area = aegean_archipelago_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			aegean_archipelago_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
 			aydin_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -322,7 +322,7 @@ GRE_missions_1 = {
 			hudavendigar_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -345,21 +345,21 @@ GRE_missions_1 = {
 				area = aydin_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			aegean_archipelago_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			hudavendigar_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			aydin_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -386,14 +386,14 @@ GRE_missions_1 = {
 					fort_level = 3
 				}
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
 		trigger = {
 			164 = {
 				fort_level = 3
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -415,7 +415,7 @@ GRE_missions_1 = {
 			province_id = 164
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					development = 12
@@ -425,7 +425,7 @@ GRE_missions_1 = {
 		trigger = {
 			has_mil_advisor = yes
 			164 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				development = 12
 			}
 		}
@@ -451,7 +451,7 @@ GRE_missions_1 = {
 					has_manufactory_trigger = no
 				}
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					base_production = 6
@@ -461,7 +461,7 @@ GRE_missions_1 = {
 		trigger = {
 			3003 = {
 				has_manufactory_trigger = yes
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				base_production = 6
 			}
 		}
@@ -515,12 +515,12 @@ GRE_missions_2 = {
 		provinces_to_highlight = {
 			province_id = 164
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			164 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			mil_tech = 5
 			treasury = 30
@@ -544,19 +544,19 @@ GRE_missions_2 = {
 		provinces_to_highlight = {
 			province_id = 3003
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			3003 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
 			morea_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -578,23 +578,23 @@ GRE_missions_2 = {
 				province_id = 122
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			calabria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			122 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
 			apulia_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -605,7 +605,7 @@ GRE_missions_2 = {
 			sicily_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -616,7 +616,7 @@ GRE_missions_2 = {
 			western_sicily_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -627,7 +627,7 @@ GRE_missions_2 = {
 			naples_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -639,7 +639,7 @@ GRE_missions_2 = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							is_core = ROOT
@@ -663,20 +663,20 @@ GRE_missions_2 = {
 				province_id = 120
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			apulia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			naples_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			120 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -715,13 +715,13 @@ GRE_missions_2 = {
 		provinces_to_highlight = {
 			area = crimea_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			crimea_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -734,7 +734,7 @@ GRE_missions_2 = {
 			sicily_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -745,7 +745,7 @@ GRE_missions_2 = {
 			western_sicily_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -764,7 +764,7 @@ GRE_missions_2 = {
 			province_id = 201
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					is_core = ROOT
@@ -794,7 +794,7 @@ GRE_missions_2 = {
 			province_id = 226
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					is_core = ROOT
@@ -845,17 +845,17 @@ GRE_missions_2 = {
 				area = silistria_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			bulgaria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			silistria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -873,7 +873,7 @@ GRE_missions_2 = {
 		provinces_to_highlight = {
 			province_id = 118
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -928,13 +928,13 @@ GRE_missions_3 = {
 		provinces_to_highlight = {
 			area = morea_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			morea_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -945,7 +945,7 @@ GRE_missions_3 = {
 			aegean_archipelago_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1023,18 +1023,18 @@ GRE_missions_3 = {
 				province_id = 4750
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			143 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4175 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4750 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1059,17 +1059,17 @@ GRE_missions_3 = {
 				area = sicily_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			western_sicily_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			sicily_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1090,12 +1090,12 @@ GRE_missions_3 = {
 		provinces_to_highlight = {
 			province_id = 320
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			320 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1114,12 +1114,12 @@ GRE_missions_3 = {
 		provinces_to_highlight = {
 			province_id = 163
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			163 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1133,7 +1133,7 @@ GRE_missions_3 = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							is_core = ROOT
@@ -1146,7 +1146,7 @@ GRE_missions_3 = {
 				if = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							is_core = ROOT
@@ -1165,7 +1165,7 @@ GRE_missions_3 = {
 		provinces_to_highlight = {
 			province_id = 118
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -1224,27 +1224,27 @@ GRE_missions_3 = {
 				area = central_italy_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			tuscany_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			emilia_romagna_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			central_italy_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
 			tuscany_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "faster_integration"
@@ -1253,7 +1253,7 @@ GRE_missions_3 = {
 			}
 			central_italy_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "faster_integration"
@@ -1262,7 +1262,7 @@ GRE_missions_3 = {
 			}
 			emilia_romagna_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "faster_integration"
@@ -1329,25 +1329,25 @@ GRE_missions_3 = {
 				area = liguria_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			lombardy_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			po_valley_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			piedmont_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			liguria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1418,7 +1418,7 @@ GRE_missions_3 = {
 			}
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					culture = ROOT
@@ -1429,28 +1429,28 @@ GRE_missions_3 = {
 		trigger = {
 			146 = {
 				culture = ROOT
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					unrest = 0.01
 				}
 			}
 			148 = {
 				culture = ROOT
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					unrest = 0.01
 				}
 			}
 			151 = {
 				culture = ROOT
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					unrest = 0.01
 				}
 			}
 			321 = {
 				culture = ROOT
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					unrest = 0.01
 				}

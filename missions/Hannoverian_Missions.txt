@@ -51,7 +51,7 @@ hannoverian_group_1 = {
 				}
 			}
 			OR = {
-				NOT = { owned_by = root }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_core = root }
 			}
 		}
@@ -201,7 +201,7 @@ hannoverian_group_1 = {
 				area = south_saxony_area
 				area = thuringia_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 			NOT = {
 				root = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -288,17 +288,17 @@ hannoverian_group_1 = {
 				owned_by = BRA
 				owned_by = PRU
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			mittelmark_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_subject_holds = ROOT
 			}
 			neumark_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_subject_holds = ROOT
 			}
 			if = {
 				limit = {
@@ -577,7 +577,7 @@ hannoverian_group_3 = {
 				province_id = 45 #Lubeck
 			}
 			OR = {
-				NOT = { owned_by = root }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_core = root }
 			}
 		}
@@ -879,7 +879,7 @@ hannoverian_group_4 = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
@@ -919,7 +919,7 @@ hannoverian_group_4 = {
 				AND = {
 					region = north_german_region
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { country_or_subject_holds = ROOT }
 						unrest = 1
 					}
 					ROOT = {
@@ -935,7 +935,7 @@ hannoverian_group_4 = {
 				AND = {
 					region = british_isles_region
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { country_or_subject_holds = ROOT }
 						unrest = 1
 					}
 					ROOT = {

@@ -57,7 +57,7 @@ granada_development_missions = {
 		}
 		trigger = {
 			223 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				development = 20
 				has_building = temple
 			}
@@ -93,28 +93,28 @@ granada_development_missions = {
 		}
 		trigger = {
 			343 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				OR = {
 					has_building = temple
 					development = 15
 				}
 			}
 			344 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				OR = {
 					has_building = temple
 					development = 15
 				}
 			}
 			2467 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				OR = {
 					has_building = temple
 					development = 15
 				}
 			}
 			342 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				OR = {
 					has_building = temple
 					development = 15
@@ -166,7 +166,7 @@ granada_development_missions = {
 					1127 = {
 						is_empty = yes
 						any_neighbor_province = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 				}
@@ -195,21 +195,21 @@ granada_development_missions = {
 				province_id = 2247
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			1128 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1129 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1132 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2247 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -270,21 +270,21 @@ granada_development_missions = {
 				area = dendi_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			niger_bend_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			western_sahara_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			dendi_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -450,37 +450,37 @@ granada_development_missions = {
 				area = futa_jallon_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			jenne_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			massina_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			upper_volta_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			kong_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			manding_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			baghena_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			futa_jallon_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -533,21 +533,21 @@ granada_development_missions = {
 				area = benin_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			atacora_oueme_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			lower_niger_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			benin_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -572,7 +572,7 @@ granada_development_missions = {
 					}
 					OR = {
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							religion = ROOT
@@ -584,7 +584,7 @@ granada_development_missions = {
 		}
 		trigger = {
 			225 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				OR = {
 					development = 15
 					has_building = temple
@@ -592,12 +592,12 @@ granada_development_missions = {
 			}
 			lower_andalucia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 			upper_andalucia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 		}
@@ -637,7 +637,7 @@ granada_development_missions = {
 			if = {
 				limit = {
 					223 = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				223 = {
@@ -901,21 +901,21 @@ granada_slot_2_missions = {
 				area = valencia_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			221 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			4547 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			valencia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 		}
@@ -951,7 +951,7 @@ granada_slot_2_missions = {
 			area = lower_andalucia_area
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					religion_group = muslim
@@ -961,7 +961,7 @@ granada_slot_2_missions = {
 		trigger = {
 			lower_andalucia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				religion_group = muslim
 			}
 			tag = ADU
@@ -1008,7 +1008,7 @@ granada_slot_2_missions = {
 				limit = {
 					218 = {
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 				}
@@ -1020,7 +1020,7 @@ granada_slot_2_missions = {
 				limit = {
 					1747 = {
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 				}
@@ -1032,7 +1032,7 @@ granada_slot_2_missions = {
 				limit = {
 					216 = {
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 				}
@@ -1058,30 +1058,30 @@ granada_slot_2_missions = {
 				province_id = 216
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			toledo_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			castille_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			aragon_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			218 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1747 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			216 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1172,48 +1172,48 @@ granada_slot_2_missions = {
 				area = beieras_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			galicia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			asturias_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			leon_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			extremadura_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			basque_country = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			catalonia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			alentejo_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			beieras_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 		}
@@ -1258,18 +1258,18 @@ granada_slot_2_missions = {
 				area = provence_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			languedoc_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			provence_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 		}
@@ -1309,7 +1309,7 @@ granada_slot_2_missions = {
 				region = guinea_region
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -1321,13 +1321,13 @@ granada_slot_2_missions = {
 					}
 				}
 				guinea_region = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					is_owned_by_trade_company = yes
 				}
 			}
 			else = {
 				guinea_region = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -1377,7 +1377,7 @@ granada_slot_3_missions = {
 				}
 				OR = {
 					1751 = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						is_core = ROOT
 					}
 					AND = {
@@ -1392,7 +1392,7 @@ granada_slot_3_missions = {
 			}
 			else = {
 				1751 = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					is_core = ROOT
 				}
 			}
@@ -1444,13 +1444,13 @@ granada_slot_3_missions = {
 				area = lower_andalucia_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			lower_andalucia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1502,18 +1502,18 @@ granada_slot_3_missions = {
 				area = beieras_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			alentejo_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			beieras_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 		}
@@ -1581,7 +1581,7 @@ granada_slot_3_missions = {
 		provinces_to_highlight = {
 			colonial_region = colonial_the_carribean
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
@@ -1699,18 +1699,18 @@ granada_slot_4_missions = {
 				area = corsica_sardinia_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			corsica_sardinia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			baleares_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 		}
@@ -1759,18 +1759,18 @@ granada_slot_4_missions = {
 				area = western_sicily_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			western_sicily_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			sicily_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 		}
@@ -1835,28 +1835,28 @@ granada_slot_4_missions = {
 				area = western_morocco_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			northern_morocco_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			marrekesh_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			western_morocco_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
 			tafilalt_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1897,7 +1897,7 @@ granada_slot_4_missions = {
 		provinces_to_highlight = {
 			colonial_region = colonial_brazil
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
@@ -1928,28 +1928,28 @@ granada_slot_4_missions = {
 				area = mecca_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			gulf_of_arabia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			tabuk_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			medina_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			mecca_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 		}
@@ -1974,25 +1974,25 @@ granada_slot_4_missions = {
 				area = luristan_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			iraq_arabi_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			basra_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			khuzestan_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			luristan_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -2223,7 +2223,7 @@ granada_slot_5_missions = {
 				northern_morocco_area = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							is_core = ROOT
@@ -2234,7 +2234,7 @@ granada_slot_5_missions = {
 				marrekesh_area = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							is_core = ROOT
@@ -2245,7 +2245,7 @@ granada_slot_5_missions = {
 				western_morocco_area = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							is_core = ROOT
@@ -2273,44 +2273,44 @@ granada_slot_5_missions = {
 				area = tripolitania_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			algiers_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			hautes_plaines_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			barbary_coast_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			kabylia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			tunisia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			djerba_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			tripolitania_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
 			north_saharan_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -2321,7 +2321,7 @@ granada_slot_5_missions = {
 			ouled_nail_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -2332,7 +2332,7 @@ granada_slot_5_missions = {
 			fezzan_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -2403,25 +2403,25 @@ granada_slot_5_missions = {
 				area = vostani_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			cyrenaica_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			delta_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			bahari_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			vostani_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -2543,28 +2543,28 @@ granada_slot_5_missions = {
 				area = al_jazira_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			palestine_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			syria_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			aleppo_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			al_jazira_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 		}
@@ -2704,25 +2704,25 @@ granada_slot_5_missions = {
 				area = armenia_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			shahrizor_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			tabriz_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			azerbaijan_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			armenia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

@@ -24,7 +24,7 @@ korea_nomad_group = {
 			province_id = 4201
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					is_core = ROOT
@@ -33,7 +33,7 @@ korea_nomad_group = {
 		}
 		trigger = {
 			4201 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 		}
@@ -119,7 +119,7 @@ korea_nomad_group = {
 				area = furdan_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = root
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -185,7 +185,7 @@ korea_nomad_group = {
 			}
 			OR = {
 				NOT = {
-					owned_by = root
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					is_core = root
@@ -196,17 +196,17 @@ korea_nomad_group = {
 			#not including Furdan is deliberate as it isn't on the maps of historical Goguryeo
 			ningguta_area = {
 				type = all
-				owned_by = root
+				country_or_subject_holds = ROOT
 				is_core = root
 			}
 			jilin_area = {
 				type = all
-				owned_by = root
+				country_or_subject_holds = ROOT
 				is_core = root
 			}
 			liaoning_area = {
 				type = all
-				owned_by = root
+				country_or_subject_holds = ROOT
 				is_core = root
 			}
 		}
@@ -214,7 +214,7 @@ korea_nomad_group = {
 			add_prestige = 25
 			korea_region = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "three_koreas_mod"
@@ -223,7 +223,7 @@ korea_nomad_group = {
 			}
 			manchuria_region = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					NOT = {
 						culture = korean
 					}
@@ -257,7 +257,7 @@ korea_nomad_group = {
 				AND = {
 					NOT = {
 						central_jilin_area = {
-							country_or_non_sovereign_subject_holds = root
+							country_or_subject_holds = ROOT
 						}
 					}
 					area = central_jilin_area
@@ -265,7 +265,7 @@ korea_nomad_group = {
 				AND = {
 					NOT = {
 						ilan_hala_area = {
-							country_or_non_sovereign_subject_holds = root
+							country_or_subject_holds = ROOT
 						}
 					}
 					area = ilan_hala_area
@@ -273,7 +273,7 @@ korea_nomad_group = {
 				AND = {
 					NOT = {
 						furdan_area = {
-							country_or_non_sovereign_subject_holds = root
+							country_or_subject_holds = ROOT
 						}
 					}
 					area = furdan_area
@@ -281,7 +281,7 @@ korea_nomad_group = {
 				AND = {
 					NOT = {
 						heilongjiang_area = {
-							country_or_non_sovereign_subject_holds = root
+							country_or_subject_holds = ROOT
 						}
 					}
 					area = heilongjiang_area
@@ -289,7 +289,7 @@ korea_nomad_group = {
 				AND = {
 					NOT = {
 						central_heilongjiang_area = {
-							country_or_non_sovereign_subject_holds = root
+							country_or_subject_holds = ROOT
 						}
 					}
 					area = central_heilongjiang_area
@@ -297,7 +297,7 @@ korea_nomad_group = {
 				AND = {
 					NOT = {
 						east_heilongjiang_area = {
-							country_or_non_sovereign_subject_holds = root
+							country_or_subject_holds = ROOT
 						}
 					}
 					area = east_heilongjiang_area
@@ -305,7 +305,7 @@ korea_nomad_group = {
 				AND = {
 					NOT = {
 						ningguta_area = {
-							country_or_non_sovereign_subject_holds = root
+							country_or_subject_holds = ROOT
 						}
 					}
 					area = ningguta_area
@@ -313,7 +313,7 @@ korea_nomad_group = {
 				AND = {
 					NOT = {
 						jilin_area = {
-							country_or_non_sovereign_subject_holds = root
+							country_or_subject_holds = ROOT
 						}
 					}
 					area = jilin_area
@@ -321,7 +321,7 @@ korea_nomad_group = {
 				AND = {
 					NOT = {
 						liaoning_area = {
-							country_or_non_sovereign_subject_holds = root
+							country_or_subject_holds = ROOT
 						}
 					}
 					area = liaoning_area
@@ -332,31 +332,31 @@ korea_nomad_group = {
 			custom_trigger_tooltip = {
 				tooltip = end_manchuria_tooltip				#hold a province in every Manchurian area
 				central_jilin_area = {
-					country_or_non_sovereign_subject_holds = root
+					country_or_subject_holds = ROOT
 				}
 				ilan_hala_area = {
-					country_or_non_sovereign_subject_holds = root
+					country_or_subject_holds = ROOT
 				}
 				furdan_area = {
-					country_or_non_sovereign_subject_holds = root
+					country_or_subject_holds = ROOT
 				}
 				heilongjiang_area = {
-					country_or_non_sovereign_subject_holds = root
+					country_or_subject_holds = ROOT
 				}
 				central_heilongjiang_area = {
-					country_or_non_sovereign_subject_holds = root
+					country_or_subject_holds = ROOT
 				}
 				east_heilongjiang_area = {
-					country_or_non_sovereign_subject_holds = root
+					country_or_subject_holds = ROOT
 				}
 				liaoning_area = {
-					country_or_non_sovereign_subject_holds = root
+					country_or_subject_holds = ROOT
 				}
 				jilin_area = {
-					country_or_non_sovereign_subject_holds = root
+					country_or_subject_holds = ROOT
 				}
 				ningguta_area = {
-					country_or_non_sovereign_subject_holds = root
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -504,7 +504,7 @@ korea_conquer_china_group = {
 				area = shandong_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = root
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -591,7 +591,7 @@ korea_conquer_china_group = {
 				AND = {
 					province_id = 1816
 					NOT = {
-						owned_by = root
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = root
@@ -600,7 +600,7 @@ korea_conquer_china_group = {
 				AND = {
 					province_id = 1821
 					NOT = {
-						owned_by = root
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = root
@@ -1079,7 +1079,7 @@ kor_japan_tree = {
 				province_id = 1012
 			}
 			NOT = {
-				owned_by = root
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -1290,7 +1290,7 @@ kor_settle_land = {
 			kor_settle_north
 		}
 		provinces_to_highlight = {
-			owned_by = root
+			country_or_subject_holds = ROOT
 			NOT = {
 				culture = korean
 			}
@@ -1467,7 +1467,7 @@ korea_economic_social_political_path_1 = {
 		effect = {
 			korea_region = {
 				limit = {
-					owned_by = root
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = kor_prosperous_korea
@@ -1488,7 +1488,7 @@ korea_economic_social_political_path_1 = {
 			region = korea_region
 			OR = {
 				NOT = {
-					owned_by = root
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					is_core = root
@@ -1506,7 +1506,7 @@ korea_economic_social_political_path_1 = {
 			is_subject = no
 			korea_region = {
 				type = all
-				owned_by = root
+				country_or_subject_holds = ROOT
 				is_core = root
 				culture = korean
 				development = 8
@@ -1721,7 +1721,7 @@ korea_trade_group = {
 		provinces_to_highlight = {
 			province_id = 2745
 			NOT = {
-				owned_by = root
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {

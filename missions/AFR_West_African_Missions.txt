@@ -120,7 +120,7 @@ west_africa_military_missions = {
 				is_capital_of = ROOT
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -129,7 +129,7 @@ west_africa_military_missions = {
 				capital_scope = {
 					region_for_scope_province = {
 						type = all
-						owned_by = ROOT						#Subjects won't count, empty provinces will need to be colonized.
+						country_or_subject_holds = ROOT						#Subjects won't count, empty provinces will need to be colonized.
 					}
 				}
 			}
@@ -152,7 +152,7 @@ west_africa_military_missions = {
 			NOT = {
 				has_building = weapons
 			}
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			OR = {
 				trade_goods = iron
 				trade_goods = copper
@@ -184,7 +184,7 @@ west_africa_military_missions = {
 				region = guinea_region
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -277,7 +277,7 @@ west_africa_economic_missions = {
 		}
 		position = 2
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			NOT = {
 				development = 20
 			}
@@ -317,20 +317,20 @@ west_africa_economic_missions = {
 				home_trade_node_effect_scope = {
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						save_event_target_as = reward_province
 					}
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							is_capital = yes
 						}
 						save_event_target_as = reward_province
 					}
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							development = CAPITAL
 							is_capital = no
 						}
@@ -338,7 +338,7 @@ west_africa_economic_missions = {
 					}
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							development = CAPITAL
 							is_capital = no
 							development = 20
@@ -347,7 +347,7 @@ west_africa_economic_missions = {
 					}
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							development = CAPITAL
 							is_capital = no
 							development = 25
@@ -356,7 +356,7 @@ west_africa_economic_missions = {
 					}
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							development = CAPITAL
 							is_capital = no
 							development = 30
@@ -390,7 +390,7 @@ west_africa_economic_missions = {
 		}
 		position = 4
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			has_manufactory_trigger = no
 			NOT = {
 				trade_goods = gold
@@ -573,7 +573,7 @@ west_africa_religious_missions_fetishist = {
 			has_discovered = ROOT
 			religion = ROOT
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -715,7 +715,7 @@ west_africa_religious_missions_sunni = {
 		}
 		position = 1
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			NOT = {
 				religion = ROOT
 			}
@@ -792,7 +792,7 @@ west_africa_religious_missions_sunni = {
 			has_discovered = ROOT
 			religion = ROOT
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {

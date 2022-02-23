@@ -15,14 +15,14 @@ cha_1 = {
 				province_id = 1022
 				province_id = 2373
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			1022 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2373 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -55,16 +55,16 @@ cha_1 = {
 				area = vietnam_area
 				area = red_river_delta_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			vietnam_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			red_river_delta_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -80,12 +80,12 @@ cha_1 = {
 		required_missions = { }
 		provinces_to_highlight = {
 			area = tay_nguyen_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			tay_nguyen_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -104,7 +104,7 @@ cha_1 = {
 		required_missions = { cha_subjugate_highlands }
 		provinces_to_highlight = {
 			area = mekong_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			if = {
@@ -115,7 +115,7 @@ cha_1 = {
 			}
 			mekong_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -181,7 +181,7 @@ cha_2 = {
 				AND = {
 					region = malaya_region
 					religion_group = muslim
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 			}
 		}
@@ -236,13 +236,13 @@ cha_2 = {
 		required_missions = { cha_navy }
 		provinces_to_highlight = {
 			area = southern_luzon_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_colonists = 1
 			southern_luzon_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

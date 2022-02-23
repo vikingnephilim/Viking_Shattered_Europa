@@ -70,20 +70,20 @@ oceania_missions_slot1 = {
 				home_trade_node_effect_scope = {
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						save_event_target_as = reward_province
 					}
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							is_capital = yes
 						}
 						save_event_target_as = reward_province
 					}
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							development = CAPITAL
 							is_capital = no
 						}
@@ -91,7 +91,7 @@ oceania_missions_slot1 = {
 					}
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							development = CAPITAL
 							is_capital = no
 							development = 20
@@ -100,7 +100,7 @@ oceania_missions_slot1 = {
 					}
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							development = CAPITAL
 							is_capital = no
 							development = 25
@@ -109,7 +109,7 @@ oceania_missions_slot1 = {
 					}
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							development = CAPITAL
 							is_capital = no
 							development = 30
@@ -159,7 +159,7 @@ oceania_missions_slot2 = {
 				add_base_manpower = 1
 				area = {
 					limit = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					add_province_modifier = {
 						name = "growth_of_capital"
@@ -282,7 +282,7 @@ oceania_missions_slot4 = {
 				is_capital_of = ROOT
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -320,7 +320,7 @@ oceania_missions_slot4 = {
 				is_capital_of = ROOT
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -463,7 +463,7 @@ oceania_missions_slot5 = {
 			oceania_unite_home_area
 		}
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			unrest = 2
 		}
 		trigger = {

@@ -19,7 +19,7 @@ emp_mlo_conquest_branch = {
 		required_missions = { }
 		provinces_to_highlight = {
 			province_id = 101
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		ai_weight = {
 			factor = 5
@@ -64,12 +64,12 @@ emp_mlo_conquest_branch = {
 		required_missions = { emp_mlo_subdue_genoa }
 		provinces_to_highlight = {
 			area = emilia_romagna_area
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			emilia_romagna_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_subject_holds = ROOT
 			}
 			is_subject = no
 		}
@@ -90,12 +90,12 @@ emp_mlo_conquest_branch = {
 		required_missions = { emp_mlo_emilia_romagna }
 		provinces_to_highlight = {
 			area = tuscany_area
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			tuscany_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_subject_holds = ROOT
 			}
 			is_subject = no
 		}
@@ -142,7 +142,7 @@ emp_mlo_conquest_branch = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			owns_or_non_sovereign_subject_of = 121
@@ -177,21 +177,21 @@ emp_mlo_conquest_branch = {
 					NOT = { NAP = { is_subject_of = root } }
 				}
 				naples_area = {
-					limit = { owned_by = root }
+					limit = { country_or_subject_holds = ROOT }
 					add_province_modifier = {
 						name = mlo_unified_italy
 						duration = 7300
 					}
 				}
 				apulia_area = {
-					limit = { owned_by = root }
+					limit = { country_or_subject_holds = ROOT }
 					add_province_modifier = {
 						name = mlo_unified_italy
 						duration = 7300
 					}
 				}
 				calabria_area = {
-					limit = { owned_by = root }
+					limit = { country_or_subject_holds = ROOT }
 					add_province_modifier = {
 						name = mlo_unified_italy
 						duration = 7300
@@ -233,7 +233,7 @@ emp_mlo_venice_branch = {
 				province_id = 107
 			}
 			OR = {
-				NOT = { owned_by = root }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_core = root }
 			}
 		}
@@ -404,32 +404,32 @@ emp_mlo_venice_branch = {
 				area = emilia_romagna_area
 				area = po_valley_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			lombardy_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_subject_holds = ROOT
 			}
 			po_valley_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_subject_holds = ROOT
 			}
 			emilia_romagna_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_subject_holds = ROOT
 			}
 			venetia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_subject_holds = ROOT
 			}
 			piedmont_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_subject_holds = ROOT
 			}
 			liguria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_subject_holds = ROOT
 			}
 			is_subject = no
 		}
@@ -512,7 +512,7 @@ emp_mlo_venice_branch = {
 				}
 				AND = {
 					province_id = 110
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 			}
 		}
@@ -609,7 +609,7 @@ emp_mlo_security_branch = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					owned_by = root
+					country_or_subject_holds = ROOT
 					region = italy_region
 					OR = {
 						unrest = 1
@@ -765,7 +765,7 @@ emp_mlo_security_branch = {
 		position = 4
 		required_missions = { emp_mlo_secure_rule }
 		provinces_to_highlight = {
-			owned_by = root
+			country_or_subject_holds = ROOT
 			NOT = { has_building = university }
 			has_courthouse_building_trigger = no
 			ROOT = {
@@ -968,7 +968,7 @@ emp_mlo_security_branch_2 = {
 				province_id = 111
 			}
 			OR = {
-				NOT = { owned_by = root }
+				NOT = { country_or_subject_holds = ROOT }
 				AND = {
 					NOT = { has_building = fort_15th }
 					NOT = { has_building = fort_16th }
@@ -1231,7 +1231,7 @@ emp_mlo_economy_branch = {
 				}
 				AND = {
 					province_id = 4740
-					NOT = { owned_by = root }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 			}
 		}
@@ -1344,7 +1344,7 @@ emp_mlo_papal_branch = {
 		required_missions = { emp_mlo_kingdom_of_lombardy }
 		provinces_to_highlight = {
 			province_id = 118
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 			NOT = { root = { religion = catholic } }
 		}
 		trigger = {

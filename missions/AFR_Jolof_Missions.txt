@@ -62,12 +62,12 @@ jol_missions_trade_slot = {
 		provinces_to_highlight = {
 			area = futa_jallon_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			futa_jallon_area = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				type = all
 			}
 		}
@@ -129,7 +129,7 @@ jol_missions_trade_slot = {
 		position = 3
 		provinces_to_highlight = {
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 			has_port = yes
@@ -316,12 +316,12 @@ jol_missions_conquest_slot = {
 		provinces_to_highlight = {
 			area = tekrur_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			tekrur_area = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				type = all
 			}
 		}
@@ -343,7 +343,7 @@ jol_missions_conquest_slot = {
 				area = massina_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -397,7 +397,7 @@ jol_missions_conquest_slot = {
 				owned_by = MAL
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -469,7 +469,7 @@ jol_missions_conquest_slot = {
 				owned_by = SON
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -507,7 +507,7 @@ jol_missions_conquest_slot = {
 				region = guinea_region
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {

@@ -31,14 +31,14 @@ emp_ned_slot1_branch = {
 		provinces_to_highlight = {
 			area = lanka_area
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
 		trigger = {
 			lanka_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -71,12 +71,12 @@ emp_ned_slot1_branch = {
 		provinces_to_highlight = {
 			province_id = 630
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			630 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -106,13 +106,13 @@ emp_ned_slot1_branch = {
 		provinces_to_highlight = {
 			area = malacca_area
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			malacca_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -138,7 +138,7 @@ emp_ned_slot1_branch = {
 		provinces_to_highlight = {
 			area = taiwan_area
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
@@ -147,7 +147,7 @@ emp_ned_slot1_branch = {
 				tooltip = ned_taiwan.tooltip
 				taiwan_area = {
 					type = all
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					is_city = yes
 				}
 			}
@@ -173,13 +173,13 @@ emp_ned_slot1_branch = {
 		provinces_to_highlight = {
 			province_id = 4182
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
 		trigger = {
 			4182 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -415,7 +415,7 @@ emp_ned_slot2_ned_branch = {
 		}
 		trigger = {
 			4383 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				has_building = university
 			}
 		}
@@ -466,7 +466,7 @@ emp_ned_slot2_ned_fla_branch = {
 		}
 		trigger = {
 			4383 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				has_building = university
 			}
 		}
@@ -587,7 +587,7 @@ emp_ned_slot2_indies_branch = {
 			}
 			is_sea = no
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
@@ -737,7 +737,7 @@ emp_ned_slot3_branch = {
 		provinces_to_highlight = {
 			region = guinea_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
@@ -768,7 +768,7 @@ emp_ned_slot3_branch = {
 				province_id = 1179
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}
@@ -777,15 +777,15 @@ emp_ned_slot3_branch = {
 				tooltip = ned_south_africa_colony.tooltip
 				OR = {
 					833 = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						is_city = yes
 					}
 					1177 = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						is_city = yes
 					}
 					1179 = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						is_city = yes
 					}
 				}
@@ -929,7 +929,7 @@ emp_ned_slot4_branch = {
 		position = 3
 		provinces_to_highlight = {
 			region = low_countries_region
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			NOT = {
 				base_tax = 8
 			}
@@ -1196,7 +1196,7 @@ emp_ned_slot4_colony_branch = {
 			colonial_region = colonial_eastern_america
 			has_discovered = ROOT
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -1408,21 +1408,21 @@ emp_ned_slot5_branch = {
 				area = east_midlands_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			home_counties_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			east_anglia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			east_midlands_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1549,7 +1549,7 @@ emp_ned_slot5_colony_branch = {
 		provinces_to_highlight = {
 			colonial_region = colonial_brazil
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = ROOT
 		}

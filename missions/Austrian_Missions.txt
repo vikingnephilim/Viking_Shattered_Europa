@@ -142,7 +142,7 @@ hab_holy_roman_ambitions = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
@@ -185,12 +185,12 @@ hab_holy_roman_ambitions = {
 		trigger = {
 			silesia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		provinces_to_highlight = {
 			area = silesia_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		effect = {
 			silesia_area = {
@@ -248,19 +248,19 @@ hab_holy_roman_ambitions = {
 			modifier = {
 				factor = 2
 				slovakia_area = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			modifier = {
 				factor = 2
 				malopolska_area = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			modifier = {
 				factor = 2
 				red_ruthenia_area = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -271,24 +271,24 @@ hab_holy_roman_ambitions = {
 				area = red_ruthenia_area
 				area = sandomierz_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			slovakia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			malopolska_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			red_ruthenia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			sandomierz_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -422,13 +422,13 @@ hab_protect_the_balkans = {
 			modifier = {
 				factor = 2
 				slovakia_area = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			modifier = {
 				factor = 2
 				transdanubia_area = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -454,7 +454,7 @@ hab_protect_the_balkans = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -505,17 +505,17 @@ hab_protect_the_balkans = {
 			modifier = {
 				factor = 2
 				east_adriatic_coast_area = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			modifier = {
 				factor = 2
 				OR = {
 					croatia_area = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					slavonia_area = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
@@ -538,7 +538,7 @@ hab_protect_the_balkans = {
 					}
 				}
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_owned_provinces_with = { #the idea is that you integrate Hungary before making futher conquests in the Balkans
@@ -590,13 +590,13 @@ hab_protect_the_balkans = {
 			modifier = {
 				factor = 2
 				southern_transylvania_area = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			modifier = {
 				factor = 2
 				transylvania_area = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -608,16 +608,16 @@ hab_protect_the_balkans = {
 				area = southern_transylvania_area
 				area = transylvania_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			southern_transylvania_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			transylvania_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -662,13 +662,13 @@ hab_italian_ambitions = {
 				factor = 0.5
 				venetia_area = {
 					is_part_of_hre = yes
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 			}
 			modifier = {
 				factor = 2
 				venetia_area = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -679,12 +679,12 @@ hab_italian_ambitions = {
 		required_missions = { austrian_croatia }
 		provinces_to_highlight = {
 			area = venetia_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			venetia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

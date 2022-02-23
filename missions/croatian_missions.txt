@@ -21,11 +21,11 @@ cro_1 = {
 				province_id = 4753
 				province_id = 136
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
-			4753 = { owned_by = ROOT }
-			136 = { owned_by = ROOT }
+			4753 = { country_or_subject_holds = ROOT }
+			136 = { country_or_subject_holds = ROOT }
 		}
 		effect = {
 			add_prestige = 20
@@ -51,12 +51,12 @@ cro_1 = {
 		provinces_to_highlight = {
 			province_id = 137
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_strongest_trade_power = ROOT }
 			}			
 		}
 		trigger = {
-			137 = { owned_by = ROOT }
+			137 = { country_or_subject_holds = ROOT }
 			137 = { is_strongest_trade_power = ROOT }
 		}
 		effect = {
@@ -122,7 +122,7 @@ cro_1 = {
 		provinces_to_highlight = {
 			region = balkan_region
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -201,18 +201,18 @@ cro_2 = {
 				area = croatia_area
 				area = bosnia_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			is_subject = no
 			croatia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 			bosnia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 		}
@@ -253,13 +253,13 @@ cro_2 = {
 		required_missions = { cro_dominate_dubrovnik }
 		provinces_to_highlight = {
 			area = carinthia_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		position = 5
 		trigger = {
 			carinthia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -309,7 +309,7 @@ cro_5 = {
 		}
 		trigger = {
 			131 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = { num_free_building_slots = 1 }
 			}
 		}

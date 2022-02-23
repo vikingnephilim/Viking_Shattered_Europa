@@ -720,7 +720,11 @@ scottish_monarchy = {
 	icon = "commander_king_reform"
 	allow_normal_conversion = no
 	potential = {
-		tag = SCO
+		OR = {
+			culture = highland_scottish
+			culture = scottish
+			tag = SCO
+		}
 		have_had_reform = scottish_monarchy
 		NOT = {
 			is_pagan_viking_mod = yes

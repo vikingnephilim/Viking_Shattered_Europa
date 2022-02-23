@@ -1094,9 +1094,16 @@ country_decisions = {
 							value = 10
 							religion = norse_pagan_reformed
 							OR = {
-								area = ostra_svealand_area
-								area = holland_area
-								area = vorpommern_area
+								AND = {
+									area = ostra_svealand_area
+									area = holland_area
+									area = vorpommern_area
+								}
+								AND = {
+									area = yorkshire_area
+									area = jutland_area
+									area = subarctic_islands_area
+								}
 							}
 							is_core = root
 						}
@@ -1108,20 +1115,50 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
-			owns_all_provinces = {
-				area = ostra_svealand_area
-				area = holland_area
-				area = vorpommern_area
-			}
-			num_of_owned_provinces_with = {
-				value = 10
-				religion = norse_pagan_reformed
-				OR = {
-					area = ostra_svealand_area
-					area = holland_area
-					area = vorpommern_area
+			OR = {
+				AND = {
+					owns_all_provinces = {
+						area = ostra_svealand_area
+					}
+					owns_all_provinces = {
+						area = holland_area
+					}
+					owns_all_provinces = {
+						area = vorpommern_area
+					}
+					num_of_owned_provinces_with = {
+						value = 10
+						religion = norse_pagan_reformed
+						AND = {
+							area = ostra_svealand_area
+							area = holland_area
+							area = vorpommern_area
+						}
+						is_core = root
+					}
 				}
-				is_core = root
+				AND = {
+					owns_all_provinces = {
+						area = yorkshire_area
+					}
+					owns_all_provinces = {
+						area = jutland_area
+					}
+					owns_all_provinces = {
+						area = subarctic_islands_area
+					}
+					num_of_owned_provinces_with = {
+						value = 10
+						religion = norse_pagan_reformed
+						AND = {
+							area = yorkshire_area
+							area = jutland_area
+							area = subarctic_islands_area
+						}
+						is_core = root
+					}
+
+				}
 			}
 		}
 		effect = {

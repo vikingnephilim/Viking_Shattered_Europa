@@ -33,29 +33,29 @@ ned_reconquest_group = {
 				area = north_brabant_area
 				area = frisia_area
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			holland_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			flanders_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			brabant_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			north_brabant_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			frisia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -79,17 +79,17 @@ ned_reconquest_group = {
 				province_id = 88		
 				province_id = 87
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			wallonia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
-			1743 = { owned_by = ROOT }
-			88 = { owned_by = ROOT }
-			87 = { owned_by = ROOT }
+			1743 = { country_or_subject_holds = ROOT }
+			88 = { country_or_subject_holds = ROOT }
+			87 = { country_or_subject_holds = ROOT }
 		}
 		
 		effect = {
@@ -204,7 +204,7 @@ ned_colonial_group = {
 				province_id = 1177
 				province_id = 1179
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 				
@@ -213,15 +213,15 @@ ned_colonial_group = {
 				tooltip = ned_south_africa_colony.tooltip
 				OR = {
 					833 = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						is_city = yes
 					}
 					1177 = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						is_city = yes
 					}
 					1179 = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						is_city = yes
 					}
 				}
@@ -261,7 +261,7 @@ ned_colonial_group_two = {
 		
 		provinces_to_highlight = {
 			colonial_region = colonial_brazil
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
@@ -308,14 +308,14 @@ ned_colonial_group_two = {
 		
 		provinces_to_highlight = {
 			area = lanka_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
 		trigger = {
 			lanka_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -423,18 +423,18 @@ ned_colonial_group_three = {
 				area = malaya_area
 				area = malacca_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
 		trigger = {
 			malaya_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			malacca_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -471,7 +471,7 @@ ned_colonial_group_four = {
 		
 		provinces_to_highlight = {
 			area = taiwan_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
@@ -480,7 +480,7 @@ ned_colonial_group_four = {
 				tooltip = ned_taiwan.tooltip
 				taiwan_area = {
 					type = all
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					is_city = yes
 				}
 			}

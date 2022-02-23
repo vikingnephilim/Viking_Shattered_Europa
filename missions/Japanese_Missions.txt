@@ -25,7 +25,7 @@ japanse_missions_sea = {
 			}
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					religion = ROOT
@@ -34,26 +34,26 @@ japanse_missions_sea = {
 		}
 		trigger = {
 			4193 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 			1847 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 			1852 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 			1031 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				religion = ROOT
 			}
 		}
 		effect = {
 			hokkaido_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "integrating_ainu"
@@ -102,7 +102,7 @@ japanse_missions_sea = {
 				province_id = 1033
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -141,18 +141,18 @@ japanse_missions_sea = {
 				area = kamchatka_area
 				area = okhotsk_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
 		trigger = {
 			kamchatka_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			okhotsk_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -160,7 +160,7 @@ japanse_missions_sea = {
 			hidden_effect = {
 				east_siberia_region = {
 					limit = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					add_province_modifier = {
 						name = "JAP_siberian_boom"
@@ -212,7 +212,7 @@ japanse_missions_china = {
 				area = eastern_korea_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -222,11 +222,11 @@ japanse_missions_china = {
 			}
 			south_korea_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			eastern_korea_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -285,7 +285,7 @@ japanse_missions_china = {
 				area = furdan_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -295,15 +295,15 @@ japanse_missions_china = {
 			}
 			ningguta_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			central_jilin_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			furdan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -339,7 +339,7 @@ japanse_missions_china = {
 				area = liaoning_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -360,11 +360,11 @@ japanse_missions_china = {
 			}
 			hebei_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			liaoning_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -553,7 +553,7 @@ japanse_missions_the_empire = {
 			province_id = 1015
 			NOT = {
 				AND = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					is_core = ROOT
 				}
 			}
@@ -583,13 +583,13 @@ japanse_missions_the_empire = {
 		provinces_to_highlight = {
 			area = taiwan_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			taiwan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -627,7 +627,7 @@ japanse_missions_the_empire = {
 		required_missions = { jap_colonize_taiwan }
 		provinces_to_highlight = {
 			area = northern_polynesia_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		trigger = {
@@ -645,7 +645,7 @@ japanse_missions_the_empire = {
 			else = {
 				northern_polynesia_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -663,7 +663,7 @@ japanse_missions_the_empire = {
 		
 		provinces_to_highlight = {
 			colonial_region = colonial_california
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
@@ -750,63 +750,63 @@ japanse_missions_domestic = {
 				province_id = 1012
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			tag = JAP
 			hokuriku_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			kanto_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			eastern_kanto_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			chubu_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			eastern_chubu_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			kinai_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			thohoku_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			saigoku_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			sanindo_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			shikoku_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			northern_kyushu = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4181 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4180 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1012 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

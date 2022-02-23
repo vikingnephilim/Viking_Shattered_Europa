@@ -58,12 +58,12 @@ peasants_1 = {
 		required_missions = { peasants_likedealers }
 		provinces_to_highlight = {
 			area = holstein_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			holstein_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -87,7 +87,7 @@ peasants_1 = {
 			OR = {
 				AND = {
 					area = jutland_area
-					NOT = { owned_by = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 				owned_by = DAN
 			}
@@ -95,7 +95,7 @@ peasants_1 = {
 		trigger = {
 			jutland_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			NOT = { exists = DAN }
 			if = {
@@ -121,7 +121,7 @@ peasants_1 = {
 		provinces_to_highlight = {
 			trade_goods = grain
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { development = 20 }
 			}
 		}
@@ -145,7 +145,7 @@ peasants_1 = {
 		icon = mission_have_manufactories
 		required_missions = { peasants_conquest_of_bread }
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			OR = {
 				trade_goods = naval_supplies
 				trade_goods = fish
@@ -266,7 +266,7 @@ peasants_2 = {
 				area = weser_area
 				area = lower_saxony_area
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
@@ -280,13 +280,13 @@ peasants_2 = {
 		effect = {
 			weser_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_unrest = -10
 			}
 			lower_saxony_area = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_unrest = -10
 			}
@@ -310,7 +310,7 @@ peasants_2 = {
 					alliance_with = ROOT
 				}
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			calc_true_if = {
@@ -318,7 +318,7 @@ peasants_2 = {
 				all_province = {
 					area = frisia_area
 					OR = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						owner = {
 							has_reform = peasants_republic
 							alliance_with = ROOT

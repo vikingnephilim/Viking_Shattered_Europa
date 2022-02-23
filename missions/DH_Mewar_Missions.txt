@@ -86,20 +86,20 @@ mer_western_expansion = {
 				area = saurashtra_area
 				area = ahmedabad_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			patan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			saurashtra_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			ahmedabad_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -186,12 +186,12 @@ mer_delhi = {
 		required_missions = { mer_marwar_rivalry }
 		provinces_to_highlight = {
 			area = malwa_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			malwa_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -240,24 +240,24 @@ mer_delhi = {
 				area = jangladesh_area
 				area = marwar_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			gird_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			jaipur_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			jangladesh_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			marwar_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -339,16 +339,16 @@ mer_delhi = {
 				area = sirhind_area
 				area = upper_doab_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			sirhind_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			upper_doab_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -403,20 +403,20 @@ mer_delhi = {
 				area = oudh_area
 				area = lower_doab_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT  }
+			NOT = { country_or_subject_holds = ROOT  }
 		}
 		trigger = {
 			katehar_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			oudh_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			lower_doab_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -476,32 +476,32 @@ mer_delhi = {
 				area = bihar_area
 				area = purvanchal_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			north_bengal_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			gaur_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			jharkhand_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			mithila_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			bihar_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			purvanchal_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -556,7 +556,7 @@ mer_fortify_rajputana_tree = {
 				province_id = 4465
 			}
 			OR = {
-				NOT = { country_or_non_sovereign_subject_holds = ROOT  }
+				NOT = { country_or_subject_holds = ROOT  }
 				NOT = { fort_level = 2 }
 			}
 		}
@@ -564,31 +564,31 @@ mer_fortify_rajputana_tree = {
 			OR = {
 				518 = {
 					fort_level = 2
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				2058 = {
 					fort_level = 2
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			OR = {
 				514 = {
 					fort_level = 2
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				2067 = {
 					fort_level = 2
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			OR = {
 				4465 = {
 					fort_level = 2
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				525 = {
 					fort_level = 2
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -648,16 +648,16 @@ mer_gurjaratra = {
 				area = lahore_area
 				area = multan_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			lahore_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			multan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -698,14 +698,14 @@ mer_city_of_lakes = {
 			if = {
 				limit = {
 					518 = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						is_capital = yes
 					}
 				}
 				is_at_war = no
 			}
 			2058 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_state_core = root
 				has_tax_building_trigger = yes
 				has_trade_building_trigger = yes
@@ -719,7 +719,7 @@ mer_city_of_lakes = {
 			if = {
 				limit = {
 					518 = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						is_capital = yes
 					}
 				}
@@ -764,16 +764,16 @@ mer_indus = {
 				area = sindh_area
 				area = northern_sindh_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT  }
+			NOT = { country_or_subject_holds = ROOT  }
 		}
 		trigger = {
 			sindh_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			northern_sindh_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -871,20 +871,20 @@ mer_gondwana = {
 				area = baghelkhand_area
 				area = bundelkhand_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT  }
+			NOT = { country_or_subject_holds = ROOT  }
 		}
 		trigger = {
 			gondwana_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			baghelkhand_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			bundelkhand_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

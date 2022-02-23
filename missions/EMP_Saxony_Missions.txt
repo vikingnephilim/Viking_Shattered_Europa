@@ -32,7 +32,7 @@ emp_sax_missions_conquest = {
 				area = erzgebirge_area
 				area = lusatia_area
 			}
-			NOT = { owned_by = root }
+			NOT = { country_or_subject_holds = ROOT }
 			ROOT = {
 				NOT = {
 					num_of_owned_provinces_with = {
@@ -56,7 +56,7 @@ emp_sax_missions_conquest = {
 		}
 		effect = {
 			erzgebirge_area = {
-				limit = { owned_by = root }
+				limit = { country_or_subject_holds = ROOT }
 				add_nationalism = -10
 				add_province_modifier = {
 					name = sax_saxon_settlement
@@ -64,7 +64,7 @@ emp_sax_missions_conquest = {
 				}
 			}
 			lusatia_area = {
-				limit = { owned_by = root }
+				limit = { country_or_subject_holds = ROOT }
 				add_nationalism = -10
 				add_province_modifier = {
 					name = sax_saxon_settlement
@@ -87,7 +87,7 @@ emp_sax_missions_conquest = {
 		required_missions = { emp_sax_conquer_erzgebirge }
 		provinces_to_highlight = {
 			area = silesia_area
-			NOT = { owned_by = root }
+			NOT = { country_or_subject_holds = ROOT }
 			ROOT = {
 				NOT = {
 					num_of_owned_provinces_with = {
@@ -105,7 +105,7 @@ emp_sax_missions_conquest = {
 		}
 		effect = {
 			silesia_area = {
-				limit = { owned_by = root }
+				limit = { country_or_subject_holds = ROOT }
 				add_nationalism = -10
 				add_province_modifier = {
 					name = sax_saxon_settlement
@@ -183,7 +183,7 @@ emp_sax_missions_defragment_and_go_east = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -238,7 +238,7 @@ emp_sax_missions_defragment_and_go_east = {
 				area = westphalia_area
 				area = north_westphalia_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -281,7 +281,7 @@ emp_sax_missions_defragment_and_go_east = {
 				area = mittelmark_area
 				area = neumark_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 			OR = {
 				province_id = 50
 				ROOT = {
@@ -298,7 +298,7 @@ emp_sax_missions_defragment_and_go_east = {
 			}
 		}
 		trigger = {
-			50 = { country_or_non_sovereign_subject_holds = root }
+			50 = { country_or_subject_holds = ROOT }
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 6
 				OR = {
@@ -361,7 +361,7 @@ emp_sax_missions_conquer_franconia = {
 						area = thuringia_area
 					}
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { country_or_subject_holds = ROOT }
 						NOT = { is_core = root }
 					}
 				}
@@ -380,12 +380,12 @@ emp_sax_missions_conquer_franconia = {
 			}
 			south_saxony_area = {
 				type = all
-				owned_by = root
+				country_or_subject_holds = ROOT
 				is_core = root
 			}
 			thuringia_area = {
 				type = all
-				owned_by = root
+				country_or_subject_holds = ROOT
 				is_core = root
 			}
 		}
@@ -456,7 +456,7 @@ emp_sax_missions_conquer_franconia = {
 				area = franconia_area
 				area = upper_franconia_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -516,7 +516,7 @@ emp_sax_missions_religion = {
 				AND = {
 					province_id = 59
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { country_or_subject_holds = ROOT }
 						NOT = { development = 15 }
 						has_tax_building_trigger = no
 						has_courthouse_building_trigger = no
@@ -531,7 +531,7 @@ emp_sax_missions_religion = {
 		trigger = {
 			has_institution = renaissance
 			59 = {
-				owned_by = root
+				country_or_subject_holds = ROOT
 				development = 15
 				has_tax_building_trigger = yes
 				has_courthouse_building_trigger = yes
@@ -637,7 +637,7 @@ emp_sax_missions_religion = {
 				area = malopolska_area
 				area = sandomierz_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -1063,7 +1063,7 @@ emp_sax_missions_economic = {
 		provinces_to_highlight = {
 			province_id = 62
 			OR = {
-				NOT = { owned_by = root }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_core = root }
 			}
 		}
@@ -1088,7 +1088,7 @@ emp_sax_missions_economic = {
 			province_id = 61
 			OR = {
 				NOT = { is_strongest_trade_power = root }
-				NOT = { owned_by = root }
+				NOT = { country_or_subject_holds = ROOT }
 				has_production_building_trigger = no
 			}
 		}
@@ -1101,7 +1101,7 @@ emp_sax_missions_economic = {
 				is_year = 1700
 			}
 			61 = {
-				owned_by = root
+				country_or_subject_holds = ROOT
 				has_production_building_trigger = yes
 				development = 20
 			}
@@ -1135,7 +1135,7 @@ emp_sax_missions_economic = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					owned_by = root
+					country_or_subject_holds = ROOT
 					OR = {
 						AND = {
 							has_manufactory_trigger = yes
@@ -1157,9 +1157,9 @@ emp_sax_missions_economic = {
 					}
 				}
 				AND = {
-					NOT = { owned_by = root }
+					NOT = { country_or_subject_holds = ROOT }
 					any_neighbor_province = {
-						owned_by = root
+						country_or_subject_holds = ROOT
 					}
 					has_manufactory_trigger = yes
 					development = 20
@@ -1179,11 +1179,11 @@ emp_sax_missions_economic = {
 						province_id = 62
 						AND = {
 							province_id = 1763
-							owned_by = root
+							country_or_subject_holds = ROOT
 						}
 					}
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { country_or_subject_holds = ROOT }
 						has_manufactory_trigger = no
 						NOT = { development = 20 }
 					}
@@ -1201,16 +1201,16 @@ emp_sax_missions_economic = {
 					has_dlc = "Rule Britannia"
 				}
 				62 = {
-					owned_by = root
+					country_or_subject_holds = ROOT
 					has_manufactory_trigger = yes
 					development = 20
 				}
 				if = {
 					limit = {
-						1763 = { owned_by = root }
+						1763 = { country_or_subject_holds = ROOT }
 					}
 					1763 = {
-						owned_by = root
+						country_or_subject_holds = ROOT
 						has_manufactory_trigger = yes
 						development = 20
 					}

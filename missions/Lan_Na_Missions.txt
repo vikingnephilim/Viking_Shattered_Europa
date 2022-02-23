@@ -12,12 +12,12 @@ lna_1 = {
 		required_missions = { }
 		provinces_to_highlight = {
 			area = sukhothai_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			sukhothai_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -36,12 +36,12 @@ lna_1 = {
 		required_missions = { lna_sukhothai }
 		provinces_to_highlight = {
 			area = central_thai_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			central_thai_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -59,7 +59,7 @@ lna_1 = {
 			}
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					fort_level = 4
@@ -103,7 +103,7 @@ lna_1 = {
 			trade_goods = grain
 			OR = {
 				NOT = { has_building = farm_estate }
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 			}
 		}
 		trigger = {

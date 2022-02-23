@@ -70,7 +70,7 @@ emp_bohemia_1 = {
 			}
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				AND = {
 					BOH = {
@@ -91,32 +91,32 @@ emp_bohemia_1 = {
 				bohemia_area = {
 					type = all
 					religion = hussite
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				moravia_area = {
 					type = all
 					religion = hussite
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				erzgebirge_area = {
 					type = all
 					religion = hussite
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			else = {
 				religious_unity = 1
 				bohemia_area = {
 					type = all
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				moravia_area = {
 					type = all
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				erzgebirge_area = {
 					type = all
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -209,7 +209,7 @@ emp_bohemia_1 = {
 			province_id = 1771
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					development = 20
@@ -219,7 +219,7 @@ emp_bohemia_1 = {
 		}
 		trigger = {
 			1771 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				development = 20
 				has_production_building_trigger = yes
 			}
@@ -246,7 +246,7 @@ emp_bohemia_1 = {
 		}
 		completed_by = 1720.1.1
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			is_capital = yes
 			OR = {
 				NOT = {
@@ -267,7 +267,7 @@ emp_bohemia_1 = {
 			if = {
 				limit = {
 					263 = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				263 = {
@@ -279,7 +279,7 @@ emp_bohemia_1 = {
 			if = {
 				limit = {
 					4237 = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				4237 = {
@@ -309,7 +309,7 @@ emp_bohemia_1 = {
 			}
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				development = 20
 				NOT = {
@@ -320,13 +320,13 @@ emp_bohemia_1 = {
 		}
 		trigger = {
 			4237 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				development = 20
 				enlightenment = 100
 				has_manufactory_trigger = yes
 			}
 			263 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				development = 20
 				enlightenment = 100
 				has_manufactory_trigger = yes
@@ -364,13 +364,13 @@ emp_bohemia_2 = {
 		provinces_to_highlight = {
 			area = silesia_area
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			silesia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -405,13 +405,13 @@ emp_bohemia_2 = {
 		provinces_to_highlight = {
 			area = slovakia_area
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			slovakia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			is_subject = no
 		}
@@ -467,18 +467,18 @@ emp_bohemia_2 = {
 				area = alfold_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		position = 4
 		trigger = {
 			transdanubia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			alfold_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			is_subject = no
 		}
@@ -508,7 +508,7 @@ emp_bohemia_2 = {
 		provinces_to_highlight = {
 			province_has_current_tech_fort_trigger = no
 			region = carpathia_region
-			country_or_non_sovereign_subject_holds = ROOT
+			country_or_subject_holds = ROOT
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -600,14 +600,14 @@ emp_bohemia_2 = {
 						province_id = 150
 					}
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
 		}
 		trigger = {
 			150 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 6
@@ -694,7 +694,7 @@ emp_bohemia_3 = {
 			}
 			else = {
 				262 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			is_subject = no
@@ -777,21 +777,21 @@ emp_bohemia_3 = {
 				area = central_poland_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			wielkopolska_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			malopolska_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			central_poland_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			is_subject = no
 		}
@@ -824,21 +824,21 @@ emp_bohemia_3 = {
 				province_id = 43
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			2963 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2997 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2995 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			43 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -867,27 +867,27 @@ emp_bohemia_3 = {
 				province_id = 153
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			266 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			262 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			50 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			61 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			153 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			134 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -979,7 +979,7 @@ emp_bohemia_4 = {
 				AND = {
 					area = mittelmark_area
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
@@ -995,12 +995,12 @@ emp_bohemia_4 = {
 			}
 			else = {
 				50 = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			mittelmark_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			is_subject = no
 		}
@@ -1061,7 +1061,7 @@ emp_bohemia_4 = {
 				AND = {
 					area = south_saxony_area
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
@@ -1077,12 +1077,12 @@ emp_bohemia_4 = {
 			}
 			else = {
 				61 = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			south_saxony_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			is_subject = no
 		}

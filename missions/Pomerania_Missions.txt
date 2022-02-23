@@ -22,17 +22,17 @@ pom_1 = {
 				area = hinter_pommern_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			vorpommern_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			hinter_pommern_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -83,14 +83,14 @@ pom_1 = {
 				province_id = 2993
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			owns_core_province = 2993
 			neumark_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -113,12 +113,12 @@ pom_1 = {
 		required_missions = { pom_reclaim_frontiers }
 		provinces_to_highlight = {
 			area = mittelmark_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			mittelmark_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -185,7 +185,7 @@ pom_1 = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
@@ -229,19 +229,19 @@ pom_1 = {
 						AND = {
 							wielkopolska_area = {
 								type = all
-								country_or_non_sovereign_subject_holds = ROOT
+								country_or_subject_holds = ROOT
 							}
 							kuyavia_area = {
 								type = all
-								country_or_non_sovereign_subject_holds = ROOT
+								country_or_subject_holds = ROOT
 							}
 							mazovia_area = {
 								type = all
-								country_or_non_sovereign_subject_holds = ROOT
+								country_or_subject_holds = ROOT
 							}
 							central_poland_area = {
 								type = all
-								country_or_non_sovereign_subject_holds = ROOT
+								country_or_subject_holds = ROOT
 							}
 						}
 					}
@@ -261,19 +261,19 @@ pom_1 = {
 					AND = {
 						wielkopolska_area = {
 							type = all
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 						kuyavia_area = {
 							type = all
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 						mazovia_area = {
 							type = all
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 						central_poland_area = {
 							type = all
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 				}
@@ -318,19 +318,19 @@ pom_1 = {
 						AND = {
 							wielkopolska_area = {
 								type = all
-								country_or_non_sovereign_subject_holds = ROOT
+								country_or_subject_holds = ROOT
 							}
 							kuyavia_area = {
 								type = all
-								country_or_non_sovereign_subject_holds = ROOT
+								country_or_subject_holds = ROOT
 							}
 							mazovia_area = {
 								type = all
-								country_or_non_sovereign_subject_holds = ROOT
+								country_or_subject_holds = ROOT
 							}
 							central_poland_area = {
 								type = all
-								country_or_non_sovereign_subject_holds = ROOT
+								country_or_subject_holds = ROOT
 							}
 						}
 					}
@@ -350,19 +350,19 @@ pom_1 = {
 					AND = {
 						wielkopolska_area = {
 							type = all
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 						kuyavia_area = {
 							type = all
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 						mazovia_area = {
 							type = all
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 						central_poland_area = {
 							type = all
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 				}
@@ -370,19 +370,19 @@ pom_1 = {
 			else = {
 				wielkopolska_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				kuyavia_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				mazovia_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				central_poland_area = {
 					type = all
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -594,12 +594,12 @@ pom_1 = {
 		required_missions = { pom_strengthen_old_ties }
 		provinces_to_highlight = { 
 			area = west_prussia_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			west_prussia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -643,12 +643,12 @@ pom_2 = {
 		position = 2
 		provinces_to_highlight = {
 			area = mecklenburg_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			mecklenburg_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -685,7 +685,7 @@ pom_2 = {
 				area = lower_saxony_area
 				area = holstein_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -693,11 +693,11 @@ pom_2 = {
 				OR = {
 					lower_saxony_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					holstein_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}

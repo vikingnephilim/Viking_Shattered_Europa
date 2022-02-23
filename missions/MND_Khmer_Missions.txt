@@ -46,7 +46,7 @@ mnd_khmer_1 = {
 		provinces_to_highlight = {
 			province_id = 609
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 			}
 		}
 		trigger = {
@@ -123,7 +123,7 @@ mnd_khmer_2 = {
 						region = indo_china_region
 						culture = khmer
 						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
+						NOT = { country_or_subject_holds = ROOT }
 					}
 				}
 				every_province = {
@@ -131,7 +131,7 @@ mnd_khmer_2 = {
 						region = indo_china_region
 						culture = khmer
 						NOT = { is_core = ROOT }
-						NOT = { owned_by = ROOT }
+						NOT = { country_or_subject_holds = ROOT }
 					}
 					add_core = ROOT
 				}
@@ -148,7 +148,7 @@ mnd_khmer_2 = {
 		provinces_to_highlight = {
 			region = indo_china_region
 			culture = khmer
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			total_own_and_non_tributary_subject_development = 400
@@ -157,7 +157,7 @@ mnd_khmer_2 = {
 				any_province = {
 					region = indo_china_region
 					culture = khmer
-					NOT = { owned_by = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 			}
 		}
@@ -221,24 +221,24 @@ mnd_khmer_3 = {
 				area = angkor_area
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { development = 10 }
 			}
 		}
 		trigger = {
 			cambodia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				development = 10
 			}
 			mekong_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				development = 10
 			}
 			angkor_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				development = 10
 			}
 		}
@@ -258,7 +258,7 @@ mnd_khmer_3 = {
 			trade_goods = grain
 			OR = {
 				NOT = { has_building = farm_estate }
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 			}
 		}
 		trigger = {
@@ -304,7 +304,7 @@ mnd_khmer_3 = {
 		provinces_to_highlight = {
 			culture = cham
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -327,7 +327,7 @@ mnd_khmer_3 = {
 			calc_true_if = {
 				amount = 3
 				all_province = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					culture = cham
 				}
 			}
@@ -377,16 +377,16 @@ mnd_khmer_3 = {
 				area = vietnam_area
 				area = red_river_delta_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			vietnam_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			red_river_delta_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -428,7 +428,7 @@ mnd_khmer_3 = {
 			area = kalimantan_area
 			area = kutai_area
 			area = sabah_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			calc_true_if = {
@@ -442,7 +442,7 @@ mnd_khmer_3 = {
 						area = kutai_area
 						area = sabah_area
 					}
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -487,7 +487,7 @@ mnd_khmer_4 = {
 					}
 				}
 				central_thai_area = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -520,12 +520,12 @@ mnd_khmer_4 = {
 		required_missions = { mnd_khm_avenge_angkor }
 		provinces_to_highlight = {
 			area = central_thai_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			central_thai_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -540,7 +540,7 @@ mnd_khmer_4 = {
 		required_missions = { mnd_khm_restored_empire }
 		provinces_to_highlight = {
 			superregion = china_superregion
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		position = 4
 		trigger = {
@@ -548,7 +548,7 @@ mnd_khmer_4 = {
 				amount = 20
 				all_province = {
 					superregion = china_superregion
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -567,7 +567,7 @@ mnd_khmer_4 = {
 		required_missions = { mnd_khm_defy_china }
 		provinces_to_highlight = {
 			superregion = china_superregion
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			if = {
@@ -587,7 +587,7 @@ mnd_khmer_4 = {
 				amount = 50
 				all_province = {
 					superregion = china_superregion
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -620,12 +620,12 @@ mnd_khmer_5 = {
 		required_missions = {  }
 		provinces_to_highlight = {
 			area = champasak_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			champasak_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -674,7 +674,7 @@ mnd_khmer_5 = {
 				area = champasak_area
 				area = vientiane_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			calc_true_if = {
@@ -685,7 +685,7 @@ mnd_khmer_5 = {
 						area = champasak_area
 						area = vientiane_area
 					}
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -699,9 +699,9 @@ mnd_khmer_5 = {
 		provinces_to_highlight = {
 			region = indo_china_region
 			OR = {
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				AND = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					OR = {
 						nationalism = 1
 						unrest = 1
@@ -715,7 +715,7 @@ mnd_khmer_5 = {
 				amount = 50
 				all_province = {
 					region = indo_china_region
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					NOT = { nationalism = 1 }
 					NOT = { unrest = 1 }
 					NOT = { controlled_by = REB }
@@ -773,14 +773,14 @@ mnd_khmer_5 = {
 		required_missions = { mnd_khm_restored_empire }
 		provinces_to_highlight = {
 			region = burma_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			calc_true_if = {
 				amount = 20
 				all_province = {
 					region = burma_region
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}

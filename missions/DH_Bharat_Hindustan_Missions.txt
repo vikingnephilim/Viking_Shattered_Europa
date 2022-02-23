@@ -21,13 +21,13 @@ hin_slot_1 = {
 		provinces_to_highlight = {
 			region = west_india_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			west_india_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -47,13 +47,13 @@ hin_slot_1 = {
 		provinces_to_highlight = {
 			region = khorasan_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			khorasan_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -72,13 +72,13 @@ hin_slot_1 = {
 		provinces_to_highlight = {
 			region = persia_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			persia_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -113,13 +113,13 @@ hin_slot_2 = {
 		provinces_to_highlight = {
 			region = hindusthan_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			hindusthan_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -236,7 +236,7 @@ hin_slot_2 = {
 		}
 		trigger = {
 			2081 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				development = 20
 				OR = {
 					has_building = furnace
@@ -304,13 +304,13 @@ hin_slot_3 = {
 		provinces_to_highlight = {
 			region = deccan_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			deccan_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -325,14 +325,14 @@ hin_slot_3 = {
 		provinces_to_highlight = {
 			superregion = india_superregion
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			stability = 2
 			india_superregion = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -381,13 +381,13 @@ hin_slot_4 = {
 		provinces_to_highlight = {
 			region = coromandel_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			coromandel_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -409,13 +409,13 @@ hin_slot_4 = {
 		provinces_to_highlight = {
 			region = indo_china_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			indo_china_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -447,19 +447,19 @@ hin_slot_5 = {
 		provinces_to_highlight = {
 			region = bengal_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			bengal_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {
 			bengal_region = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "united_bengal"
@@ -481,13 +481,13 @@ hin_slot_5 = {
 		provinces_to_highlight = {
 			region = burma_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			burma_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {
@@ -511,13 +511,13 @@ hin_slot_5 = {
 		provinces_to_highlight = {
 			region = malaya_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			malaya_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT	
+				country_or_subject_holds = ROOT	
 			}
 		}
 		effect = {

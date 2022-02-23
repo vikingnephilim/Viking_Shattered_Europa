@@ -44,7 +44,7 @@ pirate_1 = {
 			NOT = {
 				province_has_center_of_trade_of_level = 2
 			}
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 		}
 		trigger = {
 			if = {
@@ -179,7 +179,7 @@ pirate_2 = {
 		required_missions = {
 		}
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			is_capital = yes
 		}
 		trigger = {
@@ -200,7 +200,7 @@ pirate_2 = {
 			pirate_a_second_madagascar
 		}
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			is_capital = yes
 			NOT = {
 				fort_level = 3
@@ -247,18 +247,18 @@ pirate_2 = {
 				area = east_cuba_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = yes
 		}
 		trigger = {
 			cuba_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			east_cuba_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -283,14 +283,14 @@ pirate_2 = {
 		provinces_to_highlight = {
 			region = carribeans_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			has_discovered = yes
 		}
 		trigger = {
 			carribeans_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		# give permanent claims on ALL gold provinces nearby, pirates love gold
@@ -369,7 +369,7 @@ pirate_2 = {
 			trade_goods = gold
 			has_discovered = ROOT
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {

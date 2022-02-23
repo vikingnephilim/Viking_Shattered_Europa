@@ -199,20 +199,20 @@ east_african_trade_slot2 = {
 				home_trade_node_effect_scope = {
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						save_event_target_as = reward_province
 					}
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							is_capital = yes
 						}
 						save_event_target_as = reward_province
 					}
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							development = CAPITAL
 							is_capital = no
 						}
@@ -220,7 +220,7 @@ east_african_trade_slot2 = {
 					}
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							development = CAPITAL
 							is_capital = no
 							development = 20
@@ -229,7 +229,7 @@ east_african_trade_slot2 = {
 					}
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							development = CAPITAL
 							is_capital = no
 							development = 25
@@ -238,7 +238,7 @@ east_african_trade_slot2 = {
 					}
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							development = CAPITAL
 							is_capital = no
 							development = 30
@@ -422,7 +422,7 @@ east_african_diplomatic_slot = {
 				add_base_manpower = 1
 				area = {
 					limit = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					add_province_modifier = {
 						name = "east_africa_attracting_capital"

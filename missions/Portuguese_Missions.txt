@@ -47,7 +47,7 @@ por_african_ambitions = {
 			region = guinea_region
 			OR = {
 				is_city = no
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 			}
 			has_discovered = ROOT
 		}
@@ -56,7 +56,7 @@ por_african_ambitions = {
 			custom_trigger_tooltip = {
 				tooltip = miss_colonize_west_africa
 				guinea_region = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					is_city = yes
 				}
 			}
@@ -77,7 +77,7 @@ por_african_ambitions = {
 		
 		provinces_to_highlight = {
 			region = kongo_region
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
@@ -91,7 +91,7 @@ por_african_ambitions = {
 			custom_trigger_tooltip = {	
 				tooltip = miss_colonize_kongo
 				kongo_region = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					is_city = yes
 				}
 			}
@@ -151,7 +151,7 @@ por_moroccan_conquest = {
 		
 		provinces_to_highlight = {
 			province_id = 334
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
@@ -186,20 +186,20 @@ por_moroccan_conquest = {
 		
 		provinces_to_highlight = {
 			area = western_morocco_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			western_morocco_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
 		effect = {
 			western_morocco_area = {
 				limit = { 
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "buffer_zone_commerce"
@@ -208,7 +208,7 @@ por_moroccan_conquest = {
 			}
 			northern_morocco_area = {
 				limit = { 
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "buffer_zone_commerce"
@@ -217,7 +217,7 @@ por_moroccan_conquest = {
 			}
 			southern_morocco_area = {
 				limit = { 
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = "buffer_zone_commerce"
@@ -249,7 +249,7 @@ por_brazilian_ambitions = {
 		
 		provinces_to_highlight = {
 			colonial_region = colonial_brazil
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
@@ -288,7 +288,7 @@ por_brazilian_ambitions = {
 		
 		provinces_to_highlight = {
 			colonial_region = colonial_brazil
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
@@ -362,7 +362,7 @@ por_east_african_ambitions = {
 				province_id = 1192
 				area = mozambique_area
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
@@ -374,14 +374,14 @@ por_east_african_ambitions = {
 				}
 			}
 			1186 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1192 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			mozambique_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 	
@@ -464,7 +464,7 @@ por_east_african_ambitions = {
 		
 		provinces_to_highlight = {
 			region = malaya_region
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
@@ -478,7 +478,7 @@ por_east_african_ambitions = {
 			custom_trigger_tooltip = {
 				tooltip = miss_colonize_malaya
 				malaya_region = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					is_city = yes
 				}
 			}
@@ -541,14 +541,14 @@ por_south_africa_mission = {
 		
 		provinces_to_highlight = {
 			area = cape_of_good_hope_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
 		trigger = { 
 			cape_of_good_hope_area = {
 				type = all
-				owned_by = root
+				country_or_subject_holds = ROOT
 			}
 		}
 	
@@ -593,13 +593,13 @@ por_zanzibar_mission = {
 		
 		provinces_to_highlight = {
 			province_id = 1201
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
 		trigger = { 
 			1201 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 	
@@ -675,13 +675,13 @@ por_hormuz_mission = {
 		
 		provinces_to_highlight = {
 			province_id = 2999
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
 		trigger = { 
 			2999 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 	

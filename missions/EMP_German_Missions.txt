@@ -23,11 +23,11 @@ emp_germany_hlr_1 = {
 			region = low_countries_region
 			OR = {
 				AND = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					local_autonomy = 30
 				}
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				owned_by = NED
 			}
@@ -66,7 +66,7 @@ emp_germany_hlr_1 = {
 			}
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				has_manufactory_trigger = no
 			}
@@ -120,7 +120,7 @@ emp_germany_hlr_1_ger = {
 		icon = Compulsory_Education
 		required_missions = { emp_ger_hlr_chancellorship }
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			NOT = { has_building = university }
 		}
 		position = 6
@@ -162,7 +162,7 @@ emp_germany_hlr_2 = {
 		position = 2
 		provinces_to_highlight = {
 			region = france_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -196,7 +196,7 @@ emp_germany_hlr_2 = {
 				region = south_german_region
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { development = 30 }
 			}
 		}
@@ -278,7 +278,7 @@ emp_germany_hlr_2_ger = {
 		icon = establish_the_chancellorship
 		required_missions = {  }
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			is_capital = yes
 			has_courthouse_building_trigger = no
 		}
@@ -445,7 +445,7 @@ emp_germany_hlr_2_hlr = {
 				is_papal_controller = yes
 			}
 			else = {
-				118 = { country_or_non_sovereign_subject_holds = ROOT }
+				118 = { country_or_subject_holds = ROOT }
 			}			
 		}
 		effect = {
@@ -468,7 +468,7 @@ emp_germany_hlr_2_hlr = {
 		icon = centralized_empire
 		required_missions = { emp_ger_hlr_roman_politics }
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			OR = {
 				region = south_german_region
 				region = north_german_region
@@ -515,7 +515,7 @@ emp_germany_hlr_3 = {
 		icon = Blood_Iron
 		required_missions = {  }
 		provinces_to_highlight = {
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			OR = {
 				region = south_german_region
 				region = north_german_region
@@ -566,7 +566,7 @@ emp_germany_hlr_3 = {
 		required_missions = { emp_ger_hlr_blood_and_iron }
 		position = 2
 		provinces_to_highlight = {
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			region = italy_region
 		}
 		trigger = {
@@ -820,10 +820,10 @@ emp_germany_hlr_4 = {
 		provinces_to_highlight = {
 			region = poland_region
 			OR = {
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				AND = {
 					has_terrain = farmlands
-					NOT = { owned_by = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 			}
 		}
@@ -872,7 +872,7 @@ emp_germany_hlr_4 = {
 				region = scandinavia_region
 				province_id = 1926
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -909,7 +909,7 @@ emp_germany_hlr_4 = {
 		provinces_to_highlight = {
 			superregion = southern_africa_superregion
 			is_node_in_trade_company_region = yes
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			is_sea = no
 		}
 		trigger = {
@@ -932,7 +932,7 @@ emp_germany_hlr_4 = {
 				superregion = east_indies_superregion
 			}
 			is_node_in_trade_company_region = yes
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			is_sea = no
 		}
 		trigger = {
@@ -992,7 +992,7 @@ emp_germany_hlr_5 = {
 		position = 3
 		provinces_to_highlight = {
 			region = carpathia_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {

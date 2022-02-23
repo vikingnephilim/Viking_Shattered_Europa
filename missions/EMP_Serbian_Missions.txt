@@ -93,7 +93,7 @@ emp_ser_economy_internal = {
 		
 		provinces_to_highlight = {
 			is_capital = yes
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			NOT = { has_building = university }
 		}
 	
@@ -185,7 +185,7 @@ emp_ser_danube = {
 			}
 			else = {
 				4239 = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -222,7 +222,7 @@ emp_ser_danube = {
 		}
 		trigger = {
 			4239 = { 
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				if = {
 					limit = {
 						ROOT = {
@@ -350,7 +350,7 @@ emp_ser_west_balkan_branch = {
 		
 		provinces_to_highlight = {
 			area = albania_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -388,15 +388,15 @@ emp_ser_west_balkan_branch = {
 				area = east_adriatic_coast_area
 				province_id = 4754
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			east_adriatic_coast_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4754 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -468,7 +468,7 @@ emp_ser_west_balkan_branch = {
 			}
 			NOT = { 
 				OR = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					owner = { is_subject_of = ROOT }
 				}
 			}
@@ -477,14 +477,14 @@ emp_ser_west_balkan_branch = {
 			croatia_area = {
 				type = all
 				OR = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					owner = { is_subject_of = ROOT }
 				}
 			}
 			slavonia_area = {
 				type = all
 				OR = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					owner = { is_subject_of = ROOT }
 				}
 			}
@@ -509,7 +509,7 @@ emp_ser_west_balkan_branch = {
 			area = carinthia_area
 			NOT = { 
 				OR = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					owner = { is_subject_of = ROOT }
 				}
 			}
@@ -518,7 +518,7 @@ emp_ser_west_balkan_branch = {
 			carinthia_area = {
 				type = all
 				OR = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					owner = { is_subject_of = ROOT }
 				}
 			}
@@ -580,13 +580,13 @@ emp_ser_east_branch = {
 		provinces_to_highlight = {
 			area = macedonia_area
 			NOT = { 
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			macedonia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -618,17 +618,17 @@ emp_ser_east_branch = {
 				area = northern_greece_area
 			}
 			NOT = { 
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			morea_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			northern_greece_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -689,12 +689,12 @@ emp_ser_east_branch = {
 		
 		provinces_to_highlight = {
 			area = thrace_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			thrace_area = {
 				type = ALL
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			owns = 151
 		}

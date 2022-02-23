@@ -26,7 +26,7 @@ emp_bra_pru_1 = {
 				province_id = 4747
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -69,7 +69,7 @@ emp_bra_pru_1 = {
 				area = hinter_pommern_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -130,21 +130,21 @@ emp_bra_pru_1 = {
 				area = mittelmark_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			west_prussia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			east_prussia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			mittelmark_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -182,7 +182,7 @@ emp_bra_pru_1 = {
 			province_id = 41
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					has_building = university
@@ -194,7 +194,7 @@ emp_bra_pru_1 = {
 		}
 		trigger = {
 			41 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				has_building = university
 				development = 30
 			}
@@ -244,12 +244,12 @@ emp_bra_pru_1 = {
 				has_production_building_trigger = yes
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			50 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				development = 25
 				has_tax_building_trigger = yes
 				has_production_building_trigger = yes
@@ -368,12 +368,12 @@ emp_bra_pru_2 = {
 		provinces_to_highlight = {
 			province_id = 71
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			71 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -412,7 +412,7 @@ emp_bra_pru_2 = {
 				area = upper_franconia_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -447,17 +447,17 @@ emp_bra_pru_2 = {
 				area = lusatia_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			silesia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			lusatia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -500,17 +500,17 @@ emp_bra_pru_2 = {
 				area = wielkopolska_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			kuyavia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			wielkopolska_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -649,7 +649,7 @@ emp_bra_pru_3 = {
 		provinces_to_highlight = {
 			region = north_german_region
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -722,7 +722,7 @@ emp_bra_pru_3 = {
 				province_id = 52
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -735,13 +735,13 @@ emp_bra_pru_3 = {
 				}
 			}
 			1931 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			53 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			52 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -792,7 +792,7 @@ emp_bra_pru_3 = {
 					OR = {
 						has_shipyard_building_trigger = no
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 				}
@@ -806,7 +806,7 @@ emp_bra_pru_3 = {
 		trigger = {
 			1931 = {
 				has_shipyard_building_trigger = yes
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -867,7 +867,7 @@ emp_bra_pru_3 = {
 					province_id = 1775
 					NOT = {
 						AND = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							if = {
 								limit = {
 									has_dlc = "Leviathan"
@@ -886,7 +886,7 @@ emp_bra_pru_3 = {
 				AND = {
 					province_id = 4141
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
@@ -897,19 +897,19 @@ emp_bra_pru_3 = {
 					limit = {
 						has_dlc = "Leviathan"
 					}
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					has_great_project = {
 						type = kiel_canal
 						tier = 1
 					}
 				}
 				else = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					has_construction = kiel_canal
 				}
 			}
 			4141 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1002,7 +1002,7 @@ emp_bra_pru_4 = {
 				area = westphalia_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -1037,13 +1037,13 @@ emp_bra_pru_4 = {
 		provinces_to_highlight = {
 			area = north_rhine_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			north_rhine_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1094,7 +1094,7 @@ emp_bra_pru_4 = {
 				area = palatinate_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -1136,7 +1136,7 @@ emp_bra_pru_4 = {
 				region = south_german_region
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {

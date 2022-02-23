@@ -60,15 +60,15 @@ bavarian_missions_main = {
 				#make sure you are not benefitting from others' conquests
 				AND = {
 					province_id = 65
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 				AND = {
 					province_id = 64
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 				AND = {
 					province_id = 2955
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 			}
 		}
@@ -140,13 +140,13 @@ bavarian_missions_main = {
             num_of_cities = 10
 			OR = {
 				1757 = { #Oberpfalz
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				76 = { #Salzburg
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				2957 = { #Regensburg
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
         }
@@ -220,7 +220,7 @@ bavarian_missions_main = {
 				area = upper_franconia_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -264,7 +264,7 @@ bavarian_missions_main = {
 				area = upper_swabia_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -313,13 +313,13 @@ bavarian_missions_palatinate = {
 		provinces_to_highlight = {
 			area = palatinate_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			palatinate_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			OR = {
 				NOT = { exists = PAL }
@@ -334,7 +334,7 @@ bavarian_missions_palatinate = {
 			add_devotion = 10
 			add_republican_tradition = 5
 			palatinate_area = {
-				limit = { owned_by = ROOT }
+				limit = { country_or_subject_holds = ROOT }
 				add_province_modifier = {
 					name = faster_integration
 					duration = 7300

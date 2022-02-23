@@ -85,6 +85,15 @@ country_decisions = {
 				}
 			}
 			change_tag = SCO
+			if = {
+				limit = {
+					NOT = {
+						government = monarchy
+					}
+				}
+				change_government_to_monarchy = yes
+			}
+			add_government_reform = scottish_monarchy
 			swap_non_generic_missions = yes
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes

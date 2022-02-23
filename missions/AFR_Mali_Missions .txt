@@ -142,7 +142,7 @@ mali_jihad_slot = {
 		required_missions = { mal_pick_religious_direction }
 		position = 2
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			NOT = { religion = ROOT }
 		}
 		trigger = {
@@ -239,7 +239,7 @@ mali_colonization_slot = {
 		provinces_to_highlight = {
 			province_id = 1114
 			NOT = { is_core = ROOT }
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_light_ship = 10
@@ -338,7 +338,7 @@ mali_colonization_slot = {
 					continent = new_world
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			if = {
@@ -390,7 +390,7 @@ mali_trade_slot = {
 		position = 2
 		provinces_to_highlight = {
 			area = jolof_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			if = {
@@ -403,7 +403,7 @@ mali_trade_slot = {
 				}
 			}
 			jolof_area = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				type = all
 			}
 		}
@@ -611,7 +611,7 @@ mali_conquest_slot = {
 		provinces_to_highlight = {
 			province_id = 1123
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_core = ROOT }
 				NOT = { has_province_modifier = autonomy_increased }
 				NOT = { development = 15 }
@@ -662,7 +662,7 @@ mali_conquest_slot = {
 				area = dendi_area
 				area = niger_bend_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			owns_or_non_sovereign_subject_of = 1133
@@ -696,7 +696,7 @@ mali_conquest_slot = {
 				region = sahel_region
 				region = niger_region
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			total_development = 350
@@ -768,7 +768,7 @@ mali_conquest_slot = {
 				province_id = 1124
 				province_id = 1145
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			custom_trigger_tooltip = {
@@ -948,7 +948,7 @@ mali_empire_slot = {
 		position = 2
 		provinces_to_highlight = {
 			province_id = 1134
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			owns_or_non_sovereign_subject_of = 1134
@@ -975,7 +975,7 @@ mali_empire_slot = {
 		provinces_to_highlight = {
 			province_id = 1132
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_core = ROOT }
 			}
 		}
@@ -1011,26 +1011,26 @@ mali_empire_slot = {
 					NOT = { trade_goods = gold }
 					NOT = { has_building = tradecompany }
 				}
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 			}
 		}
 		trigger = {
 			futa_jallon_area = {
 				has_building = tradecompany
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				type = all
 			}
 			1120 = {
 				base_production = 10
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1121 = {
 				base_production = 10
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2252 = {
 				base_production = 10
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			OR = {
 				trading_bonus = {
@@ -1068,7 +1068,7 @@ mali_empire_slot = {
 				province_id = 4064	#Buganda
 				province_id = 1191	#Tete
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			owner = {
 				NOT = { tag = ROOT }
 				religion_group = ROOT
@@ -1093,7 +1093,7 @@ mali_empire_slot = {
 				}
 				326 = {
 					OR = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 						owner = {
 							has_opinion_modifier = {
 								who = ROOT
@@ -1108,7 +1108,7 @@ mali_empire_slot = {
 				}
 				361 = {
 					OR = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 						owner = {
 							has_opinion_modifier = {
 								who = ROOT
@@ -1123,7 +1123,7 @@ mali_empire_slot = {
 				}
 				385 = {
 					OR = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 						owner = {
 							has_opinion_modifier = {
 								who = ROOT
@@ -1140,7 +1140,7 @@ mali_empire_slot = {
 			else = {	#Case Mali is not muslim (which indicates that they are most likely fetishists
 				1170 = {
 					OR = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 						owner = {
 							has_opinion_modifier = {
 								who = ROOT
@@ -1155,7 +1155,7 @@ mali_empire_slot = {
 				}
 				4064 = {
 					OR = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 						owner = {
 							has_opinion_modifier = {
 								who = ROOT
@@ -1170,7 +1170,7 @@ mali_empire_slot = {
 				}
 				1191 = {
 					OR = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 						owner = {
 							has_opinion_modifier = {
 								who = ROOT
@@ -1274,7 +1274,7 @@ mali_slot_disaster_slot = {
 		provinces_to_highlight = {
 			province_id = 1114
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_core = ROOT }
 				has_owner_accepted_culture = no
 				NOT = { development = 15 }

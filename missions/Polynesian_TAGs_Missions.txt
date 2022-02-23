@@ -140,15 +140,15 @@ hawaii_mil_missions = {
 				AND = {
 					te_ika_a_maui_hauauru_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					te_ika_a_maui_waho_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					te_waipounamu_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					army_size_percentage = 1
 				}
@@ -302,14 +302,14 @@ hawaii_unify_haw = {
 			capital_scope = {
 				area_for_scope_province = {
 					type = all
-					owned_by = ROOT					#Subjects won't count, empty provinces will need to be colonized.
+					country_or_subject_holds = ROOT					#Subjects won't count, empty provinces will need to be colonized.
 				}
 			}
 		}
 		effect = {
 			random_province = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_base_tax = 1
 			}
@@ -324,13 +324,13 @@ hawaii_unify_haw = {
 		trigger = {
 			polynesian_triangle_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
 			random_province = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_base_tax = 1
 			}
@@ -438,7 +438,7 @@ hawaii_unify_haw = {
 					amount = 2
 					all_province = {
 						area = northern_polynesia_area
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				all_rival_country = {
@@ -503,7 +503,7 @@ hawaii_unify_haw = {
 					owner = {
 						is_subject_of = ROOT
 					}
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			army_size = 10
@@ -536,7 +536,7 @@ hawaii_unify_haw = {
 						exists = no
 					}
 					1989 = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				TOG = {
@@ -579,14 +579,14 @@ hawaii_naha_missions = {
 		trigger = {
 			hokkaido_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
 			japan_region = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				add_permanent_claim = ROOT
@@ -601,7 +601,7 @@ hawaii_naha_missions = {
 		}
 		trigger = {
 			1020 = {
-				owned_by = root
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -630,7 +630,7 @@ hawaii_naha_missions = {
 			hawaii_lifted_naha
 		}
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			has_port = yes
 			NOT = {
 				OR = {
@@ -684,7 +684,7 @@ hawaii_naha_missions = {
 				AND = {
 					fiji_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					army_size_percentage = 1
 				}
@@ -728,7 +728,7 @@ hawaii_naha_missions = {
 		trigger = {
 			fiji_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -864,7 +864,7 @@ hawaii_american_colony_missions = {
 		}
 		trigger = {
 			835 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -881,7 +881,7 @@ hawaii_american_colony_missions = {
 		}
 		trigger = {
 			venezuela_area = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			835 = {
 				is_strongest_trade_power = ROOT
@@ -891,7 +891,7 @@ hawaii_american_colony_missions = {
 			colombia_region = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				add_permanent_claim = ROOT
@@ -935,7 +935,7 @@ hawaii_american_colony_missions = {
 		}
 		trigger = {
 			oceanea_region = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			ROOT = {
 				has_institution = global_trade
@@ -960,7 +960,7 @@ hawaii_american_colony_missions = {
 		effect = {
 			oceanea_region = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_base_manpower = 1
 				add_base_production = 2
@@ -1005,7 +1005,7 @@ hawaii_american_colony_missions = {
 					owner = {
 						is_subject_of = ROOT
 					}
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -1039,7 +1039,7 @@ hawaii_american_colony_second_row_missions = {
 				all_province = {
 					colonial_region = colonial_california
 					OR = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						owner = {
 							is_subject_of = ROOT
 						}
@@ -1068,7 +1068,7 @@ hawaii_american_colony_second_row_missions = {
 				all_province = {
 					colonial_region = colonial_mexico
 					OR = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						owner = {
 							is_subject_of = ROOT
 						}
@@ -1084,7 +1084,7 @@ hawaii_american_colony_second_row_missions = {
 						owner_is_colonial_nation = no
 					}
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				add_permanent_claim = ROOT
@@ -1099,7 +1099,7 @@ hawaii_american_colony_second_row_missions = {
 		}
 		trigger = {
 			2021 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			calc_true_if = {
 				all_province = {
@@ -1109,7 +1109,7 @@ hawaii_american_colony_second_row_missions = {
 					}
 					trade_goods = gold
 					OR = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						owner = {
 							is_subject_of = ROOT
 						}
@@ -1149,7 +1149,7 @@ hawaii_american_colony_second_row_missions = {
 			cuba_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				add_permanent_claim = ROOT
@@ -1181,7 +1181,7 @@ hawaii_american_colony_second_row_missions = {
 			carribeans_region = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				add_permanent_claim = ROOT
@@ -1197,17 +1197,17 @@ hawaii_american_colony_second_row_missions = {
 		trigger = {
 			carribeans_region = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			europe = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
 			macaronesia_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				add_permanent_claim = ROOT
@@ -1215,7 +1215,7 @@ hawaii_american_colony_second_row_missions = {
 			subarctic_islands_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				add_permanent_claim = ROOT
@@ -1223,7 +1223,7 @@ hawaii_american_colony_second_row_missions = {
 			subarctic_islands_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				add_permanent_claim = ROOT
@@ -1239,11 +1239,11 @@ hawaii_american_colony_second_row_missions = {
 		trigger = {
 			macaronesia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			subarctic_islands_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1261,7 +1261,7 @@ hawaii_american_colony_second_row_missions = {
 		trigger = {
 			british_isles_region = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

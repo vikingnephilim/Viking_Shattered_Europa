@@ -65,7 +65,7 @@ french_minor_missions = {
 				is_core = ROOT
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -80,7 +80,7 @@ french_minor_missions = {
 					capital_scope = {
 						area_for_scope_province = {
 							type = all
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 					custom_trigger_tooltip = {
@@ -89,7 +89,7 @@ french_minor_missions = {
 							any_province = {
 								is_core = ROOT
 								NOT = {
-									owned_by = ROOT
+									country_or_subject_holds = ROOT
 								}
 							}
 						}
@@ -100,7 +100,7 @@ french_minor_missions = {
 				capital_scope = {
 					area_for_scope_province = {
 						type = all
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
@@ -131,7 +131,7 @@ french_minor_missions = {
 			province_id = 183
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					is_core = ROOT
@@ -223,7 +223,7 @@ french_minor_missions = {
 			france_region = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				add_core = FRA

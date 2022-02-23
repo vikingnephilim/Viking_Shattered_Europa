@@ -215,7 +215,7 @@ songhai_historical_conquest_slot = {
 		provinces_to_highlight = {
 			province_id = 1132
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -263,7 +263,7 @@ songhai_historical_conquest_slot = {
 		provinces_to_highlight = {
 			province_id = 2246
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -383,7 +383,7 @@ songhai_historical_conquest_slot = {
 						area = futa_jallon_area
 					}
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
@@ -393,11 +393,11 @@ songhai_historical_conquest_slot = {
 				exists = MAL
 			}
 			manding_area = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				type = all
 			}
 			futa_jallon_area = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				type = all
 			}
 		}
@@ -443,7 +443,7 @@ songhai_historical_conquest_slot = {
 			}
 			is_empty = no
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -561,16 +561,16 @@ songhai_maghreb_slot = {
 			}
 			is_empty = no
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			azbin_area = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				type = all
 			}
 			east_azbin_area = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -591,7 +591,7 @@ songhai_maghreb_slot = {
 		provinces_to_highlight = {
 			province_id = 1134
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -784,7 +784,7 @@ songhai_maghreb_slot = {
 				area = marrekesh_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -824,7 +824,7 @@ songhai_maghreb_slot = {
 		provinces_to_highlight = {
 			region = maghreb_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -867,7 +867,7 @@ songhai_mossi_slot = {
 		provinces_to_highlight = {
 			culture = mossi
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -877,7 +877,7 @@ songhai_mossi_slot = {
 					any_province = {
 						culture = mossi
 						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 				}
@@ -1363,7 +1363,7 @@ songhai_jihad_slot = {
 					religion = ROOT
 				}
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -1803,7 +1803,7 @@ songhai_protection_slot = {
 				religion = ROOT
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -1907,7 +1907,7 @@ songhai_money_maker_slot = {
 		}
 		position = 1
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			has_production_building_trigger = no
 		}
 		trigger = {
@@ -1949,7 +1949,7 @@ songhai_money_maker_slot = {
 				}
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			OR = {
 				region = sahel_region
@@ -2008,7 +2008,7 @@ songhai_money_maker_slot = {
 			}
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					base_production = 10

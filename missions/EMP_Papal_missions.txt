@@ -24,7 +24,7 @@ emp_pap_slot_1 = {
 				area = emilia_romagna_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -88,7 +88,7 @@ emp_pap_slot_1 = {
 				area = piedmont_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -150,7 +150,7 @@ emp_pap_slot_1 = {
 				area = po_valley_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -212,7 +212,7 @@ emp_pap_slot_1 = {
 				area = western_sicily_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -270,13 +270,13 @@ emp_pap_slot_1 = {
 		provinces_to_highlight = {
 			region = italy_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			italy_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1309,7 +1309,7 @@ emp_pap_slot_4 = {
 			118 = {
 				has_building = cathedral
 				development = 40
-				owned_by = root
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

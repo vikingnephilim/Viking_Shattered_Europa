@@ -51,7 +51,7 @@ indonesians_3 = {
 					NOT = {
 						province_has_center_of_trade_of_level = 3
 					}
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -138,14 +138,14 @@ indonesians_3 = {
 		provinces_to_highlight = {
 			region = indo_china_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			calc_true_if = {
 				amount = 50
 				all_province = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					region = indo_china_region
 				}
 			}
@@ -630,7 +630,7 @@ indonesians_4 = {
 					calc_true_if = {
 						amount = 30
 						all_province = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							religion = ROOT
 						}
 					}
@@ -699,7 +699,7 @@ indonesians_4 = {
 				region = indonesia_region
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -797,7 +797,7 @@ indonesians_5 = {
 			province_id = 2715
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					has_building = weapons
@@ -806,7 +806,7 @@ indonesians_5 = {
 		}
 		trigger = {
 			2715 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				has_building = weapons
 			}
 		}
@@ -828,7 +828,7 @@ indonesians_5 = {
 			province_id = 639
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					has_building = textile
@@ -837,7 +837,7 @@ indonesians_5 = {
 		}
 		trigger = {
 			639 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				has_building = textile
 			}
 		}
@@ -859,7 +859,7 @@ indonesians_5 = {
 			province_id = 623
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					has_building = tradecompany
@@ -868,7 +868,7 @@ indonesians_5 = {
 		}
 		trigger = {
 			623 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				has_building = tradecompany
 			}
 		}
@@ -893,7 +893,7 @@ indonesians_5 = {
 			}
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					has_building = tradecompany
@@ -902,11 +902,11 @@ indonesians_5 = {
 		}
 		trigger = {
 			649 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				has_building = tradecompany
 			}
 			650 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				has_building = tradecompany
 			}
 		}
@@ -934,7 +934,7 @@ indonesians_5 = {
 			province_id = 2728
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					has_building = wharf
@@ -951,7 +951,7 @@ indonesians_5 = {
 						trade_goods = gold
 					}
 					OR = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 						owner = {
 							alliance_with = ROOT
 						}
@@ -962,7 +962,7 @@ indonesians_5 = {
 				}
 				else = {
 					OR = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 						owner = {
 							alliance_with = ROOT
 						}

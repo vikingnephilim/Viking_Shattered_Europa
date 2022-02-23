@@ -27,7 +27,7 @@ ha_sunset_group = {
 				area = connacht_area
 				area = ulster_area
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
@@ -39,19 +39,19 @@ ha_sunset_group = {
 				}
 				OR = {
 					munster_area = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						#has_port = yes
 					}
 					leinster_area = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						#has_port = yes
 					}
 					connacht_area = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						#has_port = yes
 					}
 					ulster_area = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 						#has_port = yes
 					}
 				}
@@ -77,14 +77,14 @@ ha_sunset_group = {
 		
 		provinces_to_highlight = {
 			region = british_isles_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
 		trigger = {
 			british_isles_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -121,7 +121,7 @@ ha_sunset_group_two = {
 		
 		provinces_to_highlight = {
 			region = france_region
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
@@ -132,7 +132,7 @@ ha_sunset_group_two = {
 					has_discovered = ROOT
 				}
 				france_region = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					#has_port = yes
 				}
 			}
@@ -157,14 +157,14 @@ ha_sunset_group_two = {
 		
 		provinces_to_highlight = {
 			region = france_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
 		trigger = {
 			france_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -201,7 +201,7 @@ ha_sunset_group_three = {
 		
 		provinces_to_highlight = {
 			region = iberia_region
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
@@ -212,7 +212,7 @@ ha_sunset_group_three = {
 					has_discovered = ROOT
 				}
 				iberia_region = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					#has_port = yes
 				}
 			}
@@ -237,14 +237,14 @@ ha_sunset_group_three = {
 		
 		provinces_to_highlight = {
 			region = iberia_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		
 		trigger = {
 			iberia_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -287,14 +287,14 @@ ha_sunset_group_three = {
 #			north_german_region = {
 #				limit = {
 #					NOT = { is_core = ROOT }
-#					NOT = { owned_by = ROOT }
+#					NOT = { country_or_subject_holds = ROOT }
 #				}
 #				add_permanent_claim = ROOT
 #			}
 #			south_german_region = {
 #				limit = {
 #					NOT = { is_core = ROOT }
-#					NOT = { owned_by = ROOT }
+#					NOT = { country_or_subject_holds = ROOT }
 #				}
 #				add_permanent_claim = ROOT
 #			}

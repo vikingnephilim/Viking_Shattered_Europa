@@ -16,18 +16,18 @@ chinese_missions_1 = {
 		provinces_to_highlight = {
 			area = taiwan_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			2154 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2155 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			738 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -50,7 +50,7 @@ chinese_missions_1 = {
 				region = north_china_region
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -62,15 +62,15 @@ chinese_missions_1 = {
 			}
 			south_china_region = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			xinan_region = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			north_china_region = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -120,17 +120,17 @@ chinese_missions_1 = {
 				area = vietnam_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			red_river_delta_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			vietnam_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -160,13 +160,13 @@ chinese_missions_2 = {
 		provinces_to_highlight = {
 			region = korea_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			korea_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {

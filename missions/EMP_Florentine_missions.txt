@@ -26,17 +26,17 @@ emp_tusc_fighting_1 = {
 				area = po_valley_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			lombardy_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			po_valley_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -64,13 +64,13 @@ emp_tusc_fighting_1 = {
 		provinces_to_highlight = {
 			area = venetia_area
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			venetia_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -176,17 +176,17 @@ emp_tusc_dip_and_war_2 = {
 				area = emilia_romagna_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			tuscany_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			emilia_romagna_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -233,13 +233,13 @@ emp_tusc_dip_and_war_2 = {
 				owned_by = GEN
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			liguria_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			OR = {
 				NOT = { exists = GEN }
@@ -711,7 +711,7 @@ emp_tusc_infra_5 = {
 		position = 4
 		
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			NOT = { has_manufactory_trigger = yes }
 		}
 		trigger = {

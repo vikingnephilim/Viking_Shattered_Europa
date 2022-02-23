@@ -25,7 +25,7 @@ australia_missions_1 = {
 			papua_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -36,7 +36,7 @@ australia_missions_1 = {
 			vogelkop_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -85,7 +85,7 @@ australia_missions_1 = {
 			central_java_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -96,7 +96,7 @@ australia_missions_1 = {
 			east_java_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -107,7 +107,7 @@ australia_missions_1 = {
 			west_java_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -131,21 +131,21 @@ australia_missions_1 = {
 				area = west_java_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			central_java_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			east_java_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			west_java_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -196,7 +196,7 @@ australia_missions_1 = {
 					every_trade_node_member_province = {
 						limit = {
 							NOT = {
-								owned_by = ROOT
+								country_or_subject_holds = ROOT
 							}
 							NOT = {
 								is_core = ROOT
@@ -209,7 +209,7 @@ australia_missions_1 = {
 					every_trade_node_member_province = {
 						limit = {
 							NOT = {
-								owned_by = ROOT
+								country_or_subject_holds = ROOT
 							}
 							NOT = {
 								is_core = ROOT
@@ -243,24 +243,24 @@ australia_missions_2 = {
 				area = vogelkop_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			papua_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			vogelkop_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
 			sulawesi_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -271,7 +271,7 @@ australia_missions_2 = {
 			south_sulawesi_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -294,17 +294,17 @@ australia_missions_2 = {
 				area = south_sulawesi_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			sulawesi_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			south_sulawesi_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -324,7 +324,7 @@ australia_missions_2 = {
 			brunei_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -335,7 +335,7 @@ australia_missions_2 = {
 			kalimantan_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -346,7 +346,7 @@ australia_missions_2 = {
 			kutai_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -369,21 +369,21 @@ australia_missions_2 = {
 				area = kutai_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			brunei_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			kalimantan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			kutai_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -460,7 +460,7 @@ australia_missions_2 = {
 				1357 = {
 					every_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							province_has_center_of_trade_of_level = 1
 						}
 						add_province_modifier = {
@@ -472,7 +472,7 @@ australia_missions_2 = {
 				1361 = {
 					every_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							province_has_center_of_trade_of_level = 1
 						}
 						add_province_modifier = {
@@ -484,7 +484,7 @@ australia_missions_2 = {
 				1397 = {
 					every_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							province_has_center_of_trade_of_level = 1
 						}
 						add_province_modifier = {
@@ -560,7 +560,7 @@ australia_missions_3 = {
 			polynesia_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -571,7 +571,7 @@ australia_missions_3 = {
 			eastern_polynesia_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -582,7 +582,7 @@ australia_missions_3 = {
 			mindanao_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -593,7 +593,7 @@ australia_missions_3 = {
 			west_mindanao_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -616,17 +616,17 @@ australia_missions_3 = {
 				area = west_mindanao_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			mindanao_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			west_mindanao_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -635,7 +635,7 @@ australia_missions_3 = {
 			mindanao_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -646,7 +646,7 @@ australia_missions_3 = {
 			west_mindanao_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -657,7 +657,7 @@ australia_missions_3 = {
 			luzon_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -668,7 +668,7 @@ australia_missions_3 = {
 			palawan_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -679,7 +679,7 @@ australia_missions_3 = {
 			southern_luzon_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -690,7 +690,7 @@ australia_missions_3 = {
 			visayas_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -757,21 +757,21 @@ australia_missions_4 = {
 				area = te_waipounamu_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			te_ika_a_maui_hauauru_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			te_ika_a_maui_waho_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			te_waipounamu_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -791,17 +791,17 @@ australia_missions_4 = {
 				area = eastern_polynesia_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			polynesia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			eastern_polynesia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -882,7 +882,7 @@ australia_missions_5 = {
 				area = te_ika_a_maui_waho_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -906,15 +906,15 @@ australia_missions_5 = {
 			}
 			te_waipounamu_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			te_ika_a_maui_waho_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			te_ika_a_maui_hauauru_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -965,25 +965,25 @@ BRZ_missions_1 = {
 				area = pontal_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			pontal_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			grao_para_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			amapa_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			amazon_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -999,7 +999,7 @@ BRZ_missions_1 = {
 			guyana_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1010,7 +1010,7 @@ BRZ_missions_1 = {
 			upper_guyana_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1021,7 +1021,7 @@ BRZ_missions_1 = {
 			suriname_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1044,21 +1044,21 @@ BRZ_missions_1 = {
 				area = upper_guyana_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			suriname_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			guyana_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			upper_guyana_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1180,33 +1180,33 @@ BRZ_missions_2 = {
 				area = sao_francisco_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			bahia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			maranhao_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			piaui_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			ceara_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			pernambuco_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			sao_francisco_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1361,7 +1361,7 @@ BRZ_missions_3 = {
 			brazil_region = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1389,25 +1389,25 @@ BRZ_missions_3 = {
 				area = sao_paolo_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			minas_gerais_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			diamantina_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			rio_de_janeiro_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			sao_paolo_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1430,13 +1430,13 @@ BRZ_missions_3 = {
 		provinces_to_highlight = {
 			region = brazil_region
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			brazil_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1455,7 +1455,7 @@ BRZ_missions_3 = {
 		}
 		position = 7
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			OR = {
 				unrest = 0.1
 				controlled_by = REB
@@ -1467,7 +1467,7 @@ BRZ_missions_3 = {
 			}
 			brazil_region = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					unrest = 0.1
 				}
@@ -1532,17 +1532,17 @@ BRZ_missions_4 = {
 				area = rio_grande_do_sol_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			west_sao_paolo_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			rio_grande_do_sol_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1603,7 +1603,7 @@ BRZ_missions_4 = {
 			banda_oriental_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1614,7 +1614,7 @@ BRZ_missions_4 = {
 			chaco_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1625,7 +1625,7 @@ BRZ_missions_4 = {
 			moxos_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1636,7 +1636,7 @@ BRZ_missions_4 = {
 			beni_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1647,7 +1647,7 @@ BRZ_missions_4 = {
 			misiones_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1658,7 +1658,7 @@ BRZ_missions_4 = {
 			paraguay_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1677,13 +1677,13 @@ BRZ_missions_4 = {
 		provinces_to_highlight = {
 			area = banda_oriental_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			banda_oriental_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1694,7 +1694,7 @@ BRZ_missions_4 = {
 			cuyo_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1705,7 +1705,7 @@ BRZ_missions_4 = {
 			southern_pampas_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1716,7 +1716,7 @@ BRZ_missions_4 = {
 			buenos_aires_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1740,21 +1740,21 @@ BRZ_missions_4 = {
 				area = cuyo_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			buenos_aires_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			southern_pampas_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			cuyo_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1774,7 +1774,7 @@ BRZ_missions_4 = {
 			patagonia_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1785,7 +1785,7 @@ BRZ_missions_4 = {
 			bahia_blanca_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1796,7 +1796,7 @@ BRZ_missions_4 = {
 			nehuenken_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1807,7 +1807,7 @@ BRZ_missions_4 = {
 			central_chile_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1818,7 +1818,7 @@ BRZ_missions_4 = {
 			southern_chile_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1829,7 +1829,7 @@ BRZ_missions_4 = {
 			patagonian_andes = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1863,25 +1863,25 @@ BRZ_missions_5 = {
 				area = mato_grosso_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			goias_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			ofaie_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			guapore_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			mato_grosso_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1921,29 +1921,29 @@ BRZ_missions_5 = {
 				area = moxos_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			chaco_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			beni_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			misiones_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			paraguay_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			moxos_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1957,7 +1957,7 @@ BRZ_missions_5 = {
 			upper_peru = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1968,7 +1968,7 @@ BRZ_missions_5 = {
 			potosi_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1979,7 +1979,7 @@ BRZ_missions_5 = {
 			jujuy_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -1990,7 +1990,7 @@ BRZ_missions_5 = {
 			tucuman_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -2001,7 +2001,7 @@ BRZ_missions_5 = {
 			northern_chile_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -2012,7 +2012,7 @@ BRZ_missions_5 = {
 			antisuyu_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -2038,33 +2038,33 @@ BRZ_missions_5 = {
 				area = antisuyu_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			upper_peru = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			potosi_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			jujuy_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			tucuman_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			northern_chile_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			antisuyu_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -2079,7 +2079,7 @@ BRZ_missions_5 = {
 				hidden_effect = {
 					upper_peru = {
 						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 							trade_goods = gold
 						}
 						add_province_modifier = {
@@ -2089,7 +2089,7 @@ BRZ_missions_5 = {
 					}
 					potosi_area = {
 						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 							trade_goods = gold
 						}
 						add_province_modifier = {
@@ -2099,7 +2099,7 @@ BRZ_missions_5 = {
 					}
 					jujuy_area = {
 						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 							trade_goods = gold
 						}
 						add_province_modifier = {
@@ -2109,7 +2109,7 @@ BRZ_missions_5 = {
 					}
 					tucuman_area = {
 						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 							trade_goods = gold
 						}
 						add_province_modifier = {
@@ -2119,7 +2119,7 @@ BRZ_missions_5 = {
 					}
 					northern_chile_area = {
 						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 							trade_goods = gold
 						}
 						add_province_modifier = {
@@ -2129,7 +2129,7 @@ BRZ_missions_5 = {
 					}
 					antisuyu_area = {
 						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 							trade_goods = gold
 						}
 						add_province_modifier = {
@@ -2144,7 +2144,7 @@ BRZ_missions_5 = {
 				hidden_effect = {
 					antisuyu_area = {
 						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 							trade_goods = gold
 						}
 						add_province_modifier = {
@@ -2154,7 +2154,7 @@ BRZ_missions_5 = {
 					}
 					potosi_area = {
 						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 							trade_goods = gold
 						}
 						add_province_modifier = {
@@ -2164,7 +2164,7 @@ BRZ_missions_5 = {
 					}
 					jujuy_area = {
 						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 							trade_goods = gold
 						}
 						add_province_modifier = {
@@ -2174,7 +2174,7 @@ BRZ_missions_5 = {
 					}
 					upper_peru = {
 						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 							trade_goods = gold
 						}
 						add_province_modifier = {
@@ -2184,7 +2184,7 @@ BRZ_missions_5 = {
 					}
 					northern_chile_area = {
 						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 							trade_goods = gold
 						}
 						add_province_modifier = {
@@ -2194,7 +2194,7 @@ BRZ_missions_5 = {
 					}
 					tucuman_area = {
 						limit = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 							trade_goods = gold
 						}
 						add_province_modifier = {
@@ -2222,33 +2222,33 @@ BRZ_missions_5 = {
 				area = patagonian_andes
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			patagonia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			bahia_blanca_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			nehuenken_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			central_chile_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			southern_chile_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			patagonian_andes = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -2299,17 +2299,17 @@ canada_missions_1 = {
 				AND = {
 					area = upper_canada_area
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				AND = {
 					area = upper_ontario_area
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						upper_ontario_area = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 				}
@@ -2318,17 +2318,17 @@ canada_missions_1 = {
 		trigger = {
 			upper_canada_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			upper_ontario_area = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
 			hudson_bay_area = {
 				limit = {
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -2347,12 +2347,12 @@ canada_missions_1 = {
 		provinces_to_highlight = {
 			province_id = 1005
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			1005 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			num_of_owned_provinces_with = {
 				value = 5
@@ -2379,7 +2379,7 @@ canada_missions_1 = {
 			hudson_bay_region = {
 				limit = {
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -2399,7 +2399,7 @@ canada_missions_1 = {
 			province_id = 1008
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				has_trade_building_trigger = yes
 				AND = {
@@ -2412,7 +2412,7 @@ canada_missions_1 = {
 		}
 		trigger = {
 			1008 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				has_trade_building_trigger = yes
 				OR = {
 					has_colonist = yes
@@ -2442,7 +2442,7 @@ canada_missions_1 = {
 					area = saskatchewan_area
 					NOT = {
 						saskatchewan_area = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 				}
@@ -2450,7 +2450,7 @@ canada_missions_1 = {
 					area = assiniboia_area
 					NOT = {
 						assiniboia_area = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 				}
@@ -2458,24 +2458,24 @@ canada_missions_1 = {
 					area = prairies_area
 					NOT = {
 						prairies_area = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 				}
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			saskatchewan_area = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			assiniboia_area = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			prairies_area = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -2525,7 +2525,7 @@ canada_missions_1 = {
 						province_id = 2018
 					}
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				AND = {
@@ -2539,7 +2539,7 @@ canada_missions_1 = {
 					}
 					OR = {
 						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 						has_trade_building_trigger = no
 					}
@@ -2551,85 +2551,85 @@ canada_missions_1 = {
 			custom_trigger_tooltip = {
 				tooltip = CAN_RAILWAY_TOOLTIP
 				984 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				985 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				2571 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				2582 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				2583 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				2584 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				991 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				1001 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				2015 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				2593 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				2597 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				2003 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				2607 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				2018 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 			custom_trigger_tooltip = {
 				tooltip = CAN_RAILWAY_TRADE_TOOLTIP
 				2569 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					has_trade_building_trigger = yes
 				}
 				2585 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					has_trade_building_trigger = yes
 				}
 				1007 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					has_trade_building_trigger = yes
 				}
 				1008 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					has_trade_building_trigger = yes
 				}
 				2017 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					has_trade_building_trigger = yes
 				}
 				973 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					has_trade_building_trigger = yes
 				}
 			}
 			OR = {
 				AND = {
 					1010 = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					1011 = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					1813 = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 						custom_trigger_tooltip = {
 							tooltip = CAN_RAILWAY_TRADE_2_TOOLTIP
 							has_trade_building_trigger = yes
@@ -2638,13 +2638,13 @@ canada_missions_1 = {
 				}
 				AND = {
 					2511 = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					2598 = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					2005 = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 						custom_trigger_tooltip = {
 							tooltip = CAN_RAILWAY_TRADE_2_TOOLTIP
 							has_trade_building_trigger = yes
@@ -2909,17 +2909,17 @@ canada_missions_1 = {
 				area = east_alaska_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			alaska_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			east_alaska_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -2968,7 +2968,7 @@ canada_missions_1 = {
 					province_id = 868
 					OR = {
 						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 						has_trade_building_trigger = no
 					}
@@ -2977,7 +2977,7 @@ canada_missions_1 = {
 					province_id = 2021
 					OR = {
 						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 						AND = {
 							NOT = {
@@ -2992,7 +2992,7 @@ canada_missions_1 = {
 				AND = {
 					region = california_region
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					ROOT = {
 						NOT = {
@@ -3011,11 +3011,11 @@ canada_missions_1 = {
 				region = california_region
 			}
 			868 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				has_trade_building_trigger = yes
 			}
 			2021 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				OR = {
 					has_building = shipyard
 					has_building = grand_shipyard
@@ -3065,7 +3065,7 @@ canada_missions_2 = {
 			province_id = 989
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					development = 15
@@ -3100,7 +3100,7 @@ canada_missions_2 = {
 		}
 		trigger = {
 			989 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				development = 15
 				OR = {
 					has_building = temple
@@ -3235,7 +3235,7 @@ canada_missions_2 = {
 			}
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				is_in_capital_area = no
 			}
@@ -3243,11 +3243,11 @@ canada_missions_2 = {
 		trigger = {
 			stability = 0
 			973 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				is_in_capital_area = yes
 			}
 			2569 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				is_in_capital_area = yes
 			}
 		}
@@ -3301,14 +3301,14 @@ canada_missions_2 = {
 				AND = {
 					region = great_lakes_region
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				AND = {
 					province_id = 915
 					OR = {
 						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							development = 15
@@ -3319,12 +3319,12 @@ canada_missions_2 = {
 		}
 		trigger = {
 			915 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				development = 15
 			}
 			great_lakes_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -3387,12 +3387,12 @@ canada_missions_2 = {
 		provinces_to_highlight = {
 			province_id = 873
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			873 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			num_of_owned_provinces_with = {
 				value = 50
@@ -3463,7 +3463,7 @@ canada_missions_2 = {
 			}
 			cascadia_region = {
 				limit = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_province_modifier = {
 					name = can_rocky_mountain_forts
@@ -3556,7 +3556,7 @@ canada_missions_3 = {
 			northeast_america_region = {
 				limit = {
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -3576,7 +3576,7 @@ canada_missions_3 = {
 			province_id = 987
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					development = 10
@@ -3585,7 +3585,7 @@ canada_missions_3 = {
 		}
 		trigger = {
 			987 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				development = 10
 			}
 		}
@@ -3612,7 +3612,7 @@ canada_missions_3 = {
 					province_id = 982
 					OR = {
 						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 						AND = {
 							NOT = {
@@ -3628,7 +3628,7 @@ canada_missions_3 = {
 					province_id = 2670
 					OR = {
 						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							development = 15
@@ -3648,14 +3648,14 @@ canada_missions_3 = {
 		trigger = {
 			has_mil_advisor_3 = yes
 			982 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				OR = {
 					has_building = barracks
 					has_building = training_fields
 				}
 			}
 			2670 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				OR = {
 					OR = {
 						has_building = barracks
@@ -3755,13 +3755,13 @@ canada_missions_3 = {
 		provinces_to_highlight = {
 			area = iroquoisia_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			iroquoisia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -3769,7 +3769,7 @@ canada_missions_3 = {
 			maine_area = {
 				limit = {
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -3780,7 +3780,7 @@ canada_missions_3 = {
 			great_woods_area = {
 				limit = {
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -3791,7 +3791,7 @@ canada_missions_3 = {
 			south_iroquoisia_area = {
 				limit = {
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -3802,7 +3802,7 @@ canada_missions_3 = {
 			great_lakes_region = {
 				limit = {
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -3824,7 +3824,7 @@ canada_missions_3 = {
 			province_id = 965
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					is_core = ROOT
@@ -3899,14 +3899,14 @@ canada_missions_4 = {
 				AND = {
 					province_id = 994
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				AND = {
 					province_id = 993
 					OR = {
 						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							development = 15
@@ -3990,7 +3990,7 @@ canada_missions_4 = {
 			province_id = 2569
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				AND = {
 					NOT = {
@@ -4012,7 +4012,7 @@ canada_missions_4 = {
 		}
 		trigger = {
 			2569 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				OR = {
 					has_building = shipyard
 					has_building = grand_shipyard
@@ -4101,7 +4101,7 @@ canada_missions_4 = {
 			}
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				unrest = 1
 			}
@@ -4109,21 +4109,21 @@ canada_missions_4 = {
 		trigger = {
 			maine_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					unrest = 1
 				}
 			}
 			great_woods_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					unrest = 1
 				}
 			}
 			south_iroquoisia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					unrest = 1
 				}
@@ -4137,7 +4137,7 @@ canada_missions_4 = {
 			massachusetts_bay_area = {
 				limit = {
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -4162,14 +4162,14 @@ canada_missions_4 = {
 						area = cote_nord_area
 					}
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				AND = {
 					area = notre_dame_mountains_area
 					OR = {
 						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 						unrest = 1
 						has_rebel_faction = nationalist_rebels
@@ -4184,7 +4184,7 @@ canada_missions_4 = {
 			}
 			notre_dame_mountains_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					unrest = 1
 				}
@@ -4194,19 +4194,19 @@ canada_missions_4 = {
 			}
 			laurentian_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			lower_canada_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			lower_acadia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			cote_nord_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -4246,7 +4246,7 @@ canada_missions_4 = {
 			mississippi_region = {
 				limit = {
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -4257,7 +4257,7 @@ canada_missions_4 = {
 			great_lakes_region = {
 				limit = {
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -4328,7 +4328,7 @@ canada_missions_5 = {
 				area = lower_canada_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -4336,7 +4336,7 @@ canada_missions_5 = {
 			owns = 2579
 			lower_canada_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -4385,7 +4385,7 @@ canada_missions_5 = {
 						province_id = 2585
 					}
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				AND = {
@@ -4396,7 +4396,7 @@ canada_missions_5 = {
 					}
 					OR = {
 						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							development = 6
@@ -4419,15 +4419,15 @@ canada_missions_5 = {
 			owns = 2583
 			owns = 2585
 			980 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				development = 6
 			}
 			981 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				development = 6
 			}
 			2573 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				development = 6
 			}
 		}
@@ -4533,7 +4533,7 @@ canada_missions_5 = {
 		required_missions = {
 		}
 		provinces_to_highlight = {
-			country_or_non_sovereign_subject_holds = ROOT
+			country_or_subject_holds = ROOT
 			unrest = 1
 		}
 		trigger = {
@@ -4619,13 +4619,13 @@ canada_missions_5 = {
 		provinces_to_highlight = {
 			area = south_iroquoisia_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			south_iroquoisia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			if = {
 				limit = {
@@ -4695,7 +4695,7 @@ canada_missions_5 = {
 			}
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				unrest = 1
 			}
@@ -4706,14 +4706,14 @@ canada_missions_5 = {
 			}
 			great_lakes_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					unrest = 1
 				}
 			}
 			mississippi_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				NOT = {
 					unrest = 1
 				}
@@ -4752,13 +4752,13 @@ colombia_venezuela_missions_1 = {
 		provinces_to_highlight = {
 			area = quito_area
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			quito_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -4775,7 +4775,7 @@ colombia_venezuela_missions_1 = {
 			province_id = 835
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				AND = {
 					NOT = {
@@ -4849,13 +4849,13 @@ colombia_venezuela_missions_2 = {
 		provinces_to_highlight = {
 			area = panama_area
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			panama_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -4878,21 +4878,21 @@ colombia_venezuela_missions_2 = {
 				area = honduras_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			costa_rica_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			nicaragua_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			honduras_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -4936,7 +4936,7 @@ colombia_venezuela_missions_3 = {
 			quito_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -4947,7 +4947,7 @@ colombia_venezuela_missions_3 = {
 			colombia_region = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -5005,33 +5005,33 @@ colombia_venezuela_missions_4 = {
 				area = colombian_amazonas_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			bogota_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			popayan_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			coquivacoa_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			western_llanos = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			central_llanos_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			colombian_amazonas_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -5057,17 +5057,17 @@ colombia_venezuela_missions_4 = {
 				area = guyana_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			suriname_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			guyana_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -5108,25 +5108,25 @@ colombia_venezuela_missions_5 = {
 				area = maracaibo_area
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			venezuela_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			upper_guyana_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			eastern_llanos = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			maracaibo_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -5161,7 +5161,7 @@ gran_colombia_missions_1 = {
 		provinces_to_highlight = {
 			region = carribeans_region
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			NOT = {
 				province_id = 481
@@ -5171,7 +5171,7 @@ gran_colombia_missions_1 = {
 			carribeans_region = {
 				type = all
 				OR = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					province_id = 481
 				}
 			}
@@ -5202,13 +5202,13 @@ gran_colombia_missions_2 = {
 		provinces_to_highlight = {
 			region = central_america_region
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			central_america_region = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -5232,14 +5232,14 @@ gran_colombia_missions_2 = {
 						province_id = 844
 					}
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				AND = {
 					province_id = 4584
 					OR = {
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						AND = {
 							NOT = {
@@ -5296,13 +5296,13 @@ gran_colombia_missions_3 = {
 		provinces_to_highlight = {
 			region = brazil_region
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			brazil_region = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -5324,14 +5324,14 @@ gran_colombia_missions_3 = {
 			continent = south_america
 			is_sea = no
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			south_america = {
 				type = all
 				OR = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					is_sea = yes
 				}
 			}
@@ -5363,13 +5363,13 @@ gran_colombia_missions_4 = {
 		provinces_to_highlight = {
 			region = peru_region
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			peru_region = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -5420,13 +5420,13 @@ gran_colombia_missions_4 = {
 		provinces_to_highlight = {
 			region = upper_peru_region
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			upper_peru_region = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -5604,7 +5604,7 @@ colombia_venezuela_missions_3_2 = {
 		}
 		position = 7
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			region = colombia_region
 			unrest = 0.1
 		}
@@ -6049,7 +6049,7 @@ texas_missions_1 = {
 			}
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				has_owner_religion = no
 				NOT = {
@@ -6063,22 +6063,22 @@ texas_missions_1 = {
 				master_of_mint = 1
 			}
 			884 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				has_owner_religion = yes
 				development = 10
 			}
 			888 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				has_owner_religion = yes
 				development = 10
 			}
 			2499 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				has_owner_religion = yes
 				development = 10
 			}
 			2665 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				has_owner_religion = yes
 				development = 10
 			}
@@ -6131,7 +6131,7 @@ texas_missions_1 = {
 			}
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				AND = {
 					NOT = {
@@ -6145,35 +6145,35 @@ texas_missions_1 = {
 		}
 		trigger = {
 			2498 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				OR = {
 					development = 15
 					has_trade_building_trigger = yes
 				}
 			}
 			2499 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				OR = {
 					development = 15
 					has_trade_building_trigger = yes
 				}
 			}
 			2666 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				OR = {
 					development = 15
 					has_trade_building_trigger = yes
 				}
 			}
 			2668 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				OR = {
 					development = 15
 					has_trade_building_trigger = yes
 				}
 			}
 			4628 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				OR = {
 					development = 15
 					has_trade_building_trigger = yes
@@ -6231,7 +6231,7 @@ texas_missions_2 = {
 		required_missions = {
 		}
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			unrest = 3
 		}
 		trigger = {
@@ -6260,7 +6260,7 @@ texas_missions_2 = {
 			huasteca_area = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -6277,7 +6277,7 @@ texas_missions_2 = {
 			tex_consolidate_authority
 		}
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			has_owner_accepted_culture = yes
 			unrest = 3
 		}
@@ -6527,7 +6527,7 @@ texas_missions_2_native = {
 		provinces_to_highlight = {
 			province_id = 894
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			NOT = {
 				exists = CAD
@@ -6552,7 +6552,7 @@ texas_missions_2_native = {
 			}
 			else = {
 				894 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -6571,7 +6571,7 @@ texas_missions_2_native = {
 				mississippi_plain_area = {
 					limit = {
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							is_core = ROOT
@@ -6660,7 +6660,7 @@ texas_missions_3 = {
 			}
 			OR = {
 				NOT = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				has_owner_culture = no
 			}
@@ -6668,12 +6668,12 @@ texas_missions_3 = {
 		trigger = {
 			texas_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				has_owner_culture = yes
 			}
 			coastal_prarie_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				has_owner_culture = yes
 			}
 		}
@@ -6705,17 +6705,17 @@ texas_missions_3 = {
 				area = rio_grande_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			huasteca_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			rio_grande_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -6742,25 +6742,25 @@ texas_missions_3 = {
 				area = campeche_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			mexico_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			eastern_mexico_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			puebla_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			campeche_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -6770,7 +6770,7 @@ texas_missions_3 = {
 			mexico_region = {
 				limit = {
 					NOT = {
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					NOT = {
 						is_core = ROOT
@@ -6880,7 +6880,7 @@ texas_missions_3 = {
 				region = mexico_region
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -6888,15 +6888,15 @@ texas_missions_3 = {
 			stability = 3
 			rio_grande_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			california_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			mexico_region = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -6962,17 +6962,17 @@ texas_missions_4 = {
 				area = arizona_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			new_mexico_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			arizona_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -6998,7 +6998,7 @@ texas_missions_4 = {
 				area = arizona_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -7010,11 +7010,11 @@ texas_missions_4 = {
 			}
 			new_mexico_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			arizona_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -7044,21 +7044,21 @@ texas_missions_4 = {
 				area = central_valley_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			northern_california_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			california_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			central_valley_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -7079,7 +7079,7 @@ texas_missions_4 = {
 					province_id = 2479
 					OR = {
 						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							num_of_times_improved = 5
@@ -7101,11 +7101,11 @@ texas_missions_4 = {
 		}
 		trigger = {
 			2479 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				num_of_times_improved = 5
 			}
 			2480 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				num_of_times_improved = 5
 				base_production = 10
 			}

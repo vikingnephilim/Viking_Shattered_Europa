@@ -44,7 +44,7 @@ inc_mission_group = {
 		
 		provinces_to_highlight = {
 			area = huanuco_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
@@ -53,7 +53,7 @@ inc_mission_group = {
 			}
 			huanuco_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		

@@ -13,12 +13,12 @@ alb_1 = {
 		required_missions = { }
 		provinces_to_highlight = {
 			province_id = 4175
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			is_subject = no
 			stability = 1
-			4175 = { owned_by = ROOT }
+			4175 = { country_or_subject_holds = ROOT }
 			army_size_percentage = 1
 		}
 		effect = {
@@ -34,7 +34,7 @@ alb_1 = {
 		provinces_to_highlight = {
 			province_id = 4175
 			OR = {
-				NOT = {	owned_by = ROOT }
+				NOT = {	country_or_subject_holds = ROOT }
 				NOT = {	is_core = ROOT }
 			}
 		}
@@ -215,14 +215,14 @@ alb_1 = {
 		provinces_to_highlight = {
 			area = albania_area
 			OR = {
-				NOT = {	owned_by = ROOT }
+				NOT = {	country_or_subject_holds = ROOT }
 				NOT = {	is_core = ROOT }
 			}
 		}
 		trigger = {
 			albania_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 		}

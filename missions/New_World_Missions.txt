@@ -183,20 +183,20 @@ new_world_natives_missions_slot1 = {
 				home_trade_node_effect_scope = {
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						save_event_target_as = reward_province
 					}
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							is_capital = yes
 						}
 						save_event_target_as = reward_province
 					}
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							development = CAPITAL
 							is_capital = no
 						}
@@ -204,7 +204,7 @@ new_world_natives_missions_slot1 = {
 					}
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							development = CAPITAL
 							is_capital = no
 							development = 20
@@ -213,7 +213,7 @@ new_world_natives_missions_slot1 = {
 					}
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							development = CAPITAL
 							is_capital = no
 							development = 25
@@ -222,7 +222,7 @@ new_world_natives_missions_slot1 = {
 					}
 					random_trade_node_member_province = {
 						limit = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							development = CAPITAL
 							is_capital = no
 							development = 30
@@ -279,7 +279,7 @@ new_world_natives_missions_slot2 = {
 				add_base_production = 1
 				add_base_manpower = 1
 				area = {
-					limit = { owned_by = ROOT }
+					limit = { country_or_subject_holds = ROOT }
 					add_province_modifier = {
 						name = "growth_of_capital"
 						duration = 9125 #25 years
@@ -399,7 +399,7 @@ new_world_natives_missions_slot4 = {
 			area_for_scope_province = {
 				is_capital_of = ROOT
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			capital_scope = {
@@ -433,7 +433,7 @@ new_world_natives_missions_slot4 = {
 			region_for_scope_province = {
 				is_capital_of = ROOT
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			capital_scope = {
@@ -578,7 +578,7 @@ new_world_natives_missions_slot5 = {
 		position = 5
 		required_missions = { native_unite_home_area }
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			unrest = 2
 		}
 		trigger = {

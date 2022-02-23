@@ -22,7 +22,7 @@ shan_1 = {
 		required_missions = { }
 		provinces_to_highlight = {
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			OR = {
 				owner = {
@@ -79,7 +79,7 @@ shan_1 = {
 					NOT = {
 						is_core = ROOT
 					}
-					NOT = { owned_by = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 				add_permanent_claim = ROOT
 			}
@@ -137,7 +137,7 @@ shan_1 = {
 				area = upper_burma_area
 				area = central_burma_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			OR = {
@@ -145,11 +145,11 @@ shan_1 = {
 				AND = {
 					upper_burma_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					central_burma_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}

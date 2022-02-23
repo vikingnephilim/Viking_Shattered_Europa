@@ -57,7 +57,7 @@ mnd_maj_1 = {
 		required_missions = { mnd_maj_end_disaster }
 		provinces_to_highlight = {
 			is_capital = yes
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			NOT = { development = 50 }
 		}
 		position = 3
@@ -133,7 +133,7 @@ mnd_maj_1 = {
 						area = johor_area
 					}
 					NOT = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				AND = {
@@ -156,7 +156,7 @@ mnd_maj_1 = {
 			calc_true_if = {
 				amount = 12
 				all_province = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					OR = {
 						area = malacca_area
 						area = north_malaya_area
@@ -224,23 +224,23 @@ mnd_maj_2 = {
 				province_id = 4794
 			}
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			central_java_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			surabaya_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2691 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4794 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -322,7 +322,7 @@ mnd_maj_2 = {
 				area = sabah_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -335,7 +335,7 @@ mnd_maj_2 = {
 			calc_true_if = {
 				amount = 15
 				all_province = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					OR = {
 						area = kutai_area
 						area = brunei_area
@@ -347,7 +347,7 @@ mnd_maj_2 = {
 			}
 			brunei_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -362,7 +362,7 @@ mnd_maj_2 = {
 				region = malaya_region
 				region = indonesia_region
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			tag = MSA
@@ -379,13 +379,13 @@ mnd_maj_2 = {
 				region = indo_china_region
 				region = burma_region
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			calc_true_if = {
 				amount = 50
 				all_province = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					OR = {
 						region = indo_china_region
 						region = burma_region
@@ -416,7 +416,7 @@ mnd_maj_3 = {
 		icon = mission_buddhist_monk_praying
 		required_missions = { }
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			unrest = 2
 		}
 		trigger = {
@@ -512,7 +512,7 @@ mnd_maj_3 = {
 			OR = {
 				AND = {
 					area = north_sumatra_area
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 				AND = {
 					is_capital = yes
@@ -580,7 +580,7 @@ mnd_maj_3 = {
 			}
 			north_sumatra_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				owner = {
 					religion = ROOT
 				}
@@ -635,7 +635,7 @@ mnd_maj_3 = {
 					OR = {
 						is_empty = yes
 						AND = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							is_colony = yes
 						}
 					}
@@ -658,7 +658,7 @@ mnd_maj_3 = {
 				area = makassar_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -670,7 +670,7 @@ mnd_maj_3 = {
 			}
 			makassar_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -701,7 +701,7 @@ mnd_maj_3 = {
 					OR = {
 						is_empty = yes
 						AND = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							is_colony = yes
 						}
 					}
@@ -744,7 +744,7 @@ mnd_maj_3 = {
 					OR = {
 						is_empty = yes
 						AND = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 							is_colony = yes
 						}
 					}
@@ -786,7 +786,7 @@ mnd_maj_4 = {
 						area = banten_area
 						area = west_java_area
 					}
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 			}
 		}
@@ -802,11 +802,11 @@ mnd_maj_4 = {
 				AND = {
 					banten_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					west_java_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
@@ -836,7 +836,7 @@ mnd_maj_4 = {
 			if = {
 				limit = {
 					624 = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				624 = {
@@ -846,7 +846,7 @@ mnd_maj_4 = {
 			if = {
 				limit = {
 					4791 = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				4791 = {
@@ -856,7 +856,7 @@ mnd_maj_4 = {
 			if = {
 				limit = {
 					2688 = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				2688 = {
@@ -866,7 +866,7 @@ mnd_maj_4 = {
 			if = {
 				limit = {
 					630 = {
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 				630 = {
@@ -1059,7 +1059,7 @@ mnd_maj_4 = {
 			}
 			else = {
 				667 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}

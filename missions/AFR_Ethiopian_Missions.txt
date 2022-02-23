@@ -257,15 +257,15 @@ ethiopia_policy_with_the_cushitic_people = {
 				area = southern_ethiopia_area
 				area = hadiya_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			southern_ethiopia_area = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				type = all
 			}
 			hadiya_area = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				type = all
 			}
 		}
@@ -302,19 +302,19 @@ ethiopia_policy_with_the_cushitic_people = {
 				province_id = 2757
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { base_production = 6 }
 				NOT = { is_core = ROOT }
 			}
 		}
 		trigger = {
 			2762 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 				base_production = 6
 			}
 			2757 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 				base_production = 6
 			}
@@ -395,7 +395,7 @@ ethiopia_religion_slot = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 					controlled_by = REB
 				}
 				owned_by = BTI	#For the case the player releases Semien
@@ -430,7 +430,7 @@ ethiopia_religion_slot = {
 		position = 2
 		provinces_to_highlight = {
 			NOT = { religion = ROOT }
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 		}
 		trigger = {
 			religious_unity = 0.75
@@ -541,7 +541,7 @@ ethiopia_religion_slot = {
 			province_id = 1234
 			OR = {
 				NOT = { religion = ROOT }
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 			}
 			has_discovered = ROOT
 		}
@@ -573,7 +573,7 @@ ethiopia_religion_slot = {
 			province_id = 358
 			OR = {
 				NOT = { religion = ROOT }
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 			}
 			has_discovered = ROOT
 		}
@@ -620,7 +620,7 @@ ethiopia_religion_slot = {
 			province_id = 2313
 			OR = {
 				NOT = { religion = ROOT }
-				NOT = { country_or_non_sovereign_subject_holds = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 			}
 			has_discovered = ROOT
 		}
@@ -778,7 +778,7 @@ ethiopia_trade_slot = {
 				area = dongola_area
 				area = lower_nubia_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -807,7 +807,7 @@ ethiopia_trade_slot = {
 		position = 3
 		provinces_to_highlight = {
 			province_id = 1232
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			owns_or_non_sovereign_subject_of = 1232
@@ -880,7 +880,7 @@ ethiopia_slot_aksumite_empire = {
 		provinces_to_highlight = {
 			province_id = 1227
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_core = ROOT }
 				NOT = { num_of_times_improved = 5 }
 			}
@@ -888,7 +888,7 @@ ethiopia_slot_aksumite_empire = {
 		trigger = {
 			1227 = {
 				is_core = ROOT
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				num_of_times_improved = 5
 			}
 		}
@@ -933,7 +933,7 @@ ethiopia_slot_aksumite_empire = {
 		provinces_to_highlight = {
 			province_id = 1230
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { num_of_times_improved = 5 }
 			}
 		}
@@ -1051,12 +1051,12 @@ ethiopia_slot_aksumite_empire = {
 		position = 4
 		provinces_to_highlight = {
 			region = horn_of_africa_region
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			horn_of_africa_region = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -1099,7 +1099,7 @@ ethiopia_slot_aksumite_empire = {
 				area = yemen_area
 				area = hadramut_area
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			owns = 387
@@ -1183,7 +1183,7 @@ ethiopia_slot_aksumite_empire = {
 		position = 6
 		provinces_to_highlight = {
 			region = arabia_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {

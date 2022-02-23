@@ -12,11 +12,11 @@ lxa_1 = {
 		required_missions = { }
 		provinces_to_highlight = {
 			province_id = 1844
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			1844 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -59,16 +59,16 @@ lxa_1 = {
 				area = vietnam_area
 				area = red_river_delta_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			vietnam_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			red_river_delta_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -81,12 +81,12 @@ lxa_1 = {
 		required_missions = { }
 		provinces_to_highlight = {
 			area = northern_thai_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			northern_thai_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}		
 		}
 		effect = {
@@ -128,16 +128,16 @@ lxa_1 = {
 				area = central_thai_area
 				area = sukhothai_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			central_thai_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}		
 			sukhothai_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -160,7 +160,7 @@ lxa_1 = {
 						area = champasak_area
 						area = vientiane_area
 					}
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 			}
 		}
@@ -178,15 +178,15 @@ lxa_1 = {
 			NOT = { exists = LUA }
 			north_laos_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			champasak_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			vientiane_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -223,7 +223,7 @@ lxa_2 = {
 			}
 			else = {
 				609 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -275,20 +275,20 @@ lxa_2 = {
 				area = mekong_area
 				area = angkor_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			cambodia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			mekong_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			angkor_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -303,7 +303,7 @@ lxa_2 = {
 				has_province_modifier = emerald_buddha
 				has_province_modifier = emerald_buddha_alternate
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			any_owned_province = {
@@ -332,7 +332,7 @@ lxa_2 = {
 		required_missions = { lxa_buddha }
 		provinces_to_highlight = {
 			religion = animism
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 		}
 		trigger = {
 			religious_unity = 0.9

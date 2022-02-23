@@ -74,18 +74,18 @@ palatinate_conquest_group = {
 				province_id = 1757
 			}
 			OR = {
-				NOT = { owned_by = root }
+				NOT = { country_or_subject_holds = ROOT }
 				is_in_capital_area = no
 			}
 		}
 		
 		trigger = {
 			77 = {
-				owned_by = root
+				country_or_subject_holds = ROOT
 				is_in_capital_area = yes
 			}
 			1757 = {
-				owned_by = root
+				country_or_subject_holds = ROOT
 				is_in_capital_area = yes
 			}
 		}
@@ -219,7 +219,7 @@ palatinate_conquest_group = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 
 		trigger = {
@@ -334,7 +334,7 @@ palatinate_conquest_group = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 
 		trigger = {
@@ -502,15 +502,15 @@ palatinate_other_group = {
 		trigger = {
 			bohemia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_subject_holds = ROOT
 			}
 			moravia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_subject_holds = ROOT
 			}
 			erzgebirge_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -659,7 +659,7 @@ palatinate_other_group = {
 								NOT = { is_permanent_claim = root }
 								NOT = { is_core = root }
 								any_neighbor_province = {
-									owned_by = root
+									country_or_subject_holds = ROOT
 								}
 							}
 							add_permanent_claim = root
@@ -731,7 +731,7 @@ palatinate_other_group = {
 								NOT = { is_permanent_claim = root }
 								NOT = { is_core = root }
 								any_neighbor_province = {
-									owned_by = root
+									country_or_subject_holds = ROOT
 								}
 							}
 							add_permanent_claim = root

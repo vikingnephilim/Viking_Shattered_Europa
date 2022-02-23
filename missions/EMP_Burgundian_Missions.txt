@@ -24,15 +24,15 @@ emp_burgundy_1 = {
 				province_id = 191
 				province_id = 181
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			191 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			181 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -62,19 +62,19 @@ emp_burgundy_1 = {
 				province_id = 205
 				province_id = 4719
 			}
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			romandie_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			205 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			4719 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -109,7 +109,7 @@ emp_burgundy_1 = {
 				area = savoy_dauphine_area
 				province_id = 102
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			NOT = {
 				ROOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -198,7 +198,7 @@ emp_burgundy_1 = {
 				}
 				province_id = 104
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
@@ -291,7 +291,7 @@ emp_lotharingia_1 = {
 				province_id = 112
 				province_id = 116
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			owns_or_non_sovereign_subject_of = 101
@@ -350,7 +350,7 @@ emp_burgundy_2 = {
 						area = north_brabant_area
 						area = holland_area
 					}
-					NOT = { owned_by = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 					NOT = {
 						ROOT = {
 							num_of_owned_provinces_with = {
@@ -384,7 +384,7 @@ emp_burgundy_2 = {
 		effect = {
 			add_dip_power = 50
 			low_countries_region = {
-				limit = { owned_by = root }
+				limit = { country_or_subject_holds = ROOT }
 				add_province_modifier = {
 					name = bur_realm_united_mod
 					duration = 7300
@@ -399,7 +399,7 @@ emp_burgundy_2 = {
 		provinces_to_highlight = {
 			region = low_countries_region
 			OR = {
-				NOT = { owned_by = root }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_core = root }
 			}
 		}
@@ -416,7 +416,7 @@ emp_burgundy_2 = {
 			}
 			low_countries_region = {
 				type = all
-				owned_by = root
+				country_or_subject_holds = ROOT
 				is_core = root
 			}
 		}
@@ -448,7 +448,7 @@ emp_burgundy_2 = {
 					}
 					province_has_center_of_trade_of_level = 1
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { country_or_subject_holds = ROOT }
 						NOT = { province_has_center_of_trade_of_level = 2 }
 					}
 					ROOT = {
@@ -470,7 +470,7 @@ emp_burgundy_2 = {
 					}
 					province_has_center_of_trade_of_level = 1
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { country_or_subject_holds = ROOT }
 						AND = {
 							NOT = { has_building = trade_depot }
 							NOT = { has_building = stock_exchange }
@@ -576,13 +576,13 @@ emp_burgundy_3 = {
 		
 		provinces_to_highlight = {
 			area = lorraine_area
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			lorraine_area = {
 				type = all
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -613,21 +613,21 @@ emp_burgundy_3 = {
 				province_id = 2974
 				province_id = 1742
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			93 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1878 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			2974 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1742 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -653,13 +653,13 @@ emp_burgundy_3 = {
 		
 		provinces_to_highlight = {
 			area = frisia_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			frisia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		
@@ -1231,7 +1231,7 @@ emp_burgundy_4 = {
 				}
 				province_id = 183 #Paris
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			owns_core_province = 183 #Paris
@@ -1469,7 +1469,7 @@ emp_burgundy_4 = {
 				region = north_german_region
 				region = south_german_region
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			if = {
@@ -1547,7 +1547,7 @@ emp_lotharingia_4 = {
 				area = inner_austria_area
 				area = carinthia_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			NOT = {
 				ROOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -1683,7 +1683,7 @@ emp_burgundy_5 = {
 		required_missions = { emp_bur_papal_relations }
 		provinces_to_highlight = {
 			is_capital = yes
-			NOT = { owned_by = root }
+			NOT = { country_or_subject_holds = ROOT }
 			owner = {
 				OR = {
 					is_rival = TUR
@@ -1927,7 +1927,7 @@ emp_burgundy_5 = {
 				province_id = 189
 			}
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_core = ROOT }
 			}
 		}
@@ -2089,7 +2089,7 @@ emp_lotharingia_5 = {
 				area = lower_saxony_area
 				area = braunschweig_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			NOT = {
 				ROOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {

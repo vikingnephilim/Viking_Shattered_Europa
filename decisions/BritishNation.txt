@@ -115,6 +115,14 @@ country_decisions = {
 				}
 			}
 			change_tag = GBR
+			if = {
+				limit = {
+					NOT = {
+						government = monarchy
+					}
+				}
+				change_government_to_monarchy = yes
+			}
 			add_government_reform = british_monarchy
 			set_country_flag = aberffraw_estate
 			set_country_flag = stuart_estate
@@ -321,8 +329,14 @@ country_decisions = {
 				}
 			}
 			change_tag = GBR
-			add_government_reform = british_monarchy
-			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = {
+						government = monarchy
+					}
+				}
+				change_government_to_monarchy = yes
+			}
 			add_government_reform = british_monarchy
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {

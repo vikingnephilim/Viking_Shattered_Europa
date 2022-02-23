@@ -203,7 +203,7 @@ kongo_catholic_missions_slot = {
 			NOT = {
 				religion = catholic
 			}
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 		}
 		trigger = {
 			religion = catholic
@@ -231,7 +231,7 @@ kongo_catholic_missions_slot = {
 		}
 		position = 2
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			OR = {
 				NOT = {
 					religion = catholic
@@ -659,7 +659,7 @@ kongo_conquest_armies_missions_slot = {
 			province_id = 1169
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					is_core = ROOT
@@ -689,7 +689,7 @@ kongo_conquest_armies_missions_slot = {
 		provinces_to_highlight = {
 			culture = kuba
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -699,7 +699,7 @@ kongo_conquest_armies_missions_slot = {
 					any_province = {
 						culture = kuba
 						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 				}
@@ -746,7 +746,7 @@ kongo_conquest_armies_missions_slot = {
 				province_id = 4099
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -982,7 +982,7 @@ kongo_conquest_missions_slot = {
 				culture = mbangala
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -992,7 +992,7 @@ kongo_conquest_missions_slot = {
 					any_province = {
 						culture = yaka
 						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 				}
@@ -1003,7 +1003,7 @@ kongo_conquest_missions_slot = {
 					any_province = {
 						culture = mbangala
 						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 				}
@@ -1048,7 +1048,7 @@ kongo_conquest_missions_slot = {
 				culture = lunda
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -1058,7 +1058,7 @@ kongo_conquest_missions_slot = {
 					any_province = {
 						culture = chokwe
 						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 				}
@@ -1069,7 +1069,7 @@ kongo_conquest_missions_slot = {
 					any_province = {
 						culture = lunda
 						NOT = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 						}
 					}
 				}
@@ -1113,7 +1113,7 @@ kongo_conquest_missions_slot = {
 		provinces_to_highlight = {
 			culture_group = kongo_group
 			NOT = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			NOT = {
 				is_core = ROOT
@@ -1132,7 +1132,7 @@ kongo_conquest_missions_slot = {
 					any_province = {
 						culture_group = kongo_group
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							is_core = ROOT
@@ -1180,7 +1180,7 @@ kongo_conquest_missions_slot = {
 		provinces_to_highlight = {
 			superregion = southern_africa_superregion
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -1245,7 +1245,7 @@ kongo_colonies_centralization_missions_slot = {
 					NOT = {
 						development = 10
 					}
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				AND = {
 					province_id = 1170
@@ -1254,7 +1254,7 @@ kongo_colonies_centralization_missions_slot = {
 							development = 30
 						}
 						NOT = {
-							owned_by = ROOT
+							country_or_subject_holds = ROOT
 						}
 						NOT = {
 							is_core = ROOT
@@ -1296,7 +1296,7 @@ kongo_colonies_centralization_missions_slot = {
 				province_id = 1172
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -1421,14 +1421,14 @@ kongo_colonies_centralization_missions_slot = {
 				kongo_region = {
 					limit = {
 						is_state = yes
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					add_local_autonomy = -100
 				}
 				central_africa_region = {
 					limit = {
 						is_state = yes
-						owned_by = ROOT
+						country_or_subject_holds = ROOT
 					}
 					add_local_autonomy = -100
 				}

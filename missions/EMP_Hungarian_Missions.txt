@@ -18,7 +18,7 @@ emp_hun_religion_branch_1 = {
 		icon = fund_the_monasteries
 		required_missions = {  }
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			has_tax_building_trigger = no
 			ROOT = {
 				NOT = {
@@ -48,7 +48,7 @@ emp_hun_religion_branch_1 = {
 		icon = spread_piety
 		required_missions = { emp_hun_fund_monasteries }
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			NOT = { religion = ROOT }
 		}
 		trigger = {
@@ -84,7 +84,7 @@ emp_hun_poland_branch = {
 				area = red_ruthenia_area
 				area = sandomierz_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			OR = {
@@ -186,7 +186,7 @@ emp_hun_poland_branch = {
 				area = wielkopolska_area
 				area = kuyavia_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -247,7 +247,7 @@ emp_hun_black_army_branch = {
 				land_morale = root
 				NOT = { is_subject_of = root }
 			}
-			NOT = { owned_by = root }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			OR = {
@@ -330,7 +330,7 @@ emp_hun_economy_branch = {
 			province_id = 1772
 			NOT = {
 				AND = {
-					owned_by = root
+					country_or_subject_holds = ROOT
 					is_state_core = root
 					development = 25
 					has_building = university
@@ -519,7 +519,7 @@ emp_hun_bohemia_austria_branch = {
 				area = silesia_area
 				area = lusatia_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -595,16 +595,16 @@ emp_hun_bohemia_austria_branch = {
 				area = bohemia_area
 				area = erzgebirge_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = { #8 provinces so fine for demanding all
 			bohemia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			erzgebirge_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			is_subject = no
 			NOT = { active_imperial_incident = any }
@@ -734,7 +734,7 @@ emp_hun_bohemia_austria_branch_2 = {
 						area = inner_austria_area
 						area = carinthia_area
 					}
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 					NOT = {
 						ROOT = {
 							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -750,7 +750,7 @@ emp_hun_bohemia_austria_branch_2 = {
 				}
 				AND = {
 					province_id = 134
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 			}
 		}

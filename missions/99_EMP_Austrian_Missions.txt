@@ -30,7 +30,7 @@ emp_hab_netherlands_branch = {
 					}
 				}
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -380,11 +380,11 @@ emp_hab_netherlands_branch = {
 							superregion = india_superregion
 							superregion = east_indies_superregion
 						}
-						NOT = { owned_by = root }
+						NOT = { country_or_subject_holds = ROOT }
 						NOT = { is_core = root }
 						NOT = { is_claim = root }
 						any_neighbor_province = {
-							owned_by = root
+							country_or_subject_holds = ROOT
 						}
 					}
 					add_permanent_claim = root
@@ -510,7 +510,7 @@ emp_hab_develop_hungary_bohemia_branch = {
 						area = alfold_area
 					}
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { country_or_subject_holds = ROOT }
 						NOT = { development = 10 }
 					}
 				}

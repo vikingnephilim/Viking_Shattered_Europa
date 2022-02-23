@@ -22,7 +22,7 @@ mnd_pegu_1 = {
 			}
 			OR = {
 				NOT = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				NOT = {
 					development = 20
@@ -33,11 +33,11 @@ mnd_pegu_1 = {
 			has_estate_privilege = estate_burghers_tropical_nation
 			590 = {
 				development = 20
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 			586 = {
 				development = 20
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -94,7 +94,7 @@ mnd_pegu_1 = {
 		provinces_to_highlight = {
 			area = north_sumatra_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -109,7 +109,7 @@ mnd_pegu_1 = {
 			}
 			north_sumatra_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -134,13 +134,13 @@ mnd_pegu_1 = {
 		}
 		trigger = {
 			596 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			620 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			622 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			1361 = {
 				is_strongest_trade_power = ROOT
@@ -182,13 +182,13 @@ mnd_pegu_2 = {
 		provinces_to_highlight = {
 			area = arakan_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			arakan_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -217,17 +217,17 @@ mnd_pegu_2 = {
 				area = east_bengal_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			west_bengal_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			east_bengal_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -257,13 +257,13 @@ mnd_pegu_3 = {
 		provinces_to_highlight = {
 			area = northern_thai_area
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			northern_thai_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -341,7 +341,7 @@ mnd_pegu_3 = {
 				area = khorat_area
 			}
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -354,7 +354,7 @@ mnd_pegu_3 = {
 						area = north_tenasserim_area
 						area = khorat_area
 					}
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -383,7 +383,7 @@ mnd_pegu_3 = {
 		icon = mission_mnd_siam_subjugate_vietnam
 		required_missions = { mnd_peg_dvarati }
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			NOT = { culture = mon }
 		}
 		trigger = {
@@ -424,7 +424,7 @@ mnd_pegu_4 = {
 				province_id = 585
 				province_id = 4396
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			army_size_percentage = 0.9
@@ -432,8 +432,8 @@ mnd_pegu_4 = {
 				NOT = { exists = AVA }
 				army_size = AVA
 			}
-			585 = { country_or_non_sovereign_subject_holds = ROOT }
-			4396 = { country_or_non_sovereign_subject_holds = ROOT }
+			585 = { country_or_subject_holds = ROOT }
+			4396 = { country_or_subject_holds = ROOT }
 		}
 		effect = {
 			if = {
@@ -480,16 +480,16 @@ mnd_pegu_4 = {
 				area = central_burma_area
 				area = upper_burma_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			central_burma_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			upper_burma_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -577,7 +577,7 @@ mnd_pegu_5 = {
 		required_missions = {  }
 		provinces_to_highlight = {
 			NOT = { has_building = temple }
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 		}
 		trigger = {
 			temple = 5

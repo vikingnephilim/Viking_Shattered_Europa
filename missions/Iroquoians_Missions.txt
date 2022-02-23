@@ -18,7 +18,7 @@ iroquoians_1 = {
 		icon = mission_iroquois_the_great_peacemaker
 		required_missions = {	}
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 		}
 		position = 1
 		
@@ -249,7 +249,7 @@ iroquoians_2 = {
 		icon = mission_iroquois_the_three_sisters
 		required_missions = {	}
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			NOT = { unrest = 2 }
 		}
 		position = 1
@@ -267,7 +267,7 @@ iroquoians_2 = {
 			}
 			northeast_america_region = {
 				limit = {
-					owned_by = ROOT
+					country_or_subject_holds = ROOT
 				}
 				add_unrest = -1
 			}
@@ -278,7 +278,7 @@ iroquoians_2 = {
 		icon = mission_iroquois_food_surplus
 		required_missions = { iroquois_the_three_sisters }
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			trade_goods = grain
 			NOT = { has_building = workshop }
 			NOT = { has_building = native_storehouse }
@@ -319,27 +319,27 @@ iroquoians_2 = {
 		}
 		trigger = {
 			968 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			959 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			960 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			958 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			961 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 			964 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_core = ROOT
 			}
 		}

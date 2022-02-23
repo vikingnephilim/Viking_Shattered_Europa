@@ -49,7 +49,7 @@ bri_1 = {
 		required_missions = { bri_build_alliances }
 		provinces_to_highlight = {
 			area = loire_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -72,12 +72,12 @@ bri_1 = {
 		required_missions = { bri_expand_up_the_loire }
 		provinces_to_highlight = {
 			area = normandy_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			normandy_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -114,7 +114,7 @@ bri_1 = {
 				area = ile_de_france_area
 				area = orleans_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			owns_core_province = 183
@@ -123,11 +123,11 @@ bri_1 = {
 				AND = {
 					ile_de_france_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 					orleans_area = {
 						type = all
-						country_or_non_sovereign_subject_holds = ROOT
+						country_or_subject_holds = ROOT
 					}
 				}
 			}
@@ -159,13 +159,13 @@ bri_2 = {
 			province_id = 170
 			OR = {
 				has_dock_building_trigger = no
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { controlled_by = ROOT }
 			}
 		}
 		trigger = {
 			170 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				controlled_by = ROOT
 				has_dock_building_trigger = yes
 			}
@@ -206,7 +206,7 @@ bri_2 = {
 		required_missions = { bri_brest }
 		provinces_to_highlight = {
 			colonial_region = colonial_canada
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 			has_port = yes
 			has_discovered = root
 		}
@@ -232,7 +232,7 @@ bri_2 = {
 		required_missions = { bri_new_brittany }
 		provinces_to_highlight = {
 			colonial_region = colonial_the_carribean
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = root
 		}
 		trigger = {

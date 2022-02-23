@@ -21,7 +21,7 @@ ajuuran_asian_trade_slot = {
 		provinces_to_highlight = {
 			OR = {
 				AND = {
-					NOT = { owned_by = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 					province_id = 1205
 				}
 				owned_by = MDI
@@ -47,7 +47,7 @@ ajuuran_asian_trade_slot = {
 		position = 3
 		provinces_to_highlight = {
 			trade_goods = gold
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			has_discovered = ROOT
 		}
 		trigger = {
@@ -294,7 +294,7 @@ ajuuran_internal_slot = {
 		}
 		position = 2
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			NOT = { num_of_times_improved_by_owner = 2 }
 		}
 		trigger = {
@@ -318,7 +318,7 @@ ajuuran_internal_slot = {
 		position = 3
 		provinces_to_highlight = {
 			province_id = 1248
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			owns_or_non_sovereign_subject_of = 1248
@@ -355,7 +355,7 @@ ajuuran_internal_slot = {
 		provinces_to_highlight = {
 			province_id = 2776
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_core = ROOT }
 				NOT = { infantry_in_province = 20 }
 				NOT = { infantry_in_province = ROOT }
@@ -392,7 +392,7 @@ ajuuran_internal_slot = {
 		position = 5
 		provinces_to_highlight = {
 			province_id = 613
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 			owner = {
 				NOT = {
 					has_opinion = {
@@ -453,7 +453,7 @@ ajuuran_own_trade_slot = {
 		required_missions = {  }
 		position = 1
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			has_trade_building_trigger = no
 		}
 		trigger = {
@@ -490,11 +490,11 @@ ajuuran_own_trade_slot = {
 		position = 3
 		provinces_to_highlight = {
 			province_id = 1186
-			NOT = { owned_by = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			1186 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				is_in_capital_area = yes
 			}
 		}
@@ -773,7 +773,7 @@ ajuuran_defense_slot = {
 		required_missions = {  }
 		position = 5
 		provinces_to_highlight = {
-			owned_by = ROOT
+			country_or_subject_holds = ROOT
 			culture = oromo
 		}
 		trigger = {
@@ -855,7 +855,7 @@ ajuuran_offense_slot = {
 				area = somaliland_area
 				province_id = 2778
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -902,7 +902,7 @@ ajuuran_offense_slot = {
 				area = ifat_area
 				area = aussa_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -963,7 +963,7 @@ ajuuran_offense_slot = {
 				area = central_ethiopia_area
 				area = tigray_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			owns_core_province = 2761			
@@ -1005,11 +1005,11 @@ ajuuran_offense_slot = {
 		position = 5
 		provinces_to_highlight = {
 			region = horn_of_africa_region
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			horn_of_africa_region = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 				type = all
 			}
 		}

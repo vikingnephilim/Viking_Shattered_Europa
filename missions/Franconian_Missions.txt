@@ -27,7 +27,7 @@ franconia_conquest_group_1 = {
 				area = upper_franconia_area
 			}
 			OR = {
-				NOT = { owned_by = root }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_core = root }
 			}
 			ROOT = {
@@ -58,14 +58,14 @@ franconia_conquest_group_1 = {
 		effect = {
 			franconia_area = {
 				limit = {
-					NOT = { owned_by = root }
+					NOT = { country_or_subject_holds = ROOT }
 					NOT = { is_permanent_claim = root }
 				}
 				add_permanent_claim = root
 			}
 			upper_franconia_area = {
 				limit = {
-					NOT = { owned_by = root }
+					NOT = { country_or_subject_holds = ROOT }
 					NOT = { is_permanent_claim = root }
 				}
 				add_permanent_claim = root
@@ -98,14 +98,14 @@ franconia_conquest_group_1 = {
 		effect = {
 			hesse_area = {
 				limit = {
-					NOT = { owned_by = root }
+					NOT = { country_or_subject_holds = ROOT }
 					NOT = { is_permanent_claim = root }
 				}
 				add_permanent_claim = root
 			}
 			palatinate_area = {
 				limit = {
-					NOT = { owned_by = root }
+					NOT = { country_or_subject_holds = ROOT }
 					NOT = { is_permanent_claim = root }
 				}
 				add_permanent_claim = root
@@ -113,7 +113,7 @@ franconia_conquest_group_1 = {
 			83 = {
 				if = {
 					limit = {
-						NOT = { owned_by = root }
+						NOT = { country_or_subject_holds = ROOT }
 						NOT = { is_permanent_claim = root }
 					}
 					add_permanent_claim = root
@@ -130,7 +130,7 @@ franconia_conquest_group_1 = {
 				AND = {
 					province_id = 1876
 					OR = {
-						NOT = { owned_by = root }
+						NOT = { country_or_subject_holds = ROOT }
 						NOT = { is_core = root }
 					}
 				}
@@ -140,7 +140,7 @@ franconia_conquest_group_1 = {
 						area = palatinate_area
 						province_id = 83
 					}
-					NOT = { country_or_non_sovereign_subject_holds = root }
+					NOT = { country_or_subject_holds = ROOT }
 					ROOT = {
 						NOT = {
 							num_of_owned_provinces_with = {
@@ -160,7 +160,7 @@ franconia_conquest_group_1 = {
 				area = palatinate_area
 				province_id = 83
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
@@ -183,21 +183,21 @@ franconia_conquest_group_1 = {
 
 			upper_bavaria_area = {
 				limit = {
-					NOT = { owned_by = root }
+					NOT = { country_or_subject_holds = ROOT }
 					NOT = { is_permanent_claim = root }
 				}
 				add_permanent_claim = root
 			}
 			lower_bavaria_area = {
 				limit = {
-					NOT = { owned_by = root }
+					NOT = { country_or_subject_holds = ROOT }
 					NOT = { is_permanent_claim = root }
 				}
 				add_permanent_claim = root
 			}
 			east_bavaria_area = {
 				limit = {
-					NOT = { owned_by = root }
+					NOT = { country_or_subject_holds = ROOT }
 					NOT = { is_permanent_claim = root }
 				}
 				add_permanent_claim = root
@@ -214,7 +214,7 @@ franconia_conquest_group_1 = {
 					NOT = { area = lower_bavaria_area }
 					NOT = { area = east_bavaria_area }
 					NOT = { is_claim = root }
-					NOT = { country_or_non_sovereign_subject_holds = root }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 				add_claim = root
 			}
@@ -232,7 +232,7 @@ franconia_conquest_group_1 = {
 						area = lower_bavaria_area
 						area = east_bavaria_area
 					}
-					NOT = { country_or_non_sovereign_subject_holds = root }
+					NOT = { country_or_subject_holds = ROOT }
 					ROOT = {
 						NOT = {
 							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -253,7 +253,7 @@ franconia_conquest_group_1 = {
 						owned_by = UBV
 						owned_by = BAV
 					}
-					NOT = { country_or_non_sovereign_subject_holds = root }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 			}
 		}
@@ -318,28 +318,28 @@ franconia_conquest_group_1 = {
 			
 			lorraine_area = {
 				limit = {
-					NOT = { owned_by = root }
+					NOT = { country_or_subject_holds = ROOT }
 					NOT = { is_permanent_claim = root }
 				}
 				add_permanent_claim = root
 			}
 			champagne_area = {
 				limit = {
-					NOT = { owned_by = root }
+					NOT = { country_or_subject_holds = ROOT }
 					NOT = { is_permanent_claim = root }
 				}
 				add_permanent_claim = root
 			}
 			ile_de_france_area = {
 				limit = {
-					NOT = { owned_by = root }
+					NOT = { country_or_subject_holds = ROOT }
 					NOT = { is_permanent_claim = root }
 				}
 				add_permanent_claim = root
 			}
 			orleans_area = {
 				limit = {
-					NOT = { owned_by = root }
+					NOT = { country_or_subject_holds = ROOT }
 					NOT = { is_permanent_claim = root }
 				}
 				add_permanent_claim = root
@@ -366,7 +366,7 @@ franconia_conquest_group_2 = {
 		provinces_to_highlight = {
 			province_id = 183
 			OR = {
-				NOT = { owned_by = root }
+				NOT = { country_or_subject_holds = ROOT }
 				NOT = { is_core = root }
 			}
 		}
@@ -409,7 +409,7 @@ franconia_conquest_group_2 = {
 			else = {
 				france_region = {
 					limit = {
-						NOT = { owned_by = root }
+						NOT = { country_or_subject_holds = ROOT }
 						NOT = { is_permanent_claim = root }
 					}
 					add_permanent_claim = root
@@ -443,7 +443,7 @@ franconia_splendour_group = {
 		required_missions = {  }
 
 		provinces_to_highlight = {
-			owned_by = root
+			country_or_subject_holds = ROOT
 			OR = {
 				AND = {
 					is_capital = yes
@@ -495,7 +495,7 @@ franconia_splendour_group = {
 		required_missions = { fkn_patronage_of_the_arts }
 
 		provinces_to_highlight = {
-			owned_by = root
+			country_or_subject_holds = ROOT
 			ROOT = {
 				NOT = {
 					num_of_owned_provinces_with = {
@@ -652,14 +652,14 @@ franconia_splendour_group_2 = {
 			else = {
 				mittelmark_area = {
 					limit = {
-						NOT = { owned_by = root }
+						NOT = { country_or_subject_holds = ROOT }
 						NOT = { is_permanent_claim = root }
 					}
 					add_permanent_claim = root
 				}
 				neumark_area = {
 					limit = {
-						NOT = { owned_by = root }
+						NOT = { country_or_subject_holds = ROOT }
 						NOT = { is_permanent_claim = root }
 					}
 					add_permanent_claim = root
@@ -676,17 +676,17 @@ franconia_splendour_group_2 = {
 				area = mittelmark_area
 				area = neumark_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = root }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		
 		trigger = {
 			mittelmark_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_subject_holds = ROOT
 			}
 			neumark_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = root
+				country_or_subject_holds = ROOT
 			}
 		}
 		

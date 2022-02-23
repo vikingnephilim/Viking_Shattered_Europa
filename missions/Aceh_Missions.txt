@@ -17,7 +17,7 @@ atj_1 = {
 		provinces_to_highlight = {
 			province_id = 617
 			OR = {
-				NOT = { owned_by = ROOT }
+				NOT = { country_or_subject_holds = ROOT }
 				OR = {
 					NOT = { has_building = temple }
 					NOT = { has_building = cathedral }
@@ -37,7 +37,7 @@ atj_1 = {
 				}
 			}
 			617 = {
-				owned_by = ROOT
+				country_or_subject_holds = ROOT
 				religion_group = muslim
 				OR = {
 					has_building = temple
@@ -206,12 +206,12 @@ atj_2 = {
 		required_missions = {  }
 		provinces_to_highlight = {
 			area = north_sumatra_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			north_sumatra_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -247,7 +247,7 @@ atj_2 = {
 				area = batak_area
 				area = minangkabau_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			calc_true_if = {
@@ -258,7 +258,7 @@ atj_2 = {
 						area = batak_area
 						area = minangkabau_area
 					}
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -325,7 +325,7 @@ atj_2 = {
 				area = malaya_area
 				area = malacca_area
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			calc_true_if = {
@@ -337,7 +337,7 @@ atj_2 = {
 						area = malaya_area
 						area = malacca_area
 					}
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}

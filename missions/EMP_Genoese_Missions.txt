@@ -173,7 +173,7 @@ emp_gen_missions_general_2 = {
 			OR = {
 				AND = {
 					is_capital = yes
-					NOT = { owned_by = root }
+					NOT = { country_or_subject_holds = ROOT }
 					owner = {
 						any_owned_province = {
 							has_port = yes
@@ -315,7 +315,7 @@ emp_gen_missions_western_med = {
 			OR = {
 				AND = {
 					province_id = 115
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 				AND = {
 					OR = {
@@ -333,17 +333,17 @@ emp_gen_missions_western_med = {
 		}
 		trigger = {
 			115 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 			OR = {
 				102 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				2980 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 				117 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 				}
 			}
 		}
@@ -390,12 +390,12 @@ emp_gen_missions_western_med = {
 		required_missions = { emp_gen_grand_fleet }
 		provinces_to_highlight = {
 			area = corsica_sardinia_area
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = { country_or_subject_holds = ROOT }
 		}
 		trigger = {
 			corsica_sardinia_area = {
 				type = all
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
@@ -449,7 +449,7 @@ emp_gen_missions_western_med = {
 				}
 				AND = {
 					province_id = 220
-					NOT = { country_or_non_sovereign_subject_holds = ROOT }
+					NOT = { country_or_subject_holds = ROOT }
 				}
 				AND = {
 					province_id = 1295
@@ -471,7 +471,7 @@ emp_gen_missions_western_med = {
 							}
 						}
 						220 = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 							is_strongest_trade_power = ROOT
 						}
 					}
@@ -491,7 +491,7 @@ emp_gen_missions_western_med = {
 							}
 						}
 						220 = {
-							country_or_non_sovereign_subject_holds = ROOT
+							country_or_subject_holds = ROOT
 							is_strongest_trade_power = ROOT
 						}
 					}
@@ -502,7 +502,7 @@ emp_gen_missions_western_med = {
 				NOT = { exists = ARA }
 				NOT = { exists = SPA }
 				220 = {
-					country_or_non_sovereign_subject_holds = ROOT
+					country_or_subject_holds = ROOT
 					is_strongest_trade_power = ROOT
 				}
 			}
@@ -780,12 +780,12 @@ emp_gen_missions_western_med_2 = {
 		provinces_to_highlight = {
 			province_id = 112
 			NOT = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
 			112 = {
-				country_or_non_sovereign_subject_holds = ROOT
+				country_or_subject_holds = ROOT
 			}
 		}
 		effect = {
