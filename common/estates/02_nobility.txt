@@ -2,70 +2,165 @@ estate_nobles = {
 	icon = 2
 	# If true, country will get estate
 	trigger = {
-		NOT = { has_reform = pirate_republic_reform }
-		NOT = { has_reform = cossacks_reform }
-		NOT = { government = native }
-		NOT = { has_reform = siberian_tribe }
-		NOT = { is_revolutionary_republic_trigger = yes }
-		NOT = { has_reform = revolutionary_empire_reform }
+		NOT = {
+			has_reform = pirate_republic_reform
+		}
+		NOT = {
+			has_reform = cossacks_reform
+		}
+		NOT = {
+			government = native
+		}
+		NOT = {
+			has_reform = siberian_tribe
+		}
+		NOT = {
+			is_revolutionary_republic_trigger = yes
+		}
+		NOT = {
+			has_reform = revolutionary_empire_reform
+		}
+		NOT = {
+			has_reform = cossack_horde
+		}
 		if = {
 			limit = {
-				NOT = { religion_group = muslim }
-				NOT = { religion = sikhism }
-				NOT = { religion = buddhism }
-				NOT = { religion = vajrayana }
-				NOT = { religion = mahayana }
+				NOT = {
+					religion_group = muslim
+				}
+				NOT = {
+					religion = sikhism
+				}
+				NOT = {
+					religion = buddhism
+				}
+				NOT = {
+					religion = vajrayana
+				}
+				NOT = {
+					religion = mahayana
+				}
 			}
-			NOT = { has_estate = estate_maratha }
-			NOT = { has_estate = estate_rajput }
+			NOT = {
+				has_estate = estate_maratha
+			}
+			NOT = {
+				has_estate = estate_rajput
+			}
 		}
 		OR = {
-			NOT = { has_reform = celestial_empire }
+			NOT = {
+				has_reform = celestial_empire
+			}
 			has_dlc = "Mandate of Heaven"
 		}
 		is_nomad = no
 		is_colonial_nation = no
 		OR = {
-			NOT = { has_dlc = "Common Sense" }
+			NOT = {
+				has_dlc = "Common Sense"
+			}
 			AND = {
-				NOT = { has_reform = english_monarchy }
-				NOT = { has_reform = welsh_principality }
-				NOT = { has_reform = wessex_dukedom }
-				NOT = { has_reform = cornish_dukedom }
-				NOT = { has_reform = east_anglia_bishopric }
-				NOT = { has_reform = london_republic }
-				NOT = { has_reform = mercian_dukedom }
-				NOT = { has_reform = northumbrian_dukedom }
-				NOT = { has_reform = united_highlander_clans }
-				NOT = { has_reform = scottish_monarchy }
-				NOT = { has_reform = english_republic }
-				NOT = { has_reform = english_theocracy }
-				NOT = { has_reform = british_monarchy }
-				NOT = { has_reform = british_theocracy }
-				NOT = { has_reform = british_republic }
-				NOT = { has_reform = theocratic_autocracy }
-				NOT = { has_reform = beylik_autocracy }
-				NOT = { has_reform = venice_merchants_reform }
-				NOT = { has_reform = oligarchy_reform }
-				NOT = { has_reform = american_republic }
-				NOT = { has_reform = federal_republic }
-				NOT = { has_reform = trading_city }
-				NOT = { has_reform = free_city }
-				NOT = { has_reform = peasants_republic }
-				NOT = { has_reform = signoria_reform }
-				NOT = { has_reform = parliamentary_reform }
-				NOT = { has_reform = theocratic_democracy_reform }
-				NOT = { has_reform = regionally_elected_commanders }
-				NOT = { has_reform = protectorate_parliament_reform }
+				NOT = {
+					has_reform = english_monarchy
+				}
+				NOT = {
+					has_reform = welsh_principality
+				}
+				NOT = {
+					has_reform = wessex_dukedom
+				}
+				NOT = {
+					has_reform = cornish_dukedom
+				}
+				NOT = {
+					has_reform = east_anglia_bishopric
+				}
+				NOT = {
+					has_reform = london_republic
+				}
+				NOT = {
+					has_reform = mercian_dukedom
+				}
+				NOT = {
+					has_reform = northumbrian_dukedom
+				}
+				NOT = {
+					has_reform = united_highlander_clans
+				}
+				NOT = {
+					has_reform = scottish_monarchy
+				}
+				NOT = {
+					has_reform = english_republic
+				}
+				NOT = {
+					has_reform = english_theocracy
+				}
+				NOT = {
+					has_reform = british_monarchy
+				}
+				NOT = {
+					has_reform = british_theocracy
+				}
+				NOT = {
+					has_reform = british_republic
+				}
+				NOT = {
+					has_reform = theocratic_autocracy
+				}
+				NOT = {
+					has_reform = beylik_autocracy
+				}
+				NOT = {
+					has_reform = venice_merchants_reform
+				}
+				NOT = {
+					has_reform = oligarchy_reform
+				}
+				NOT = {
+					has_reform = american_republic
+				}
+				NOT = {
+					has_reform = federal_republic
+				}
+				NOT = {
+					has_reform = trading_city
+				}
+				NOT = {
+					has_reform = free_city
+				}
+				NOT = {
+					has_reform = peasants_republic
+				}
+				NOT = {
+					has_reform = signoria_reform
+				}
+				NOT = {
+					has_reform = parliamentary_reform
+				}
+				NOT = {
+					has_reform = theocratic_democracy_reform
+				}
+				NOT = {
+					has_reform = regionally_elected_commanders
+				}
+				NOT = {
+					has_reform = protectorate_parliament_reform
+				}
 			}
 		}
 		if = {
 			limit = {
-				NOT = { has_dlc = "Dharma" }
+				NOT = {
+					has_dlc = "Dharma"
+				}
 			}
 			has_parliament = no
 		}
-		NOT = { has_reform = revolutionary_empire_reform }
+		NOT = {
+			has_reform = revolutionary_empire_reform
+		}
 	}
 	country_modifier_happy = {
 		manpower_recovery_speed = 0.2
@@ -75,7 +170,7 @@ estate_nobles = {
 	country_modifier_neutral = {
 		manpower_recovery_speed = 0.2
 	}
-			country_modifier_angry = {
+	country_modifier_angry = {
 		manpower_recovery_speed = -0.1
 		land_maintenance_modifier = 0.1
 		global_unrest = 2
@@ -100,7 +195,9 @@ estate_nobles = {
 		}
 		modifier = {
 			factor = 0.5
-			NOT = { is_state_core = owner }
+			NOT = {
+				is_state_core = owner
+			}
 		}
 	}
 	# Influence modifiers
@@ -298,7 +395,9 @@ estate_nobles = {
 		desc = estate_amirs
 		trigger = {
 			religion_group = muslim
-			NOT = { technology_group = ottoman } #Should possibly be more restricted
+			NOT = {
+				technology_group = ottoman
+			}			#Should possibly be more restricted
 		}
 	}
 	custom_name = {
@@ -330,7 +429,11 @@ estate_nobles = {
 			}
 		}
 	}
-	color = { 200 0 50 }
+	color = {
+		200
+		0
+		50
+	}
 	privileges = {
 		estate_nobles_land_rights
 		estate_nobles_nobility_primacy
@@ -390,5 +493,5 @@ estate_nobles = {
 		estate_nobles_hire_advisor
 		estate_nobles_fire_advisor
 	}
-	influence_from_dev_modifier = 1.0
+	influence_from_dev_modifier = 1
 }

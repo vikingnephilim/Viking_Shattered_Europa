@@ -20,7 +20,11 @@ gme_algarve_sagres_school_navigation = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		culture_group = iberian
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
+		}
 	}
 	#what to do when it's built
 	on_built = {
@@ -30,11 +34,19 @@ gme_algarve_sagres_school_navigation = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		culture_group = iberian
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
+		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		culture_group = iberian
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
+		}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
@@ -296,16 +308,30 @@ gme_cordoba_mosque_cathedral = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		culture_group = iberian
-		OR = {
-			OR = {
-				religion = palmyrian
-				religion = catholic
-			}
-			religion = sunni
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_accepted_culture = yes
-		has_owner_religion = yes
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = catholic_palmarian_religion_tt
+				225 = {
+					OR = {
+						religion = palmyrian
+						religion = catholic
+					}
+				}
+				has_owner_religion = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = sunni_religion_tt
+				225 = {
+					religion = sunni
+					has_owner_religion = yes
+				}
+			}
+		}
 	}
 	#what to do when it's built
 	on_built = {
@@ -315,29 +341,57 @@ gme_cordoba_mosque_cathedral = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		culture_group = iberian
-		OR = {
-			OR = {
-				religion = palmyrian
-				religion = catholic
-			}
-			religion = sunni
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_accepted_culture = yes
-		has_owner_religion = yes
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = catholic_palmarian_religion_tt
+				225 = {
+					OR = {
+						religion = palmyrian
+						religion = catholic
+					}
+				}
+				has_owner_religion = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = sunni_religion_tt
+				225 = {
+					religion = sunni
+					has_owner_religion = yes
+				}
+			}
+		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		culture_group = iberian
-		OR = {
-			OR = {
-				religion = palmyrian
-				religion = catholic
-			}
-			religion = sunni
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_accepted_culture = yes
-		has_owner_religion = yes
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = catholic_palmarian_religion_tt
+				225 = {
+					OR = {
+						religion = palmyrian
+						religion = catholic
+					}
+				}
+				has_owner_religion = yes
+			}
+			custom_trigger_tooltip = {
+				tooltip = sunni_religion_tt
+				225 = {
+					religion = sunni
+					has_owner_religion = yes
+				}
+			}
+		}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
@@ -461,13 +515,21 @@ gme_corunna_basilica_santiago_compostela = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		culture_group = iberian
-		OR = {
-			religion = palmyrian
-			religion = catholic
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_accepted_culture = yes
-		has_owner_religion = yes
+		custom_trigger_tooltip = {
+			tooltip = catholic_palmarian_religion_tt
+			4789 = {
+				OR = {
+					religion = palmyrian
+					religion = catholic
+				}
+			}
+			has_owner_religion = yes
+		}
 	}
 	#what to do when it's built
 	on_built = {
@@ -477,23 +539,39 @@ gme_corunna_basilica_santiago_compostela = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		culture_group = iberian
-		OR = {
-			religion = palmyrian
-			religion = catholic
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_accepted_culture = yes
-		has_owner_religion = yes
+		custom_trigger_tooltip = {
+			tooltip = catholic_palmarian_religion_tt
+			4789 = {
+				OR = {
+					religion = palmyrian
+					religion = catholic
+				}
+			}
+			has_owner_religion = yes
+		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		culture_group = iberian
-		OR = {
-			religion = palmyrian
-			religion = catholic
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_accepted_culture = yes
-		has_owner_religion = yes
+		custom_trigger_tooltip = {
+			tooltip = catholic_palmarian_religion_tt
+			4789 = {
+				OR = {
+					religion = palmyrian
+					religion = catholic
+				}
+			}
+			has_owner_religion = yes
+		}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
@@ -622,8 +700,11 @@ gme_corunna_tower_hercules = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		culture_group = iberian
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
+		}
 	}
 	#what to do when it's built
 	on_built = {
@@ -633,13 +714,19 @@ gme_corunna_tower_hercules = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		culture_group = iberian
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
+		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		culture_group = iberian
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
+		}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
@@ -1041,16 +1128,29 @@ gme_segovia_alcazar_segovia = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		culture_group = iberian
-		OR = {
-			OR = {
-				religion = palmyrian
-				religion = catholic
-			}
-			religion = sunni
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_accepted_culture = yes
-		has_owner_religion = yes
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = catholic_palmarian_religion_tt
+				4789 = {
+					OR = {
+						religion = palmyrian
+						religion = catholic
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = sunni_religion_tt
+				4789 = {
+					religion = sunni
+					has_owner_religion = yes
+				}
+			}
+		}
 	}
 	#what to do when it's built
 	on_built = {
@@ -1060,29 +1160,56 @@ gme_segovia_alcazar_segovia = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		culture_group = iberian
-		OR = {
-			OR = {
-				religion = palmyrian
-				religion = catholic
-			}
-			religion = sunni
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_accepted_culture = yes
-		has_owner_religion = yes
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = catholic_palmarian_religion_tt
+				4789 = {
+					OR = {
+						religion = palmyrian
+						religion = catholic
+					}
+					has_owner_religion = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = sunni_religion_tt
+				4789 = {
+					religion = sunni
+					has_owner_religion = yes
+				}
+			}
+		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		culture_group = iberian
-		OR = {
-			OR = {
-				religion = palmyrian
-				religion = catholic
-			}
-			religion = sunni
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_accepted_culture = yes
-		has_owner_religion = yes
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = catholic_palmarian_religion_tt
+				4789 = {
+					OR = {
+						religion = palmyrian
+						religion = catholic
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = sunni_religion_tt
+				4789 = {
+					religion = sunni
+					has_owner_religion = yes
+				}
+			}
+		}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
@@ -1209,12 +1336,26 @@ gme_seville_al_qasr_al_muriq = {
 	build_trigger = {
 		has_owner_religion = yes
 		OR = {
-			province_is_islamic_or_accepts_islam = yes
+			custom_trigger_tooltip = {
+				tooltip = muslim_religion_tt
+				224 = {
+					province_is_islamic_or_accepts_islam = yes
+				}
+			}
 			AND = {
-				culture_group = iberian
-				OR = {
-					religion = palmyrian
-					religion = catholic
+				custom_trigger_tooltip = {
+					tooltip = iberian_culture_tt
+					culture_group = iberian
+					province_is_or_accepts_culture = yes
+				}
+				custom_trigger_tooltip = {
+					tooltip = catholic_palmarian_religion_tt
+					224 = {
+						OR = {
+							religion = palmyrian
+							religion = catholic
+						}
+					}
 				}
 			}
 		}
@@ -1229,12 +1370,26 @@ gme_seville_al_qasr_al_muriq = {
 	can_use_modifiers_trigger = {
 		has_owner_religion = yes
 		OR = {
-			province_is_islamic_or_accepts_islam = yes
+			custom_trigger_tooltip = {
+				tooltip = muslim_religion_tt
+				224 = {
+					province_is_islamic_or_accepts_islam = yes
+				}
+			}
 			AND = {
-				culture_group = iberian
-				OR = {
-					religion = palmyrian
-					religion = catholic
+				custom_trigger_tooltip = {
+					tooltip = iberian_culture_tt
+					culture_group = iberian
+					province_is_or_accepts_culture = yes
+				}
+				custom_trigger_tooltip = {
+					tooltip = catholic_palmarian_religion_tt
+					224 = {
+						OR = {
+							religion = palmyrian
+							religion = catholic
+						}
+					}
 				}
 			}
 		}
@@ -1243,12 +1398,26 @@ gme_seville_al_qasr_al_muriq = {
 	can_upgrade_trigger = {
 		has_owner_religion = yes
 		OR = {
-			province_is_islamic_or_accepts_islam = yes
+			custom_trigger_tooltip = {
+				tooltip = muslim_religion_tt
+				224 = {
+					province_is_islamic_or_accepts_islam = yes
+				}
+			}
 			AND = {
-				culture_group = iberian
-				OR = {
-					religion = palmyrian
-					religion = catholic
+				custom_trigger_tooltip = {
+					tooltip = iberian_culture_tt
+					culture_group = iberian
+					province_is_or_accepts_culture = yes
+				}
+				custom_trigger_tooltip = {
+					tooltip = catholic_palmarian_religion_tt
+					224 = {
+						OR = {
+							religion = palmyrian
+							religion = catholic
+						}
+					}
 				}
 			}
 		}
@@ -1374,8 +1543,11 @@ gme_seville_casa_de_contratacion = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		culture_group = iberian
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
+		}
 	}
 	#what to do when it's built
 	on_built = {
@@ -1385,13 +1557,19 @@ gme_seville_casa_de_contratacion = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		culture_group = iberian
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
+		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		culture_group = iberian
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
+		}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
@@ -1493,6 +1671,7 @@ gme_seville_casa_de_contratacion = {
 		}
 	}
 }
+
 seville_cathedral = {
 	# province it starts in
 	start = 224
@@ -1514,9 +1693,17 @@ seville_cathedral = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		province_is_christian_or_accepts_christianity = yes
-		culture_group = iberian
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = christian_religion_tt
+			224 = {
+				province_is_christian_or_accepts_christianity = yes
+			}
+		}
 	}
 	#what to do when it's built
 	on_built = {
@@ -1526,15 +1713,31 @@ seville_cathedral = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		province_is_christian_or_accepts_christianity = yes
-		culture_group = iberian
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = christian_religion_tt
+			224 = {
+				province_is_christian_or_accepts_christianity = yes
+			}
+		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		province_is_christian_or_accepts_christianity = yes
-		culture_group = iberian
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = christian_religion_tt
+			224 = {
+				province_is_christian_or_accepts_christianity = yes
+			}
+		}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {

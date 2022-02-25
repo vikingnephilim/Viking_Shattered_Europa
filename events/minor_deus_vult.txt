@@ -1,0 +1,128 @@
+namespace = minor_deus_vult
+country_event = {
+	id = minor_deus_vult.1
+	title = minor_deus_vult.1t
+	desc = minor_deus_vult.1d
+	is_triggered_only = yes
+	trigger = {
+		has_dlc = "The Cossacks"
+		has_estate = estate_order_knights
+	}
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = minor_deus_vult.1a
+		PAP = {
+			country_event = {
+				id = minor_deus_vult.2
+				days = 20
+			}
+		}
+	}
+	option = {
+		name = minor_deus_vult.1b
+	}
+}
+
+country_event = {
+	id = minor_deus_vult.2
+	title = minor_deus_vult.2t
+	desc = minor_deus_vult.2d
+	is_triggered_only = yes
+	option = {
+		ai_chance = {
+			factor = 90
+			modifier = {
+				factor = 0
+				NOT = {
+					ROT = {
+						reverse_has_opinion = {
+							who = FROM
+							value = 100
+						}
+					}
+				}
+				NOT = {
+					ROOT = {
+						has_opinion = {
+							who = FROM
+							value = 100
+						}
+					}
+				}
+			}
+		}
+		name = minor_deus_vult.2a
+		FROM = {
+			country_event = {
+				id = minor_deus_vult.3
+				days = 2
+			}
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 10
+		}
+		name = minor_deus_vult.2b
+		FROM = {
+			country_event = {
+				id = minor_deus_vult.4
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = minor_deus_vult.3
+	title = minor_deus_vult.3t
+	desc = minor_deus_vult.3d
+	is_triggered_only = yes
+	option = {
+		name = minor_deus_vult.3a
+		add_prestige = 20
+		random_neighbor_country = {
+			limit = {
+				NOT = {
+					religion_group = ROOT
+				}
+			}
+			country_event = {
+				id = minor_deus_vult.5
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = minor_deus_vult.4
+	title = minor_deus_vult.4t
+	desc = minor_deus_vult.4d
+	is_triggered_only = yes
+	option = {
+		name = minor_deus_vult.4
+		add_prestige = -15
+		remove_country_modifier = minor_crusade_called
+	}
+}
+
+country_event = {
+	id = minor_deus_vult.5
+	title = minor_deus_vult.5t
+	desc = minor_deus_vult.5d
+	is_triggered_only = yes
+	immediate = {
+		FROM = {
+			declare_war_with_cb = {
+				who = ROOT
+				casus_belli = cb_crusade
+			}
+		}
+	}
+	option = {
+		name = minor_deus_vult.5a
+	}
+}

@@ -97,4 +97,634 @@ country_decisions = {
 			factor = 1
 		}
 	}
+	establish_don_host = {
+		major = yes
+		potential = {
+			NOT = {
+				has_country_flag = don_established
+			}
+			tag = RUS
+			culture_group = east_slavic
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			religion_group = christian
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					OR = {
+						province_id = 467
+						province_id = 1971
+						province_id = 288
+						province_id = 2409
+						province_id = 2413
+						province_id = 2197
+						province_id = 2201
+					}
+				}
+			}
+		}
+		allow = {
+			tag = RUS
+			owns_core_province = 467
+			owns_core_province = 1971
+			owns_core_province = 288
+			owns_core_province = 2409
+			owns_core_province = 2413
+			owns_core_province = 286
+			is_at_war = no
+		}
+		effect = {
+			set_country_flag = don_established
+			DON = {
+				add_government_reform = cossack_horde
+				change_religion = orthodox
+				add_core = 467
+				add_core = 1971
+				add_core = 288
+				add_core = 2409
+				add_core = 2413
+				add_core = 286
+			}
+			release = DON
+			create_subject = {
+				subject_type = cossack_vassal
+				subject = DON
+			}
+			DON = {
+				add_government_reform = cossack_horde
+				change_religion = orthodox
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_kuban_host = {
+		major = yes
+		potential = {
+			NOT = {
+				has_country_flag = kuban_established
+			}
+			culture_group = east_slavic
+			tag = RUS
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			religion_group = christian
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					OR = {
+						province_id = 287
+						province_id = 2195
+						province_id = 463
+						province_id = 2416
+						province_id = 2414
+						province_id = 2197
+						province_id = 2201
+					}
+				}
+			}
+		}
+		allow = {
+			tag = RUS
+			owns_core_province = 287
+			owns_core_province = 2195
+			owns_core_province = 463
+			owns_core_province = 2416
+			owns_core_province = 2414
+			owns_core_province = 2197
+			owns_core_province = 2201
+			is_at_war = no
+		}
+		effect = {
+			set_country_flag = kuban_established
+			KCH = {
+				add_core = 287
+				add_core = 2195
+				add_core = 463
+				add_core = 2416
+				add_core = 2414
+				add_core = 2197
+				add_core = 2201
+			}
+			release = KCH
+			create_subject = {
+				subject_type = cossack_vassal
+				subject = KCH
+			}
+			KCH = {
+				add_government_reform = cossack_horde
+				change_religion = orthodox
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_astrakhan_host = {
+		major = yes
+		potential = {
+			NOT = {
+				has_country_flag = astrakhan_established
+			}
+			tag = RUS
+			culture_group = east_slavic
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			religion_group = christian
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					OR = {
+						province_id = 464
+						province_id = 2417
+						province_id = 468
+						province_id = 466
+						province_id = 2418
+					}
+				}
+			}
+		}
+		allow = {
+			tag = RUS
+			owns_core_province = 464
+			owns_core_province = 2417
+			owns_core_province = 468
+			owns_core_province = 466
+			owns_core_province = 2418
+			is_at_war = no
+		}
+		effect = {
+			set_country_flag = astrakhan_established
+			ASC = {
+				add_core = 464
+				add_core = 2417
+				add_core = 468
+				add_core = 466
+				add_core = 2418
+			}
+			release = ASC
+			create_subject = {
+				subject_type = cossack_vassal
+				subject = ASC
+			}
+			ASC = {
+				add_government_reform = cossack_horde
+				change_religion = orthodox
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_terek_host = {
+		major = yes
+		potential = {
+			NOT = {
+				has_country_flag = terek_established
+			}
+			tag = RUS
+			culture_group = east_slavic
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			religion_group = christian
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					OR = {
+						province_id = 2208
+						province_id = 2199
+						province_id = 2198
+						province_id = 4306
+						province_id = 425
+					}
+				}
+			}
+		}
+		allow = {
+			tag = RUS
+			owns_core_province = 2208
+			owns_core_province = 2199
+			owns_core_province = 2198
+			owns_core_province = 4306
+			owns_core_province = 425
+			is_at_war = no
+		}
+		effect = {
+			set_country_flag = terek_established
+			TCH = {
+				add_core = 2208
+				add_core = 2199
+				add_core = 2198
+				add_core = 4306
+				add_core = 425
+			}
+			release = TCH
+			create_subject = {
+				subject_type = cossack_vassal
+				subject = TCH
+			}
+			TCH = {
+				add_government_reform = cossack_horde
+				change_religion = orthodox
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_zaporizhia_host = {
+		major = yes
+		potential = {
+			NOT = {
+				has_country_flag = zaporizhia_established
+			}
+			tag = RUS
+			culture_group = east_slavic
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			religion_group = christian
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					OR = {
+						province_id = 282
+						province_id = 2406
+						province_id = 283
+						province_id = 2411
+						province_id = 291
+					}
+				}
+			}
+		}
+		allow = {
+			tag = RUS
+			owns_core_province = 282
+			owns_core_province = 2406
+			owns_core_province = 283
+			owns_core_province = 2411
+			owns_core_province = 291
+			is_at_war = no
+		}
+		effect = {
+			set_country_flag = zaporizhia_established
+			ZCH = {
+				add_core = 282
+				add_core = 2406
+				add_core = 283
+				add_core = 2411
+				add_core = 291
+			}
+			release = ZCH
+			create_subject = {
+				subject_type = cossack_vassal
+				subject = ZCH
+			}
+			ZCH = {
+				add_government_reform = cossack_horde
+				change_religion = orthodox
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_ural_host = {
+		major = yes
+		potential = {
+			NOT = {
+				has_country_flag = ural_established
+			}
+			tag = RUS
+			culture_group = east_slavic
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			religion_group = christian
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					OR = {
+						province_id = 469
+						province_id = 474
+						province_id = 470
+						province_id = 465
+						province_id = 2365
+						province_id = 2366
+						province_id = 2367
+					}
+				}
+			}
+		}
+		allow = {
+			tag = RUS
+			owns_core_province = 469
+			owns_core_province = 2367
+			owns_core_province = 2365
+			owns_core_province = 474
+			owns_core_province = 2366
+			owns_core_province = 470
+			owns_core_province = 465
+			is_at_war = no
+		}
+		effect = {
+			set_country_flag = ural_established
+			UCH = {
+				add_core = 469
+				add_core = 2367
+				add_core = 2365
+				add_core = 474
+				add_core = 2366
+				add_core = 470
+				add_core = 465
+			}
+			release = UCH
+			create_subject = {
+				subject_type = cossack_vassal
+				subject = UCH
+			}
+			UCH = {
+				add_government_reform = cossack_horde
+				change_religion = orthodox
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_orenburg_host = {
+		major = yes
+		potential = {
+			NOT = {
+				has_country_flag = orenburg_established
+			}
+			tag = RUS
+			culture_group = east_slavic
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			religion_group = christian
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					OR = {
+						province_id = 475
+						province_id = 2420
+						province_id = 1965
+						province_id = 2444
+						province_id = 1966
+					}
+				}
+			}
+		}
+		allow = {
+			tag = RUS
+			owns_core_province = 2420
+			owns_core_province = 1965
+			owns_core_province = 475
+			owns_core_province = 2444
+			owns_core_province = 1966
+			is_at_war = no
+		}
+		effect = {
+			set_country_flag = orenburg_established
+			OCH = {
+				add_core = 2420
+				add_core = 1965
+				add_core = 475
+				add_core = 2444
+				add_core = 1966
+			}
+			release = OCH
+			create_subject = {
+				subject_type = cossack_vassal
+				subject = OCH
+			}
+			OCH = {
+				add_government_reform = cossack_horde
+				change_religion = orthodox
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_siberian_host = {
+		major = yes
+		potential = {
+			NOT = {
+				has_country_flag = siberian_established
+			}
+			tag = RUS
+			culture_group = east_slavic
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			religion_group = christian
+		}
+		allow = {
+			tag = RUS
+			owns_core_province = 461
+			owns_core_province = 2368
+			owns_core_province = 459
+			owns_core_province = 2126
+			owns_core_province = 2125
+			is_at_war = no
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					OR = {
+						province_id = 461
+						province_id = 2368
+						province_id = 459
+						province_id = 2126
+						province_id = 2125
+					}
+				}
+			}
+		}
+		effect = {
+			set_country_flag = siberian_established
+			SCH = {
+				add_core = 461
+				add_core = 2368
+				add_core = 459
+				add_core = 2126
+				add_core = 2125
+			}
+			release = SCH
+			create_subject = {
+				subject_type = cossack_vassal
+				subject = SCH
+			}
+			SCH = {
+				add_government_reform = cossack_horde
+				change_religion = orthodox
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_semirechye_host = {
+		major = yes
+		potential = {
+			NOT = {
+				has_country_flag = semirechye_established
+			}
+			tag = RUS
+			culture_group = east_slavic
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			religion_group = christian
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					OR = {
+						province_id = 4690
+						province_id = 4689
+						province_id = 1071
+						province_id = 1075
+						province_id = 1076
+					}
+				}
+			}
+		}
+		allow = {
+			tag = RUS
+			owns_core_province = 4690
+			owns_core_province = 4689
+			owns_core_province = 1071
+			owns_core_province = 1075
+			owns_core_province = 1076
+			is_at_war = no
+		}
+		effect = {
+			set_country_flag = semirechye_established
+			SEM = {
+				add_core = 4690
+				add_core = 4689
+				add_core = 1071
+				add_core = 1075
+				add_core = 1076
+			}
+			release = SEM
+			create_subject = {
+				subject_type = cossack_vassal
+				subject = SEM
+			}
+			SEM = {
+				add_government_reform = cossack_horde
+				change_religion = orthodox
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

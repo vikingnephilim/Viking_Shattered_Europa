@@ -9,23 +9,13 @@ gme_gyeongseong_mt_paekdu = {
 	starting_tier = 2
 	type = monument
 	build_trigger = {
-		OR = {
-			culture_group = korean_g
-			culture = manchu_new
-		}
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = korean_manchu_culture_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				primary_culture = manchu_new
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
-				accepted_culture = manchu_new
+				culture_group = korean_g
+				culture = manchu_new
 			}
+			province_is_or_accepts_culture = yes
 		}
 	}
 	on_built = {
@@ -33,43 +23,23 @@ gme_gyeongseong_mt_paekdu = {
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
-		OR = {
-			culture_group = korean_g
-			culture = manchu_new
-		}
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = korean_manchu_culture_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				primary_culture = manchu_new
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
-				accepted_culture = manchu_new
+				culture_group = korean_g
+				culture = manchu_new
 			}
+			province_is_or_accepts_culture = yes
 		}
 	}
 	can_upgrade_trigger = {
-		OR = {
-			culture_group = korean_g
-			culture = manchu_new
-		}
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = korean_manchu_culture_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				primary_culture = manchu_new
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
-				accepted_culture = manchu_new
+				culture_group = korean_g
+				culture = manchu_new
 			}
+			province_is_or_accepts_culture = yes
 		}
 	}
 	keep_trigger = {
@@ -160,22 +130,21 @@ gme_pyongyang_goguryeyo_tombs = {
 	starting_tier = 1
 	type = monument
 	build_trigger = {
-		OR = {
-			province_is_buddhist_or_accepts_buddhism = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = buddhist_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				1845 = {
+					province_is_buddhist_or_accepts_buddhism = yes
+				}
+				1845 = {
+					religion = korean_pagan_reformed
+				}
+				has_owner_religion = yes
 			}
 		}
 	}
@@ -184,42 +153,40 @@ gme_pyongyang_goguryeyo_tombs = {
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
-		OR = {
-			province_is_buddhist_or_accepts_buddhism = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = buddhist_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				1845 = {
+					province_is_buddhist_or_accepts_buddhism = yes
+				}
+				1845 = {
+					religion = korean_pagan_reformed
+				}
+				has_owner_religion = yes
 			}
 		}
 	}
 	can_upgrade_trigger = {
-		OR = {
-			province_is_buddhist_or_accepts_buddhism = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = buddhist_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				1845 = {
+					province_is_buddhist_or_accepts_buddhism = yes
+				}
+				1845 = {
+					religion = korean_pagan_reformed
+				}
+				has_owner_religion = yes
 			}
 		}
 	}
@@ -310,14 +277,10 @@ gme_hanseong_five_grand_palaces = {
 	starting_tier = 1
 	type = monument
 	build_trigger = {
-		culture_group = korean_g
-		FROM = {
-			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-			}
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
 	}
 	on_built = {
@@ -325,25 +288,17 @@ gme_hanseong_five_grand_palaces = {
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
-		culture_group = korean_g
-		FROM = {
-			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-			}
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
 	}
 	can_upgrade_trigger = {
-		culture_group = korean_g
-		FROM = {
-			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-			}
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
 	}
 	keep_trigger = {
@@ -443,14 +398,10 @@ gme_hanseong_royal_tombs_joseon = {
 	starting_tier = 1
 	type = monument
 	build_trigger = {
-		culture_group = korean_g
-		FROM = {
-			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-			}
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
 	}
 	on_built = {
@@ -458,25 +409,17 @@ gme_hanseong_royal_tombs_joseon = {
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
-		culture_group = korean_g
-		FROM = {
-			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-			}
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
 	}
 	can_upgrade_trigger = {
-		culture_group = korean_g
-		FROM = {
-			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-			}
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
 	}
 	keep_trigger = {
@@ -567,23 +510,22 @@ gme_hanseong_jongmyo_shrine = {
 	starting_tier = 1
 	type = monument
 	build_trigger = {
-		OR = {
-			is_chinese_religion_viking_mod = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = confucian_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				735 = {
+					is_chinese_religion_viking_mod = yes
+				}
+				735 = {
+					religion = korean_pagan_reformed
+				}
 			}
+			has_owner_religion = yes
 		}
 	}
 	on_built = {
@@ -591,43 +533,41 @@ gme_hanseong_jongmyo_shrine = {
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
-		OR = {
-			is_chinese_religion_viking_mod = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = confucian_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				735 = {
+					is_chinese_religion_viking_mod = yes
+				}
+				735 = {
+					religion = korean_pagan_reformed
+				}
 			}
+			has_owner_religion = yes
 		}
 	}
 	can_upgrade_trigger = {
-		OR = {
-			is_chinese_religion_viking_mod = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = confucian_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				735 = {
+					is_chinese_religion_viking_mod = yes
+				}
+				735 = {
+					religion = korean_pagan_reformed
+				}
 			}
+			has_owner_religion = yes
 		}
 	}
 	keep_trigger = {
@@ -708,7 +648,7 @@ gme_hanseong_jongmyo_shrine = {
 
 gme_hanseong_gakhwangsa = {
 	start = 735
-	date = 1395.01.01
+	date = 1394.01.01
 	time = {
 		months = 120
 	}
@@ -717,22 +657,20 @@ gme_hanseong_gakhwangsa = {
 	starting_tier = 1
 	type = monument
 	build_trigger = {
-		OR = {
-			province_is_buddhist_or_accepts_buddhism = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = buddhist_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				735 = {
+					province_is_buddhist_or_accepts_buddhism = yes
+				}
+				735 = {
+					religion = korean_pagan_reformed
+				}
 			}
 		}
 	}
@@ -741,42 +679,38 @@ gme_hanseong_gakhwangsa = {
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
-		OR = {
-			province_is_buddhist_or_accepts_buddhism = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = buddhist_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				735 = {
+					province_is_buddhist_or_accepts_buddhism = yes
+				}
+				735 = {
+					religion = korean_pagan_reformed
+				}
 			}
 		}
 	}
 	can_upgrade_trigger = {
-		OR = {
-			province_is_buddhist_or_accepts_buddhism = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = buddhist_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				735 = {
+					province_is_buddhist_or_accepts_buddhism = yes
+				}
+				735 = {
+					religion = korean_pagan_reformed
+				}
 			}
 		}
 	}
@@ -867,18 +801,21 @@ gme_suwon_sungkyunkwan = {
 	starting_tier = 1
 	type = monument
 	build_trigger = {
-		OR = {
-			is_chinese_religion_viking_mod = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = confucian_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
+				4230 = {
+					is_chinese_religion_viking_mod = yes
+				}
+				4230 = {
+					religion = korean_pagan_reformed
+				}
+				has_owner_religion = yes
 			}
 		}
 	}
@@ -887,34 +824,40 @@ gme_suwon_sungkyunkwan = {
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
-		OR = {
-			is_chinese_religion_viking_mod = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = confucian_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
+				4230 = {
+					is_chinese_religion_viking_mod = yes
+				}
+				4230 = {
+					religion = korean_pagan_reformed
+				}
+				has_owner_religion = yes
 			}
 		}
 	}
 	can_upgrade_trigger = {
-		OR = {
-			is_chinese_religion_viking_mod = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = confucian_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
+				4230 = {
+					is_chinese_religion_viking_mod = yes
+				}
+				4230 = {
+					religion = korean_pagan_reformed
+				}
+				has_owner_religion = yes
 			}
 		}
 	}
@@ -1018,22 +961,21 @@ gme_suwon_hwaseong_fortress = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
-		OR = {
-			is_chinese_religion_viking_mod = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = confucian_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				4230 = {
+					is_chinese_religion_viking_mod = yes
+				}
+				4230 = {
+					religion = korean_pagan_reformed
+				}
+				has_owner_religion = yes
 			}
 		}
 	}
@@ -1042,42 +984,40 @@ gme_suwon_hwaseong_fortress = {
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
-		OR = {
-			is_chinese_religion_viking_mod = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = confucian_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				4230 = {
+					is_chinese_religion_viking_mod = yes
+				}
+				4230 = {
+					religion = korean_pagan_reformed
+				}
+				has_owner_religion = yes
 			}
 		}
 	}
 	can_upgrade_trigger = {
-		OR = {
-			is_chinese_religion_viking_mod = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = confucian_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				4230 = {
+					is_chinese_religion_viking_mod = yes
+				}
+				4230 = {
+					religion = korean_pagan_reformed
+				}
+				has_owner_religion = yes
 			}
 		}
 	}
@@ -1176,24 +1116,25 @@ gme_chungju_tripitaka_koreana = {
 	starting_tier = 1
 	type = monument
 	build_trigger = {
-		OR = {
-			province_is_shinto_or_accepts_shinto = yes
-			province_is_buddhist_or_accepts_buddhism = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = buddhist_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				4229 = {
+					province_is_buddhist_or_accepts_buddhism = yes
+				}
+				4229 = {
+					province_is_shinto_or_accepts_shinto = yes
+				}
+				4229 = {
+					religion = korean_pagan_reformed
+				}
 			}
+			has_owner_religion = yes
 		}
 	}
 	on_built = {
@@ -1201,45 +1142,47 @@ gme_chungju_tripitaka_koreana = {
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
-		OR = {
-			province_is_shinto_or_accepts_shinto = yes
-			province_is_buddhist_or_accepts_buddhism = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = buddhist_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				4229 = {
+					province_is_buddhist_or_accepts_buddhism = yes
+				}
+				4229 = {
+					province_is_shinto_or_accepts_shinto = yes
+				}
+				4229 = {
+					religion = korean_pagan_reformed
+				}
 			}
+			has_owner_religion = yes
 		}
 	}
 	can_upgrade_trigger = {
-		OR = {
-			province_is_shinto_or_accepts_shinto = yes
-			province_is_buddhist_or_accepts_buddhism = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = buddhist_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				4229 = {
+					province_is_buddhist_or_accepts_buddhism = yes
+				}
+				4229 = {
+					province_is_shinto_or_accepts_shinto = yes
+				}
+				4229 = {
+					religion = korean_pagan_reformed
+				}
 			}
+			has_owner_religion = yes
 		}
 	}
 	keep_trigger = {
@@ -1329,23 +1272,22 @@ gme_sangju_dosan_seowon = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
-		OR = {
-			is_chinese_religion_viking_mod = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = confucian_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				736 = {
+					is_chinese_religion_viking_mod = yes
+				}
+				736 = {
+					religion = korean_pagan_reformed
+				}
 			}
+			has_owner_religion = yes
 		}
 	}
 	on_built = {
@@ -1353,43 +1295,41 @@ gme_sangju_dosan_seowon = {
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
-		OR = {
-			is_chinese_religion_viking_mod = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = confucian_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				736 = {
+					is_chinese_religion_viking_mod = yes
+				}
+				736 = {
+					religion = korean_pagan_reformed
+				}
 			}
+			has_owner_religion = yes
 		}
 	}
 	can_upgrade_trigger = {
-		OR = {
-			is_chinese_religion_viking_mod = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = confucian_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				736 = {
+					is_chinese_religion_viking_mod = yes
+				}
+				736 = {
+					religion = korean_pagan_reformed
+				}
 			}
+			has_owner_religion = yes
 		}
 	}
 	keep_trigger = {
@@ -1641,23 +1581,22 @@ gme_gyeongju_beomeosa = {
 	starting_tier = 1
 	type = monument
 	build_trigger = {
-		OR = {
-			province_is_buddhist_or_accepts_buddhism = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = buddhist_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				2745 = {
+					province_is_buddhist_or_accepts_buddhism = yes
+				}
+				2745 = {
+					religion = korean_pagan_reformed
+				}
 			}
+			has_owner_religion = yes
 		}
 	}
 	on_built = {
@@ -1665,43 +1604,41 @@ gme_gyeongju_beomeosa = {
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
-		OR = {
-			province_is_buddhist_or_accepts_buddhism = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = buddhist_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				2745 = {
+					province_is_buddhist_or_accepts_buddhism = yes
+				}
+				2745 = {
+					religion = korean_pagan_reformed
+				}
 			}
+			has_owner_religion = yes
 		}
 	}
 	can_upgrade_trigger = {
-		OR = {
-			province_is_buddhist_or_accepts_buddhism = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = buddhist_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				2745 = {
+					province_is_buddhist_or_accepts_buddhism = yes
+				}
+				2745 = {
+					religion = korean_pagan_reformed
+				}
 			}
+			has_owner_religion = yes
 		}
 	}
 	keep_trigger = {
@@ -1791,23 +1728,22 @@ gme_gyeongju_seokguram = {
 	starting_tier = 1
 	type = monument
 	build_trigger = {
-		OR = {
-			province_is_buddhist_or_accepts_buddhism = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = buddhist_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				2745 = {
+					province_is_buddhist_or_accepts_buddhism = yes
+				}
+				2745 = {
+					religion = korean_pagan_reformed
+				}
 			}
+			has_owner_religion = yes
 		}
 	}
 	on_built = {
@@ -1815,43 +1751,41 @@ gme_gyeongju_seokguram = {
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
-		OR = {
-			province_is_buddhist_or_accepts_buddhism = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = buddhist_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				2745 = {
+					province_is_buddhist_or_accepts_buddhism = yes
+				}
+				2745 = {
+					religion = korean_pagan_reformed
+				}
 			}
+			has_owner_religion = yes
 		}
 	}
 	can_upgrade_trigger = {
-		OR = {
-			province_is_buddhist_or_accepts_buddhism = yes
-			religion = korean_pagan_reformed
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_religion = yes
-		culture_group = korean_g
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = buddhist_muist_tt
 			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-				accepted_culture = korean
-				accepted_culture = goguryeo
-				accepted_culture = silla
-				accepted_culture = baekje
+				2745 = {
+					province_is_buddhist_or_accepts_buddhism = yes
+				}
+				2745 = {
+					religion = korean_pagan_reformed
+				}
 			}
+			has_owner_religion = yes
 		}
 	}
 	keep_trigger = {
@@ -2035,14 +1969,10 @@ gme_jeju_dol_hareunbang = {
 	starting_tier = 1
 	type = monument
 	build_trigger = {
-		culture_group = korean_g
-		FROM = {
-			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-			}
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
 	}
 	on_built = {
@@ -2050,25 +1980,17 @@ gme_jeju_dol_hareunbang = {
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
-		culture_group = korean_g
-		FROM = {
-			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-			}
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
 	}
 	can_upgrade_trigger = {
-		culture_group = korean_g
-		FROM = {
-			OR = {
-				primary_culture = korean
-				primary_culture = goguryeo
-				primary_culture = silla
-				primary_culture = baekje
-			}
+		custom_trigger_tooltip = {
+			tooltip = korean_culture_tt
+			culture_group = korean_g
+			province_is_or_accepts_culture = yes
 		}
 	}
 	keep_trigger = {

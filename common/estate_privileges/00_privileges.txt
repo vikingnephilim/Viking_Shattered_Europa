@@ -2509,9 +2509,6 @@ estate_nobles_nobility_primacy = {
 			NOT = {
 				has_estate_privilege = estate_maratha_military
 			}
-			NOT = {
-				has_estate_privilege = estate_nobility_primacy
-			}
 		}
 	}
 	on_granted = {
@@ -2808,9 +2805,6 @@ estate_church_religious_state = {
 	max_absolutism = -5
 	loyalty = -0.05
 	can_select = {
-		NOT = {
-			has_estate_privilege = estate_nobility_primacy
-		}
 	}
 	on_granted = {
 	}
@@ -3291,9 +3285,6 @@ estate_burghers_land_of_commerce = {
 	max_absolutism = -5
 	loyalty = -0.05
 	can_select = {
-		NOT = {
-			has_estate_privilege = estate_nobility_primacy
-		}
 	}
 	on_granted = {
 	}
@@ -4065,9 +4056,6 @@ estate_brahmins_brahmin_governance = {
 		}
 	}
 	can_select = {
-		NOT = {
-			has_estate_privilege = estate_nobility_primacy
-		}
 	}
 	on_granted = {
 	}
@@ -4333,9 +4321,6 @@ estate_jains_diplomacy = {
 		}
 	}
 	can_select = {
-		NOT = {
-			has_estate_privilege = estate_nobility_primacy
-		}
 	}
 	on_granted = {
 	}
@@ -4490,9 +4475,6 @@ estate_maratha_military = {
 			tooltip = no_other_mil_privilege
 			NOT = {
 				has_estate_privilege = estate_nobles_nobility_primacy
-			}
-			NOT = {
-				has_estate_privilege = estate_nobility_primacy
 			}
 		}
 	}
@@ -4816,9 +4798,6 @@ estate_rajput_military = {
 			tooltip = no_other_mil_privilege
 			NOT = {
 				has_estate_privilege = estate_nobles_nobility_primacy
-			}
-			NOT = {
-				has_estate_privilege = estate_nobility_primacy
 			}
 		}
 	}

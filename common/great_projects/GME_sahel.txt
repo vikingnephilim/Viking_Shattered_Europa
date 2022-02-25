@@ -9,8 +9,11 @@ gme_gao_tomb_askia = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
-		FROM = {
-			tag = SON
+		custom_trigger_tooltip = {
+			tooltip = songhai_tt
+			FROM = {
+				tag = SON
+			}
 		}
 	}
 	on_built = {
@@ -18,13 +21,19 @@ gme_gao_tomb_askia = {
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
-		FROM = {
-			tag = SON
+		custom_trigger_tooltip = {
+			tooltip = songhai_tt
+			FROM = {
+				tag = SON
+			}
 		}
 	}
 	can_upgrade_trigger = {
-		FROM = {
-			tag = SON
+		custom_trigger_tooltip = {
+			tooltip = songhai_tt
+			FROM = {
+				tag = SON
+			}
 		}
 	}
 	keep_trigger = {
@@ -118,23 +127,47 @@ gme_timbuktu_djinguereber_mosque = {
 	starting_tier = 1
 	type = monument
 	build_trigger = {
-		culture_group = sahelian
-		province_is_islamic_or_accepts_islam = yes
-		has_owner_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = sahelian_culture_tt
+			culture_group = sahelian
+			has_owner_culture = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = muslim_religion_tt
+			1132 = {
+				province_is_islamic_or_accepts_islam = yes
+			}
+		}
 	}
 	on_built = {
 	}
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
-		culture_group = sahelian
-		province_is_islamic_or_accepts_islam = yes
-		has_owner_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = sahelian_culture_tt
+			culture_group = sahelian
+			has_owner_culture = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = muslim_religion_tt
+			1132 = {
+				province_is_islamic_or_accepts_islam = yes
+			}
+		}
 	}
 	can_upgrade_trigger = {
-		culture_group = sahelian
-		province_is_islamic_or_accepts_islam = yes
-		has_owner_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = sahelian_culture_tt
+			culture_group = sahelian
+			has_owner_culture = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = muslim_religion_tt
+			1132 = {
+				province_is_islamic_or_accepts_islam = yes
+			}
+		}
 	}
 	keep_trigger = {
 	}

@@ -14,14 +14,29 @@ estate_dhimmi = {
 	# If true, country will get estate
 	trigger = {
 		has_dlc = "The Cossacks"
-		NOT = { has_estate = estate_brahmins }
-		NOT = { government = native }
-		NOT = { has_reform = siberian_tribe }
-		NOT = { has_reform = cossacks_reform }
+		NOT = {
+			has_estate = estate_brahmins
+		}
+		NOT = {
+			has_reform = cossack_horde
+		}
+		NOT = {
+			government = native
+		}
+		NOT = {
+			has_reform = siberian_tribe
+		}
+		NOT = {
+			has_reform = cossacks_reform
+		}
 		is_nomad = no
 		is_colonial_nation = no
-		NOT = { has_reform = celestial_empire }
-		NOT = { technology_group = western }
+		NOT = {
+			has_reform = celestial_empire
+		}
+		NOT = {
+			technology_group = western
+		}
 		religion_group = muslim
 	}
 	# These scale with loyalty & power
@@ -32,7 +47,7 @@ estate_dhimmi = {
 	country_modifier_neutral = {
 		tolerance_heathen = 2
 	}
-			country_modifier_angry = {
+	country_modifier_angry = {
 		technology_cost = 0.1
 		tolerance_heathen = -1
 		global_unrest = 2
@@ -46,17 +61,23 @@ estate_dhimmi = {
 		desc = EST_VAL_RELIGIOUS_MINORITY
 		trigger = {
 			any_owned_province = {
-				NOT = { religion_group = muslim }
+				NOT = {
+					religion_group = muslim
+				}
 			}
 		}
-		influence = 10	
-			}
+		influence = 10
+	}
 	influence_modifier = {
 		desc = EST_VAL_RULED_BY_RELIGIOUS_MINORITY
 		trigger = {
-			NOT = { dominant_religion = ROOT }
+			NOT = {
+				dominant_religion = ROOT
+			}
 			any_owned_province = {
-				NOT = { religion_group = muslim }
+				NOT = {
+					religion_group = muslim
+				}
 			}
 		}
 		influence = 20
@@ -97,7 +118,9 @@ estate_dhimmi = {
 			NOT = {
 				any_known_country = {
 					war_with = ROOT
-					NOT = { religion_group = ROOT }
+					NOT = {
+						religion_group = ROOT
+					}
 				}
 			}
 		}
@@ -123,5 +146,9 @@ estate_dhimmi = {
 		estate_dhimmi_hire_advisor
 		estate_dhimmi_fire_advisor
 	}
-	color = { 100 125 150 }
+	color = {
+		100
+		125
+		150
+	}
 }

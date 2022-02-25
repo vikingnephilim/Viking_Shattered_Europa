@@ -10,9 +10,12 @@ gme_petersburg_admiralty = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
-		OR = {
-			current_age = age_of_absolutism
-			current_age = age_of_revolutions
+		custom_trigger_tooltip = {
+			tooltip = absolutism_revolutions_tt
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
 		}
 	}
 	on_built = {
@@ -20,8 +23,22 @@ gme_petersburg_admiralty = {
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
+		custom_trigger_tooltip = {
+			tooltip = absolutism_revolutions_tt
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
 	}
 	can_upgrade_trigger = {
+		custom_trigger_tooltip = {
+			tooltip = absolutism_revolutions_tt
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
 	}
 	keep_trigger = {
 	}
@@ -113,12 +130,18 @@ gme_peterhof_palace = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
-		FROM = {
-			government = monarchy
+		custom_trigger_tooltip = {
+			tooltip = monarchy_tt
+			FROM = {
+				government = monarchy
+			}
 		}
-		OR = {
-			current_age = age_of_absolutism
-			current_age = age_of_revolutions
+			custom_trigger_tooltip = {
+				tooltip = absolutism_revolutions_tt
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
 		}
 	}
 	on_built = {
@@ -126,13 +149,33 @@ gme_peterhof_palace = {
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
-		FROM = {
-			government = monarchy
+		custom_trigger_tooltip = {
+			tooltip = monarchy_tt
+			FROM = {
+				government = monarchy
+			}
+		}
+			custom_trigger_tooltip = {
+				tooltip = absolutism_revolutions_tt
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
 		}
 	}
 	can_upgrade_trigger = {
-		FROM = {
-			government = monarchy
+		custom_trigger_tooltip = {
+			tooltip = monarchy_tt
+			FROM = {
+				government = monarchy
+			}
+		}
+			custom_trigger_tooltip = {
+				tooltip = absolutism_revolutions_tt
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
 		}
 	}
 	keep_trigger = {
@@ -226,9 +269,12 @@ gme_bolshoi_theatre = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
-		OR = {
-			current_age = age_of_absolutism
-			current_age = age_of_revolutions
+		custom_trigger_tooltip = {
+			tooltip = absolutism_revolutions_tt
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
 		}
 	}
 	on_built = {
@@ -236,8 +282,22 @@ gme_bolshoi_theatre = {
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
+		custom_trigger_tooltip = {
+			tooltip = bolshoi_theatre_tt
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
 	}
 	can_upgrade_trigger = {
+		custom_trigger_tooltip = {
+			tooltip = bolshoi_theatre_tt
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
+		}
 	}
 	keep_trigger = {
 	}

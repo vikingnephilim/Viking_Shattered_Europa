@@ -1157,7 +1157,6 @@ country_decisions = {
 						}
 						is_core = root
 					}
-
 				}
 			}
 		}
@@ -1665,6 +1664,64 @@ country_decisions = {
 				}
 			}
 			set_global_flag = reign_in_piedmont
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	choose_a_culture_CAT_SPA = {
+		major = yes
+		potential = {
+			NOT = {
+				has_global_flag = catalan_language
+			}
+			culture_group = iberian
+			tag = CAT
+		}
+		allow = {
+			catalonia_area = {
+				owned_by = CAT
+				is_core = CAT
+			}
+			primary_culture = catalan_new
+		}
+		effect = {
+			every_owned_province = {
+				limit = {
+					culture = catalan
+				}
+				change_culture = catalan_new
+			}
+			set_global_flag = catalan_language
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	choose_a_culture_CAT_FRA = {
+		major = yes
+		potential = {
+			NOT = {
+				has_global_flag = catalan_language
+			}
+			culture_group = french
+			tag = CAT
+		}
+		allow = {
+			catalonia_area = {
+				owned_by = CAT
+				is_core = CAT
+			}
+			primary_culture = catalan
+		}
+		effect = {
+			every_owned_province = {
+				limit = {
+					culture = catalan_new
+				}
+				change_culture = catalan
+			}
+			set_global_flag = catalan_language
 		}
 		ai_will_do = {
 			factor = 1

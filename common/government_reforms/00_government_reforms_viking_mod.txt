@@ -5069,6 +5069,55 @@ defender_of_faith_republic = {
 	}
 }
 
+cossack_horde = {
+	icon = "horde_riding"
+	potential = {
+		OR = {
+			tag = ASC
+			tag = DNI
+			tag = DON
+			tag = KCH
+			tag = OCH
+			tag = SCH
+			tag = SEM
+			tag = TCH
+			tag = UCH
+			tag = ZCH
+		}
+	}
+	trigger = {
+		OR = {
+			tag = ASC
+			tag = DNI
+			tag = DON
+			tag = KCH
+			tag = OCH
+			tag = SCH
+			tag = SEM
+			tag = TCH
+			tag = UCH
+			tag = ZCH
+		}
+	}
+    allow_normal_conversion = yes
+	raze_province = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 0
+	lock_level_when_selected = yes
+	start_territory_to_estates = 0.5
+	modifiers = {
+		loot_amount = 0.5
+		available_province_loot = 0.5
+		global_institution_spread = -0.15
+		cav_to_inf_ratio = 0.5
+		movement_speed = 0.2
+		cavalry_power = 0.10
+	}
+	start_territory_to_estates = 24
+	government_abilities = {
+		cossacks_mechanic
+	}
+}
 ##############################################
 ################ THEOCRACIES #################
 ##############################################

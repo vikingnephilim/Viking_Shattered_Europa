@@ -295,8 +295,11 @@ gme_damascus_al_azem_palace = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		culture = al_suryah_arabic
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = syrian_culture_tt
+			culture = al_suryah_arabic
+			has_owner_accepted_culture = yes
+			}
 	}
 	#what to do when it's built
 	on_built = {
@@ -306,13 +309,19 @@ gme_damascus_al_azem_palace = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		culture = al_suryah_arabic
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = syrian_culture_tt
+			culture = al_suryah_arabic
+			has_owner_accepted_culture = yes
+			}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		culture = al_suryah_arabic
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = syrian_culture_tt
+			culture = al_suryah_arabic
+			has_owner_accepted_culture = yes
+			}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
@@ -437,9 +446,24 @@ gme_jerusalem_cave_patriarch = {
 	#can we build it?
 	build_trigger = {
 		OR = {
-			province_is_christian_or_accepts_christianity = yes
-			province_is_jewish_or_accepts_jewish = yes
-			province_is_islamic_or_accepts_islam = yes
+			custom_trigger_tooltip = {
+				tooltip = christian_religion_tt
+				379 = {
+					province_is_christian_or_accepts_christianity = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = muslim_religion_tt
+				379 = {
+					province_is_islamic_or_accepts_islam = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = jewish_religion_tt
+				379 = {
+					province_is_jewish_or_accepts_jewish = yes
+				}
+			}
 		}
 		has_owner_religion = yes
 	}
@@ -452,18 +476,48 @@ gme_jerusalem_cave_patriarch = {
 	#can our country use it?
 	can_use_modifiers_trigger = {
 		OR = {
-			province_is_christian_or_accepts_christianity = yes
-			province_is_jewish_or_accepts_jewish = yes
-			province_is_islamic_or_accepts_islam = yes
+			custom_trigger_tooltip = {
+				tooltip = christian_religion_tt
+				379 = {
+					province_is_christian_or_accepts_christianity = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = muslim_religion_tt
+				379 = {
+					province_is_islamic_or_accepts_islam = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = jewish_religion_tt
+				379 = {
+					province_is_jewish_or_accepts_jewish = yes
+				}
+			}
 		}
 		has_owner_religion = yes
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
 		OR = {
-			province_is_christian_or_accepts_christianity = yes
-			province_is_jewish_or_accepts_jewish = yes
-			province_is_islamic_or_accepts_islam = yes
+			custom_trigger_tooltip = {
+				tooltip = christian_religion_tt
+				379 = {
+					province_is_christian_or_accepts_christianity = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = muslim_religion_tt
+				379 = {
+					province_is_islamic_or_accepts_islam = yes
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = jewish_religion_tt
+				379 = {
+					province_is_jewish_or_accepts_jewish = yes
+				}
+			}
 		}
 		has_owner_religion = yes
 	}
@@ -864,7 +918,12 @@ gme_gme_mustan_uni = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		province_is_islamic_or_accepts_islam = yes
+		custom_trigger_tooltip = {
+			tooltip = muslim_religion_tt
+				410 = {
+					province_is_islamic_or_accepts_islam = yes
+				}
+			}
 	}
 	#what to do when it's built
 	on_built = {
@@ -874,11 +933,21 @@ gme_gme_mustan_uni = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		province_is_islamic_or_accepts_islam = yes
+		custom_trigger_tooltip = {
+			tooltip = muslim_religion_tt
+				410 = {
+					province_is_islamic_or_accepts_islam = yes
+				}
+			}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		province_is_islamic_or_accepts_islam = yes
+		custom_trigger_tooltip = {
+			tooltip = muslim_religion_tt
+				410 = {
+					province_is_islamic_or_accepts_islam = yes
+				}
+			}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {

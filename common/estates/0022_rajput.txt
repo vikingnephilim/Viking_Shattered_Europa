@@ -10,31 +10,72 @@ estate_rajput = {
 			primary_culture = malvi
 			AND = {
 				culture_group = eastern_aryan
-				NOT = { primary_culture = sinhala }
+				NOT = {
+					primary_culture = sinhala
+				}
 			}
 			culture_group = hindusthani
 			culture_group = central_indic
 		}
-		NOT = { is_revolutionary_republic_trigger = yes }
-		NOT = { government = native }
-		NOT = { has_reform = cossacks_reform }
-		NOT = { has_reform = siberian_tribe }
-		NOT = { has_reform = celestial_empire }
-		NOT = { has_reform = pirate_republic_reform }
-		NOT = { has_reform = english_monarchy }
-		NOT = { has_reform = veche_republic }
-		NOT = { has_reform = merchants_reform }
-		NOT = { has_reform = venice_merchants_reform }
-		NOT = { has_reform = oligarchy_reform }
-		NOT = { has_reform = american_republic }
-		NOT = { has_reform = federal_republic }
-		NOT = { has_reform = trading_city }
-		NOT = { has_reform = free_city }
-		NOT = { has_reform = peasants_republic }
-		NOT = { has_reform = signoria_reform }
+		NOT = {
+			is_revolutionary_republic_trigger = yes
+		}
+		NOT = {
+			government = native
+		}
+		NOT = {
+			has_reform = cossacks_reform
+		}
+		NOT = {
+			has_reform = siberian_tribe
+		}
+		NOT = {
+			has_reform = celestial_empire
+		}
+		NOT = {
+			has_reform = pirate_republic_reform
+		}
+		NOT = {
+			has_reform = english_monarchy
+		}
+		NOT = {
+			has_reform = veche_republic
+		}
+		NOT = {
+			has_reform = merchants_reform
+		}
+		NOT = {
+			has_reform = venice_merchants_reform
+		}
+		NOT = {
+			has_reform = oligarchy_reform
+		}
+		NOT = {
+			has_reform = cossack_horde
+		}
+		NOT = {
+			has_reform = american_republic
+		}
+		NOT = {
+			has_reform = federal_republic
+		}
+		NOT = {
+			has_reform = trading_city
+		}
+		NOT = {
+			has_reform = free_city
+		}
+		NOT = {
+			has_reform = peasants_republic
+		}
+		NOT = {
+			has_reform = signoria_reform
+		}
 		is_nomad = no
 		is_colonial_nation = no
-		NOT = { has_reform = revolutionary_empire_reform }
+		NOT = {
+			has_reform = revolutionary_empire_reform
+		}
 	}
 	# These scale with loyalty & power
 	country_modifier_happy = {
@@ -43,8 +84,8 @@ estate_rajput = {
 	}
 	country_modifier_neutral = {
 		fort_maintenance_modifier = -0.1
-			}
-			country_modifier_angry = {
+	}
+	country_modifier_angry = {
 		manpower_recovery_speed = -0.1
 		fort_maintenance_modifier = 0.1
 		global_unrest = 2
@@ -58,11 +99,21 @@ estate_rajput = {
 			factor = 0.5
 			OR = {
 				AND = {
-					NOT = { culture_group = hindusthani }
-					NOT = { culture_group = central_indic }
-					NOT = { culture_group = eastern_aryan }
-					NOT = { culture = rajput }
-					NOT = { culture = malvi }
+					NOT = {
+						culture_group = hindusthani
+					}
+					NOT = {
+						culture_group = central_indic
+					}
+					NOT = {
+						culture_group = eastern_aryan
+					}
+					NOT = {
+						culture = rajput
+					}
+					NOT = {
+						culture = malvi
+					}
 				}
 				culture = sinhala
 			}
@@ -71,22 +122,28 @@ estate_rajput = {
 			factor = 0.5
 			NOT = {
 				OR = {
-				religion = hinduism
-				religion = shakti
-				religion = vishnuism
-				religion = bon
-				religion = jain
+					religion = hinduism
+					religion = shakti
+					religion = vishnuism
+					religion = bon
+					religion = jain
 				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			NOT = { religion_group = dharmic }
+			NOT = {
+				religion_group = dharmic
+			}
 		}
 		modifier = {
 			factor = 0.5
-			NOT = { superregion = india_superregion }
-			NOT = { culture = owner }
+			NOT = {
+				superregion = india_superregion
+			}
+			NOT = {
+				culture = owner
+			}
 		}
 		modifier = {
 			factor = 1.5
@@ -97,7 +154,9 @@ estate_rajput = {
 		}
 		modifier = {
 			factor = 0.67
-			NOT = { is_state_core = owner }
+			NOT = {
+				is_state_core = owner
+			}
 		}
 		modifier = {
 			factor = 1.5
@@ -114,8 +173,8 @@ estate_rajput = {
 				primary_culture = rajput
 			}
 		}
-		influence = 10	
-			}
+		influence = 10
+	}
 	influence_modifier = {
 		desc = EST_VAL_RULED_BY_NON_HINDU
 		trigger = {
@@ -127,9 +186,11 @@ estate_rajput = {
 					religion = bon
 					religion = jain
 				}
-			 }
+			}
 			any_owned_province = {
-				NOT = { religion_group = dharmic }
+				NOT = {
+					religion_group = dharmic
+				}
 			}
 		}
 		influence = -5
@@ -211,6 +272,10 @@ estate_rajput = {
 		estate_rajput_hire_advisor
 		estate_rajput_fire_advisor
 	}
-	color = { 220 20 20 }
-	influence_from_dev_modifier = 1.0
+	color = {
+		220
+		20
+		20
+	}
+	influence_from_dev_modifier = 1
 }

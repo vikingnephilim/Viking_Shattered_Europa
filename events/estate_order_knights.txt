@@ -1,0 +1,338 @@
+#################################
+# events for the knights orders #
+#################################
+#copied cuz looks cute#
+#######################
+namespace = knights_estate_events
+#rise of order influence
+country_event = {
+	id = knights_estate_events.1
+	title = knights_estate_events.1t
+	desc = knights_estate_events.1d
+	is_triggered_only = yes
+	trigger = {
+		has_dlc = "The Cossacks"
+		has_estate = estate_order_knights
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_order_knights
+				modifier = EST_VAL_ORDER_ADVANCES
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_order_knights
+				modifier = EST_VAL_ORDER_DECLINES
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = knights_estate_events.1.a		#Ok
+		add_estate_influence_modifier = {
+			estate = estate_order_knights
+			desc = EST_VAL_ORDER_ADVANCES
+			influence = 10
+			duration = 5475
+		}
+	}
+}
+
+#drop of order influence
+country_event = {
+	id = knights_estate_events.2
+	title = knights_estate_events.2t
+	desc = knights_estate_events.2d
+	is_triggered_only = yes
+	trigger = {
+		has_dlc = "The Cossacks"
+		has_estate = estate_order_knights
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_order_knights
+				modifier = EST_VAL_ORDER_ADVANCES
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_order_knights
+				modifier = EST_VAL_ORDER_DECLINES
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = knights_estate_events.2.a		#Ok
+		add_estate_influence_modifier = {
+			estate = estate_order_knights
+			desc = EST_VAL_ORDER_DECLINES
+			influence = -10
+			duration = 5475
+		}
+	}
+}
+
+#order reserve trops
+country_event = {
+	id = knights_estate_events.3
+	title = knights_estate_events.3t
+	desc = knights_estate_events.3d
+	is_triggered_only = yes
+	trigger = {
+		has_estate = estate_order_knights
+		has_dlc = "The Cossacks"
+		has_estate_influence_modifier = {
+			estate = estate_order_knights
+			modifier = EST_VAL_ORDER_DECLINES
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_order_knights
+				modifier = EST_VAL_ORDER_RESERVE_TROPS_A
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_order_knights
+				modifier = EST_VAL_ORDER_RESERVE_TROPS_B
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = knights_estate_events.3.a		#decline add_army_tradition = -5
+		add_estate_influence_modifier = {
+			estate = estate_order_knights
+			desc = EST_VAL_ORDER_RESERVE_TROPS_A
+			influence = -10
+			duration = 5475
+		}
+		add_estate_loyalty = {
+			estate = estate_order_knights
+			loyalty = -10
+		}
+	}
+	option = {
+		name = knights_estate_events.3.b		#accept 
+		add_manpower = -0.085
+		add_army_tradition = 2.5
+		add_estate_influence_modifier = {
+			estate = estate_order_knights
+			desc = EST_VAL_ORDER_RESERVE_TROPS_B
+			influence = 10
+			duration = 5475
+		}
+		add_estate_loyalty = {
+			estate = estate_order_knights
+			loyalty = 10
+		}
+	}
+}
+
+#order needs finacial help
+country_event = {
+	id = knights_estate_events.4
+	title = knights_estate_events.4t
+	desc = knights_estate_events.4d
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			manpower_percentage = 0.1
+		}
+		has_estate = estate_order_knights
+		has_dlc = "The Cossacks"
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_order_knights
+				modifier = EST_VAL_ORDER_FINANCED_A
+			}
+		}
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_order_knights
+				modifier = EST_VAL_ORDER_FINANCED_B
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = knights_estate_events.4.a		#decline
+		if = {
+			limit = {
+				government = monarchy
+			}
+			remove_country_modifier = called_the_order
+		}
+		add_estate_influence_modifier = {
+			estate = estate_order_knights
+			desc = EST_VAL_ORDER_FINANCED_A
+			influence = -10
+			duration = 5475
+		}
+		add_estate_loyalty = {
+			estate = estate_order_knights
+			loyalty = -15
+		}
+	}
+	option = {
+		name = knights_estate_events.4.b
+		add_years_of_income = -0.1
+		add_estate_influence_modifier = {
+			estate = estate_order_knights
+			desc = EST_VAL_ORDER_FINANCED_B
+			influence = 10
+			duration = 5475
+		}
+		add_estate_loyalty = {
+			estate = estate_order_knights
+			loyalty = 20
+		}
+	}
+}
+
+#order decline your power
+country_event = {
+	id = knights_estate_events.5
+	title = knights_estate_events.5t
+	desc = knights_estate_events.5d
+	is_triggered_only = yes
+	trigger = {
+		has_estate = estate_order_knights
+		has_dlc = "The Cossacks"
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_order_knights
+				modifier = EST_VAL_ORDER_DECILNE_YOU
+			}
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = knights_estate_events.5.a
+		add_prestige = -10
+		add_estate_influence_modifier = {
+			estate = estate_order_knights
+			desc = EST_VAL_ORDER_DECILNE_YOU
+			influence = -5
+			duration = 5475
+		}
+		add_estate_loyalty = {
+			estate = estate_order_knights
+			loyalty = -25
+		}
+	}
+}
+
+country_event = {
+	id = knights_estate_events.6
+	title = knights_estate_events.6t
+	desc = knights_estate_events.6d
+	is_triggered_only = yes
+	trigger = {
+		has_dlc = "The Cossacks"
+		has_estate = estate_order_knights
+		NOT = {
+			has_estate_influence_modifier = {
+				estate = estate_order_knights
+				modifier = EST_VAL_ORDER_IMPROVES_ARMY_DENY
+			}
+		}
+		NOT = {
+			has_country_modifier = order_refroming_army
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+	option = {
+		name = knights_estate_events.6.a
+		add_army_tradition = 5
+		add_prestige = 10
+		add_country_modifier = {
+			name = order_refroming_army
+			duration = 3650
+		}
+	}
+	option = {
+		name = knights_estate_events.6.b
+		add_army_tradition = -5
+		add_prestige = -10
+		add_estate_influence_modifier = {
+			estate = estate_order_knights
+			desc = EST_VAL_ORDER_IMPROVES_ARMY_DENY
+			influence = -10
+			duration = 3650
+		}
+	}
+}
+
+###################################
+## Knights of The Order Disasters##
+###################################
+country_event = {
+	id = knights_estate_events.7
+	title = knights_estate_events.7.t
+	desc = knights_estate_events.7.d
+	picture = NOBLE_ESTATE_TAKE_OVER_eventPicture
+	is_triggered_only = yes
+	immediate = {
+		set_country_flag = knights_in_power
+	}
+	option = {
+		name = knights_estate_events.7.a
+		add_stability = -1
+		if = {
+			limit = {
+				is_tribal = no
+				NOT = {
+					has_reform = elective_monarchy
+				}
+			}
+			add_government_reform = monastic_order_reform
+		}
+		if = {
+			limit = {
+				has_reform = elective_monarchy
+			}
+			add_country_modifier = {
+				name = "knights_take_over_elections"
+				duration = -1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = knights_estate_events.9
+	title = knights_estate_events.9.t
+	desc = knights_estate_events.9.d
+	picture = NOBLE_ESTATE_eventPicture
+	mean_time_to_happen = {
+		days = 360
+	}
+	trigger = {
+		stability = 0
+		has_disaster = estate_order_knights_disaster
+		manpower_percentage = 0.8
+		NOT = {
+			estate_influence = {
+				estate = estate_order_knights
+				influence = 60
+			}
+		}
+	}
+	option = {
+		clr_country_flag = knights_in_power
+		name = knights_estate_events.9.a
+	}
+}

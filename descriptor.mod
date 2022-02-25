@@ -10,6 +10,6 @@ tags={
 	"New Nations"
 	"Religion"
 }
-supported_version="1.32.*"
+supported_version="1.33.*"
 path="C:/Users/Carl/Documents/Paradox Interactive/Europa Universalis IV/mod/WIPTEST"
 remote_file_id="2262234791"

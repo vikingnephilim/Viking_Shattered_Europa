@@ -909,3 +909,57 @@ beylik_vassal = {
 		modifier = beylik_subject_modifier
 	}
 }
+
+cossack_vassal = {
+	diplomacy_view_class = 1	# See description above
+	# Properties:
+	has_power_projection = no
+	takes_diplo_slot = no
+	gets_help_with_rebels = yes
+	separatists_become_subjects = yes
+	allows_taking_land_without_independence = yes
+	can_have_subjects_of_other_types = yes
+	can_be_integrated = yes
+	can_be_annexed = yes
+	can_use_claims = yes
+	forms_trade_companies = no
+	joins_overlords_wars = yes
+	joins_colonial_wars = no
+	can_concentrate_development = no
+	overlord_protects_external = yes
+	trust_on_start = 25
+	base_liberty_desire = -10
+	military_focus = 1
+	relative_power_class = 1
+	should_quit_wars_on_activation = yes
+	restoration_cb = cb_disloyal_vassal
+	# Subject Interactions:
+	scutage = no
+	divert_trade = no
+	# Subject Interactions
+	#(disable)
+	grant_core_claim = yes
+	grant_province = yes
+	place_relative_on_throne = no
+	enforce_religion = yes
+	enforce_culture = yes
+	seize_territory = no
+	can_send_tribute = yes
+	#(enable)
+	contribute_to_capital = no
+	return_land = yes
+	conscript_general = yes
+	#(special)
+	subsidize_armies = yes
+	fortify_march = yes
+	send_officers = no
+	# Modifiers
+	modifier_overlord = clear
+	modifier_subject = clear
+	modifier_overlord = {
+		modifier = cossack_overlord_modifier
+	}
+	modifier_subject = {
+		modifier = cossack_subject_modifier
+	}
+}

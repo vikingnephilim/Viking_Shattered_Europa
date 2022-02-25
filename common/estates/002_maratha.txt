@@ -10,26 +10,65 @@ estate_maratha = {
 			primary_culture = sinhala
 		}
 		technology_group = indian
-		NOT = { primary_culture = rajput }
-		NOT = { primary_culture = malvi }
-		NOT = { has_reform = pirate_republic_reform }
-		NOT = { is_revolutionary_republic_trigger = yes }
-		NOT = { government = native }
-		NOT = { has_reform = siberian_tribe }
-		NOT = { has_reform = cossacks_reform }
-		NOT = { has_reform = celestial_empire }
-		NOT = { has_reform = english_monarchy }
-		NOT = { has_reform = venice_merchants_reform }
-		NOT = { has_reform = oligarchy_reform }
-		NOT = { has_reform = american_republic }
-		NOT = { has_reform = federal_republic }
-		NOT = { has_reform = trading_city }
-		NOT = { has_reform = free_city }
-		NOT = { has_reform = peasants_republic }
-		NOT = { has_reform = signoria_reform }
+		NOT = {
+			primary_culture = rajput
+		}
+		NOT = {
+			primary_culture = malvi
+		}
+		NOT = {
+			has_reform = pirate_republic_reform
+		}
+		NOT = {
+			is_revolutionary_republic_trigger = yes
+		}
+		NOT = {
+			government = native
+		}
+		NOT = {
+			has_reform = siberian_tribe
+		}
+		NOT = {
+			has_reform = cossacks_reform
+		}
+		NOT = {
+			has_reform = celestial_empire
+		}
+		NOT = {
+			has_reform = english_monarchy
+		}
+		NOT = {
+			has_reform = venice_merchants_reform
+		}
+		NOT = {
+			has_reform = oligarchy_reform
+		}
+		NOT = {
+			has_reform = american_republic
+		}
+		NOT = {
+			has_reform = federal_republic
+		}
+		NOT = {
+			has_reform = trading_city
+		}
+		NOT = {
+			has_reform = free_city
+		}
+		NOT = {
+			has_reform = peasants_republic
+		}
+		NOT = {
+			has_reform = signoria_reform
+		}
+		NOT = {
+			has_reform = cossack_horde
+		}
 		is_nomad = no
 		is_colonial_nation = no
-		NOT = { has_reform = revolutionary_empire_reform }
+		NOT = {
+			has_reform = revolutionary_empire_reform
+		}
 	}
 	# These scale with loyalty & power
 	country_modifier_happy = {
@@ -39,7 +78,7 @@ estate_maratha = {
 	country_modifier_neutral = {
 		army_tradition = 0.5
 	}
-			country_modifier_angry = {
+	country_modifier_angry = {
 		army_tradition = -0.5
 		global_unrest = 2
 	}
@@ -52,9 +91,15 @@ estate_maratha = {
 			factor = 0.5
 			OR = {
 				AND = {
-					NOT = { culture_group = western_aryan }
-					NOT = { culture_group = dravidian }
-					NOT = { culture = sinhala }
+					NOT = {
+						culture_group = western_aryan
+					}
+					NOT = {
+						culture_group = dravidian
+					}
+					NOT = {
+						culture = sinhala
+					}
 				}
 				culture = rajput
 				culture = malvi
@@ -64,22 +109,28 @@ estate_maratha = {
 			factor = 0.5
 			NOT = {
 				OR = {
-				is_indic_viking_mod = yes
-				religion = shakti
-				religion = vishnuism
-				religion = bon
-				religion = jain
+					is_indic_viking_mod = yes
+					religion = shakti
+					religion = vishnuism
+					religion = bon
+					religion = jain
 				}
 			}
 		}
 		modifier = {
 			factor = 0.5
-			NOT = { religion_group = dharmic }
+			NOT = {
+				religion_group = dharmic
+			}
 		}
 		modifier = {
 			factor = 0.5
-			NOT = { superregion = india_superregion }
-			NOT = { culture = owner }
+			NOT = {
+				superregion = india_superregion
+			}
+			NOT = {
+				culture = owner
+			}
 		}
 		modifier = {
 			factor = 1.5
@@ -90,7 +141,9 @@ estate_maratha = {
 		}
 		modifier = {
 			factor = 0.67
-			NOT = { is_state_core = owner }
+			NOT = {
+				is_state_core = owner
+			}
 		}
 		modifier = {
 			factor = 1.5
@@ -107,8 +160,8 @@ estate_maratha = {
 				primary_culture = marathi
 			}
 		}
-		influence = 10	
-			}
+		influence = 10
+	}
 	influence_modifier = {
 		desc = EST_VAL_RULED_BY_NON_HINDU
 		trigger = {
@@ -120,9 +173,11 @@ estate_maratha = {
 					religion = bon
 					religion = jain
 				}
-			 }
+			}
 			any_owned_province = {
-				NOT = { religion_group = dharmic }
+				NOT = {
+					religion_group = dharmic
+				}
 			}
 		}
 		influence = -5
@@ -204,6 +259,10 @@ estate_maratha = {
 		estate_maratha_hire_advisor
 		estate_maratha_fire_advisor
 	}
-	color = { 230 145 20 }
-	influence_from_dev_modifier = 1.0
+	color = {
+		230
+		145
+		20
+	}
+	influence_from_dev_modifier = 1
 }

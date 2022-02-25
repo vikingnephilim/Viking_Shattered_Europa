@@ -10,8 +10,10 @@ gme_settsu_osaka_castle = {
 	starting_tier = 0
 	type = monument
 	build_trigger = {
-		FROM = {
-			primary_culture = japanese
+		custom_trigger_tooltip = {
+			tooltip = japanese_culture_tt
+			culture_group = japanese_g
+			province_is_or_accepts_culture = yes
 		}
 	}
 	on_built = {
@@ -19,9 +21,18 @@ gme_settsu_osaka_castle = {
 	on_destroyed = {
 	}
 	can_use_modifiers_trigger = {
+		custom_trigger_tooltip = {
+			tooltip = japanese_culture_tt
+			culture_group = japanese_g
+			province_is_or_accepts_culture = yes
+		}
 	}
 	can_upgrade_trigger = {
-		culture_group = japanese_g
+		custom_trigger_tooltip = {
+			tooltip = japanese_culture_tt
+			culture_group = japanese_g
+			province_is_or_accepts_culture = yes
+		}
 	}
 	keep_trigger = {
 	}
