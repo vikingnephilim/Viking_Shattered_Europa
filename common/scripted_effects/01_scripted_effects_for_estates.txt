@@ -27,6 +27,17 @@ each_estate_effect = {
 	}
 	if = {
 		limit = {
+			has_estate = estate_order_knights
+		}
+		[[effect]
+		$effect$
+		]
+		[[order_knights_effect]
+		$order_knights_effect$
+		]
+	}
+	if = {
+		limit = {
 			has_estate = estate_maratha
 		}
 		[[effect]
@@ -123,6 +134,51 @@ each_estate_effect = {
 		[[jains_effect]
 		$jains_effect$
 		]
+	}
+}
+
+#knights
+add_estate_church_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_church
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = 10
+		}
+	}
+	else_if = {
+		limit = {
+			is_indic_viking_mod = yes
+			has_estate = estate_order_knights
+		}
+		add_estate_loyalty = {
+			estate = estate_brahmins
+			loyalty = 10
+		}
+	}
+}
+
+reduce_estate_order_knights_loyalty_effect = {
+	if = {
+		limit = {
+			has_estate = estate_church
+		}
+		add_estate_loyalty = {
+			estate = estate_church
+			loyalty = -10
+		}
+	}
+	else_if = {
+		limit = {
+			is_indic_viking_mod = yes
+			has_estate = estate_brahmins
+		}
+		add_estate_loyalty = {
+			estate = estate_brahmins
+			loyalty = -10
+		}
 	}
 }
 
@@ -2104,6 +2160,12 @@ scaled_estate_cossacks_land_share_effect = {
 	}
 }
 
+scaled_estate_order_knights_land_share_effect = {
+	scaled_estate_land_share_add_effect = {
+		estate = estate_order_knights
+	}
+}
+
 #Based on those above, but you can choose which estate you use
 #example of usage: scaled_estate_land_share_add_effect = { estate = estate_nobles }
 scaled_estate_land_share_add_effect = {
@@ -2901,6 +2963,18 @@ pick_random_estate_if_present = {
 			$estate_action$ = estate_rajput
 			]
 		}
+		1 = {
+			trigger = {
+				has_estate = estate_order_knights
+				NOT = {
+					has_country_flag = estate_order_knights_$flag$
+				}
+			}
+			set_country_flag = estate_order_knights_$flag$
+			[[estate_action]
+			$estate_action$ = estate_order_knights
+			]
+		}
 	}
 }
 
@@ -2945,7 +3019,7 @@ give_estate_land_share_massive = {
 give_estate_land_share_gigantic = {
 	change_estate_land_share = {
 		estate = $estate$
-		share = 10
+		share = 15
 	}
 }
 

@@ -213,6 +213,18 @@ estate_order_knights = {
 		desc = estate_knights_naziehkm_german
 		trigger = {
 			culture_group = germanic
+			NOT = {
+				culture = dutch
+			}
+			NOT = {
+				culture = frisian
+			}
+			NOT = {
+				culture = flemish
+			}
+			NOT = {
+				culture = luxembourgian
+			}
 		}
 	}
 	custom_name = {
@@ -224,7 +236,29 @@ estate_order_knights = {
 	custom_name = {
 		desc = estate_knights_dobrzyn
 		trigger = {
-			culture = polish
+			OR = {
+				culture = polish
+				culture = mazovian
+				culture = wielkopolskan
+				culture = malopolskan
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_knights_dutch
+		trigger = {
+			OR = {
+				culture = dutch
+				culture = frisian
+				culture = flemish
+				culture = luxembourgian
+			}
+		}
+	}
+	custom_name = {
+		desc = estate_knights_british
+		trigger = {
+			culture_group = british
 		}
 	}
 	custom_name = {
@@ -233,109 +267,34 @@ estate_order_knights = {
 			culture_group = french
 		}
 	}
+	custom_name = {
+		desc = estate_knights_orthodox
+		trigger = {
+			OR = {
+				religion = orthodox
+				religion = paulician
+				religion = iconoclast
+				religion = bogomilist
+			}
+		}
+	}
 	privileges = {
-		estate_nobles_land_rights
-		estate_nobles_nobility_primacy
-		estate_nobles_officer_corp
-		estate_nobles_levies
-		estate_nobles_advisors
-		estate_nobles_right_of_counsel
-		estate_nobles_french_strong_duchies
-		estate_nobles_supremacy_over_crown
-		estate_nobles_junker_primacy
-		estate_nobles_strong_duchies
-		estate_nobles_golden_liberty
-		estate_nobles_veto_heir_apparent
-		estate_nobles_nieszawa_privileges
-		estate_nobles_pacta_conventa
-		estate_nobles_monopoly_of_metals
-		estate_nobles_monopoly_of_livestock
-		estate_nobles_monopoly_of_gems
-		estate_nobles_statutory_rights
-		estate_nobles_command_of_the_military
-		estate_nobles_better_integration
-		estate_nobles_cawa_peace_keepers
-		estate_nobles_cawa_offensive_fighters
-		estate_nobles_grant_power_to_the_bashorun
-		estate_nobles_neighbor_raids
-		estate_nobles_decentralized_tribe
-		estate_nobles_tribe_unification
-		estate_nobles_tribe_centralization
-		estate_church_land_rights
-		estate_church_papal_emissary
-		estate_church_religious_state
-		estate_church_independent_inquisition
-		estate_church_new_world_mission
-		estate_church_clerical_ministers
-		estate_church_clerical_oversight
-		estate_church_inwards_perfection
-		estate_church_enforced_one_faith
-		estate_church_for_the_faith
-		estate_church_karma_temples
-		estate_church_influence_temples
-		estate_church_brahmins_at_court
-		estate_church_lao_animism
-		estate_church_monopoly_of_incense
-		estate_church_monopoly_of_wool
-		estate_church_monopoly_of_wine
-		estate_church_monopoly_of_slaves
-		estate_church_statutory_rights
-		estate_church_one_faith_one_culture
-		estate_church_religious_diplomats
-		estate_church_heir_shrine
-		estate_church_yakobs_churches
-		estate_church_embrace_singluar_cult
-		estate_church_flexible_cults
-		estate_church_scholar_connections
-		estate_church_integrated_school
+		estate_knights_christian_church
+		estate_knights_muslim_mosque
+		estate_knights_sea_reconquest
+		estate_knights_crusade
+		estate_knights_shock_awe
+		estate_knights_fire_fury
+		estate_knights_grant_lease
+		estate_knights_norse_order_discipline
+		estate_knights_norse_order_morale
 	}
 	agendas = {
-		estate_nobles_develop_x
-		estate_nobles_build_army_building_in_y
-		estate_nobles_build_fort_building_in_y
-		estate_nobles_build_university_in_y
-		estate_nobles_build_manufactory_in_y
-		estate_nobles_get_allies
-		estate_nobles_befriend_rival_of_rival
-		estate_nobles_restore_legitimacy
-		estate_nobles_relations_with_X
-		estate_nobles_break_coalition
-		estate_nobles_condottieri_rivals
-		estate_nobles_support_independence
-		estate_nobles_retake_core
-		estate_nobles_crush_revolts
-		estate_nobles_regain_liberty
-		estate_nobles_convert_province_culture
-		estate_nobles_protect_our_culture
-		estate_nobles_vassalise_vulnerable_country
-		estate_nobles_expand_into_x
-		estate_nobles_complete_conquest_of_x
-		estate_nobles_annex_subject
-		estate_nobles_build_an_army
-		estate_nobles_bigger_army_than_rival
-		estate_nobles_build_up_manpower_reserves
-		estate_nobles_recover_abysmal_prestige
-		estate_nobles_improve_prestige
-		estate_nobles_hire_advisor
-		estate_nobles_fire_advisor
-		estate_church_develop_x
-		estate_church_build_temple_in_y
-		estate_church_build_university_in_y
-		estate_church_build_manufactory_in_y
-		estate_church_convert_province_x
-		estate_church_reduce_war_exhaustion
-		estate_church_recover_stability
-		estate_church_increase_stability
-		estate_church_reduce_overextension
-		estate_church_restore_devotion
-		estate_church_root_out_heresy
-		estate_church_relations_with_pope
-		estate_church_restore_the_holy_see
-		estate_church_crush_religious_revolts
-		estate_church_protect_brethren
-		estate_church_propagate_religion
-		estate_church_relations_with_dotf
-		estate_church_hire_advisor
-		estate_church_fire_advisor
+		estate_knights_build_university_in_y
+		estate_knights_build_manufactory_in_y
+		estate_knights_build_fort_building_in_y
+		estate_knights_build_army_building_in_y
+		estate_knights_build_temple_in_y
+		estate_knights_convert_province_x
 	}
 }

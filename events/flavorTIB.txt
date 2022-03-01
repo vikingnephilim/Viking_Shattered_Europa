@@ -3,50 +3,60 @@
 #
 # Scripted by Sara Wendel-Örtqvist
 ########################################
-
 namespace = flavor_tib
 normal_or_historical_nations = yes
-
 # The Dalai Lama takes control
 country_event = {
 	id = flavor_tib.1
 	title = "flavor_tib.EVTNAME1"
 	desc = "flavor_tib.EVTDESC1"
 	picture = RELIGION_eventPicture
-	
 	fire_only_once = yes
-	
 	trigger = {
 		is_revolutionary = no
 		OR = {
 			AND = {
 				tag = TIB
 				OR = {
-					NOT = { dip = 3 }
-					NOT = { mil = 3 }
-					NOT = { adm = 3 }
+					NOT = {
+						dip = 3
+					}
+					NOT = {
+						mil = 3
+					}
+					NOT = {
+						adm = 3
+					}
 				}
 				any_owned_province = {
 					religion = vajrayana
 				}
-				NOT = { is_year = 1642 }
-				NOT = { government = theocracy }
-				NOT = { has_reform = celestial_empire }
+				NOT = {
+					is_year = 1642
+				}
+				NOT = {
+					government = theocracy
+				}
+				NOT = {
+					has_reform = celestial_empire
+				}
 			}
 			has_country_flag = dalai_lama_flag
 		}
 	}
-	
 	mean_time_to_happen = {
 		months = 200
 	}
-	
 	option = {
 		trigger = {
-			NOT = { has_reform = celestial_empire }
-		}				
+			NOT = {
+				has_reform = celestial_empire
+			}
+		}
 		name = "flavor_tib.EVTOPTA1"
-		ai_chance = { factor = 100 }
+		ai_chance = {
+			factor = 100
+		}
 		if = {
 			limit = {
 				NOT = {
@@ -71,7 +81,9 @@ country_event = {
 	}
 	option = {
 		name = "flavor_tib.EVTOPTB1"
-		ai_chance = { factor = 0 }
+		ai_chance = {
+			factor = 0
+		}
 		add_stability_or_adm_power = yes
 	}
 }
@@ -82,24 +94,22 @@ country_event = {
 	title = "flavor_tib.EVTNAME2"
 	desc = "flavor_tib.EVTDESC2"
 	picture = HORDE_ON_HORSEBACK_eventPicture
-	
 	fire_only_once = yes
-	
 	is_triggered_only = yes
-	
 	mean_time_to_happen = {
 		days = 1
 	}
-	
 	immediate = {
 		hidden_effect = {
-			set_country_flag = tibetan_government_flag # trigger for tibet missions if tag is Khoshuud, Dzungar, or Khalsa
+			set_country_flag = tibetan_government_flag			# trigger for tibet missions if tag is Khoshuud, Dzungar, or Khalsa
 		}
 	}
-	
-	option = { # Improve relations with the hordes
+	option = {
+		# Improve relations with the hordes
 		name = "flavor_tib.EVTOPTA2"
-		ai_chance = { factor = 100 }
+		ai_chance = {
+			factor = 100
+		}
 		every_country = {
 			limit = {
 				culture_group = altaic
@@ -126,7 +136,15 @@ country_event = {
 		change_government = tribal
 		add_government_reform = steppe_horde
 		change_primary_culture = khalkha
-		add_accepted_culture = tibetan
+		if = {
+			limit = {
+				has_global_flag = sinicized_tibetan_flag
+			}
+			add_accepted_culture = tibetan_new
+		}
+		else = {
+			add_accepted_culture = tibetan
+		}
 		if = {
 			limit = {
 				is_year = 1527
@@ -161,7 +179,15 @@ country_event = {
 		add_stability = -2
 		change_tag = KSD
 		change_primary_culture = oirats
-		add_accepted_culture = tibetan
+		if = {
+			limit = {
+				has_global_flag = sinicized_tibetan_flag
+			}
+			add_accepted_culture = tibetan_new
+		}
+		else = {
+			add_accepted_culture = tibetan
+		}
 		change_government = tribal
 		add_government_reform = steppe_horde
 		if = {
@@ -199,7 +225,15 @@ country_event = {
 		add_stability = -2
 		change_tag = ZUN
 		change_primary_culture = oirats
-		add_accepted_culture = tibetan
+		if = {
+			limit = {
+				has_global_flag = sinicized_tibetan_flag
+			}
+			add_accepted_culture = tibetan_new
+		}
+		else = {
+			add_accepted_culture = tibetan
+		}
 		change_government = tribal
 		add_government_reform = steppe_horde
 		define_ruler = {

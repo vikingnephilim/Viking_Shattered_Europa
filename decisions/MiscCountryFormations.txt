@@ -1837,4 +1837,232 @@ country_decisions = {
 			set_country_flag = formed_sami_flag
 		}
 	}
+	form_yugoslavia = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				OR = {
+					has_country_flag = formed_yugoslavia
+				}
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = {
+				exists = YUG
+			}
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				tag = HLR
+			}
+			NOT = {
+				tag = ROM
+			}
+			culture_group = south_slavic
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						province_id = 4239
+						province_id = 3002
+						province_id = 4176
+						province_id = 131
+						province_id = 137
+						province_id = 129
+					}
+					OR = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 136
+						province_id = 1828
+					}
+					NOT = {
+						OR = {
+							136 = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+							1828 = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 1766
+						province_id = 3001
+					}
+					NOT = {
+						OR = {
+							1766 = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+							3001 = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 4753
+						province_id = 4757
+					}
+					NOT = {
+						OR = {
+							4753 = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+							4757 = {
+								owned_by = ROOT
+								is_core = ROOT
+							}
+						}
+					}
+				}
+			}
+		}
+		allow = {
+			is_nomad = no
+			is_at_war = no
+			is_emperor = no
+			owns_core_province = 4239
+			owns_core_province = 3002
+			owns_core_province = 4176
+			owns_core_province = 131
+			owns_core_province = 137
+			owns_core_province = 129
+			OR = {
+				owns_core_province = 136
+				owns_core_province = 1828
+			}
+			OR = {
+				owns_core_province = 1766
+				owns_core_province = 3001
+			}
+			OR = {
+				owns_core_province = 4753
+				owns_core_province = 4757
+			}
+		}
+		effect = {
+			4239 = {
+				move_capital_effect = yes
+			}
+			change_tag = YUG
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
+				set_government_rank = 2
+			}
+			bosnia_area = {
+				limit = {
+					AND = {
+						NOT = {
+							owned_by = ROOT
+						}
+					}
+				}
+				add_permanent_claim = YUG
+			}
+			croatia_area = {
+				limit = {
+					AND = {
+						NOT = {
+							owned_by = ROOT
+						}
+					}
+				}
+				add_permanent_claim = YUG
+			}
+			east_adriatic_coast_area = {
+				limit = {
+					AND = {
+						NOT = {
+							owned_by = ROOT
+						}
+					}
+				}
+				add_permanent_claim = YUG
+			}
+			rascia_area = {
+				limit = {
+					AND = {
+						NOT = {
+							owned_by = ROOT
+						}
+					}
+				}
+				add_permanent_claim = YUG
+			}
+			serbia_area = {
+				limit = {
+					AND = {
+						NOT = {
+							owned_by = ROOT
+						}
+					}
+				}
+				add_permanent_claim = YUG
+			}
+			slavonia_area = {
+				limit = {
+					AND = {
+						NOT = {
+							owned_by = ROOT
+						}
+					}
+				}
+				add_permanent_claim = YUG
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			add_prestige = 25
+			set_country_flag = formed_yugoslavia
+			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+			}
+		}
+	}
 }

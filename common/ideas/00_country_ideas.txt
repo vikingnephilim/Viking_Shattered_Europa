@@ -2160,7 +2160,7 @@ ASC_ideas = {
 		hostile_attrition = 1
 	}
 	peasant_soldiers = {
-		land_attrition = -0.10
+		land_attrition = -0.1
 	}
 	bastion_of_orthodoxy = {
 		warscore_cost_vs_other_religion = -0.25
@@ -9061,10 +9061,10 @@ DNI_ideas = {
 		advisor_pool = 1
 	}
 	a_volatile_region = {
-		land_forcelimit_modifier = 0.10
+		land_forcelimit_modifier = 0.1
 	}
 	peasant_soldiers = {
-		prestige_from_land = 0.10
+		prestige_from_land = 0.1
 	}
 	bastion_of_orthodoxy = {
 		tolerance_own = 1
@@ -24398,6 +24398,47 @@ NSA_ideas = {
 	}
 }
 
+NSE_ideas = {
+	start = {
+		prestige = 1
+		loot_amount = 0.40
+	}
+	bonus = {
+		global_manpower_modifier = 0.25
+	}
+	trigger = {
+		tag = NSE
+	}
+	free = yes
+	ICE_christian_identity = {
+		papal_influence = 1
+		monthly_fervor_increase = 0.25
+		church_power_modifier = 0.1
+		global_missionary_strength = 0.01
+	}
+	JUT_the_peninsula_trade = {
+		trade_efficiency = 0.1
+	}
+	GTA_beowulf = {
+		discipline = 0.1
+	}
+	fro_brave_warriors = {
+		land_morale = 0.15
+		core_creation = -0.1
+	}
+	GTA_a_christian_viking = {
+		enforce_religion_cost = -0.25
+		warscore_cost_vs_other_religion = -0.25
+	}
+	pioneer_spirit = {
+		colonists = 1
+	}
+	SCN_monopoly_on_herring = {
+		prestige_decay = -0.01
+		global_trade_goods_size_modifier = 0.1
+	}
+}
+
 NSS_ideas = {
 	start = {
 		privateer_efficiency = 0.5
@@ -29398,7 +29439,7 @@ SCH_ideas = {
 		claim_duration = 0.5
 	}
 	peasant_soldiers = {
-		general_cost = -0.10
+		general_cost = -0.1
 	}
 	bastion_of_orthodoxy = {
 		tolerance_own = 2
@@ -29540,7 +29581,7 @@ SEM_ideas = {
 		harsh_treatment_cost = -0.2
 	}
 	peasant_soldiers = {
-		war_exhaustion_cost = -0.10
+		war_exhaustion_cost = -0.1
 	}
 	bastion_of_orthodoxy = {
 		religious_unity = 0.5
@@ -34901,7 +34942,7 @@ UCH_ideas = {
 		global_rebel_suppression_efficiency = -0.25
 	}
 	peasant_soldiers = {
-		global_regiment_cost = -0.10
+		global_regiment_cost = -0.1
 	}
 	bastion_of_orthodoxy = {
 		prestige_per_development_from_conversion = 0.5
@@ -37377,6 +37418,45 @@ YUE_ideas = {
 	}
 }
 
+YUG_ideas = {
+	start = {
+		defensiveness = 0.2
+		global_heretic_missionary_strength = 0.02
+	}
+	bonus = {
+		infantry_power = 0.1
+	}
+	trigger = {
+		tag = YUG
+	}
+	free = yes
+	YUG_bastion_of_orthodoxy = {
+		tolerance_own = 1
+		global_heathen_missionary_strength = 0.02
+	}
+	YUG_country_of_slaves = {
+		land_forcelimit_modifier = 0.2
+		land_maintenance_modifier = -0.1
+	}
+	YUG_balkan_hajduks = {
+		land_morale = 0.1
+		hostile_attrition = 1
+	}
+	YUG_administrate_gold_mines = {
+		inflation_reduction = 0.05
+	}
+	YUG_flexible_diplomacy = {
+		diplomats = 1
+	}
+	YUG_pan_slavic = {
+		culture_conversion_cost = -0.2
+		advisor_cost = -0.1
+	}
+	YUG_orthodox_orders = {
+		manpower_recovery_speed = 0.1
+	}
+}
+
 YZD_ideas = {
 	start = {
 		hostile_attrition = 1
@@ -37595,8 +37675,8 @@ ZCH_ideas = {
 
 ZEA_ideas = {
 	start = {
-		land_morale = 0.1
-		global_ship_cost = -0.1
+		galley_power = 0.15
+		global_tax_modifier = 0.1
 	}
 	bonus = {
 		global_naval_engagement_modifier = 0.1
@@ -37605,28 +37685,30 @@ ZEA_ideas = {
 		tag = ZEA
 	}
 	free = yes
-	ZEA_Letters_of_Marque = {
-		privateer_efficiency = 0.25
+	ZEA_unify_denmark = {
+		years_of_nationalism = -5
+		shock_damage = 0.05
 	}
-	ZEA_fierce_rivals = {
-		embargo_efficiency = 0.2
-		spy_offence = 0.2
-	}
-	ZEA_protect = {
-		global_own_trade_power = 0.1
-	}
-	ZEA_hardy_sailors = {
-		light_ship_power = 0.15
-	}
-	ZEA_mercs = {
-		merc_maintenance_modifier = -0.2
+	ZEA_mercenary_armies = {
+		merc_maintenance_modifier = -0.15
 		mercenary_discipline = 0.05
 	}
-	ZEA_merchant_marines = {
-		ship_power_propagation = 0.2
+	ZEA_seat_of_danish_kings = {
+		diplomatic_reputation = 1
+		prestige = 0.5
 	}
-	ZEA_baltic_dominance = {
+	ZEA_radical_inspirations = {
+		reform_progress_growth = 0.15
+	}
+	ZEA_nation_of_islands = {
+		naval_forcelimit_modifier = 0.33
+		navy_tradition = 0.5
+	}
+	ZEA_strengthen_sound_toll = {
 		global_prov_trade_power_modifier = 0.2
+	}
+	ZEA_import_militiary_experts = {
+		leader_land_fire = 1
 	}
 }
 
@@ -37884,3 +37966,5 @@ ZZZ_ideas = {
 		reduced_liberty_desire = 10
 	}
 }
+
+

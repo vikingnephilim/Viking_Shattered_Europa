@@ -28,13 +28,20 @@ country_decisions = {
 				rename_capital = "St. Petersburg"
 				add_base_tax = 6
 				add_base_manpower = 3
-				change_culture = capital
+				hidden_effect = {
+					change_culture = capital
+					change_religion = root
+				}
 			}
 			set_country_flag = relocated_capital_st_petersburg
 			add_years_of_income = -1
 			add_prestige = 100
 			33 = {
 				move_capital_effect = yes
+				hidden_effect = {
+					change_culture = capital
+					change_religion = root
+				}
 			}
 			if = {
 				limit = {
@@ -61,9 +68,6 @@ country_decisions = {
 	}
 	establish_russian_patriarchate = {
 		potential = {
-			NOT = {
-				has_mission = rus_patriarchate_mission
-			}
 			culture_group = east_slavic
 			normal_or_historical_nations = yes
 			OR = {
@@ -77,12 +81,11 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			NOT = {
-				151 = {
-					owned_by = BYZ
-				}
+			owns_core_province = 151
+			151 = {
+				religion = root
 			}
-			prestige = 2
+			prestige = 20
 			NOT = {
 				innovativeness_ideas = 3
 			}
@@ -91,6 +94,78 @@ country_decisions = {
 			add_country_modifier = {
 				name = "russian_patriarchate"
 				duration = -1
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	establish_astrakhan_host = {
+		major = yes
+		potential = {
+			NOT = {
+				has_country_flag = astrakhan_established
+			}
+			tag = RUS
+			culture_group = east_slavic
+			normal_or_historical_nations = yes
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			religion_group = christian
+		}
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						NOT = {
+							owned_by = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
+					}
+					OR = {
+						province_id = 464
+						province_id = 2417
+						province_id = 468
+						province_id = 466
+						province_id = 2418
+					}
+				}
+			}
+		}
+		allow = {
+			tag = RUS
+			owns_core_province = 464
+			owns_core_province = 2417
+			owns_core_province = 468
+			owns_core_province = 466
+			owns_core_province = 2418
+			is_at_war = no
+		}
+		effect = {
+			set_country_flag = astrakhan_established
+			ASC = {
+				add_core = 464
+				add_core = 2417
+				add_core = 468
+				add_core = 466
+				add_core = 2418
+			}
+			release = ASC
+			create_subject = {
+				subject_type = cossack_vassal
+				subject = ASC
+			}
+			ASC = {
+				add_government_reform = cossack_horde
+				change_religion = orthodox
+				change_primary_culture = cossack_culture
+			}
+			464 = {
+				change_culture = cossack_culture
 			}
 		}
 		ai_will_do = {
@@ -129,8 +204,7 @@ country_decisions = {
 						province_id = 288
 						province_id = 2409
 						province_id = 2413
-						province_id = 2197
-						province_id = 2201
+						province_id = 286
 					}
 				}
 			}
@@ -165,6 +239,10 @@ country_decisions = {
 			DON = {
 				add_government_reform = cossack_horde
 				change_religion = orthodox
+				change_primary_culture = cossack_culture
+			}
+			286 = {
+				change_culture = cossack_culture
 			}
 		}
 		ai_will_do = {
@@ -239,74 +317,10 @@ country_decisions = {
 			KCH = {
 				add_government_reform = cossack_horde
 				change_religion = orthodox
+				change_primary_culture = cossack_culture
 			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	establish_astrakhan_host = {
-		major = yes
-		potential = {
-			NOT = {
-				has_country_flag = astrakhan_established
-			}
-			tag = RUS
-			culture_group = east_slavic
-			normal_or_historical_nations = yes
-			OR = {
-				ai = no
-				is_playing_custom_nation = no
-			}
-			religion_group = christian
-		}
-		provinces_to_highlight = {
-			OR = {
-				AND = {
-					OR = {
-						NOT = {
-							owned_by = ROOT
-						}
-						NOT = {
-							is_core = ROOT
-						}
-					}
-					OR = {
-						province_id = 464
-						province_id = 2417
-						province_id = 468
-						province_id = 466
-						province_id = 2418
-					}
-				}
-			}
-		}
-		allow = {
-			tag = RUS
-			owns_core_province = 464
-			owns_core_province = 2417
-			owns_core_province = 468
-			owns_core_province = 466
-			owns_core_province = 2418
-			is_at_war = no
-		}
-		effect = {
-			set_country_flag = astrakhan_established
-			ASC = {
-				add_core = 464
-				add_core = 2417
-				add_core = 468
-				add_core = 466
-				add_core = 2418
-			}
-			release = ASC
-			create_subject = {
-				subject_type = cossack_vassal
-				subject = ASC
-			}
-			ASC = {
-				add_government_reform = cossack_horde
-				change_religion = orthodox
+			287 = {
+				change_culture = cossack_culture
 			}
 		}
 		ai_will_do = {
@@ -375,6 +389,10 @@ country_decisions = {
 			TCH = {
 				add_government_reform = cossack_horde
 				change_religion = orthodox
+				change_primary_culture = cossack_culture
+			}
+			2199 = {
+				change_culture = cossack_culture
 			}
 		}
 		ai_will_do = {
@@ -443,6 +461,10 @@ country_decisions = {
 			ZCH = {
 				add_government_reform = cossack_horde
 				change_religion = orthodox
+				change_primary_culture = cossack_culture
+			}
+			283 = {
+				change_culture = cossack_culture
 			}
 		}
 		ai_will_do = {
@@ -517,6 +539,10 @@ country_decisions = {
 			UCH = {
 				add_government_reform = cossack_horde
 				change_religion = orthodox
+				change_primary_culture = cossack_culture
+			}
+			2367 = {
+				change_culture = cossack_culture
 			}
 		}
 		ai_will_do = {
@@ -585,13 +611,17 @@ country_decisions = {
 			OCH = {
 				add_government_reform = cossack_horde
 				change_religion = orthodox
+				change_primary_culture = cossack_culture
+			}
+			2420 = {
+				change_culture = cossack_culture
 			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
-	establish_siberian_host = {
+	establish_semirechye_host = {
 		major = yes
 		potential = {
 			NOT = {
@@ -638,28 +668,32 @@ country_decisions = {
 		}
 		effect = {
 			set_country_flag = siberian_established
-			SCH = {
+			SEM = {
 				add_core = 461
 				add_core = 2368
 				add_core = 459
 				add_core = 2126
 				add_core = 2125
 			}
-			release = SCH
+			release = SEM
 			create_subject = {
 				subject_type = cossack_vassal
-				subject = SCH
+				subject = SEM
 			}
-			SCH = {
+			SEM = {
 				add_government_reform = cossack_horde
 				change_religion = orthodox
+				change_primary_culture = cossack_culture
+			}
+			461 = {
+				change_culture = cossack_culture
 			}
 		}
 		ai_will_do = {
 			factor = 1
 		}
 	}
-	establish_semirechye_host = {
+	establish_siberian_host = {
 		major = yes
 		potential = {
 			NOT = {
@@ -706,21 +740,25 @@ country_decisions = {
 		}
 		effect = {
 			set_country_flag = semirechye_established
-			SEM = {
+			SCH = {
 				add_core = 4690
 				add_core = 4689
 				add_core = 1071
 				add_core = 1075
 				add_core = 1076
 			}
-			release = SEM
+			release = SCH
 			create_subject = {
 				subject_type = cossack_vassal
-				subject = SEM
+				subject = SCH
 			}
-			SEM = {
+			SCH = {
 				add_government_reform = cossack_horde
 				change_religion = orthodox
+				change_primary_culture = cossack_culture
+			}
+			4687 = {
+				change_culture = cossack_culture
 			}
 		}
 		ai_will_do = {

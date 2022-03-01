@@ -1,3 +1,4 @@
+#Benelux - done triggers
 gme_binnenhof = {
 	# province it starts in
 	start = 4383
@@ -19,13 +20,17 @@ gme_binnenhof = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		OR = {
-			culture = dutch
-			culture = flemish
-			culture = frisian
-			culture = luxembourgian
+		custom_trigger_tooltip = {
+			tooltip = west_germanic_culture_set_tt
+			owner = {
+				OR = {
+					culture = dutch
+					culture = flemish
+					culture = frisian
+					culture = luxembourgian
+				}
+			}
 		}
-		has_owner_accepted_culture = yes
 	}
 	#what to do when it's built
 	on_built = {
@@ -35,23 +40,31 @@ gme_binnenhof = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		OR = {
-			culture = dutch
-			culture = flemish
-			culture = frisian
-			culture = luxembourgian
+		custom_trigger_tooltip = {
+			tooltip = west_germanic_culture_set_tt
+			owner = {
+				OR = {
+					culture = dutch
+					culture = flemish
+					culture = frisian
+					culture = luxembourgian
+				}
+			}
 		}
-		has_owner_accepted_culture = yes
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		OR = {
-			culture = dutch
-			culture = flemish
-			culture = frisian
-			culture = luxembourgian
+		custom_trigger_tooltip = {
+			tooltip = west_germanic_culture_set_tt
+			owner = {
+				OR = {
+					culture = dutch
+					culture = flemish
+					culture = frisian
+					culture = luxembourgian
+				}
+			}
 		}
-		has_owner_accepted_culture = yes
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
@@ -178,13 +191,17 @@ gme_kasteel_de_haar = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		OR = {
-			culture = dutch
-			culture = flemish
-			culture = frisian
-			culture = luxembourgian
+		custom_trigger_tooltip = {
+			tooltip = west_germanic_culture_set_tt
+			owner = {
+				OR = {
+					culture = dutch
+					culture = flemish
+					culture = frisian
+					culture = luxembourgian
+				}
+			}
 		}
-		has_owner_accepted_culture = yes
 	}
 	#what to do when it's built
 	on_built = {
@@ -194,23 +211,31 @@ gme_kasteel_de_haar = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		OR = {
-			culture = dutch
-			culture = flemish
-			culture = frisian
-			culture = luxembourgian
+		custom_trigger_tooltip = {
+			tooltip = west_germanic_culture_set_tt
+			owner = {
+				OR = {
+					culture = dutch
+					culture = flemish
+					culture = frisian
+					culture = luxembourgian
+				}
+			}
 		}
-		has_owner_accepted_culture = yes
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		OR = {
-			culture = dutch
-			culture = flemish
-			culture = frisian
-			culture = luxembourgian
+		custom_trigger_tooltip = {
+			tooltip = west_germanic_culture_set_tt
+			owner = {
+				OR = {
+					culture = dutch
+					culture = flemish
+					culture = frisian
+					culture = luxembourgian
+				}
+			}
 		}
-		has_owner_accepted_culture = yes
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
@@ -345,16 +370,21 @@ gme_dom_tower = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		OR = {
-			OR = {
-				culture = dutch
-				culture = flemish
-				culture = frisian
-				culture = luxembourgian
+		custom_trigger_tooltip = {
+			tooltip = west_germanic_culture_set_tt
+			owner = {
+				OR = {
+					culture = dutch
+					culture = flemish
+					culture = frisian
+					culture = luxembourgian
+				}
 			}
-			AND = {
-				religion_group = christian
-				has_owner_religion = yes
+			custom_trigger_tooltip = {
+				tooltip = christian_religion_tt
+				98 = {
+					province_is_christian_or_accepts_christianity = yes
+				}
 			}
 		}
 	}
@@ -366,31 +396,41 @@ gme_dom_tower = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		OR = {
-			OR = {
-				culture = dutch
-				culture = flemish
-				culture = frisian
-				culture = luxembourgian
+		custom_trigger_tooltip = {
+			tooltip = west_germanic_culture_set_tt
+			owner = {
+				OR = {
+					culture = dutch
+					culture = flemish
+					culture = frisian
+					culture = luxembourgian
+				}
 			}
-			AND = {
-				religion_group = christian
-				has_owner_religion = yes
+			custom_trigger_tooltip = {
+				tooltip = christian_religion_tt
+				98 = {
+					province_is_christian_or_accepts_christianity = yes
+				}
 			}
 		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		OR = {
-			OR = {
-				culture = dutch
-				culture = flemish
-				culture = frisian
-				culture = luxembourgian
+		custom_trigger_tooltip = {
+			tooltip = west_germanic_culture_set_tt
+			owner = {
+				OR = {
+					culture = dutch
+					culture = flemish
+					culture = frisian
+					culture = luxembourgian
+				}
 			}
-			AND = {
-				religion_group = christian
-				has_owner_religion = yes
+			custom_trigger_tooltip = {
+				tooltip = christian_religion_tt
+				98 = {
+					province_is_christian_or_accepts_christianity = yes
+				}
 			}
 		}
 	}

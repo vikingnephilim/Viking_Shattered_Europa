@@ -542,4 +542,150 @@ country_decisions = {
 			factor = 1
 		}
 	}
+	north_sea_empire_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_scandinavia_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = {
+				exists = SCA
+			}
+			NOT = {
+				exists = NSE
+			}
+			NOT = {
+				tag = JOM
+			}
+			NOT = {
+				tag = PAP
+			}
+			NOT = {
+				tag = HLR
+			}
+			culture_group = scandinavian
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 10
+				}
+			}
+			is_colonial_nation = no
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1				# Stockholm
+				province_id = 6				# Skane
+				province_id = 12			# Sjaelland
+				province_id = 15			# Jylland
+				province_id = 17			# Akershus
+				province_id = 35			# Osel
+				province_id = 236			# London
+				province_id = 245			# York
+				province_id = 369			# Orkney
+				province_id = 370			# Reykjavik
+				province_id = 371			# Akureyi
+				province_id = 373			# Meath
+				province_id = 4365			# Mann
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+				NOT = {
+					religion = norse_pagan_reformed
+				}
+			}
+		}
+		allow = {
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 1				# Stockholm
+			owns_core_province = 6				# Skane
+			owns_core_province = 12				# Sjaelland
+			owns_core_province = 15				# Jylland
+			owns_core_province = 17				# Akershus
+			owns_core_province = 35				# Osel
+			owns_core_province = 236			# London
+			owns_core_province = 245			# York
+			owns_core_province = 369			# Orkney
+			owns_core_province = 370			# Reykjavik
+			owns_core_province = 373			# Meath
+			owns_core_province = 4365			# Mann
+			all_owned_province = {
+				religion_group = christian
+			}
+		}
+		effect = {
+			restore_country_name_effect = yes
+			change_tag = NSE
+			if = {
+				limit = {
+					government = monarchy
+				}
+				add_government_reform = SCA_arch_king_reform
+			}
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 3
+					}
+				}
+				set_government_rank = 3
+			}
+			british_isles_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = NSE
+			}
+			scandinavia_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = NSE
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			if = {
+				limit = {
+					has_custom_ideas = no
+				}
+				country_event = {
+					id = ideagroups.1
+				}
+				#Swap Ideas
+			}
+			swap_non_generic_missions = yes
+			add_prestige = 10
+			set_country_flag = formed_scandinavia_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
 }

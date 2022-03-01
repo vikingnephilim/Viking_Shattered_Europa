@@ -1,4 +1,4 @@
-#Italy
+#Italy - done triggers
 gme_bari_basilica_san_nicola = {
 	# province it starts in
 	start = 1933
@@ -20,9 +20,17 @@ gme_bari_basilica_san_nicola = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		culture_group = latin
-		province_is_christian_or_accepts_christianity = yes
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
+			culture_group = latin
+			province_is_or_accepts_culture = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = christian_religion_tt
+			1933 = {
+				province_is_christian_or_accepts_christianity = yes
+			}
+		}
 	}
 	#what to do when it's built
 	on_built = {
@@ -32,15 +40,31 @@ gme_bari_basilica_san_nicola = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		culture_group = latin
-		province_is_christian_or_accepts_christianity = yes
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
+			culture_group = latin
+			province_is_or_accepts_culture = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = christian_religion_tt
+			1933 = {
+				province_is_christian_or_accepts_christianity = yes
+			}
+		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		culture_group = latin
-		province_is_christian_or_accepts_christianity = yes
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
+			culture_group = latin
+			province_is_or_accepts_culture = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = christian_religion_tt
+			1933 = {
+				province_is_christian_or_accepts_christianity = yes
+			}
+		}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
@@ -172,8 +196,10 @@ gme_bologna_universita_bologna = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
 			culture_group = latin
+			province_is_or_accepts_culture = yes
 		}
 	}
 	#what to do when it's built
@@ -184,14 +210,18 @@ gme_bologna_universita_bologna = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
 			culture_group = latin
+			province_is_or_accepts_culture = yes
 		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
 			culture_group = latin
+			province_is_or_accepts_culture = yes
 		}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -318,8 +348,11 @@ gme_ferrara_castello_estense = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		culture_group = latin
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
+			culture_group = latin
+			province_is_or_accepts_culture = yes
+		}
 	}
 	#what to do when it's built
 	on_built = {
@@ -329,13 +362,19 @@ gme_ferrara_castello_estense = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		culture_group = latin
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
+			culture_group = latin
+			province_is_or_accepts_culture = yes
+		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		culture_group = latin
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
+			culture_group = latin
+			province_is_or_accepts_culture = yes
+		}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
@@ -474,18 +513,27 @@ gme_genoa_lanterna_genova = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		culture_group = latin
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
+			culture_group = latin
+			province_is_or_accepts_culture = yes
+		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		culture_group = latin
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
+			culture_group = latin
+			province_is_or_accepts_culture = yes
+		}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
-		#culture_group = latin
-		#has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
+			culture_group = latin
+			province_is_or_accepts_culture = yes
+		}
 	}
 	#tier data
 	tier_0 = {
@@ -610,8 +658,11 @@ gme_mantua_sala_dei_cavalli = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		culture_group = latin
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
+			culture_group = latin
+			province_is_or_accepts_culture = yes
+		}
 	}
 	#what to do when it's built
 	on_built = {
@@ -621,13 +672,19 @@ gme_mantua_sala_dei_cavalli = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		culture_group = latin
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
+			culture_group = latin
+			province_is_or_accepts_culture = yes
+		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		culture_group = latin
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
+			culture_group = latin
+			province_is_or_accepts_culture = yes
+		}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
@@ -758,8 +815,10 @@ gme_naples_federico_II = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
 			culture_group = latin
+			province_is_or_accepts_culture = yes
 		}
 	}
 	#what to do when it's built
@@ -770,14 +829,18 @@ gme_naples_federico_II = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
 			culture_group = latin
+			province_is_or_accepts_culture = yes
 		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
 			culture_group = latin
+			province_is_or_accepts_culture = yes
 		}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -1059,12 +1122,15 @@ gme_palermo_parramentu_sicilianu = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		OR = {
-			culture = neapolitan
-			culture = sicilian
-			culture = normand
+		custom_trigger_tooltip = {
+			tooltip = nap_sic_norm_culture_tt
+			OR = {
+				culture = neapolitan
+				culture = sicilian
+				culture = normand
+			}
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_accepted_culture = yes
 	}
 	#what to do when it's built
 	on_built = {
@@ -1074,21 +1140,27 @@ gme_palermo_parramentu_sicilianu = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		OR = {
-			culture = neapolitan
-			culture = sicilian
-			culture = normand
+		custom_trigger_tooltip = {
+			tooltip = nap_sic_norm_culture_tt
+			OR = {
+				culture = neapolitan
+				culture = sicilian
+				culture = normand
+			}
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_accepted_culture = yes
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		OR = {
-			culture = neapolitan
-			culture = sicilian
-			culture = normand
+		custom_trigger_tooltip = {
+			tooltip = nap_sic_norm_culture_tt
+			OR = {
+				culture = neapolitan
+				culture = sicilian
+				culture = normand
+			}
+			province_is_or_accepts_culture = yes
 		}
-		has_owner_accepted_culture = yes
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
@@ -1212,8 +1284,10 @@ gme_pisa_torre_pisa = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
 			culture_group = latin
+			province_is_or_accepts_culture = yes
 		}
 	}
 	#what to do when it's built
@@ -1224,14 +1298,18 @@ gme_pisa_torre_pisa = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
 			culture_group = latin
+			province_is_or_accepts_culture = yes
 		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
 			culture_group = latin
+			province_is_or_accepts_culture = yes
 		}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -1356,10 +1434,16 @@ gme_rome_altare_patria = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		culture_group = latin
-		has_owner_accepted_culture = yes
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
+			culture_group = latin
+			province_is_or_accepts_culture = yes
+		}
 		FROM = {
-			tag = ITA
+			custom_trigger_tooltip = {
+				tooltip = italy_tt
+				tag = ITA
+			}
 		}
 	}
 	#what to do when it's built
@@ -1371,21 +1455,40 @@ gme_rome_altare_patria = {
 	#can our country use it?
 	can_use_modifiers_trigger = {
 		FROM = {
-			tag = ITA
-			OR = {
-				government = republic
-				government = monarchy
+			custom_trigger_tooltip = {
+				tooltip = italy_tt
+				tag = ITA
+			}
+			custom_trigger_tooltip = {
+				tooltip = monarchy_republic_tt
+				OR = {
+					government = monarchy
+					government = republic
+				}
 			}
 		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		OR = {
-			current_age = age_of_absolutism
-			current_age = age_of_revolutions
+		custom_trigger_tooltip = {
+			tooltip = absolutism_revolutions_tt
+			OR = {
+				current_age = age_of_absolutism
+				current_age = age_of_revolutions
+			}
 		}
 		FROM = {
-			tag = ITA
+			custom_trigger_tooltip = {
+				tooltip = italy_tt
+				tag = ITA
+			}
+			custom_trigger_tooltip = {
+				tooltip = monarchy_republic_tt
+				OR = {
+					government = monarchy
+					government = republic
+				}
+			}
 		}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -1511,12 +1614,24 @@ gme_rome_arco_costantino = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		FROM = {
-			OR = {
-				tag = WRM
-				tag = ERM
-				tag = ROM
-				tag = BYZ
+		custom_trigger_tooltip = {
+			tooltip = roman_empire_byz_tt
+			FROM = {
+				OR = {
+					tag = ERM
+					tag = WRM
+					tag = ROM
+					tag = BYZ
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = monarchy_republic_tt
+			FROM = {
+				OR = {
+					government = monarchy
+					government = republic
+				}
 			}
 		}
 	}
@@ -1528,36 +1643,52 @@ gme_rome_arco_costantino = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		FROM = {
-			OR = {
-				tag = ERM
-				tag = WRM
-				tag = ROM
-				tag = BYZ
+		custom_trigger_tooltip = {
+			tooltip = roman_empire_byz_tt
+			FROM = {
+				OR = {
+					tag = ERM
+					tag = WRM
+					tag = ROM
+					tag = BYZ
+				}
 			}
-			OR = {
-				government = republic
-				government = monarchy
+		}
+		custom_trigger_tooltip = {
+			tooltip = monarchy_republic_tt
+			FROM = {
+				OR = {
+					government = monarchy
+					government = republic
+				}
 			}
 		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		FROM = {
-			OR = {
-				tag = ERM
-				tag = WRM
-				tag = ROM
-				tag = BYZ
+		custom_trigger_tooltip = {
+			tooltip = roman_empire_byz_tt
+			FROM = {
+				OR = {
+					tag = ERM
+					tag = WRM
+					tag = ROM
+					tag = BYZ
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = monarchy_republic_tt
+			FROM = {
+				OR = {
+					government = monarchy
+					government = republic
+				}
 			}
 		}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
-		#OR = {
-		#	tag = ROM
-		#	tag = BYZ
-		#}
 	}
 	#tier data
 	tier_0 = {
@@ -1681,8 +1812,24 @@ gme_rome_castel_sant_angelo = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		FROM = {
-			tag = PAP
+		custom_trigger_tooltip = {
+			tooltip = catholic_religion_tt
+			118 = {
+				AND = {
+					religion = catholic
+					has_owner_religion = yes
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = pap_dotf_curia_tt
+			FROM = {
+				OR = {
+					is_papal_controller = yes
+					tag = PAP
+					is_defender_of_faith = yes
+				}
+			}
 		}
 	}
 	#what to do when it's built
@@ -1693,25 +1840,45 @@ gme_rome_castel_sant_angelo = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		religion = catholic
-		has_owner_religion = yes
-		FROM = {
-			OR = {
-				is_papal_controller = yes
-				tag = PAP
-				is_defender_of_faith = yes
+		custom_trigger_tooltip = {
+			tooltip = catholic_religion_tt
+			118 = {
+				AND = {
+					religion = catholic
+					has_owner_religion = yes
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = pap_dotf_curia_tt
+			FROM = {
+				OR = {
+					is_papal_controller = yes
+					tag = PAP
+					is_defender_of_faith = yes
+				}
 			}
 		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		religion = catholic
-		has_owner_religion = yes
-		FROM = {
-			OR = {
-				is_papal_controller = yes
-				tag = PAP
-				is_defender_of_faith = yes
+		custom_trigger_tooltip = {
+			tooltip = catholic_religion_tt
+			118 = {
+				AND = {
+					religion = catholic
+					has_owner_religion = yes
+				}
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = pap_dotf_curia_tt
+			FROM = {
+				OR = {
+					is_papal_controller = yes
+					tag = PAP
+					is_defender_of_faith = yes
+				}
 			}
 		}
 	}
@@ -1836,12 +2003,15 @@ gme_rome_colosseo = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		FROM = {
-			OR = {
-				tag = ERM
-				tag = WRM
-				tag = ROM
-				tag = BYZ
+		custom_trigger_tooltip = {
+			tooltip = roman_empire_byz_tt
+			FROM = {
+				OR = {
+					tag = ERM
+					tag = WRM
+					tag = ROM
+					tag = BYZ
+				}
 			}
 		}
 	}
@@ -1853,36 +2023,43 @@ gme_rome_colosseo = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		FROM = {
-			OR = {
-				tag = ERM
-				tag = WRM
-				tag = ROM
-				tag = BYZ
+		custom_trigger_tooltip = {
+			tooltip = roman_empire_byz_tt
+			FROM = {
+				OR = {
+					tag = ERM
+					tag = WRM
+					tag = ROM
+					tag = BYZ
+				}
 			}
-			OR = {
-				government = republic
-				government = monarchy
+		}
+		custom_trigger_tooltip = {
+			tooltip = monarchy_republic_tt
+			FROM = {
+				OR = {
+					government = monarchy
+					government = republic
+				}
 			}
 		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		FROM = {
-			OR = {
-				tag = ERM
-				tag = WRM
-				tag = ROM
-				tag = BYZ
+		custom_trigger_tooltip = {
+			tooltip = roman_empire_byz_tt
+			FROM = {
+				OR = {
+					tag = ERM
+					tag = WRM
+					tag = ROM
+					tag = BYZ
+				}
 			}
 		}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {
-		#OR = {
-		#	tag = ROM
-		#	tag = BYZ
-		#}
 	}
 	#tier data
 	tier_0 = {
@@ -2012,14 +2189,18 @@ gme_venice_arsenale_veneziano = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
 			culture_group = latin
+			province_is_or_accepts_culture = yes
 		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		FROM = {
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
 			culture_group = latin
+			province_is_or_accepts_culture = yes
 		}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
@@ -2157,17 +2338,31 @@ gme_venice_basilica_san_marco = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		culture_group = latin
-		has_owner_accepted_culture = yes
-		province_is_christian_or_accepts_christianity = yes
-		has_owner_religion = yes
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
+			culture_group = latin
+			province_is_or_accepts_culture = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = christian_religion_tt
+			112 = {
+				province_is_christian_or_accepts_christianity = yes
+			}
+		}
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		culture_group = latin
-		has_owner_accepted_culture = yes
-		religion_group = christian
-		has_owner_religion = yes
+		custom_trigger_tooltip = {
+			tooltip = latin_culture_group_tt
+			culture_group = latin
+			province_is_or_accepts_culture = yes
+		}
+		custom_trigger_tooltip = {
+			tooltip = christian_religion_tt
+			112 = {
+				province_is_christian_or_accepts_christianity = yes
+			}
+		}
 	}
 	#can our country keep it or is it destroyed when we get hold of it?
 	keep_trigger = {

@@ -75,22 +75,6 @@ country_decisions = {
 					}
 				}
 				AND = {
-					province_id = 293
-					ROOT = {
-						NOT = {
-							owns_core_province = 301
-						}
-					}
-				}
-				AND = {
-					province_id = 306
-					ROOT = {
-						NOT = {
-							owns_core_province = 307
-						}
-					}
-				}
-				AND = {
 					province_id = 307
 					ROOT = {
 						NOT = {
@@ -119,29 +103,12 @@ country_decisions = {
 			is_at_war = no
 			owns_core_province = 295			# Moskva
 			owns_core_province = 310			# Novgorod
-			OR = {
-				owns_core_province = 294				# Tver
-				owns_core_province = 308				# Yaroslavl
-			}
-			OR = {
-				owns_core_province = 301				# Ryazan
-				owns_core_province = 293				# Smolensk
-			}
-			OR = {
-				owns_core_province = 306				# Nijni-Novgorod
-				owns_core_province = 307				# Vladimir
-			}
+			owns_core_province = 294			# Tver
+			owns_core_province = 308			# Yaroslavl
+			owns_core_province = 301			# Ryazan
+			owns_core_province = 307			# Vladimir
 		}
 		effect = {
-			hidden_effect = {
-				if = {
-					limit = {
-						tag = NOV
-					}
-					complete_mission = tr_invade_novgorod_mission
-					complete_mission = tr_subjugate_novgorod
-				}
-			}
 			change_tag = RUS
 			swap_non_generic_missions = yes
 			restore_country_name_effect = yes

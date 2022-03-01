@@ -1,0 +1,231 @@
+#Privilege for Knights
+estate_knights_christian_church = {
+	icon = privilege_send_emissary_to_pope
+	max_absolutism = -10
+	influence = 0.2
+	land_share = 5
+	loyalty = 0.05
+	is_valid = {
+	}
+	can_select = {
+		religion_group = christian
+		any_owned_province = {
+			religion_group = christian
+			NOT = {
+				religion = ROOT
+			}
+			has_building = temple
+		}
+	}
+	penalties = {
+		tolerance_heretic = -2
+	}
+	benefits = {
+		global_missionary_strength = 0.01
+		tolerance_own = 1
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+estate_knights_muslim_mosque = {
+	icon = privilege_promoto_dhimmi_nobles
+	max_absolutism = -10
+	land_share = 5
+	influence = 0.2
+	loyalty = 0.05
+	is_valid = {
+	}
+	can_select = {
+		religion_group = christian
+		any_owned_province = {
+			religion_group = muslim
+			has_building = temple
+		}
+	}
+	penalties = {
+		tolerance_heathen = -2
+	}
+	benefits = {
+		missionaries = 1
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+estate_knights_norse_order_discipline = {
+	icon = privilege_limited_war_support
+	max_absolutism = -10
+	influence = 0.2
+	land_share = 5
+	loyalty = 0.05
+	is_valid = {
+	}
+	can_select = {
+		religion = norse_pagan_reformed
+	}
+	penalties = {
+		order_knights_influence_modifier = -0.2
+		order_knights_loyalty_modifier = -0.2
+	}
+	benefits = {
+		discipline = 0.1
+		available_province_loot = 0.25
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+estate_knights_norse_order_morale = {
+	icon = privilege_limited_war_support
+	max_absolutism = -10
+	influence = 0.2
+	land_share = 5
+	loyalty = 0.05
+	is_valid = {
+	}
+	can_select = {
+		religion = norse_pagan_reformed
+	}
+	penalties = {
+		order_knights_influence_modifier = -0.2
+		order_knights_loyalty_modifier = -0.2
+	}
+	benefits = {
+		land_morale = 0.1
+		loot_amount = 0.5
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+estate_knights_sea_reconquest = {
+	icon = privilege_admiral
+	max_absolutism = -10
+	land_share = 5
+	influence = 0.2
+	loyalty = 0.05
+	is_valid = {
+	}
+	can_select = {
+		any_owned_province = {
+			has_port = yes
+		}
+	}
+	penalties = {
+		navy_tradition_decay = 0.01
+	}
+	benefits = {
+		capture_ship_chance = 0.33
+		privateer_efficiency = 0.33
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+estate_knights_grant_lease = {
+	icon = privilege_demand_more_troops
+	max_absolutism = -10
+	land_share = 5
+	influence = 0.2
+	loyalty = 0.05
+	is_valid = {
+	}
+	can_select = {
+	}
+	penalties = {
+		order_knights_influence_modifier = 0.1
+	}
+	benefits = {
+		global_regiment_cost = -0.1
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+estate_knights_crusade = {
+	icon = privilege_tolerance_heathen
+	max_absolutism = -10
+	land_share = 5
+	influence = 0.2
+	loyalty = 0.05
+	is_valid = {
+	}
+	can_select = {
+		any_neighbor_country = {
+			NOT = {
+				religion = root
+			}
+		}
+	}
+	penalties = {
+		diplomatic_upkeep = -1
+	}
+	benefits = {
+		warscore_cost_vs_other_religion = -0.25
+		cb_on_religious_enemies = yes
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+estate_knights_shock_awe = {
+	icon = privilege_raise_host
+	max_absolutism = -10
+	land_share = 5
+	influence = 0.2
+	loyalty = 0.05
+	is_valid = {
+	}
+	can_select = {
+		any_neighbor_country = {
+			NOT = {
+				religion = root
+			}
+		}
+	}
+	penalties = {
+		army_tradition_decay = 0.01
+	}
+	benefits = {
+		leader_land_manuever = 1
+		leader_land_shock = 1
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+estate_knights_fire_fury = {
+	icon = privilege_promote_purbias
+	max_absolutism = -10
+	land_share = 5
+	influence = 0.2
+	loyalty = 0.05
+	is_valid = {
+	}
+	can_select = {
+		any_neighbor_country = {
+			NOT = {
+				religion = root
+			}
+		}
+	}
+	penalties = {
+		army_tradition_decay = 0.01
+	}
+	benefits = {
+		leader_land_fire = 1
+		leader_siege = 1
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}

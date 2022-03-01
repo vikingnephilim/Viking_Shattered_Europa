@@ -49,11 +49,22 @@
 
 viking_wg_hre_religion_change = {
 	type = take_capital
-	badboy_factor = 1
-	prestige_factor = 1
-	peace_cost_factor = 1
-	peace_options = {
-		viking_hre_religious_commotion
+	attacker = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+		peace_options = {
+			viking_hre_religious_commotion
+		}
+	}
+	defender = {
+		badboy_factor = 1
+		prestige_factor = 1
+		peace_cost_factor = 1
+
+		peace_options = {
+			po_gold
+		}
 	}
 	war_name = viking_hre_religion_change_war_name
 }
