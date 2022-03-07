@@ -225,6 +225,15 @@ country_decisions = {
 				add_permanent_claim = INC
 			}
 			add_prestige = 25
+			hidden_effect = {
+				restore_country_name_effect = yes
+				every_owned_province = {
+					limit = {
+						culture_group = andean_group
+					}
+					change_culture = root
+				}
+			}
 			if = {
 				limit = {
 					has_custom_ideas = no

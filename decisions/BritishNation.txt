@@ -190,6 +190,15 @@ country_decisions = {
 					add_permanent_claim = GBR
 				}
 			}
+			hidden_effect = {
+				restore_country_name_effect = yes
+				every_owned_province = {
+					limit = {
+						culture_group = british
+					}
+					change_culture = root
+				}
+			}
 			if = {
 				limit = {
 					has_custom_ideas = no

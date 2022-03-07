@@ -126,6 +126,15 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
+			hidden_effect = {
+				restore_country_name_effect = yes
+				every_owned_province = {
+					limit = {
+						culture_group = baltic
+					}
+					change_culture = root
+				}
+			}
 			add_prestige = 25
 			set_country_flag = formed_baltii_flag
 			41 = {

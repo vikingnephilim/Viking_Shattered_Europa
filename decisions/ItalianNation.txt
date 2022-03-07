@@ -125,6 +125,15 @@ country_decisions = {
 			ITA = {
 				set_capital = 118
 			}
+			hidden_effect = {
+				restore_country_name_effect = yes
+				every_owned_province = {
+					limit = {
+						culture_group = latin
+					}
+					change_culture = root
+				}
+			}
 			if = {
 				limit = {
 					has_custom_ideas = no

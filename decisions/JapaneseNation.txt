@@ -60,6 +60,15 @@ country_decisions = {
 			restore_country_name_effect = yes
 			set_country_flag = formed_japan_flag
 			swap_non_generic_missions = yes
+			hidden_effect = {
+				restore_country_name_effect = yes
+				every_owned_province = {
+					limit = {
+						culture_group = japanese_g
+					}
+					change_culture = root
+				}
+			}
 			if = {
 				limit = {
 					has_custom_ideas = no

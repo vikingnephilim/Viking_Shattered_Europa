@@ -98,6 +98,7 @@ country_decisions = {
 			add_government_reform = roman_government
 			restore_country_name_effect = yes
 			custom_tooltip = roman_culture_provinces_tooltip
+			change_primary_culture = roman
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
@@ -106,7 +107,6 @@ country_decisions = {
 					change_culture = roman
 				}
 			}
-			change_primary_culture = roman
 			custom_tooltip = restore_roman_empire_tt
 			hidden_effect = {
 				every_owned_province = {
@@ -114,6 +114,15 @@ country_decisions = {
 						is_part_of_hre = yes
 					}
 					set_in_empire = no
+				}
+			}
+			hidden_effect = {
+				restore_country_name_effect = yes
+				every_owned_province = {
+					limit = {
+						culture_group = root
+					}
+					change_culture = root
 				}
 			}
 			set_government_rank = 3
@@ -251,15 +260,16 @@ country_decisions = {
 			change_tag = ROM
 			restore_country_name_effect = yes
 			custom_tooltip = roman_culture_provinces_tooltip
+			change_primary_culture = roman
 			hidden_effect = {
+				restore_country_name_effect = yes
 				every_owned_province = {
 					limit = {
-						has_owner_culture = yes
+						culture_group = root
 					}
-					change_culture = roman
+					change_culture = root
 				}
 			}
-			change_primary_culture = roman
 			custom_tooltip = restore_roman_empire_tt
 			hidden_effect = {
 				every_owned_province = {
@@ -404,15 +414,16 @@ country_decisions = {
 			change_tag = ROM
 			restore_country_name_effect = yes
 			custom_tooltip = roman_culture_provinces_tooltip
+			change_primary_culture = roman
 			hidden_effect = {
+				restore_country_name_effect = yes
 				every_owned_province = {
 					limit = {
-						has_owner_culture = yes
+						culture_group = root
 					}
-					change_culture = roman
+					change_culture = root
 				}
 			}
-			change_primary_culture = roman
 			custom_tooltip = restore_roman_empire_tt
 			hidden_effect = {
 				every_owned_province = {
@@ -557,15 +568,16 @@ country_decisions = {
 			change_tag = ROM
 			restore_country_name_effect = yes
 			custom_tooltip = roman_culture_provinces_tooltip
+			change_primary_culture = roman
 			hidden_effect = {
+				restore_country_name_effect = yes
 				every_owned_province = {
 					limit = {
-						has_owner_culture = yes
+						culture_group = root
 					}
-					change_culture = roman
+					change_culture = root
 				}
 			}
-			change_primary_culture = roman
 			custom_tooltip = restore_roman_empire_tt
 			hidden_effect = {
 				every_owned_province = {

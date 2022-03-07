@@ -1,4 +1,4 @@
-name="Viking Nephilims Shattered World - 1.32 WORKING"
+name="Viking Nephilims Shattered World - 1.33 WORKING"
 replace_path="history/wars"
 replace_path="common/religion"
 replace_path="missions"

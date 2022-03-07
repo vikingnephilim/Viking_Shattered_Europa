@@ -114,6 +114,14 @@ country_decisions = {
 		effect = {
 			change_tag = MGE
 			restore_country_name_effect = yes
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = root
+					}
+					change_culture = root
+				}
+			}
 			if = {
 				limit = {
 					NOT = {

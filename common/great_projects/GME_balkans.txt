@@ -12,9 +12,9 @@ gme_athens_vouli = {
 	build_trigger = {
 		custom_trigger_tooltip = {
 			tooltip = adm_tech_10_tt
-				FROM = {
-					adm_tech = 10
-				}
+			FROM = {
+				adm_tech = 10
+			}
 		}
 		custom_trigger_tooltip = {
 			tooltip = greek_nation_culture_not_byz_tt
@@ -58,9 +58,9 @@ gme_athens_vouli = {
 	can_use_modifiers_trigger = {
 		custom_trigger_tooltip = {
 			tooltip = adm_tech_10_tt
-				FROM = {
-					adm_tech = 10
-				}
+			FROM = {
+				adm_tech = 10
+			}
 		}
 		custom_trigger_tooltip = {
 			tooltip = greek_nation_culture_not_byz_tt
@@ -100,9 +100,9 @@ gme_athens_vouli = {
 	can_upgrade_trigger = {
 		custom_trigger_tooltip = {
 			tooltip = adm_tech_10_tt
-				FROM = {
-					adm_tech = 10
-				}
+			FROM = {
+				adm_tech = 10
+			}
 		}
 		custom_trigger_tooltip = {
 			tooltip = greek_nation_culture_not_byz_tt
@@ -408,143 +408,6 @@ gme_constantinople_theodosian_walls = {
 	}
 }
 
-gme_constantinople_topkapi_palace = {
-	start = 151
-	date = 1.01.01
-	time = {
-		months = 120
-	}
-	build_cost = 1000
-	can_be_moved = no
-	starting_tier = 0
-	type = monument
-	build_trigger = {
-		custom_trigger_tooltip = {
-			tooltip = owner_culture_religion_tt
-			has_owner_culture = yes
-			has_owner_religion = yes
-			}
-		custom_trigger_tooltip = {
-			tooltip = ottomans_rum_byz_tt
-				owner = {
-						OR = {
-							tag = TUR
-							tag = RUM
-					}
-				}
-			}
-
-	}
-	on_built = {
-	}
-	on_destroyed = {
-	}
-	can_use_modifiers_trigger = {
-		custom_trigger_tooltip = {
-			tooltip = owner_culture_religion_tt
-			has_owner_culture = yes
-			has_owner_religion = yes
-			}
-		custom_trigger_tooltip = {
-			tooltip = ottomans_rum_byz_tt
-				owner = {
-						OR = {
-							tag = TUR
-							tag = RUM
-					}
-				}
-			}
-	}
-	can_upgrade_trigger = {
-		custom_trigger_tooltip = {
-			tooltip = owner_culture_religion_tt
-			has_owner_culture = yes
-			has_owner_religion = yes
-			}
-		custom_trigger_tooltip = {
-			tooltip = ottomans_rum_byz_tt
-				owner = {
-						OR = {
-							tag = TUR
-							tag = RUM
-					}
-				}
-			}
-	}
-	keep_trigger = {
-	}
-	tier_0 = {
-		upgrade_time = {
-			months = 0
-		}
-		cost_to_upgrade = {
-			factor = 0
-		}
-		province_modifiers = {
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-		}
-		on_upgraded = {
-		}
-	}
-	tier_1 = {
-		upgrade_time = {
-			months = 120
-		}
-		cost_to_upgrade = {
-			factor = 1000
-		}
-		province_modifiers = {
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-			stability_cost_modifier = -0.1
-		}
-		on_upgraded = {
-		}
-	}
-	tier_2 = {
-		upgrade_time = {
-			months = 240
-		}
-		cost_to_upgrade = {
-			factor = 2500
-		}
-		province_modifiers = {
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-			stability_cost_modifier = -0.1
-			expand_administration_cost = -0.1
-		}
-		on_upgraded = {
-		}
-	}
-	tier_3 = {
-		upgrade_time = {
-			months = 480
-		}
-		cost_to_upgrade = {
-			factor = 5000
-		}
-		province_modifiers = {
-		}
-		area_modifier = {
-		}
-		country_modifiers = {
-			stability_cost_modifier = -0.1
-			expand_administration_cost = -0.1
-			governing_capacity_modifier = 0.1
-		}
-		on_upgraded = {
-		}
-	}
-}
-
 gme_constantinople_great_palace = {
 	start = 151
 	date = 1.01.01
@@ -560,18 +423,29 @@ gme_constantinople_great_palace = {
 			tooltip = owner_culture_religion_tt
 			has_owner_culture = yes
 			has_owner_religion = yes
-			}
-		custom_trigger_tooltip = {
-			tooltip = roman_empire_byz_tt
+		}
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = ottomans_rum_byz_tt
 				owner = {
-						OR = {
-							tag = ERM
-							tag = WRM
-							tag = ROM
-							tag = BYZ
+					OR = {
+						tag = TUR
+						tag = RUM
 					}
 				}
 			}
+			custom_trigger_tooltip = {
+				tooltip = roman_empire_byz_tt
+				owner = {
+					OR = {
+						tag = ERM
+						tag = WRM
+						tag = ROM
+						tag = BYZ
+					}
+				}
+			}
+		}
 	}
 	on_built = {
 	}
@@ -582,36 +456,58 @@ gme_constantinople_great_palace = {
 			tooltip = owner_culture_religion_tt
 			has_owner_culture = yes
 			has_owner_religion = yes
-			}
-		custom_trigger_tooltip = {
-			tooltip = roman_empire_byz_tt
+		}
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = ottomans_rum_byz_tt
 				owner = {
-						OR = {
-							tag = ERM
-							tag = WRM
-							tag = ROM
-							tag = BYZ
+					OR = {
+						tag = TUR
+						tag = RUM
 					}
 				}
 			}
+			custom_trigger_tooltip = {
+				tooltip = roman_empire_byz_tt
+				owner = {
+					OR = {
+						tag = ERM
+						tag = WRM
+						tag = ROM
+						tag = BYZ
+					}
+				}
+			}
+		}
 	}
 	can_upgrade_trigger = {
 		custom_trigger_tooltip = {
 			tooltip = owner_culture_religion_tt
 			has_owner_culture = yes
 			has_owner_religion = yes
-			}
-		custom_trigger_tooltip = {
-			tooltip = roman_empire_byz_tt
+		}
+		OR = {
+			custom_trigger_tooltip = {
+				tooltip = ottomans_rum_byz_tt
 				owner = {
-						OR = {
-							tag = ERM
-							tag = WRM
-							tag = ROM
-							tag = BYZ
+					OR = {
+						tag = TUR
+						tag = RUM
 					}
 				}
 			}
+			custom_trigger_tooltip = {
+				tooltip = roman_empire_byz_tt
+				owner = {
+					OR = {
+						tag = ERM
+						tag = WRM
+						tag = ROM
+						tag = BYZ
+					}
+				}
+			}
+		}
 	}
 	keep_trigger = {
 	}

@@ -220,6 +220,14 @@ country_decisions = {
 				add_permanent_claim = YUA
 			}
 			add_prestige = 20
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = root
+					}
+					change_culture = root
+				}
+			}
 			set_country_flag = formed_yuan_flag
 			if = {
 				limit = {

@@ -28,27 +28,30 @@ tr_russian_minors_1 = {
 		}
 	}
 	has_country_shield = yes
-	build_army_mission = {
+	tr_build_army_mission = {
 		icon = mission_build_up_to_force_limit
 		required_missions = {
 		}
 		trigger = {
-			army_size_percentage = 1
+			army_size_percentage = 0.6
 		}
 		effect = {
 			add_country_modifier = {
 				name = "thriving_arms_industry"
 				duration = 9125				#25 years
 			}
+			russia_region = {
+				add_claim = root
+			}
 			create_general = {
 				tradition = 60
 			}
 		}
 	}
-	assemble_an_army = {
+	tr_assemble_an_army = {
 		icon = mission_assemble_an_army
 		required_missions = {
-			build_army_mission
+			tr_build_army_mission
 		}
 		position = 2
 		trigger = {
@@ -100,10 +103,9 @@ tr_russian_minors_2 = {
 		}
 		position = 2
 		provinces_to_highlight = {
-			novgorod_area = {
-				NOT = {
-					country_or_subject_holds = ROOT
-				}
+			area = novgorod_area
+			NOT = {
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -190,6 +192,8 @@ tr_russian_minors_3 = {
 			is_subject = no
 			capital_scope = {
 				fort_level = 3
+			}
+			capital_scope = {
 				development = 10
 			}
 		}
@@ -427,10 +431,9 @@ tr_russian_minors_4 = {
 		}
 		position = 2
 		provinces_to_highlight = {
-			moscow_area = {
-				NOT = {
-					country_or_subject_holds = ROOT
-				}
+			area = moscow_area
+			NOT = {
+				country_or_subject_holds = ROOT
 			}
 		}
 		trigger = {
@@ -503,27 +506,17 @@ tr_russian_minors_4 = {
 		}
 		position = 7
 		provinces_to_highlight = {
-			OR = {
-				area = perm_area = {
-					limit = {
-						NOT = {	religion = orthodox	}
-					}
-				}
-				area = galich_area = {
-					limit = {
-						NOT = { religion = orthodox }
-					}
-				}
-				area = kama_area = {
-					limit = {
-						NOT = { religion = orthodox }
-					}
-				}
-				area = suzdal_area = {
-					limit = {
-						NOT = { religion = orthodox }
-					}
-				}
+            OR = {
+                area = perm_area
+                area = galich_area
+                area = kama_area
+                area = suzdal_area
+            }
+            NOT = {
+                country_or_subject_holds = ROOT
+            }
+			NOT = {
+				religion = orthodox
 			}
 		}
 		trigger = {
@@ -569,41 +562,18 @@ tr_russian_minors_4 = {
 		}
 		position = 8
 		provinces_to_highlight = {
-			OR = {
-				area = kazan_area = {
-					limit = {
-						NOT = { religion = orthodox }
-					}
-				}
-				area = volga_area = {
-					limit = {
-						NOT = { religion = orthodox }
-					}
-				}
-				area = saratov_area = {
-					limit = {
-						NOT = { religion = orthodox }
-					}
-				}
-				area = samara_area = {
-					limit = {
-						NOT = { religion = orthodox }
-					}
-				}
-				area = tambov_area = {
-					limit = {
-						NOT = { religion = orthodox }
-					}
-				}
-				area = ryazan_area = {
-					limit = {
-						NOT = { religion = orthodox }
-					}
-				}
-			}
-			NOT = {
-				country_or_subject_holds = ROOT
-			}
+            OR = {
+                area = kazan_area
+                area = volga_area
+                area = saratov_area
+                area = suzdal_area
+                area = samara_area
+                area = tambov_area
+                area = ryazan_area
+            }
+            NOT = {
+                country_or_subject_holds = ROOT
+            }
 		}
 		trigger = {
 			kazan_area = {
@@ -851,7 +821,7 @@ tr_russian_minors_5 = {
 			add_years_of_income = 2
 		}
 	}
-	dominate_home_trade_node = {
+	tr_dominate_home_trade_node = {
 		icon = mission_dominate_home_trade_node
 		required_missions = {
 		}
@@ -869,7 +839,7 @@ tr_russian_minors_5 = {
 	tr_the_fur_trade = {
 		icon = mission_rb_scottish_the_darien_scheme
 		required_missions = {
-			dominate_home_trade_node
+			tr_dominate_home_trade_node
 		}
 		position = 6
 		trigger = {
@@ -1472,34 +1442,19 @@ tr_russia_2 = {
 		}
 		position = 9
 		provinces_to_highlight = {
-			region = crimea_region = {
-				limit = {
-					NOT = { religion = orthodox }
-				}
-			}
-			area = circassia_area = {
-				limit = {
-					NOT = { religion = orthodox }
-				}
-			}
-			area = dagestan_area = {
-				limit = {
-					NOT = { religion = orthodox }
-				}
-			}
-			area = lower_yik_area = {
-				limit = {
-					NOT = { religion = orthodox }
-				}
-			}
-			area = nogai_area = {
-				limit = {
-					NOT = { religion = orthodox }
-				}
-			}
-			NOT = {
-				country_or_subject_holds = ROOT
-			}
+            OR = {
+                area = crimea_area
+                area = circassia_area
+                area = dagestan_area
+                area = lower_yik_area
+                area = nogai_area
+            }
+            NOT = {
+                country_or_subject_holds = ROOT
+            }
+            NOT = {
+                religion = orthodox
+            }
 		}
 		trigger = {
 			crimea_region = {
@@ -2042,6 +1997,22 @@ tr_russia_3 = {
 		}
 		position = 10
 		trigger = {
+			yedisan_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			astrakhan_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			zaporizhia_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			azov_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
 		}
 		effect = {
 			crimea_region = {

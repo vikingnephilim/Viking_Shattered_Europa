@@ -148,6 +148,15 @@ country_decisions = {
 			}
 			add_prestige = 25
 			set_country_flag = formed_celbri_flag
+			hidden_effect = {
+				restore_country_name_effect = yes
+				every_owned_province = {
+					limit = {
+						culture_group = gaelic
+					}
+					change_culture = root
+				}
+			}
 			if = {
 				limit = {
 					has_custom_ideas = no

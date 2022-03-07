@@ -15,8 +15,13 @@ eng_british_conquest = {
 	eng_mighty_army = {
 		icon = mission_assemble_an_army
 		required_missions = {
+			VN_english_minor_build_capital
+			VN_conquer_scottish_and_welsh_borders
+			VN_conquer_midlands_yorkshire
+			VN_conquer_wessex_west_midlands
+			VN_conquer_anglia_and_london
 		}
-		position = 1
+		position = 2
 		completed_by = 1450.1.1
 		trigger = {
 			army_size_percentage = 1
@@ -132,7 +137,7 @@ eng_british_conquest_ire = {
 		required_missions = {
 			eng_mighty_army
 		}
-		position = 2
+		position = 3
 		completed_by = 1603.1.1
 		provinces_to_highlight = {
 			OR = {
@@ -211,7 +216,7 @@ eng_british_conquest_scotland = {
 		required_missions = {
 			eng_mighty_army
 		}
-		position = 4
+		position = 5
 		completed_by = 1603.1.1
 		provinces_to_highlight = {
 			OR = {
@@ -299,7 +304,7 @@ eng_french_conquest = {
 		icon = mission_conquer_50_development
 		required_missions = {
 		}
-		position = 1
+		position = 2
 		trigger = {
 			if = {
 				limit = {
@@ -362,7 +367,7 @@ eng_french_conquest = {
 		required_missions = {
 			eng_war_france
 		}
-		position = 3
+		position = 4
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -465,7 +470,7 @@ eng_french_conquest = {
 		required_missions = {
 			eng_reclaim_arm_paris
 		}
-		position = 5
+		position = 6
 		provinces_to_highlight = {
 			OR = {
 				area = ile_de_france_area
@@ -524,7 +529,7 @@ eng_exploration_americas = {
 		icon = mission_establish_high_seas_navy
 		required_missions = {
 		}
-		position = 5
+		position = 6
 		completed_by = 1578.1.1
 		trigger = {
 			custom_trigger_tooltip = {
@@ -553,6 +558,7 @@ eng_exploration_americas = {
 		required_missions = {
 			eng_discover_america_caribbean
 		}
+		position = 7
 		completed_by = 1610.1.1
 		provinces_to_highlight = {
 			colonial_region = colonial_eastern_america
@@ -582,6 +588,7 @@ eng_exploration_americas = {
 		required_missions = {
 			english_colony_in_north_america
 		}
+		position = 8
 		completed_by = 1610.1.1
 		provinces_to_highlight = {
 			colonial_region = colonial_the_carribean
@@ -631,7 +638,7 @@ eng_chesapeake_dominance = {
 		required_missions = {
 			english_colony_in_north_america
 		}
-		position = 7
+		position = 8
 		completed_by = 1618.5.1
 		provinces_to_highlight = {
 			province_id = 1500
@@ -677,7 +684,7 @@ eng_indian_ocean_exploration = {
 		icon = mission_junk_boat
 		required_missions = {
 		}
-		position = 7
+		position = 8
 		completed_by = 1579.1.1
 		trigger = {
 			custom_trigger_tooltip = {
@@ -724,6 +731,7 @@ eng_indian_ocean_exploration = {
 		required_missions = {
 			england_discovers_india
 		}
+		position = 9
 		completed_by = 1788.1.1
 		provinces_to_highlight = {
 			colonial_region = colonial_australia
@@ -778,7 +786,7 @@ eng_indian_cot_dominance = {
 		required_missions = {
 			england_discovers_india
 		}
-		position = 7
+		position = 8
 		completed_by = 1776.7.1
 		provinces_to_highlight = {
 			OR = {
@@ -840,7 +848,7 @@ eng_british_cot_dominance = {
 			establish_trade_in_american_cot
 			establish_trade_in_indian_cot
 		}
-		position = 8
+		position = 9
 		provinces_to_highlight = {
 			province_id = 1269
 			has_discovered = ROOT

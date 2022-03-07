@@ -1,29 +1,24 @@
 gen_europe = {
-
 	slot = 5
 	generic = yes
 	ai = yes
-	
 	potential = {
 		capital_scope = {
 			continent = europe
 		}
 	}
 	has_country_shield = no
-	
 	gen_eur_trade_node = {
 		icon = mission_war_chest
-		required_missions = { }
+		required_missions = {
+		}
 		position = 1
-		
 		trigger = {
 			home_trade_node = {
 				highest_value_trade_node = yes
 				is_strongest_trade_power = ROOT
 			}
-			
 		}
-		
 		effect = {
 			add_prestige = 30
 			add_country_modifier = {
@@ -32,18 +27,18 @@ gen_europe = {
 			}
 		}
 	}
-	
 	gen_eur_defender_faith = {
 		icon = mission_european_church
-		required_missions = { }
+		required_missions = {
+		}
 		position = 2
-		
 		trigger = {
-			NOT = { current_age = age_of_discovery }
+			NOT = {
+				current_age = age_of_discovery
+			}
 			is_defender_of_faith = yes
 			religious_unity = 1
 		}
-		
 		effect = {
 			add_country_modifier = {
 				name = "gen_eur_defender"
@@ -54,11 +49,9 @@ gen_europe = {
 }
 
 gen_europe_hre = {
-
 	slot = 5
 	generic = yes
 	ai = yes
-	
 	potential = {
 		capital_scope = {
 			continent = europe
@@ -67,16 +60,19 @@ gen_europe_hre = {
 		NOT = {
 			is_emperor = yes
 		}
-		NOT = { government = theocracy }
-		NOT = { government = republic }
+		NOT = {
+			government = theocracy
+		}
+		NOT = {
+			government = republic
+		}
 	}
 	has_country_shield = no
-	
 	gen_hre_electors = {
 		icon = mission_alliances
-		required_missions = { }
+		required_missions = {
+		}
 		position = 3
-		
 		trigger = {
 			if = {
 				limit = {
@@ -94,7 +90,6 @@ gen_europe_hre = {
 				num_of_allies = 3
 			}
 		}
-		
 		effect = {
 			add_prestige = 10
 			add_country_modifier = {
@@ -103,12 +98,12 @@ gen_europe_hre = {
 			}
 		}
 	}
-	
 	gen_hre_emperor = {
 		icon = mission_empire
-		required_missions = { gen_hre_electors }
+		required_missions = {
+			gen_hre_electors
+		}
 		position = 4
-		
 		trigger = {
 			if = {
 				limit = {
@@ -120,7 +115,6 @@ gen_europe_hre = {
 				government_rank = 3
 			}
 		}
-		
 		effect = {
 			add_country_modifier = {
 				name = "gen_hre_emperor_mod"
@@ -131,11 +125,9 @@ gen_europe_hre = {
 }
 
 gen_europe_hre_ban = {
-
 	slot = 5
 	generic = yes
 	ai = yes
-	
 	potential = {
 		capital_scope = {
 			continent = europe
@@ -144,16 +136,20 @@ gen_europe_hre_ban = {
 		NOT = {
 			is_emperor = yes
 		}
-		NOT = { government = theocracy }
-		NOT = { government = republic }
+		NOT = {
+			government = theocracy
+		}
+		NOT = {
+			government = republic
+		}
 	}
 	has_country_shield = no
-	
 	gen_hre_imperial_ban = {
 		icon = mission_cannons_firing
-		required_missions = { gen_hre_emperor }
+		required_missions = {
+			gen_hre_emperor
+		}
 		position = 5
-		
 		provinces_to_highlight = {
 			AND = {
 				is_part_of_hre = yes
@@ -162,16 +158,19 @@ gen_europe_hre_ban = {
 				}
 			}
 		}
-		
 		trigger = {
 			if = {
 				limit = {
 					hre_size = 1
-					NOT = { has_dlc = "Emperor" }
+					NOT = {
+						has_dlc = "Emperor"
+					}
 				}
 				hre_reform_passed = reichsreform
 				is_emperor = yes
-				NOT = { num_of_foreign_hre_provinces = 1 }
+				NOT = {
+					num_of_foreign_hre_provinces = 1
+				}
 			}
 			else_if = {
 				limit = {
@@ -180,20 +179,23 @@ gen_europe_hre_ban = {
 				}
 				hre_reform_passed = emperor_reichsreform
 				is_emperor = yes
-				NOT = { num_of_foreign_hre_provinces = 1 }
+				NOT = {
+					num_of_foreign_hre_provinces = 1
+				}
 			}
 			else = {
 				custom_trigger_tooltip = {
 					tooltip = imperial_ban_fallback_tt
 					NOT = {
 						any_core_province = {
-							NOT = { owned_by = ROOT }
+							NOT = {
+								owned_by = ROOT
+							}
 						}
 					}
 				}
 			}
 		}
-		
 		effect = {
 			add_prestige = 10
 			if = {
@@ -225,20 +227,22 @@ gen_europe_hre_theocracy = {
 		government = theocracy
 	}
 	has_country_shield = no
-	
 	gen_hre_theocracy_house_of_god = {
 		icon = mission_hands_praying
-		required_missions = { }
+		required_missions = {
+		}
 		position = 3
-
 		provinces_to_highlight = {
 			owned_by = root
 			has_tax_building_trigger = no
 		}
-
 		trigger = {
 			if = {
-				limit = { NOT = { num_of_cities = 10 } }
+				limit = {
+					NOT = {
+						num_of_cities = 10
+					}
+				}
 				all_owned_province = {
 					has_tax_building_trigger = yes
 				}
@@ -253,19 +257,26 @@ gen_europe_hre_theocracy = {
 				}
 			}
 		}
-
 		effect = {
 			capital_scope = {
 				if = {
-					limit = { NOT = { has_building = cathedral } }
+					limit = {
+						NOT = {
+							has_building = cathedral
+						}
+					}
 					remove_building = temple
 					add_building = cathedral
 				}
-				else = { add_base_tax = 2 }
+				else = {
+					add_base_tax = 2
+				}
 			}
 			if = {
 				limit = {
-					NOT = { legitimacy_equivalent = 85 }
+					NOT = {
+						legitimacy_equivalent = 85
+					}
 				}
 				add_devotion = 20
 				add_legitimacy = 20
@@ -277,28 +288,31 @@ gen_europe_hre_theocracy = {
 	}
 	gen_hre_theocracy_lords_army = {
 		icon = mission_teutonic_knights
-		required_missions = { gen_hre_theocracy_house_of_god }
+		required_missions = {
+			gen_hre_theocracy_house_of_god
+		}
 		position = 4
-
 		provinces_to_highlight = {
 			owner = {
 				is_neighbor_of = root
 				army_size = root
 			}
 			root = {
-				NOT = { army_size = 30 }
+				NOT = {
+					army_size = 30
+				}
 			}
 		}
-
 		trigger = {
 			OR = {
 				army_size = 30
 				all_neighbor_country = {
-					NOT = { army_size = root }
+					NOT = {
+						army_size = root
+					}
 				}
 			}
 		}
-
 		effect = {
 			add_country_modifier = {
 				name = theocracy_lords_army_mod
@@ -308,15 +322,18 @@ gen_europe_hre_theocracy = {
 	}
 	gen_hre_theocracy_divine_empire = {
 		icon = mission_monarch_in_throne_room
-		required_missions = { gen_hre_theocracy_lords_army }
+		required_missions = {
+			gen_hre_theocracy_lords_army
+		}
 		position = 5
-
 		provinces_to_highlight = {
 			OR = {
 				region = north_german_region
 				region = south_german_region
 			}
-			NOT = { religion = root }
+			NOT = {
+				religion = root
+			}
 			NOT = {
 				root = {
 					calc_true_if = {
@@ -332,7 +349,6 @@ gen_europe_hre_theocracy = {
 				}
 			}
 		}
-
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = emp_bav_center_of_counter_reformation_tooltip2
@@ -353,7 +369,6 @@ gen_europe_hre_theocracy = {
 				}
 			}
 		}
-
 		effect = {
 			add_country_modifier = {
 				name = theocracy_divine_empire_mod
@@ -362,7 +377,6 @@ gen_europe_hre_theocracy = {
 		}
 	}
 }
-
 
 gen_europe_hre_republic = {
 	slot = 5
@@ -379,16 +393,14 @@ gen_europe_hre_republic = {
 		government = republic
 	}
 	has_country_shield = no
-	
 	gen_hre_relations_with_emperor = {
 		icon = mission_monarch_in_throne_room
-		required_missions = { }
+		required_missions = {
+		}
 		position = 3
-
 		provinces_to_highlight = {
 			is_capital_of = emperor
 		}
-
 		trigger = {
 			alliance_with = emperor
 			emperor = {
@@ -398,7 +410,6 @@ gen_europe_hre_republic = {
 				}
 			}
 		}
-
 		effect = {
 			add_country_modifier = {
 				name = imperial_beneficience
@@ -408,13 +419,13 @@ gen_europe_hre_republic = {
 	}
 	gen_hre_financial_centre = {
 		icon = mission_high_income
-		required_missions = { gen_hre_relations_with_emperor }
+		required_missions = {
+			gen_hre_relations_with_emperor
+		}
 		position = 4
-
 		provinces_to_highlight = {
 			is_capital_of = root
 		}
-
 		trigger = {
 			capital_scope = {
 				development = 25
@@ -423,7 +434,6 @@ gen_europe_hre_republic = {
 				has_trade_building_trigger = yes
 			}
 		}
-
 		effect = {
 			add_country_modifier = {
 				name = republic_bourgeois_center
@@ -433,9 +443,10 @@ gen_europe_hre_republic = {
 	}
 	gen_hre_republic_reform_government = {
 		icon = mission_early_modern_university
-		required_missions = { gen_hre_financial_centre }
+		required_missions = {
+			gen_hre_financial_centre
+		}
 		position = 5
-
 		trigger = {
 			has_final_tier_reforms_trigger = yes
 			OR = {
@@ -456,7 +467,6 @@ gen_europe_hre_republic = {
 				}
 			}
 		}
-
 		effect = {
 			add_country_modifier = {
 				name = republic_reformed_government

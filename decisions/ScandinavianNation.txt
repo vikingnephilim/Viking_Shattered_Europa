@@ -590,17 +590,17 @@ country_decisions = {
 			OR = {
 				province_id = 1				# Stockholm
 				province_id = 6				# Skane
-				province_id = 12			# Sjaelland
-				province_id = 15			# Jylland
-				province_id = 17			# Akershus
-				province_id = 35			# Osel
-				province_id = 236			# London
-				province_id = 245			# York
-				province_id = 369			# Orkney
-				province_id = 370			# Reykjavik
-				province_id = 371			# Akureyi
-				province_id = 373			# Meath
-				province_id = 4365			# Mann
+				province_id = 12				# Sjaelland
+				province_id = 15				# Jylland
+				province_id = 17				# Akershus
+				province_id = 35				# Osel
+				province_id = 236				# London
+				province_id = 245				# York
+				province_id = 369				# Orkney
+				province_id = 370				# Reykjavik
+				province_id = 371				# Akureyi
+				province_id = 373				# Meath
+				province_id = 4365				# Mann
 			}
 			OR = {
 				NOT = {
@@ -610,19 +610,19 @@ country_decisions = {
 					is_core = ROOT
 				}
 				NOT = {
-					religion = norse_pagan_reformed
+					religion_group = christian
 				}
 			}
 		}
 		allow = {
 			is_nomad = no
 			is_at_war = no
-			owns_core_province = 1				# Stockholm
-			owns_core_province = 6				# Skane
-			owns_core_province = 12				# Sjaelland
-			owns_core_province = 15				# Jylland
-			owns_core_province = 17				# Akershus
-			owns_core_province = 35				# Osel
+			owns_core_province = 1			# Stockholm
+			owns_core_province = 6			# Skane
+			owns_core_province = 12			# Sjaelland
+			owns_core_province = 15			# Jylland
+			owns_core_province = 17			# Akershus
+			owns_core_province = 35			# Osel
 			owns_core_province = 236			# London
 			owns_core_province = 245			# York
 			owns_core_province = 369			# Orkney
@@ -683,6 +683,130 @@ country_decisions = {
 			swap_non_generic_missions = yes
 			add_prestige = 10
 			set_country_flag = formed_scandinavia_flag
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	jomsviking_nation = {
+		major = yes
+		potential = {
+			normal_or_historical_nations = yes
+			was_never_end_game_tag_trigger = yes
+			NOT = {
+				has_country_flag = formed_jomsviking_flag
+			}
+			OR = {
+				ai = no
+				is_playing_custom_nation = no
+			}
+			NOT = {
+				exists = JOM
+			}
+			religion = norse_pagan_reformed
+			is_colonial_nation = no
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					num_of_cities = 5
+				}
+			}
+			OR = {
+				is_former_colonial_nation = no
+				AND = {
+					is_former_colonial_nation = yes
+					ai = no
+				}
+			}
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 1				# Stockholm
+				province_id = 6				# Skane
+				province_id = 12				# Sjaelland
+				province_id = 15				# Jylland
+				province_id = 17				# Akershus
+				province_id = 35				# Osel
+				province_id = 236				# London
+				province_id = 245				# York
+				province_id = 369				# Orkney
+				province_id = 370				# Reykjavik
+				province_id = 371				# Akureyi
+				province_id = 373				# Meath
+				province_id = 4365				# Mann
+			}
+			OR = {
+				NOT = {
+					owned_by = ROOT
+				}
+				NOT = {
+					is_core = ROOT
+				}
+				NOT = {
+					religion = norse_pagan_reformed
+				}
+			}
+		}
+		allow = {
+			is_nomad = no
+			is_at_war = no
+			owns_core_province = 1			# Stockholm
+			owns_core_province = 6			# Skane
+			owns_core_province = 12			# Sjaelland
+			owns_core_province = 15			# Jylland
+			owns_core_province = 17			# Akershus
+			owns_core_province = 35			# Osel
+			owns_core_province = 236			# London
+			owns_core_province = 245			# York
+			owns_core_province = 369			# Orkney
+			owns_core_province = 370			# Reykjavik
+			owns_core_province = 373			# Meath
+			owns_core_province = 4365			# Mann
+			all_owned_province = {
+				religion = norse_pagan_reformed
+			}
+		}
+		effect = {
+			restore_country_name_effect = yes
+			change_tag = JOM
+			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						government_rank = 2
+					}
+				}
+				set_government_rank = 2
+			}
+			random_owned_province = {
+				add_base_tax = 1
+			}
+			add_country_modifier = {
+				name = "centralization_modifier"
+				duration = 7300
+			}
+			british_isles_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = JOM
+			}
+			scandinavia_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+					}
+				}
+				add_permanent_claim = JOM
+			}
+			add_prestige = 10
+			set_country_flag = formed_jomsviking_flag
+			country_event = {
+				id = ideagroups.1
+			}
 		}
 		ai_will_do = {
 			factor = 1

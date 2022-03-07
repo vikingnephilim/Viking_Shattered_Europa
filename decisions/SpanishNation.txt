@@ -148,6 +148,14 @@ country_decisions = {
 				}
 				swap_non_generic_missions = yes
 			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = root
+					}
+					change_culture = root
+				}
+			}
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {

@@ -158,6 +158,14 @@ country_decisions = {
 				name = "centralization_modifier"
 				duration = 7300
 			}
+			hidden_effect = {
+				every_owned_province = {
+					limit = {
+						culture_group = root
+					}
+					change_culture = root
+				}
+			}
 			if = {
 				limit = {
 					has_custom_ideas = no

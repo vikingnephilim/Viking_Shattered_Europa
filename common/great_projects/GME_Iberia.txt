@@ -1334,7 +1334,6 @@ gme_seville_al_qasr_al_muriq = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		has_owner_religion = yes
 		OR = {
 			custom_trigger_tooltip = {
 				tooltip = muslim_religion_tt
@@ -1368,7 +1367,6 @@ gme_seville_al_qasr_al_muriq = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		has_owner_religion = yes
 		OR = {
 			custom_trigger_tooltip = {
 				tooltip = muslim_religion_tt
@@ -1396,7 +1394,6 @@ gme_seville_al_qasr_al_muriq = {
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		has_owner_religion = yes
 		OR = {
 			custom_trigger_tooltip = {
 				tooltip = muslim_religion_tt
@@ -1836,6 +1833,150 @@ seville_cathedral = {
 		}
 		#what effects happen when this tier is achieved
 		on_upgraded = {
+		}
+	}
+}
+
+gme_lonja_seda = {
+	start = 220
+	date = 1.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 2500
+	starting_tier = 0
+	type = monument
+	can_be_moved = no
+	build_trigger = {
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
+		}
+	}
+	on_built = {
+	}
+	on_destroyed = {
+	}
+	can_use_modifiers_trigger = {
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = {
+		custom_trigger_tooltip = {
+			tooltip = iberian_culture_tt
+			culture_group = iberian
+			province_is_or_accepts_culture = yes
+		}
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			province_trade_power_modifier = 0.25
+			province_trade_power_value = 5
+		}
+		area_modifier = {
+		}
+		country_modifiers = {
+			mercantilism_cost = -0.1
+		}
+		on_upgraded = {
+			owner = {
+				define_advisor = {
+					type = trader
+					culture = ROOT
+					skill = 1
+					cost_multiplier = 0.5
+				}
+			}
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			province_trade_power_value = 10
+			trade_goods_size = 0.5
+			local_development_cost = -0.1
+		}
+		area_modifier = {
+			province_trade_power_modifier = 0.15
+			trade_goods_size_modifier = 0.15
+		}
+		country_modifiers = {
+			mercantilism_cost = -0.25
+		}
+		on_upgraded = {
+			owner = {
+				define_advisor = {
+					type = trader
+					culture = ROOT
+					skill = 2
+					cost_multiplier = 0.5
+				}
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			province_trade_power_value = 15
+			trade_goods_size = 1
+			local_development_cost = -0.2
+		}
+		area_modifier = {
+			province_trade_power_modifier = 0.25
+			trade_goods_size_modifier = 0.33
+		}
+		country_modifiers = {
+			mercantilism_cost = -0.25
+			trade_efficiency = 0.1
+			merchants = 1
+		}
+		on_upgraded = {
+			owner = {
+				define_advisor = {
+					type = trader
+					culture = ROOT
+					skill = 3
+					cost_multiplier = 0.5
+				}
+			}
 		}
 	}
 }
