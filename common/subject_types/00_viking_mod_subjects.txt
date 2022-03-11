@@ -633,12 +633,19 @@ tributary_state = {
 	}
 }
 
-# Completely scripted subject type (no code used). Add any number of these. Check common/new_diplomatic_actions for how to make visible in game.
-dummy = {
-	copy_from = default
-}
-
 papal_vassal = {
+	is_potential_overlord = {
+		tag = PAP
+		118 = {
+			is_core = ROOT
+		}
+		118 = {
+			owned_by = ROOT
+		}
+		118 = {
+			is_capital = yes
+		}
+	}
 	diplomacy_overlord_sprite = GFX_diplomacy_lead_papacy
 	diplomacy_subject_sprite = GFX_diplomacy_am_subject_papacy
 	# Properties:
@@ -699,6 +706,18 @@ papal_vassal = {
 }
 
 greek_vassal = {
+	is_potential_overlord = {
+		culture_group = byzantine
+		151 = {
+			is_core = ROOT
+		}
+		151 = {
+			owned_by = ROOT
+		}
+		151 = {
+			is_capital = yes
+		}
+	}
 	diplomacy_view_class = 1	# See description above
 	# Properties:
 	has_power_projection = no
@@ -795,6 +814,24 @@ greek_vassal = {
 }
 
 beylik_vassal = {
+	is_potential_overlord = {
+		OR = {
+			culture = osman
+			culture = sahili
+			culture = eretnid
+			culture = karamanli
+			culture = turkish
+		}
+		326 = {
+			is_core = ROOT
+		}
+		326 = {
+			owned_by = ROOT
+		}
+		326 = {
+			is_capital = yes
+		}
+	}
 	diplomacy_view_class = 1	# See description above
 	# Properties:
 	has_power_projection = no
@@ -891,6 +928,34 @@ beylik_vassal = {
 }
 
 cossack_vassal = {
+	is_potential_overlord = {
+		culture_group = east_slavic
+		tag = RUS
+		OR = {
+			AND = {
+				33 = {
+					is_capital_of = ROOT
+				}
+				33 = {
+					is_core = ROOT
+				}
+				33 = {
+					owned_by = ROOT
+				}
+			}
+			AND = {
+				295 = {
+					is_capital_of = ROOT
+				}
+				295 = {
+					is_core = ROOT
+				}
+				295 = {
+					owned_by = ROOT
+				}
+			}
+		}
+	}
 	diplomacy_view_class = 1	# See description above
 	# Properties:
 	has_power_projection = no
@@ -942,5 +1007,116 @@ cossack_vassal = {
 	}
 	modifier_subject = {
 		modifier = cossack_subject_modifier
+	}
+}
+
+canton = {
+	copy_from = default
+	# Graphics:
+	sprite = GFX_icon_canton
+	diplomacy_overlord_sprite = GFX_diplomacy_leadcanton
+	diplomacy_subject_sprite = GFX_diplomacy_amcanton
+	# Triggers:
+	is_potential_overlord = {
+		primary_culture = swiss
+		government = republic
+	}
+	# This part is not copied in copy_from. Actual default is equivalent to always = yes
+	# Properties:
+	can_fight_independence_war = yes
+	joins_overlords_wars = yes
+	overlord_can_be_subject = yes
+	can_be_annexed = yes
+	takes_diplo_slot = no
+	can_release_in_peace = yes
+	counts_for_borders = yes
+	overlord_enforce_peace_attacking = yes
+	can_use_claims = yes
+	share_rebel_popup = yes
+	can_set_mil_focus = yes
+	can_send_missionary_to_subject = yes
+	overlord_can_fabricate_for = yes
+	max_government_rank = 1
+	base_liberty_desire = 0
+	liberty_desire_negative_prestige = 0
+	liberty_desire_development_ratio = 0.2
+	liberty_desire_same_dynasty = -10
+	pays_overlord = 1
+	forcelimit_to_overlord = 0.25
+	relative_power_class = 1
+	restoration_cb = cb_disloyal_vassal
+	# Subject Interactions:
+	scutage = yes
+	place_relative_on_throne = yes
+	sacrifice_ruler = yes
+	sacrifice_heir = yes
+	divert_trade = yes
+	seize_territory = yes
+	embargo_rivals = yes
+	send_officers = yes
+	placate_rulers = yes
+	takeondebt = yes
+	knowledge_sharing = yes
+	# Modifiers:
+	modifier_subject = clear
+	modifier_subject = {
+		modifier = vassal_nation
+	}
+	modifier_overlord = clear
+	modifier_overlord = {
+		modifier = vassal_subject
+	}
+	modifier_overlord = {
+		modifier = swi_canton_republican_ties_modifier
+	}
+	overlord_opinion_modifier = is_vassal
+	subject_opinion_modifier = is_vassal
+}
+
+crown_dependency_vassal = {
+	is_potential_overlord = {
+		culture_group = british
+		government = monarchy
+	}
+	can_fight_independence_war = yes
+	joins_overlords_wars = yes
+	overlord_can_be_subject = yes
+	can_be_annexed = yes
+	takes_diplo_slot = no
+	can_release_in_peace = yes
+	counts_for_borders = yes
+	overlord_enforce_peace_attacking = yes
+	can_use_claims = yes
+	share_rebel_popup = yes
+	can_set_mil_focus = yes
+	can_send_missionary_to_subject = yes
+	overlord_can_fabricate_for = yes
+	max_government_rank = 1
+	base_liberty_desire = 0
+	liberty_desire_negative_prestige = 0
+	liberty_desire_development_ratio = 0.2
+	liberty_desire_same_dynasty = -10
+	pays_overlord = 1
+	forcelimit_to_overlord = 0.25
+	relative_power_class = 1
+	restoration_cb = cb_disloyal_vassal
+	# Subject Interactions:
+	scutage = yes
+	place_relative_on_throne = yes
+	sacrifice_ruler = yes
+	sacrifice_heir = yes
+	divert_trade = yes
+	seize_territory = yes
+	embargo_rivals = yes
+	send_officers = yes
+	placate_rulers = yes
+	takeondebt = yes
+	knowledge_sharing = yes
+	# Modifiers:
+	modifier_overlord = {
+		modifier = self_governing_colony_overlord
+	}
+	modifier_subject = {
+		modifier = self_governing_colony_subject
 	}
 }
