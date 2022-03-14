@@ -475,17 +475,11 @@ country_event = {
 	picture = ORTHODOX_eventPicture
 	fire_only_once = yes
 	trigger = {
-		OR = {
-			has_country_flag = patriarchate_mission
-			AND = {
-				NOT = {
-					has_mission = rus_patriarchate_mission
-				}
-				tag = RUS
-				religion = orthodox
-				NOT = {
-					exists = BYZ
-				}
+		AND = {
+			tag = RUS
+			religion = orthodox
+			NOT = {
+				exists = BYZ
 			}
 		}
 	}

@@ -14,10 +14,8 @@ country_decisions = {
 			NOT = {
 				exists = SAA
 			}
-			is_south_african_primary = yes
 			any_owned_province = {
 				region = south_africa_region
-				is_south_african_primary = yes
 			}
 			OR = {
 				ai = no
@@ -110,16 +108,8 @@ country_decisions = {
 								cavalry = 0.1
 								artillery = 0.3
 							}
-							if = {
-								limit = {
-									is_south_african_primary = yes
-								}
-								save_event_target_as = capital_culture
-							}
-							else = {
-								PREV = {
-									add_prestige = 50
-								}
+							PREV = {
+								add_prestige = 50
 							}
 						}
 						change_primary_culture = event_target:capital_culture

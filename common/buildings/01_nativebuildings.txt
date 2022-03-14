@@ -43,16 +43,6 @@ native_earthwork = {
 native_palisade = {
 	cost = 200
 	time = 12
-	build_trigger = {
-		owner = {
-			government = native
-		}
-	}
-	keep_trigger = {
-		owner = {
-			government = native
-		}
-	}
 	modifier = {
 		fort_level = 1
 	}
@@ -60,6 +50,9 @@ native_palisade = {
 	influencing_fort = yes
 	onmap = yes
 	build_trigger = {
+		owner = {
+			government = native
+		}
 		NOT = {
 			any_neighbor_province = {
 				owner = {
@@ -76,6 +69,9 @@ native_palisade = {
 		}
 	}
 	keep_trigger = {
+		owner = {
+			government = native
+		}
 		OR = {
 			AND = {
 				has_province_flag = new_conquest_fort_delay

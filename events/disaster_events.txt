@@ -16,15 +16,6 @@ country_event = {
 		random_owned_province = {
 			limit = {
 				region = south_africa_region
-				OR = {
-					culture = british_south_african
-					culture = french_south_african
-					culture = iberian_south_african
-					culture = latin_south_african
-					culture = celtic_south_african
-					culture = scandinavian_south_african
-					culture = maghrebi_south_african
-				}
 			}
 			spawn_rebels = {
 				type = nationalist_rebels
@@ -39,15 +30,6 @@ country_event = {
 					has_province_flag = saa_rebels_start_flag
 				}
 				region = south_africa_region
-				OR = {
-					culture = british_south_african
-					culture = french_south_african
-					culture = iberian_south_african
-					culture = latin_south_african
-					culture = celtic_south_african
-					culture = scandinavian_south_african
-					culture = maghrebi_south_african
-				}
 			}
 			spawn_rebels = {
 				type = nationalist_rebels
@@ -62,18 +44,6 @@ country_event = {
 			south_africa_region = {
 				limit = {
 					owned_by = ROOT
-					OR = {
-						culture = british_south_african
-						culture = french_south_african
-						culture = iberian_south_african
-						culture = latin_south_african
-						culture = celtic_south_african
-						culture = scandinavian_south_african
-						culture = maghrebi_south_african
-						NOT = {
-							religion = ROOT
-						}
-					}
 				}
 				add_province_modifier = {
 					name = "south_african_revolt_modifier"
@@ -103,15 +73,6 @@ country_event = {
 				controlled_by = REB
 				local_autonomy = 90
 			}
-			OR = {
-				culture = british_south_african
-				culture = french_south_african
-				culture = iberian_south_african
-				culture = latin_south_african
-				culture = celtic_south_african
-				culture = scandinavian_south_african
-				culture = maghrebi_south_african
-			}
 		}
 	}
 	immediate = {
@@ -119,16 +80,6 @@ country_event = {
 			every_owned_province = {
 				limit = {
 					region = south_africa_region
-					OR = {
-						culture = british_south_african
-						culture = french_south_african
-						culture = iberian_south_african
-						culture = latin_south_african
-						culture = celtic_south_african
-						culture = scandinavian_south_african
-						culture = maghrebi_south_african
-						is_core = SAA
-					}
 					is_capital = no
 				}
 				discover_country = SAA
@@ -202,69 +153,6 @@ country_event = {
 		name = "EXCELLENT"
 		SAA = {
 			capital_scope = {
-				hidden_effect = {
-					if = {
-						limit = {
-							culture = british_south_african
-						}
-						PREV = {
-							change_primary_culture = british_south_african
-						}
-					}
-					else_if = {
-						limit = {
-							culture = french_south_african
-						}
-						PREV = {
-							change_primary_culture = french_south_african
-						}
-					}
-					else_if = {
-						limit = {
-							culture = iberian_south_african
-						}
-						PREV = {
-							change_primary_culture = iberian_south_african
-						}
-					}
-					else_if = {
-						limit = {
-							culture = latin_south_african
-						}
-						PREV = {
-							change_primary_culture = latin_south_african
-						}
-					}
-					else_if = {
-						limit = {
-							culture = celtic_south_african
-						}
-						PREV = {
-							change_primary_culture = celtic_south_african
-						}
-					}
-					else_if = {
-						limit = {
-							culture = scandinavian_south_african
-						}
-						PREV = {
-							change_primary_culture = scandinavian_south_african
-						}
-					}
-					else_if = {
-						limit = {
-							culture = maghrebi_south_african
-						}
-						PREV = {
-							change_primary_culture = maghrebi_south_african
-						}
-					}
-					else = {
-						add_base_tax = 1
-						add_base_production = 1
-						add_base_manpower = 1
-					}
-				}
 				build_to_forcelimit = {
 					infantry = 0.6
 					cavalry = 0.2
@@ -341,15 +229,6 @@ country_event = {
 			NOT = {
 				has_province_flag = no_south_african_revolt
 			}
-			OR = {
-				culture = british_south_african
-				culture = french_south_african
-				culture = iberian_south_african
-				culture = latin_south_african
-				culture = celtic_south_african
-				culture = scandinavian_south_african
-				culture = maghrebi_south_african
-			}
 		}
 	}
 	immediate = {
@@ -365,15 +244,6 @@ country_event = {
 					}
 					NOT = {
 						has_province_flag = no_south_african_revolt
-					}
-					OR = {
-						culture = british_south_african
-						culture = french_south_african
-						culture = iberian_south_african
-						culture = latin_south_african
-						culture = celtic_south_african
-						culture = scandinavian_south_african
-						culture = maghrebi_south_african
 					}
 				}
 				save_event_target_as = south_african_rebels_target

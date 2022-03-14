@@ -666,16 +666,14 @@ fertility_95 = {
 
 ae_early = {
 	potential = {
-		OR = {
-			ai = no
-			ai = yes
-		}
+		ai = yes
 	}
 	trigger = {
 		is_year = 1
 		NOT = {
-			is_year = 1500
+			is_year = 1544
 		}
 	}
-	ae_impact = -0.5
+	ae_impact = -0.33
+	core_creation = -0.33
 }

@@ -40,14 +40,6 @@ federal_constitution = {
 				ORIGINAL = ROOT
 				TAG = SIO
 			}
-			if = {
-				limit = {
-					NOT = {
-						has_idea_group = siouan_federation_ideas
-					}
-				}
-				swap_federation_idea_group = yes
-			}
 		}
 		else_if = {
 			limit = {
@@ -82,14 +74,6 @@ federal_constitution = {
 				ORIGINAL = ROOT
 				TAG = ILL
 			}
-			if = {
-				limit = {
-					NOT = {
-						has_idea_group = ne_native_ideas
-					}
-				}
-				swap_federation_idea_group = yes
-			}
 		}
 		else_if = {
 			limit = {
@@ -123,14 +107,6 @@ federal_constitution = {
 			add_permanent_claims_for_federation_nation = {
 				ORIGINAL = ROOT
 				TAG = POT
-			}
-			if = {
-				limit = {
-					NOT = {
-						has_idea_group = ne_native_ideas
-					}
-				}
-				swap_federation_idea_group = yes
 			}
 		}
 		else_if = {

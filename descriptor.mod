@@ -3,6 +3,7 @@ replace_path="history/wars"
 replace_path="common/religion"
 replace_path="common/bookmarks"
 replace_path="missions"
+replace_path="events"
 replace_path="gfx/sprite_packs_order"
 replace_path="dlc"
 tags={

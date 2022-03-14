@@ -95,7 +95,7 @@ request_canton = {
 		}
 		FROM = {
 			NOT = {
-				total_development = 25
+				total_development = 30
 			}
 		}
 		FROM = {
@@ -478,7 +478,7 @@ request_papal_vassal = {
 		}
 		FROM = {
 			NOT = {
-				total_development = 100
+				total_development = 50
 			}
 		}
 		FROM = {
@@ -831,7 +831,7 @@ request_greek_vassal = {
 		}
 		FROM = {
 			NOT = {
-				total_development = 100
+				total_development = 50
 			}
 		}
 		FROM = {
@@ -1181,7 +1181,7 @@ request_beylik_vassal = {
 		}
 		FROM = {
 			NOT = {
-				total_development = 100
+				total_development = 50
 			}
 		}
 		FROM = {
@@ -1203,6 +1203,10 @@ request_beylik_vassal = {
 		create_subject = {
 			subject_type = beylik_vassal
 			subject = FROM
+		}
+		FROM = {
+			change_government_to_monarchy = yes
+			add_government_reform = expanded_devshirme_reform
 		}
 	}
 	on_decline = {
@@ -1537,7 +1541,7 @@ request_cossack_vassal = {
 		}
 		FROM = {
 			NOT = {
-				total_development = 100
+				total_development = 80
 			}
 		}
 		FROM = {
@@ -1898,9 +1902,14 @@ request_crown_dependency_vassal = {
 		}
 		FROM = {
 			NOT = {
-				total_development = 100
+				total_development = 30
 			}
-			same_continent = ROOT
+		}
+		FROM = {
+			OR = {
+				culture_group = british
+				culture_group = gaelic
+			}
 		}
 	}
 	on_accept = {
@@ -2188,6 +2197,1110 @@ cancel_crown_dependency_vassal = {
 		overlord_of = FROM
 		FROM = {
 			is_subject_of_type = crown_dependency_vassal
+		}
+	}
+	is_allowed = {
+		FROM = {
+			prestige = 0
+		}
+	}
+	on_accept = {
+		add_trust = {
+			who = FROM
+			value = -25
+			mutual = yes
+		}
+		FROM = {
+			grant_independence = yes
+			add_prestige = -25
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+request_corsair_vassal = {
+	category = influence
+	alert_index = 6
+	alert_tooltip = request_corsair_vassal_alert_tooltip
+	require_acceptance = yes	# Whether the recipient gets an option to decline
+	is_visible = {
+		can_be_overlord = corsair_vassal
+		FROM = {
+			NOT = {
+				is_subject = yes
+			}
+		}
+		FROM = {
+			NOT = {
+				is_subject_of = ROOT
+			}
+		}
+	}
+	is_allowed = {
+		is_subject = no
+		FROM = {
+			has_opinion = {
+				who = ROOT
+				value = 150
+			}
+			alliance_with = ROOT
+			is_subject = no
+		}
+		FROM = {
+			NOT = {
+				is_at_war = yes
+			}
+		}
+		FROM = {
+			NOT = {
+				total_development = 75
+			}
+			NOT = {
+				total_development = PREV
+			}
+		}
+		FROM = {
+			culture_group = maghrebi
+		}
+		FROM = {
+			any_owned_province = {
+				has_port = yes
+			}
+			capital_scope = {
+				region = maghreb_region
+			}
+		}
+		ROOT = {
+			any_owned_province = {
+				has_port = yes
+			}
+		}
+	}
+	on_accept = {
+		add_trust = {
+			who = FROM
+			value = 20
+			mutual = yes
+		}
+		create_subject = {
+			subject_type = corsair_vassal
+			subject = FROM
+		}
+		FROM = {
+			change_government_to_republic = yes
+			add_government_reform = corsair_kingdom
+			hidden_effect = {
+				add_government_reform = corsair_kingdom
+			}
+		}
+	}
+	on_decline = {
+		add_trust = {
+			who = FROM
+			value = -100
+			mutual = no
+		}
+	}
+	ai_acceptance = {
+		# This works similarly to variable_arithmetic_trigger, but does not support triggers generally. Instead, "limit" will be evaluated first and the rest ignored if it isn't passed.
+		#Size of Trade League
+		add_entry = {
+			name = SIZE_CORSAIR_VASSAL
+			limit = {
+				corsair_vassal = 4
+			}
+			export_to_variable = {
+				#needs testing
+				which = ai_value
+				value = -1000
+			}
+		}
+		#Attitude towards proposer
+		add_entry = {
+			name = ATTITUDE_CORSAIR_VASSAL
+			limit = {
+				FROM = {
+					OR = {
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_friendly
+						}
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_allied
+						}
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 50
+			}
+		}
+		add_entry = {
+			name = ATTITUDE_CORSAIR_VASSAL
+			limit = {
+				FROM = {
+					ai_attitude = {
+						who = ROOT
+						attitude = attitude_threatened
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 20
+			}
+		}
+		add_entry = {
+			name = ATTITUDE_CORSAIR_VASSAL
+			limit = {
+				FROM = {
+					ai_attitude = {
+						who = ROOT
+						attitude = attitude_neutral
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -20
+			}
+		}
+		add_entry = {
+			name = ATTITUDE_CORSAIR_VASSAL
+			limit = {
+				FROM = {
+					OR = {
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_vassalile
+						}
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_outraged
+						}
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_rivalry
+						}
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -1000
+			}
+		}
+		#Proposer's diplomatic reputation
+		add_entry = {
+			name = REPUTATION_CORSAIR_VASSAL
+			export_to_variable = {
+				which = ai_value
+				value = modifier:diplomatic_reputation
+			}
+			multiply_variable = {
+				which = ai_value
+				value = 5
+			}
+		}
+		#Target's opinion of Proposer
+		add_entry = {
+			name = OPINION_CORSAIR_VASSAL
+			export_to_variable = {
+				which = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			divide_variable = {
+				which = ai_value
+				value = 4
+			}
+		}
+		#Nation has a religion not in the same religious group
+		add_entry = {
+			name = RELIGION_CORSAIR_VASSAL
+			limit = {
+				NOT = {
+					religion_group = FROM
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -20
+			}
+		}
+		#Nation has a different religion within the same religious group
+		add_entry = {
+			name = SAME_GROUP_DIFFERENT_RELIGION_CORSAIR_VASSAL
+			limit = {
+				NOT = {
+					religion = FROM
+				}
+				religion_group = FROM
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -10
+			}
+		}
+		#Proposer army strength power compared to target nation
+		add_entry = {
+			name = ARMY_CORSAIR_VASSAL
+			limit = {
+				NOT = {
+					army_strength = {
+						who = FROM
+						value = 0.25
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -20
+			}
+		}
+		add_entry = {
+			name = ARMY_CORSAIR_VASSAL
+			limit = {
+				army_strength = {
+					who = FROM
+					value = 0.25
+				}
+				NOT = {
+					army_strength = {
+						who = FROM
+						value = 1
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = trigger_value:army_size
+			}
+			export_to_variable = {
+				which = army_from
+				value = trigger_value:army_size
+				who = FROM
+			}
+			divide_variable = {
+				which = ai_value
+				which = army_from
+			}
+			subtract_variable = {
+				which = ai_value
+				value = 1
+			}
+			multiply_variable = {
+				which = ai_value
+				value = 80
+			}
+			divide_variable = {
+				which = ai_value
+				value = 3
+			}
+		}
+		add_entry = {
+			name = ARMY_CORSAIR_VASSAL
+			limit = {
+				army_strength = {
+					who = FROM
+					value = 1
+				}
+				NOT = {
+					army_strength = {
+						who = FROM
+						value = 4
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = trigger_value:army_size
+			}
+			export_to_variable = {
+				which = army_from
+				value = trigger_value:army_size
+				who = FROM
+			}
+			divide_variable = {
+				which = ai_value
+				which = army_from
+			}
+			subtract_variable = {
+				which = ai_value
+				value = 1
+			}
+			multiply_variable = {
+				which = ai_value
+				value = 20
+			}
+			divide_variable = {
+				which = ai_value
+				value = 3
+			}
+		}
+		add_entry = {
+			name = ARMY_CORSAIR_VASSAL
+			limit = {
+				army_strength = {
+					who = FROM
+					value = 4
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 20
+			}
+		}
+	}
+	ai_will_do = {
+		# this is a trigger
+		always = yes
+	}
+}
+
+cancel_corsair_vassal = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		overlord_of = FROM
+		FROM = {
+			is_subject_of_type = corsair_vassal
+		}
+	}
+	is_allowed = {
+		FROM = {
+			prestige = 0
+		}
+	}
+	on_accept = {
+		add_trust = {
+			who = FROM
+			value = -25
+			mutual = yes
+		}
+		FROM = {
+			grant_independence = yes
+			add_prestige = -25
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+request_daimyo_vassal = {
+	category = influence
+	alert_index = 6
+	alert_tooltip = request_daimyo_vassal_alert_tooltip
+	require_acceptance = yes	# Whether the recipient gets an option to decline
+	is_visible = {
+		can_be_overlord = daimyo_vassal
+		FROM = {
+			NOT = {
+				is_subject = yes
+			}
+		}
+		FROM = {
+			NOT = {
+				is_subject_of = ROOT
+			}
+		}
+		capital_scope = {
+			region = japan_region
+		}
+	}
+	is_allowed = {
+		is_subject = no
+		FROM = {
+			has_opinion = {
+				who = ROOT
+				value = 190
+			}
+			alliance_with = ROOT
+			is_subject = no
+		}
+		FROM = {
+			NOT = {
+				is_at_war = yes
+			}
+		}
+		FROM = {
+			capital_scope = {
+				region = japan_region
+			}
+		}
+		FROM = {
+			NOT = {
+				total_development = 75
+			}
+			NOT = {
+				total_development = PREV
+			}
+		}
+		FROM = {
+			culture_group = japanese_g
+		}
+	}
+	on_accept = {
+		add_trust = {
+			who = FROM
+			value = 20
+			mutual = yes
+		}
+		create_subject = {
+			subject_type = daimyo_vassal
+			subject = FROM
+		}
+		FROM = {
+			change_government_to_monarchy = yes
+			add_government_reform = daimyo
+			hidden_effect = {
+				add_government_reform = daimyo
+			}
+		}
+	}
+	on_decline = {
+		add_trust = {
+			who = FROM
+			value = -100
+			mutual = no
+		}
+	}
+	ai_acceptance = {
+		# This works similarly to variable_arithmetic_trigger, but does not support triggers generally. Instead, "limit" will be evaluated first and the rest ignored if it isn't passed.
+		#Size of Trade League
+		add_entry = {
+			name = SIZE_DAIMYO_VASSAL
+			limit = {
+				daimyo_vassal = 4
+			}
+			export_to_variable = {
+				#needs testing
+				which = ai_value
+				value = -1000
+			}
+		}
+		#Attitude towards proposer
+		add_entry = {
+			name = ATTITUDE_DAIMYO_VASSAL
+			limit = {
+				FROM = {
+					OR = {
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_friendly
+						}
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_allied
+						}
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 50
+			}
+		}
+		add_entry = {
+			name = ATTITUDE_DAIMYO_VASSAL
+			limit = {
+				FROM = {
+					ai_attitude = {
+						who = ROOT
+						attitude = attitude_threatened
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 20
+			}
+		}
+		add_entry = {
+			name = ATTITUDE_DAIMYO_VASSAL
+			limit = {
+				FROM = {
+					ai_attitude = {
+						who = ROOT
+						attitude = attitude_neutral
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -20
+			}
+		}
+		add_entry = {
+			name = ATTITUDE_DAIMYO_VASSAL
+			limit = {
+				FROM = {
+					OR = {
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_vassalile
+						}
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_outraged
+						}
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_rivalry
+						}
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -1000
+			}
+		}
+		#Proposer's diplomatic reputation
+		add_entry = {
+			name = REPUTATION_DAIMYO_VASSAL
+			export_to_variable = {
+				which = ai_value
+				value = modifier:diplomatic_reputation
+			}
+			multiply_variable = {
+				which = ai_value
+				value = 5
+			}
+		}
+		#Target's opinion of Proposer
+		add_entry = {
+			name = OPINION_DAIMYO_VASSAL
+			export_to_variable = {
+				which = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			divide_variable = {
+				which = ai_value
+				value = 4
+			}
+		}
+		#Nation has a religion not in the same religious group
+		add_entry = {
+			name = RELIGION_DAIMYO_VASSAL
+			limit = {
+				NOT = {
+					religion_group = FROM
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -20
+			}
+		}
+		#Nation has a different religion within the same religious group
+		add_entry = {
+			name = SAME_GROUP_DIFFERENT_RELIGION_DAIMYO_VASSAL
+			limit = {
+				NOT = {
+					religion = FROM
+				}
+				religion_group = FROM
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -10
+			}
+		}
+		#Proposer army strength power compared to target nation
+		add_entry = {
+			name = ARMY_DAIMYO_VASSAL
+			limit = {
+				NOT = {
+					army_strength = {
+						who = FROM
+						value = 0.25
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -20
+			}
+		}
+		add_entry = {
+			name = ARMY_DAIMYO_VASSAL
+			limit = {
+				army_strength = {
+					who = FROM
+					value = 0.25
+				}
+				NOT = {
+					army_strength = {
+						who = FROM
+						value = 1
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = trigger_value:army_size
+			}
+			export_to_variable = {
+				which = army_from
+				value = trigger_value:army_size
+				who = FROM
+			}
+			divide_variable = {
+				which = ai_value
+				which = army_from
+			}
+			subtract_variable = {
+				which = ai_value
+				value = 1
+			}
+			multiply_variable = {
+				which = ai_value
+				value = 80
+			}
+			divide_variable = {
+				which = ai_value
+				value = 3
+			}
+		}
+		add_entry = {
+			name = ARMY_DAIMYO_VASSAL
+			limit = {
+				army_strength = {
+					who = FROM
+					value = 1
+				}
+				NOT = {
+					army_strength = {
+						who = FROM
+						value = 4
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = trigger_value:army_size
+			}
+			export_to_variable = {
+				which = army_from
+				value = trigger_value:army_size
+				who = FROM
+			}
+			divide_variable = {
+				which = ai_value
+				which = army_from
+			}
+			subtract_variable = {
+				which = ai_value
+				value = 1
+			}
+			multiply_variable = {
+				which = ai_value
+				value = 20
+			}
+			divide_variable = {
+				which = ai_value
+				value = 3
+			}
+		}
+		add_entry = {
+			name = ARMY_DAIMYO_VASSAL
+			limit = {
+				army_strength = {
+					who = FROM
+					value = 4
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 20
+			}
+		}
+	}
+	ai_will_do = {
+		# this is a trigger
+		always = yes
+	}
+}
+
+cancel_daimyo_vassal = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		overlord_of = FROM
+		FROM = {
+			is_subject_of_type = daimyo_vassal
+		}
+	}
+	is_allowed = {
+		FROM = {
+			prestige = 0
+		}
+	}
+	on_accept = {
+		add_trust = {
+			who = FROM
+			value = -25
+			mutual = yes
+		}
+		FROM = {
+			grant_independence = yes
+			add_prestige = -25
+		}
+	}
+	ai_will_do = {
+		always = no
+	}
+}
+
+request_parias_vassal = {
+	category = influence
+	alert_index = 6
+	alert_tooltip = request_parias_vassal_alert_tooltip
+	require_acceptance = yes	# Whether the recipient gets an option to decline
+	is_visible = {
+		can_be_overlord = parias_vassal
+		FROM = {
+			NOT = {
+				is_subject = yes
+			}
+		}
+		FROM = {
+			NOT = {
+				is_subject_of = ROOT
+			}
+		}
+	}
+	is_allowed = {
+		is_subject = no
+		FROM = {
+			has_opinion = {
+				who = ROOT
+				value = 150
+			}
+			alliance_with = ROOT
+			is_subject = no
+		}
+		FROM = {
+			NOT = {
+				is_at_war = yes
+			}
+		}
+		FROM = {
+			NOT = {
+				total_development = 75
+			}
+			NOT = {
+				total_development = PREV
+			}
+		}
+		FROM = {
+			any_owned_province = {
+				has_port = yes
+			}
+			capital_scope = {
+				region = iberia_region
+			}
+		}
+		ROOT = {
+			any_owned_province = {
+				has_port = yes
+			}
+		}
+	}
+	on_accept = {
+		add_trust = {
+			who = FROM
+			value = 20
+			mutual = yes
+		}
+		create_subject = {
+			subject_type = parias_vassal
+			subject = FROM
+		}
+	}
+	on_decline = {
+		add_trust = {
+			who = FROM
+			value = -100
+			mutual = no
+		}
+	}
+	ai_acceptance = {
+		# This works similarly to variable_arithmetic_trigger, but does not support triggers generally. Instead, "limit" will be evaluated first and the rest ignored if it isn't passed.
+		#Size of Trade League
+		add_entry = {
+			name = SIZE_PARIAS_VASSAL
+			limit = {
+				parias_vassal = 4
+			}
+			export_to_variable = {
+				#needs testing
+				which = ai_value
+				value = -1000
+			}
+		}
+		#Attitude towards proposer
+		add_entry = {
+			name = ATTITUDE_PARIAS_VASSAL
+			limit = {
+				FROM = {
+					OR = {
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_friendly
+						}
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_allied
+						}
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 50
+			}
+		}
+		add_entry = {
+			name = ATTITUDE_PARIAS_VASSAL
+			limit = {
+				FROM = {
+					ai_attitude = {
+						who = ROOT
+						attitude = attitude_threatened
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 20
+			}
+		}
+		add_entry = {
+			name = ATTITUDE_PARIAS_VASSAL
+			limit = {
+				FROM = {
+					ai_attitude = {
+						who = ROOT
+						attitude = attitude_neutral
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -20
+			}
+		}
+		add_entry = {
+			name = ATTITUDE_PARIAS_VASSAL
+			limit = {
+				FROM = {
+					OR = {
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_vassalile
+						}
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_outraged
+						}
+						ai_attitude = {
+							who = ROOT
+							attitude = attitude_rivalry
+						}
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -1000
+			}
+		}
+		#Proposer's diplomatic reputation
+		add_entry = {
+			name = REPUTATION_PARIAS_VASSAL
+			export_to_variable = {
+				which = ai_value
+				value = modifier:diplomatic_reputation
+			}
+			multiply_variable = {
+				which = ai_value
+				value = 5
+			}
+		}
+		#Target's opinion of Proposer
+		add_entry = {
+			name = OPINION_PARIAS_VASSAL
+			export_to_variable = {
+				which = ai_value
+				value = opinion
+				who = FROM
+				with = ROOT
+			}
+			divide_variable = {
+				which = ai_value
+				value = 4
+			}
+		}
+		#Nation has a religion not in the same religious group
+		add_entry = {
+			name = RELIGION_PARIAS_VASSAL
+			limit = {
+				NOT = {
+					religion_group = FROM
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -20
+			}
+		}
+		#Nation has a different religion within the same religious group
+		add_entry = {
+			name = SAME_GROUP_DIFFERENT_RELIGION_PARIAS_VASSAL
+			limit = {
+				NOT = {
+					religion = FROM
+				}
+				religion_group = FROM
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -10
+			}
+		}
+		#Proposer army strength power compared to target nation
+		add_entry = {
+			name = ARMY_PARIAS_VASSAL
+			limit = {
+				NOT = {
+					army_strength = {
+						who = FROM
+						value = 0.25
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = -20
+			}
+		}
+		add_entry = {
+			name = ARMY_PARIAS_VASSAL
+			limit = {
+				army_strength = {
+					who = FROM
+					value = 0.25
+				}
+				NOT = {
+					army_strength = {
+						who = FROM
+						value = 1
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = trigger_value:army_size
+			}
+			export_to_variable = {
+				which = army_from
+				value = trigger_value:army_size
+				who = FROM
+			}
+			divide_variable = {
+				which = ai_value
+				which = army_from
+			}
+			subtract_variable = {
+				which = ai_value
+				value = 1
+			}
+			multiply_variable = {
+				which = ai_value
+				value = 80
+			}
+			divide_variable = {
+				which = ai_value
+				value = 3
+			}
+		}
+		add_entry = {
+			name = ARMY_PARIAS_VASSAL
+			limit = {
+				army_strength = {
+					who = FROM
+					value = 1
+				}
+				NOT = {
+					army_strength = {
+						who = FROM
+						value = 4
+					}
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = trigger_value:army_size
+			}
+			export_to_variable = {
+				which = army_from
+				value = trigger_value:army_size
+				who = FROM
+			}
+			divide_variable = {
+				which = ai_value
+				which = army_from
+			}
+			subtract_variable = {
+				which = ai_value
+				value = 1
+			}
+			multiply_variable = {
+				which = ai_value
+				value = 20
+			}
+			divide_variable = {
+				which = ai_value
+				value = 3
+			}
+		}
+		add_entry = {
+			name = ARMY_PARIAS_VASSAL
+			limit = {
+				army_strength = {
+					who = FROM
+					value = 4
+				}
+			}
+			export_to_variable = {
+				which = ai_value
+				value = 20
+			}
+		}
+	}
+	ai_will_do = {
+		# this is a trigger
+		always = yes
+	}
+}
+
+cancel_parias_vassal = {
+	category = influence
+	require_acceptance = no
+	is_visible = {
+		overlord_of = FROM
+		FROM = {
+			is_subject_of_type = parias_vassal
 		}
 	}
 	is_allowed = {

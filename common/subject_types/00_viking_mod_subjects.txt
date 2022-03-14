@@ -253,6 +253,13 @@ march = {
 }
 
 daimyo_vassal = {
+	is_potential_overlord = {
+		culture_group = japanese_g
+		OR = {
+			has_reform = shogunate
+			has_reform = empire_of_japan_reform
+		}
+	}
 	copy_from = vassal
 	count = vassal
 	# Properties:
@@ -657,6 +664,8 @@ papal_vassal = {
 	allows_taking_land_without_independence = yes
 	can_send_missionary_to_subject = yes	# Requires Cradle of Civilization
 	can_have_subjects_of_other_types = no
+	knowledge_sharing = yes
+	extend_trading_range = yes
 	can_be_integrated = yes
 	can_use_claims = yes
 	forms_trade_companies = no
@@ -667,6 +676,7 @@ papal_vassal = {
 	military_focus = 2
 	relative_power_class = 1
 	should_quit_wars_on_activation = yes
+	overlord_can_be_subject = no
 	restoration_cb = cb_disloyal_vassal
 	# Subject Interactions:
 	scutage = yes
@@ -706,6 +716,9 @@ papal_vassal = {
 }
 
 greek_vassal = {
+	sprite = GFX_subject_tributary_state
+	diplomacy_overlord_sprite = GFX_diplomacy_leadtributary
+	diplomacy_subject_sprite = GFX_diplomacy_amtributary
 	is_potential_overlord = {
 		culture_group = byzantine
 		151 = {
@@ -725,14 +738,17 @@ greek_vassal = {
 	gets_help_with_rebels = yes
 	separatists_become_subjects = yes
 	allows_taking_land_without_independence = yes
-	can_have_subjects_of_other_types = yes
+	knowledge_sharing = yes
+	can_have_subjects_of_other_types = no
 	can_be_integrated = yes
+	extend_trading_range = yes
 	can_be_annexed = no
 	can_use_claims = yes
 	forms_trade_companies = no
 	joins_overlords_wars = yes
 	joins_colonial_wars = no
 	can_concentrate_development = yes
+	overlord_can_be_subject = no
 	overlord_protects_external = yes
 	trust_on_start = 25
 	base_liberty_desire = -10
@@ -814,6 +830,9 @@ greek_vassal = {
 }
 
 beylik_vassal = {
+	sprite = GFX_subject_tributary_state
+	diplomacy_overlord_sprite = GFX_diplomacy_leadtributary
+	diplomacy_subject_sprite = GFX_diplomacy_amtributary
 	is_potential_overlord = {
 		OR = {
 			culture = osman
@@ -837,16 +856,19 @@ beylik_vassal = {
 	has_power_projection = no
 	takes_diplo_slot = no
 	gets_help_with_rebels = yes
+	knowledge_sharing = yes
 	separatists_become_subjects = yes
 	allows_taking_land_without_independence = yes
-	can_have_subjects_of_other_types = yes
+	can_have_subjects_of_other_types = no
 	can_be_integrated = yes
 	can_be_annexed = no
 	can_use_claims = yes
 	forms_trade_companies = no
+	extend_trading_range = yes
 	joins_overlords_wars = yes
 	joins_colonial_wars = no
 	can_concentrate_development = yes
+	overlord_can_be_subject = no
 	overlord_protects_external = yes
 	trust_on_start = 25
 	base_liberty_desire = -10
@@ -928,6 +950,9 @@ beylik_vassal = {
 }
 
 cossack_vassal = {
+	sprite = GFX_subject_tributary_state
+	diplomacy_overlord_sprite = GFX_diplomacy_leadtributary
+	diplomacy_subject_sprite = GFX_diplomacy_amtributary
 	is_potential_overlord = {
 		culture_group = east_slavic
 		tag = RUS
@@ -963,15 +988,17 @@ cossack_vassal = {
 	gets_help_with_rebels = yes
 	separatists_become_subjects = yes
 	allows_taking_land_without_independence = yes
-	can_have_subjects_of_other_types = yes
+	can_have_subjects_of_other_types = no
 	can_be_integrated = yes
-	can_be_annexed = yes
+	can_be_annexed = no
+	knowledge_sharing = yes
 	can_use_claims = yes
 	forms_trade_companies = no
 	joins_overlords_wars = yes
 	joins_colonial_wars = no
 	can_concentrate_development = no
 	overlord_protects_external = yes
+	overlord_can_be_subject = no
 	trust_on_start = 25
 	base_liberty_desire = -10
 	military_focus = 1
@@ -1029,6 +1056,7 @@ canton = {
 	can_be_annexed = yes
 	takes_diplo_slot = no
 	can_release_in_peace = yes
+	extend_trading_range = yes
 	counts_for_borders = yes
 	overlord_enforce_peace_attacking = yes
 	can_use_claims = yes
@@ -1074,6 +1102,9 @@ canton = {
 }
 
 crown_dependency_vassal = {
+	sprite = GFX_court_union
+	diplomacy_overlord_sprite = GFX_diplomacy_leadunions
+	diplomacy_subject_sprite = GFX_diplomacy_inunion
 	is_potential_overlord = {
 		culture_group = british
 		government = monarchy
@@ -1084,6 +1115,7 @@ crown_dependency_vassal = {
 	can_be_annexed = yes
 	takes_diplo_slot = no
 	can_release_in_peace = yes
+	extend_trading_range = yes
 	counts_for_borders = yes
 	overlord_enforce_peace_attacking = yes
 	can_use_claims = yes
@@ -1118,5 +1150,228 @@ crown_dependency_vassal = {
 	}
 	modifier_subject = {
 		modifier = self_governing_colony_subject
+	}
+}
+
+corsair_vassal = {
+	sprite = GFX_subject_tributary_state
+	diplomacy_overlord_sprite = GFX_diplomacy_leadtributary
+	diplomacy_subject_sprite = GFX_diplomacy_amtributary
+	is_potential_overlord = {
+		culture_group = maghrebi
+	}
+	diplomacy_view_class = 1	# See description above
+	# Properties:
+	has_power_projection = no
+	takes_diplo_slot = no
+	gets_help_with_rebels = yes
+	extend_trading_range = yes
+	separatists_become_subjects = yes
+	allows_taking_land_without_independence = yes
+	can_have_subjects_of_other_types = no
+	can_be_integrated = yes
+	can_be_annexed = no
+	can_use_claims = yes
+	forms_trade_companies = no
+	joins_overlords_wars = yes
+	joins_colonial_wars = yes
+	can_concentrate_development = no
+	overlord_protects_external = yes
+	overlord_can_fabricate_for = yes
+	overlord_can_be_subject = no
+	trust_on_start = 25
+	base_liberty_desire = -10
+	military_focus = 1
+	relative_power_class = 1
+	should_quit_wars_on_activation = yes
+	restoration_cb = cb_disloyal_vassal
+	# Subject Interactions:
+	scutage = no
+	divert_trade = no
+	# Subject Interactions
+	#(disable)
+	embargo_rivals = yes
+	placate_rulers = yes
+	press_sailors = yes
+	grant_core_claim = yes
+	grant_province = yes
+	place_relative_on_throne = no
+	enforce_religion = yes
+	enforce_culture = no
+	seize_territory = no
+	knowledge_sharing = yes
+	can_send_tribute = yes
+	#(enable)
+	contribute_to_capital = yes
+	return_land = yes
+	conscript_general = no
+	#(special)
+	subsidize_armies = no
+	fortify_march = no
+	send_officers = no
+	# Modifiers
+	modifier_overlord = clear	#We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear	#Ditto
+	can_fight = {
+		same_overlord = corsair_vassal
+	}
+	can_rival = {
+		same_overlord = corsair_vassal
+	}
+	can_ally = {
+		same_overlord = corsair_vassal
+	}
+	can_marry = {
+		same_overlord = corsair_vassal
+	}
+	modifier_subject = {
+		modifier = tributary_state_behind_overlord_tech_adm
+		trigger = {
+			ROOT = {
+				NOT = {
+					adm_tech = FROM
+				}
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = tributary_state_behind_overlord_tech_dip
+		trigger = {
+			ROOT = {
+				NOT = {
+					dip_tech = FROM
+				}
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = tributary_state_behind_overlord_tech_mil
+		trigger = {
+			ROOT = {
+				NOT = {
+					mil_tech = FROM
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = corsair_overlord_modifier
+	}
+	modifier_subject = {
+		modifier = corsair_subject_modifier
+	}
+}
+
+parias_vassal = {
+	sprite = GFX_subject_tributary_state
+	diplomacy_overlord_sprite = GFX_diplomacy_leadtributary
+	diplomacy_subject_sprite = GFX_diplomacy_amtributary
+	is_potential_overlord = {
+		culture_group = iberian
+	}
+	diplomacy_view_class = 1	# See description above
+	# Properties:
+	has_power_projection = no
+	takes_diplo_slot = no
+	gets_help_with_rebels = yes
+	separatists_become_subjects = yes
+	allows_taking_land_without_independence = yes
+	can_have_subjects_of_other_types = no
+    can_fight_independence_war = yes
+	extend_trading_range = yes
+    divert_trade = yes
+	can_be_integrated = yes
+	can_be_annexed = no
+	can_use_claims = yes
+	forms_trade_companies = no
+	joins_overlords_wars = yes
+	joins_colonial_wars = yes
+	can_concentrate_development = no
+	overlord_protects_external = yes
+	overlord_can_fabricate_for = yes
+	overlord_can_be_subject = no
+	trust_on_start = 25
+	base_liberty_desire = -10
+	military_focus = 1
+	relative_power_class = 1
+	should_quit_wars_on_activation = yes
+	restoration_cb = cb_disloyal_vassal
+	# Subject Interactions:
+	scutage = no
+	# Subject Interactions
+	#(disable)
+	embargo_rivals = yes
+	placate_rulers = yes
+	press_sailors = yes
+	grant_core_claim = yes
+	grant_province = yes
+	place_relative_on_throne = no
+	enforce_religion = no
+    replace_governor = yes
+	enforce_culture = no
+	seize_territory = no
+	knowledge_sharing = yes
+	can_send_tribute = yes
+    demand_artifacts = yes
+    demand_additional_tribute = yes
+    block_settlement_growth = yes
+	#(enable)
+	contribute_to_capital = yes
+	return_land = yes
+	conscript_general = no
+	#(special)
+	subsidize_armies = no
+	fortify_march = no
+	send_officers = no
+	# Modifiers
+	modifier_overlord = clear	#We don't want to duplicate the ones inherited from vassal
+	modifier_subject = clear	#Ditto
+	can_fight = {
+		same_overlord = parias_vassal
+	}
+	can_rival = {
+		same_overlord = parias_vassal
+	}
+	can_ally = {
+		same_overlord = parias_vassal
+	}
+	can_marry = {
+		same_overlord = parias_vassal
+	}
+	modifier_subject = {
+		modifier = tributary_state_behind_overlord_tech_adm
+		trigger = {
+			ROOT = {
+				NOT = {
+					adm_tech = FROM
+				}
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = tributary_state_behind_overlord_tech_dip
+		trigger = {
+			ROOT = {
+				NOT = {
+					dip_tech = FROM
+				}
+			}
+		}
+	}
+	modifier_subject = {
+		modifier = tributary_state_behind_overlord_tech_mil
+		trigger = {
+			ROOT = {
+				NOT = {
+					mil_tech = FROM
+				}
+			}
+		}
+	}
+	modifier_overlord = {
+		modifier = parias_overlord_modifier
+	}
+	modifier_subject = {
+		modifier = parias_subject_modifier
 	}
 }
