@@ -1,21 +1,33 @@
+# Governance
+#=========================
 government = theocracy
 add_government_reform = leading_clergy_reform
-technology_group = western
-primary_culture = prussian
-religion = catholic
-change_estate_land_share = { #compensates for lack of nobles, distributes 20 between the remaining estates
+change_estate_land_share = {
 	estate = all
 	share = 20
 }
-capital = 38	# Riga
-fixed_capital = 38 # Cannot move capital away from this province & no power cost to move to it
+government_rank = 1
+
+# Demographic
+#=========================
+technology_group = western
+primary_culture = prussian
+capital = 38
+fixed_capital = 38
+
+# Religion
+#=========================
+religion = catholic
+
+# Ruler
+#=========================
 1444.1.1 = {
 	monarch = {
 		name = "Henning Scharffenberg"
 		culture = pommeranian
-		dip = 6
 		adm = 6
+		dip = 6
 		mil = 6
-    claim = 95
+		claim = 95
 	}
 }

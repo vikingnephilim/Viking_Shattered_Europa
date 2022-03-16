@@ -1,12 +1,7 @@
+# Governance
+#=========================
 government = monarchy
 add_government_reform = iqta
-primary_culture = songhai
-religion = bida
-technology_group = sub_saharan
-unlock_cult = yemoja_cult
-unlock_cult = roog_cult
-unlock_cult = nyame_cult
-capital = 1133	# Gao
 change_estate_land_share = {
 	estate = estate_church
 	share = -20
@@ -18,6 +13,23 @@ change_estate_land_share = {
 	estate = estate_nobles
 	share = 10
 }
+government_rank = 1
+
+# Demographic
+#=========================
+technology_group = sub_saharan
+primary_culture = songhai
+capital = 1133
+
+# Religion
+#=========================
+religion = bida
+unlock_cult = yemoja_cult
+unlock_cult = roog_cult
+unlock_cult = nyame_cult
+
+# Ruler
+#=========================
 1444.1.1 = {
 	monarch = {
 		name = "Mar Arandan"
@@ -25,6 +37,6 @@ change_estate_land_share = {
 		adm = 6
 		dip = 6
 		mil = 6
-    claim = 95
+		claim = 95
 	}
 }

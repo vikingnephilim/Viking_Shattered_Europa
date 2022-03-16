@@ -38,6 +38,7 @@ country_event = {
 		}
 	}
 }
+
 # Inti reform
 country_event = {
 	id = religious_reforms.2
@@ -54,7 +55,7 @@ country_event = {
 	}
 	immediate = {
 		hidden_effect = {
-					add_authority = -100
+			add_authority = -100
 			add_stability = -2
 			random_owned_province = {
 				limit = {
@@ -63,11 +64,13 @@ country_event = {
 				}
 				set_province_flag = civil_war_prov_1
 			}
-					random_owned_province = {
+			random_owned_province = {
 				limit = {
 					is_in_capital_area = yes
 					is_capital = no
-					NOT = { has_province_flag = civil_war_prov_1 }
+					NOT = {
+						has_province_flag = civil_war_prov_1
+					}
 				}
 				set_province_flag = civil_war_prov_2
 			}
@@ -75,36 +78,47 @@ country_event = {
 				limit = {
 					is_in_capital_area = yes
 					is_capital = no
-					NOT = { has_province_flag = civil_war_prov_1 }
-					NOT = { has_province_flag = civil_war_prov_2 }
+					NOT = {
+						has_province_flag = civil_war_prov_1
+					}
+					NOT = {
+						has_province_flag = civil_war_prov_2
+					}
 				}
 				set_province_flag = civil_war_prov_3
 			}
 			random_owned_province = {
-				limit = { has_province_flag = civil_war_prov_1 }
+				limit = {
+					has_province_flag = civil_war_prov_1
+				}
 				pretender_rebels = 4
 				clr_province_flag = civil_war_prov_1
 			}
 			random_owned_province = {
-				limit = { has_province_flag = civil_war_prov_2 }
+				limit = {
+					has_province_flag = civil_war_prov_2
+				}
 				pretender_rebels = 3
 				clr_province_flag = civil_war_prov_2
 			}
 			random_owned_province = {
-				limit = { has_province_flag = civil_war_prov_3 }
+				limit = {
+					has_province_flag = civil_war_prov_3
+				}
 				pretender_rebels = 3
 				clr_province_flag = civil_war_prov_3
-			}	
-				}
+			}
+		}
 	}
-			option = {
+	option = {
 		name = religious_reforms.2.a
 		tooltip = {
 			add_stability = -2
-			add_authority = -100	
-				}	
-			}
+			add_authority = -100
+		}
+	}
 }
+
 # Mayan reform
 country_event = {
 	id = religious_reforms.3
@@ -139,6 +153,7 @@ country_event = {
 		}
 	}
 }
+
 # Animist reform
 country_event = {
 	id = religious_reforms.4

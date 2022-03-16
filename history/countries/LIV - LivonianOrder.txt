@@ -1,12 +1,8 @@
+# Governance
+#=========================
 government = theocracy
 add_government_reform = monastic_order_reform
 government_rank = 1
-technology_group = western
-primary_culture = latgalian
-add_accepted_culture = prussian
-add_accepted_culture = estonian
-religion = catholic
-capital = 37	# Livland
 add_army_professionalism = 0.1
 change_estate_land_share = {
 	estate = estate_burghers
@@ -16,13 +12,28 @@ change_estate_land_share = {
 	estate = estate_nobles
 	share = -10
 }
+
+# Demographic
+#=========================
+technology_group = western
+primary_culture = latgalian
+add_accepted_culture = prussian
+add_accepted_culture = estonian
+capital = 37
+
+# Religion
+#=========================
+religion = catholic
+
+# Ruler
+#=========================
 1444.1.1 = {
 	monarch = {
 		name = "Heinrich Vincke"
 		culture = hannoverian
-		dip = 6
 		adm = 6
+		dip = 6
 		mil = 6
-    claim = 95
+		claim = 95
 	}
 }

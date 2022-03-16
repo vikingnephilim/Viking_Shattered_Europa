@@ -1,20 +1,28 @@
+# Governance
+#=========================
 government = monarchy
 add_government_reform = autocracy_reform
 government_rank = 1
-primary_culture = amhara
-religion = coptic
+
+# Demographic
+#=========================
 technology_group = east_african
-unit_type = sub_saharan
-capital = 2762		# Damot
-#Converted to Christianity in the later part of the 13th century.
-#Ethiopian vassal since the rule of Amda Seyon I
-1444.1.1 = { #Damot is under close supervision of Zara Yaqob and one of his daughters is left in charge, under subsequent rulers the Kingdom is again given looser reins under a local dynasty. To cover this we start them off with the below setup.
+primary_culture = amhara
+capital = 2762
+
+# Religion
+#=========================
+religion = coptic
+
+# Ruler
+#=========================
+1444.1.1 = {
 	monarch = {
-		name = "Mota" #Fictional
+		name = "Mota"
 		dynasty = "Damoto"
 		adm = 6
 		dip = 6
 		mil = 6
-    claim = 95
+		claim = 95
 	}
 }

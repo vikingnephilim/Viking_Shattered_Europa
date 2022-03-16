@@ -1,20 +1,29 @@
+# Governance
+#=========================
 government = monarchy
 add_government_reform = feudalism_reform
 government_rank = 1
+
+# Demographic
+#=========================
 technology_group = western
 primary_culture = franconian
+capital = 4717
+fixed_capital = 4717
+
+# Religion
+#=========================
 religion = catholic
-capital = 4717	# Bayreuth
-fixed_capital = 4717 # Cannot move capital away from this province & no power cost to move to it
-# Made junior partner of Ansbach for gameplay reasons.
-#defining a dummy so that it knows von Hohenzollern as the native dynasty
+
+# Ruler
+#=========================
 1444.1.1 = {
 	monarch = {
 		name = "Friedrich VI"
 		dynasty = "von Hohenzollern"
-		dip = 6
 		adm = 6
+		dip = 6
 		mil = 6
-    claim = 95
+		claim = 95
 	}
 }

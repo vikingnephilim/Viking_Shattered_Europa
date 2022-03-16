@@ -42,6 +42,52 @@ stateless_society = {
 	}
 }
 
+jarl_scandinavian_title = {
+	rank = {
+		1 = JARLDOM_SCANDINAVIAN
+	}
+	ruler_male = {
+		1 = JARL_SCANDINAVIAN
+	}
+	ruler_female = {
+		1 = JARL_SCANDINAVIAN
+	}
+	consort_male = {
+		1 = JARL_SCANDINAVIAN
+	}
+	consort_female = {
+		1 = JARL_SCANDINAVIAN
+	}
+	heir_male = {
+		1 = HEIR
+	}
+	heir_female = {
+		1 = HEIR_fem
+	}
+	trigger = {
+		government_rank = 1
+		OR = {
+			government = monarchy
+			government = republic
+ 		}
+		OR = {
+			primary_culture = norrlander
+			primary_culture = svealander
+			primary_culture = sjaellander
+			primary_culture = jutlander
+			primary_culture = vinlandic
+			primary_culture = icelandic
+			primary_culture = faroese
+			primary_culture = geats
+			primary_culture = gotlander
+			primary_culture = elfdalian
+			primary_culture = danish
+			primary_culture = norwegian
+			primary_culture = swedish
+		}
+	}
+}
+
 kongo_tribal_kingdom = {
 	rank = {
 		1 = CHIEFDOM

@@ -1,10 +1,8 @@
+# Governance
+#=========================
 government = theocracy
 add_government_reform = monastic_order_reform
 government_rank = 1
-technology_group = western
-primary_culture = cosmopolitan_french
-add_accepted_culture = al_misr_arabic
-religion = catholic
 change_estate_land_share = {
 	estate = estate_burghers
 	share = 5
@@ -21,13 +19,26 @@ change_estate_land_share = {
 	estate = estate_order_knights
 	share = 5
 }
-capital = 4316 #Mansura
+
+# Demographic
+#=========================
+technology_group = western
+primary_culture = cosmopolitan_french
+add_accepted_culture = al_misr_arabic
+capital = 4316
+
+# Religion
+#=========================
+religion = catholic
+
+# Ruler
+#=========================
 1444.1.1 = {
-    monarch = {
+  monarch = {
     name = "Alain de Barrau"
     adm = 6
     dip = 6
     mil = 6
-    claim = 95
+		claim = 95
     }
 }

@@ -1,23 +1,33 @@
+# Governance
+#=========================
 government = monarchy
 add_government_reform = english_monarchy
-technology_group = western
-primary_culture = english
-religion = catholic
-
-capital = 236 # London
-#1444.1.1 = { #Succession
-change_estate_land_share = { #compensates for lack of nobles, distributes 20 between the remaining estates
+government_rank = 1
+change_estate_land_share = {
 	estate = all
 	share = 20
 }
-1444.1.1 = { #Coronation
+
+# Demographic
+#=========================
+technology_group = western
+primary_culture = english
+capital = 236
+
+# Religion
+#=========================
+religion = catholic
+
+# Ruler
+#=========================
+1444.1.1 = {
 	monarch = {
 		name = "Henry VI"
 		dynasty = "Lancaster"
 		adm = 6
 		dip = 6
 		mil = 6
-    claim = 95
+		claim = 95
 	}
 	clear_scripted_personalities = yes
 }

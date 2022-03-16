@@ -1,20 +1,31 @@
+# Governance
+#=========================
 government = theocracy
 add_government_reform = leading_clergy_reform
+elector = yes
+government_rank = 1
+
+# Demographic
+#=========================
+technology_group = western
 primary_culture = alemannic
 add_accepted_culture = hannoverian
+capital = 85
+fixed_capital = 85
+
+# Religion
+#=========================
 religion = catholic
 
-elector = yes
-technology_group = western
-capital = 85	# Koeln
-fixed_capital = 85 # Cannot move capital away from this province & no power cost to move to it
+# Ruler
+#=========================
 1444.1.1 = {
 	monarch = {
 		name = "Dietrich II von Moers"
 		adm = 6
 		dip = 6
 		mil = 6
-    claim = 95
+		claim = 95
 	}
 	clear_scripted_personalities = yes
 }

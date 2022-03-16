@@ -86,16 +86,10 @@ british_monarchy = {
 	potential = {
 		tag = GBR
 		culture_group = british
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
 	}
 	trigger = {
 		tag = GBR
 		culture_group = british
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
 	}
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
@@ -129,16 +123,10 @@ british_republic = {
 	potential = {
 		tag = GBR
 		culture_group = british
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
 	}
 	trigger = {
 		tag = GBR
 		culture_group = british
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
 	}
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
@@ -172,16 +160,10 @@ british_theocracy = {
 	potential = {
 		tag = GBR
 		culture_group = british
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
 	}
 	trigger = {
 		tag = GBR
 		culture_group = british
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
 	}
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
@@ -214,9 +196,7 @@ english_monarchy = {
 	allow_normal_conversion = no
 	potential = {
 		have_had_reform = english_monarchy
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
+		tag = ENG
 	}
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
@@ -248,10 +228,8 @@ english_republic = {
 	icon = "england_james"
 	allow_normal_conversion = no
 	potential = {
-		have_had_reform = english_monarchy
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
+		have_had_reform = english_republic
+		TAG = ENG
 	}
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
@@ -284,9 +262,6 @@ english_theocracy = {
 	allow_normal_conversion = no
 	potential = {
 		have_had_reform = english_monarchy
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
 	}
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
@@ -320,9 +295,6 @@ cornish_dukedom = {
 	potential = {
 		tag = CRN
 		have_had_reform = cornish_dukedom
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
 	}
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
@@ -356,9 +328,6 @@ east_anglia_bishopric = {
 	potential = {
 		tag = EAL
 		have_had_reform = east_anglia_bishopric
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
 	}
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
@@ -392,9 +361,6 @@ london_republic = {
 	potential = {
 		tag = LOD
 		have_had_reform = london_republic
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
 	}
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
@@ -428,9 +394,6 @@ mercian_dukedom = {
 	potential = {
 		tag = MRC
 		have_had_reform = mercian_dukedom
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
 	}
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
@@ -464,9 +427,6 @@ northumbrian_dukedom = {
 	potential = {
 		tag = NOL
 		have_had_reform = northumbrian_dukedom
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
 	}
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
@@ -500,9 +460,6 @@ united_highlander_clans = {
 	potential = {
 		tag = HSC
 		have_had_reform = united_highlander_clans
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
 	}
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
@@ -540,9 +497,6 @@ scottish_monarchy = {
 			tag = SCO
 		}
 		have_had_reform = scottish_monarchy
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
 	}
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
@@ -576,9 +530,6 @@ welsh_principality = {
 	potential = {
 		tag = WLS
 		have_had_reform = welsh_principality
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
 	}
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
@@ -612,9 +563,6 @@ wessex_dukedom = {
 	potential = {
 		tag = WSX
 		have_had_reform = wessex_dukedom
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
 	}
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
@@ -648,9 +596,6 @@ irish_high_king = {
 	allow_normal_conversion = yes
 	potential = {
 		tag = IRE
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = -10
@@ -689,9 +634,6 @@ irish_clan = {
 		NOT = {
 			tag = IRE
 		}
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
 	}
 	trigger = {
 		OR = {
@@ -710,9 +652,6 @@ irish_clan = {
 		}
 		NOT = {
 			tag = IRE
-		}
-		NOT = {
-			is_pagan_viking_mod = yes
 		}
 	}
 	valid_for_nation_designer = yes
@@ -769,15 +708,11 @@ norman_duchy_reform = {
 	nation_designer_cost = 10
 	potential = {
 		tag = NRM
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
+		religion_group = christian
 	}
 	trigger = {
 		tag = NRM
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
+		religion_group = christian
 	}
 	modifiers = {
 		harsh_treatment_cost = -0.2
@@ -806,9 +741,7 @@ french_feudalism = {
 				march = 1
 			}
 		}
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
+		religion_group = christian
 	}
 	trigger = {
 		AND = {
@@ -823,9 +756,7 @@ french_feudalism = {
 				march = 1
 			}
 		}
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
+		religion_group = christian
 	}
 	lock_level_when_selected = no
 	valid_for_nation_designer = yes
@@ -848,9 +779,7 @@ ancien_regime_reform = {
 			culture_group = french
 			has_reform = french_absolutism
 		}
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
+		religion_group = christian
 	}
 	trigger = {
 		tag = FRA
@@ -858,9 +787,7 @@ ancien_regime_reform = {
 			culture_group = french
 			has_reform = french_absolutism
 		}
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
+		religion_group = christian
 	}
 	modifiers = {
 		global_autonomy = -0.025
@@ -883,18 +810,14 @@ french_absolutism = {
 			culture_group = french
 			has_reform = ancien_regime_reform
 		}
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
+		religion_group = christian
 	}
 	trigger = {
 		OR = {
 			culture_group = french
 			has_reform = ancien_regime_reform
 		}
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
+		religion_group = christian
 	}
 	modifiers = {
 		governing_capacity = 250
@@ -918,9 +841,14 @@ baltic_tribal_fed = {
 			religion = finnish_pagan_reformed
 		}
 		tag = BLT
-		NOT = {
-			is_pagan_viking_mod = yes
+	}
+	trigger = {
+		OR = {
+			religion = baltic_pagan_reformed
+			religion = slavic_pagan_reformed
+			religion = finnish_pagan_reformed
 		}
+		tag = BLT
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = -10
@@ -952,15 +880,11 @@ crown_of_castille = {
 			tag = CAS
 			has_reform = crown_of_castille
 		}
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
+		religion_group = christian
 	}
 	trigger = {
 		has_reform = crown_of_castille
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
+		religion_group = christian
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
@@ -986,15 +910,11 @@ crown_of_aragon = {
 			tag = ARA
 			has_reform = crown_of_aragon
 		}
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
+		religion_group = christian
 	}
 	trigger = {
 		has_reform = crown_of_aragon
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
+		religion_group = christian
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -1088,9 +1008,7 @@ portuguese_empire_reform = {
 	icon = king
 	allow_normal_conversion = yes
 	potential = {
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
+		religion_group = christian
 		OR = {
 			tag = POR
 			culture_group = iberian
@@ -1154,16 +1072,12 @@ enlightened_despotism_reform = {
 	potential = {
 		tag = SPA
 		absolutism = 50
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
+		religion_group = christian
 	}
 	trigger = {
 		tag = SPA
 		absolutism = 50
-		NOT = {
-			is_pagan_viking_mod = yes
-		}
+		religion_group = christian
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 70
@@ -3918,29 +3832,6 @@ revolutionary_empire_reform = {
 	}
 }
 
-mesoamerican_reform = {
-	icon = "government_reform_mesoamerican_reform"
-	allow_normal_conversion = no
-	potential = {
-		religion_group = central_american_pagan
-	}
-	maintain_dynasty = yes
-	valid_for_nation_designer = yes
-	nation_designer_cost = 0
-	lock_level_when_selected = yes
-	nation_designer_trigger = {
-		technology_group = mesoamerican
-	}
-	modifiers = {
-		land_morale = 0.1
-		infantry_power = 0.1
-		liberty_desire_from_subject_development = -0.33
-		ae_impact = -0.1
-	}
-	custom_attributes = {
-		locked_government_type = yes
-	}
-}
 #############################################
 ################ REPUBLICS ##################
 #############################################
@@ -4566,6 +4457,21 @@ druid_soc = {
 		OR = {
 			culture_group = gaelic
 			culture_group = iberian
+			culture_group = british
+		}
+		NOT = {
+			tag = ENG
+		}
+		NOT = {
+			tag = GBR
+		}
+		religion = druidic_pagan
+	}
+	trigger = {
+		OR = {
+			culture_group = gaelic
+			culture_group = iberian
+			culture_group = british
 		}
 		NOT = {
 			tag = ENG
@@ -4616,4 +4522,37 @@ fraticelli_papacy_reform = {
 	custom_attributes = {
 		locked_government_type = yes
 	}
+}
+
+
+insular_monastic_order_reform = {
+	potential = {
+		NOT = {
+			tag = PAP
+		}
+		capital_scope = {
+			is_island = yes
+		}
+	}
+	trigger = {
+		NOT = {
+			tag = PAP
+		}
+		capital_scope = {
+			is_island = yes
+		}
+	}
+	modifiers = {
+		fort_maintenance_modifier = -0.2
+		may_perform_slave_raid_on_same_religion = yes
+	}
+	rulers_can_be_generals = yes
+	heirs_can_be_generals = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 10
+	icon = "monks"
+	allow_normal_conversion = yes
+	legacy_equivalent = monastic_order_government
+	monastic = yes
+	fixed_rank = 1
 }

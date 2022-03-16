@@ -1,14 +1,8 @@
-technology_group = muslim
-primary_culture = khorasani
-add_accepted_culture = uzbehk
-add_accepted_culture = persian
-religion = zikri
-religious_school = ashari_school
-
+# Governance
+#=========================
 government = monarchy
 add_government_reform = iqta
 government_rank = 1
-capital = 446 # Samarkand
 change_estate_land_share = {
 	estate = estate_church
 	share = -12
@@ -17,13 +11,29 @@ change_estate_land_share = {
 	estate = estate_nobles
 	share = 12
 }
-1444.1.1 = { #Serious illness of Shahrukh. Goharshad makes Firuzshah (governor of Balkh) swear bayqat to Ala al-Dawla
+
+# Demographic
+#=========================
+technology_group = muslim
+primary_culture = khorasani
+add_accepted_culture = uzbehk
+add_accepted_culture = persian
+capital = 446
+
+# Religion
+#=========================
+religion = zikri
+religious_school = ashari_school
+
+# Ruler
+#=========================
+1444.1.1 = {
 	monarch = {
 		name = "Ala al-Dawla Abd Allah"
 		dynasty = "Timurid"
 		adm = 6
 		dip = 6
 		mil = 6
-    claim = 95
+		claim = 95
 	}
 }

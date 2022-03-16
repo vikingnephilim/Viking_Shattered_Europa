@@ -1,11 +1,8 @@
+# Governance
+#=========================
 government = monarchy
 add_government_reform = french_feudalism
-primary_culture = cosmopolitan_french
-add_accepted_culture = gascon
-add_accepted_culture = occitain
-religion = catholic
-technology_group = western
-capital = 183 # Paris
+government_rank = 1
 national_focus = DIP
 change_estate_land_share = {
 	estate = estate_nobles
@@ -19,6 +16,21 @@ change_estate_land_share = {
 	estate = estate_burghers
 	share = -5
 }
+
+# Demographic
+#=========================
+technology_group = western
+primary_culture = cosmopolitan_french
+add_accepted_culture = gascon
+add_accepted_culture = occitain
+capital = 183
+
+# Religion
+#=========================
+religion = catholic
+
+# Ruler
+#=========================
 1444.1.1 = {
 	monarch = {
 		name = "Charles VII"
@@ -26,6 +38,6 @@ change_estate_land_share = {
 		adm = 6
 		dip = 6
 		mil = 6
-    claim = 95
+		claim = 95
 	}
 }

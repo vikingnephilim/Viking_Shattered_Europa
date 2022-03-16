@@ -1,0 +1,312 @@
+codex_mechanic = {
+	basic_reform = yes
+	valid_for_new_country = yes
+	allow_convert = no
+	monarchy = no
+	republic = no
+	tribal = no
+	religion = no
+	monastic = no
+	nomad = no
+	papacy = no
+	royal_marriage = yes
+	maintain_dynasty = yes
+	rulers_can_be_generals = yes
+	heirs_can_be_generals = yes
+	custom_attributes = {
+		enables_plutocratic_idea_group = no
+		enables_aristocratic_idea_group = no
+		enables_natives_idea_group = yes
+		locked_government_type = yes
+	}
+	modifiers = {
+		land_maintenance_modifier = -0.2
+	}
+	valid_for_nation_designer = yes
+	nation_designer_cost = 25
+	nation_designer_trigger = {
+		OR = {
+			religion = mesoamerican_religion
+		}
+		capital_scope = {
+			OR = {
+				continent = north_america
+				continent = south_america
+				continent = new_world
+			}
+		}
+	}
+}
+
+####CODEX LEADERSHIP
+codex_chiefdom_reform = {
+	icon = "mesoamerican"
+	raze_province = yes
+	modifiers = {
+		development_cost = -0.05
+	}
+}
+
+codex_federation_reform = {
+	icon = "mesoamerican"
+	raze_province = yes
+	modifiers = {
+		global_manpower_modifier = 0.2
+	}
+}
+
+codex_clan_council_reform = {
+	icon = "mesoamerican"
+	raze_province = yes
+	modifiers = {
+		governing_capacity_modifier = 0.1
+	}
+}
+
+codex_hereditary_reform = {
+	icon = "mesoamerican"
+	raze_province = yes
+	modifiers = {
+		stability_cost_modifier = -0.33
+	}
+}
+
+####CODEX MILITARY
+codex_martial_tradition_reform = {
+	icon = "mesoamerican"
+	allow_normal_conversion = yes
+	modifiers = {
+		infantry_power = 0.1
+	}
+}
+
+codex_oral_tradition_reform = {
+	icon = "mesoamerican"
+	modifiers = {
+		discipline = 0.05
+	}
+}
+
+codex_land_tradition_reform = {
+	icon = "mesoamerican"
+	modifiers = {
+		land_morale = 0.1
+	}
+}
+
+codex_war_band_reform = {
+	icon = "mesoamerican"
+	modifiers = {
+		land_forcelimit_modifier = 0.15
+	}
+}
+
+####CODEX TRADE
+codex_trading_with_foreigners_reform = {
+	icon = "mesoamerican"
+	modifiers = {
+		global_trade_goods_size_modifier = 0.1
+	}
+}
+
+codex_estuary_trade_reform = {
+	icon = "mesoamerican"
+	modifiers = {
+		global_foreign_trade_power = 0.1
+	}
+}
+
+codex_trade_company_reform = {
+	icon = "mesoamerican"
+	modifiers = {
+		trade_company_investment_cost = -0.1
+	}
+}
+
+codex_trade_nation_reform = {
+	icon = "mesoamerican"
+	modifiers = {
+		trade_efficiency = 0.1
+	}
+}
+
+####CODEX NAVY
+codex_admiralty_reform = {
+	icon = "mesoamerican"
+	modifiers = {
+		leader_naval_fire = 1
+	}
+}
+
+codex_piracy_reform = {
+	icon = "mesoamerican"
+	modifiers = {
+		capture_ship_chance = 0.5
+	}
+}
+
+codex_consulate_of_the_sea = {
+	icon = "mesoamerican"
+	modifiers = {
+		merchants = 1
+	}
+}
+
+codex_armada_kingdom = {
+	icon = "mesoamerican"
+	modifiers = {
+		naval_forcelimit_modifier = 2
+	}
+}
+
+####CODEX RELIGION
+codex_equality_principle_reform = {
+	icon = "mesoamerican"
+	modifiers = {
+		tolerance_heretic = 2
+		tolerance_heathen = 2
+	}
+}
+
+codex_defender_of_faith = {
+	icon = "mesoamerican"
+	modifiers = {
+		missionary_maintenance_cost = -0.15
+		global_heathen_missionary_strength = 0.02
+	}
+}
+
+codex_religion_reformation = {
+	icon = "mesoamerican"
+	modifiers = {
+		missionary_maintenance_cost = -0.15
+		global_heretic_missionary_strength = 0.03
+	}
+}
+
+codex_righteous_religion = {
+	icon = "mesoamerican"
+	modifiers = {
+		missionaries = 2
+		missionary_maintenance_cost = -0.25
+	}
+}
+
+####CODEX CULTURE
+codex_despotate = {
+	icon = "mesoamerican"
+	modifiers = {
+		culture_conversion_cost = -0.2
+	}
+}
+
+codex_equality_culture_reform = {
+	icon = "mesoamerican"
+	modifiers = {
+		promote_culture_cost = -0.5
+	}
+}
+
+codex_empire_reform = {
+	icon = "mesoamerican"
+	modifiers = {
+		num_accepted_cultures = 2
+	}
+}
+
+codex_warlord_reform = {
+	icon = "mesoamerican"
+	modifiers = {
+		years_of_nationalism = -5
+	}
+}
+
+####CODEX TECHNOLOGY
+
+codex_europe_idea_reform = {
+	icon = "mesoamerican"
+	trigger = {
+		any_known_country = {
+			OR = {
+				technology_group = western
+				technology_group = eastern
+			}
+		}
+	}
+	modifiers = {
+		idea_cost = -0.1
+		advisor_cost = -0.25
+	}
+}
+codex_europe_technology_reform = {
+	icon = "mesoamerican"
+	trigger = {
+		any_known_country = {
+			OR = {
+				technology_group = western
+				technology_group = eastern
+			}
+		}
+	}
+	modifiers = {
+		technology_cost = -0.1
+		advisor_cost = -0.25
+	}
+}
+codex_asia_idea_reform = {
+	icon = "mesoamerican"
+	trigger = {
+		any_known_country = {
+			technology_group = chinese
+		}
+	}
+	modifiers = {
+		idea_cost = -0.05
+		advisor_cost = -0.5
+	}
+}
+codex_asia_technology_reform = {
+	icon = "mesoamerican"
+	trigger = {
+		any_known_country = {
+			technology_group = chinese
+		}
+	}
+	modifiers = {
+		technology_cost = -0.05
+		advisor_cost = -0.5
+	}
+}
+####CODEX GOVERNMENT
+codex_codified_power_reform = {
+	icon = "mesoamerican"
+	modifiers = {
+		global_unrest = -2
+		global_autonomy = -0.05
+	}
+}
+
+codex_diplomatic_cermonies_reform = {
+	icon = "mesoamerican"
+	modifiers = {
+		diplomatic_upkeep = 1
+		diplomatic_reputation = 1
+	}
+}
+
+codex_imperial_principle_reform = {
+	icon = "mesoamerican"
+	allow_normal_conversion = yes
+	modifiers = {
+		ae_impact = -0.1
+		province_warscore_cost = -0.1
+	}
+}
+
+codex_subjugation_reform = {
+	icon = "mesoamerican"
+	modifiers = {
+		liberty_desire_from_subject_development = -0.33
+		diplomatic_annexation_cost = -0.25
+	}
+}

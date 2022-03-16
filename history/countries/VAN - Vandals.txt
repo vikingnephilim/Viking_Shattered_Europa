@@ -1,12 +1,7 @@
+# Governance
+#=========================
 government = monarchy
 add_government_reform = iqta
-primary_culture = vandalic
-religion = sufri
-religious_school = ashari_school
-
-technology_group = muslim
-capital = 341	# Tunis
-fixed_capital = 341 # Cannot move capital away from this province & no power cost to move to it
 change_estate_land_share = {
 	estate = estate_nobles
 	share = 10
@@ -19,6 +14,22 @@ change_estate_land_share = {
 	estate = estate_burghers
 	share = 10
 }
+government_rank = 1
+
+# Demographic
+#=========================
+technology_group = muslim
+primary_culture = vandalic
+capital = 341
+fixed_capital = 341
+
+# Religion
+#=========================
+religion = sufri
+religious_school = ashari_school
+
+# Ruler
+#=========================
 1444.1.1 = {
 	monarch = {
 		name = "'Eirenaios"
@@ -26,6 +37,6 @@ change_estate_land_share = {
 		adm = 6
 		dip = 6
 		mil = 6
-    claim = 95
+		claim = 95
 	}
 }
