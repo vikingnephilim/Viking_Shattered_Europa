@@ -21,6 +21,9 @@ country_decisions = {
 				tag = EPI
 				tag = MAC
 			}
+			NOT = {
+				government = codex
+			}
 			culture_group = byzantine
 		}
 		provinces_to_highlight = {
@@ -63,8 +66,18 @@ country_decisions = {
 			NOT = {
 				is_year = 1540
 			}
+			NOT = {
+				government = codex
+			}
 			culture_group = byzantine
-			tag = MAC
+			OR = {
+				tag = AEG
+				tag = ATH
+				tag = CRT
+				tag = CYP
+				tag = EPI
+				tag = MAC
+			}
 			owns_core_province = 148
 			owns_core_province = 358
 			owns_core_province = 446

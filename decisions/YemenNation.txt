@@ -2,6 +2,9 @@ country_decisions = {
 	yemen_nation = {
 		major = yes
 		potential = {
+			NOT = {
+				government = codex
+			}
 			normal_or_historical_nations = yes
 			NOT = {
 				has_country_flag = formed_yemen_flag
@@ -100,6 +103,9 @@ country_decisions = {
 		allow = {
 			NOT = {
 				exists = YEM
+			}
+			NOT = {
+				government = codex
 			}
 			is_at_war = no
 			is_nomad = no

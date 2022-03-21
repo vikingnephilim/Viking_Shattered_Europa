@@ -2,6 +2,9 @@ country_decisions = {
 	russian_nation = {
 		major = yes
 		potential = {
+			NOT = {
+				government = codex
+			}
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = {
@@ -95,6 +98,9 @@ country_decisions = {
 		allow = {
 			NOT = {
 				exists = RUS
+			}
+			NOT = {
+				government = codex
 			}
 			NOT = {
 				has_reform = states_general_reform

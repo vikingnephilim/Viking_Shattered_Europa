@@ -7,6 +7,9 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_sokoto_flag
 			}
+			NOT = {
+				government = codex
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -44,6 +47,9 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
+			NOT = {
+				government = codex
+			}
 			OR = {
 				piety = 0.5
 				has_idea_group = religious_ideas

@@ -7,6 +7,9 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_lotharingia_flag
 			}
+			NOT = {
+				government = codex
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -51,6 +54,9 @@ country_decisions = {
 			is_nomad = no
 			NOT = {
 				exists = LOT
+			}
+			NOT = {
+				government = codex
 			}
 			num_of_cities = 30
 			owns_core_province = 1878

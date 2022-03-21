@@ -4216,7 +4216,11 @@ mayan_monarchy = {
 			government = monarchy
 			government = tribal
 		}
-		religion = mesoamerican_religion
+		OR = {
+			culture_group = maya
+			culture = miskito
+			culture = muisca
+		}
 	}
 }
 
@@ -4262,7 +4266,11 @@ nahuatl_monarchy = {
 			government = tribal
 			has_reform = tribal_democracy_legacy
 		}
-		religion = nahuatl
+		OR = {
+			culture_group = central_american
+			culture_group = otomanguean
+			culture_group = aridoamerican
+		}
 	}
 }
 

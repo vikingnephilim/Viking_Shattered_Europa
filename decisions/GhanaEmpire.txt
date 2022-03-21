@@ -19,11 +19,14 @@ country_decisions = {
 				culture_group = sahelian
 				culture_group = west_african
 			}
+			NOT = {
+				government = codex
+			}
 			OR = {
 				ai = no
 				AND = {
 					ai = yes
-					num_of_cities = 20
+					num_of_cities = 10
 				}
 			}
 			is_colonial_nation = no
@@ -64,7 +67,10 @@ country_decisions = {
 				tag = MAL
 			}
 			1131 = {
-				development = 40
+				development = 20
+			}
+			NOT = {
+				government = codex
 			}
 			total_development = 1000
 			owns_core_province = 1131

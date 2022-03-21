@@ -34,7 +34,6 @@ country_decisions = {
 			factor = 1
 		}
 	}
-	
 	sinicize_culture = {
 		potential = {
 			OR = {
@@ -46,18 +45,30 @@ country_decisions = {
 		provinces_to_highlight = {
 			if = {
 				limit = {
-					ROOT = { culture_group = tibetan_group }
+					ROOT = {
+						culture_group = tibetan_group
+					}
 				}
 				culture_group = tibetan_group
 			}
 			else = {
 				culture = ROOT
 			}
-			NOT = { continent = north_america }
-			NOT = { continent = south_america }
-			NOT = { continent = new_world }
-			NOT = { continent = oceania }
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			NOT = {
+				continent = north_america
+			}
+			NOT = {
+				continent = south_america
+			}
+			NOT = {
+				continent = new_world
+			}
+			NOT = {
+				continent = oceania
+			}
+			NOT = {
+				country_or_non_sovereign_subject_holds = ROOT
+			}
 		}
 		allow = {
 			OR = {
@@ -95,24 +106,46 @@ country_decisions = {
 						NOT = {
 							any_province = {
 								culture_group = ROOT
-								NOT = { country_or_non_sovereign_subject_holds = ROOT }
-								NOT = { continent = north_america }
-								NOT = { continent = south_america }
-								NOT = { continent = new_world }
-								NOT = { continent = oceania }
+								NOT = {
+									country_or_non_sovereign_subject_holds = ROOT
+								}
+								NOT = {
+									continent = north_america
+								}
+								NOT = {
+									continent = south_america
+								}
+								NOT = {
+									continent = new_world
+								}
+								NOT = {
+									continent = oceania
+								}
 							}
 						}
 					}
 					AND = {
-						NOT = { culture_group = tibetan_group }
+						NOT = {
+							culture_group = tibetan_group
+						}
 						NOT = {
 							any_province = {
 								culture = ROOT
-								NOT = { country_or_non_sovereign_subject_holds = ROOT }
-								NOT = { continent = north_america }
-								NOT = { continent = south_america }
-								NOT = { continent = new_world }
-								NOT = { continent = oceania }
+								NOT = {
+									country_or_non_sovereign_subject_holds = ROOT
+								}
+								NOT = {
+									continent = north_america
+								}
+								NOT = {
+									continent = south_america
+								}
+								NOT = {
+									continent = new_world
+								}
+								NOT = {
+									continent = oceania
+								}
 							}
 						}
 					}
@@ -120,7 +153,8 @@ country_decisions = {
 			}
 		}
 		effect = {
-			if = { #Sinicize Vietnamese
+			if = {
+				#Sinicize Vietnamese
 				limit = {
 					primary_culture = vietnamese
 				}
@@ -168,7 +202,8 @@ country_decisions = {
 					}
 				}
 			}
-			if = { #Sinicize Korean
+			if = {
+				#Sinicize Korean
 				limit = {
 					primary_culture = korean
 				}
@@ -216,7 +251,8 @@ country_decisions = {
 					}
 				}
 			}
-			if = { #Sinicize Tibetan
+			if = {
+				#Sinicize Tibetan
 				limit = {
 					culture_group = tibetan_group
 				}

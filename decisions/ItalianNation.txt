@@ -2,6 +2,9 @@ country_decisions = {
 	italian_nation = {
 		major = yes
 		potential = {
+			NOT = {
+				government = codex
+			}
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = {
@@ -70,6 +73,9 @@ country_decisions = {
 			}
 		}
 		allow = {
+			NOT = {
+				government = codex
+			}
 			is_at_war = no
 			owns_core_province = 101			# Genoa
 			owns_core_province = 104			# Milan

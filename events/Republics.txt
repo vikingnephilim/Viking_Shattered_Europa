@@ -77,6 +77,17 @@ country_event = {
 	picture = DEBATE_REPUBLICAN_eventPicture
 	trigger = {
 		government = republic
+		NOT = {
+			government = codex
+		}
+		NOT = {
+			OR = {
+				has_reform = codex_chiefdom_reform
+				has_reform = codex_federation_reform
+				has_reform = codex_clan_council_reform
+				has_reform = codex_hereditary_reform
+			}
+		}
 		is_colonial_nation = no
 		OR = {
 			NOT = {

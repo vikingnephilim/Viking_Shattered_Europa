@@ -16,10 +16,12 @@ country_decisions = {
 				ai = no
 				num_of_cities = 6
 			}
+			government = codex
 			culture_group = maya
 			OR = {
 				religion = mesoamerican_religion
 				religion = zapotec
+				religion = sumu
 			}
 			NOT = {
 				has_reform = celestial_empire
@@ -63,15 +65,9 @@ country_decisions = {
 		allow = {
 			is_at_war = no
 			is_nomad = no
-			if = {
-				limit = {
-					has_dlc = "El Dorado"
-				}
-				is_religion_reformed = yes
-			}
-			else = {
-				has_institution = feudalism
-			}
+			culture_group = maya
+			government = codex
+			has_institution = feudalism
 			owns_core_province = 842			#Petén
 			owns_core_province = 846			#Sotuta
 			owns_core_province = 2633			#Mani

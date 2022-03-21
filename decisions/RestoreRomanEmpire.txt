@@ -6,6 +6,9 @@ country_decisions = {
 			NOT = {
 				has_country_flag = restored_rome_flag
 			}
+			NOT = {
+				government = codex
+			}
 			OR = {
 				tag = ERM
 				tag = WRM
@@ -52,6 +55,9 @@ country_decisions = {
 			}
 		}
 		allow = {
+			NOT = {
+				government = codex
+			}
 			italy_region = {
 				type = all
 				owned_by = ROOT
@@ -179,6 +185,9 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = {
+				government = codex
+			}
+			NOT = {
 				tag = HLR
 			}
 			NOT = {
@@ -216,6 +225,9 @@ country_decisions = {
 			}
 		}
 		allow = {
+			NOT = {
+				government = codex
+			}
 			italy_region = {
 				type = all
 				owned_by = ROOT
@@ -324,6 +336,9 @@ country_decisions = {
 			NOT = {
 				has_country_flag = restored_rome_flag
 			}
+			NOT = {
+				government = codex
+			}
 			OR = {
 				tag = ERM
 				tag = WRM
@@ -370,6 +385,9 @@ country_decisions = {
 			}
 		}
 		allow = {
+			NOT = {
+				government = codex
+			}
 			italy_region = {
 				type = all
 				owned_by = ROOT
@@ -478,6 +496,9 @@ country_decisions = {
 			NOT = {
 				has_country_flag = restored_rome_flag
 			}
+			NOT = {
+				government = codex
+			}
 			OR = {
 				tag = ERM
 				tag = WRM
@@ -524,6 +545,9 @@ country_decisions = {
 			}
 		}
 		allow = {
+			NOT = {
+				government = codex
+			}
 			italy_region = {
 				type = all
 				owned_by = ROOT
@@ -630,6 +654,9 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			tag = PAP
+			NOT = {
+				government = codex
+			}
 		}
 		provinces_to_highlight = {
 			superregion = europe_superregion
@@ -641,6 +668,9 @@ country_decisions = {
 			europe_superregion = {
 				type = all
 				owned_by = ROOT
+			}
+			NOT = {
+				government = codex
 			}
 			all_core_province = {
 				religion = catholic

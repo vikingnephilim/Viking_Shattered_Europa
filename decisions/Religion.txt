@@ -1715,18 +1715,7 @@ country_decisions = {
 			}
 		}
 		allow = {
-			OR = {
-				AND = {
-					has_dlc = "El Dorado"
-					is_religion_reformed = yes
-				}
-				AND = {
-					NOT = {
-						has_dlc = "El Dorado"
-					}
-					has_institution = renaissance
-				}
-			}
+			has_institution = renaissance
 			stability = 2
 			adm_power = 50
 		}
@@ -1758,18 +1747,7 @@ country_decisions = {
 			}
 		}
 		allow = {
-			OR = {
-				AND = {
-					has_dlc = "El Dorado"
-					is_religion_reformed = yes
-				}
-				AND = {
-					NOT = {
-						has_dlc = "El Dorado"
-					}
-					has_institution = renaissance
-				}
-			}
+			has_institution = renaissance
 			stability = 2
 			adm_power = 50
 		}
@@ -1801,18 +1779,7 @@ country_decisions = {
 			}
 		}
 		allow = {
-			OR = {
-				AND = {
-					has_dlc = "El Dorado"
-					is_religion_reformed = yes
-				}
-				AND = {
-					NOT = {
-						has_dlc = "El Dorado"
-					}
-					has_institution = renaissance
-				}
-			}
+			has_institution = renaissance
 			stability = 2
 			adm_power = 50
 		}
@@ -1849,7 +1816,9 @@ country_decisions = {
 				NOT = {
 					government = tribal
 				}
-				NOT = {	has_country_flag = screw_pope }
+				NOT = {
+					has_country_flag = screw_pope
+				}
 				is_pagan_viking_mod = yes
 			}
 			stability = 1
@@ -1924,7 +1893,7 @@ country_decisions = {
 				NOT = {
 					government = tribal
 				}
-			is_pagan_viking_mod = yes
+				is_pagan_viking_mod = yes
 			}
 			stability = 1
 		}
@@ -1961,7 +1930,7 @@ country_decisions = {
 				NOT = {
 					government = tribal
 				}
-			is_pagan_viking_mod = yes
+				is_pagan_viking_mod = yes
 			}
 			stability = 1
 		}
@@ -1998,7 +1967,7 @@ country_decisions = {
 				NOT = {
 					government = tribal
 				}
-			is_pagan_viking_mod = yes
+				is_pagan_viking_mod = yes
 			}
 			stability = 1
 		}
@@ -2035,7 +2004,7 @@ country_decisions = {
 				NOT = {
 					government = tribal
 				}
-			is_pagan_viking_mod = yes
+				is_pagan_viking_mod = yes
 			}
 			stability = 1
 		}

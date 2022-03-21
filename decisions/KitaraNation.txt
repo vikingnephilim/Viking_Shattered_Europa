@@ -7,6 +7,9 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_mossi_flag
 			}
+			NOT = {
+				government = codex
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -54,6 +57,9 @@ country_decisions = {
 		allow = {
 			NOT = {
 				exists = KIT
+			}
+			NOT = {
+				government = codex
 			}
 			is_at_war = no
 			is_nomad = no

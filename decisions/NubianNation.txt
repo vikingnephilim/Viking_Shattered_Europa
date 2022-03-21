@@ -5,6 +5,9 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = {
+				government = codex
+			}
+			NOT = {
 				has_country_flag = formed_nubian_formable_flag
 			}
 			OR = {
@@ -76,6 +79,9 @@ country_decisions = {
 			}
 			is_at_war = no
 			is_nomad = no
+			NOT = {
+				government = codex
+			}
 			lower_nubia_area = {
 				is_core = ROOT
 				owned_by = ROOT
@@ -146,6 +152,9 @@ country_decisions = {
 			was_never_end_game_tag_trigger = yes
 			NOT = {
 				has_country_flag = formed_nubian_formable_flag
+			}
+			NOT = {
+				government = codex
 			}
 			OR = {
 				ai = no
@@ -219,6 +228,9 @@ country_decisions = {
 			}
 			is_at_war = no
 			is_nomad = no
+			NOT = {
+				government = codex
+			}
 			lower_nubia_area = {
 				is_core = ROOT
 				owned_by = ROOT

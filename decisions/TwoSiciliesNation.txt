@@ -7,6 +7,9 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_two_sicilies_flag
 			}
+			NOT = {
+				government = codex
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -69,6 +72,9 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
+			NOT = {
+				government = codex
+			}
 			owns_core_province = 121
 			owns_core_province = 125
 			num_of_owned_provinces_with = {

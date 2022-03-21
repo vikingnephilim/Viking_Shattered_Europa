@@ -14,6 +14,9 @@ country_decisions = {
 			NOT = {
 				tag = DAI
 			}
+			NOT = {
+				government = codex
+			}
 			OR = {
 				ai = no
 				AND = {
@@ -76,6 +79,9 @@ country_decisions = {
 		allow = {
 			NOT = {
 				exists = DAI
+			}
+			NOT = {
+				government = codex
 			}
 			is_at_war = no
 			is_nomad = no
@@ -142,6 +148,9 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			NOT = {
 				has_country_flag = formed_lan_xang_flag
+			}
+			NOT = {
+				government = codex
 			}
 			was_never_end_game_tag_trigger = yes
 			OR = {
@@ -230,6 +239,9 @@ country_decisions = {
 		allow = {
 			is_at_war = no
 			is_nomad = no
+			NOT = {
+				government = codex
+			}
 			614 = {
 				owned_by = ROOT
 				is_core = ROOT

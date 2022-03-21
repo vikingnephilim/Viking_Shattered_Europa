@@ -7,12 +7,18 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_tibet_flag
 			}
+			NOT = {
+				government = codex
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
 			NOT = {
 				exists = TIB
+			}
+			NOT = {
+				government = codex
 			}
 			OR = {
 				primary_culture = tibetan
@@ -51,6 +57,9 @@ country_decisions = {
 		}
 		allow = {
 			religion = vajrayana
+			NOT = {
+				government = codex
+			}
 			is_at_war = no
 			is_nomad = no
 			owns_core_province = 2135
@@ -58,6 +67,9 @@ country_decisions = {
 			owns_core_province = 677
 			677 = {
 				is_state = yes
+			}
+			NOT = {
+				government = codex
 			}
 		}
 		effect = {

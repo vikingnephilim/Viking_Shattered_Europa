@@ -776,6 +776,11 @@ military_dictatorship = {
 	republican_name = yes
 	royal_marriage = no
 	republic = yes
+	trigger = {
+		NOT = {
+			government = codex
+		}
+	}
 	modifiers = {
 		global_autonomy = -0.075
 		land_morale = 0.1
@@ -823,6 +828,9 @@ republican_dictatorship = {
 	republican_name = yes
 	royal_marriage = no
 	dictatorship = yes
+	trigger = {
+		NOT = { government = codex }
+	}
 	modifiers = {
 		governing_capacity = 150
 		global_autonomy = -0.075

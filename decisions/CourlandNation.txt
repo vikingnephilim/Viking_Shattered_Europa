@@ -11,6 +11,9 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
+			NOT = {
+				government = codex
+			}
 			culture_group = baltic
 			NOT = {
 				exists = KUR
@@ -40,7 +43,15 @@ country_decisions = {
 			is_at_war = no
 			OR = {
 				religion = reformed
+				religion = mariavite
+				religion = hussite
+				religion = anglican
+				religion = waldensian
+				religion = henrician
 				religion = protestant
+			}
+			NOT = {
+				government = codex
 			}
 			owns_core_province = 39			# Kurland
 			owns_core_province = 1935			# Semigallia

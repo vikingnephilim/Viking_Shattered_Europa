@@ -8,6 +8,9 @@ country_decisions = {
 				tag = SIL
 			}
 			NOT = {
+				government = codex
+			}
+			NOT = {
 				has_country_flag = formed_silesia_flag
 			}
 			OR = {
@@ -51,6 +54,9 @@ country_decisions = {
 		allow = {
 			is_at_war = no
 			is_nomad = no
+			NOT = {
+				government = codex
+			}
 			owns_core_province = 2966
 			owns_core_province = 4238
 			owns_core_province = 4723

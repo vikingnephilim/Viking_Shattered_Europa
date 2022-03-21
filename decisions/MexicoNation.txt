@@ -27,6 +27,9 @@ country_decisions = {
 			NOT = {
 				tag = PAP
 			}
+			NOT = {
+				government = codex
+			}
 			OR = {
 				is_former_colonial_nation = yes
 				is_colonial_nation = yes
@@ -68,6 +71,9 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
+			NOT = {
+				government = codex
+			}
 			capital_scope = {
 				colonial_region = colonial_mexico
 				is_core = ROOT

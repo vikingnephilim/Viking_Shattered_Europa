@@ -5,6 +5,9 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = {
+				government = codex
+			}
+			NOT = {
 				has_country_flag = formed_siam_flag
 			}
 			NOT = {
@@ -59,6 +62,9 @@ country_decisions = {
 		allow = {
 			NOT = {
 				exists = SIA
+			}
+			NOT = {
+				government = codex
 			}
 			culture_group = thai_group
 			is_at_war = no

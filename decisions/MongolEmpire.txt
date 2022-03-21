@@ -15,6 +15,9 @@ country_decisions = {
 				culture_group = tartar
 			}
 			NOT = {
+				government = codex
+			}
+			NOT = {
 				has_country_flag = mongol_empire_flag
 			}
 			NOT = {
@@ -66,6 +69,9 @@ country_decisions = {
 				tag = YUA
 				tag = GLH
 				tag = ILK
+			}
+			NOT = {
+				government = codex
 			}
 			custom_trigger_tooltip = {
 				tooltip = mongolia_decision_tooltip
@@ -164,6 +170,9 @@ country_decisions = {
 				tag = MGE
 			}
 			NOT = {
+				government = codex
+			}
+			NOT = {
 				has_country_flag = restored_ilkhanate_decision_flag
 			}
 			NOT = {
@@ -186,6 +195,9 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
+			NOT = {
+				government = codex
+			}
 			persia_region = {
 				type = all
 				owned_by = ROOT
@@ -223,6 +235,9 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			NOT = {
 				has_country_flag = formed_ilkhanate_flag
+			}
+			NOT = {
+				government = codex
 			}
 			was_never_end_game_tag_trigger = yes
 			OR = {
@@ -271,6 +286,9 @@ country_decisions = {
 		allow = {
 			NOT = {
 				exists = ILK
+			}
+			NOT = {
+				government = codex
 			}
 			is_at_war = no
 			persia_region = {

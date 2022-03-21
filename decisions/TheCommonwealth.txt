@@ -7,6 +7,9 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_plc_flag
 			}
+			NOT = {
+				government = codex
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -66,6 +69,9 @@ country_decisions = {
 			}
 			is_subject = no
 			is_nomad = no
+			NOT = {
+				government = codex
+			}
 			stability = 1
 			is_at_war = no
 			owns_core_province = 262			# Krakow
@@ -194,6 +200,9 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_plc_flag
 			}
+			NOT = {
+				government = codex
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -244,6 +253,9 @@ country_decisions = {
 				NOT = {
 					num_of_cities = 32
 				}
+			}
+			NOT = {
+				government = codex
 			}
 			is_subject = no
 			is_nomad = no
@@ -389,6 +401,9 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = {
+				government = codex
+			}
+			NOT = {
 				exists = PLC
 			}
 			LIT = {
@@ -445,6 +460,9 @@ country_decisions = {
 			is_nomad = no
 			stability = 3
 			is_at_war = no
+			NOT = {
+				government = codex
+			}
 			owns_core_province = 272			# Vilna
 			owns_core_province = 276			# Minsk
 			owns_core_province = 280			# Kiev

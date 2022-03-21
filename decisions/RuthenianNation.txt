@@ -12,6 +12,9 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = {
+				government = codex
+			}
+			NOT = {
 				tag = PAP
 			}
 			NOT = {
@@ -74,6 +77,9 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
+			NOT = {
+				government = codex
+			}
 			OR = {
 				#owns everything
 				AND = {

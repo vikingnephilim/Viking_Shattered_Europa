@@ -14,6 +14,9 @@ country_decisions = {
 			NOT = {
 				exists = MCH
 			}
+			NOT = {
+				government = codex
+			}
 			OR = {
 				primary_culture = manchu
 				primary_culture = manchu_new
@@ -59,11 +62,14 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			owns_core_province = 2108			#Huncun	
+			owns_core_province = 2108			#Huncun
 			owns_core_province = 730			#Girin
 			730 = {
 				#Girin
 				is_state = yes
+			}
+			NOT = {
+				government = codex
 			}
 			custom_trigger_tooltip = {
 				tooltip = manchu_manchuria_decision.tooltip
@@ -170,6 +176,9 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = {
+				government = codex
+			}
+			NOT = {
 				exists = QNG
 			}
 			NOT = {
@@ -204,6 +213,9 @@ country_decisions = {
 				is_state = yes
 			}
 			is_at_war = no
+			NOT = {
+				government = codex
+			}
 			NOT = {
 				has_ruler_modifier = tribal_succession_crisis
 			}

@@ -7,6 +7,9 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_denmark_flag
 			}
+			NOT = {
+				government = codex
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -56,7 +59,6 @@ country_decisions = {
 				province_id = 6				# Skane
 				province_id = 12				# Sjaeland
 				province_id = 15				# Jutland
-				province_id = 1981				# Bornholm
 			}
 			OR = {
 				NOT = {
@@ -70,10 +72,12 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
+			NOT = {
+				government = codex
+			}
 			owns_core_province = 6			# Skane
 			owns_core_province = 12			# Sjaeland
 			owns_core_province = 15			# Jutland
-			owns_core_province = 1981			# Bornholm
 		}
 		effect = {
 			change_tag = DAN
@@ -153,6 +157,9 @@ country_decisions = {
 				exists = SWE
 			}
 			NOT = {
+				government = codex
+			}
+			NOT = {
 				tag = PAP
 			}
 			NOT = {
@@ -196,7 +203,7 @@ country_decisions = {
 				province_id = 1				# Uppland
 				province_id = 6				# Skane
 				province_id = 7				# Vastergotland
-				province_id = 25				# Gotland
+				province_id = 25			# Gotland
 			}
 			OR = {
 				NOT = {
@@ -210,6 +217,9 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
+			NOT = {
+				government = codex
+			}
 			owns_core_province = 1			# Uppland
 			owns_core_province = 6			# Skane
 			owns_core_province = 7			# Vastergotland
@@ -293,6 +303,9 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = {
+				government = codex
+			}
+			NOT = {
 				exists = NOR
 			}
 			NOT = {
@@ -356,6 +369,9 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
+			NOT = {
+				government = codex
+			}
 			owns_core_province = 9
 			owns_core_province = 10
 			owns_core_province = 17
@@ -446,6 +462,9 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = {
+				government = codex
+			}
+			NOT = {
 				exists = SCA
 			}
 			NOT = {
@@ -492,6 +511,9 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
+			NOT = {
+				government = codex
+			}
 			owns_core_province = 1			# Uppland
 			owns_core_province = 6			# Skane
 			owns_core_province = 7			# Vastergotland
@@ -553,6 +575,9 @@ country_decisions = {
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
+			}
+			NOT = {
+				government = codex
 			}
 			NOT = {
 				exists = SCA
@@ -617,6 +642,9 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
+			NOT = {
+				government = codex
+			}
 			owns_core_province = 1			# Stockholm
 			owns_core_province = 6			# Skane
 			owns_core_province = 12			# Sjaelland
@@ -696,6 +724,9 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_jomsviking_flag
 			}
+			NOT = {
+				government = codex
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -751,6 +782,9 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
+			NOT = {
+				government = codex
+			}
 			owns_core_province = 1			# Stockholm
 			owns_core_province = 6			# Skane
 			owns_core_province = 12			# Sjaelland

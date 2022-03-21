@@ -7,6 +7,9 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_rajputana_flag
 			}
+			NOT = {
+				government = codex
+			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -63,6 +66,9 @@ country_decisions = {
 		allow = {
 			NOT = {
 				exists = RJP
+			}
+			NOT = {
+				government = codex
 			}
 			is_at_war = no
 			owns_core_province = 4461			#Ujjain
