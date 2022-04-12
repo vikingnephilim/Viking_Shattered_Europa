@@ -5,9 +5,6 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				has_country_flag = formed_maratha_flag
 			}
 			OR = {
@@ -64,9 +61,6 @@ country_decisions = {
 			NOT = {
 				exists = MAR
 			}
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			owns_core_province = 546			#Nagpur
 			owns_core_province = 1946			#Satar
@@ -81,6 +75,15 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = MAR
+			if = {
+				limit = {
+					NOT = {
+						technology_group = indian
+					}
+				}
+				change_technology_group = indian
+				change_unit_type = indian
+			}
 			deccan_region = {
 				limit = {
 					NOT = {

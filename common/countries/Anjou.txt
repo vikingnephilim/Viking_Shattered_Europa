@@ -2,7 +2,12 @@
 graphical_culture = westerngfx
 #color = { 200 85 215 }
 #color = { 93 160 163 }
-color = { 111  122  184 }
+color = {
+	111
+	122
+	184
+}
+
 historical_idea_groups = {
 	religious_ideas
 	defensive_ideas
@@ -13,23 +18,35 @@ historical_idea_groups = {
 	spy_ideas
 	economic_ideas
 }
+
 historical_units = {
-	western_medieval_infantry
-	western_medieval_knights
+	western_archers
 	western_men_at_arms
-	swiss_landsknechten
-	dutch_maurician
-	french_caracolle
-	anglofrench_line
-	french_dragoon
-	french_bluecoat
-	french_cuirassier
-	french_impulse
-	mixed_order_infantry
-	open_order_cavalry
-	napoleonic_square
-	napoleonic_lancers
+	western_halberdmen
+	western_pikemen
+	western_matchlock_shooter
+	western_charge_infantry
+	western_reformed_shooter_infantry
+	western_grenadiers
+	western_regiment_of_foot
+	western_line_infantry
+	western_red_coat_infantry
+	western_square_infantry
+	western_drill_infantry
+	western_mixed_infantry
+	western_trench_infantry
+	western_horsemen
+	western_joust_knights
+	western_black_knights
+	western_caracole_cavalry
+	western_gallop_cavalry
+	western_dragoons
+	western_carabiners
+	western_hussars
+	western_lancers
+	western_household_cavalry
 }
+
 monarch_names = {
 	"Charles #2" = 40
 	"Louis #1" = 40
@@ -75,46 +92,199 @@ monarch_names = {
 	"Osanne #0" = -1
 	"Yolande #0" = -1
 }
+
 leader_names = {
-	"d'Abeille" "d'Adhemar" "d'Agoult" "d'Aiglun" "d'Aiguieres" "d'Allemagne" "d'Amalric" "d'Audiffredi"
-	"de Bagnols" "de Barberin" "de Barcillon" "de Baschi" "des Baux" "de Bermond" "de Bionneau" "de Brunet"
-	"de Cadenet" "de Cascaris-Castellet" "de Castaing" "de Castellane" "de Castillon" Coquerel "de Cordes" "de Cormis" "de Crillon"
-	"d'Entrecasteaux" "d'Espagnet" Esparron "d'Espinouze"
-	"de Fargis" "Fauque de Jonquieres" "Ferre de la Gra
-	"de Gassendi" "de Gevaudan" "de Gombert" "de Gordes" "de Grignan" Grimaldi "de Grimaud" "de Guast" "des Isnard
-	"de Lauris" "de Libertat" "de Lomenie"
-	"de Monteil" "de Montpezat"
-	"de Paule" "de Pena" "Pene de la Borde" "de la Perusse" "de Ponteves"
-	"de Raimondis" "de Revest" "de Riquetti"
-	"de Sabran" "de Sade" "de Saint Victoret" "de Seguiran" "de Simiane"
+	"d'Abeille"
+	"d'Adhemar"
+	"d'Agoult"
+	"d'Aiglun"
+	"d'Aiguieres"
+	"d'Allemagne"
+	"d'Amalric"
+	"d'Audiffredi"
+	"de Bagnols"
+	"de Barberin"
+	"de Barcillon"
+	"de Baschi"
+	"des Baux"
+	"de Bermond"
+	"de Bionneau"
+	"de Brunet"
+	"de Cadenet"
+	"de Cascaris-Castellet"
+	"de Castaing"
+	"de Castellane"
+	"de Castillon"
+	Coquerel
+	"de Cordes"
+	"de Cormis"
+	"de Crillon"
+	"d'Entrecasteaux"
+	"d'Espagnet"
+	Esparron
+	"d'Espinouze"
+	"de Fargis"
+	"Fauque de Jonquieres"
+	"Ferre de la Gra
+	"
+	de
+	Gassendi
+	""
+	de
+	Gevaudan
+	""
+	de
+	Gombert
+	""
+	de
+	Gordes
+	""
+	de
+	Grignan
+	"Grimaldi "
+	de
+	Grimaud
+	""
+	de
+	Guast
+	""
+	des
+	Isnard
+	"de Lauris"
+	"de Libertat"
+	"de Lomenie"
+	"de Monteil"
+	"de Montpezat"
+	"de Paule"
+	"de Pena"
+	"Pene de la Borde"
+	"de la Perusse"
+	"de Ponteves"
+	"de Raimondis"
+	"de Revest"
+	"de Riquetti"
+	"de Sabran"
+	"de Sade"
+	"de Saint Victoret"
+	"de Seguiran"
+	"de Simiane"
 	"de Valbelle"
 }
+
 ship_names = {
-	Achille Agreable "Aigle Volant" Alcyon Alouette
-	Altier Aquilon Ardente Assure Avenant
-	Aventurier Baleine Becasse Bienvenu Bizarre
-	Boree "Branche d'Olivier" Brillant Bucentaure Cache
-	Caille Capable Centaure Cesar "Cheval Marin"
-	Coche "Commerce de Marseille" "Commerce de Montpellier" "Comte de Provence" Conquerant
-	Constant Content Croissant Dauphine Diamant
-	Dieppoise Dur Dromadaire Eclatant Eole
-	Esperance Fantasque Ferme Fidele Fier
-	Florissant Formidable Fort Foudroyant Gaillard
-	Heureux Heros Jason Lion Mignon
-	Minerve Ocean Orphee Parfait Phenix
-	Poli Pompeux Portefaix Protecteur Provensal
-	Provence Prudent Puissant Reale Redoutable
-	Requin "Royal Louis" Sage Sagittaire "Royal Therese"
-	"Saint Esprit" "Saint Joseph" "Saint Philippe" Sardine Sceptre
-	Seduisant Seine Serieux Solide Souverain
-	Suffisant Temeraire Terrible Tigre Tonnant
-	Toulon Toulouse Trident Triomphant Triton
-	Union Vaillant Vigilant Volontaire Zele
+	Achille
+	Agreable
+	"Aigle Volant"
+	Alcyon
+	Alouette
+	Altier
+	Aquilon
+	Ardente
+	Assure
+	Avenant
+	Aventurier
+	Baleine
+	Becasse
+	Bienvenu
+	Bizarre
+	Boree
+	"Branche d'Olivier"
+	Brillant
+	Bucentaure
+	Cache
+	Caille
+	Capable
+	Centaure
+	Cesar
+	"Cheval Marin"
+	Coche
+	"Commerce de Marseille"
+	"Commerce de Montpellier"
+	"Comte de Provence"
+	Conquerant
+	Constant
+	Content
+	Croissant
+	Dauphine
+	Diamant
+	Dieppoise
+	Dur
+	Dromadaire
+	Eclatant
+	Eole
+	Esperance
+	Fantasque
+	Ferme
+	Fidele
+	Fier
+	Florissant
+	Formidable
+	Fort
+	Foudroyant
+	Gaillard
+	Heureux
+	Heros
+	Jason
+	Lion
+	Mignon
+	Minerve
+	Ocean
+	Orphee
+	Parfait
+	Phenix
+	Poli
+	Pompeux
+	Portefaix
+	Protecteur
+	Provensal
+	Provence
+	Prudent
+	Puissant
+	Reale
+	Redoutable
+	Requin
+	"Royal Louis"
+	Sage
+	Sagittaire
+	"Royal Therese"
+	"Saint Esprit"
+	"Saint Joseph"
+	"Saint Philippe"
+	Sardine
+	Sceptre
+	Seduisant
+	Seine
+	Serieux
+	Solide
+	Souverain
+	Suffisant
+	Temeraire
+	Terrible
+	Tigre
+	Tonnant
+	Toulon
+	Toulouse
+	Trident
+	Triomphant
+	Triton
+	Union
+	Vaillant
+	Vigilant
+	Volontaire
+	Zele
 }
+
 army_names = {
-	"Armee de Marseille" "Armee des Baux" "Armee de Provence-Forcal"
-	"Armee d'Orange" "Armee du Pays d'Arles" "Armee des Alpes"
-	"Armee du Rhone" "Armee de la Durance" "Armee de Haute Provence"
-	"Armee de Basse Provence" "Armee du Vivarais"
+	"Armee de Marseille"
+	"Armee des Baux"
+	"Armee de Provence-Forcal"
+	"Armee d'Orange"
+	"Armee du Pays d'Arles"
+	"Armee des Alpes"
+	"Armee du Rhone"
+	"Armee de la Durance"
+	"Armee de Haute Provence"
+	"Armee de Basse Provence"
+	"Armee du Vivarais"
 	"Armee de $PROVINCE$"
 }

@@ -15,9 +15,6 @@ country_decisions = {
 				tag = HLR
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				tag = PAP
 			}
 			NOT = {
@@ -59,9 +56,6 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 158			# Transylvania
 			owns_core_province = 159			# Silistria
 			owns_core_province = 160			# Oltenia
@@ -72,6 +66,15 @@ country_decisions = {
 		effect = {
 			change_tag = RMN
 			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = balkan
+					}
+				}
+				change_technology_group = balkan
+				change_unit_type = balkan
+			}
 			swap_non_generic_missions = yes
 			restore_country_name_effect = yes
 			if = {

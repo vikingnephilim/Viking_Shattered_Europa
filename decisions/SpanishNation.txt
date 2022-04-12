@@ -2,9 +2,6 @@ country_decisions = {
 	spanish_nation = {
 		major = yes
 		potential = {
-			NOT = {
-				government = codex
-			}
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = {
@@ -115,9 +112,6 @@ country_decisions = {
 			NOT = {
 				exists = SPA
 			}
-			NOT = {
-				government = codex
-			}
 			is_nomad = no
 			is_at_war = no
 			owns_core_province = 213			# Barcelona
@@ -153,6 +147,15 @@ country_decisions = {
 					}
 				}
 				swap_non_generic_missions = yes
+			}
+			if = {
+				limit = {
+					NOT = {
+						technology_group = latin_group
+					}
+				}
+				change_technology_group = latin_group
+				change_unit_type = latin_group
 			}
 			hidden_effect = {
 				every_owned_province = {
@@ -211,9 +214,6 @@ country_decisions = {
 	spanish_nation_diplomatically = {
 		major = yes
 		potential = {
-			NOT = {
-				government = codex
-			}
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = {
@@ -279,9 +279,6 @@ country_decisions = {
 			is_nomad = no
 			is_at_war = no
 			legitimacy = 100
-			NOT = {
-				government = codex
-			}
 			iberia_region = {
 				type = all
 				NOT = {
@@ -377,6 +374,15 @@ country_decisions = {
 					id = ideagroups.1
 				}
 				#Swap Ideas
+			}
+			if = {
+				limit = {
+					NOT = {
+						technology_group = latin_group
+					}
+				}
+				change_technology_group = latin_group
+				change_unit_type = latin_group
 			}
 			custom_tooltip = spanish_unification_effect.tooltip
 			hidden_effect = {

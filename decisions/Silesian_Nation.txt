@@ -8,9 +8,6 @@ country_decisions = {
 				tag = SIL
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				has_country_flag = formed_silesia_flag
 			}
 			OR = {
@@ -54,9 +51,6 @@ country_decisions = {
 		allow = {
 			is_at_war = no
 			is_nomad = no
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 2966
 			owns_core_province = 4238
 			owns_core_province = 4723
@@ -67,6 +61,15 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = SIL
+			if = {
+				limit = {
+					NOT = {
+						technology_group = eastern
+					}
+				}
+				change_technology_group = eastern
+				change_unit_type = eastern
+			}
 			restore_country_name_effect = yes
 			swap_non_generic_missions = yes
 			silesia_area = {

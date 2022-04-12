@@ -13,9 +13,6 @@ country_decisions = {
 				is_former_colonial_nation = no
 				is_colonial_nation = no
 			}
-			NOT = {
-				government = codex
-			}
 			capital_scope = {
 				superregion = china_superregion
 				is_core = ROOT
@@ -44,15 +41,21 @@ country_decisions = {
 			owns_all_provinces = {
 				superregion = china_superregion
 			}
-			NOT = {
-				government = codex
-			}
 		}
 		effect = {
 			hidden_effect = {
 				restore_country_name_effect = yes
 			}
 			change_tag = CHN
+			if = {
+				limit = {
+					NOT = {
+						technology_group = chinese
+					}
+				}
+				change_technology_group = chinese
+				change_unit_type = chinese
+			}
 			add_country_modifier = {
 				name = "centralization_modifier"
 				duration = 7300

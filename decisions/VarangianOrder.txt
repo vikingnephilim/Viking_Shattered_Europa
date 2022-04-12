@@ -38,6 +38,16 @@ country_decisions = {
 				VGO = {
 					change_primary_culture = varangian
 					change_government = theocracy
+					
+			if = {
+				limit = {
+					NOT = {
+						technology_group = greek
+					}
+				}
+				change_technology_group = greek
+				change_unit_type = greek
+			}
 					add_government_reform = monastic_order_reform
 					adopt_reform_progress = BYZ
 					set_government_rank = 2

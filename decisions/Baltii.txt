@@ -27,9 +27,6 @@ country_decisions = {
 				culture_group = baltic
 				primary_culture = prussian
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				AND = {
@@ -79,9 +76,6 @@ country_decisions = {
 				religion = slavic_pagan_reformed
 				religion = finnish_pagan_reformed
 			}
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 38
 			owns_core_province = 41
 			owns_core_province = 271
@@ -97,6 +91,15 @@ country_decisions = {
 			restore_country_name_effect = yes
 			change_tag = BLT
 			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = eastern
+					}
+				}
+				change_technology_group = eastern
+				change_unit_type = eastern
+			}
 			if = {
 				limit = {
 					NOT = {

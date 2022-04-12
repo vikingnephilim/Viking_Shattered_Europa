@@ -14,9 +14,6 @@ country_decisions = {
 			NOT = {
 				exists = MCH
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				primary_culture = manchu
 				primary_culture = manchu_new
@@ -68,9 +65,6 @@ country_decisions = {
 				#Girin
 				is_state = yes
 			}
-			NOT = {
-				government = codex
-			}
 			custom_trigger_tooltip = {
 				tooltip = manchu_manchuria_decision.tooltip
 				num_of_owned_provinces_with = {
@@ -86,6 +80,15 @@ country_decisions = {
 		effect = {
 			change_primary_culture = manchu_new
 			set_ruler_culture = manchu_new
+			if = {
+				limit = {
+					NOT = {
+						technology_group = chinese
+					}
+				}
+				change_technology_group = chinese
+				change_unit_type = chinese
+			}
 			restore_country_name_effect = yes
 			if = {
 				limit = {
@@ -176,9 +179,6 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				exists = QNG
 			}
 			NOT = {
@@ -213,9 +213,6 @@ country_decisions = {
 				is_state = yes
 			}
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			NOT = {
 				has_ruler_modifier = tribal_succession_crisis
 			}

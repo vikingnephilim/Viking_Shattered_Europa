@@ -84,86 +84,16 @@ british_monarchy = {
 	icon = "england_elizabeth"
 	allow_normal_conversion = no
 	potential = {
-		tag = GBR
-		culture_group = british
+		AND = {
+			tag = GBR
+			culture_group = british
+		}
 	}
 	trigger = {
-		tag = GBR
-		culture_group = british
-	}
-	lock_level_when_selected = yes
-	valid_for_nation_designer = yes
-	nation_designer_cost = 15
-	fixed_rank = 3
-	nation_designer_trigger = {
-		has_dlc = "Common Sense"
-	}
-	legacy_equivalent = english_monarchy_legacy
-	start_territory_to_estates = 0.3
-	modifiers = {
-		governing_capacity = 50
-		legitimacy = 0.5
-		global_unrest = -1
-		max_absolutism = -30
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Common Sense"
+		AND = {
+			tag = GBR
+			culture_group = british
 		}
-		has_parliament = yes
-		custom_attributes = {
-			blocked_call_diet = yes
-		}
-	}
-}
-
-british_republic = {
-	icon = "economy_trade"
-	allow_normal_conversion = no
-	potential = {
-		tag = GBR
-		culture_group = british
-	}
-	trigger = {
-		tag = GBR
-		culture_group = british
-	}
-	lock_level_when_selected = yes
-	valid_for_nation_designer = yes
-	nation_designer_cost = 15
-	fixed_rank = 3
-	nation_designer_trigger = {
-		has_dlc = "Common Sense"
-	}
-	legacy_equivalent = oligarchic_republic
-	start_territory_to_estates = 0.3
-	modifiers = {
-		governing_capacity = 50
-		legitimacy = 0.5
-		global_unrest = -1
-		max_absolutism = -30
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Common Sense"
-		}
-		has_parliament = yes
-		custom_attributes = {
-			blocked_call_diet = yes
-		}
-	}
-}
-
-british_theocracy = {
-	icon = "bishop"
-	allow_normal_conversion = no
-	potential = {
-		tag = GBR
-		culture_group = british
-	}
-	trigger = {
-		tag = GBR
-		culture_group = british
 	}
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
@@ -198,70 +128,9 @@ english_monarchy = {
 		have_had_reform = english_monarchy
 		tag = ENG
 	}
-	lock_level_when_selected = yes
-	valid_for_nation_designer = yes
-	nation_designer_cost = 15
-	fixed_rank = 2
-	nation_designer_trigger = {
-		has_dlc = "Common Sense"
-	}
-	legacy_equivalent = english_monarchy_legacy
-	start_territory_to_estates = 0.3
-	modifiers = {
-		governing_capacity = 50
-		legitimacy = 0.5
-		global_unrest = -1
-		max_absolutism = -30
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Common Sense"
-		}
-		has_parliament = yes
-	}
-	custom_attributes = {
-		blocked_call_diet = yes
-	}
-}
-
-english_republic = {
-	icon = "england_james"
-	allow_normal_conversion = no
-	potential = {
-		have_had_reform = english_republic
-		TAG = ENG
-	}
-	lock_level_when_selected = yes
-	valid_for_nation_designer = yes
-	nation_designer_cost = 15
-	fixed_rank = 2
-	nation_designer_trigger = {
-		has_dlc = "Common Sense"
-	}
-	legacy_equivalent = oligarchic_republic
-	start_territory_to_estates = 0.3
-	modifiers = {
-		governing_capacity = 50
-		legitimacy = 0.5
-		global_unrest = -1
-		max_absolutism = -30
-	}
-	conditional = {
-		allow = {
-			has_dlc = "Common Sense"
-		}
-		has_parliament = yes
-	}
-	custom_attributes = {
-		blocked_call_diet = yes
-	}
-}
-
-english_theocracy = {
-	icon = "bishop's_law"
-	allow_normal_conversion = no
-	potential = {
+	trigger = {
 		have_had_reform = english_monarchy
+		tag = ENG
 	}
 	lock_level_when_selected = yes
 	valid_for_nation_designer = yes
@@ -707,12 +576,16 @@ norman_duchy_reform = {
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
 	potential = {
-		tag = NRM
-		religion_group = christian
+		AND = {
+			tag = NRM
+			religion_group = christian
+		}
 	}
 	trigger = {
-		tag = NRM
-		religion_group = christian
+		AND = {
+			tag = NRM
+			religion_group = christian
+		}
 	}
 	modifiers = {
 		harsh_treatment_cost = -0.2
@@ -874,25 +747,48 @@ baltic_tribal_fed = {
 crown_of_castille = {
 	icon = castille_isabelle
 	allow_normal_conversion = yes
-	fixed_rank = 1
 	potential = {
-		OR = {
-			tag = CAS
-			has_reform = crown_of_castille
+		AND = {
+			owns_all_provinces = {
+				area = castille_area
+			}
+			OR = {
+				tag = CAS
+				has_reform = crown_of_castille
+				have_had_reform = crown_of_castille
+			}
+			OR = {
+				primary_culture = castillian
+				primary_culture = leonese
+				primary_culture = asturian
+				primary_culture = galician
+			}
+			religion_group = christian
 		}
-		religion_group = christian
 	}
 	trigger = {
-		has_reform = crown_of_castille
-		religion_group = christian
+		AND = {
+			owns_all_provinces = {
+				area = castille_area
+			}
+			OR = {
+				tag = CAS
+				has_reform = crown_of_castille
+				have_had_reform = crown_of_castille
+			}
+			OR = {
+				primary_culture = castillian
+				primary_culture = leonese
+				primary_culture = asturian
+				primary_culture = galician
+			}
+			religion_group = christian
+		}
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 10
 	modifiers = {
 		diplomatic_upkeep = 1
-	}
-	custom_attributes = {
-		enables_trade_princes = yes		#1 Merchant if you got a aragonese of catalan vassal
 	}
 	ai = {
 		factor = 101
@@ -901,32 +797,52 @@ crown_of_castille = {
 
 crown_of_aragon = {
 	icon = aragon_alfonso
-	fixed_rank = 1
 	allow_normal_conversion = yes
 	effect = {
 	}
 	potential = {
-		OR = {
-			tag = ARA
-			has_reform = crown_of_aragon
+		AND = {
+			owns_all_provinces = {
+				area = aragon_area
+			}
+			OR = {
+				tag = ARA
+				has_reform = crown_of_aragon
+				have_had_reform = crown_of_aragon
+			}
+			OR = {
+				primary_culture = balearic
+				primary_culture = aragonese
+				primary_culture = catalan_new
+				primary_culture = valencian
+			}
+			religion_group = christian
 		}
-		religion_group = christian
 	}
 	trigger = {
-		has_reform = crown_of_aragon
-		religion_group = christian
+		AND = {
+			owns_all_provinces = {
+				area = aragon_area
+			}
+			OR = {
+				tag = ARA
+				has_reform = crown_of_aragon
+				have_had_reform = crown_of_aragon
+			}
+			OR = {
+				primary_culture = balearic
+				primary_culture = aragonese
+				primary_culture = catalan_new
+				primary_culture = valencian
+			}
+			religion_group = christian
+		}
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
 	modifiers = {
 		min_autonomy = 10
 		global_unrest = -1
-	}
-	custom_attributes = {
-		enables_kingdom_of_aragon = yes
-		enables_principality_of_catalonia = yes
-		enables_city_of_valencia = yes
-		enables_kingdom_of_sicily = yes
 	}
 	ai = {
 		factor = 100
@@ -937,27 +853,42 @@ kingdom_of_portugal = {
 	icon = kingdom_of_portugal
 	allow_normal_conversion = yes
 	potential = {
-		OR = {
-			tag = POR
-			has_reform = kingdom_of_portugal
-		}
-		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+		AND = {
+			owns_all_provinces = {
+				area = beieras_area
+			}
+			OR = {
+				tag = POR
+				has_reform = kingdom_of_portugal
+				have_had_reform = kingdom_of_portugal
+			}
+			OR = {
+				primary_culture = portoccan
+				primary_culture = portugese
+				primary_culture = algarve
+			}
+			religion_group = christian
 		}
 	}
 	trigger = {
-		NOT = {
-			is_year = 1481
+		AND = {
+			owns_all_provinces = {
+				area = beieras_area
+			}
+			OR = {
+				tag = POR
+				has_reform = kingdom_of_portugal
+				have_had_reform = kingdom_of_portugal
+			}
+			OR = {
+				primary_culture = portoccan
+				primary_culture = portugese
+				primary_culture = algarve
+			}
+			religion_group = christian
 		}
 	}
 	valid_for_nation_designer = yes
-	fixed_rank = 2
 	nation_designer_cost = 20
 	modifiers = {
 		min_autonomy = 10
@@ -973,27 +904,63 @@ kingdom_of_portugal_and_azures = {
 	icon = portuguese_thassalocracy
 	allow_normal_conversion = yes
 	potential = {
-		OR = {
-			tag = POR
-			culture_group = iberian
-			has_reform = kingdom_of_portugal_and_azures
-		}
-		NOT = {
-			religion = norse_pagan_reformed
-		}
-		NOT = {
-			religion = hellenic_pagan
-		}
-		NOT = {
-			religion = druidic_pagan
+		AND = {
+			AND = {
+				owns_all_provinces = {
+					area = alentejo_area
+				}
+				owns_all_provinces = {
+					area = beieras_area
+				}
+				owns_all_provinces = {
+					area = macaronesia_area
+				}
+			}
+			OR = {
+				tag = POR
+				has_reform = kingdom_of_portugal
+				have_had_reform = kingdom_of_portugal
+				has_reform = kingdom_of_portugal_and_azures
+				have_had_reform = kingdom_of_portugal_and_azures
+			}
+			OR = {
+				primary_culture = portoccan
+				primary_culture = portugese
+				primary_culture = algarve
+			}
+			religion_group = christian
 		}
 	}
 	trigger = {
-		is_year = 1481
+		AND = {
+			AND = {
+				owns_all_provinces = {
+					area = alentejo_area
+				}
+				owns_all_provinces = {
+					area = beieras_area
+				}
+				owns_all_provinces = {
+					area = macaronesia_area
+				}
+			}
+			OR = {
+				tag = POR
+				has_reform = kingdom_of_portugal
+				have_had_reform = kingdom_of_portugal
+				has_reform = kingdom_of_portugal_and_azures
+				have_had_reform = kingdom_of_portugal_and_azures
+			}
+			OR = {
+				primary_culture = portoccan
+				primary_culture = portugese
+				primary_culture = algarve
+			}
+			religion_group = christian
+		}
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 25
-	fixed_rank = 2
 	modifiers = {
 		global_autonomy = -0.025
 		trade_steering = 0.1
@@ -1008,20 +975,47 @@ portuguese_empire_reform = {
 	icon = king
 	allow_normal_conversion = yes
 	potential = {
-		religion_group = christian
-		OR = {
-			tag = POR
-			culture_group = iberian
-			has_reform = portuguese_empire_reform
+		AND = {
+			owns_all_provinces = {
+				region = iberia_region
+			}
+			OR = {
+				tag = POR
+				has_reform = kingdom_of_portugal
+				have_had_reform = kingdom_of_portugal
+				has_reform = kingdom_of_portugal_and_azures
+				have_had_reform = kingdom_of_portugal_and_azures
+				has_reform = portuguese_empire_reform
+				have_had_reform = portuguese_empire_reform
+			}
+			OR = {
+				primary_culture = portoccan
+				primary_culture = portugese
+				primary_culture = algarve
+			}
+			religion_group = christian
 		}
 	}
 	trigger = {
-		OR = {
-			has_reform = portuguese_empire_reform
-			AND = {
-				has_reform = kingdom_of_portugal_and_azures
-				absolutism = 50
+		AND = {
+			owns_all_provinces = {
+				region = iberia_region
 			}
+			OR = {
+				tag = POR
+				has_reform = kingdom_of_portugal
+				have_had_reform = kingdom_of_portugal
+				has_reform = kingdom_of_portugal_and_azures
+				have_had_reform = kingdom_of_portugal_and_azures
+				has_reform = portuguese_empire_reform
+				have_had_reform = portuguese_empire_reform
+			}
+			OR = {
+				primary_culture = portoccan
+				primary_culture = portugese
+				primary_culture = algarve
+			}
+			religion_group = christian
 		}
 	}
 	valid_for_nation_designer = yes
@@ -1033,9 +1027,6 @@ portuguese_empire_reform = {
 		trade_company_investment_cost = -0.25
 		navy_tradition = 1
 	}
-	custom_attributes = {
-		enables_kingdom_of_brazil = yes
-	}
 	ai = {
 		factor = 102
 	}
@@ -1045,14 +1036,58 @@ hispanic_kingdom = {
 	icon = spain_charles
 	allow_normal_conversion = yes
 	potential = {
-		OR = {
-			tag = SPA
-			has_reform = hispanic_kingdom
+		AND = {
+			owns_all_provinces = {
+				region = iberia_region
+			}
+			OR = {
+				tag = SPA
+				has_reform = crown_of_aragon
+				have_had_reform = crown_of_aragon
+				has_reform = crown_of_castille
+				have_had_reform = crown_of_castille
+				has_reform = hispanic_kingdom
+				have_had_reform = hispanic_kingdom
+			}
+			OR = {
+				primary_culture = castillian
+				primary_culture = leonese
+				primary_culture = asturian
+				primary_culture = galician
+				primary_culture = balearic
+				primary_culture = aragonese
+				primary_culture = catalan_new
+				primary_culture = valencian
+			}
+			religion_group = christian
 		}
 	}
 	trigger = {
-		tag = SPA
-		has_reform = hispanic_kingdom
+		AND = {
+			owns_all_provinces = {
+				region = iberia_region
+			}
+			OR = {
+				tag = SPA
+				has_reform = crown_of_aragon
+				have_had_reform = crown_of_aragon
+				has_reform = crown_of_castille
+				have_had_reform = crown_of_castille
+				has_reform = hispanic_kingdom
+				have_had_reform = hispanic_kingdom
+			}
+			OR = {
+				primary_culture = castillian
+				primary_culture = leonese
+				primary_culture = asturian
+				primary_culture = galician
+				primary_culture = balearic
+				primary_culture = aragonese
+				primary_culture = catalan_new
+				primary_culture = valencian
+			}
+			religion_group = christian
+		}
 	}
 	valid_for_nation_designer = yes
 	nation_designer_cost = 25
@@ -1070,12 +1105,12 @@ enlightened_despotism_reform = {
 	icon = spain_bourbon
 	allow_normal_conversion = yes
 	potential = {
-		tag = SPA
+		culture_group = iberian
 		absolutism = 50
 		religion_group = christian
 	}
 	trigger = {
-		tag = SPA
+		culture_group = iberian
 		absolutism = 50
 		religion_group = christian
 	}
@@ -4377,7 +4412,7 @@ cossack_horde = {
 			have_had_reform = cossack_horde
 		}
 	}
-    allow_normal_conversion = yes
+	allow_normal_conversion = yes
 	raze_province = yes
 	valid_for_nation_designer = yes
 	nation_designer_cost = 0
@@ -4389,7 +4424,7 @@ cossack_horde = {
 		global_institution_spread = -0.15
 		cav_to_inf_ratio = 0.5
 		movement_speed = 0.2
-		cavalry_power = 0.10
+		cavalry_power = 0.1
 	}
 	start_territory_to_estates = 24
 	government_abilities = {
@@ -4449,6 +4484,85 @@ corsair_kingdom = {
 	}
 	has_term_election = no
 }
+
+british_republic = {
+	icon = "economy_trade"
+	allow_normal_conversion = no
+	potential = {
+		AND = {
+			tag = GBR
+			culture_group = british
+		}
+	}
+	trigger = {
+		AND = {
+			tag = GBR
+			culture_group = british
+		}
+	}
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 15
+	fixed_rank = 3
+	nation_designer_trigger = {
+		has_dlc = "Common Sense"
+	}
+	legacy_equivalent = oligarchic_republic
+	start_territory_to_estates = 0.3
+	modifiers = {
+		governing_capacity = 50
+		legitimacy = 0.5
+		global_unrest = -1
+		max_absolutism = -30
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
+	}
+}
+
+english_republic = {
+	icon = "england_james"
+	allow_normal_conversion = no
+	potential = {
+		have_had_reform = english_republic
+		TAG = ENG
+	}
+	trigger = {
+		have_had_reform = english_republic
+		TAG = ENG
+	}
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 15
+	fixed_rank = 2
+	nation_designer_trigger = {
+		has_dlc = "Common Sense"
+	}
+	legacy_equivalent = oligarchic_republic
+	start_territory_to_estates = 0.3
+	modifiers = {
+		governing_capacity = 50
+		legitimacy = 0.5
+		global_unrest = -1
+		max_absolutism = -30
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+	}
+	custom_attributes = {
+		blocked_call_diet = yes
+	}
+}
+
 ##############################################
 ################ THEOCRACIES #################
 ##############################################
@@ -4524,7 +4638,6 @@ fraticelli_papacy_reform = {
 	}
 }
 
-
 insular_monastic_order_reform = {
 	potential = {
 		NOT = {
@@ -4555,4 +4668,80 @@ insular_monastic_order_reform = {
 	legacy_equivalent = monastic_order_government
 	monastic = yes
 	fixed_rank = 1
+}
+
+british_theocracy = {
+	icon = "bishop"
+	allow_normal_conversion = no
+	potential = {
+		AND = {
+			tag = GBR
+			culture_group = british
+		}
+	}
+	trigger = {
+		AND = {
+			tag = GBR
+			culture_group = british
+		}
+	}
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 15
+	fixed_rank = 3
+	nation_designer_trigger = {
+		has_dlc = "Common Sense"
+	}
+	legacy_equivalent = english_monarchy_legacy
+	start_territory_to_estates = 0.3
+	modifiers = {
+		governing_capacity = 50
+		legitimacy = 0.5
+		global_unrest = -1
+		max_absolutism = -30
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+		custom_attributes = {
+			blocked_call_diet = yes
+		}
+	}
+}
+
+english_theocracy = {
+	icon = "bishop's_law"
+	allow_normal_conversion = no
+	potential = {
+		have_had_reform = english_monarchy
+	}
+	trigger = {
+		have_had_reform = english_monarchy
+	}
+	lock_level_when_selected = yes
+	valid_for_nation_designer = yes
+	nation_designer_cost = 15
+	fixed_rank = 2
+	nation_designer_trigger = {
+		has_dlc = "Common Sense"
+	}
+	legacy_equivalent = english_monarchy_legacy
+	start_territory_to_estates = 0.3
+	modifiers = {
+		governing_capacity = 50
+		legitimacy = 0.5
+		global_unrest = -1
+		max_absolutism = -30
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Common Sense"
+		}
+		has_parliament = yes
+	}
+	custom_attributes = {
+		blocked_call_diet = yes
+	}
 }

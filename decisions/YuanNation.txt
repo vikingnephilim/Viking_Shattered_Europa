@@ -12,9 +12,6 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				exists = YUA
 			}
 			NOT = {
@@ -88,9 +85,6 @@ country_decisions = {
 		}
 		allow = {
 			culture_group = altaic
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			stability = 2
 			owns_core_province = 723			#Xilin Gol
@@ -157,6 +151,15 @@ country_decisions = {
 		}
 		effect = {
 			restore_country_name_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = chinese
+					}
+				}
+				change_technology_group = chinese
+				change_unit_type = chinese
+			}
 			1816 = {
 				add_base_tax = 1
 				add_base_production = 1

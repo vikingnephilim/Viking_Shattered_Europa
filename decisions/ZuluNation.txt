@@ -6,19 +6,7 @@ country_decisions = {
 			NOT = {
 				has_country_flag = zulu_attracted_flag
 			}
-			NOT = {
-				government = codex
-			}
-			if = {
-				limit = {
-					has_dlc = "Origins"
-					has_mission = zim_militarize_the_nguni
-				}
-				has_country_flag = can_attract_zulu
-			}
-			else = {
-				culture_group = southern_african
-			}
+			culture_group = southern_african
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -54,9 +42,6 @@ country_decisions = {
 			NOT = {
 				exists = ZUL
 			}
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			789 = {
 				owned_by = ROOT
@@ -75,10 +60,18 @@ country_decisions = {
 				}
 				num_of_cities = 3
 			}
-			adm_tech = 15
 		}
 		effect = {
 			restore_country_name_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = bantu
+					}
+				}
+				change_technology_group = bantu
+				change_unit_type = bantu
+			}
 			custom_tooltip = zulu_nation_ct
 			set_country_flag = zulu_attracted_flag
 			clr_country_flag = can_attract_zulu

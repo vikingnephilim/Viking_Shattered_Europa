@@ -1,10 +1,16 @@
 #Country Name: Please see filename.
-
 graphical_culture = westerngfx
+color = {
+	32
+	144
+	204
+}
 
-color = { 32	144	204 }
-
-revolutionary_colors = { 5 8 13 }
+revolutionary_colors = {
+	5
+	8
+	13
+}
 
 historical_idea_groups = {
 	defensive_ideas
@@ -18,21 +24,31 @@ historical_idea_groups = {
 }
 
 historical_units = {
-	western_medieval_infantry
-	western_medieval_knights
+	western_archers
 	western_men_at_arms
-	swiss_landsknechten
-	dutch_maurician
-	french_caracolle
-	anglofrench_line
-	french_dragoon
-	french_bluecoat
-	french_cuirassier
-	french_impulse
-	mixed_order_infantry
-	open_order_cavalry
-	napoleonic_square
-	napoleonic_lancers
+	western_halberdmen
+	western_pikemen
+	western_matchlock_shooter
+	western_charge_infantry
+	western_reformed_shooter_infantry
+	western_grenadiers
+	western_regiment_of_foot
+	western_line_infantry
+	western_red_coat_infantry
+	western_square_infantry
+	western_drill_infantry
+	western_mixed_infantry
+	western_trench_infantry
+	western_horsemen
+	western_joust_knights
+	western_black_knights
+	western_caracole_cavalry
+	western_gallop_cavalry
+	western_dragoons
+	western_carabiners
+	western_hussars
+	western_lancers
+	western_household_cavalry
 }
 
 monarch_names = {
@@ -51,7 +67,7 @@ monarch_names = {
 	"Bernat #0" = 0
 	"Bertran #0" = 0
 	"Brun #0" = 0
-	"Carles #0" = 0	
+	"Carles #0" = 0
 	"Eneco #0" = 0
 	"Enric #0" = 0
 	"Estève #0" = 0
@@ -75,7 +91,6 @@ monarch_names = {
 	"Vicentz #0" = 0
 	"Vivian #0" = 0
 	"Xavier #0" = 0
-	
 	"Olivie #0" = -1
 	"Ninette #0" = -1
 	"Rosalie #0" = -1
@@ -84,41 +99,131 @@ monarch_names = {
 leader_names = {
 	Aller
 	Detmold
-	Hamelm Hildesheim
+	Hamelm
+	Hildesheim
 	Kapp
 	Minden
 	Oldenburg
 	Salzgitter
-	Werden Wernigerode
+	Werden
+	Wernigerode
 }
 
 ship_names = {
-	Adour Africain Aigle "Aigle d'Or" "Aimable Nanon"
-	"Aimable Marthe" "Aimable Rose" Alexandre "Ste Anne de Bordeaux" Amitié
-	Angélique Américain Amphitrite "Arc en Ciel" Bayonnaise 
-	"Belle Poule" Bienfaisant Biscayenne Bizarre "Bonnes Amies" 
-	Bordelais Brillant Caroline Castor Catiche
-	Charente "Charmante Manon" "Charmante Nancy" "Charmante Rachel" "Château de Bayonne"
-	Chézine "Commerce de Bordeaux" "Comte de Toulouse" Content Débonnaire
-	Dédaigneuse "Deux Frères" Diamant Diligente "Duc d'Aquitaine"
-	Elisabeth Entreprenante Espérance Extravagante Favori
-	Fendant Flamand Gaillard Galant Godichon
-	"Grand Coureur" "Grand Sirius" "Gros Ventre" Hercule Hermine 
-	Impérieuse Indien Intrépide Jolie Joseph
-	Labourt Laurence Légère Licorne Lion
-	Machault Marchand Mars Mascarin Maure
-	Mégère Mélampe Mignon Neptune "Nouvelle Victoire"
-	Oiseau Opale Pélican Phénix Pollux
-	"Quatre Frères" Rameau "Reine Marie" Renommée Rostan
-	"Royal Daim" "Saint Jacques" "Saint Pierre" Sirène "Soleil Royal"
-	Swinton Tamponne "Toison d'Or" Tourterelle Trinité
-	Triton Utile Valeur Vénus "Ville de Bayonne"
+	Adour
+	Africain
+	Aigle
+	"Aigle d'Or"
+	"Aimable Nanon"
+	"Aimable Marthe"
+	"Aimable Rose"
+	Alexandre
+	"Ste Anne de Bordeaux"
+	Amitié
+	Angélique
+	Américain
+	Amphitrite
+	"Arc en Ciel"
+	Bayonnaise
+	"Belle Poule"
+	Bienfaisant
+	Biscayenne
+	Bizarre
+	"Bonnes Amies"
+	Bordelais
+	Brillant
+	Caroline
+	Castor
+	Catiche
+	Charente
+	"Charmante Manon"
+	"Charmante Nancy"
+	"Charmante Rachel"
+	"Château de Bayonne"
+	Chézine
+	"Commerce de Bordeaux"
+	"Comte de Toulouse"
+	Content
+	Débonnaire
+	Dédaigneuse
+	"Deux Frères"
+	Diamant
+	Diligente
+	"Duc d'Aquitaine"
+	Elisabeth
+	Entreprenante
+	Espérance
+	Extravagante
+	Favori
+	Fendant
+	Flamand
+	Gaillard
+	Galant
+	Godichon
+	"Grand Coureur"
+	"Grand Sirius"
+	"Gros Ventre"
+	Hercule
+	Hermine
+	Impérieuse
+	Indien
+	Intrépide
+	Jolie
+	Joseph
+	Labourt
+	Laurence
+	Légère
+	Licorne
+	Lion
+	Machault
+	Marchand
+	Mars
+	Mascarin
+	Maure
+	Mégère
+	Mélampe
+	Mignon
+	Neptune
+	"Nouvelle Victoire"
+	Oiseau
+	Opale
+	Pélican
+	Phénix
+	Pollux
+	"Quatre Frères"
+	Rameau
+	"Reine Marie"
+	Renommée
+	Rostan
+	"Royal Daim"
+	"Saint Jacques"
+	"Saint Pierre"
+	Sirène
+	"Soleil Royal"
+	Swinton
+	Tamponne
+	"Toison d'Or"
+	Tourterelle
+	Trinité
+	Triton
+	Utile
+	Valeur
+	Vénus
+	"Ville de Bayonne"
 }
 
 army_names = {
-	"Armée d'Aquitaine" "Armée du Bordelais" "Armée du Blayais"
-	"Armée du Pays de Buch" "Armée du Bazadais" "Armée du Queyran"
-	"Armée du Fronsadais" "Armée du Libournais" "Armée de Castillon" 
-	"Armée d'Albret" "Armée de la Garonne" "Armée de l'Agenais"
-	"Armée de $PROVINCE$" 
+	"Armée d'Aquitaine"
+	"Armée du Bordelais"
+	"Armée du Blayais"
+	"Armée du Pays de Buch"
+	"Armée du Bazadais"
+	"Armée du Queyran"
+	"Armée du Fronsadais"
+	"Armée du Libournais"
+	"Armée de Castillon"
+	"Armée d'Albret"
+	"Armée de la Garonne"
+	"Armée de l'Agenais"
+	"Armée de $PROVINCE$"
 }

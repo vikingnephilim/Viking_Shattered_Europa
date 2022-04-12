@@ -7,9 +7,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_lotharingia_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -55,9 +52,6 @@ country_decisions = {
 			NOT = {
 				exists = LOT
 			}
-			NOT = {
-				government = codex
-			}
 			num_of_cities = 30
 			owns_core_province = 1878
 			1878 = {
@@ -75,6 +69,15 @@ country_decisions = {
 				move_capital_effect = yes
 			}
 			change_tag = LOT
+			if = {
+				limit = {
+					NOT = {
+						technology_group = western
+					}
+				}
+				change_technology_group = western
+				change_unit_type = western
+			}
 			swap_non_generic_missions = yes
 			if = {
 				limit = {

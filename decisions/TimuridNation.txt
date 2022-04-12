@@ -125,9 +125,6 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				tag = PAP
 			}
 			NOT = {
@@ -188,9 +185,6 @@ country_decisions = {
 			NOT = {
 				exists = TIM
 			}
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			owns_core_province = 446			# Herat
 			owns_core_province = 454			# Samarkand
@@ -218,6 +212,15 @@ country_decisions = {
 			change_tag = TIM
 			restore_country_name_effect = yes
 			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = persian
+					}
+				}
+				change_technology_group = persian
+				change_unit_type = persian
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {

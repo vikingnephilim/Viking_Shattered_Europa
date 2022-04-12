@@ -15,9 +15,6 @@ country_decisions = {
 				tag = HLR
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				tag = CRO
 			}
 			NOT = {
@@ -103,9 +100,6 @@ country_decisions = {
 			NOT = {
 				exists = CRO
 			}
-			NOT = {
-				government = codex
-			}
 			is_nomad = no
 			is_at_war = no
 			OR = {
@@ -129,6 +123,15 @@ country_decisions = {
 		effect = {
 			add_prestige = 25
 			restore_country_name_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = balkan
+					}
+				}
+				change_technology_group = balkan
+				change_unit_type = balkan
+			}
 			131 = {
 				# Zagreb
 				move_capital_effect = yes

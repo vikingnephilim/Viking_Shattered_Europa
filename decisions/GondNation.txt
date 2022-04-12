@@ -17,9 +17,6 @@ country_decisions = {
 				}
 				ai = no
 			}
-			NOT = {
-				government = codex
-			}
 			culture_group = central_indic
 			OR = {
 				ai = no
@@ -72,9 +69,6 @@ country_decisions = {
 				#Nagpur
 				is_state = yes
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				owns_core_province = 552				#Cuttack
 				owns_core_province = 548				#Illichpur
@@ -83,6 +77,15 @@ country_decisions = {
 		effect = {
 			546 = {
 				move_capital_effect = yes
+			}
+			if = {
+				limit = {
+					NOT = {
+						technology_group = indian
+					}
+				}
+				change_technology_group = indian
+				change_unit_type = indian
 			}
 			restore_country_name_effect = yes
 			change_tag = NAG

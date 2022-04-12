@@ -29,9 +29,6 @@ country_decisions = {
 			NOT = {
 				tag = PAP
 			}
-			NOT = {
-				government = codex
-			}
 			primary_culture = georgian
 			is_colonial_nation = no
 			OR = {
@@ -114,12 +111,18 @@ country_decisions = {
 				owns_core_province = 2196				#Guria
 				owns_core_province = 4303				#Tao
 			}
-			NOT = {
-				government = codex
-			}
 		}
 		effect = {
 			change_tag = GEO
+			if = {
+				limit = {
+					NOT = {
+						technology_group = caucasian
+					}
+				}
+				change_technology_group = caucasian
+				change_unit_type = caucasian
+			}
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {

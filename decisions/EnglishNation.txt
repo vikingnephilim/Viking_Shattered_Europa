@@ -21,9 +21,6 @@ country_decisions = {
 			NOT = {
 				tag = KOI
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				primary_culture = english
 				primary_culture = anglosaxon
@@ -55,9 +52,6 @@ country_decisions = {
 			NOT = {
 				exists = ENG
 			}
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 236			# London
 			owns_core_province = 237			# Oxfordshire
 			owns_core_province = 234			# Wessex
@@ -72,6 +66,15 @@ country_decisions = {
 				change_culture = english
 			}
 			change_tag = ENG
+			if = {
+				limit = {
+					NOT = {
+						technology_group = western
+					}
+				}
+				change_technology_group = western
+				change_unit_type = western
+			}
 			change_primary_culture = english
 			set_ruler_culture = english
 			set_heir_culture = english

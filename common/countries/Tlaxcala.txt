@@ -1,9 +1,16 @@
 #Country Name: Please see filename.
-
 graphical_culture = southamericagfx
+color = {
+	148
+	149
+	21
+}
 
-color = { 148  149  21 } 
-revolutionary_colors = { 16  5  16 }
+revolutionary_colors = {
+	16
+	5
+	16
+}
 
 historical_idea_groups = {
 	religious_ideas
@@ -17,13 +24,23 @@ historical_idea_groups = {
 }
 
 historical_units = {
-	mesoamerican_spearmen
-	central_american_horsemen
-	aztec_tribal_warfare
-	aztec_hill_warfare
-	aztec_gunpowder_warfare
-	westernized_aztec
-	mexican_guerilla_warfare
+	mesoamerican_archers
+	mesoamerican_men_at_arms
+	mesoamerican_plains_warfare
+	mesoamerican_horsemen
+	mesoamerican_forest_warfare
+	mesoamerican_hill_warfare
+	mesoamerican_pikemen
+	mesoamerican_rifle_cavalry
+	mesoamerican_tribal_gunners
+	mesoamerican_arquebusier
+	mesoamerican_hussar
+	mesoamerican_guerilla_warfare
+	mesoamerican_westernised_infantry
+	mesoamerican_swarm
+	mesoamerican_reformed_westernised_infantry
+	mesoamerican_tenochtitlan_guard
+	mesoamerican_dragoon
 }
 
 monarch_names = {
@@ -55,37 +72,151 @@ monarch_names = {
 	"Xocoyol #0" = 0
 	"Yaztachimal #0" = 0
 	"Zolton #0" = 0
-	
 	"Centehua #0" = -1
 	"Moyolehuani #0" = -1
 	"Yaotl #0" = -1
 }
 
 leader_names = {
-        Acatlotzin Ahuítzotl Axayacátl Axoquetzin Cacamatzin Chalchiutlatonac Cuauhtemoc Cuitlahuac Cuitlalpitoc
-	Ecatzin Eyahue Ezhuahuacatl Huemac Huestzin Huitzilihuitl Itzcoatl Ixtlilxochitl Izquemitl
-	Mazatl Maxixcatzin Moctezuma Motelchiuh Nauyotl Nezahualpilli Nopaltzin
-	Ocelopan Olintecke Opochtli Oquitzin Panitzin Pimotl Popopoyotl
-	Quahcoatl Qualpopoca Quilaztli Quimichetl Temilotecatl Tezozomoc Tizoc Totoquihuatzin Tzompantli
-	Xiconocatzin Xochipanitzin Xolotl Xomimitl Yaomauhitzin Yaztachimal Zincicha Zoanacochtzin Zolton
+	Acatlotzin
+	Ahuítzotl
+	Axayacátl
+	Axoquetzin
+	Cacamatzin
+	Chalchiutlatonac
+	Cuauhtemoc
+	Cuitlahuac
+	Cuitlalpitoc
+	Ecatzin
+	Eyahue
+	Ezhuahuacatl
+	Huemac
+	Huestzin
+	Huitzilihuitl
+	Itzcoatl
+	Ixtlilxochitl
+	Izquemitl
+	Mazatl
+	Maxixcatzin
+	Moctezuma
+	Motelchiuh
+	Nauyotl
+	Nezahualpilli
+	Nopaltzin
+	Ocelopan
+	Olintecke
+	Opochtli
+	Oquitzin
+	Panitzin
+	Pimotl
+	Popopoyotl
+	Quahcoatl
+	Qualpopoca
+	Quilaztli
+	Quimichetl
+	Temilotecatl
+	Tezozomoc
+	Tizoc
+	Totoquihuatzin
+	Tzompantli
+	Xiconocatzin
+	Xochipanitzin
+	Xolotl
+	Xomimitl
+	Yaomauhitzin
+	Yaztachimal
+	Zincicha
+	Zoanacochtzin
+	Zolton
 }
 
 ship_names = {
-	Acolmiztli Acolnahuacat "Ah Hoya" "Ah Tzenul" Amimitl Apanecatl Atl Atlau Axoloa
-	Camaxtli Centeot Centzonuiznaua Chalchiuhtlatonal Chalchiuhtlicue Chalchiutotolin Chalmecalt Chalmecaucihuilt
-	Chantico Chichomexochtli Chicomecoatl Chiconahuai Chihalma Chualchihuitlcue Cihuacaotyl Cinteotl
-	Citlalatonac Citlalicue Ciucoatl Coatlicue Cochimetl Coyolxauhqui Cuauhcoatl 
-	Ehehcatl Eueucoyotl
-	"Hopop Can" Huehueteotl Huitzilopochtli Huixtocihuatl
-	Itzcoliuhqui Itzli Itzpapalotl Itzpzpalotl Ixtlilton Iztamixcoatzin
-	Macuilxochitl Mahayuel Malinalxochi Matalcueye Metztli Mictlan Mictlancihuntl Mictlantechtle
-	Mictlantechupi Mictlantecihuatl Mixcoatl
+	Acolmiztli
+	Acolnahuacat
+	"Ah Hoya"
+	"Ah Tzenul"
+	Amimitl
+	Apanecatl
+	Atl
+	Atlau
+	Axoloa
+	Camaxtli
+	Centeot
+	Centzonuiznaua
+	Chalchiuhtlatonal
+	Chalchiuhtlicue
+	Chalchiutotolin
+	Chalmecalt
+	Chalmecaucihuilt
+	Chantico
+	Chichomexochtli
+	Chicomecoatl
+	Chiconahuai
+	Chihalma
+	Chualchihuitlcue
+	Cihuacaotyl
+	Cinteotl
+	Citlalatonac
+	Citlalicue
+	Ciucoatl
+	Coatlicue
+	Cochimetl
+	Coyolxauhqui
+	Cuauhcoatl
+	Ehehcatl
+	Eueucoyotl
+	"Hopop Can"
+	Huehueteotl
+	Huitzilopochtli
+	Huixtocihuatl
+	Itzcoliuhqui
+	Itzli
+	Itzpapalotl
+	Itzpzpalotl
+	Ixtlilton
+	Iztamixcoatzin
+	Macuilxochitl
+	Mahayuel
+	Malinalxochi
+	Matalcueye
+	Metztli
+	Mictlan
+	Mictlancihuntl
+	Mictlantechtle
+	Mictlantechupi
+	Mictlantecihuatl
+	Mixcoatl
 	Nanauatzin
-	Ococaltzin Omecihuatl Ometecuhlti Ometeotl Omeyocan
-	Patecatli Paynal
+	Ococaltzin
+	Omecihuatl
+	Ometecuhlti
+	Ometeotl
+	Omeyocan
+	Patecatli
+	Paynal
 	Quetzalcoatl
-	Tecciztecatl Teoyaomqui Tepeyollotl Teteoinnan Tezacoatl Tezcatlipoca Tillan-Tlapallan Tlaloc
-	Tlalocan Tlaltechhtlii Tlazolteotl Tonacatecuhtli Tonatiuhican Tonatiuth Tzitmime
-	Xilonen "Xipe Totec" Xiucoatl Xiuhtecuhtli Xochipilli Xochiquetzal Xolotl Xonecuilli
+	Tecciztecatl
+	Teoyaomqui
+	Tepeyollotl
+	Teteoinnan
+	Tezacoatl
+	Tezcatlipoca
+	Tillan-Tlapallan
+	Tlaloc
+	Tlalocan
+	Tlaltechhtlii
+	Tlazolteotl
+	Tonacatecuhtli
+	Tonatiuhican
+	Tonatiuth
+	Tzitmime
+	Xilonen
+	"Xipe Totec"
+	Xiucoatl
+	Xiuhtecuhtli
+	Xochipilli
+	Xochiquetzal
+	Xolotl
+	Xonecuilli
 	Yacatechutli
 }

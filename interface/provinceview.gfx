@@ -1,5 +1,53 @@
 spriteTypes = {
 
+	###IR
+	spriteType = {
+		name = "GFX_IR_province_management"
+		texturefile = "gfx/interface/IR_province_management.dds"
+	} 
+	spriteType = {
+		name = "GFX_IR_pop_icon"
+		texturefile = "gfx/interface/IR_pop_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_IR_wealth_growth"
+		texturefile = "gfx/interface/IR_wealth_growth.dds"
+	}
+	spriteType = {
+		name = "GFX_IR_good_growth"
+		texturefile = "gfx/interface/IR_good_growth.dds"
+	}
+	spriteType = {
+		name = "GFX_IR_blank_icon"
+		texturefile = "gfx/interface/IR_blank_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_build_interface_institutions_tab_new"
+		texturefile = "gfx/interface//build_interface_institutions_tab_new.dds"
+		noOfFrames = 2
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}	
+	spriteType = {
+		name = "GFX_build_interface_history_tab"
+		texturefile = "gfx/interface//build_interface_history_tab.dds"
+		noOfFrames = 2
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	spriteType = {
+		name = "GFX_build_interface_census_tab"
+		texturefile = "gfx/interface//build_interface_census_tab.dds"
+		noOfFrames = 2
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	spriteType = {
+		name = "GFX_transfer_occupation_tab"
+		texturefile = "gfx/interface//transfer_occupation_tab.dds"
+		noOfFrames = 2
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	
+	###
+	
 	spriteType = {
 		name = "GFX_icon_no_institution"
 		texturefile = "gfx//interface//estates_icons.dds"
@@ -16,7 +64,6 @@ spriteTypes = {
 		name = "GFX_province_institutions_button"
 		texturefile = "gfx/interface/institutions//province_institutions_button.dds"
 	}	
-
 
 	
 	spriteType = {
@@ -114,7 +161,7 @@ spriteTypes = {
 		name = "GFX_maintenance_icon"
 		texturefile = "gfx/interface/maintenance_icon.dds"
 	}
-
+	
 	spriteType = {
 		name = "GFX_maintenance_lock_icon"
 		texturefile = "gfx/interface/maintenance_lock_icon.dds"
@@ -306,8 +353,8 @@ spriteTypes = {
 
 	spriteType = {
 		name = "GFX_province_view_religion"
-		texturefile = "gfx//interface//province_view_religion.dds"
-		noOfFrames = 29
+		texturefile = "gfx//interface//province_view_religion.tga"
+		noOfFrames = 28
 		loadType = "INGAME"
 	}
 	spriteType = {
@@ -553,7 +600,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_amount_of_cawa"
 		texturefile = "gfx/interface/ideas_EU4/amount_of_cawa.dds"
-	}	
+	}
 	
 	spriteType = {
 		name = "GFX_sort_state_core"
@@ -628,14 +675,14 @@ spriteTypes = {
 		loadType = "INGAME"
 		transparencecheck = yes
 	}	
-		
+	
 	spriteType = {
 		name = "GFX_provinceview_foreign_bg_new"
 		texturefile = "gfx/interface/provinceview_foreign_bg_new.dds"
 		loadType = "INGAME"
 		transparencecheck = yes
-	}	
-
+	}
+	
 	spriteType = {	
 		name = "GFX_move_capital"
 		texturefile = "gfx//interface//move_capital.dds"
@@ -727,6 +774,11 @@ spriteTypes = {
 	}	
 	
 	spriteType = {
+		name = "GFX_province_governing_cost"
+		texturefile = "gfx/interface/province_governing_cost.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_icon_add_core"
 		texturefile = "gfx//interface//icon_add_core.tga"
 	}
@@ -740,11 +792,6 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_client_state_button"
 		texturefile = "gfx/interface/client_state_button.dds"
-	}
-	
-	spriteType = {
-		name = "GFX_province_governing_cost"
-		texturefile = "gfx/interface/province_governing_cost.dds"
 	}
 
 	spriteType = {
@@ -975,14 +1022,14 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_resource_icon"
 		texturefile = "gfx//interface//resources.tga"
-		noOfFrames = 36
+		noOfFrames = 109
 		loadType = "INGAME"
 	}
 	
 	spriteType = {
 		name = "GFX_resource_icon_small"
 		texturefile = "gfx//interface//resources_small.dds"
-		noOfFrames = 36
+		noOfFrames = 109
 		loadType = "INGAME"
 	}
 
@@ -995,7 +1042,7 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_resource_icon_transparent"
 		texturefile = "gfx//interface//resources.tga"
-		noOfFrames = 36
+		noOfFrames = 109
 		loadType = "INGAME"
 		
 		alwaystransparent = yes
@@ -1309,11 +1356,6 @@ spriteTypes = {
 	}
 	
 	spriteType = {
-		name = "GFX_in_territory_icon"
-		texturefile = "gfx/interface/in_territory_icon.dds"
-	}
-	
-	spriteType = {
 		name = "GFX_supply_depots_icon"
 		texturefile = "gfx/interface/supply_depots_icon.dds"
 		noOfFrames = 2
@@ -1327,23 +1369,28 @@ spriteTypes = {
 		name = "GFX_abandon_state_button"
 		texturefile = "gfx/interface/abandon_state_button.dds"
 	}	
-		spriteType = {
-		name = "GFX_concentrate_development"
-		texturefile = "gfx/interface/concentrate_development.dds"
-	}	
+	spriteType = {
+		name = "GFX_in_territory_icon"
+		texturefile = "gfx/interface/in_territory_icon.dds"
+	}
 	spriteType = {
 		name = "GFX_core_all_button"
 		texturefile = "gfx/interface/core_all_button.dds"
 	}	
 	spriteType = {
+		name = "GFX_concentrate_development"
+		texturefile = "gfx/interface/concentrate_development.dds"
+	}	
+	spriteType = {
 		name = "GFX_centralize_state_button"
 		texturefile = "gfx/interface/centralize_state.dds"
 	}	
-
+	
+	
 	spriteType = {
-		name = "GFX_settlement_g_button"
-		#texturefile = "gfx/interface/settlement_growth_button.dds"
-		texturefile = "gfx/interface/development_button_tax.dds"
+		name = "GFX_settlement_growth_button"
+		texturefile = "gfx/interface/settlement_growth_button.dds"
+		#texturefile = "gfx/interface/development_button_tax.dds"
 	}
 	spriteType = {
 		name = "GFX_center_of_revolution"
@@ -1356,9 +1403,9 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_revolution_spreading"
 		texturefile = "gfx/interface/revolution/spread_of_revolution_63x63.dds"
-	
-	
 	}
+	
+	
 	spriteType = {
 		name = "GFX_great_project_level_icon_tier_0"
 		texturefile = "gfx/interface/great_projects/great_projects_level_icons/great_project_level_icon_tier_0.dds"
@@ -1389,11 +1436,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/great_projects/great_projects_level_icons/great_project_level_icon_upgrade_money.dds"
 	}
 	
+	
 	spriteType = {
 		name = "GFX_great_project_level_icon_upgrade_manpower"
 		texturefile = "gfx/interface/great_projects/great_projects_level_icons/great_project_level_icon_upgrade_manpower.dds"
-	}
-			
+	}	
+	
 	spriteType = {
 		name = "GFX_great_project_level_icon_empty_bg"
 		texturefile = "gfx/interface/great_projects/great_projects_level_icons/great_project_level_icon_empty_bg.dds"
@@ -1403,30 +1451,25 @@ spriteTypes = {
 		name = "GFX_great_project_level_icon_move"
 		texturefile = "gfx/interface/great_projects/great_projects_level_icons/great_project_level_icon_move.dds"
 	}
-
 	spriteType = {
 		name = "GFX_provinceview_great_projects_bg"
 		texturefile = "gfx/interface/great_projects/provinceview_great_projects_bg.dds"
 	}
-
 	spriteType = {
 		name = "GFX_settle_tribe_button"
 		texturefile = "gfx/interface/settle_tribe_button.dds"
 	}
-
 	spriteType = {
 		name = "GFX_centralize_state"
 		texturefile = "gfx/interface/ideas_EU4/centralize_state_mod.dds"
 	}
-
 	spriteType = {
 		name = "GFX_recent_uprising"
 		texturefile = "gfx/interface/ideas_EU4/recent_uprising.dds"
 	}
-
 	spriteType = {
 		name = "GFX_autonomy_increased"
 		texturefile = "gfx/interface/ideas_EU4/autonomy_increased.dds"
 	}
-
+	
 }

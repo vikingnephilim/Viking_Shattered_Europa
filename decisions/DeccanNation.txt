@@ -17,9 +17,6 @@ country_decisions = {
 				}
 				ai = no
 			}
-			NOT = {
-				government = codex
-			}
 			religion_group = muslim
 			OR = {
 				culture_group = dravidian
@@ -69,9 +66,6 @@ country_decisions = {
 			NOT = {
 				exists = DEC
 			}
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			owns_core_province = 1948			#Bidar
 			owns_core_province = 542			#Hyderabad
@@ -91,6 +85,15 @@ country_decisions = {
 			restore_country_name_effect = yes
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = indian
+					}
+				}
+				change_technology_group = indian
+				change_unit_type = indian
+			}
 			set_government_rank = 3
 			deccan_region = {
 				limit = {

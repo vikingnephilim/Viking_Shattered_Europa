@@ -7,9 +7,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_denmark_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -72,15 +69,21 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 6			# Skane
 			owns_core_province = 12			# Sjaeland
 			owns_core_province = 15			# Jutland
 		}
 		effect = {
 			change_tag = DAN
+			if = {
+				limit = {
+					NOT = {
+						technology_group = nordic
+					}
+				}
+				change_technology_group = nordic
+				change_unit_type = nordic
+			}
 			change_government = monarchy
 			add_government_reform = arch_king_reform
 			restore_country_name_effect = yes
@@ -157,9 +160,6 @@ country_decisions = {
 				exists = SWE
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				tag = PAP
 			}
 			NOT = {
@@ -217,9 +217,6 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 1			# Uppland
 			owns_core_province = 6			# Skane
 			owns_core_province = 7			# Vastergotland
@@ -228,6 +225,15 @@ country_decisions = {
 		effect = {
 			restore_country_name_effect = yes
 			change_tag = SWE
+			if = {
+				limit = {
+					NOT = {
+						technology_group = nordic
+					}
+				}
+				change_technology_group = nordic
+				change_unit_type = nordic
+			}
 			change_government = monarchy
 			add_government_reform = office_of_lord_regent_reform
 			if = {
@@ -303,9 +309,6 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				exists = NOR
 			}
 			NOT = {
@@ -369,9 +372,6 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 9
 			owns_core_province = 10
 			owns_core_province = 17
@@ -387,6 +387,15 @@ country_decisions = {
 		effect = {
 			restore_country_name_effect = yes
 			change_tag = NOR
+			if = {
+				limit = {
+					NOT = {
+						technology_group = nordic
+					}
+				}
+				change_technology_group = nordic
+				change_unit_type = nordic
+			}
 			change_government = monarchy
 			add_government_reform = office_of_lord_regent_reform
 			if = {
@@ -462,9 +471,6 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				exists = SCA
 			}
 			NOT = {
@@ -511,9 +517,6 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 1			# Uppland
 			owns_core_province = 6			# Skane
 			owns_core_province = 7			# Vastergotland
@@ -524,6 +527,15 @@ country_decisions = {
 		effect = {
 			restore_country_name_effect = yes
 			change_tag = SCA
+			if = {
+				limit = {
+					NOT = {
+						technology_group = nordic
+					}
+				}
+				change_technology_group = nordic
+				change_unit_type = nordic
+			}
 			add_government_reform = SCA_arch_king_reform
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
@@ -575,9 +587,6 @@ country_decisions = {
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
-			}
-			NOT = {
-				government = codex
 			}
 			NOT = {
 				exists = SCA
@@ -642,9 +651,6 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 1			# Stockholm
 			owns_core_province = 6			# Skane
 			owns_core_province = 12			# Sjaelland
@@ -664,6 +670,15 @@ country_decisions = {
 		effect = {
 			restore_country_name_effect = yes
 			change_tag = NSE
+			if = {
+				limit = {
+					NOT = {
+						technology_group = nordic
+					}
+				}
+				change_technology_group = nordic
+				change_unit_type = nordic
+			}
 			if = {
 				limit = {
 					government = monarchy
@@ -724,9 +739,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_jomsviking_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -782,9 +794,6 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 1			# Stockholm
 			owns_core_province = 6			# Skane
 			owns_core_province = 12			# Sjaelland
@@ -804,6 +813,15 @@ country_decisions = {
 		effect = {
 			restore_country_name_effect = yes
 			change_tag = JOM
+			if = {
+				limit = {
+					NOT = {
+						technology_group = nordic
+					}
+				}
+				change_technology_group = nordic
+				change_unit_type = nordic
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {

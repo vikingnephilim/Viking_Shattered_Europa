@@ -2,9 +2,6 @@ country_decisions = {
 	russian_nation = {
 		major = yes
 		potential = {
-			NOT = {
-				government = codex
-			}
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = {
@@ -100,9 +97,6 @@ country_decisions = {
 				exists = RUS
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				has_reform = states_general_reform
 			}
 			is_nomad = no
@@ -118,6 +112,15 @@ country_decisions = {
 			change_tag = RUS
 			set_capital = 295
 			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = russian_group
+					}
+				}
+				change_technology_group = russian_group
+				change_unit_type = russian_group
+			}
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {

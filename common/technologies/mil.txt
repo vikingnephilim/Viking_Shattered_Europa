@@ -1,882 +1,1719 @@
 monarch_power = MIL
-# applied when a country is ahead of time in this technology
-# no bonus for MIL currently
-# ahead_of_time = {
-# }
-# Pre-era techs
+# applied whena country is ahead of time inthis technology
+ahead_of_time = {
+	global_rebel_suppression_efficiency = 0.2
+	yearly_corruption = -0.05
+}
+
 technology = {
 	# Tech 0
-	year = 1350
+	year = 1200
 	sprite_level = 1
-	infantry_fire = 0.25
+	infantry_fire = 0.1
 	infantry_shock = 0.2
-	cavalry_shock = 0.8
-	land_morale = 2
+	land_morale = 1
+	fort_15th = yes
+	regimental_camp = yes
+	enable = western_swordsmen
+	enable = western_spearmen
+	enable = western_archers
+	enable = latin_swordsmen
+	enable = latin_spearmen
+	enable = latin_archers
+	enable = german_swordsmen
+	enable = german_spearmen
+	enable = german_archers
+	enable = nordic_swordsmen
+	enable = nordic_spearmen
+	enable = nordic_archers
+	enable = eastern_swordsmen
+	enable = eastern_spearmen
+	enable = eastern_archers
+	enable = greek_swordsmen
+	enable = greek_spearmen
+	enable = greek_archers
+	enable = russian_swordsmen
+	enable = russian_spearmen
+	enable = russian_archers
+	enable = balkan_swordsmen
+	enable = balkan_spearmen
+	enable = balkan_archers
+	enable = caucasian_swordsmen
+	enable = caucasian_spearmen
+	enable = caucasian_archers
+	enable = anatolian_swordsmen
+	enable = anatolian_spearmen
+	enable = anatolian_archers
+	enable = mashriqi_swordsmen
+	enable = mashriqi_spearmen
+	enable = mashriqi_archers
+	enable = maghrebi_swordsmen
+	enable = maghrebi_spearmen
+	enable = maghrebi_archers
+	enable = persian_swordsmen
+	enable = persian_spearmen
+	enable = persian_archers
+	enable = indian_swordsmen
+	enable = indian_spearmen
+	enable = indian_archers
+	#Chinese
+	enable = chinese_swordsmen
+	enable = chinese_spearmen
+	enable = chinese_archers
+	#Japanese
+	enable = japanese_swordsmen
+	enable = japanese_spearmen
+	enable = japanese_archers
+	#Indochinese
+	enable = indochinese_swordsmen
+	enable = indochinese_spearmen
+	enable = indochinese_archers
+	#Malay
+	enable = malay_swordsmen
+	enable = malay_spearmen
+	enable = malay_archers
+	enable = nomad_swordsmen
+	enable = nomad_spearmen
+	enable = nomad_archers
+	#Sahelian
+	enable = sahelian_swordsmen
+	enable = sahelian_spearmen
+	enable = sahelian_archers
+	#Guinean
+	enable = guinean_swordsmen
+	enable = guinean_spearmen
+	enable = guinean_archers
+	#Ethiopian
+	enable = ethiopian_swordsmen
+	enable = ethiopian_spearmen
+	enable = ethiopian_archers
+	#Swahili
+	enable = swahili_swordsmen
+	enable = swahili_spearmen
+	enable = swahili_archers
+	#Nyanza
+	enable = nyanza_swordsmen
+	enable = nyanza_spearmen
+	enable = nyanza_archers
+	#Kongolese
+	enable = kongolese_clubmen
+	enable = kongolese_spearmen
+	enable = kongolese_archers
+	#Bantu
+	enable = bantu_clubmen
+	enable = bantu_spearmen
+	enable = bantu_archers
+	#Khoisan
+	enable = khoisan_clubmen
+	enable = khoisan_spearmen
+	enable = khoisan_archers
+	#Siberian
+	enable = siberian_clubmen
+	enable = siberian_spearmen
+	enable = siberian_archers
+	#Papuan
+	enable = papuan_clubmen
+	enable = papuan_spearmen
+	enable = papuan_archers
+	enable = australian_clubmen
+	enable = australian_spearmen
+	enable = australian_archers
+	enable = oceanic_clubmen
+	enable = oceanic_spearmen
+	enable = oceanic_archers
+	enable = north_american_clubmen
+	enable = north_american_spearmen
+	enable = north_american_archer
+	enable = mesoamerican_clubmen
+	enable = mesoamerican_spearmen
+	enable = mesoamerican_archers
+	enable = south_american_clubmen
+	enable = south_american_spearmen
+	enable = south_american_archers
+	enable = andean_clubmen
+	enable = andean_spearmen
+	enable = andean_archers
+	enable = high_american_clubmen
+	enable = high_american_spearmen
+	enable = high_american_archers
 }
 
 technology = {
 	# Tech 1
-	year = 1390
+	year = 1215
+	combat_width = 2
+	cavalry_shock = 1
+	watchtowers = yes
 	expects_institution = {
-		feudalism = 0.25
+		feudalism = 0.1
 	}
-	infantry_shock = 0.1
-	infantry_fire = 0.1
-	fort_15th = yes
-	enable = south_american_spearmen
-	enable = native_indian_archer
-	enable = native_clubmen
-	enable = african_spearmen
-	enable = african_clubmen
-	enable = indian_archers
-	enable = mesoamerican_spearmen
-	enable = halberd_infantry
-	enable = chevauchee
-	enable = western_medieval_knights
-	enable = bardiche_infantry
-	enable = muslim_cavalry_archers
-	enable = western_medieval_infantry
-	enable = eastern_medieval_infantry
-	enable = ottoman_yaya
-	enable = chinese_longspear
-	enable = japanese_archer
-	enable = persian_footsoldier
-	enable = east_asian_spearmen
-	enable = mongolian_bow
-	enable = indian_footsoldier
-	enable = rajput_hill_fighters
-	enable = eastern_bow
-	enable = persian_cavalry_charge
-	enable = african_mandelaku
-	enable = african_abyssinian_light_cavalry
-	enable = mongol_swarm
-	enable = mongol_steppe
-	enable = mongol_bow
-	enable = eastern_knights
-	enable = druzhina_cavalry
-	enable = ottoman_musellem
-	enable = mamluk_archer
-	enable = mamluk_cavalry_charge
-	enable = south_american_warfare
-	enable = ha_xantican_warrior
-	enable = aboriginal_boomerang
-	enable = aboriginal_warrior
-	enable = pacific_spearman
+	enable = western_horsemen
+	enable = latin_horsemen
+	enable = german_horsemen
+	enable = nordic_horsemen
+	enable = eastern_horsemen
+	enable = greek_horsemen
+	enable = russian_horsemen
+	enable = balkan_horsemen
+	enable = caucasian_horsemen
+	enable = anatolian_horsemen
+	enable = mashriqi_horsemen
+	enable = maghrebi_horsemen
+	enable = persian_horsemen
+	enable = indian_horsemen
+	#Chinese
+	enable = chinese_horsemen
+	#Japanese
+	enable = japanese_horsemen
+	#Indochinese
+	enable = indochinese_horsemen
+	#Malay
+	enable = malay_horsemen
+	enable = nomad_horsemen
+	#Sahelian
+	enable = sahelian_horsemen
+	#Guinean
+	enable = guinean_horsemen
+	#Ethiopian
+	enable = ethiopian_horsemen
+	#Swahili
+	enable = swahili_horsemen
+	#Nyanza
+	enable = nyanza_horsemen
+	#Kongolese
+	enable = kongolese_horsemen
+	#Bantu
+	enable = bantu_horsemen
+	#Khoisan
+	enable = khoisan_horsemen
+	#Siberian
+	enable = siberian_horsemen
+	enable = high_american_horsemen
 }
 
 technology = {
 	# Tech 2
-	year = 1420
+	year = 1230
+	castle = yes
+	fort_16th = yes
 	expects_institution = {
-		feudalism = 0.5
+		feudalism = 0.25
 	}
-	infantry_shock = 0.2
-	cavalry_shock = 0.2
-	combat_width = 5
 }
 
-# The 30 big techs from here on
 technology = {
 	# Tech 3
-	year = 1440
+	year = 1245
+	land_morale = 0.5
 	expects_institution = {
 		feudalism = 0.5
 	}
-	land_morale = 0.5
-	may_drill = yes
-	enable = bombard
 }
 
 technology = {
 	# Tech 4
-	year = 1453
+	year = 1260
+	cavalry_shock = 0.5
+	military_tactics = 0.25
+	maneuver_value = 0.25
+	combat_width = 2
+	barracks = yes
 	expects_institution = {
 		feudalism = 0.5
 	}
-	#Pike Square
-	land_morale = 0.5
-	military_tactics = 0.25
+	enable = western_men_at_arms
+	enable = latin_men_at_arms
+	enable = german_men_at_arms
+	enable = nordic_men_at_arms
+	enable = eastern_men_at_arms
+	enable = greek_men_at_arms
+	enable = russian_men_at_arms
+	enable = balkan_men_at_arms
+	enable = caucasian_men_at_arms
+	enable = anatolian_men_at_arms
+	enable = mashriqi_men_at_arms
+	enable = maghrebi_men_at_arms
+	enable = persian_men_at_arms
+	enable = indian_men_at_arms
+	#Chinese
+	enable = chinese_men_at_arms
+	#Japanese
+	enable = japanese_men_at_arms
+	#Indochinese
+	enable = indochinese_men_at_arms
+	#Malay
+	enable = malay_men_at_arms
+	enable = nomad_men_at_arms
+	#Sahelian
+	enable = sahelian_men_at_arms
+	#Guinean
+	enable = guinean_men_at_arms
+	#Ethiopian
+	enable = ethiopian_men_at_arms
+	#Swahili
+	enable = swahili_men_at_arms
+	#Nyanza
+	enable = nyanza_men_at_arms
+	#Kongolese
+	enable = kongolese_men_at_arms
+	#Bantu
+	enable = bantu_men_at_arms
+	#Khoisan
+	enable = khoisan_men_at_arms
+	#Siberian
+	enable = siberian_men_at_arms
+	#Papuan
+	enable = papuan_men_at_arms
+	enable = australian_men_at_arms
+	enable = oceanic_men_at_arms
+	enable = north_american_men_at_arms
+	enable = mesoamerican_men_at_arms
+	enable = south_american_men_at_arms
+	enable = andean_men_at_arms
+	enable = high_american_men_at_arms
+	enable = artillery_catapult
 }
 
 technology = {
 	# Tech 5
-	year = 1466
+	year = 1275
+	land_morale = 0.5
 	expects_institution = {
 		feudalism = 0.5
-		renaissance = 0.1
 	}
-	#Standardised Pikes
-	supply_limit = 0.5
-	infantry_shock = 0.15
-	cavalry_shock = 0.2
-	enable = western_men_at_arms
-	enable = western_longbow
-	enable = gaelic_galloglaigh
-	enable = aztec_tribal_warfare
-	enable = zapotec_tribal_warfare
-	enable = songhai_tribal_warfare
-	enable = niger_kongolese_tribal_warfare
-	enable = bantu_tribal_warfare
-	enable = mali_tribal_warfare
-	enable = pueblo_ambush
-	enable = native_indian_tribal_warfare
-	enable = algonkin_tomahawk_charge
-	enable = indian_arquebusier
-	enable = eastern_militia
-	enable = mamluk_duel
-	enable = ottoman_azab
-	enable = inca_mountain_warfare
-	enable = south_american_forest_warfare
-	enable = incan_slingshots
-	enable = incan_axemen
-	enable = maya_tribal_warfare
-	enable = chinese_footsoldier
-	enable = japanese_footsoldier
-	enable = ha_reformed_xantican_warrior
-	enable = aboriginal_ambusher
-	enable = aboriginal_infantry
-	enable = aboriginal_reformed_boomerang
-	enable = pacific_reformed_spearman
-	combat_width = 2
+	enable = western_joust_knights
+	enable = latin_cavaleiros_vilaos
+	enable = nordic_axemen
+	enable = greek_ippotis
+	enable = south_american_mountain_warfare
+	enable = andean_mountain_warfare
+	enable = indian_cavalry
 }
 
 technology = {
 	# Tech 6
-	year = 1479
+	year = 1290
+	infantry_fire = 0.1
+	infantry_shock = 0.2
 	expects_institution = {
 		feudalism = 0.5
-		renaissance = 0.2
 	}
-	#Arquebus
-	military_tactics = 0.25
-	infantry_shock = 0.3
-	infantry_fire = 0.2
-	barracks = yes
-	enable = african_somali_cavalry
-	enable = african_tuareg_cavalry
-	enable = slavic_stradioti
-	enable = native_indian_horsemen
-	enable = central_american_horsemen
-	enable = south_american_horsemen
-	enable = mughal_mansabdar
-	enable = ottoman_timariot
-	enable = chinese_steppe
-	enable = japanese_samurai
-	enable = shaybani
-	enable = high_american_horsemen
-	enable = aboriginal_horseman
-	enable = pacific_horseman
-	combat_width = 2
+	enable = western_halberdmen
+	enable = latin_hermandad
+	enable = german_jaeger_zu_pferde
+	enable = german_doppelsoldern
+	enable = eastern_tabor
+	enable = greek_paltast
+	enable = russian_voyi
+	enable = russian_tatar_conscripts
+	enable = persian_ayyubid_duel_infantry
+	enable = maghrebi_duel_infantry
+	enable = muslim_duel_infantry
+	enable = balkan_oastea_mica
+	enable = caucasian_avars
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = mesoamerican_plains_warfare
+	enable = artillery_trebuchet
 }
 
 technology = {
 	# Tech 7
-	year = 1492
+	year = 1305
+	conscription_center = yes
+	land_morale = 0.5
+	military_tactics = 0.25
+	combat_width = 2
 	expects_institution = {
 		feudalism = 0.5
-		renaissance = 0.3
 	}
-	#The limber
-	artillery_fire = 1
-	artillery_shock = 0.05
-	military_tactics = 0.25
-	enable = large_cast_bronze_mortar
-	enable = houfnice
+	enable = nordic_huscarls
+	enable = eastern_szlachta_levee
+	enable = caucasian_avarian_cavalry
+	enable = anatolian_yaya
+	enable = anatolian_musellem
+	enable = muslim_shayhanid_cavalry
+	enable = maghrebi_ummayad_cavalry
+	enable = persian_ayyubid_cavalry
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	enable = steppe_riders
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = australian_warrior
+	enable = oceanic_horsemen
+	enable = north_american_tribal_warfare
+	enable = north_american_horsemen
+	enable = mesoamerican_horsemen
+	enable = south_american_horsemen
+	enable = andean_horsemen
 }
 
 technology = {
 	# Tech 8
-	year = 1505
+	year = 1320
+	artillery_fire = 1
+	artillery_shock = 0.05
 	expects_institution = {
 		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.15
 	}
-	#Pike and Shot
-	infantry_fire = 0.25
-	cavalry_shock = 0.8
-	regimental_camp = yes
+	enable = german_landsknecht
+	enable = nordic_dismounted_huscarl
+	enable = russian_lithuanian_pans
+	enable = balkan_cuman_infantry
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	enable = steppe_raiders
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = mesoamerican_forest_warfare
+	enable = south_american_forest_warfare
+	enable = andean_forest_warfare
 }
 
 technology = {
 	# Tech 9
-	year = 1518
+	year = 1335
+	cavalry_shock = 0.5
+	keep = yes
+	fort_17th = yes
+	barbican = yes
 	expects_institution = {
 		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
 	}
-	#Ditch
-	enable = conscript_tech_9
-	enable = south_indian_musketeer
-	enable = mughal_musketeer
-	enable = ottoman_janissary
-	enable = persian_shamshir
-	enable = italian_condotta
-	enable = swiss_landsknechten
-	enable = gaelic_mercenary
-	enable = germanized_pike
-	enable = asian_arquebusier
-	enable = steppe_raiders
-	enable = ha_xiuhtecuhtli_soldier
-	military_tactics = 0.25
-	combat_width = 1
+	enable = western_pikemen
+	enable = latin_condotta
+	enable = latin_acorbetados
+	enable = eastern_wojsko_kwarciane
+	enable = greek_evzones
+	enable = russian_pomestno_voisko
+	enable = indian_early_arquebusier
+	enable = indian_cavalry_archers
+	#Chinese
+	enable = muslim_shamshir
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = australian_horseman
+	enable = high_american_xantican_warrior
 }
 
 technology = {
 	# Tech 10
-	year = 1531
+	year = 1350
+	infantry_shock = 0.2
+	land_morale = 0.5
+	military_tactics = 0.25
+	combat_width = 2
+	supply_limit = 0.5
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.15
+		feudalism = 1
 	}
-	#Reiter
-	maneuver_value = 0.25
-	enable = legion_tech_10
-	enable = hungarian_hussar
-	enable = ottoman_spahi
-	enable = culverin
-	enable = pedrero
-	enable = schwarze_reiter
-	enable = african_mossi_horsemen
-	enable = african_abyssinian_cavalry
-	enable = native_indian_mountain_warfare
-	enable = aztec_hill_warfare
-	enable = maya_forest_warfare
-	enable = zapotec_plains_warfare
-	enable = south_american_gunpowder_warfare
-	enable = south_american_arquebusier
-	enable = north_american_rifle_cavalry
-	enable = central_american_rifle_cavalry
-	enable = south_american_rifle_cavalry
-	enable = qizilbash_cavalry
-	enable = east_mongolian_steppe
-	enable = indian_elephant
-	enable = steppe_riders
-	enable = high_american_rifle_cavalry
-	enable = aboriginal_outback_warriors
-	enable = aboriginal_cavalry
-	enable = pacific_island_warriors
-	enable = pacific_cavalry
+	enable = western_black_knights
+	enable = nordic_livregementat_till_hast
+	enable = eastern_winged_hussars
+	enable = greek_mavros_ippotis
+	enable = balkan_mare_spatar
+	enable = balkan_early_vlach_cavalry
+	enable = maghrebi_reformed_ummayad_cavalry
+	enable = persian_ayyubid_shamshir
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = australian_boomerang_hunter
+	enable = artillery_cannons
 }
 
 technology = {
 	# Tech 11
-	year = 1544
+	year = 1365
+	infantry_fire = 0.2
+	cavalry_fire = 0.25
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
+		feudalism = 1
+		renaissance = 1
 	}
-	#Matchlock Musket
-	infantry_shock = 0.2
-	cavalry_fire = 0.5
-	weapons = yes
-	combat_width = 2
-	enable = cavalry_tech_11
+	enable = german_schwartzer_reiter
+	enable = nordic_obudshaer
+	enable = greek_limitanei
+	enable = russian_novgorodian_posdaniks
+	enable = anatolian_azab
+	enable = indian_poligar
+	#Chinese
+	enable = maghrebi_ummayad_shamshir
+	enable = muslim_qizilbash_cavalry
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = mesoamerican_hill_warfare
+	enable = south_american_axemen
+	enable = andean_axemen
 }
 
 technology = {
 	# Tech 12
-	year = 1557
+	year = 1380
+	maneuver_value = 0.25
+	bastion = yes
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.1
+		feudalism = 1
+		renaissance = 1
 	}
-	#Spanish Square
-	sprite_level = 2
-	supply_limit = 0.5
-	military_tactics = 0.25
-	enable = conscript_tech_12
-	enable = tofongchis_musketeer
-	enable = ottoman_sekban
-	enable = rajput_musketeer
-	enable = spanish_tercio
-	enable = gaelic_free_shooter
-	enable = han_banner
-	enable = reformed_mughal_musketeer
-	enable = polish_musketeer
-	enable = muscovite_musketeer
-	enable = bantu_plains_warfare
-	enable = niger_kongolese_forest_warfare
-	enable = african_hill_warfare
-	enable = ethiopian_mountain_warfare
-	enable = steppe_footmen
-	enable = ha_xiuhtecuhtlian_infantry
+	enable = latin_tercio_infantry
+	enable = german_arquebus_shooter_infantry
+	enable = caucasian_timariot_inspired_cavalry
+	enable = anatolian_timariot
+	enable = caucasian_georgian_shooters
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = north_american_tomahawk_charge
+	enable = artillery_cannons_brass
 }
 
 technology = {
 	# Tech 13
-	year = 1570
+	year = 1395
+	land_morale = 0.5
+	combat_width = 2
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.2
+		feudalism = 1
+		renaissance = 1
 	}
-	#Trunnions
-	artillery_shock = 0.1
-	artillery_fire = 0.4
-	enable = legion_tech_13
-	enable = small_cast_iron_bombard
-	enable = large_cast_iron_bombard
+	enable = western_matchlock_shooter
+	enable = eastern_piechota_lanowa
+	enable = greek_stratoitai
+	enable = russian_peasant_streltsy
+	enable = balkan_seimeni
+	enable = anatolian_janissary
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
 }
 
 technology = {
 	# Tech 14
-	year = 1583
+	year = 1410
+	soldier_households = yes
+	infantry_fire = 0.2
+	cavalry_fire = 0.25
+	artillery_fire = 1
+	artillery_shock = 0.05
+	military_tactics = 0.25
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.3
+		feudalism = 1
+		renaissance = 1
 	}
-	#Star Bastions
-	fort_16th = yes
-	infantry_fire = 0.3
-	enable = african_hussar
-	enable = french_caracolle
-	enable = huron_arquebusier
-	enable = creek_arquebusier
-	enable = aztec_gunpowder_warfare
-	enable = maya_gunpowder_warfare
-	enable = zapotec_gunpowder_warfare
-	enable = south_american_reformed_gunpowder_warfare
-	enable = north_american_hussar
-	enable = central_american_hussar
-	enable = south_american_hussar
-	enable = polish_hussar
-	enable = muscovite_caracolle
-	enable = zaporoghian_cossack
-	enable = topchis_artillery
-	enable = asian_charge_cavalry
-	enable = reformed_mughal_mansabdar
-	enable = steppe_lancers
-	enable = high_american_hussar
-	enable = aboriginal_hussar
-	enable = aboriginal_arquebusier
-	enable = aboriginal_tasmanian_arquebusier
-	enable = pacific_hussar
-	enable = pacific_arquebusier
-	combat_width = 2
+	enable = anatolian_spahi
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = australian_aboriginal_ambusher
+	enable = oceanic_reformed_spearman
+	enable = mesoamerican_pikemen
+	enable = south_american_slingshots
+	enable = andean_slingshots
+	enable = high_american_reformed_xantican_warrior
+	enable = artillery_cannons_copper
 }
 
 technology = {
 	# Tech 15
-	year = 1596
+	year = 1425
+	may_drill = yes
+	infantry_shock = 0.2
+	cavalry_shock = 0.5
+	supply_limit = 0.5
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.3
-		ei_standing_armies = 0.15
+		feudalism = 1
+		renaissance = 1
 	}
-	#Maurician Infantry
-	land_morale = 1
-	military_tactics = 0.25
-	enable = cavalry_tech_15
-	enable = irish_charge
-	enable = dutch_maurician
-	enable = afsharid_reformed_infantry
-	enable = muscovite_soldaty
-	enable = polish_tercio
-	enable = asian_mass_infantry
-	enable = bantu_gunpowder_warfare
-	enable = niger_kongolese_gunpowder_warfare
-	enable = adal_gunpowder_warfare
-	enable = ethiopian_gunpowder_warfare
-	enable = steppe_musketeers
+	enable = western_charge_infantry
+	enable = latin_condotiero_infantry
+	enable = nordic_livregementet_till_fot
+	enable = greek_foederati
+	enable = russian_reitars
+	enable = russian_caracole_cavalry
+	enable = indian_toofangchis
+	enable = indian_mansabdar
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	enable = steppe_footmen
+	enable = steppe_lancers
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = north_american_cavalry
 }
 
 technology = {
 	# Tech 16
-	year = 1609
-	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.3
-		ei_standing_armies = 0.3
-	}
-	#Standardisation of Calibre
-	artillery_shock = 0.1
+	year = 1440
+	citadel = yes
+	fort_18th = yes
 	artillery_fire = 1
-	training_fields = yes
-	combat_width = 1
-	enable = chambered_demi_cannon
+	artillery_shock = 0.05
+	combat_width = 2
+	expects_institution = {
+		feudalism = 1
+		renaissance = 1
+		printing_press = 0.5
+	}
+	enable = western_caracole_cavalry
+	enable = latin_caracole_cavalry
+	enable = german_reislaufer_infantry
+	enable = german_caracole_cavalry
+	enable = nordic_caracole_cavalry
+	enable = eastern_piechota_wybraniecka
+	enable = eastern_caracole_cavalry
+	enable = greek_caracole_cavalry
+	enable = balkan_plalesi
+	enable = balkan_caracole_cavalry
+	enable = caucasian_tsezic_infantry
+	enable = muslim_musketeer
+	enable = muslim_musket_cavalry
+	enable = maghrebi_musketeer
+	enable = maghrebi_musket_cavalry
+	enable = persian_ayyubid_musketeer
+	enable = persian_ayyubid_musket_cavalry
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = oceanic_cavalry
+	enable = mesoamerican_rifle_cavalry
+	enable = south_american_cavalry
+	enable = andean_cavalry
+	enable = high_american_rifle_cavalry
 }
 
 technology = {
 	# Tech 17
-	year = 1622
+	year = 1450
+	sprite_level = 2
+	land_morale = 0.5
+	military_tactics = 0.25
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.3
-		ei_standing_armies = 0.3
-		global_trade = 0.15
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
 	}
-	cavalry_shock = 1
-	supply_limit = 0.5
-	enable = maharathan_cavalry
-	enable = manchu_banner
-	enable = african_swarm
+	enable = anatolian_sekban
+	enable = caucasian_reformed_avarian_cavalry
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = australian_cavalry
+	enable = north_american_iroquois_rifle_scout
+	enable = mesoamerican_tribal_gunners
+	enable = south_american_musketeers
+	enable = andean_musketeers
+	enable = artillery_cannons_bronze
 }
 
 technology = {
 	# Tech 18
-	year = 1635
+	year = 1465
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.3
-		ei_standing_armies = 0.3
-		global_trade = 0.3
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
 	}
-	#Carbine
-	maneuver_value = 0.25
-	enable = conscript_tech_18
-	enable = swedish_gallop
-	enable = sikh_hit_and_run
-	enable = bhonsle_infantry
-	enable = ottoman_reformed_spahi
-	enable = mamluk_musket_charge
-	enable = afsharid_reformed
-	enable = leather_cannon
-	enable = steppe_mounted_raiders
-	enable = ha_xoloti
-	enable = aboriginal_swarm_cav
-	enable = pacific_swarm_cav
-	combat_width = 2
+	enable = nordic_fynske_liveregiment
+	enable = eastern_piechota_dymowa
+	enable = greek_bucellarii
+	enable = russian_gallop_cavalry
+	enable = anatolian_reformed_spahi
+	enable = maghrebi_ummayad_reformed_infantry
+	enable = indian_akbarid_musketeer
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = australian_reformed_boomerang
 }
 
 technology = {
 	# Tech 19
-	year = 1648
+	year = 1475
+	ravelins = yes
+	battery = yes
+	artillery_fire = 1
+	artillery_shock = 0.1
+	combat_width = 2
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.3
-		ei_standing_armies = 0.3
-		global_trade = 0.3
-		manufactories = 0.1
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
 	}
-	#Gustavian Infantry
-	military_tactics = 0.25
-	supply_limit = 0.5
-	fort_17th = yes
-	enable = cavalry_tech_19
-	enable = legion_tech_19
-	enable = austrian_tercio
-	enable = swedish_gustavian
-	enable = scottish_highlander
-	enable = saxon_infantry
-	enable = ottoman_reformed_janissary
-	enable = asian_musketeer
-	enable = incan_guerilla_warfare
-	enable = iroquois_rifle_scout
-	enable = peruvian_guerilla_warfare
-	enable = mexican_guerilla_warfare
-	enable = maya_guerilla_warfare
-	enable = commanche_swarm
-	enable = central_american_swarm
-	enable = south_american_swarm
-	enable = steppe_infantry
-	enable = high_american_swarm
-	enable = aboriginal_riflemen
-	enable = pacific_riflemen
+	enable = western_reformed_shooter_infantry
+	enable = latin_reformed_tercio_infantry
+	enable = latin_gallop_cavalry
+	enable = german_reformierte_schutzeninfanterie
+	enable = german_gallop_cavalry
+	enable = nordic_gallop_cavalry
+	enable = eastern_gallop_cavalry
+	enable = russian_streltsy
+	enable = balkan_gallop_cavalry
+	enable = muslim_afsharid_reformed_cavalry
+	enable = persian_ayyubid_reformed_cavalry
+	enable = muslim_afsharid_reformed_infantry
+	enable = indian_dai_phat_cavalry
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
 }
 
 technology = {
 	# Tech 20
-	year = 1661
+	year = 1490
+	infantry_fire = 0.3
+	infantry_shock = 0.2
+	military_tactics = 0.25
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.3
-		ei_standing_armies = 0.3
-		global_trade = 0.3
-		manufactories = 0.2
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 0.5
 	}
-	#Killing Grounds
-	infantry_fire = 0.5
-	enable = swivel_cannon
-	combat_width = 2
+	enable = western_gallop_cavalry
+	enable = greek_gallop_cavalry
+	enable = persian_ayyubid_reformed_infantry
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = artillery_cannons_iron
 }
 
 technology = {
 	# Tech 21
-	year = 1674
+	year = 1510
+	cavalry_shock = 0.5
+	land_morale = 0.5
+	maneuver_value = 0.25
+	supply_limit = 0.5
+	war_college = yes
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.3
-		ei_standing_armies = 0.3
-		global_trade = 0.3
-		manufactories = 0.3
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 0.5
 	}
-	#Line Infantry
-	sprite_level = 3
-	military_tactics = 0.25
-	infantry_shock = 0.5
+	enable = eastern_magnate_levee
+	enable = balkan_lefegli
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	enable = steppe_musketeers
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
 }
 
 technology = {
 	# Tech 22
-	year = 1687
-	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.3
-		ei_standing_armies = 0.3
-		global_trade = 0.3
-		manufactories = 0.3
-		ei_rationalism = 0.15
-	}
-	#Cartridge	(1620)?)
-	cavalry_fire = 0.5
-	artillery_shock = 0.1
-	artillery_fire = 2
+	year = 1525
+	weapons = yes
 	combat_width = 2
-	conscription_center = yes
-	enable = polish_winged_hussar
-	enable = muscovite_cossack
-	enable = coehorn_mortar
+	expects_institution = {
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+	}
+	enable = latin_conquistadors
+	enable = german_grenzer_infantry
+	enable = eastern_dragoons
+	enable = balkan_dragoons
+	enable = indian_musket_infantry
+	#Chinese
+	enable = maghrebi_musket_charge
+	enable = persian_ayyubid_musket_charge
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = oceanic_island_warriors
+	enable = high_american_xiuhtecuhtli_soldier
+	enable = north_american_mountain_scout
+	enable = artillery_small_cast_iron_bombard
 }
 
 technology = {
 	# Tech 23
-	year = 1700
+	year = 1540
+	cavalry_fire = 0.25
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.3
-		ei_standing_armies = 0.3
-		global_trade = 0.3
-		manufactories = 0.3
-		ei_rationalism = 0.3
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 0.5
 	}
-	#Light Cavalry
-	cavalry_shock = 1
-	military_tactics = 0.25
-	maneuver_value = 0.5
-	enable = conscript_tech_23
-	enable = swedish_arme_blanche
-	enable = french_dragoon
-	enable = austrian_hussar
-	enable = ottoman_toprakli_hit_and_run
-	enable = sioux_dragoon
-	enable = central_american_dragoon
-	enable = south_american_dragoon
-	enable = african_dragoon
-	enable = maharathan_guerilla_warfare
-	enable = austrian_grenzer
-	enable = swedish_caroline
-	enable = anglofrench_line
-	enable = durrani_rifled_musketeer
-	enable = ottoman_nizami_cedid
-	enable = niger_kongolese_guerilla_warfare
-	enable = adal_guerilla_warfare
-	enable = ethiopian_guerilla_warfare
-	enable = muslim_dragoon
-	enable = ali_bey_reformed_infantry
-	enable = indian_shock_cavalry
-	enable = chinese_dragoon
-	enable = russian_petrine
-	enable = steppe_cavalry
-	enable = ha_foreign_influenced_infantry
-	enable = high_american_dragoon
-	enable = aboriginal_dragoon
-	enable = pacific_dragoon
+	enable = western_grenadiers
+	enable = latin_dragoons
+	enable = german_dragoons
+	enable = nordic_livegrenadjarregementat
+	enable = nordic_dragoons
+	enable = greek_vanguard
+	enable = russian_musketeer_streltsy
+	enable = russian_dragoons
+	enable = caucasian_kutrigurs
+	enable = indian_maharathan_raiders
+	enable = muslim_musket_charge
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = australian_ritual_warrior
+	enable = mesoamerican_arquebusier
+	enable = south_american_arquebusier
+	enable = andean_arquebusier
 }
 
 technology = {
 	# Tech 24
-	year = 1715
-	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.3
-		ei_standing_armies = 0.3
-		global_trade = 0.3
-		manufactories = 0.3
-		ei_rationalism = 0.3
-		ei_central_banks = 0.15
-	}
-	#Covered Way
-	fort_18th = yes
+	year = 1555
+	infantry_fire = 0.3
+	infantry_shock = 0.2
+	cavalry_shock = 0.5
+	land_morale = 0.5
 	military_tactics = 0.25
-	combat_width = 2
-	enable = legion_tech_24
-	enable = cavalry_tech_24
+	expects_institution = {
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 0.5
+		ei_standing_armies = 0.1
+	}
+	enable = western_dragoons
+	enable = greek_dragoons
+	enable = anatolian_reformed_janissary
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = artillery_large_cast_iron_bombard
 }
 
 technology = {
 	# Tech 25
-	year = 1730
-	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.3
-		ei_standing_armies = 0.3
-		global_trade = 0.3
-		manufactories = 0.3
-		ei_rationalism = 0.3
-		ei_central_banks = 0.3
-	}
-	#Metallurgy
+	year = 1570
+	artillery_fire = 1
 	artillery_shock = 0.1
-	artillery_fire = 2
-	enable = royal_mortar
+	combat_width = 2
+	expects_institution = {
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 0.5
+		ei_standing_armies = 0.1
+	}
+	enable = german_musketeer_infantry
+	enable = eastern_wojsko_komputowe
+	enable = balkan_rumeli_infantry
+	enable = anatolian_toprakli_hit_and_run
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	enable = steppe_mounted_raiders
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = australian_swarm_cav
+	enable = oceanic_hussar
+	enable = north_american_hussar
+	enable = mesoamerican_hussar
+	enable = south_american_hussar
+	enable = andean_hussar
+	enable = high_american_xiuhtecuhtlian_infantry
+	enable = high_american_hussar
 }
 
 technology = {
 	# Tech 26
-	year = 1745
+	year = 1585
+	supply_limit = 0.5
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.3
-		ei_standing_armies = 0.3
-		global_trade = 0.3
-		manufactories = 0.3
-		ei_rationalism = 0.3
-		ei_central_banks = 0.3
-		enlightenment = 0.15
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 0.5
+		ei_standing_armies = 0.25
 	}
-	#Light Infantry Companies
-	sprite_level = 4
-	land_morale = 1
-	enable = conscript_tech_26
-	enable = austrian_white_coat
-	enable = french_bluecoat
-	enable = british_redcoat
-	enable = prussian_frederickian
-	enable = russian_green_coat
-	enable = muslim_mass_infantry
-	enable = eastern_carabinier
-	enable = indian_rifle
-	enable = reformed_asian_musketeer
-	enable = westernized_bantu
-	enable = westernized_niger_kongolese
-	enable = westernized_adal
-	enable = westernized_ethiopian
-	enable = apache_guerilla
-	enable = westernized_south_american
-	enable = westernized_aztec
-	enable = westernized_zapotec
-	enable = westernized_incan
-	enable = russian_lancer
-	enable = tartar_cossack
-	enable = prussian_uhlan
-	enable = british_hussar
-	enable = french_carabinier
-	enable = eastern_uhlan
-	enable = eastern_skirmisher
-	enable = steppe_rifles
-	enable = ha_reformed_influenced_infantry
-	enable = aboriginal_guerrillas
-	enable = pacific_guerrillas
-	combat_width = 2
+	enable = western_regiment_of_foot
+	enable = nordic_dragonregemente
+	enable = eastern_carabiners
+	enable = greek_tagmata
+	enable = russian_sluzhilyye_lyudi
+	enable = balkan_carabiners
+	enable = caucasian_legzic_infantry
+	enable = indian_reformed_musketeer
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = south_american_reformed_arquebusier
+	enable = andean_reformed_arquebusier
+	enable = artillery_chambered_demi_cannon
 }
 
 technology = {
 	# Tech 27
-	year = 1760
+	year = 1600
+	sprite_level = 3
+	infantry_shock = 0.2
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.3
-		ei_standing_armies = 0.3
-		global_trade = 0.3
-		manufactories = 0.3
-		ei_rationalism = 0.3
-		ei_central_banks = 0.3
-		enlightenment = 0.3
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 0.5
+		ei_standing_armies = 0.5
+		global_trade = 0.1
 	}
-	#Bayonet
-	supply_limit = 0.5
-	infantry_fire = 0.5
-	enable = legion_tech_27
+	enable = latin_spanish_cazador
+	enable = latin_carabiners
+	enable = german_carabiners
+	enable = nordic_carabiners
+	enable = russian_carabiners
+	enable = caucasian_circassian_hit_and_run
+	enable = indian_deccani_light_cavalry
+	#Chinese
+	enable = muslim_reformed_muslim_musketeers
+	enable = muslim_dragoon
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = australian_outback_warriors
+	enable = north_american_arquebusier
 }
 
 technology = {
 	# Tech 28
-	year = 1775
+	year = 1615
+	infantry_fire = 0.4
+	military_tactics = 0.25
+	combat_width = 2
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.3
-		ei_standing_armies = 0.3
-		global_trade = 0.3
-		manufactories = 0.3
-		ei_rationalism = 0.3
-		ei_central_banks = 0.4
-		enlightenment = 0.3
-		industrialization = 0.2
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 0.5
+		ei_standing_armies = 0.5
+		global_trade = 0.5
 	}
-	#Cuirassier
-	maneuver_value = 0.25
-	infantry_shock = 0.5
-	enable = african_cuirassier
-	enable = russian_cuirassier
-	enable = russian_cossack
-	enable = ottoman_toprakli_dragoon
-	enable = ottoman_lancer
-	enable = reformed_manchu_rifle
-	enable = open_order_cavalry
-	enable = napoleonic_lancers
-	enable = french_cuirassier
-	enable = durrani_dragoon
-	enable = durrani_swivel
-	enable = sikh_rifle
-	enable = bhonsle_cavalry
-	enable = reformed_asian_cavalry
-	enable = french_impulse
-	enable = british_square
-	enable = steppe_uhlans
+	enable = western_carabiners
+	enable = german_pandur_infantry
+	enable = nordic_faltjaegarkar
+	enable = eastern_registered_cossacks
+	enable = greek_carabiners
+	enable = persian_ayyubid_reformed_musketeers
+	enable = persian_ayyubid_dragoon
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
 }
 
 technology = {
 	# Tech 29
-	year = 1790
+	year = 1630
+	cavalry_shock = 0.5
+	land_morale = 0.5
+	maneuver_value = 0.25
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.3
-		ei_standing_armies = 0.3
-		global_trade = 0.3
-		manufactories = 0.3
-		ei_rationalism = 0.3
-		ei_central_banks = 0.4
-		enlightenment = 0.4
-		industrialization = 0.4
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 1
+		ei_standing_armies = 0.5
+		global_trade = 0.5
+		manufactories = 0.1
 	}
-	#Defense in Depth
-	enable = flying_battery
+	enable = western_line_infantry
+	enable = latin_italian_cacciatrice
+	enable = greek_aktiroi
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	enable = maghrebi_reformed_musketeers
+	enable = maghrebi_dragoon
+	enable = steppe_infantry
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = oceanic_arquebusier
+	enable = high_american_xoloti
+	enable = leather_cannon
 }
 
 technology = {
 	# Tech 30
-	year = 1805
+	year = 1645
+	infantry_fire = 0.4
+	cavalry_fire = 0.25
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.3
-		ei_standing_armies = 0.3
-		global_trade = 0.3
-		manufactories = 0.3
-		ei_rationalism = 0.3
-		ei_central_banks = 0.4
-		enlightenment = 0.4
-		industrialization = 0.4
-		weights_and_measures = 0.2
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 1
+		ei_standing_armies = 0.5
+		global_trade = 0.5
+		manufactories = 0.25
 	}
-	#Impulse Warfare
-	#sprite_level = 5	
-	military_tactics = 0.25
-	land_morale = 1
-	maneuver_value = 0.25
-	enable = conscript_tech_30
-	enable = russian_mass
-	enable = mixed_order_infantry
-	enable = prussian_drill
-	enable = austrian_jaeger
-	enable = napoleonic_square
-	enable = persian_rifle
-	enable = ottoman_new_model
-	enable = tipu_sultan_rocket
-	enable = american_western_franchise_warfare
-	enable = african_western_franchise_warfare
-	enable = westernized_mayan
-	enable = reformed_westernized_incan
-	enable = reformed_steppe_rifles
-	enable = ha_reformed_xoloti
+	enable = latin_cazadores_de_africa
+	enable = russian_soldaty
+	enable = balkan_registered_magyars
+	enable = anatolian_lancer
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
 }
 
 technology = {
 	# Tech 31
-	year = 1820
+	year = 1660
+	infantry_shock = 0.2
+	military_tactics = 0.25
+	combat_width = 2
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.3
-		ei_standing_armies = 0.3
-		global_trade = 0.3
-		manufactories = 0.3
-		ei_rationalism = 0.3
-		ei_central_banks = 0.4
-		enlightenment = 0.4
-		industrialization = 0.5
-		weights_and_measures = 0.4
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 1
+		ei_standing_armies = 1
+		global_trade = 0.5
+		manufactories = 0.5
+		ei_rationalism = 0.25
 	}
-	#Rifle
-	cavalry_shock = 1
-	infantry_fire = 1
-	supply_limit = 0.5
-	enable = legion_tech_31
+	enable = latin_greencoat_infantry
+	enable = nordic_livregementets_husarer
+	enable = eastern_cossack_conscripts
+	enable = greek_black_coat_infantry
+	enable = balkan_reformed_vlach_cavalry
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = australian_ambush_arquebusier
+	enable = mesoamerican_guerilla_warfare
+	enable = south_american_guerilla
+	enable = andean_guerilla
+	enable = swivel_cannon
 }
 
 technology = {
 	# Tech 32
-	year = 1835
+	year = 1675
+	artillery_fire = 1
+	artillery_shock = 0.1
+	supply_limit = 0.5
 	expects_institution = {
-		feudalism = 0.5
-		renaissance = 0.3
-		printing_press = 0.3
-		new_world_i = 0.3
-		ei_empiricism = 0.3
-		ei_standing_armies = 0.3
-		global_trade = 0.3
-		manufactories = 0.3
-		ei_rationalism = 0.3
-		ei_central_banks = 0.4
-		enlightenment = 0.4
-		industrialization = 0.6
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 1
+		ei_standing_armies = 1
+		global_trade = 0.5
+		manufactories = 0.5
+		ei_rationalism = 0.5
+	}
+	enable = western_red_coat_infantry
+	enable = nordic_bluecoat_infantry
+	enable = eastern_blue_coat_infantry
+	enable = russian_red_coat_soldaty
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = north_american_westernised_arquebusier
+	enable = coehorn_mortar
+}
+
+technology = {
+	# Tech 33
+	year = 1690
+	land_morale = 0.5
+	expects_institution = {
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 1
+		ei_standing_armies = 1
+		global_trade = 1
+		manufactories = 0.5
+		ei_rationalism = 0.25
+		ei_central_banks = 0.1
+	}
+	enable = western_hussars
+	enable = german_white_coat_infantry
+	enable = german_cuirassiers
+	enable = greek_katafraktoi
+	enable = russian_cossack_host
+	enable = anatolian_nizami_cedid
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = australian_dragoon
+}
+
+technology = {
+	# Tech 34
+	year = 1705
+	artillery_fire = 1
+	artillery_shock = 0.1
+	military_tactics = 0.25
+	combat_width = 2
+	expects_institution = {
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 1
+		ei_standing_armies = 1
+		global_trade = 1
+		manufactories = 0.5
+		ei_rationalism = 0.5
+		ei_central_banks = 0.25
+	}
+	enable = latin_infanteria_zaindaria
+	enable = balkan_perast_infantry
+	enable = caucasian_lancer
+	enable = indian_telingas
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	enable = steppe_cavalry
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = oceanic_swarm_cav
+	enable = north_american_swarm
+	enable = mesoamerican_westernised_infantry
+	enable = mesoamerican_swarm
+	enable = south_american_westernized_infantry
+	enable = south_american_swarm
+	enable = andean_westernized_infantry
+	enable = andean_swarm
+	enable = high_american_foreign_influenced_infantry
+	enable = high_american_swarm
+}
+
+technology = {
+	# Tech 35
+	year = 1720
+	infantry_shock = 0.2
+	cavalry_shock = 0.5
+	maneuver_value = 0.25
+	expects_institution = {
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 1
+		ei_standing_armies = 1
+		global_trade = 1
+		manufactories = 0.5
+		ei_rationalism = 0.5
+		ei_central_banks = 0.5
+	}
+	enable = western_square_infantry
+	enable = nordic_grenadjaekar
+	enable = eastern_royal_guard
+	enable = greek_oplite_infantry
+	enable = russian_drilled_soldaty
+	enable = balkan_silni_guards
+	enable = persian_ayyubid_durrani_dragoon
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	enable = steppe_rifles
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+}
+
+technology = {
+	# Tech 36
+	year = 1735
+	supply_limit = 0.5
+	expects_institution = {
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 1
+		ei_standing_armies = 1
+		global_trade = 1
+		manufactories = 0.5
+		ei_rationalism = 0.5
+		ei_central_banks = 0.5
+		enlightenment = 0.1
+	}
+	enable = german_trencks_pandur_infantry
+	enable = eastern_hussaria
+	enable = balkan_early_vlach_gunners
+	enable = muslim_durrani_dragoon
+	enable = indian_mysorean_light_cavalry
+	enable = muslim_mass_infantry
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = australian_offensive_arquebusier
+	enable = royal_mortar
+}
+
+technology = {
+	# Tech 37
+	year = 1750
+	sprite_level = 4
+	land_morale = 1
+	military_tactics = 0.25
+	combat_width = 2
+	expects_institution = {
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 1
+		ei_standing_armies = 1
+		global_trade = 1
+		manufactories = 0.5
+		ei_rationalism = 0.5
+		ei_central_banks = 0.5
+		enlightenment = 0.25
+	}
+	enable = latin_lanceros_de_borbon
+	enable = greek_koursorses
+	enable = maghrebi_durrani_dragoon
+	enable = maghrebi_mass_infantry
+	enable = indian_sepoy
+	enable = caucasian_reformed_kutrigurs
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = north_american_westernised_infantry
+}
+
+technology = {
+	# Tech 38
+	year = 1765
+	infantry_fire = 0.5
+	cavalry_shock = 0.5
+	cavalry_fire = 0.25
+	expects_institution = {
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 1
+		ei_standing_armies = 1
+		global_trade = 1
+		manufactories = 1
+		ei_rationalism = 0.5
+		ei_central_banks = 0.5
+		enlightenment = 0.5
+	}
+	enable = western_lancers
+	enable = latin_mons_venatores
+	enable = german_seressaner_infantry
+	enable = nordic_varvat_framlingsregemente
+	enable = russian_reitary
+	enable = persian_ayyubid_mass_infantry
+	enable = caucasian_carabiner_legzic
+	enable = anatolian_carabiner_janissary
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = oceanic_riflemen
+	enable = south_american_reformed_westernized_infantry
+	enable = andean_reformed_westernized_infantry
+	enable = high_american_reformed_influenced_infantry
+}
+
+technology = {
+	# Tech 39
+	year = 1780
+	artillery_fire = 1
+	artillery_shock = 0.1
+	expects_institution = {
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 1
+		ei_standing_armies = 1
+		global_trade = 1
+		manufactories = 1
+		ei_rationalism = 1
+		ei_central_banks = 0.5
+		enlightenment = 0.5
+	}
+	enable = western_drill_infantry
+	enable = german_guard_du_corp
+	enable = nordic_zealand_lancers
+	enable = greek_pilhellenes_infantry
+	enable = russian_carbiner_soldaty
+	enable = balkan_frasheri_retinue
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = mesoamerican_reformed_westernised_infantry
+}
+
+technology = {
+	# Tech 40
+	year = 1795
+	cavalry_shock = 0.5
+	land_morale = 1
+	military_tactics = 0.25
+	maneuver_value = 0.25
+	combat_width = 2
+	expects_institution = {
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 1
+		ei_standing_armies = 1
+		global_trade = 1
+		manufactories = 1
+		ei_rationalism = 1
+		ei_central_banks = 1
+		enlightenment = 0.5
+	}
+	enable = eastern_pospolite_reuzenie
+	enable = anatolian_toprakli_dragoon
+	enable = indian_sowars
+	enable = maghrebi_ummayad_swivel
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = australian_frontier_riflemen
+	enable = flying_battery
+}
+
+technology = {
+	# Tech 41
+	year = 1810
+	infantry_shock = 0.2
+	supply_limit = 0.5
+	expects_institution = {
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 1
+		ei_standing_armies = 1
+		global_trade = 1
+		manufactories = 1
+		ei_rationalism = 1
+		ei_central_banks = 1
+		enlightenment = 0.5
+		industrialization = 0.1
+	}
+	enable = western_household_cavalry
+	enable = latin_guardas_regno
+	enable = german_jaeger_infantry
+	enable = greek_vasiliko_ippoko
+	enable = russian_russiya_hussars
+	enable = muslim_durrani_swivel
+	enable = balkan_venetian_legion
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = australian_hussar
+	enable = north_american_guerilla
+}
+
+technology = {
+	# Tech 42
+	year = 1825
+	cavalry_fire = 0.25
+	cavalry_shock = 0.5
+	expects_institution = {
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 1
+		ei_standing_armies = 1
+		global_trade = 1
+		manufactories = 1
+		ei_rationalism = 1
+		ei_central_banks = 1
+		enlightenment = 0.5
+		industrialization = 0.25
+	}
+	enable = western_mixed_infantry
+	enable = german_guards_uhlan
+	enable = nordic_den_konlige_livgarde
+	enable = eastern_polska_legiony
+	enable = greek_sacred_bands
+	enable = russian_royal_soldaty
+	enable = persian_ayyubid_durrani_swivel
+	enable = balkan_vlach_gunners
+	enable = caucasian_new_model_soldier
+	enable = caucasian_georgian_dragoon
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = artillery_small_muzzle_loader
+}
+
+technology = {
+	# Tech 43
+	year = 1830
+	infantry_fire = 0.5
+	military_tactics = 0.25
+	combat_width = 2
+	expects_institution = {
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 1
+		ei_standing_armies = 1
+		global_trade = 1
+		manufactories = 1
+		ei_rationalism = 1
+		ei_central_banks = 1
+		enlightenment = 0.5
+		industrialization = 0.5
+	}
+	enable = indian_drill_infantry
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	enable = steppe_uhlans
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = oceanic_dragoon
+	enable = north_american_dragoon
+	enable = mesoamerican_tenochtitlan_guard
+	enable = mesoamerican_dragoon
+	enable = south_american_machu_pichu_guards
+	enable = south_american_dragoon
+	enable = andean_machu_pichu_guards
+	enable = andean_dragoon
+	enable = high_american_reformed_xoloti
+	enable = high_american_dragoon
+}
+
+technology = {
+	# Tech 44
+	year = 1845
+	artillery_fire = 1
+	artillery_shock = 0.1
+	expects_institution = {
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 1
+		ei_standing_armies = 1
+		global_trade = 1
+		manufactories = 1
+		ei_rationalism = 1
+		ei_central_banks = 1
+		enlightenment = 0.5
+		industrialization = 0.5
+		weights_and_measures = 0.1
+	}
+	enable = german_freikorps
+	enable = nordic_livgarden_til_hest
+	enable = eastern_wojsko_federacja
+	enable = russian_feodoran_soldaty
+	enable = balkan_velik_infantry
+	enable = maghrebi_rifle_infantry
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	enable = reformed_steppe_rifles
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+}
+
+technology = {
+	# Tech 45
+	year = 1860
+	supply_limit = 0.5
+	expects_institution = {
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 1
+		ei_standing_armies = 1
+		global_trade = 1
+		manufactories = 1
+		ei_rationalism = 1
+		ei_central_banks = 1
+		enlightenment = 0.5
+		industrialization = 0.5
+		weights_and_measures = 0.25
+	}
+	enable = western_trench_infantry
+	enable = latin_regiment_de_granaders
+	enable = latin_zalditeria_nazionala
+	enable = eastern_towarzysz_husarski
+	enable = anatolian_new_model
+	enable = muslim_rifle_infantry
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = artillery_large_muzzle_loader
+}
+
+technology = {
+	# Tech 46
+	year = 1875
+	infantry_fire = 1
+	cavalry_fire = 0.5
+	military_tactics = 0.25
+	expects_institution = {
+		feudalism = 1
+		renaissance = 1
+		printing_press = 1
+		new_world_i = 1
+		ei_empiricism = 1
+		ei_standing_armies = 1
+		global_trade = 1
+		manufactories = 1
+		ei_rationalism = 1
+		ei_central_banks = 1
+		enlightenment = 0.5
+		industrialization = 0.5
 		weights_and_measures = 0.5
 	}
-	#Field Howitzer
-	military_tactics = 0.25
-	artillery_shock = 0.1
-	artillery_fire = 2
+	enable = nordic_grenadjarregemente
+	enable = greek_tsolias
+	enable = persian_rifle_infantry
+	#Chinese
+	#Japanese
+	#Indochinese
+	#Malay
+	#East African
+	#West African
+	#Central African
+	#Siberian
+	#Papuan
+	enable = australian_black_war_infantry
+	enable = oceanic_guerrillas
+	enable = north_american_cheiftan_guard
 }

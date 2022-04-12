@@ -7,9 +7,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_sardinia_piedmont_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -53,9 +50,6 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			OR = {
 				AND = {
 					tag = SAR
@@ -109,6 +103,15 @@ country_decisions = {
 				move_capital_effect = yes
 			}
 			change_tag = SPI
+			if = {
+				limit = {
+					NOT = {
+						technology_group = latin_group
+					}
+				}
+				change_technology_group = latin_group
+				change_unit_type = latin_group
+			}
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
@@ -196,9 +199,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_sardinia_piedmont_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -227,9 +227,6 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			prestige = 75
 			dip = 3
 			adm = 3

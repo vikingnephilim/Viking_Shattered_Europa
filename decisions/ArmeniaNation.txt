@@ -27,9 +27,6 @@ country_decisions = {
 				tag = HLR
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				tag = PAP
 			}
 			primary_culture = armenian
@@ -79,9 +76,6 @@ country_decisions = {
 			NOT = {
 				exists = ARM
 			}
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			religion = coptic
 			is_nomad = no
@@ -99,6 +93,15 @@ country_decisions = {
 			change_tag = ARM
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = caucasian
+					}
+				}
+				change_technology_group = caucasian
+				change_unit_type = caucasian
+			}
 			if = {
 				limit = {
 					NOT = {

@@ -11,9 +11,6 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = {
-				government = codex
-			}
 			tag = RZW
 			OR = {
 				ai = no
@@ -58,9 +55,6 @@ country_decisions = {
 			NOT = {
 				exists = RZI
 			}
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			is_nomad = no
 			butua_area = {
@@ -82,6 +76,15 @@ country_decisions = {
 		effect = {
 			change_tag = RZI
 			restore_country_name_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = bantu
+					}
+				}
+				change_technology_group = bantu
+				change_unit_type = bantu
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {

@@ -1,6 +1,11 @@
 #London
 graphical_culture = westerngfx
-color = { 97 13 7 }
+color = {
+	97
+	13
+	7
+}
+
 preferred_religion = protestant
 historical_idea_groups = {
 	religious_ideas
@@ -12,24 +17,35 @@ historical_idea_groups = {
 	spy_ideas
 	economic_ideas
 }
+
 historical_units = {
-	western_medieval_infantry
-	chevauchee
-	western_longbow
-	gaelic_mercenary
-	gaelic_free_shooter
-	french_caracolle
-	irish_charge
-	anglofrench_line
-	french_dragoon
-	british_redcoat
-	british_hussar
-	british_square
-	mixed_order_infantry
-	open_order_cavalry
-	napoleonic_square
-	napoleonic_lancers
+	western_archers
+	western_men_at_arms
+	western_halberdmen
+	western_pikemen
+	western_matchlock_shooter
+	western_charge_infantry
+	western_reformed_shooter_infantry
+	western_grenadiers
+	western_regiment_of_foot
+	western_line_infantry
+	western_red_coat_infantry
+	western_square_infantry
+	western_drill_infantry
+	western_mixed_infantry
+	western_trench_infantry
+	western_horsemen
+	western_joust_knights
+	western_black_knights
+	western_caracole_cavalry
+	western_gallop_cavalry
+	western_dragoons
+	western_carabiners
+	western_hussars
+	western_lancers
+	western_household_cavalry
 }
+
 monarch_names = {
 	"Henry #3" = 100
 	"Edward #3" = 60
@@ -84,55 +100,223 @@ monarch_names = {
 	"Samuel #0" = 0
 	"Sydney #0" = 0
 }
+
 leader_names = {
-	Albemarle Amherst Anson
-	Buckingham Braddock Byron Burgoyne Beresford Brock Benbow Blake Bedford Boscawen Baffin Button
-	Clarence "de Clifford" Cromwell Cumberland Clinton Cornwallis Clive Cabot Carleton Cavendish Cook
-	Dampier Davis Drake
+	Albemarle
+	Amherst
+	Anson
+	Buckingham
+	Braddock
+	Byron
+	Burgoyne
+	Beresford
+	Brock
+	Benbow
+	Blake
+	Bedford
+	Boscawen
+	Baffin
+	Button
+	Clarence
+	"de Clifford"
+	Cromwell
+	Cumberland
+	Clinton
+	Cornwallis
+	Clive
+	Cabot
+	Carleton
+	Cavendish
+	Cook
+	Dampier
+	Davis
+	Drake
 	Essex
-	Fairfax Frobisher
-	Gloucester Gilbert
-	Howe Howard Herbert Hawke Hood Hastings Hudson
+	Fairfax
+	Frobisher
+	Gloucester
+	Gilbert
+	Howe
+	Howard
+	Herbert
+	Hawke
+	Hood
+	Hastings
+	Hudson
 	Leicester
-	Marlborough Middleton Moore
-	Northumberland Norfolk
+	Marlborough
+	Middleton
+	Moore
+	Northumberland
+	Norfolk
 	Procter
-	Rooke Rodney Raleigh
-	Salisbury Somerset Suffolk Saunders Smith
-	Talbot Tarleton
+	Rooke
+	Rodney
+	Raleigh
+	Salisbury
+	Somerset
+	Suffolk
+	Saunders
+	Smith
+	Talbot
+	Tarleton
 	Uxbridge
-	Warwick Wolfe
+	Warwick
+	Wolfe
 	York
 }
+
 ship_names = {
-	Achille Adventure Ajax Albemarle Alexander "Anne Gallant" Antelope "Ark Royal" Assurance Audacious "Anne Royal"
-	Bear Bellerophon Bonaventure Boyne Britannia Buckingham
-	Charles Christ Constant Convertine Culloden Cumberland Crane Crescent
-	Defence Defiance Destiny Dragon Dreadnought
-	"Edward Howard" Elizabeth Eltham Essex Expedition Eleanor Eagle
-	Foresight Foudroyant Falcon Fortune Fellowship
-	"Gabriel Royal" Garland George Gibraltar Gloucester Goliath "Grace Dieu" Grafton "Grand Mistress" "Great Barbara" "Great Bark" "Great Elizabeth"
-	"Great Harry" "Great Nicholas" Guernsey Greyhound Globe
-	Haarlem "Happy Entrance" Hector "Henrietta Maria" Hope Hart
-	James "John Baptist" Jennet
-	"Katherine Forteleza" Kent
-	Leander Leopard Lion Lizard
-	Majestic Margaret Mary "Mary Rose" Mercury Merhonour Michael Minion Minotaur
-	Nonpareil Nonsuch Northumberland Nottingham
+	Achille
+	Adventure
+	Ajax
+	Albemarle
+	Alexander
+	"Anne Gallant"
+	Antelope
+	"Ark Royal"
+	Assurance
+	Audacious
+	"Anne Royal"
+	Bear
+	Bellerophon
+	Bonaventure
+	Boyne
+	Britannia
+	Buckingham
+	Charles
+	Christ
+	Constant
+	Convertine
+	Culloden
+	Cumberland
+	Crane
+	Crescent
+	Defence
+	Defiance
+	Destiny
+	Dragon
+	Dreadnought
+	"Edward Howard"
+	Elizabeth
+	Eltham
+	Essex
+	Expedition
+	Eleanor
+	Eagle
+	Foresight
+	Foudroyant
+	Falcon
+	Fortune
+	Fellowship
+	"Gabriel Royal"
+	Garland
+	George
+	Gibraltar
+	Gloucester
+	Goliath
+	"Grace Dieu"
+	Grafton
+	"Grand Mistress"
+	"Great Barbara"
+	"Great Bark"
+	"Great Elizabeth"
+	"Great Harry"
+	"Great Nicholas"
+	Guernsey
+	Greyhound
+	Globe
+	Haarlem
+	"Happy Entrance"
+	Hector
+	"Henrietta Maria"
+	Hope
+	Hart
+	James
+	"John Baptist"
+	Jennet
+	"Katherine Forteleza"
+	Kent
+	Leander
+	Leopard
+	Lion
+	Lizard
+	Majestic
+	Margaret
+	Mary
+	"Mary Rose"
+	Mercury
+	Merhonour
+	Michael
+	Minion
+	Minotaur
+	Nonpareil
+	Nonsuch
+	Northumberland
+	Nottingham
 	Orion
-	Peter Providence "Prince Frederick" Primrose "Prince Royal" Phoenix Pelican
+	Peter
+	Providence
+	"Prince Frederick"
+	Primrose
+	"Prince Royal"
+	Phoenix
+	Pelican
 	"Queen Charlotte"
-	Rainbow "Red Lion" Regent Renown Repulse Revenge "Royal Anne" "Royal Charles" "Royal Prince" Recovery
-	"Scourge of Malice" Sovereign "Sovereign o the Seas" "St Andrew" "St Esprit" "St George" "St Matthew" Suffolk Superb Swallow Swiftsure
-	Speedwell Scout "Seven Stars" "St Anne" Swan Star Satisfaction
-	Theseus Tigre Tramontana Triumph Trinity Tiger
-	Unicorn Union
-	Vanguard Victory
-	Warspite Worcester Weymouth
+	Rainbow
+	"Red Lion"
+	Regent
+	Renown
+	Repulse
+	Revenge
+	"Royal Anne"
+	"Royal Charles"
+	"Royal Prince"
+	Recovery
+	"Scourge of Malice"
+	Sovereign
+	"Sovereign o the Seas"
+	"St Andrew"
+	"St Esprit"
+	"St George"
+	"St Matthew"
+	Suffolk
+	Superb
+	Swallow
+	Swiftsure
+	Speedwell
+	Scout
+	"Seven Stars"
+	"St Anne"
+	Swan
+	Star
+	Satisfaction
+	Theseus
+	Tigre
+	Tramontana
+	Triumph
+	Trinity
+	Tiger
+	Unicorn
+	Union
+	Vanguard
+	Victory
+	Warspite
+	Worcester
+	Weymouth
 }
+
 army_names = {
-	"Royal Army" "Army of Scotland" "Army of Ireland"
+	"Royal Army"
+	"Army of Scotland"
+	"Army of Ireland"
 }
+
 fleet_names = {
-	"Royal Navy" "Blue Squadron" "Red Squadron" "White Squadron" "North Sea Squadron" "Channel Squadron"
+	"Royal Navy"
+	"Blue Squadron"
+	"Red Squadron"
+	"White Squadron"
+	"North Sea Squadron"
+	"Channel Squadron"
 }

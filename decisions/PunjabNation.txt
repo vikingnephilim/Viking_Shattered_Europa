@@ -10,9 +10,6 @@ country_decisions = {
 			NOT = {
 				tag = PUN
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -62,9 +59,6 @@ country_decisions = {
 			NOT = {
 				exists = PUN
 			}
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			religion = sikhism
 			owns_core_province = 507			#Lahore
@@ -74,6 +68,15 @@ country_decisions = {
 		effect = {
 			change_tag = PUN
 			restore_country_name_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = indian
+					}
+				}
+				change_technology_group = indian
+				change_unit_type = indian
+			}
 			swap_non_generic_missions = yes
 			lahore_area = {
 				limit = {

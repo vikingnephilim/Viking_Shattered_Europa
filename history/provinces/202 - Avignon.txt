@@ -1,33 +1,43 @@
-# 202 Avignon - Principal cities: Avignon
-
 # Governance
 #=========================
-owner = AVI		# The great Schism
+owner = AVI
 controller = AVI
 is_city = yes
-add_core = AVI # Le Palais des Papes is super strong, and built on and beneath a natural rock formation
-
+add_core = AVI
 # Demographic
 #=========================
 capital = "Avignon"
 culture = occitain
 religion = catholic
 hre = no
-
 # Economic
 #=========================
-base_tax = 4 
+base_tax = 4
 base_production = 3
-trade_goods = cloth
+trade_goods = paper
+latent_trade_goods = {
+	books
+}
 base_manpower = 4
 extra_cost = 8
-
 # Discovery
 #=========================
-discovered_by = eastern
 discovered_by = western
+discovered_by = latin_group
+discovered_by = german
+discovered_by = nordic
 discovered_by = muslim
+discovered_by = maghrebi
+discovered_by = persian
 discovered_by = ottoman
-
+discovered_by = eastern
+discovered_by = greek
+discovered_by = russian_group
+discovered_by = balkan
+discovered_by = caucasian
 # History
 #=========================
+village = yes
+watchtowers = yes
+barbican = yes
+cathedral = yes

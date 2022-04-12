@@ -7,9 +7,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_sokoto_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -47,9 +44,6 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			OR = {
 				piety = 0.5
 				has_idea_group = religious_ideas
@@ -78,6 +72,15 @@ country_decisions = {
 		effect = {
 			1148 = {
 				move_capital_effect = yes
+			}
+			if = {
+				limit = {
+					NOT = {
+						technology_group = central_african
+					}
+				}
+				change_technology_group = central_african
+				change_unit_type = central_african
 			}
 			restore_country_name_effect = yes
 			hausa_area = {

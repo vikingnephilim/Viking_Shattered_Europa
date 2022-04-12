@@ -167,10 +167,33 @@ country_event = {
 	picture = POPE_PREACHING_eventPicture
 	fire_only_once = yes
 	trigger = {
-		tag = HAB
+		is_year = 1350
 	}
 	mean_time_to_happen = {
-		days = 3650
+		days = 365
+	}
+	option = {
+		name = "bendtheknee.5.a"
+		hidden_effect = {
+			set_hre_religion_treaty = yes
+			set_hre_religion = catholic
+			set_hre_religion_treaty = no
+			set_hre_religion_locked = yes
+			set_hre_religion_locked = no
+		}
+	}
+}
+country_event = {
+	id = bendtheknee.6
+	title = "bendtheknee.5.t"
+	desc = "bendtheknee.5.d"
+	picture = POPE_PREACHING_eventPicture
+	fire_only_once = yes
+	trigger = {
+		is_year = 1360
+	}
+	mean_time_to_happen = {
+		days = 365
 	}
 	option = {
 		name = "bendtheknee.5.a"

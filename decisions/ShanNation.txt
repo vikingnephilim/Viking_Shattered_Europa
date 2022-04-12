@@ -2,9 +2,6 @@ country_decisions = {
 	shan_nation = {
 		major = yes
 		potential = {
-			NOT = {
-				government = codex
-			}
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = {
@@ -51,9 +48,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 580			#Kale
 			owns_core_province = 582			#Mong Yang
 			owns_core_province = 583			#Hsenwi
@@ -67,6 +61,15 @@ country_decisions = {
 		effect = {
 			add_prestige = 20
 			change_tag = SST
+			if = {
+				limit = {
+					NOT = {
+						technology_group = indochinese
+					}
+				}
+				change_technology_group = indochinese
+				change_unit_type = indochinese
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			restore_country_name_effect = yes
 			if = {

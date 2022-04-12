@@ -77,6 +77,15 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = MAY
+			if = {
+				limit = {
+					NOT = {
+						technology_group = mesoamerican
+					}
+				}
+				change_technology_group = mesoamerican
+				change_unit_type = mesoamerican
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {

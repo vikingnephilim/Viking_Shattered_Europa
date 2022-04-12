@@ -1,12 +1,18 @@
 #Teutonic Order
-
 graphical_culture = westerngfx
+color = {
+	102
+	105
+	104
+}
 
-color = { 102  105  104 }
-revolutionary_colors = { 5  8  13 }
+revolutionary_colors = {
+	5
+	8
+	13
+}
 
 historical_score = 50
-
 historical_idea_groups = {
 	religious_ideas
 	defensive_ideas
@@ -19,20 +25,30 @@ historical_idea_groups = {
 }
 
 historical_units = {
-	western_medieval_infantry
-	western_medieval_knights
-	western_men_at_arms
-	dutch_maurician
-	austrian_tercio
-	austrian_grenzer
-	austrian_hussar
-	prussian_frederickian
-	prussian_uhlan
-	prussian_drill
-	mixed_order_infantry
-	open_order_cavalry
-	napoleonic_square
-	napoleonic_lancers
+	german_archers
+	german_men_at_arms
+	german_doppelsoldern
+	german_arquebus_shooter_infantry
+	german_reislaufer_infantry
+	german_reformierte_schutzeninfanterie
+	german_grenzer_infantry
+	german_musketeer_infantry
+	german_pandur_infantry
+	german_white_coat_infantry
+	german_trencks_pandur_infantry
+	german_seressaner_infantry
+	german_jaeger_infantry
+	german_freikorps
+	german_horsemen
+	german_jaeger_zu_pferde
+	german_schwartzer_reiter
+	german_caracole_cavalry
+	german_gallop_cavalry
+	german_dragoons
+	german_carabiners
+	german_cuirassiers
+	german_guard_du_corp
+	german_guards_uhlan
 }
 
 monarch_names = {
@@ -76,29 +92,63 @@ monarch_names = {
 	"Pankraz #0" = 0
 	"Rudolf #0" = 0
 	"Theodor #0" = 0
-	
 	"Maria #0" = -1
 	"Magdalena #0" = -1
 	"Eva #0" = -1
 }
 
 leader_names = {
-	"von Aderkas" "von Albedyll" "von Altenburg" "von Ampringen" "von Arfberg" 
-	"von Bassenheim" "von Bobenhausen" "von Bremen" "von Buchholtz" "von Buxhoeveden"
-	"von Campenhausen" "von Cronberg" "von Cube"
-	"von Dellinghausen" "von Drachenfels"
-	"von Ekesparre" "von Erlichshausen"
-	"von Freymann" "Freytag von Loringhoven"
-	"von Hehn" "von Helbrungen" "von Hohenzollern" "von Howen" "von Hunnius" "von Hoyningen" 
+	"von Aderkas"
+	"von Albedyll"
+	"von Altenburg"
+	"von Ampringen"
+	"von Arfberg"
+	"von Bassenheim"
+	"von Bobenhausen"
+	"von Bremen"
+	"von Buchholtz"
+	"von Buxhoeveden"
+	"von Campenhausen"
+	"von Cronberg"
+	"von Cube"
+	"von Dellinghausen"
+	"von Drachenfels"
+	"von Ekesparre"
+	"von Erlichshausen"
+	"von Freymann"
+	"Freytag von Loringhoven"
+	"von Hehn"
+	"von Helbrungen"
+	"von Hohenzollern"
+	"von Howen"
+	"von Hunnius"
+	"von Hoyningen"
 	"von Jungingen"
-	"von Keyserling" "von Koskull" "von Kniprode" "von Klot-Heydenfeldt" "von Krusenstiern"
+	"von Keyserling"
+	"von Koskull"
+	"von Kniprode"
+	"von Klot-Heydenfeldt"
+	"von Krusenstiern"
 	"von Lilienfeld"
-	"von Patkul" "von Poll"
-	"von Rennenkampff" "von Rothstein" "von Ruszdorf" "von Richtenberg" "von Roth-Rösthof"
-	"von Sass" "von Schubert" "von Sangershausen" "von Schwanden"
+	"von Patkul"
+	"von Poll"
+	"von Rennenkampff"
+	"von Rothstein"
+	"von Ruszdorf"
+	"von Richtenberg"
+	"von Roth-Rösthof"
+	"von Sass"
+	"von Schubert"
+	"von Sangershausen"
+	"von Schwanden"
 	"von Tieffen"
-	"von Uexküll" "von Ungern-Sternberg" "von Urenbach"
-	"von Wrangel" "von Wistinghausen" "von Wattzau" "von Wallenrode"
+	"von Uexküll"
+	"von Ungern-Sternberg"
+	"von Urenbach"
+	"von Wrangel"
+	"von Wistinghausen"
+	"von Wattzau"
+	"von Wallenrode"
 }
 
 ship_names = {
@@ -106,19 +156,42 @@ ship_names = {
 	Elbing
 	Gottersweder
 	Königsberg
-	Marienburg Mittenburg Mitau
+	Marienburg
+	Mittenburg
+	Mitau
 	Thorn
 	Windau
 	Goldingen
-	"von Bassenheim" "Otto von Kerpen" "Heinrich von Tunna" "Hermann von Salza" "Konrad von Thüringen"
-	"Gerhard von Malberg" "von Hohenlohe" "von Wüllersleben" "Poppo von Osterna"
-	"von Sangershausen" "von Heldrungen" "Burkhard von Schwanden" "von Feuchtwangen"
-	"von Trier" "Werner von Orseln" "von Braunschweig" "Dietrich von Altenburg" "von Wattzau"
-	"von Arfberg" "Winrich von Kniprode" "von Rotenstein" "von Wallenrode" "Konrad V von Jungingen"
-	"Ulrich von Jungingen" "Heinrich von Plauen" "von Sternberg" "von Wetzhausen"
-	"Johann von Tiefen" "Walter von Cronberg"
+	"von Bassenheim"
+	"Otto von Kerpen"
+	"Heinrich von Tunna"
+	"Hermann von Salza"
+	"Konrad von Thüringen"
+	"Gerhard von Malberg"
+	"von Hohenlohe"
+	"von Wüllersleben"
+	"Poppo von Osterna"
+	"von Sangershausen"
+	"von Heldrungen"
+	"Burkhard von Schwanden"
+	"von Feuchtwangen"
+	"von Trier"
+	"Werner von Orseln"
+	"von Braunschweig"
+	"Dietrich von Altenburg"
+	"von Wattzau"
+	"von Arfberg"
+	"Winrich von Kniprode"
+	"von Rotenstein"
+	"von Wallenrode"
+	"Konrad V von Jungingen"
+	"Ulrich von Jungingen"
+	"Heinrich von Plauen"
+	"von Sternberg"
+	"von Wetzhausen"
+	"Johann von Tiefen"
+	"Walter von Cronberg"
 }
-
 
 army_names = {
 	"Banner"

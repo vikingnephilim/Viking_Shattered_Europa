@@ -12,9 +12,6 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				tag = TUR
 			}
 			NOT = {
@@ -76,9 +73,6 @@ country_decisions = {
 			is_at_war = no
 			is_subject = no			#Cannot even be a tributary
 			is_nomad = no
-			NOT = {
-				government = codex
-			}
 			religion_group = muslim
 			NOT = {
 				exists = RUM
@@ -104,6 +98,15 @@ country_decisions = {
 		effect = {
 			change_tag = RUM
 			change_primary_culture = turkish
+			if = {
+				limit = {
+					NOT = {
+						technology_group = ottoman
+					}
+				}
+				change_technology_group = ottoman
+				change_unit_type = ottoman
+			}
 			anatolia_region = {
 				limit = {
 					culture_group = turko_semitic
@@ -112,22 +115,20 @@ country_decisions = {
 				}
 				change_culture = turkish
 			}
-			RUM = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-						}
-						is_revolutionary = no
+			if = {
+				limit = {
+					NOT = {
+						government = monarchy
 					}
-					change_government_to_monarchy = yes
+					is_revolutionary = no
 				}
-				if = {
-					limit = {
-						is_revolutionary = no
-					}
-					add_government_reform = ottoman_government
+				change_government_to_monarchy = yes
+			}
+			if = {
+				limit = {
+					is_revolutionary = no
 				}
+				add_government_reform = ottoman_government
 			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
@@ -178,9 +179,6 @@ country_decisions = {
 			was_never_end_game_tag_trigger = yes
 			NOT = {
 				has_country_flag = formed_turkey_flag
-			}
-			NOT = {
-				government = codex
 			}
 			OR = {
 				ai = no
@@ -246,9 +244,6 @@ country_decisions = {
 			is_at_war = no
 			is_subject = no			#Cannot even be a tributary
 			is_nomad = no
-			NOT = {
-				government = codex
-			}
 			religion_group = muslim
 			NOT = {
 				exists = RUM
@@ -271,6 +266,15 @@ country_decisions = {
 		effect = {
 			change_tag = TUR
 			change_primary_culture = turkish
+			if = {
+				limit = {
+					NOT = {
+						technology_group = ottoman
+					}
+				}
+				change_technology_group = ottoman
+				change_unit_type = ottoman
+			}
 			anatolia_region = {
 				limit = {
 					culture_group = turko_semitic
@@ -279,22 +283,20 @@ country_decisions = {
 				}
 				change_culture = turkish
 			}
-			TUR = {
-				if = {
-					limit = {
-						NOT = {
-							government = monarchy
-						}
-						is_revolutionary = no
+			if = {
+				limit = {
+					NOT = {
+						government = monarchy
 					}
-					change_government_to_monarchy = yes
+					is_revolutionary = no
 				}
-				if = {
-					limit = {
-						is_revolutionary = no
-					}
-					add_government_reform = ottoman_government
+				change_government_to_monarchy = yes
+			}
+			if = {
+				limit = {
+					is_revolutionary = no
 				}
+				add_government_reform = ottoman_government
 			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {

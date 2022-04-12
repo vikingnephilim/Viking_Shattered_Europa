@@ -123,6 +123,15 @@ country_decisions = {
 				}
 				set_country_flag = INC_used_to_be_CHM
 			}
+			if = {
+				limit = {
+					NOT = {
+						technology_group = andean
+					}
+				}
+				change_technology_group = andean
+				change_unit_type = andean
+			}
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {

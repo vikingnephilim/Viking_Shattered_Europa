@@ -1,9 +1,16 @@
 #Country Name: Please see filename.
-
 graphical_culture = westerngfx
+color = {
+	184
+	184
+	122
+}
 
-color = { 184 184 122 }
-revolutionary_colors = { 13 16 0 }
+revolutionary_colors = {
+	13
+	16
+	0
+}
 
 historical_idea_groups = {
 	defensive_ideas
@@ -17,21 +24,31 @@ historical_idea_groups = {
 }
 
 historical_units = {
-	western_medieval_infantry
-	western_medieval_knights
+	western_archers
 	western_men_at_arms
-	swiss_landsknechten
-	dutch_maurician
-	french_caracolle
-	anglofrench_line
-	french_dragoon
-	french_bluecoat
-	french_carabinier
-	french_impulse
-	mixed_order_infantry
-	open_order_cavalry
-	napoleonic_square
-	napoleonic_lancers
+	western_halberdmen
+	western_pikemen
+	western_matchlock_shooter
+	western_charge_infantry
+	western_reformed_shooter_infantry
+	western_grenadiers
+	western_regiment_of_foot
+	western_line_infantry
+	western_red_coat_infantry
+	western_square_infantry
+	western_drill_infantry
+	western_mixed_infantry
+	western_trench_infantry
+	western_horsemen
+	western_joust_knights
+	western_black_knights
+	western_caracole_cavalry
+	western_gallop_cavalry
+	western_dragoons
+	western_carabiners
+	western_hussars
+	western_lancers
+	western_household_cavalry
 }
 
 monarch_names = {
@@ -44,7 +61,7 @@ monarch_names = {
 	"Nicolas #0" = 20
 	"Alexandre-Louis #0" = 10
 	"François #0" = 10
-	"Jean #0" = 5		
+	"Jean #0" = 5
 	"Antoine-Philippe #0" = 5
 	"Hughes #0" = 1
 	"Robert #0" = 1
@@ -74,46 +91,116 @@ monarch_names = {
 	"Simon #0" = 0
 	"Thibaut #0" = 0
 	"Xavier #0" = 0
-	
 	"Claudine #0" = -10
 	"Isabelle #0" = -1
 	"Jeanne #0" = -1
 }
 
 ship_names = {
-	"l'Amboise" "l'Amilly" "l'Artenay" "l'Azay-le-Rideau"
-	"le Beaune-la-Rolande" "le Beauregard" "le Bellegarde" "le Blois" "le Briare"
-	"la Chalette" "le Chambord" "le Chamerolles" "le Châteauneuf" "le Château-Renard" "le Châtillon-Coligny" "le Chécy" "Chenonceau" "le Cheverny" "le Chevilly" "le Cléry-Saint-André" "le Combleux" "le Courtenay"
+	"l'Amboise"
+	"l'Amilly"
+	"l'Artenay"
+	"l'Azay-le-Rideau"
+	"le Beaune-la-Rolande"
+	"le Beauregard"
+	"le Bellegarde"
+	"le Blois"
+	"le Briare"
+	"la Chalette"
+	"le Chambord"
+	"le Chamerolles"
+	"le Châteauneuf"
+	"le Château-Renard"
+	"le Châtillon-Coligny"
+	"le Chécy"
+	"Chenonceau"
+	"le Cheverny"
+	"le Chevilly"
+	"le Cléry-Saint-André"
+	"le Combleux"
+	"le Courtenay"
 	"le Dunois"
-	"le Fay-aux-Loges" "le Ferrières" "le Ferté-Saint-Aubin" "le Fleury-les-Aubrais"
-	"le Germigny" "le Gien"
+	"le Fay-aux-Loges"
+	"le Ferrières"
+	"le Ferté-Saint-Aubin"
+	"le Fleury-les-Aubrais"
+	"le Germigny"
+	"le Gien"
 	"le Jargeau"
 	"la Bussière"
-	"le Malesherbes" "le Meung-sur-Loire" "le Montargis"
+	"le Malesherbes"
+	"le Meung-sur-Loire"
+	"le Montargis"
 	"le Neuville-aux-Bois"
-	"l'Olivet" "l'Outarville" "l'Ouzouer"
-	"le Patay" "le Pithiviers" "le Pontchevron" "le Puiseaux"
-	"le Saint-Benoît" "le Saint-Jean-de-Braye" "le Saint-Jean-le-Blanc" "le Sully"
+	"l'Olivet"
+	"l'Outarville"
+	"l'Ouzouer"
+	"le Patay"
+	"le Pithiviers"
+	"le Pontchevron"
+	"le Puiseaux"
+	"le Saint-Benoît"
+	"le Saint-Jean-de-Braye"
+	"le Saint-Jean-le-Blanc"
+	"le Sully"
 	"le Talcy"
-	"le Vendôme" "le Villesavin"
+	"le Vendôme"
+	"le Villesavin"
 }
 
 leader_names = {
 	d'Avaray
-	Badoux "de Barville" "de Beaugency" "de Beauharnais" "de Beauregard" "du Bellay" "Bernard de Montebise" "de Boigneux" 
-	"de Chabot" "de Châtillon"
+	Badoux
+	"de Barville"
+	"de Beaugency"
+	"de Beauharnais"
+	"de Beauregard"
+	"du Bellay"
+	"Bernard de Montebise"
+	"de Boigneux"
+	"de Chabot"
+	"de Châtillon"
 	d'Ennery
-	"de Gauville" "de Geresme" "Givès-de-Creusy" Garandeau "de Garlande"
-	"de Laage" "de La Brisardière" "de La Bussière" "de La Chapelle" "de La Chesnaye" "de La Valette" "de l'Estoile" "le Maître" "le Texier"
-	"de Maintenon" "de Marolles" "de Martel de Rénac" "de Montboissier" "de Montigny" "de Montlhéry"
+	"de Gauville"
+	"de Geresme"
+	"Givès-de-Creusy"
+	Garandeau
+	"de Garlande"
+	"de Laage"
+	"de La Brisardière"
+	"de La Bussière"
+	"de La Chapelle"
+	"de La Chesnaye"
+	"de La Valette"
+	"de l'Estoile"
+	"le Maître"
+	"le Texier"
+	"de Maintenon"
+	"de Marolles"
+	"de Martel de Rénac"
+	"de Montboissier"
+	"de Montigny"
+	"de Montlhéry"
 	"de Neufcarres"
-	"Péan de Saint-Gilles" "de Phéline" "de Pontville" "de Prunelé"
-	"de Rancourt" "de Réméon d'Orval" 
-	"de Sabrecois" "de Saint-Cosme" "de Saint-Marc" "de Saint-Mars" "de Salles" "Scott de Coulanges" "de Senneville" "de Sérizy" "Seurat de La Boullaye"
+	"Péan de Saint-Gilles"
+	"de Phéline"
+	"de Pontville"
+	"de Prunelé"
+	"de Rancourt"
+	"de Réméon d'Orval"
+	"de Sabrecois"
+	"de Saint-Cosme"
+	"de Saint-Marc"
+	"de Saint-Mars"
+	"de Salles"
+	"Scott de Coulanges"
+	"de Senneville"
+	"de Sérizy"
+	"Seurat de La Boullaye"
 	"de Tannoys"
 	"de Villiers"
 }
 
-army_names = { 
-	  "Armée de $PROVINCE$" 
+army_names = {
+	"Armée de $PROVINCE$"
 }

@@ -1,14 +1,19 @@
 #Country Name: Seeee the Name of this File.
-
 graphical_culture = westerngfx
+color = {
+	156
+	179
+	189
+}
 
-color = { 156  179  189 }
-revolutionary_colors = { 1 0 5 }
+revolutionary_colors = {
+	1
+	0
+	5
+}
 
 historical_score = 1000
-
 preferred_religion = protestant
-
 historical_idea_groups = {
 	trade_ideas
 	plutocracy_ideas
@@ -21,20 +26,30 @@ historical_idea_groups = {
 }
 
 historical_units = {
-	western_medieval_infantry
-	western_medieval_knights
-	western_men_at_arms
-	swiss_landsknechten
-	dutch_maurician
-	austrian_tercio
-	austrian_grenzer
-	austrian_hussar
-	austrian_white_coat
-	austrian_jaeger
-	mixed_order_infantry
-	open_order_cavalry
-	napoleonic_square
-	napoleonic_lancers
+	german_archers
+	german_men_at_arms
+	german_doppelsoldern
+	german_arquebus_shooter_infantry
+	german_reislaufer_infantry
+	german_reformierte_schutzeninfanterie
+	german_grenzer_infantry
+	german_musketeer_infantry
+	german_pandur_infantry
+	german_white_coat_infantry
+	german_trencks_pandur_infantry
+	german_seressaner_infantry
+	german_jaeger_infantry
+	german_freikorps
+	german_horsemen
+	german_jaeger_zu_pferde
+	german_schwartzer_reiter
+	german_caracole_cavalry
+	german_gallop_cavalry
+	german_dragoons
+	german_carabiners
+	german_cuirassiers
+	german_guard_du_corp
+	german_guards_uhlan
 }
 
 monarch_names = {
@@ -78,35 +93,148 @@ monarch_names = {
 	"Viktor #0" = 0
 	"Wenzel #0" = 0
 	"Wilfried #0" = 0
-	
 	"Amalie #0" = -1
 	"Helene #0" = -1
 	"Juliane #0" = -1
 }
 
 leader_names = {
-	Abendroth Ackermann Adler Ahlers Alpers Alt 
-	Amsinck Baasch Backer Bagebuhr Bastian Billing 
-	Boetefeur Dabelstein "de Greve" Dreyer Eggers 
-	Engel "von der Fechte" Framhein Gevert Gossler 
-	Grünewaldt Hansen Heinsohn Henckell Heuer Horwege
-	Imbeck Jarchow Kehrhahn Kellinghusen Kindt 
-	"von Lengerke" Lieb Merck Meyer Muhl Nanne 
-	Olbers Pape Pollnau Rosenbaum Rosendahl Schmerse
-	Schmidt Schuberth Schuemann Soltau Steetz Thelemann 
-	Tiedemann Vick Vilter Vollmer "von Düten" 
+	Abendroth
+	Ackermann
+	Adler
+	Ahlers
+	Alpers
+	Alt
+	Amsinck
+	Baasch
+	Backer
+	Bagebuhr
+	Bastian
+	Billing
+	Boetefeur
+	Dabelstein
+	"de Greve"
+	Dreyer
+	Eggers
+	Engel
+	"von der Fechte"
+	Framhein
+	Gevert
+	Gossler
+	Grünewaldt
+	Hansen
+	Heinsohn
+	Henckell
+	Heuer
+	Horwege
+	Imbeck
+	Jarchow
+	Kehrhahn
+	Kellinghusen
+	Kindt
+	"von Lengerke"
+	Lieb
+	Merck
+	Meyer
+	Muhl
+	Nanne
+	Olbers
+	Pape
+	Pollnau
+	Rosenbaum
+	Rosendahl
+	Schmerse
+	Schmidt
+	Schuberth
+	Schuemann
+	Soltau
+	Steetz
+	Thelemann
+	Tiedemann
+	Vick
+	Vilter
+	Vollmer
+	"von Düten"
 }
 
 ship_names = {
-	"Adler von Lübeck" "Admiralität von Hamburg" "Arche Noah" "Brunte Kuh" "Der Große Adler" "Engel Gabriel" "Fliegender Hirsch" "Füchslein" "Gelber Löve"
-	"Goldener Löwe" "Grafschaft Mark" "Grüner Drache" "Herzogtum Cleve" "Jesus von Lübeck" "Jonge Tobias" "König David" "Leopoldus Primus" "Lisa von Lübeck"
-	"Lybischer Trotz" "Lübscher Adler" "Maria Catharina" "Nordischer Löwe" "Peter und Paul" "Peter von Danzig" "Prinz Ludwig" "Prophet Daniel" "Ritter Sankt Georg"
-	"Roter Hirsch" "Sankt Laurens" "Sankt Peter" "Schwarzer Rabe" "Sieben Provinzien" "Stad Emden" "Vogel Greif" "Wapen von Bremen" "Wapen von Hamburg"
-	"Wappen von Bremen" "Wappen von Cleve" "Weißer Löwe" "Wilhelmina Margaretta" "Zwei Brüder" Afrikaner Anna Bersteinfänger Bracke Clementia Colonia Derffinger
-	Dorothea Engel Feuerblase Fortuna Friede Fuchs Gabriel Hoffning Johannesburg Kurprinz Makarele Meermann Meerweib Mercurius Morian Pax Pierelepomp Roland Rommelpot
-	Rosenfelde Salamander Seemoewe Seeritter Syrig Wasserhund Windhund Wolkensäule
+	"Adler von Lübeck"
+	"Admiralität von Hamburg"
+	"Arche Noah"
+	"Brunte Kuh"
+	"Der Große Adler"
+	"Engel Gabriel"
+	"Fliegender Hirsch"
+	"Füchslein"
+	"Gelber Löve"
+	"Goldener Löwe"
+	"Grafschaft Mark"
+	"Grüner Drache"
+	"Herzogtum Cleve"
+	"Jesus von Lübeck"
+	"Jonge Tobias"
+	"König David"
+	"Leopoldus Primus"
+	"Lisa von Lübeck"
+	"Lybischer Trotz"
+	"Lübscher Adler"
+	"Maria Catharina"
+	"Nordischer Löwe"
+	"Peter und Paul"
+	"Peter von Danzig"
+	"Prinz Ludwig"
+	"Prophet Daniel"
+	"Ritter Sankt Georg"
+	"Roter Hirsch"
+	"Sankt Laurens"
+	"Sankt Peter"
+	"Schwarzer Rabe"
+	"Sieben Provinzien"
+	"Stad Emden"
+	"Vogel Greif"
+	"Wapen von Bremen"
+	"Wapen von Hamburg"
+	"Wappen von Bremen"
+	"Wappen von Cleve"
+	"Weißer Löwe"
+	"Wilhelmina Margaretta"
+	"Zwei Brüder"
+	Afrikaner
+	Anna
+	Bersteinfänger
+	Bracke
+	Clementia
+	Colonia
+	Derffinger
+	Dorothea
+	Engel
+	Feuerblase
+	Fortuna
+	Friede
+	Fuchs
+	Gabriel
+	Hoffning
+	Johannesburg
+	Kurprinz
+	Makarele
+	Meermann
+	Meerweib
+	Mercurius
+	Morian
+	Pax
+	Pierelepomp
+	Roland
+	Rommelpot
+	Rosenfelde
+	Salamander
+	Seemoewe
+	Seeritter
+	Syrig
+	Wasserhund
+	Windhund
+	Wolkensäule
 }
 
 army_names = {
-	"Armee von $PROVINCE$" 
+	"Armee von $PROVINCE$"
 }

@@ -7,9 +7,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_ethiopia_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -64,9 +61,6 @@ country_decisions = {
 			NOT = {
 				exists = ETH
 			}
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			is_nomad = no
 			owns_core_province = 1224			# Gonder
@@ -80,6 +74,15 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = ETH
+			if = {
+				limit = {
+					NOT = {
+						technology_group = ethiopian
+					}
+				}
+				change_technology_group = ethiopian
+				change_unit_type = ethiopian
+			}
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {

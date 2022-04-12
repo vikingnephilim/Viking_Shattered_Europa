@@ -7,9 +7,6 @@ country_decisions = {
 				exists = no
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				tag = HLR
 			}
 			NOT = {
@@ -60,9 +57,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = {
-				government = codex
-			}
 			owns = 227
 			owns = 219
 			owns = 183
@@ -102,6 +96,15 @@ country_decisions = {
 				move_capital_effect = yes
 			}
 			change_tag = WRM
+			if = {
+				limit = {
+					NOT = {
+						technology_group = latin_group
+					}
+				}
+				change_technology_group = latin_group
+				change_unit_type = latin_group
+			}
 			restore_country_name_effect = yes
 			custom_tooltip = roman_culture_provinces_tooltip
 			hidden_effect = {

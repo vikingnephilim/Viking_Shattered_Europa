@@ -7,9 +7,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_morocco_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -83,9 +80,6 @@ country_decisions = {
 			NOT = {
 				exists = MOR
 			}
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			is_nomad = no
 			owns_core_province = 343			#Fez
@@ -101,6 +95,15 @@ country_decisions = {
 		}
 		effect = {
 			restore_country_name_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = maghrebi
+					}
+				}
+				change_technology_group = maghrebi
+				change_unit_type = maghrebi
+			}
 			344 = {
 				move_capital_effect = yes
 			}
@@ -201,9 +204,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_algiers_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -286,9 +286,6 @@ country_decisions = {
 			NOT = {
 				exists = ALG
 			}
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			is_nomad = no
 			owns_core_province = 2461			#Dahra
@@ -304,6 +301,15 @@ country_decisions = {
 		}
 		effect = {
 			restore_country_name_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = maghrebi
+					}
+				}
+				change_technology_group = maghrebi
+				change_unit_type = maghrebi
+			}
 			338 = {
 				move_capital_effect = yes
 			}
@@ -390,9 +396,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_tunisia_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -469,9 +472,6 @@ country_decisions = {
 			NOT = {
 				exists = TUN
 			}
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			is_nomad = no
 			owns_core_province = 2473			#Souss
@@ -487,6 +487,15 @@ country_decisions = {
 		}
 		effect = {
 			restore_country_name_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = maghrebi
+					}
+				}
+				change_technology_group = maghrebi
+				change_unit_type = maghrebi
+			}
 			341 = {
 				move_capital_effect = yes
 			}
@@ -542,9 +551,6 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
-			NOT = {
-				government = codex
-			}
 			NOT = {
 				has_country_flag = formed_tripoli_flag
 			}
@@ -627,9 +633,6 @@ country_decisions = {
 		}
 		allow = {
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				exists = TRP
 			}
 			is_at_war = no
@@ -647,6 +650,15 @@ country_decisions = {
 		}
 		effect = {
 			restore_country_name_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = maghrebi
+					}
+				}
+				change_technology_group = maghrebi
+				change_unit_type = maghrebi
+			}
 			354 = {
 				move_capital_effect = yes
 			}

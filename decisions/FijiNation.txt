@@ -11,9 +11,6 @@ country_decisions = {
 			NOT = {
 				tag = VIT
 			}
-			NOT = {
-				government = codex
-			}
 			primary_culture = melanesian
 			capital_scope = {
 				area = fiji_area
@@ -54,14 +51,20 @@ country_decisions = {
 				is_city = yes
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				exists = VIT
 			}
 		}
 		effect = {
 			change_tag = VIT
+			if = {
+				limit = {
+					NOT = {
+						technology_group = oceanic
+					}
+				}
+				change_technology_group = oceanic
+				change_unit_type = oceanic
+			}
 			restore_country_name_effect = yes
 			if = {
 				limit = {

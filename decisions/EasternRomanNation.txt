@@ -27,9 +27,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_ERM
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				religion = bogomilist
 				religion = coptic
@@ -81,15 +78,21 @@ country_decisions = {
 			is_core = 330
 			is_core = 327
 			is_core = 159
-			NOT = {
-				government = codex
-			}
 		}
 		effect = {
 			151 = {
 				move_capital_effect = yes
 			}
 			change_tag = ERM
+			if = {
+				limit = {
+					NOT = {
+						technology_group = greek
+					}
+				}
+				change_technology_group = greek
+				change_unit_type = greek
+			}
 			custom_tooltip = roman_culture_provinces_tooltip
 			hidden_effect = {
 				every_owned_province = {

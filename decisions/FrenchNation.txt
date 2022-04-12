@@ -23,9 +23,6 @@ country_decisions = {
 			NOT = {
 				tag = SPA
 			}
-			NOT = {
-				government = codex
-			}
 			# Basque is a valid culture for both FRA and SPA
 			OR = {
 				ai = no
@@ -83,9 +80,6 @@ country_decisions = {
 			NOT = {
 				exists = FRA
 			}
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 184			# Orléannais
 			owns_core_province = 186			# Champagne
 			owns_core_province = 183			# Île-de-France
@@ -105,6 +99,15 @@ country_decisions = {
 				move_capital_effect = yes
 			}
 			change_tag = FRA
+			if = {
+				limit = {
+					NOT = {
+						technology_group = western
+					}
+				}
+				change_technology_group = western
+				change_unit_type = western
+			}
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {

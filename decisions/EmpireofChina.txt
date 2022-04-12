@@ -16,9 +16,6 @@ country_decisions = {
 					ai = no
 				}
 			}
-			NOT = {
-				government = codex
-			}
 			culture_group = east_asian
 			OR = {
 				religion_group = eastern
@@ -40,9 +37,6 @@ country_decisions = {
 					type = all
 				}
 			}
-			NOT = {
-				government = codex
-			}
 			adm_power = 50
 			mil_power = 50
 			dip_power = 50
@@ -56,6 +50,15 @@ country_decisions = {
 		effect = {
 			set_emperor_of_china = ROOT
 			restore_country_name_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = chinese
+					}
+				}
+				change_technology_group = chinese
+				change_unit_type = chinese
+			}
 			clr_global_flag = empire_of_china_dismantled
 			if = {
 				limit = {

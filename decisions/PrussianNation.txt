@@ -82,9 +82,6 @@ country_decisions = {
 			NOT = {
 				has_reform = celestial_empire
 			}
-			NOT = {
-				government = codex
-			}
 			tag = BRA
 			OR = {
 				NOT = {
@@ -132,9 +129,6 @@ country_decisions = {
 			NOT = {
 				exists = PRU
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				religion = protestant
 				religion = reformed
@@ -155,6 +149,15 @@ country_decisions = {
 		effect = {
 			change_tag = PRU
 			restore_country_name_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = german
+					}
+				}
+				change_technology_group = german
+				change_unit_type = german
+			}
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
@@ -272,9 +275,6 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = {
-				government = codex
-			}
 			tag = TEU
 			NOT = {
 				has_reform = celestial_empire
@@ -315,9 +315,6 @@ country_decisions = {
 			NOT = {
 				exists = PRU
 			}
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			OR = {
 				religion = protestant
@@ -342,6 +339,15 @@ country_decisions = {
 			change_tag = PRU
 			restore_country_name_effect = yes
 			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = german
+					}
+				}
+				change_technology_group = german
+				change_unit_type = german
+			}
 			east_prussia_area = {
 				limit = {
 					NOT = {
@@ -517,6 +523,15 @@ country_decisions = {
 			change_tag = PRU
 			restore_country_name_effect = yes
 			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = german
+					}
+				}
+				change_technology_group = german
+				change_unit_type = german
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {

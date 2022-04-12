@@ -1,2103 +1,2816 @@
-# Do not change tags in here without changing every other reference to them.
-# If adding new buildings, make sure they are uniquely named.
-# cost = x #==> cost in $ to build (subject to other modifiers)
-# time = x #==> number of months to build.
-# modifier = m # a modifier on the province that the building gives
-# trigger = t # an and trigger that needs to be fullfilled to build and keep the building
-# one_per_country = yes/no # if yes, only one of these can exist in a country
-# manufactory = { trade_good trade_good } # list of trade goods that get a production bonus
-# onmap = yes/no # show as a sprite on the map
-# FROM = owner
-# ROOT = province
-# Building AI is now mainly hard-coded. The AI will estimate how much it gains yearly from each building,
-# convert the value to ducats, and take the building with biggest yearly return as a percentage of the build cost.
-# If lower than 1%, the AI will not consider the yearly return worth it.
-# It will also require higher yearly return if the economy in not in prime shape.
-# Forts' value also get converted to a yearly return based on terrain and strategic position, as well as available budget for fort maintenance.
-# AI can still be modded though; it will multiply the yearly return with the value of ai_will_do.
-# If you don't want the AI to build a building at all, make ai_will_do become 0.
-# AI will consider each building to be worth 0.01 ducats per year as a base, so making ai_will_do above cost will have them build it at some point.
-# It will still check whether it can afford a building before doing so though, but may save up to it.
-################################################
-# Tier 1, 15th Century Buildings
-################################################
-marketplace = {
-	cost = 100
-	time = 12
-	modifier = {
-		province_trade_power_modifier = 0.5
-		trade_value_modifier = 0.1
-	}
-	on_built = {
-		add_development_from_building = {
-			building = marketplace
-			type = production
-			value = 1
-		}
-	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = marketplace
-			type = production
-			value = 1
-		}
-	}
-	on_obsolete = {
-	}
-	ai_will_do = {
-		factor = 1.5		# Because hard-coded AI only considers what it will gain, not what its enemies will lose.
-	}
-}
-
-workshop = {
-	cost = 100
-	time = 12
-	modifier = {
-		local_production_efficiency = 0.5
-		local_development_cost = -0.05
-	}
-	on_built = {
-		add_development_from_building = {
-			building = workshop
-			type = production
-			value = 1
-		}
-	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = workshop
-			type = production
-			value = 1
-		}
-	}
-	on_obsolete = {
-	}
-	allow_in_gold_provinces = no
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-temple = {
-	cost = 100
-	time = 12
-	modifier = {
-		local_tax_modifier = 0.5
-		local_missionary_strength = 0.025
-	}
-	on_built = {
-		if = {
-			limit = {
-				FROM = {
-					OR = {
-						religion = buddhism
-						religion = mahayana
-						religion = vajrayana
-					}
-					has_estate_privilege = estate_church_karma_temples
-				}
-			}
-			FROM = {
-				add_karma = 3
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					religion = catholic
-					has_estate_privilege = estate_church_influence_temples
-				}
-			}
-			FROM = {
-				add_papal_influence = 3
-			}
-		}
-		add_development_from_building = {
-			building = temple
-			type = tax
-			value = 1
-		}
-	}
-	on_destroyed = {
-		if = {
-			limit = {
-				FROM = {
-					OR = {
-						religion = buddhism
-						religion = mahayana
-						religion = vajrayana
-					}
-					has_estate_privilege = estate_church_karma_temples
-				}
-			}
-			FROM = {
-				add_karma = -3
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					religion = catholic
-					has_estate_privilege = estate_church_influence_temples
-				}
-			}
-			FROM = {
-				add_papal_influence = -3
-			}
-		}
-		remove_development_from_building = {
-			building = temple
-			type = tax
-			value = 1
-		}
-	}
-	on_obsolete = {
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-barracks = {
-	cost = 100
-	time = 12
-	modifier = {
-		local_manpower_modifier = 0.5
-		regiment_recruit_speed = -0.1
-	}
-	on_built = {
-		if = {
-			limit = {
-				FROM = {
-					has_reform = corvee_reform
-				}
-			}
-			FROM = {
-				add_manpower = 1
-			}
-		}
-		add_development_from_building = {
-			building = barracks
-			type = manpower
-			value = 1
-		}
-	}
-	on_destroyed = {
-		if = {
-			limit = {
-				FROM = {
-					has_reform = corvee_reform
-				}
-			}
-			FROM = {
-				add_manpower = -1
-			}
-		}
-		remove_development_from_building = {
-			building = barracks
-			type = manpower
-			value = 1
-		}
-	}
-	on_obsolete = {
-	}
-	#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-	#	on_built = {
-	#		FROM = {
-	#			add_army_professionalism = 0.005
-	#		}
-	#	}
-	#
-	#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-	#	on_destroyed = {
-	#		FROM = {
-	#			add_army_professionalism = -0.01
-	#		}
-	#	}
-	#
-	#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-	#	on_obsolete = {
-	#		hidden_effect = {
-	#			FROM = {
-	#				add_army_professionalism = -0.005
-	#			}
-	#		}
-	#	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-shipyard = {
-	cost = 100
-	time = 12
-	build_trigger = {
-		has_port = yes
-	}
-	modifier = {
-		naval_forcelimit = 2
-		ship_recruit_speed = -0.25
-		local_ship_repair = 0.25
-	}
-	on_built = {
-		add_development_from_building = {
-			building = shipyard
-			type = production
-			value = 1
-		}
-	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = shipyard
-			type = production
-			value = 1
-		}
-	}
-	on_obsolete = {
-	}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5			# bit more likely if close to the naval force limit
-			FROM = {
-				navy_size_percentage = 0.95
-			}
-		}
-		modifier = {
-			factor = 1.1
-			local_autonomy = 50
-		}
-	}
-}
-
-fort_15th = {
-	cost = 200
-	time = 30
-	modifier = {
-		fort_level = 2
-		local_defensiveness = 0.1
-	}
-	build_trigger = {
-		NOT = {
-			any_neighbor_province = {
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					has_building = fort_15th
-					has_construction = fort_15th
-					has_building = fort_16th
-					has_construction = fort_16th
-					has_building = fort_17th
-					has_construction = fort_17th
-					has_building = fort_18th
-					has_construction = fort_18th
-				}
-				NOT = {
-					is_capital = yes
-				}
-			}
-		}
-	}
-	keep_trigger = {
-		OR = {
-			AND = {
-				has_province_flag = new_conquest_fort_delay
-				NOT = {
-					had_province_flag = {
-						flag = new_conquest_fort_delay
-						days = 365
-					}
-				}
-			}
-			is_capital = yes
-			NOT = {
-				any_neighbor_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = fort_15th
-						has_construction = fort_15th
-						has_building = fort_16th
-						has_construction = fort_16th
-						has_building = fort_17th
-						has_construction = fort_17th
-						has_building = fort_18th
-						has_construction = fort_18th
-					}
-					NOT = {
-						is_capital = yes
-					}
-				}
-			}
-			NOT = {
-				any_neighbor_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = fort_15th
-						has_construction = fort_15th
-						has_building = fort_16th
-						has_construction = fort_16th
-						has_building = fort_17th
-						has_construction = fort_17th
-						has_building = fort_18th
-						has_construction = fort_18th
-					}
-					NOT = {
-						AND = {
-							has_province_flag = new_conquest_fort_delay
-							NOT = {
-								had_province_flag = {
-									flag = new_conquest_fort_delay
-									days = 365
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-	#	on_built = {
-	#		FROM = {
-	#			add_army_professionalism = 0.005
-	#		}
-	#	}
-	#
-	#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-	#	on_destroyed = {
-	#		FROM = {
-	#			add_army_professionalism = -0.01
-	#		}
-	#	}
-	#
-	#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-	#	on_obsolete = {
-	#		hidden_effect = {
-	#			FROM = {
-	#				add_army_professionalism = -0.005
-	#			}
-	#		}
-	#	}
-	onmap = yes
-	influencing_fort = yes
-	ai_will_do = {
-		factor = 1		#Lots of logic in code instead, that multiplies with this value
-	}
-}
-
-coastal_defence = {
-	cost = 100
-	time = 12
-	build_trigger = {
-		has_port = yes
-	}
-	modifier = {
-		blockade_force_required = 0.5
-		hostile_disembark_speed = 1
-		block_slave_raid = yes
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-################################################
-# Tier 2, 16th Century Buildings
-################################################
-courthouse = {
-	cost = 100
-	time = 12
-	modifier = {
-		local_state_maintenance_modifier = -0.25
-		local_autonomy = -0.1
-		local_governing_cost = -0.25
-	}
-	on_built = {
-		add_development_from_building = {
-			building = courthouse
-			type = tax
-			value = 1
-		}
-	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = courthouse
-			type = tax
-			value = 1
-		}
-	}
-	on_obsolete = {
-	}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 2
-			FROM = {
-				governing_capacity_percentage = 0.8
-			}
-		}
-		modifier = {
-			factor = 3
-			FROM = {
-				governing_capacity_percentage = 1
-			}
-		}
-		modifier = {
-			factor = 5
-			FROM = {
-				governing_capacity_percentage = 1.1
-			}
-		}
-		modifier = {
-			factor = 0.75
-			FROM = {
-				num_of_loans = 1
-			}
-		}
-		modifier = {
-			factor = 0.25
-			FROM = {
-				num_of_loans = 2
-			}
-		}
-		modifier = {
-			factor = 0
-			FROM = {
-				num_of_loans = 3
-			}
-		}
-		modifier = {
-			factor = 0.5
-			FROM = {
-				is_in_deficit = yes
-			}
-		}
-		modifier = {
-			factor = 1.25
-			development = 10
-		}
-		modifier = {
-			factor = 1.25
-			development = 20
-		}
-		modifier = {
-			factor = 1.25
-			development = 30
-		}
-		modifier = {
-			factor = 0.5
-			FROM = {
-				NOT = {
-					treasury = 200
-				}
-			}
-		}
-		modifier = {
-			factor = 1.25
-			FROM = {
-				treasury = 300
-			}
-		}
-		#Provinces in the Capital Area don't need a courthouse
-		modifier = {
-			factor = 0
-			area_for_scope_province = {
-				is_capital_of = FROM
-			}
-		}
-	}
-}
-
-dock = {
-	cost = 100
-	time = 12
-	build_trigger = {
-		has_port = yes
-	}
-	modifier = {
-		local_sailors_modifier = 0.5
-		local_naval_engagement_modifier = 0.1
-	}
-	on_built = {
-		if = {
-			limit = {
-				FROM = {
-					has_reform = corvee_reform
-				}
-			}
-			FROM = {
-				add_sailors = 200
-			}
-		}
-		add_development_from_building = {
-			building = dock
-			type = production
-			value = 1
-		}
-	}
-	on_destroyed = {
-		if = {
-			limit = {
-				FROM = {
-					has_reform = corvee_reform
-				}
-			}
-			FROM = {
-				add_sailors = -200
-			}
-		}
-		remove_development_from_building = {
-			building = dock
-			type = production
-			value = 1
-		}
-	}
-	on_obsolete = {
-	}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0.5
-		}
-	}
-}
-
-regimental_camp = {
-	cost = 200
-	time = 12
-	modifier = {
-		land_forcelimit = 1
-		supply_limit_modifier = 0.25
-	}
-	#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-	#	on_built = {
-	#		FROM = {
-	#			add_army_professionalism = 0.005
-	#		}
-	#	}
-	#
-	#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-	#	on_destroyed = {
-	#		FROM = {
-	#			add_army_professionalism = -0.01
-	#		}
-	#	}
-	#
-	#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-	#	on_obsolete = {
-	#		hidden_effect = {
-	#			FROM = {
-	#				add_army_professionalism = -0.005
-	#			}
-	#		}
-	#	}
-	on_built = {
-		add_development_from_building = {
-			building = regimental_camp
-			type = manpower
-			value = 1
-		}
-	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = regimental_camp
-			type = manpower
-			value = 1
-		}
-	}
-	on_obsolete = {
-	}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5			# more likely if we have an army close to the force limit
-			FROM = {
-				army_size_percentage = 0.95
-			}
-		}
-		modifier = {
-			factor = 1.1
-			local_autonomy = 50
-		}
-	}
-}
-
-fort_16th = {
-	cost = 400
-	time = 30
-	make_obsolete = fort_15th
-	modifier = {
-		fort_level = 4
-		local_defensiveness = 0.25
-	}
-	build_trigger = {
-		NOT = {
-			any_neighbor_province = {
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					has_building = fort_15th
-					has_construction = fort_15th
-					has_building = fort_16th
-					has_construction = fort_16th
-					has_building = fort_17th
-					has_construction = fort_17th
-					has_building = fort_18th
-					has_construction = fort_18th
-				}
-				NOT = {
-					is_capital = yes
-				}
-			}
-		}
-	}
-	keep_trigger = {
-		OR = {
-			AND = {
-				has_province_flag = new_conquest_fort_delay
-				NOT = {
-					had_province_flag = {
-						flag = new_conquest_fort_delay
-						days = 365
-					}
-				}
-			}
-			is_capital = yes
-			NOT = {
-				any_neighbor_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = fort_15th
-						has_construction = fort_15th
-						has_building = fort_16th
-						has_construction = fort_16th
-						has_building = fort_17th
-						has_construction = fort_17th
-						has_building = fort_18th
-						has_construction = fort_18th
-					}
-					NOT = {
-						is_capital = yes
-					}
-				}
-			}
-			NOT = {
-				any_neighbor_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = fort_15th
-						has_construction = fort_15th
-						has_building = fort_16th
-						has_construction = fort_16th
-						has_building = fort_17th
-						has_construction = fort_17th
-						has_building = fort_18th
-						has_construction = fort_18th
-					}
-					NOT = {
-						AND = {
-							has_province_flag = new_conquest_fort_delay
-							NOT = {
-								had_province_flag = {
-									flag = new_conquest_fort_delay
-									days = 365
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-	#	on_built = {
-	#		FROM = {
-	#			add_army_professionalism = 0.01
-	#		}
-	#	}
-	#
-	#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-	#	on_destroyed = {
-	#		FROM = {
-	#			add_army_professionalism = -0.02
-	#		}
-	#	}
-	#
-	#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-	#	on_obsolete = {
-	#		hidden_effect = {
-	#			FROM = {
-	#				add_army_professionalism = -0.01
-	#			}
-	#		}
-	#	}
-	onmap = yes
-	influencing_fort = yes
-	ai_will_do = {
-		factor = 1		#Lots of logic in code instead, that multiplies with this value
-	}
-}
-
-naval_battery = {
-	make_obsolete = coastal_defence
-	cost = 200
-	time = 12
-	build_trigger = {
-		has_port = yes
-	}
-	modifier = {
-		blockade_force_required = 1
-		hostile_disembark_speed = 2
-		hostile_fleet_attrition = 5
-		block_slave_raid = yes
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-################################################
-# Tier 3, 17th Century Buildings
-################################################
-cathedral = {
-	make_obsolete = temple
-	cost = 300
-	time = 12
-	modifier = {
-		local_missionary_strength = 0.05
-		local_tax_modifier = 1
-	}
-	on_built = {
-		if = {
-			limit = {
-				FROM = {
-					OR = {
-						religion = buddhism
-						religion = mahayana
-						religion = vajrayana
-					}
-					has_estate_privilege = estate_church_karma_temples
-				}
-			}
-			FROM = {
-				add_karma = 3
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					religion = catholic
-					has_estate_privilege = estate_church_influence_temples
-				}
-			}
-			FROM = {
-				add_papal_influence = 3
-			}
-		}
-		add_development_from_upgrading_or_building = {
-			building = cathedral
-			obsolete_building = temple
-			type = tax
-			value = 2
-			upgrade_value = 1
-		}
-	}
-	on_destroyed = {
-		if = {
-			limit = {
-				FROM = {
-					OR = {
-						religion = buddhism
-						religion = mahayana
-						religion = vajrayana
-					}
-					has_estate_privilege = estate_church_karma_temples
-				}
-			}
-			FROM = {
-				add_karma = -3
-			}
-		}
-		if = {
-			limit = {
-				FROM = {
-					religion = catholic
-					has_estate_privilege = estate_church_influence_temples
-				}
-			}
-			FROM = {
-				add_papal_influence = -3
-			}
-		}
-		remove_development_from_building = {
-			building = cathedral
-			type = tax
-			value = 3
-		}
-	}
-	on_obsolete = {
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-university = {
-	cost = 300
-	time = 12
-	modifier = {
-		local_development_cost = -0.2
-		allowed_num_of_buildings = 1
-		institution_growth = 1
-	}
-	on_built = {
-		add_development_from_building = {
-			building = university
-			type = tax
-			value = 2
-		}
-	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = university
-			type = tax
-			value = 2
-		}
-	}
-	on_obsolete = {
-	}
-	ai_will_do = {
-		# Hard coded AI sees no value in this above the 0.01 ducats base. Let's multiply that
-		factor = 12		# Base of 0.01 ducats per MONTH
-		modifier = {
-			factor = 10
-			development = 16
-		}
-		modifier = {
-			factor = 1.4
-			development = 21
-		}
-		modifier = {
-			factor = 1.4
-			development = 26
-		}
-		modifier = {
-			factor = 1.4
-			development = 30
-		}
-		modifier = {
-			factor = 0
-			is_state = no
-		}
-		modifier = {
-			factor = 2
-			is_capital = yes
-		}
-		modifier = {
-			factor = 0.5
-			OR = {
-				has_climate = tropical
-				has_climate = arid
-			}
-		}
-		modifier = {
-			factor = 0.2
-			has_climate = arctic
-		}
-		modifier = {
-			factor = 1.2
-			OR = {
-				has_terrain = grasslands
-				has_terrain = drylands
-			}
-		}
-		modifier = {
-			factor = 1.3
-			has_terrain = farmlands
-		}
-		modifier = {
-			factor = 2
-			is_year = 1690			# Enlightenment spawns in 1700
-			not = {
-				owner = {
-					has_institution = enlightenment
-				}
-			}
-			not = {
-				provincial_institution_progress = {
-					which = enlightenment
-					value = 20
-				}
-			}
-		}
-	}
-}
-
-trade_depot = {
-	cost = 300
-	time = 12
-	make_obsolete = marketplace
-	modifier = {
-		province_trade_power_modifier = 1
-		trade_value_modifier = 0.25
-	}
-	on_built = {
-		add_development_from_upgrading_or_building = {
-			building = trade_depot
-			obsolete_building = marketplace
-			type = production
-			value = 2
-			upgrade_value = 1
-		}
-	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = trade_depot
-			type = production
-			value = 2
-		}
-	}
-	on_obsolete = {
-	}
-	ai_will_do = {
-		factor = 1.5		# Because hard-coded AI only considers what it will gain, not what its enemies will lose.
-	}
-}
-
-grand_shipyard = {
-	cost = 300
-	time = 12
-	make_obsolete = shipyard
-	build_trigger = {
-		has_port = yes
-	}
-	modifier = {
-		naval_forcelimit = 4
-		ship_recruit_speed = -0.5
-		local_ship_repair = 0.5
-	}
-	on_built = {
-		add_development_from_upgrading_or_building = {
-			building = grand_shipyard
-			obsolete_building = shipyard
-			type = production
-			value = 2
-			upgrade_value = 1
-		}
-	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = grand_shipyard
-			type = production
-			value = 2
-		}
-	}
-	on_obsolete = {
-	}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5			# bit more likely if close to the force limit
-			FROM = {
-				navy_size_percentage = 0.95
-			}
-		}
-		modifier = {
-			factor = 1.1
-			local_autonomy = 50
-		}
-	}
-}
-
-training_fields = {
-	cost = 300
-	time = 12
-	make_obsolete = barracks
-	#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-	#	on_built = {
-	#		FROM = {
-	#			add_army_professionalism = 0.01
-	#		}
-	#	}
-	#
-	#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-	#	on_destroyed = {
-	#		FROM = {
-	#			add_army_professionalism = -0.02
-	#		}
-	#	}
-	#
-	#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-	#	on_obsolete = {
-	#		hidden_effect = {
-	#			FROM = {
-	#				add_army_professionalism = -0.01
-	#			}
-	#		}
-	#	}
-	modifier = {
-		local_manpower_modifier = 1
-		regiment_recruit_speed = -0.2
-	}
-	on_built = {
-		if = {
-			limit = {
-				FROM = {
-					has_reform = corvee_reform
-				}
-			}
-			FROM = {
-				add_manpower = 1
-			}
-		}
-		add_development_from_upgrading_or_building = {
-			building = training_fields
-			obsolete_building = barracks
-			type = manpower
-			value = 2
-			upgrade_value = 1
-		}
-	}
-	on_destroyed = {
-		if = {
-			limit = {
-				FROM = {
-					has_reform = corvee_reform
-				}
-			}
-			FROM = {
-				add_manpower = -1
-			}
-		}
-	}
-	on_obsolete = {
-		remove_development_from_building = {
-			building = training_fields
-			type = manpower
-			value = 2
-		}
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-fort_17th = {
-	cost = 600
-	time = 30
-	make_obsolete = fort_16th
-	modifier = {
-		fort_level = 6
-		local_defensiveness = 0.5
-	}
-	build_trigger = {
-		NOT = {
-			any_neighbor_province = {
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					has_building = fort_15th
-					has_construction = fort_15th
-					has_building = fort_16th
-					has_construction = fort_16th
-					has_building = fort_17th
-					has_construction = fort_17th
-					has_building = fort_18th
-					has_construction = fort_18th
-				}
-				NOT = {
-					is_capital = yes
-				}
-			}
-		}
-	}
-	keep_trigger = {
-		OR = {
-			AND = {
-				has_province_flag = new_conquest_fort_delay
-				NOT = {
-					had_province_flag = {
-						flag = new_conquest_fort_delay
-						days = 365
-					}
-				}
-			}
-			is_capital = yes
-			NOT = {
-				any_neighbor_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = fort_15th
-						has_construction = fort_15th
-						has_building = fort_16th
-						has_construction = fort_16th
-						has_building = fort_17th
-						has_construction = fort_17th
-						has_building = fort_18th
-						has_construction = fort_18th
-					}
-					NOT = {
-						is_capital = yes
-					}
-				}
-			}
-			NOT = {
-				any_neighbor_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = fort_15th
-						has_construction = fort_15th
-						has_building = fort_16th
-						has_construction = fort_16th
-						has_building = fort_17th
-						has_construction = fort_17th
-						has_building = fort_18th
-						has_construction = fort_18th
-					}
-					NOT = {
-						AND = {
-							has_province_flag = new_conquest_fort_delay
-							NOT = {
-								had_province_flag = {
-									flag = new_conquest_fort_delay
-									days = 365
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-	#	on_built = {
-	#		FROM = {
-	#			add_army_professionalism = 0.02
-	#		}
-	#	}
-	#
-	#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-	#	on_destroyed = {
-	#		FROM = {
-	#			add_army_professionalism = -0.04
-	#		}
-	#	}
-	#
-	#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-	#	on_obsolete = {
-	#		hidden_effect = {
-	#			FROM = {
-	#				add_army_professionalism = -0.02
-	#			}
-	#		}
-	#	}
-	onmap = yes
-	influencing_fort = yes
-	ai_will_do = {
-		factor = 1		#Lots of logic in code instead, that multiplies with this value
-	}
-}
-
-################################################
-# Tier 4, 18th Century Buildings
-################################################
-stock_exchange = {
-	cost = 400
-	time = 12
-	make_obsolete = trade_depot
-	modifier = {
-		province_trade_power_modifier = 1.25
-		trade_value_modifier = 0.5
-	}
-	on_built = {
-		if = {
-			limit = {
-				has_province_flag = built_dev_trade_depot
-			}
-			add_development_from_building = {
-				building = stock_exchange
-				type = production
-				value = 1
-			}
-		}
-		else_if = {
-			limit = {
-				has_province_flag = built_dev_marketplace
-			}
-			add_development_from_building = {
-				building = stock_exchange
-				type = production
-				value = 2
-			}
-		}
-		else = {
-			add_development_from_building = {
-				building = stock_exchange
-				type = production
-				value = 3
-			}
-		}
-	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = stock_exchange
-			type = production
-			value = 3
-		}
-	}
-	on_obsolete = {
-	}
-	ai_will_do = {
-		factor = 1.5		# Because hard-coded AI only considers what it will gain, not what its enemies will lose.
-	}
-}
-
-counting_house = {
-	cost = 400
-	time = 12
-	make_obsolete = workshop
-	modifier = {
-		local_production_efficiency = 1
-		local_development_cost = -0.1
-	}
-	on_built = {
-		add_development_from_upgrading_or_building = {
-			building = counting_house
-			obsolete_building = workshop
-			type = production
-			value = 2
-			upgrade_value = 1
-		}
-	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = counting_house
-			type = production
-			value = 2
-		}
-	}
-	on_obsolete = {
-	}
-	allow_in_gold_provinces = no
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-town_hall = {
-	cost = 200
-	time = 12
-	make_obsolete = courthouse
-	modifier = {
-		local_state_maintenance_modifier = -0.5
-		local_autonomy = -0.2
-		local_governing_cost = -0.5
-	}
-	on_built = {
-		add_development_from_upgrading_or_building = {
-			building = town_hall
-			obsolete_building = courthouse
-			type = tax
-			value = 2
-			upgrade_value = 1
-		}
-	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = town_hall
-			type = tax
-			value = 2
-		}
-	}
-	on_obsolete = {
-	}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 10
-			has_building = courthouse
-		}
-		modifier = {
-			factor = 2
-			FROM = {
-				governing_capacity_percentage = 0.8
-			}
-		}
-		modifier = {
-			factor = 3
-			FROM = {
-				governing_capacity_percentage = 1
-			}
-		}
-		modifier = {
-			factor = 5
-			FROM = {
-				governing_capacity_percentage = 1.1
-			}
-		}
-		modifier = {
-			factor = 0.75
-			FROM = {
-				num_of_loans = 1
-			}
-		}
-		modifier = {
-			factor = 0.25
-			FROM = {
-				num_of_loans = 2
-			}
-		}
-		modifier = {
-			factor = 0
-			FROM = {
-				num_of_loans = 3
-			}
-		}
-		modifier = {
-			factor = 0.5
-			FROM = {
-				is_in_deficit = yes
-			}
-		}
-		modifier = {
-			factor = 1.25
-			development = 10
-		}
-		modifier = {
-			factor = 1.25
-			development = 20
-		}
-		modifier = {
-			factor = 1.25
-			development = 30
-		}
-		modifier = {
-			factor = 0.5
-			FROM = {
-				NOT = {
-					treasury = 300
-				}
-			}
-		}
-		modifier = {
-			factor = 1.25
-			FROM = {
-				treasury = 400
-			}
-		}
-		#Provinces in the Capital Area don't need a courthouse
-		modifier = {
-			factor = 0
-			area_for_scope_province = {
-				is_capital_of = FROM
-			}
-		}
-	}
-}
-
-drydock = {
-	cost = 300
-	time = 12
-	make_obsolete = dock
-	build_trigger = {
-		has_port = yes
-	}
-	modifier = {
-		local_sailors_modifier = 1
-		local_naval_engagement_modifier = 0.2
-	}
-	on_built = {
-		if = {
-			limit = {
-				FROM = {
-					has_reform = corvee_reform
-				}
-			}
-			FROM = {
-				add_sailors = 200
-			}
-		}
-		add_development_from_upgrading_or_building = {
-			building = drydock
-			obsolete_building = dock
-			type = production
-			value = 2
-			upgrade_value = 1
-		}
-	}
-	on_destroyed = {
-		if = {
-			limit = {
-				FROM = {
-					has_reform = corvee_reform
-				}
-			}
-			FROM = {
-				add_sailors = -200
-			}
-		}
-		remove_development_from_building = {
-			building = drydock
-			type = production
-			value = 2
-		}
-	}
-	on_obsolete = {
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-conscription_center = {
-	cost = 400
-	time = 12
-	make_obsolete = regimental_camp
-	#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-	#	on_built = {
-	#		FROM = {
-	#			add_army_professionalism = 0.01
-	#		}
-	#	}
-	#
-	#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-	#	on_destroyed = {
-	#		FROM = {
-	#			add_army_professionalism = -0.02
-	#		}
-	#	}
-	#
-	#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-	#	on_obsolete = {
-	#		hidden_effect = {
-	#			FROM = {
-	#				add_army_professionalism = -0.01
-	#			}
-	#		}
-	#	}
-	modifier = {
-		land_forcelimit = 2
-		supply_limit_modifier = 0.5
-	}
-	on_built = {
-		add_development_from_upgrading_or_building = {
-			building = conscription_center
-			obsolete_building = regimental_camp
-			type = manpower
-			value = 2
-			upgrade_value = 1
-		}
-	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = conscription_center
-			type = manpower
-			value = 2
-		}
-	}
-	on_obsolete = {
-	}
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 1.5			# more likely if we have an army close to the force limit
-			FROM = {
-				army_size_percentage = 0.95
-			}
-		}
-		modifier = {
-			factor = 1.1
-			local_autonomy = 50
-		}
-	}
-}
-
-fort_18th = {
-	cost = 800
-	time = 30
-	make_obsolete = fort_17th
-	modifier = {
-		fort_level = 8
-	}
-	build_trigger = {
-		NOT = {
-			any_neighbor_province = {
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					has_building = fort_15th
-					has_construction = fort_15th
-					has_building = fort_16th
-					has_construction = fort_16th
-					has_building = fort_17th
-					has_construction = fort_17th
-					has_building = fort_18th
-					has_construction = fort_18th
-				}
-				NOT = {
-					is_capital = yes
-				}
-			}
-		}
-	}
-	keep_trigger = {
-		OR = {
-			AND = {
-				has_province_flag = new_conquest_fort_delay
-				NOT = {
-					had_province_flag = {
-						flag = new_conquest_fort_delay
-						days = 365
-					}
-				}
-			}
-			is_capital = yes
-			NOT = {
-				any_neighbor_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = fort_15th
-						has_construction = fort_15th
-						has_building = fort_16th
-						has_construction = fort_16th
-						has_building = fort_17th
-						has_construction = fort_17th
-						has_building = fort_18th
-						has_construction = fort_18th
-					}
-					NOT = {
-						is_capital = yes
-					}
-				}
-			}
-			NOT = {
-				any_neighbor_province = {
-					owner = {
-						tag = ROOT
-					}
-					OR = {
-						has_building = fort_15th
-						has_construction = fort_15th
-						has_building = fort_16th
-						has_construction = fort_16th
-						has_building = fort_17th
-						has_construction = fort_17th
-						has_building = fort_18th
-						has_construction = fort_18th
-					}
-					NOT = {
-						AND = {
-							has_province_flag = new_conquest_fort_delay
-							NOT = {
-								had_province_flag = {
-									flag = new_conquest_fort_delay
-									days = 365
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-
-	#	# THIS = Province, FROM = Builder(not nessecairly owner, can be overlord)
-	#	on_built = {
-	#		FROM = {
-	#			add_army_professionalism = 0.04
-	#		}
-	#	}
-	#
-	#	# THIS = Province, FROM = Destroyer, Will not be called on buildings made obsolete!
-	#	on_destroyed = {
-	#		FROM = {
-	#			add_army_professionalism = -0.08
-	#		}
-	#	}
-	#
-	#	# THIS = Province, FROM = Destroyer, Will not be called on buildings destroyed!
-	#	on_obsolete = {
-	#		hidden_effect = {
-	#			FROM = {
-	#				add_army_professionalism = -0.04
-	#			}
-	#		}
-	#	}
-	onmap = yes
-	influencing_fort = yes
-	ai_will_do = {
-		factor = 1		#Lots of logic in code instead, that multiplies with this value
-	}
-}
-
-################################################
-# Manufactories
-################################################
+#RURAL
 manufactory = {
-	cost = 500
-	time = 60
+	cost = 50
+	time = 30
 	modifier = {
-		trade_goods_size = 1
-		trade_value_modifier = 0.25
+		trade_goods_size_modifier = 1
 	}
 }
 
-#If trade good assignment changes, also update scripted trigger "has_manufactory trigger"!
-wharf = {
+farm_estate = {
+	cost = 50
+	time = 30
 	manufactory = {
-		naval_supplies
-		fish
-		salt
+		grain
+		rice
+		maize
+		potatoes
+		millet
+		herbs
+		cassava
+		dairy
+		legumes
 	}
-	onmap = yes
-	on_built = {
-		add_development_from_building = {
-			building = manufactory
-			type = production
-			value = 2
+	build_trigger = {
+		NOT = {
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
 		}
 	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = manufactory
-			type = production
-			value = 2
+	keep_trigger = {
+		NOT = {
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
 		}
-	}
-	on_obsolete = {
 	}
 	ai_will_do = {
-		factor = 1
+		factor = 10000
 		modifier = {
-			factor = 0.4
-			NOT = {
-				base_production = 6
-			}
-		}
-		modifier = {
-			factor = 1.5
-			base_production = 10
-		}
-		modifier = {
-			factor = 1.5
-			base_production = 15
-		}
-		modifier = {
-			factor = 5
+			factor = 0.001
 			OR = {
-				has_province_modifier = skanemarket
-				has_province_modifier = comet_ore_modifier
-				has_province_modifier = paradise_modifier
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
 			}
 		}
-		modifier = {
-			NOT = {
-				num_free_building_slots = 3
+	}
+}
+
+fishery = {
+	cost = 50
+	time = 30
+	manufactory = {
+		fish
+		pelagic_fish
+		shoal_fish
+		whales
+		crustaceans
+		mollusk
+	}
+	build_trigger = {
+		NOT = {
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
 			}
-			factor = 1.5
+		}
+	}
+	keep_trigger = {
+		NOT = {
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 0.001
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+}
+
+orchard = {
+	cost = 50
+	time = 30
+	manufactory = {
+		wine
+		fruit
+		dates
+		olives
+		tomatoes
+	}
+	build_trigger = {
+		NOT = {
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+	keep_trigger = {
+		NOT = {
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 0.001
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+}
+
+pasture = {
+	cost = 50
+	time = 30
+	manufactory = {
+		wool
+		livestock
+		camels
+		horses
+		poultry
+	}
+	build_trigger = {
+		NOT = {
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+	keep_trigger = {
+		NOT = {
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 0.001
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+}
+
+plantations = {
+	cost = 50
+	time = 30
+	manufactory = {
+		black_pepper
+		cloves
+		coffee
+		cotton
+		cinnamon
+		chili_peppers
+		nuts
+		sugar
+		tobacco
+		tea
+		cocoa
+		palm
+		dyes
+		opium
+		hemp
+		saffron
+		vanilla
+		rubber
+	}
+	build_trigger = {
+		NOT = {
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+	keep_trigger = {
+		NOT = {
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 0.001
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+}
+
+mine = {
+	cost = 50
+	time = 30
+	manufactory = {
+		copper
+		gold
+		jade
+		iron
+		salt
+		tin
+		silver
+		zinc
+		lead
+		sulfur
+		coal
+		phosphate
+	}
+	build_trigger = {
+		NOT = {
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+	keep_trigger = {
+		NOT = {
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 0.001
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+}
+
+quarry = {
+	cost = 50
+	time = 30
+	manufactory = {
+		alum
+		gems
+		stone
+		marble
+		niter
+		chromite
+	}
+	build_trigger = {
+		NOT = {
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+	keep_trigger = {
+		NOT = {
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 0.001
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+}
+
+mills = {
+	cost = 50
+	time = 30
+	manufactory = {
+		paper
+		softwood
+		hardwood
+		tropical_wood
+	}
+	build_trigger = {
+		NOT = {
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+	keep_trigger = {
+		NOT = {
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 0.001
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+}
+
+lodge = {
+	cost = 50
+	time = 30
+	manufactory = {
+		birds
+		bison
+		ivory
+		fur
+		incense
+	}
+	build_trigger = {
+		NOT = {
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+	keep_trigger = {
+		NOT = {
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 0.001
+			OR = {
+				has_building = village
+				has_building = town
+				has_building = city
+				has_building = metropolis
+			}
+		}
+	}
+}
+
+brewery = {
+	cost = 50
+	time = 30
+	manufactory = {
+		apiculture
+		beer
+	}
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_building = village
+					has_building = town
+					has_building = city
+					has_building = metropolis
+				}
+			}
+		}
+	}
+}
+
+distillery = {
+	cost = 50
+	time = 30
+	manufactory = {
+		liquor
+		rum
+	}
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_building = village
+					has_building = town
+					has_building = city
+					has_building = metropolis
+				}
+			}
+		}
+	}
+}
+
+yard = {
+	cost = 50
+	time = 30
+	manufactory = {
+		fertilizer
+		naval_supplies
+	}
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_building = village
+					has_building = town
+					has_building = city
+					has_building = metropolis
+				}
+			}
+		}
+	}
+}
+
+guild = {
+	cost = 50
+	time = 30
+	manufactory = {
+		artifices
+		leather
+		confectionary
+		furniture
+		glass
+		jewelry
+		chinaware
+	}
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_building = village
+					has_building = town
+					has_building = city
+					has_building = metropolis
+				}
+			}
+		}
+	}
+}
+
+printing_press_building = {
+	cost = 50
+	time = 30
+	manufactory = {
+		books
+	}
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_building = village
+					has_building = town
+					has_building = city
+					has_building = metropolis
+				}
+			}
+		}
+	}
+}
+
+assembly = {
+	cost = 50
+	time = 30
+	manufactory = {
+		machines
+		machine_parts
+		preserves
+	}
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_building = village
+					has_building = town
+					has_building = city
+					has_building = metropolis
+				}
+			}
+		}
+	}
+}
+
+refinery = {
+	cost = 50
+	time = 30
+	manufactory = {
+		chemicals
+		concrete
+		medicine
+		perfume
+	}
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_building = village
+					has_building = town
+					has_building = city
+					has_building = metropolis
+				}
+			}
 		}
 	}
 }
 
 weapons = {
+	cost = 50
+	time = 30
 	manufactory = {
-		copper
-		iron
+		munitions
+		gunpowder
+		explosives
 	}
-	onmap = yes
-	on_built = {
-		add_development_from_building = {
-			building = manufactory
-			type = production
-			value = 2
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
 		}
 	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = manufactory
-			type = production
-			value = 2
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
 		}
-	}
-	on_obsolete = {
 	}
 	ai_will_do = {
-		factor = 1
+		factor = 10000
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_building = village
+					has_building = town
+					has_building = city
+					has_building = metropolis
+				}
+			}
+		}
 	}
 }
 
 textile = {
+	cost = 50
+	time = 30
 	manufactory = {
-		wool
 		cloth
 		silk
-		dyes
+		carpet
 	}
-	onmap = yes
-	on_built = {
-		add_development_from_building = {
-			building = manufactory
-			type = production
-			value = 2
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
 		}
 	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = manufactory
-			type = production
-			value = 2
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
 		}
-	}
-	on_obsolete = {
 	}
 	ai_will_do = {
-		factor = 1
-	}
-}
-
-plantations = {
-	manufactory = {
-		coffee
-		cotton
-		sugar
-		tobacco
-		tea
-		cocoa
-	}
-	onmap = yes
-	on_built = {
-		add_development_from_building = {
-			building = manufactory
-			type = production
-			value = 2
+		factor = 10000
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_building = village
+					has_building = town
+					has_building = city
+					has_building = metropolis
+				}
+			}
 		}
-	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = manufactory
-			type = production
-			value = 2
-		}
-	}
-	on_obsolete = {
-	}
-	ai_will_do = {
-		factor = 1
 	}
 }
 
 tradecompany = {
+	cost = 50
+	time = 30
 	manufactory = {
-		ivory
 		slaves
 		spices
-		cloves
-		fur
-		incense
+		resin
 	}
-	onmap = yes
-	on_built = {
-		add_development_from_building = {
-			building = manufactory
-			type = production
-			value = 2
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
 		}
 	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = manufactory
-			type = production
-			value = 2
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
 		}
-	}
-	on_obsolete = {
 	}
 	ai_will_do = {
-		factor = 1
-	}
-}
-
-farm_estate = {
-	manufactory = {
-		grain
-		livestock
-		wine
-	}
-	onmap = yes
-	on_built = {
-		add_development_from_building = {
-			building = manufactory
-			type = production
-			value = 2
+		factor = 10000
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_building = village
+					has_building = town
+					has_building = city
+					has_building = metropolis
+				}
+			}
 		}
-	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = manufactory
-			type = production
-			value = 2
-		}
-	}
-	on_obsolete = {
-	}
-	ai_will_do = {
-		factor = 1
-	}
-}
-
-mills = {
-	manufactory = {
-		paper
-		gems
-		tropical_wood
-		glass
-		chinaware
-	}
-	onmap = yes
-	on_built = {
-		add_development_from_building = {
-			building = manufactory
-			type = production
-			value = 2
-		}
-	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = manufactory
-			type = production
-			value = 2
-		}
-	}
-	on_obsolete = {
-	}
-	ai_will_do = {
-		factor = 1
 	}
 }
 
 furnace = {
+	cost = 50
+	time = 30
 	manufactory = {
-		coal
+		mercury
+		brass
+		bronze
+		metalwork
+		steel
+		aluminum
 	}
-	potential = {
-		has_dlc = "Rule Britannia"
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
 	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_building = village
+					has_building = town
+					has_building = city
+					has_building = metropolis
+				}
+			}
+		}
+	}
+}
+
+kiln = {
+	cost = 50
+	time = 30
+	manufactory = {
+		pottery
+		bricks
+	}
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 0
+			NOT = {
+				OR = {
+					has_building = village
+					has_building = town
+					has_building = city
+					has_building = metropolis
+				}
+			}
+		}
+	}
+}
+
+# FORTIFICATIONS
+castle = {
+	cost = 50
+	time = 18
 	modifier = {
-		global_trade_goods_size_modifier = 0.05		#National Bonus
-		global_trade_power = 0.01
+		fort_level = 1
+		local_unrest = -1
 	}
-	onmap = yes
-	show_separate = yes	# Means as a manufactory it will be shown according to the old way
-	on_built = {
-		add_development_from_building = {
-			building = manufactory
-			type = production
-			value = 2
+	build_trigger = {
+		NOT = {
+			has_building = colonial_fort
 		}
 	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = manufactory
-			type = production
-			value = 2
-		}
-	}
-	on_obsolete = {
-	}
+	influencing_fort = yes
 	ai_will_do = {
 		factor = 1
 	}
 }
 
-ramparts = {
-	manufactory = {
-		all
-	}
+keep = {
+	cost = 100
+	time = 36
+	make_obsolete = castle
 	modifier = {
-		local_hostile_attrition = 3
-		local_defensiveness = 0.1
+		fort_level = 2
+		local_unrest = -2
 	}
-	onmap = no
-	show_separate = yes	# Means as a manufactory it will be shown according to the old way
+	build_trigger = {
+		NOT = {
+			has_building = colonial_fort
+		}
+	}
+	influencing_fort = yes
 	ai_will_do = {
 		factor = 1
 	}
 }
 
-soldier_households = {
-	manufactory = {
-		all
-	}
-	bonus_manufactory = {
-		# Will apply an extra modifier if these goods
-		grain
-		fish
-		livestock
-		wine
-	}
+bastion = {
+	cost = 200
+	time = 72
+	make_obsolete = keep
 	modifier = {
-		local_manpower = 0.75
+		fort_level = 3
+		local_unrest = -3
 	}
-	bonus_modifier = {
-		local_manpower = 0.75
-	}
-	onmap = no
-	show_separate = yes	# Means as a manufactory it will be shown according to the old way
-	on_built = {
-		add_development_from_building = {
-			building = manufactory
-			type = production
-			value = 2
+	build_trigger = {
+		NOT = {
+			has_building = colonial_fort
 		}
 	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = manufactory
-			type = production
-			value = 2
-		}
-	}
-	on_obsolete = {
-	}
+	influencing_fort = yes
 	ai_will_do = {
 		factor = 1
+	}
+}
+
+citadel = {
+	cost = 400
+	time = 144
+	make_obsolete = bastion
+	modifier = {
+		fort_level = 4
+		local_unrest = -4
+	}
+	build_trigger = {
+		NOT = {
+			has_building = colonial_fort
+		}
+	}
+	influencing_fort = yes
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+# RELIGIOUS BUILDINGS
+shrine = {
+	cost = 50
+	time = 18
+	modifier = {
+		local_missionary_strength = 0.01
+		local_tax_modifier = 0.05
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 2
+			NOT = {
+				OR = {
+					has_building = village
+					has_building = town
+					has_building = city
+					has_building = metropolis
+				}
+			}
+		}
+	}
+}
+
+monastery = {
+	cost = 100
+	time = 36
+	make_obsolete = shrine
+	modifier = {
+		local_missionary_strength = 0.015
+		local_tax_modifier = 0.1
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 2
+			NOT = {
+				OR = {
+					has_building = village
+					has_building = town
+					has_building = city
+					has_building = metropolis
+				}
+			}
+		}
+	}
+}
+
+temple = {
+	cost = 200
+	time = 72
+	make_obsolete = monastery
+	modifier = {
+		local_missionary_strength = 0.02
+		local_tax_modifier = 0.15
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 2
+			NOT = {
+				OR = {
+					has_building = village
+					has_building = town
+					has_building = city
+					has_building = metropolis
+				}
+			}
+		}
+	}
+}
+
+cathedral = {
+	cost = 400
+	time = 144
+	make_obsolete = temple
+	modifier = {
+		local_missionary_strength = 0.03
+		local_tax_modifier = 0.2
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 2
+			NOT = {
+				OR = {
+					has_building = village
+					has_building = town
+					has_building = city
+					has_building = metropolis
+				}
+			}
+		}
+	}
+}
+
+# URBAN
+village = {
+	cost = 50
+	time = 12
+	indestructible = yes
+	build_trigger = {
+		development = 5
+	}
+	keep_trigger = {
+		development = 5
+	}
+	modifier = {
+		local_development_cost = -0.05
+		supply_limit_modifier = 0.1
+		local_institution_spread = 0.05
+		allowed_num_of_buildings = 2
+		allowed_num_of_manufactories = -1
+		statewide_governing_cost = 0.05
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 1.1
+			base_manpower = 5
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				base_manpower = 5
+			}
+		}
+		modifier = {
+			factor = 0.001
+			NOT = {
+				OR = {
+					trade_goods = apiculture
+					trade_goods = beer
+					trade_goods = liquor
+					trade_goods = rum
+					trade_goods = fertilizer
+					trade_goods = naval_supplies
+					trade_goods = artifices
+					trade_goods = leather
+					trade_goods = confectionary
+					trade_goods = furniture
+					trade_goods = glass
+					trade_goods = jewelry
+					trade_goods = chinaware
+					trade_goods = books
+					trade_goods = machines
+					trade_goods = machine_parts
+					trade_goods = preserves
+					trade_goods = chemicals
+					trade_goods = concrete
+					trade_goods = medicine
+					trade_goods = perfume
+					trade_goods = munitions
+					trade_goods = gunpowder
+					trade_goods = explosives
+					trade_goods = cloth
+					trade_goods = silk
+					trade_goods = carpet
+					trade_goods = slaves
+					trade_goods = spices
+					trade_goods = resin
+					trade_goods = mercury
+					trade_goods = brass
+					trade_goods = bronze
+					trade_goods = metalwork
+					trade_goods = steel
+					trade_goods = aluminum
+					trade_goods = pottery
+					trade_goods = bricks
+				}
+			}
+			is_capital = no
+		}
+		modifier = {
+			factor = 1.1
+			is_capital = yes
+		}
+	}
+}
+
+town = {
+	cost = 100
+	time = 12
+	make_obsolete = village
+	indestructible = yes
+	build_trigger = {
+		development = 10
+	}
+	keep_trigger = {
+		development = 10
+	}
+	modifier = {
+		local_development_cost = -0.1
+		supply_limit_modifier = 0.2
+		local_institution_spread = 0.1
+		allowed_num_of_buildings = 3
+		allowed_num_of_manufactories = -1
+		statewide_governing_cost = 0.1
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 1
+			base_manpower = 10
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				base_manpower = 10
+			}
+		}
+	}
+}
+
+city = {
+	cost = 150
+	time = 12
+	make_obsolete = town
+	indestructible = yes
+	build_trigger = {
+		development = 20
+	}
+	keep_trigger = {
+		development = 20
+	}
+	modifier = {
+		local_development_cost = -0.15
+		supply_limit_modifier = 0.3
+		local_institution_spread = 0.15
+		allowed_num_of_buildings = 4
+		allowed_num_of_manufactories = -1
+		statewide_governing_cost = 0.15
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 1
+			base_manpower = 25
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				base_manpower = 25
+			}
+		}
+	}
+}
+
+metropolis = {
+	cost = 200
+	time = 12
+	make_obsolete = city
+	indestructible = yes
+	build_trigger = {
+		development = 40
+	}
+	keep_trigger = {
+		development = 40
+	}
+	modifier = {
+		local_development_cost = -0.2
+		supply_limit_modifier = 0.4
+		local_institution_spread = 0.2
+		allowed_num_of_buildings = 5
+		allowed_num_of_manufactories = -1
+		statewide_governing_cost = 0.2
+	}
+	ai_will_do = {
+		factor = 10000
+		modifier = {
+			factor = 1
+			base_manpower = 50
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				base_manpower = 50
+			}
+		}
+	}
+}
+
+# FINANCIAL BUILDINGS
+marketplace = {
+	cost = 75
+	time = 12
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+			province_has_center_of_trade_of_level = 1
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+			province_has_center_of_trade_of_level = 1
+		}
+	}
+	modifier = {
+		province_trade_power_value = 1
+		local_production_efficiency = 0.1
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 5
+			province_has_center_of_trade_of_level = 1
+		}
+	}
+}
+
+trade_depot = {
+	cost = 150
+	time = 24
+	make_obsolete = marketplace
+	build_trigger = {
+		OR = {
+			has_building = town
+			has_building = city
+			has_building = metropolis
+			province_has_center_of_trade_of_level = 2
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+			province_has_center_of_trade_of_level = 2
+		}
+	}
+	modifier = {
+		province_trade_power_value = 2.5
+		local_production_efficiency = 0.2
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 5
+			province_has_center_of_trade_of_level = 2
+		}
+	}
+}
+
+counting_house = {
+	cost = 300
+	time = 36
+	make_obsolete = trade_depot
+	build_trigger = {
+		OR = {
+			has_building = city
+			has_building = metropolis
+			province_has_center_of_trade_of_level = 3
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+			province_has_center_of_trade_of_level = 3
+		}
+	}
+	modifier = {
+		province_trade_power_value = 5
+		local_production_efficiency = 0.3
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 5
+			province_has_center_of_trade_of_level = 3
+		}
+	}
+}
+
+bank = {
+	cost = 500
+	time = 60
+	make_obsolete = counting_house
+	build_trigger = {
+		OR = {
+			has_building = city
+			has_building = metropolis
+			province_has_center_of_trade_of_level = 2
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+			province_has_center_of_trade_of_level = 2
+		}
+	}
+	modifier = {
+		province_trade_power_value = 5
+		local_production_efficiency = 0.5
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 5
+			province_has_center_of_trade_of_level = 2
+		}
+	}
+}
+
+# COMMERCIAL SHIPPING
+jetty = {
+	cost = 100
+	time = 12
+	build_trigger = {
+		has_port = yes
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+			province_has_center_of_trade_of_level = 1
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+			province_has_center_of_trade_of_level = 1
+		}
+	}
+	modifier = {
+		local_sailors_modifier = 0.25
+		province_trade_power_modifier = 0.1
+		naval_forcelimit = 1
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 5
+			province_has_center_of_trade_of_level = 1
+		}
+	}
+}
+
+wharf = {
+	cost = 200
+	time = 24
+	make_obsolete = jetty
+	build_trigger = {
+		has_port = yes
+		OR = {
+			has_building = town
+			has_building = city
+			has_building = metropolis
+			province_has_center_of_trade_of_level = 2
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+			province_has_center_of_trade_of_level = 2
+		}
+	}
+	modifier = {
+		local_sailors_modifier = 0.5
+		province_trade_power_modifier = 0.2
+		naval_forcelimit = 2
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 5
+			province_has_center_of_trade_of_level = 2
+		}
+	}
+}
+
+dock = {
+	cost = 400
+	time = 36
+	make_obsolete = wharf
+	build_trigger = {
+		has_port = yes
+		OR = {
+			has_building = city
+			has_building = metropolis
+			province_has_center_of_trade_of_level = 3
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+			province_has_center_of_trade_of_level = 3
+		}
+	}
+	modifier = {
+		local_sailors_modifier = 0.75
+		province_trade_power_modifier = 0.4
+		naval_forcelimit = 4
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 5
+			province_has_center_of_trade_of_level = 3
+		}
 	}
 }
 
 impressment_offices = {
-	manufactory = {
-		all
+	cost = 800
+	time = 60
+	make_obsolete = dock
+	build_trigger = {
+		has_port = yes
+		OR = {
+			has_building = metropolis
+			province_has_center_of_trade_of_level = 2
+		}
 	}
-	bonus_manufactory = {
-		# Will apply an extra modifier if these goods
-		salt
-		fish
-		naval_supplies
-		tropical_wood
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+			province_has_center_of_trade_of_level = 2
+		}
+	}
+	modifier = {
+		local_sailors_modifier = 1
+		province_trade_power_modifier = 0.6
+		local_institution_spread = 0.05
+		naval_forcelimit = 8
+	}
+	ai_will_do = {
+		factor = 100
+		modifier = {
+			factor = 5
+			province_has_center_of_trade_of_level = 2
+		}
+	}
+}
+
+# EDUCATION BUILDINGS
+school = {
+	cost = 100
+	time = 24
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	modifier = {
+		local_institution_spread = 0.15
+		innovativeness_gain = 0.01
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+college = {
+	cost = 200
+	time = 48
+	make_obsolete = school
+	build_trigger = {
+		OR = {
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	modifier = {
+		local_institution_spread = 0.25
+		innovativeness_gain = 0.015
+		local_build_cost = -0.05
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+university = {
+	cost = 400
+	time = 72
+	make_obsolete = college
+	build_trigger = {
+		OR = {
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	modifier = {
+		local_institution_spread = 0.5
+		innovativeness_gain = 0.025
+		local_build_cost = -0.1
+		statewide_governing_cost = -0.05
+		local_unrest = 0.5
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+academy = {
+	cost = 800
+	time = 120
+	make_obsolete = university
+	build_trigger = {
+		has_building = metropolis
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	modifier = {
+		local_institution_spread = 1
+		innovativeness_gain = 0.05
+		local_build_cost = -0.15
+		statewide_governing_cost = -0.1
+		local_unrest = 1
+		army_tradition = 0.01
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+# PRODUCTION BUILDINGS
+cottage = {
+	cost = 100
+	time = 12
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	modifier = {
+		trade_goods_size = 0.25
+		trade_goods_size_modifier = 0.05
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+workshop = {
+	cost = 250
+	time = 24
+	make_obsolete = cottage
+	build_trigger = {
+		OR = {
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	modifier = {
+		trade_goods_size = 0.5
+		trade_goods_size_modifier = 0.1
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+new_manufactory = {
+	cost = 500
+	time = 36
+	make_obsolete = workshop
+	build_trigger = {
+		OR = {
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	modifier = {
+		trade_goods_size = 1
+		trade_goods_size_modifier = 0.15
+		allowed_num_of_manufactories = 1
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+factory = {
+	cost = 1000
+	time = 60
+	make_obsolete = new_manufactory
+	build_trigger = {
+		has_building = metropolis
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	modifier = {
+		trade_goods_size = 2
+		trade_goods_size_modifier = 0.2
+		allowed_num_of_manufactories = 1
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+# CULTURAL BUILDINGS
+studio = {
+	cost = 150
+	time = 12
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	modifier = {
+		trade_value_modifier = 0.1
+		monthly_splendor = 0.25
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+artisanate = {
+	cost = 300
+	time = 24
+	make_obsolete = studio
+	build_trigger = {
+		OR = {
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	modifier = {
+		trade_value_modifier = 0.15
+		monthly_splendor = 0.5
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+theatre = {
+	cost = 500
+	time = 36
+	make_obsolete = artisanate
+	build_trigger = {
+		OR = {
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	modifier = {
+		trade_value_modifier = 0.2
+		monthly_splendor = 1
+		local_unrest = -0.5
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+museum = {
+	cost = 1200
+	time = 60
+	make_obsolete = theatre
+	build_trigger = {
+		has_building = metropolis
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	modifier = {
+		trade_value_modifier = 0.25
+		monthly_splendor = 2
+		local_unrest = -1
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+# FORTIFICATIONS
+fort_15th = {
+	cost = 50
+	time = 18
+	modifier = {
+		fort_level = 1
+	}
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+			has_building = castle
+			has_building = keep
+			has_building = bastion
+			has_building = citadel
+			has_building = shrine
+			has_building = monastery
+			has_building = temple
+			has_building = cathedral
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+			has_building = castle
+			has_building = keep
+			has_building = bastion
+			has_building = citadel
+			has_building = shrine
+			has_building = monastery
+			has_building = temple
+			has_building = cathedral
+		}
+	}
+	onmap = yes
+	influencing_fort = yes
+	ai_will_do = {
+		factor = 99999
+	}
+}
+
+fort_16th = {
+	cost = 100
+	time = 36
+	make_obsolete = fort_15th
+	modifier = {
+		fort_level = 2
+	}
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+			has_building = castle
+			has_building = keep
+			has_building = bastion
+			has_building = citadel
+			has_building = shrine
+			has_building = monastery
+			has_building = temple
+			has_building = cathedral
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+			has_building = castle
+			has_building = keep
+			has_building = bastion
+			has_building = citadel
+			has_building = shrine
+			has_building = monastery
+			has_building = temple
+			has_building = cathedral
+		}
+	}
+	onmap = yes
+	influencing_fort = yes
+	ai_will_do = {
+		factor = 99999
+	}
+}
+
+fort_17th = {
+	cost = 200
+	time = 72
+	make_obsolete = fort_16th
+	modifier = {
+		fort_level = 3
+	}
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+			has_building = castle
+			has_building = keep
+			has_building = bastion
+			has_building = citadel
+			has_building = shrine
+			has_building = monastery
+			has_building = temple
+			has_building = cathedral
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+			has_building = castle
+			has_building = keep
+			has_building = bastion
+			has_building = citadel
+			has_building = shrine
+			has_building = monastery
+			has_building = temple
+			has_building = cathedral
+		}
+	}
+	onmap = yes
+	influencing_fort = yes
+	ai_will_do = {
+		factor = 99999
+	}
+}
+
+fort_18th = {
+	cost = 400
+	time = 144
+	make_obsolete = fort_17th
+	modifier = {
+		fort_level = 4
+	}
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+			has_building = castle
+			has_building = keep
+			has_building = bastion
+			has_building = citadel
+			has_building = shrine
+			has_building = monastery
+			has_building = temple
+			has_building = cathedral
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+			has_building = castle
+			has_building = keep
+			has_building = bastion
+			has_building = citadel
+			has_building = shrine
+			has_building = monastery
+			has_building = temple
+			has_building = cathedral
+		}
+	}
+	onmap = yes
+	influencing_fort = yes
+	ai_will_do = {
+		factor = 99999
+	}
+}
+
+watchtowers = {
+	cost = 50
+	time = 18
+	modifier = {
+		local_defensiveness = 0.1
+		local_hostile_movement_speed = -0.15
+	}
+	keep_trigger = {
+		has_building = watchtowers
+	}
+	ai_will_do = {
+		factor = 50
+	}
+}
+
+barbican = {
+	cost = 100
+	time = 36
+	modifier = {
+		local_defensiveness = 0.2
+		garrison_growth = 0.25
+	}
+	build_trigger = {
+		OR = {
+			has_building = fort_16th
+			has_building = fort_17th
+			has_building = fort_18th
+			has_building = colonial_fort
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = fort_16th
+			has_building = fort_17th
+			has_building = fort_18th
+			has_building = colonial_fort
+		}
+	}
+	ai_will_do = {
+		factor = 50
+	}
+}
+
+ravelins = {
+	cost = 200
+	time = 72
+	modifier = {
+		local_defensiveness = 0.5
+		local_hostile_attrition = 2
+	}
+	build_trigger = {
+		OR = {
+			has_building = fort_17th
+			has_building = fort_18th
+			has_building = colonial_fort
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = fort_17th
+			has_building = fort_18th
+			has_building = colonial_fort
+		}
+	}
+	ai_will_do = {
+		factor = 50
+	}
+}
+
+battery = {
+	cost = 400
+	time = 144
+	modifier = {
+		local_hostile_attrition = 1
+		hostile_fleet_attrition = 2
+		blockade_force_required = 1
+		hostile_disembark_speed = 2
+	}
+	build_trigger = {
+		OR = {
+			has_building = fort_18th
+			has_building = colonial_fort
+		}
+	}
+	keep_trigger = {
+		OR = {
+			has_building = fort_18th
+			has_building = colonial_fort
+		}
+	}
+	ai_will_do = {
+		factor = 50
+	}
+}
+
+colonial_fort = {
+	cost = 50
+	time = 12
+	build_trigger = {
+		is_overseas = yes
+		NOT = {
+			OR = {
+				has_building = castle
+				has_building = keep
+				has_building = bastion
+				has_building = citadel
+			}
+		}
+	}
+	modifier = {
+		fort_level = 1
+		local_defensiveness = 0.15
+		supply_limit_modifier = 0.25
+		province_trade_power_modifier = 0.25
+		allowed_num_of_buildings = 1
+	}
+	influencing_fort = yes
+	ai_will_do = {
+		factor = 50
+	}
+}
+
+# LAND MILITARY BUILDINGS
+regimental_camp = {
+	cost = 100
+	time = 6
+	modifier = {
+		local_manpower_modifier = 0.25
+		land_forcelimit = 1
+		local_regiment_cost = -0.05
+		regiment_recruit_speed = -0.1
+	}
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		has_building = regimental_camp
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+barracks = {
+	cost = 200
+	time = 18
+	make_obsolete = regimental_camp
+	modifier = {
+		local_manpower_modifier = 0.5
+		land_forcelimit = 2
+		local_regiment_cost = -0.1
+		regiment_recruit_speed = -0.2
+		local_defensiveness = 0.05
+	}
+	build_trigger = {
+		OR = {
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		has_building = barracks
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+conscription_center = {
+	cost = 400
+	time = 60
+	make_obsolete = barracks
+	modifier = {
+		local_manpower_modifier = 0.75
+		land_forcelimit = 3
+		local_regiment_cost = -0.2
+		regiment_recruit_speed = -0.3
+		local_defensiveness = 0.1
+		local_hostile_attrition = 0.5
+	}
+	build_trigger = {
+		OR = {
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		has_building = conscription_center
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+soldier_households = {
+	cost = 800
+	time = 120
+	make_obsolete = conscription_center
+	modifier = {
+		local_manpower_modifier = 1
+		land_forcelimit = 6
+		local_regiment_cost = -0.4
+		regiment_recruit_speed = -0.4
+		local_defensiveness = 0.2
+		local_hostile_attrition = 1
+	}
+	build_trigger = {
+		has_building = metropolis
+	}
+	keep_trigger = {
+		has_building = soldier_households
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+# NAVY MILITARY BUILDINGS
+shipwright = {
+	cost = 75
+	time = 6
+	modifier = {
+		local_sailors_modifier = 0.1
+		local_ship_repair = 0.1
+		local_ship_cost = -0.05
+		ship_recruit_speed = -1
 	}
 	build_trigger = {
 		has_port = yes
-	}
-	modifier = {
-		local_sailors = 250
-		ship_recruit_speed = -0.1
-		local_ship_cost = -0.05
-	}
-	bonus_modifier = {
-		local_sailors = 250
-		ship_recruit_speed = -0.1
-		local_ship_cost = -0.05
-	}
-	onmap = no
-	show_separate = yes	# Means as a manufactory it will be shown according to the old way
-	on_built = {
-		add_development_from_building = {
-			building = impressment_offices
-			type = manpower
-			value = 2
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
 		}
 	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = impressment_offices
-			type = manpower
-			value = 2
-		}
-	}
-	on_obsolete = {
+	keep_trigger = {
+		has_building = shipwright
 	}
 	ai_will_do = {
-		factor = 1
+		factor = 100
+	}
+}
+
+shipyard = {
+	cost = 150
+	time = 18
+	make_obsolete = shipwright
+	modifier = {
+		local_sailors_modifier = 0.25
+		local_ship_repair = 0.25
+		local_ship_cost = -0.1
+		ship_recruit_speed = -1.5
+	}
+	build_trigger = {
+		has_port = yes
+		OR = {
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		has_building = shipyard
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+drydock = {
+	cost = 300
+	time = 60
+	make_obsolete = shipyard
+	modifier = {
+		local_sailors_modifier = 0.5
+		local_ship_repair = 0.5
+		local_ship_cost = -0.15
+		ship_recruit_speed = -2
+	}
+	build_trigger = {
+		has_port = yes
+		OR = {
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	keep_trigger = {
+		has_building = drydock
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+grand_shipyard = {
+	cost = 600
+	time = 120
+	make_obsolete = drydock
+	modifier = {
+		local_sailors_modifier = 1
+		local_ship_repair = 1
+		local_ship_cost = -0.25
+		ship_recruit_speed = -2.5
+	}
+	build_trigger = {
+		has_port = yes
+		has_building = metropolis
+	}
+	keep_trigger = {
+		has_building = grand_shipyard
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+#SPECIAL UNIQUE
+customs_house = {
+	cost = 250
+	time = 24
+	build_trigger = {
+		OR = {
+			is_overseas = yes
+			is_island = yes
+		}
+		is_state = yes
+		NOT = {
+			area_for_scope_province = {
+				has_building = customs_house
+			}
+		}
+	}
+	modifier = {
+		trade_value_modifier = 0.25
+		province_trade_power_value = 2
+	}
+	ai_will_do = {
+		factor = 200
+	}
+}
+
+library = {
+	cost = 250
+	time = 24
+	modifier = {
+		local_institution_spread = 1
+		innovativeness_gain = 0.01
+		local_culture_conversion_cost = -0.1
+		local_unrest = -1
+	}
+	build_trigger = {
+		OR = {
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+		NOT = {
+			area_for_scope_province = {
+				has_building = library
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 200
+	}
+}
+
+prison = {
+	cost = 250
+	time = 24
+	modifier = {
+		statewide_governing_cost = -0.1
+		local_state_maintenance_modifier = 0.1
+		local_unrest = -10
+	}
+	build_trigger = {
+		OR = {
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+		NOT = {
+			area_for_scope_province = {
+				has_building = prison
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 200
+	}
+}
+
+#VILLAGE
+training_fields = {
+	cost = 250
+	time = 12
+	modifier = {
+		local_state_maintenance_modifier = 0.05
+		local_monthly_devastation = -0.05
+	}
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+constabulary = {
+	cost = 250
+	time = 12
+	modifier = {
+		local_autonomy = -0.05
+		local_state_maintenance_modifier = -0.05
+		local_unrest = -2.5
+	}
+	build_trigger = {
+		OR = {
+			has_building = village
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+		NOT = {
+			area_for_scope_province = {
+				has_building = constabulary
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+#TOWN
+infirmary = {
+	cost = 500
+	time = 24
+	make_obsolete = training_fields
+	modifier = {
+		local_state_maintenance_modifier = 0.1
+		local_monthly_devastation = -0.1
+	}
+	build_trigger = {
+		OR = {
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+courthouse = {
+	cost = 500
+	time = 24
+	make_obsolete = constabulary
+	modifier = {
+		local_autonomy = -0.1
+		local_state_maintenance_modifier = -0.1
+		local_unrest = -5
+	}
+	build_trigger = {
+		OR = {
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+		NOT = {
+			area_for_scope_province = {
+				has_building = courthouse
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+#CITY
+hospital = {
+	cost = 750
+	time = 36
+	make_obsolete = infirmary
+	modifier = {
+		local_state_maintenance_modifier = 0.15
+		local_monthly_devastation = -0.15
+	}
+	build_trigger = {
+		OR = {
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+town_hall = {
+	cost = 750
+	time = 36
+	make_obsolete = courthouse
+	modifier = {
+		local_autonomy = -0.15
+		local_state_maintenance_modifier = -0.15
+		local_unrest = -7.5
+	}
+	build_trigger = {
+		OR = {
+			has_building = city
+			has_building = metropolis
+		}
+		NOT = {
+			area_for_scope_province = {
+				has_building = town_hall
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+#METRO
+public_sanitation = {
+	cost = 1000
+	time = 60
+	make_obsolete = hospital
+	modifier = {
+		local_state_maintenance_modifier = 0.2
+		local_monthly_devastation = -0.2
+	}
+	build_trigger = {
+		has_building = metropolis
+	}
+	ai_will_do = {
+		factor = 100
 	}
 }
 
 state_house = {
-	manufactory = {
-		all
-	}
-	bonus_manufactory = {
-		# Will apply an extra modifier if these goods
-		paper
-		glass
-		gems
+	cost = 1000
+	time = 60
+	make_obsolete = town_hall
+	modifier = {
+		local_autonomy = -0.2
+		local_state_maintenance_modifier = -0.2
+		local_unrest = -10
 	}
 	build_trigger = {
+		has_building = metropolis
 		NOT = {
 			area_for_scope_province = {
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					has_building = state_house
-					has_construction = state_house
-				}
+				has_building = state_house
 			}
 		}
 	}
-	keep_trigger = {
-		NOT = {
-			area_for_scope_province = {
-				NOT = {
-					province_id = root
-				}
-				owner = {
-					tag = ROOT
-				}
-				OR = {
-					has_building = state_house
-					has_construction = state_house
-				}
-			}
+	ai_will_do = {
+		factor = 100
+	}
+}
+
+# TAG UNIQUE
+postmaster_general = {
+	cost = 1000
+	time = 120
+	one_per_country = yes
+	indestructible = yes
+	build_trigger = {
+		OR = {
+			has_building = town
+			has_building = city
+			has_building = metropolis
 		}
 	}
 	modifier = {
-		statewide_governing_cost = -0.2
-		min_local_autonomy = -5
-	}
-	bonus_modifier = {
-		statewide_governing_cost = -0.2
-		min_local_autonomy = -5
-	}
-	onmap = no
-	show_separate = yes	# Means as a manufactory it will be shown according to the old way
-	on_built = {
-		add_development_from_building = {
-			building = state_house
-			type = tax
-			value = 2
-		}
-	}
-	on_destroyed = {
-		remove_development_from_building = {
-			building = state_house
-			type = tax
-			value = 2
-		}
-	}
-	on_obsolete = {
+		trade_range_modifier = 0.5
+		envoy_travel_time = -0.5
+		administrative_efficiency = 0.05
+		trade_range_modifier = 0.5
+		min_autonomy = -5
+		min_autonomy_in_territories = -5
 	}
 	ai_will_do = {
-		factor = 1
+		factor = 500
+	}
+}
+
+national_court = {
+	cost = 1000
+	time = 120
+	one_per_country = yes
+	indestructible = yes
+	build_trigger = {
+		OR = {
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	modifier = {
+		prestige = 0.5
+		all_estate_loyalty_equilibrium = 0.5
+		governing_capacity = 500
+		num_accepted_cultures = 2
+	}
+	ai_will_do = {
+		factor = 500
+	}
+}
+
+national_mint = {
+	cost = 1000
+	time = 120
+	one_per_country = yes
+	indestructible = yes
+	build_trigger = {
+		OR = {
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	modifier = {
+		production_efficiency = 0.1
+		inflation_action_cost = -0.5
+		trade_efficiency = 0.05
+		inflation_reduction = 0.05
+		global_tariffs = 0.1
+	}
+	ai_will_do = {
+		factor = 500
+	}
+}
+
+foreign_office = {
+	cost = 1000
+	time = 120
+	one_per_country = yes
+	indestructible = yes
+	build_trigger = {
+		OR = {
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	modifier = {
+		diplomatic_reputation = 1
+		diplomatic_upkeep = 1
+		improve_relation_modifier = 0.2
+		rebel_support_efficiency = 0.5
+		diplomatic_annexation_cost = -0.1
+		spy_offence = 0.1
+		global_spy_defence = 0.1
+	}
+	ai_will_do = {
+		factor = 500
+	}
+}
+
+war_college = {
+	cost = 2000
+	time = 180
+	one_per_country = yes
+	indestructible = yes
+	build_trigger = {
+		OR = {
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	modifier = {
+		army_tradition = 0.25
+		yearly_army_professionalism = 0.01
+		artillery_bonus_vs_fort = 1
+		free_leader_pool = 1
+		drill_decay_modifier = -0.5
+	}
+	ai_will_do = {
+		factor = 500
+	}
+}
+
+admiralty = {
+	cost = 2000
+	time = 180
+	one_per_country = yes
+	indestructible = yes
+	build_trigger = {
+		OR = {
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	modifier = {
+		navy_tradition = 0.25
+		naval_attrition = -0.1
+		global_ship_repair = 0.2
+		blockade_efficiency = 0.25
+		siege_blockade_progress = 1
+		sailor_maintenance_modifer = -0.1
+		free_leader_pool = 1
+	}
+	ai_will_do = {
+		factor = 500
+	}
+}
+
+stock_exchange = {
+	cost = 2000
+	time = 120
+	one_per_country = yes
+	indestructible = yes
+	build_trigger = {
+		OR = {
+			has_building = town
+			has_building = city
+			has_building = metropolis
+		}
+	}
+	modifier = {
+		global_trade_goods_size_modifier = 0.1
+		trade_efficiency = 0.1
+		global_trade_power = 0.1
+		merchants = 1
+	}
+	ai_will_do = {
+		factor = 500
 	}
 }

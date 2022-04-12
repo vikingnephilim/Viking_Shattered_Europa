@@ -1,31 +1,34 @@
-#662 - Yunnan
-
 # Governance
 #=========================
 owner = CDL
 controller = CDL
 add_core = CDL
-is_city = yes #More than 1 Weisuo
-
+is_city = yes
 # Demographic
 #=========================
 culture = bai
 religion = buddhism
 capital = "Kunming"
 hre = no
-
 # Economic
 #=========================
 trade_goods = copper
-base_tax = 6 
+latent_trade_goods = {
+	bronze
+}
+base_tax = 6
 base_production = 5
 base_manpower = 3
-
+extra_cost = 16
+center_of_trade = 2
 # Discovery
 #=========================
 discovered_by = chinese
+discovered_by = japanese_group
+discovered_by = indochinese
+discovered_by = malay_group
 discovered_by = indian
 discovered_by = nomad_group
-
 # History
 #=========================
+village = yes

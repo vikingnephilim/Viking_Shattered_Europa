@@ -20,9 +20,6 @@ country_decisions = {
 			NOT = {
 				tag = UHW
 			}
-			NOT = {
-				government = codex
-			}
 			primary_culture = polynesian_c
 			capital_scope = {
 				area = northern_polynesia_area
@@ -65,12 +62,18 @@ country_decisions = {
 			NOT = {
 				exists = UHW
 			}
-			NOT = {
-				government = codex
-			}
 		}
 		effect = {
 			change_tag = UHW
+			if = {
+				limit = {
+					NOT = {
+						technology_group = oceanic
+					}
+				}
+				change_technology_group = oceanic
+				change_unit_type = oceanic
+			}
 			if = {
 				limit = {
 					NOT = {

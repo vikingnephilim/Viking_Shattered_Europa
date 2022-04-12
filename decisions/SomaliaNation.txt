@@ -7,9 +7,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_somalia_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -66,9 +63,6 @@ country_decisions = {
 			NOT = {
 				exists = SOM
 			}
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			is_nomad = no
 			mogadishu_area = {
@@ -109,6 +103,15 @@ country_decisions = {
 		effect = {
 			change_tag = SOM
 			restore_country_name_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = east_african
+					}
+				}
+				change_technology_group = east_african
+				change_unit_type = east_african
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {

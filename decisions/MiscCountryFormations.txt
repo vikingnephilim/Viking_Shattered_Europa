@@ -21,9 +21,6 @@ country_decisions = {
 				}
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				exists = PON
 			}
 			NOT = {
@@ -89,9 +86,6 @@ country_decisions = {
 				type = all
 				owned_by = ROOT
 			}
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 159
 			owns_core_province = 286
 			owns_core_province = 287
@@ -112,6 +106,15 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = PON
+			if = {
+				limit = {
+					NOT = {
+						technology_group = greek
+					}
+				}
+				change_technology_group = greek
+				change_unit_type = greek
+			}
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
@@ -194,9 +197,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_vandals_flag
 			}
-			NOT = {
-				government = codex
-			}
 			was_never_end_game_tag_trigger = yes
 			OR = {
 				ai = no
@@ -263,9 +263,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 125
 			owns_core_province = 333
 			owns_core_province = 337
@@ -278,6 +275,15 @@ country_decisions = {
 		effect = {
 			restore_country_name_effect = yes
 			change_primary_culture = vandalic
+			if = {
+				limit = {
+					NOT = {
+						technology_group = maghrebi
+					}
+				}
+				change_technology_group = maghrebi
+				change_unit_type = maghrebi
+			}
 			341 = {
 				change_province_name = "Carthago"
 				rename_capital = "Carthago"
@@ -349,9 +355,6 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			NOT = {
 				has_country_flag = formed_visigoths_flag
-			}
-			NOT = {
-				government = codex
 			}
 			was_never_end_game_tag_trigger = yes
 			OR = {
@@ -425,9 +428,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 196
 			owns_core_province = 213
 			owns_core_province = 214
@@ -448,6 +448,15 @@ country_decisions = {
 			}
 			restore_country_name_effect = yes
 			change_primary_culture = visigoths
+			if = {
+				limit = {
+					NOT = {
+						technology_group = greek
+					}
+				}
+				change_technology_group = greek
+				change_unit_type = greek
+			}
 			hidden_effect = {
 				196 = {
 					change_culture = vandalic
@@ -532,9 +541,6 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				tag = HLR
 			}
 			NOT = {
@@ -606,9 +612,6 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 146			#Athens
 			num_of_owned_provinces_with = {
 				value = 10
@@ -632,6 +635,15 @@ country_decisions = {
 				change_primary_culture = greek
 			}
 			restore_country_name_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = greek
+					}
+				}
+				change_technology_group = greek
+				change_unit_type = greek
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {
@@ -742,9 +754,6 @@ country_decisions = {
 			owns = 370
 			owns = 371
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				has_country_flag = formed_iceland
 			}
 			#Only once
@@ -800,9 +809,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = {
-				government = codex
-			}
 			NOT = {
 				num_of_cities = 4
 			}
@@ -866,6 +872,15 @@ country_decisions = {
 			}
 			restore_country_name_effect = yes
 			change_tag = ICE
+			if = {
+				limit = {
+					NOT = {
+						technology_group = nordic
+					}
+				}
+				change_technology_group = nordic
+				change_unit_type = nordic
+			}
 			set_country_flag = formed_iceland
 			if = {
 				limit = {
@@ -951,9 +966,6 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				has_country_flag = minoa_flag
 			}
 			OR = {
@@ -1029,9 +1041,6 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 163			#crete
 			owns_core_province = 164			#Naxos
 			owns_core_province = 320			#Rhodos
@@ -1096,9 +1105,6 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				has_country_flag = formed_obotritia_flag
 			}
 			OR = {
@@ -1137,9 +1143,6 @@ country_decisions = {
 		allow = {
 			is_at_war = no
 			is_nomad = no
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 44
 			owns_core_province = 45
 			owns_core_province = 46
@@ -1156,6 +1159,15 @@ country_decisions = {
 		effect = {
 			restore_country_name_effect = yes
 			change_tag = OBO
+			if = {
+				limit = {
+					NOT = {
+						technology_group = eastern
+					}
+				}
+				change_technology_group = eastern
+				change_unit_type = eastern
+			}
 			vorpommern_area = {
 				limit = {
 					NOT = {
@@ -1227,9 +1239,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_etruria_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -1266,9 +1275,6 @@ country_decisions = {
 		allow = {
 			is_at_war = no
 			is_nomad = no
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 105
 			owns_core_province = 107
 			owns_core_province = 111
@@ -1285,6 +1291,15 @@ country_decisions = {
 			restore_country_name_effect = yes
 			change_tag = ETR
 			change_primary_culture = etrurian
+			if = {
+				limit = {
+					NOT = {
+						technology_group = latin_group
+					}
+				}
+				change_technology_group = latin_group
+				change_unit_type = latin_group
+			}
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
@@ -1337,9 +1352,6 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = {
-				government = codex
-			}
 			culture_group = korean_g
 			NOT = {
 				exists = KOR
@@ -1366,9 +1378,6 @@ country_decisions = {
 		allow = {
 			is_at_war = no
 			is_nomad = no
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 735
 			owns_core_province = 1845
 			owns_core_province = 2741
@@ -1382,6 +1391,15 @@ country_decisions = {
 		effect = {
 			restore_country_name_effect = yes
 			change_tag = KOR
+			if = {
+				limit = {
+					NOT = {
+						technology_group = chinese
+					}
+				}
+				change_technology_group = chinese
+				change_unit_type = chinese
+			}
 			change_primary_culture = korean
 			hidden_effect = {
 				every_owned_province = {
@@ -1427,9 +1445,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_cherokee_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -1469,9 +1484,6 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 935
 			owns_core_province = 936
 			owns_core_province = 933
@@ -1487,6 +1499,15 @@ country_decisions = {
 		effect = {
 			restore_country_name_effect = yes
 			change_tag = CHE
+			if = {
+				limit = {
+					NOT = {
+						technology_group = north_american
+					}
+				}
+				change_technology_group = north_american
+				change_unit_type = north_american
+			}
 			change_primary_culture = cherokee
 			hidden_effect = {
 				every_owned_province = {
@@ -1660,9 +1681,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_sami_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -1700,9 +1718,6 @@ country_decisions = {
 		allow = {
 			is_at_war = no
 			is_nomad = no
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 11
 			owns_core_province = 18
 			owns_core_province = 21
@@ -1719,6 +1734,15 @@ country_decisions = {
 		effect = {
 			restore_country_name_effect = yes
 			change_tag = SMI
+			if = {
+				limit = {
+					NOT = {
+						technology_group = nordic
+					}
+				}
+				change_technology_group = nordic
+				change_unit_type = nordic
+			}
 			change_primary_culture = sapmi
 			hidden_effect = {
 				every_owned_province = {
@@ -1777,9 +1801,6 @@ country_decisions = {
 				OR = {
 					has_country_flag = formed_yugoslavia
 				}
-			}
-			NOT = {
-				government = codex
 			}
 			OR = {
 				ai = no
@@ -1890,9 +1911,6 @@ country_decisions = {
 			is_nomad = no
 			is_at_war = no
 			is_emperor = no
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 4239
 			owns_core_province = 3002
 			owns_core_province = 4176
@@ -1917,6 +1935,15 @@ country_decisions = {
 				move_capital_effect = yes
 			}
 			change_tag = YUG
+			if = {
+				limit = {
+					NOT = {
+						technology_group = balkan
+					}
+				}
+				change_technology_group = balkan
+				change_unit_type = balkan
+			}
 			if = {
 				limit = {
 					NOT = {

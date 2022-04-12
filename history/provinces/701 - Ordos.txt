@@ -1,23 +1,22 @@
-#701 - Ordos
-
 # Governance
 #=========================
 owner = KHA
 controller = KHA
 add_core = KHA
 is_city = yes
-
 # Demographic
 #=========================
 culture = mongol
 religion = vajrayana
 capital = "Ordos"
 hre = no
-
 # Economic
 #=========================
 trade_goods = livestock
-base_tax = 2 
+latent_trade_goods = {
+	fertilizer
+}
+base_tax = 2
 base_production = 2
 base_manpower = 1
 latent_trade_goods = {
@@ -27,7 +26,9 @@ latent_trade_goods = {
 # Discovery
 #=========================
 discovered_by = chinese
+discovered_by = japanese_group
+discovered_by = indochinese
+discovered_by = malay_group
 discovered_by = nomad_group
-
 # History
 #=========================

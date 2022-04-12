@@ -16,9 +16,6 @@ country_decisions = {
 			NOT = {
 				tag = HAB
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				NOT = {
 					exists = HAB
@@ -58,9 +55,6 @@ country_decisions = {
 			NOT = {
 				exists = HAB
 			}
-			NOT = {
-				government = codex
-			}
 			has_regency = no
 			is_nomad = no
 			is_at_war = no
@@ -74,6 +68,15 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = HAB
+			if = {
+				limit = {
+					NOT = {
+						technology_group = german
+					}
+				}
+				change_technology_group = german
+				change_unit_type = german
+			}
 			add_prestige = 10
 			austria_proper_area = {
 				limit = {

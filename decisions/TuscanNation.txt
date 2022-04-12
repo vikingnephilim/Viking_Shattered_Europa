@@ -7,9 +7,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_tuscany_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -84,9 +81,6 @@ country_decisions = {
 			is_nomad = no
 			is_at_war = no
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				exists = TUS
 			}
 			owns_core_province = 2978			# Arezzo
@@ -99,6 +93,15 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = TUS
+			if = {
+				limit = {
+					NOT = {
+						technology_group = latin_group
+					}
+				}
+				change_technology_group = latin_group
+				change_unit_type = latin_group
+			}
 			every_province = {
 				limit = {
 					culture = tuscan

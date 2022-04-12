@@ -16,9 +16,6 @@ country_decisions = {
 				exists = HIN
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				tag = MUG
 			}
 			culture_group = dravidian
@@ -76,9 +73,6 @@ country_decisions = {
 			is_at_war = no
 			stability = 3
 			has_institution = feudalism
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 506			#Multan
 			owns_core_province = 517			#Surat
 			owns_core_province = 524			#Mathura
@@ -101,6 +95,15 @@ country_decisions = {
 			restore_country_name_effect = yes
 			set_government_rank = 3
 			change_tag = HIN
+			if = {
+				limit = {
+					NOT = {
+						technology_group = indian
+					}
+				}
+				change_technology_group = indian
+				change_unit_type = indian
+			}
 			swap_non_generic_missions = yes
 			bengal_region = {
 				limit = {
@@ -176,9 +179,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_india_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -245,9 +245,6 @@ country_decisions = {
 			is_at_war = no
 			stability = 3
 			has_institution = feudalism
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 506			#Multan
 			owns_core_province = 517			#Surat
 			owns_core_province = 518			#Chittor
@@ -270,6 +267,15 @@ country_decisions = {
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = indian
+					}
+				}
+				change_technology_group = indian
+				change_unit_type = indian
+			}
 			set_government_rank = 3
 			bengal_region = {
 				limit = {
@@ -349,9 +355,6 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = {
-				government = codex
-			}
 			#NOT = { exists = BHA }
 			NOT = {
 				exists = HIN
@@ -414,9 +417,6 @@ country_decisions = {
 			is_at_war = no
 			stability = 3
 			has_institution = feudalism
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 506			#Multan
 			owns_core_province = 507			#Lahore
 			owns_core_province = 517			#Surat
@@ -439,6 +439,15 @@ country_decisions = {
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = indian
+					}
+				}
+				change_technology_group = indian
+				change_unit_type = indian
+			}
 			set_government_rank = 3
 			bengal_region = {
 				limit = {
@@ -518,9 +527,6 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = {
-				government = codex
-			}
 			#NOT = { exists = BHA }
 			NOT = {
 				exists = HIN
@@ -583,9 +589,6 @@ country_decisions = {
 			is_at_war = no
 			stability = 3
 			has_institution = feudalism
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 506			#Multan
 			owns_core_province = 507			#Lahore
 			owns_core_province = 517			#Surat
@@ -608,6 +611,15 @@ country_decisions = {
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = indian
+					}
+				}
+				change_technology_group = indian
+				change_unit_type = indian
+			}
 			set_government_rank = 3
 			bengal_region = {
 				limit = {
@@ -687,9 +699,6 @@ country_decisions = {
 				ai = no
 				is_playing_custom_nation = no
 			}
-			NOT = {
-				government = codex
-			}
 			#NOT = { exists = BHA }
 			NOT = {
 				exists = HIN
@@ -752,9 +761,6 @@ country_decisions = {
 			is_at_war = no
 			stability = 3
 			has_institution = feudalism
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 506			#Multan
 			owns_core_province = 517			#Surat
 			owns_core_province = 522			#Delhi
@@ -777,6 +783,15 @@ country_decisions = {
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = indian
+					}
+				}
+				change_technology_group = indian
+				change_unit_type = indian
+			}
 			set_government_rank = 3
 			bengal_region = {
 				limit = {

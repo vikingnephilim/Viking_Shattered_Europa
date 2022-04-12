@@ -17,9 +17,6 @@ country_decisions = {
 			NOT = {
 				tag = POL
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				AND = {
@@ -75,9 +72,6 @@ country_decisions = {
 			NOT = {
 				exists = POL
 			}
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			is_nomad = no
 			owns_core_province = 262			# Krakow
@@ -92,6 +86,15 @@ country_decisions = {
 			change_tag = POL
 			restore_country_name_effect = yes
 			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = eastern
+					}
+				}
+				change_technology_group = eastern
+				change_unit_type = eastern
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {

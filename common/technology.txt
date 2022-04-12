@@ -4,7 +4,7 @@
 #Nation Designer Cost is set to match triggers for starting institutions.
 groups = {
 	western = {
-		start_level = 3
+		start_level = 10
 		start_cost_modifier = 0
 		nation_designer_cost = {
 			trigger = {
@@ -20,8 +20,127 @@ groups = {
 			value = 75
 		}
 	}
+	latin_group = {
+		start_level = 10
+		start_cost_modifier = 0.05
+		nation_designer_cost = {
+			trigger = {
+				capital_scope = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+				}
+			}
+			value = 75
+		}
+	}
+	german = {
+		start_level = 10
+		start_cost_modifier = 0.1
+		nation_designer_cost = {
+			trigger = {
+				capital_scope = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+				}
+			}
+			value = 75
+		}
+	}
+	nordic = {
+		start_level = 10
+		start_cost_modifier = 0.15
+		nation_designer_cost = {
+			trigger = {
+				capital_scope = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+				}
+			}
+			value = 75
+		}
+	}
 	eastern = {
-		start_level = 3
+		start_level = 9
+		start_cost_modifier = 0.2
+		nation_designer_cost = {
+			trigger = {
+				capital_scope = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+				}
+			}
+			value = 75
+		}
+	}
+	greek = {
+		start_level = 9
+		start_cost_modifier = 0.2
+		nation_designer_cost = {
+			trigger = {
+				capital_scope = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+				}
+			}
+			value = 75
+		}
+	}
+	russian_group = {
+		start_level = 9
+		start_cost_modifier = 0.2
+		nation_designer_cost = {
+			trigger = {
+				capital_scope = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+				}
+			}
+			value = 75
+		}
+	}
+	balkan = {
+		start_level = 9
+		start_cost_modifier = 0.2
+		nation_designer_cost = {
+			trigger = {
+				capital_scope = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+				}
+			}
+			value = 75
+		}
+	}
+	caucasian = {
+		start_level = 8
 		start_cost_modifier = 0.2
 		nation_designer_cost = {
 			trigger = {
@@ -38,7 +157,8 @@ groups = {
 		}
 	}
 	ottoman = {
-		start_level = 3
+		#Anatolian
+		start_level = 9
 		start_cost_modifier = 0.25
 		nation_designer_cost = {
 			trigger = {
@@ -55,7 +175,42 @@ groups = {
 		}
 	}
 	muslim = {
-		start_level = 3
+		#Mashriqi
+		start_level = 8
+		start_cost_modifier = 0.4
+		nation_designer_cost = {
+			trigger = {
+				capital_scope = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+				}
+			}
+			value = 75
+		}
+	}
+	maghrebi = {
+		start_level = 9
+		start_cost_modifier = 0.45
+		nation_designer_cost = {
+			trigger = {
+				capital_scope = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+				}
+			}
+			value = 75
+		}
+	}
+	persian = {
+		start_level = 9
 		start_cost_modifier = 0.4
 		nation_designer_cost = {
 			trigger = {
@@ -72,7 +227,7 @@ groups = {
 		}
 	}
 	indian = {
-		start_level = 3
+		start_level = 9
 		start_cost_modifier = 0.5
 		nation_designer_cost = {
 			trigger = {
@@ -88,18 +243,59 @@ groups = {
 			value = 75
 		}
 	}
-	east_african = {
-		start_level = 3
-		start_cost_modifier = 0.5
-		nation_designer_unit_type = sub_saharan
-	}
-	central_african = {
-		start_level = 2
-		start_cost_modifier = 0.65
-		nation_designer_unit_type = sub_saharan
-	}
 	chinese = {
-		start_level = 3
+		start_level = 10
+		start_cost_modifier = 0.6
+		nation_designer_cost = {
+			trigger = {
+				capital_scope = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+				}
+			}
+			value = 75
+		}
+	}
+	japanese_group = {
+		start_level = 8
+		start_cost_modifier = 0.55
+		nation_designer_cost = {
+			trigger = {
+				capital_scope = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+				}
+			}
+			value = 75
+		}
+	}
+	indochinese = {
+		start_level = 8
+		start_cost_modifier = 0.65
+		nation_designer_cost = {
+			trigger = {
+				capital_scope = {
+					OR = {
+						continent = new_world
+						continent = north_america
+						continent = south_america
+						continent = oceania
+					}
+				}
+			}
+			value = 75
+		}
+	}
+	malay_group = {
+		start_level = 8
 		start_cost_modifier = 0.6
 		nation_designer_cost = {
 			trigger = {
@@ -116,19 +312,76 @@ groups = {
 		}
 	}
 	nomad_group = {
-		start_level = 3
+		start_level = 8
 		start_cost_modifier = 0.75
 		nation_designer_trigger = {
 			has_reform = steppe_horde
 		}
 	}
+	sahelian = {
+		start_level = 5
+		start_cost_modifier = 0.5
+	}
 	sub_saharan = {
-		#West African
+		#Guinean
+		start_level = 4
+		start_cost_modifier = 0.5
+	}
+	ethiopian = {
+		start_level = 9
+		start_cost_modifier = 0.5
+	}
+	east_african = {
+		#Swahili
+		start_level = 9
+		start_cost_modifier = 0.5
+		nation_designer_unit_type = sub_saharan
+	}
+	nyanza = {
+		start_level = 4
+		start_cost_modifier = 0.75
+		nation_designer_unit_type = sub_saharan
+	}
+	central_african = {
+		#Kongolese
+		start_level = 3
+		start_cost_modifier = 0.75
+		nation_designer_unit_type = sub_saharan
+	}
+	bantu = {
 		start_level = 2
-		start_cost_modifier = 0.6
+		start_cost_modifier = 2
+		nation_designer_unit_type = sub_saharan
+	}
+	khoisan = {
+		start_level = 0
+		start_cost_modifier = 2.5
+		nation_designer_unit_type = sub_saharan
+	}
+	siberian_group = {
+		start_level = 3
+		start_cost_modifier = 1.75
+		nation_designer_trigger = {
+			has_reform = steppe_horde
+		}
+	}
+	papuan = {
+		start_level = 0
+		start_cost_modifier = 2.5
+		is_primitive = yes
+	}
+	australian = {
+		start_level = 0
+		start_cost_modifier = 2.5
+		is_primitive = yes
+	}
+	oceanic = {
+		start_level = 1
+		start_cost_modifier = 2
+		is_primitive = yes
 	}
 	north_american = {
-		start_level = 1
+		start_level = 0
 		start_cost_modifier = 2.5
 		is_primitive = yes
 	}
@@ -138,7 +391,7 @@ groups = {
 		is_primitive = yes
 	}
 	south_american = {
-		start_level = 1
+		start_level = 0
 		start_cost_modifier = 2.5
 		is_primitive = yes
 	}
@@ -148,24 +401,8 @@ groups = {
 		nation_designer_unit_type = south_american
 		is_primitive = yes
 	}
-	aboriginal_tech = {
-		start_level = 1
-		start_cost_modifier = 2.5
-		is_primitive = yes
-		nation_designer_cost = {
-			value = 50
-		}
-	}
-	polynesian_tech = {
-		start_level = 2
-		start_cost_modifier = 2
-		is_primitive = yes
-		nation_designer_cost = {
-			value = 50
-		}
-	}
 	high_american = {
-		start_level = 3
+		start_level = 11
 		start_cost_modifier = 0
 		nation_designer_unit_type = high_american
 		nation_designer_trigger = {

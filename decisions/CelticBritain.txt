@@ -12,9 +12,6 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				tag = ENG
 			}
 			NOT = {
@@ -71,9 +68,6 @@ country_decisions = {
 			NOT = {
 				exists = ENG
 			}
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 248
 			owns_core_province = 242
 			owns_core_province = 251
@@ -93,6 +87,15 @@ country_decisions = {
 		effect = {
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = western
+					}
+				}
+				change_technology_group = western
+				change_unit_type = western
+			}
 			change_tag = BHR
 			change_government = monarchy
 			hidden_effect = {

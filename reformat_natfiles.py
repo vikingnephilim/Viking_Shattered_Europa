@@ -44,7 +44,7 @@ for fil in files:
 	t_eco = []
 	t_eco_list = ( 'religion', 'unlock_cult', 'religious_school')
 	t_disco = []
-	t_disco_list = ('1444.1.1')
+	t_disco_list = ('1300.01.01
 	t_comment = []
 
 	for t in tokens:

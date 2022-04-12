@@ -33,9 +33,6 @@ country_decisions = {
 			NOT = {
 				tag = PAP
 			}
-			NOT = {
-				government = codex
-			}
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
@@ -81,12 +78,18 @@ country_decisions = {
 				owned_by = ROOT
 				type = all
 			}
-			NOT = {
-				government = codex
-			}
 		}
 		effect = {
 			change_tag = GZI
+			if = {
+				limit = {
+					NOT = {
+						technology_group = bantu
+					}
+				}
+				change_technology_group = bantu
+				change_unit_type = bantu
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {

@@ -17,9 +17,6 @@ country_decisions = {
 			NOT = {
 				tag = DLH
 			}
-			NOT = {
-				government = codex
-			}
 		}
 		provinces_to_highlight = {
 			OR = {
@@ -73,9 +70,6 @@ country_decisions = {
 			NOT = {
 				exists = DLH
 			}
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 522			#Delhi
 			522 = {
 				#Delhi
@@ -98,6 +92,15 @@ country_decisions = {
 			restore_country_name_effect = yes
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = indian
+					}
+				}
+				change_technology_group = indian
+				change_unit_type = indian
+			}
 			if = {
 				limit = {
 					NOT = {

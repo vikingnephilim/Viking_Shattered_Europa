@@ -5,9 +5,6 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				has_country_flag = formed_mossi_flag
 			}
 			OR = {
@@ -53,9 +50,6 @@ country_decisions = {
 			}
 			is_at_war = no
 			is_nomad = no
-			NOT = {
-				government = codex
-			}
 			upper_volta_area = {
 				owned_by = ROOT
 				is_core = ROOT
@@ -66,6 +60,15 @@ country_decisions = {
 		effect = {
 			change_tag = MSI
 			restore_country_name_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = sub_saharan
+					}
+				}
+				change_technology_group = sub_saharan
+				change_unit_type = sub_saharan
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {

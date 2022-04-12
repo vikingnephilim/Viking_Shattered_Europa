@@ -19,9 +19,6 @@ country_decisions = {
 				culture_group = sahelian
 				culture_group = west_african
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				AND = {
@@ -69,9 +66,6 @@ country_decisions = {
 			1131 = {
 				development = 20
 			}
-			NOT = {
-				government = codex
-			}
 			total_development = 1000
 			owns_core_province = 1131
 			owns_core_province = 1132
@@ -84,6 +78,15 @@ country_decisions = {
 		effect = {
 			remove_non_electors_emperors_from_empire_effect = yes
 			change_tag = GHA
+			if = {
+				limit = {
+					NOT = {
+						technology_group = sub_saharan
+					}
+				}
+				change_technology_group = sub_saharan
+				change_unit_type = sub_saharan
+			}
 			if = {
 				limit = {
 					NOT = {

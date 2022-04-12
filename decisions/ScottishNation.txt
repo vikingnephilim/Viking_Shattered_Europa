@@ -12,9 +12,6 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				tag = SCO
 			}
 			NOT = {
@@ -65,9 +62,6 @@ country_decisions = {
 			NOT = {
 				exists = SCO
 			}
-			NOT = {
-				government = codex
-			}
 			owns_core_province = 251			# aberdeen
 			owns_core_province = 252			# inverness
 			owns_core_province = 249			# ayrshire
@@ -81,6 +75,15 @@ country_decisions = {
 			248 = {
 				#edinburgh
 				move_capital_effect = yes
+			}
+			if = {
+				limit = {
+					NOT = {
+						technology_group = western
+					}
+				}
+				change_technology_group = western
+				change_unit_type = western
 			}
 			hidden_effect = {
 				if = {

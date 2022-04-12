@@ -23,9 +23,6 @@ country_decisions = {
 			NOT = {
 				tag = PAP
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				NOT = {
 					exists = DAL
@@ -72,9 +69,6 @@ country_decisions = {
 			NOT = {
 				num_of_cities = 11
 			}
-			NOT = {
-				government = codex
-			}
 			is_nomad = no
 			is_at_war = no
 			owns_core_province = 136			# Split
@@ -82,6 +76,15 @@ country_decisions = {
 		}
 		effect = {
 			restore_country_name_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = balkan
+					}
+				}
+				change_technology_group = balkan
+				change_unit_type = balkan
+			}
 			add_prestige = 25
 			change_tag = DAL
 			if = {

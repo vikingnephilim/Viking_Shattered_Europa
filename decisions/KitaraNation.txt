@@ -7,9 +7,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_mossi_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -58,9 +55,6 @@ country_decisions = {
 			NOT = {
 				exists = KIT
 			}
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			is_nomad = no
 			uganda_area = {
@@ -83,6 +77,15 @@ country_decisions = {
 		}
 		effect = {
 			restore_country_name_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = nyanza
+					}
+				}
+				change_technology_group = nyanza
+				change_unit_type = nyanza
+			}
 			change_tag = KIT
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {

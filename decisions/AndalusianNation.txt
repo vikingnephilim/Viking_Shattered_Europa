@@ -26,9 +26,6 @@ country_decisions = {
 			NOT = {
 				tag = ADU
 			}
-			NOT = {
-				government = codex
-			}
 			is_colonial_nation = no
 			OR = {
 				is_former_colonial_nation = no
@@ -114,9 +111,6 @@ country_decisions = {
 			NOT = {
 				exists = ADU
 			}
-			NOT = {
-				government = codex
-			}
 			is_nomad = no
 			is_at_war = no
 			is_tribal = no
@@ -171,6 +165,15 @@ country_decisions = {
 			change_tag = ADU
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = maghrebi
+					}
+				}
+				change_technology_group = maghrebi
+				change_unit_type = maghrebi
+			}
 			if = {
 				limit = {
 					NOT = {

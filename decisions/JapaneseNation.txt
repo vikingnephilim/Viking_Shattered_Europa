@@ -9,9 +9,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_japan_flag
 			}
-			NOT = {
-				government = codex
-			}
 			was_never_end_game_tag_trigger = yes
 			has_reform = shogunate
 			any_country = {
@@ -32,9 +29,6 @@ country_decisions = {
 			NOT = {
 				exists = JAP
 			}
-			NOT = {
-				government = codex
-			}
 			is_nomad = no
 			is_at_war = no
 			num_of_cities = 25
@@ -43,6 +37,15 @@ country_decisions = {
 		}
 		effect = {
 			remove_government_reform = shogunate
+			if = {
+				limit = {
+					NOT = {
+						technology_group = japanese_group
+					}
+				}
+				change_technology_group = japanese_group
+				change_unit_type = japanese_group
+			}
 			add_government_reform = empire_of_japan_reform
 			#set_legacy_government = despotic_monarchy
 			set_government_rank = 3
@@ -103,9 +106,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_japan_flag
 			}
-			NOT = {
-				government = codex
-			}
 			was_never_end_game_tag_trigger = yes
 			NOT = {
 				exists = JAP
@@ -114,9 +114,6 @@ country_decisions = {
 		allow = {
 			NOT = {
 				exists = JAP
-			}
-			NOT = {
-				government = codex
 			}
 			owns = 1020
 			owns = 1028
@@ -165,9 +162,6 @@ country_decisions = {
 				tag = JAP
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				has_country_flag = formed_japan_flag
 			}
 			was_never_end_game_tag_trigger = yes
@@ -191,9 +185,6 @@ country_decisions = {
 		allow = {
 			NOT = {
 				exists = JAP
-			}
-			NOT = {
-				government = codex
 			}
 			owns = 1020
 			owns = 1028

@@ -14,9 +14,6 @@ country_decisions = {
 			NOT = {
 				tag = KON
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				AND = {
@@ -63,9 +60,6 @@ country_decisions = {
 			NOT = {
 				exists = KON
 			}
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			is_nomad = no
 			owns_core_province = 1170			# Mpemba
@@ -76,6 +70,15 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = KON
+			if = {
+				limit = {
+					NOT = {
+						technology_group = central_african
+					}
+				}
+				change_technology_group = central_african
+				change_unit_type = central_african
+			}
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {

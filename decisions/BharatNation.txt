@@ -28,9 +28,6 @@ country_decisions = {
 			NOT = {
 				has_reform = steppe_horde
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				AND = {
@@ -97,14 +94,20 @@ country_decisions = {
 			owns_core_province = 4421			#Seringapatam
 			owns_core_province = 4461			#Ujjain
 			owns_core_province = 4503			#Mansura
-			NOT = {
-				government = codex
-			}
 		}
 		effect = {
 			restore_country_name_effect = yes
 			change_tag = BHA
 			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = indian
+					}
+				}
+				change_technology_group = indian
+				change_unit_type = indian
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			set_government_rank = 3
 			bengal_region = {
@@ -274,6 +277,15 @@ country_decisions = {
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = indian
+					}
+				}
+				change_technology_group = indian
+				change_unit_type = indian
+			}
 			set_government_rank = 3
 			bengal_region = {
 				limit = {
@@ -442,6 +454,15 @@ country_decisions = {
 			restore_country_name_effect = yes
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = indian
+					}
+				}
+				change_technology_group = indian
+				change_unit_type = indian
+			}
 			set_government_rank = 3
 			bengal_region = {
 				limit = {
@@ -610,6 +631,15 @@ country_decisions = {
 			swap_non_generic_missions = yes
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = indian
+					}
+				}
+				change_technology_group = indian
+				change_unit_type = indian
+			}
 			set_government_rank = 3
 			bengal_region = {
 				limit = {
@@ -778,6 +808,15 @@ country_decisions = {
 			swap_non_generic_missions = yes
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = indian
+					}
+				}
+				change_technology_group = indian
+				change_unit_type = indian
+			}
 			set_government_rank = 3
 			bengal_region = {
 				limit = {

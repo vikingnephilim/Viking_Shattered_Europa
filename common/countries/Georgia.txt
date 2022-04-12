@@ -1,10 +1,16 @@
 #Country Name: Please see filename.
-
 graphical_culture = easterngfx
+color = {
+	190
+	35
+	37
+}
 
-color = { 190  35  37 }
-
-revolutionary_colors = { 1 0 4 }
+revolutionary_colors = {
+	1
+	0
+	4
+}
 
 historical_idea_groups = {
 	defensive_ideas
@@ -18,22 +24,23 @@ historical_idea_groups = {
 }
 
 historical_units = {
-	eastern_medieval_infantry
-	eastern_knights
-	slavic_stradioti
-	eastern_militia
-	muscovite_musketeer
-	muscovite_caracolle
-	muscovite_soldaty
-	muscovite_cossack
-	russian_petrine
-	russian_lancer
-	russian_green_coat
-	russian_cuirassier
-	eastern_skirmisher
-	eastern_uhlan
-	eastern_carabinier
-	russian_mass
+	caucasian_archers
+	caucasian_men_at_arms
+	caucasian_avars
+	caucasian_georgian_shooters
+	caucasian_tsezic_infantry
+	caucasian_legzic_infantry
+	caucasian_carabiner_legzic
+	caucasian_new_model_soldier
+	caucasian_horsemen
+	caucasian_avarian_cavalry
+	caucasian_timariot_inspired_cavalry
+	caucasian_reformed_avarian_cavalry
+	caucasian_kutrigurs
+	caucasian_circassian_hit_and_run
+	caucasian_lancer
+	caucasian_reformed_kutrigurs
+	caucasian_georgian_dragoon
 }
 
 monarch_names = {
@@ -54,11 +61,9 @@ monarch_names = {
 	"Rostom #0" = 10
 	"Levan #0" = 15
 	"Demetre #2" = 20
-		
 	"Bebur #0" = 0
 	"Torgva #0" = 0
 	"Stepanoz #0" = 0
-
 	"Aghatang #0" = 0
 	"Andukapar #0" = 0
 	"Givi #0" = 0
@@ -72,12 +77,12 @@ monarch_names = {
 	"Zurab #0" = 0
 	"Zviad #0" = 0
 	"Sumbat #0" = 0
-#KAKHETI
+	#KAKHETI
 	"Bidzina #0" = 0
 	"Nikoloz #0" = 0
 	"Garsevan #0" = 0
 	"Ioane #0" = 0
-#IMERETI
+	#IMERETI
 	"Datua #0" = 0
 	"Bezhan #0" = 0
 	"Katsia #0" = 0
@@ -92,7 +97,7 @@ monarch_names = {
 	"Seteman #0" = 0
 	"Zegnak #0" = 0
 	"Timote #0" = 0
-#SAMTSKHE
+	#SAMTSKHE
 	"Qvarqvare #0" = 0
 	"Beka #0" = 0
 	"Manuchar #0" = 0
@@ -102,8 +107,7 @@ monarch_names = {
 	"Botso #0" = 0
 	"Sargis #0" = 0
 	"Ivane #0" = 0
-	
-#QUEENS
+	#QUEENS
 	"Tamar #1" = -20
 	"Rusudan #1" = -10
 	"Nestan-Darejan #0" = -10
@@ -119,9 +123,10 @@ monarch_names = {
 }
 
 leader_names = {
-#UNCLASSIFIED
-	Gabashvili Gegechkori	
-#KARTLI
+	#UNCLASSIFIED
+	Gabashvili
+	Gegechkori
+	#KARTLI
 	Amilakhvari
 	Amirejibi
 	Baratashvili
@@ -143,7 +148,7 @@ leader_names = {
 	Solagashvili
 	Tsitsishvili
 	Turkestanishvili
-#KAKHETI
+	#KAKHETI
 	Abashidze
 	Abkhazi
 	Andronikashvili
@@ -163,7 +168,7 @@ leader_names = {
 	Tumanisdze
 	Tusishvili
 	Vachnadze
-#IMERETI
+	#IMERETI
 	Agiashvili
 	Anchabadze
 	Apakidze
@@ -187,7 +192,7 @@ leader_names = {
 	Shervashidze
 	Tsereteli
 	Tsulukidze
-#SAMTSKHE
+	#SAMTSKHE
 	Amilakhori
 	Avilishvili
 	Diasamidze
@@ -207,23 +212,69 @@ leader_names = {
 }
 
 ship_names = {
-	Abo Amirani Aragvi Armazi Anakopia Artaani Argo Abkhazeti Apsaros "Ateni Sioni" Avtandil
-	Bichvinta Batomi Bodbe
+	Abo
+	Amirani
+	Aragvi
+	Armazi
+	Anakopia
+	Artaani
+	Argo
+	Abkhazeti
+	Apsaros
+	"Ateni Sioni"
+	Avtandil
+	Bichvinta
+	Batomi
+	Bodbe
 	Colchis
-	Dmanisi "Demetre Tavdadebuli" "Davit Gareja" Didgori "Davit Aghmashenebeli" Dioscurias
-	Geguti Gelati "Giorgi V Brtskinvale" Gori Gremi
+	Dmanisi
+	"Demetre Tavdadebuli"
+	"Davit Gareja"
+	Didgori
+	"Davit Aghmashenebeli"
+	Dioscurias
+	Geguti
+	Gelati
+	"Giorgi V Brtskinvale"
+	Gori
+	Gremi
 	Hereti
 	Iberia
-	Jvari "Jvari Vazisa"
-	Kartlos Kutaisi Khornabuji
-	Lasharisjvari Lore
-	Mtkvari Mtskheta
-	Narikala Ninotsminda
+	Jvari
+	"Jvari Vazisa"
+	Kartlos
+	Kutaisi
+	Khornabuji
+	Lasharisjvari
+	Lore
+	Mtkvari
+	Mtskheta
+	Narikala
+	Ninotsminda
 	"Okros Satsmisi"
-	Parnavaz Phasis Pityus "Petre Iberi"
-	Ruisi Racha Rioni
-	Seti Skhalta Svaneti Svetitskhoveli "Shota Rustaveli"
-	Tamar Tbilisi Telavi Tashiri "Tsminda Giorgi" "Tsotne Dadiani" "Tetri Giorgi"
-	Urbnisi Ushba Uplistsikhe
-	"Vakhtang Gorgasali" Vardzia Venakhi
+	Parnavaz
+	Phasis
+	Pityus
+	"Petre Iberi"
+	Ruisi
+	Racha
+	Rioni
+	Seti
+	Skhalta
+	Svaneti
+	Svetitskhoveli
+	"Shota Rustaveli"
+	Tamar
+	Tbilisi
+	Telavi
+	Tashiri
+	"Tsminda Giorgi"
+	"Tsotne Dadiani"
+	"Tetri Giorgi"
+	Urbnisi
+	Ushba
+	Uplistsikhe
+	"Vakhtang Gorgasali"
+	Vardzia
+	Venakhi
 }

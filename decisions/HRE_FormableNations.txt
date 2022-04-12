@@ -15,9 +15,6 @@ country_decisions = {
 			NOT = {
 				exists = BAV
 			}
-			NOT = {
-				government = codex
-			}
 			primary_culture = bavarian
 		}
 		provinces_to_highlight = {
@@ -94,9 +91,6 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			if = {
 				limit = {
 					NOT = {
@@ -157,6 +151,15 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = BAV
+			if = {
+				limit = {
+					NOT = {
+						technology_group = german
+					}
+				}
+				change_technology_group = german
+				change_unit_type = german
+			}
 			restore_country_name_effect = yes
 			if = {
 				limit = {
@@ -273,9 +276,6 @@ country_decisions = {
 			was_never_end_game_tag_trigger = yes
 			was_never_german_regional_tag_trigger = yes
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				has_country_flag = formed_pomerania_flag
 			}
 			OR = {
@@ -355,9 +355,6 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			if = {
 				limit = {
 					NOT = {
@@ -423,6 +420,15 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = POM
+			if = {
+				limit = {
+					NOT = {
+						technology_group = german
+					}
+				}
+				change_technology_group = german
+				change_unit_type = german
+			}
 			restore_country_name_effect = yes
 			add_country_modifier = {
 				name = "centralization_modifier"
@@ -539,9 +545,6 @@ country_decisions = {
 			was_never_end_game_tag_trigger = yes
 			was_never_german_regional_tag_trigger = yes
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				has_country_flag = formed_franconia_flag
 			}
 			OR = {
@@ -623,9 +626,6 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			OR = {
 				#Wurzburg was the theoretical holder of the title
 				tag = WBG
@@ -652,6 +652,15 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = FKN
+			if = {
+				limit = {
+					NOT = {
+						technology_group = german
+					}
+				}
+				change_technology_group = german
+				change_unit_type = german
+			}
 			restore_country_name_effect = yes
 			franconia_area = {
 				limit = {
@@ -700,9 +709,6 @@ country_decisions = {
 	swabia_nation = {
 		major = yes
 		potential = {
-			NOT = {
-				government = codex
-			}
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			was_never_german_regional_tag_trigger = yes
@@ -756,9 +762,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			owns_core_province = 70			#Wurttemberg
 			owns_core_province = 1872			#Ulm
@@ -771,6 +774,15 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = SWA
+			if = {
+				limit = {
+					NOT = {
+						technology_group = german
+					}
+				}
+				change_technology_group = german
+				change_unit_type = german
+			}
 			restore_country_name_effect = yes
 			lower_swabia_area = {
 				limit = {
@@ -866,9 +878,6 @@ country_decisions = {
 	saxony_nation = {
 		major = yes
 		potential = {
-			NOT = {
-				government = codex
-			}
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			was_never_german_regional_tag_trigger = yes
@@ -959,9 +968,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			NOT = {
 				exists = SAX
@@ -983,6 +989,15 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = SAX
+			if = {
+				limit = {
+					NOT = {
+						technology_group = german
+					}
+				}
+				change_technology_group = german
+				change_unit_type = german
+			}
 			restore_country_name_effect = yes
 			south_saxony_area = {
 				limit = {
@@ -1052,9 +1067,6 @@ country_decisions = {
 	hannoverian_nation = {
 		major = yes
 		potential = {
-			NOT = {
-				government = codex
-			}
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			was_never_german_regional_tag_trigger = yes
@@ -1135,9 +1147,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = {
-				government = codex
-			}
 			is_nomad = no
 			is_at_war = no
 			owns_core_province = 53			# Luneburg
@@ -1159,6 +1168,15 @@ country_decisions = {
 				move_capital_effect = yes
 			}
 			change_tag = HAN
+			if = {
+				limit = {
+					NOT = {
+						technology_group = german
+					}
+				}
+				change_technology_group = german
+				change_unit_type = german
+			}
 			restore_country_name_effect = yes
 			1758 = {
 				add_base_tax = 1
@@ -1219,9 +1237,6 @@ country_decisions = {
 	westfalian_nation = {
 		major = yes
 		potential = {
-			NOT = {
-				government = codex
-			}
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			was_never_german_regional_tag_trigger = yes
@@ -1349,9 +1364,6 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			AND = {
 				owns_core_province = 82				# Westfalen
 				owns_core_province = 1762				# Kassel
@@ -1374,6 +1386,15 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = WES
+			if = {
+				limit = {
+					NOT = {
+						technology_group = german
+					}
+				}
+				change_technology_group = german
+				change_unit_type = german
+			}
 			restore_country_name_effect = yes
 			set_country_flag = formed_westphalia_flag
 			if = {

@@ -14,9 +14,6 @@ country_decisions = {
 			NOT = {
 				exists = MSA
 			}
-			NOT = {
-				government = codex
-			}
 			culture_group = malay
 			NOT = {
 				has_reform = steppe_horde
@@ -45,9 +42,6 @@ country_decisions = {
 		}
 		allow = {
 			is_nomad = no
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			if = {
 				limit = {
@@ -76,6 +70,15 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = MSA
+			if = {
+				limit = {
+					NOT = {
+						technology_group = malay_group
+					}
+				}
+				change_technology_group = malay_group
+				change_unit_type = malay_group
+			}
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {

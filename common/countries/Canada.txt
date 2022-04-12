@@ -1,13 +1,18 @@
 #Country Name: Please see filename.
-
 graphical_culture = westerngfx
-
 colonial_parent = GBR
 random_nation_chance = 0
+color = {
+	94
+	117
+	55
+}
 
-color = { 94  117  55 }
-
-revolutionary_colors = { 16 0 16 }
+revolutionary_colors = {
+	16
+	0
+	16
+}
 
 historical_idea_groups = {
 	defensive_ideas
@@ -21,20 +26,31 @@ historical_idea_groups = {
 }
 
 historical_units = {
-	western_medieval_infantry
-	western_medieval_knights
-	western_longbow
-	gaelic_mercenary
-	gaelic_free_shooter
-	irish_charge
-	anglofrench_line
-	british_redcoat
-	british_hussar
-	british_square
-	mixed_order_infantry
-	open_order_cavalry
-	napoleonic_square
-	napoleonic_lancers
+	western_archers
+	western_men_at_arms
+	western_halberdmen
+	western_pikemen
+	western_matchlock_shooter
+	western_charge_infantry
+	western_reformed_shooter_infantry
+	western_grenadiers
+	western_regiment_of_foot
+	western_line_infantry
+	western_red_coat_infantry
+	western_square_infantry
+	western_drill_infantry
+	western_mixed_infantry
+	western_trench_infantry
+	western_horsemen
+	western_joust_knights
+	western_black_knights
+	western_caracole_cavalry
+	western_gallop_cavalry
+	western_dragoons
+	western_carabiners
+	western_hussars
+	western_lancers
+	western_household_cavalry
 }
 
 monarch_names = {
@@ -58,7 +74,6 @@ monarch_names = {
 	"Roland #0" = 5
 	"Michel #0" = 5
 	"Gordon #0" = 5
-	
 	"Alexander #0" = 0
 	"Amable #0" = 0
 	"Antoine #0" = 0
@@ -95,51 +110,249 @@ monarch_names = {
 	"Solomon #0" = 0
 	"Timothy #0" = 0
 	"William #0" = 0
-
 	"Laura #0" = -1
-	"Maria #0" = -1	
+	"Maria #0" = -1
 	"Victoria #0" = -1
 	"Charlotte #0" = -1
 	"Adrienne #0" = -1
 	"Marguerite #0" = -1
 }
 
-leader_names = { 
-	Allsopp Amherst Auldjo
-	Baby Barnes Beasley Bedard Begin Bell Bernier Berthelot Black Boileau Boisseau Booth Bouc Boucher Boudreau Bowen Brodeur Brock Bronson Browne By
-	Caldwell Campbell Carleton Cartier Chartier Cherrier Coffin Cornwall Craig Craigie Cuthbert
-	Dalhousie Dambourges Dartigny 
-	"D'Arcy" "de Bonne" "de Lavaltrie" "de Lorimier" "de Lotbinière" "de Rocheblave" "de Rouville" "de Salaberry" "de Tonnancour" 
-	Dige Dorion Dorland Ducharme Duchesnay Dufour Dumont Dunière Dunn Dupre Duplessis Dumas Durocher Duvernay
+leader_names = {
+	Allsopp
+	Amherst
+	Auldjo
+	Baby
+	Barnes
+	Beasley
+	Bedard
+	Begin
+	Bell
+	Bernier
+	Berthelot
+	Black
+	Boileau
+	Boisseau
+	Booth
+	Bouc
+	Boucher
+	Boudreau
+	Bowen
+	Brodeur
+	Brock
+	Bronson
+	Browne
+	By
+	Caldwell
+	Campbell
+	Carleton
+	Cartier
+	Chartier
+	Cherrier
+	Coffin
+	Cornwall
+	Craig
+	Craigie
+	Cuthbert
+	Dalhousie
+	Dambourges
+	Dartigny
+	"D'Arcy"
+	"de Bonne"
+	"de Lavaltrie"
+	"de Lorimier"
+	"de Lotbinière"
+	"de Rocheblave"
+	"de Rouville"
+	"de Salaberry"
+	"de Tonnancour"
+	Dige
+	Dorion
+	Dorland
+	Ducharme
+	Duchesnay
+	Dufour
+	Dumont
+	Dunière
+	Dunn
+	Dupre
+	Duplessis
+	Dumas
+	Durocher
+	Duvernay
 	Éthier
-	Fairfield Fisher Foucher Fraser French Frobisher
-	Grant Gray Godefroy Gouin Guerout Guy
-	Hardison Hart Harwood Hebert Henry Hertel Huot
-	Ingersoll Irvine
-	Jessup Jodoin Jordan Jones
-	Lacroix Lafontaine Larocque Lebreton "le Comte" Lee Lees Lester Lynd
-	Macnider Macomb Malhiot Marcoux Martineau McBeath McCrae McDonell McGill McGillivray McKee McLeod Menut Millet Monk Montour Moore Mure Murray
+	Fairfield
+	Fisher
+	Foucher
+	Fraser
+	French
+	Frobisher
+	Grant
+	Gray
+	Godefroy
+	Gouin
+	Guerout
+	Guy
+	Hardison
+	Hart
+	Harwood
+	Hebert
+	Henry
+	Hertel
+	Huot
+	Ingersoll
+	Irvine
+	Jessup
+	Jodoin
+	Jordan
+	Jones
+	Lacroix
+	Lafontaine
+	Larocque
+	Lebreton
+	"le Comte"
+	Lee
+	Lees
+	Lester
+	Lynd
+	Macnider
+	Macomb
+	Malhiot
+	Marcoux
+	Martineau
+	McBeath
+	McCrae
+	McDonell
+	McGill
+	McGillivray
+	McKee
+	McLeod
+	Menut
+	Millet
+	Monk
+	Montour
+	Moore
+	Mure
+	Murray
 	Nelson
-	Panet Papineau Paquet Pawling Perrault Perinault Pettit Pierreville Plante Prescott Prevost
-	Raby Richardson Richmond Riel Rivard Robinson Rogers Roy
-	"Saint-Martin" Secord Sewell Shaw Sherbrooke Sirois Smith Spencer Stanley Stuart Street Swayze
-	Tache Taschereau Terry Thompson Tod
-	"Van Alstine" Vanier Viger
-	Walker White Wilkinson
+	Panet
+	Papineau
+	Paquet
+	Pawling
+	Perrault
+	Perinault
+	Pettit
+	Pierreville
+	Plante
+	Prescott
+	Prevost
+	Raby
+	Richardson
+	Richmond
+	Riel
+	Rivard
+	Robinson
+	Rogers
+	Roy
+	"Saint-Martin"
+	Secord
+	Sewell
+	Shaw
+	Sherbrooke
+	Sirois
+	Smith
+	Spencer
+	Stanley
+	Stuart
+	Street
+	Swayze
+	Tache
+	Taschereau
+	Terry
+	Thompson
+	Tod
+	"Van Alstine"
+	Vanier
+	Viger
+	Walker
+	White
+	Wilkinson
 	Young
 }
 
 ship_names = {
-	Cabot Champlain Cartier
-	Acadia Hochelaga Stadacona Laurentian
-	Quebec Ontario
-	Athabaskan Cayuga Huron Iroquois Micmac Algonquin Sioux Ojibwa Onondaga
-	Saguenay "St. Maurice" Ottawa Chaudière Richelieu "St. Laurent" Gatineau Margaree
-	Restigouche Saskatchewan Qu'Appelle "St. Francis" "St. Croix" Niagara
-	Bonaventure Manitoulin Anticosti Baffin Miscou Magdalen
-	Gaspe Fundy Labrador Chaleur Chignecto Fortune Miramichi Quinte Thunder Ungava
+	Cabot
+	Champlain
+	Cartier
+	Acadia
+	Hochelaga
+	Stadacona
+	Laurentian
+	Quebec
+	Ontario
+	Athabaskan
+	Cayuga
+	Huron
+	Iroquois
+	Micmac
+	Algonquin
+	Sioux
+	Ojibwa
+	Onondaga
+	Saguenay
+	"St. Maurice"
+	Ottawa
+	Chaudière
+	Richelieu
+	"St. Laurent"
+	Gatineau
+	Margaree
+	Restigouche
+	Saskatchewan
+	Qu'Appelle
+	"St. Francis"
+	"St. Croix"
+	Niagara
+	Bonaventure
+	Manitoulin
+	Anticosti
+	Baffin
+	Miscou
+	Magdalen
+	Gaspe
+	Fundy
+	Labrador
+	Chaleur
+	Chignecto
+	Fortune
+	Miramichi
+	Quinte
+	Thunder
+	Ungava
 	"Cape Breton"
-	Memphremagog "Bras d'Or" Nipigon
-	Preserver Protecteur
-	Cormorant Lynx Badger Caribou Otter Wolf Grizzly Raccoon Loon "Blue Heron" Mallard Vison Renard Elk Beaver Ambler Husky Reindeer Moose Outarde  
+	Memphremagog
+	"Bras d'Or"
+	Nipigon
+	Preserver
+	Protecteur
+	Cormorant
+	Lynx
+	Badger
+	Caribou
+	Otter
+	Wolf
+	Grizzly
+	Raccoon
+	Loon
+	"Blue Heron"
+	Mallard
+	Vison
+	Renard
+	Elk
+	Beaver
+	Ambler
+	Husky
+	Reindeer
+	Moose
+	Outarde
 }

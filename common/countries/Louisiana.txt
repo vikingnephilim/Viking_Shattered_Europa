@@ -1,12 +1,18 @@
 #Country Name: Please see filename.
-
 graphical_culture = westerngfx
-
 colonial_parent = FRA
 random_nation_chance = 0
+color = {
+	144
+	52
+	53
+}
 
-color = { 144  52  53 }
-revolutionary_colors = { 15 0 15 }
+revolutionary_colors = {
+	15
+	0
+	15
+}
 
 historical_idea_groups = {
 	defensive_ideas
@@ -20,27 +26,38 @@ historical_idea_groups = {
 }
 
 historical_units = {
-	western_medieval_infantry
-	western_medieval_knights
-	western_longbow
-	gaelic_mercenary
-	gaelic_free_shooter
-	irish_charge
-	anglofrench_line
-	british_redcoat
-	british_hussar
-	british_square
-	mixed_order_infantry
-	open_order_cavalry
-	napoleonic_square
-	napoleonic_lancers
+	western_archers
+	western_men_at_arms
+	western_halberdmen
+	western_pikemen
+	western_matchlock_shooter
+	western_charge_infantry
+	western_reformed_shooter_infantry
+	western_grenadiers
+	western_regiment_of_foot
+	western_line_infantry
+	western_red_coat_infantry
+	western_square_infantry
+	western_drill_infantry
+	western_mixed_infantry
+	western_trench_infantry
+	western_horsemen
+	western_joust_knights
+	western_black_knights
+	western_caracole_cavalry
+	western_gallop_cavalry
+	western_dragoons
+	western_carabiners
+	western_hussars
+	western_lancers
+	western_household_cavalry
 }
 
 monarch_names = {
 	"Henri #0" = 20
 	"Louis #0" = 20
-	"Charles #0" = 10	
-	"Pierre #0" = 10	
+	"Charles #0" = 10
+	"Pierre #0" = 10
 	"Albert #0" = 5
 	"Simon #0" = 5
 	"Alexandre #0 " = 0
@@ -76,35 +93,187 @@ monarch_names = {
 	"Xavier #0" = 0
 	"Yves #0" = 0
 	"Zéphirin #0" = 0
-	
 	"Félicienne #0" = -1
 	"Héloïse #0" = -1
 	"Lucille #0" = -1
 }
 
 leader_names = {
-      Abat Aguilar Allard Astier Azeret
-      Ballard Barbarin Beauregard Beauvais Bellevue Bénard Bertonière Blanchard Bouligny Broussian
-      Chauvin Courcelli
-      D'Abbadie Dabeville Davezac "de La Houssaye" Delagnoue Delaire Delorme Dubreuil Duclos Dufour Duvergier
-      Fabre Ferrière Florance Fortier Foucher Fournier
-      Garnier Gasquet Girod Guesnard
-      "L'Hermite" Labadie Labarre Laborde Labranche Lachaise Lacoste Lacouture Lacroix Lafarge Lafaye 
-      Lafourche Lallande Lamothe Landreaux Lanusse Lapeyre Laporte Laroche Latour Laville Leblanc
-      "Le Moyne" Leprêtre Lesparre Levasseur Livaudais Lombard 
-      Mansoury Marigny Milhet Millaudon Montegut Musson
-      Paimboeuf Paturel Pecquet Pelletier Périer Perrault Pilie Plicque
-      Renault Rillieux Rivière Rochelle Roussel
-      "Saint-Martin" Salaignac Salvant Seignouret Simard "Saint-Blancard"
-      Terrasson Tourangier
-      Valette Vidal Vignie Villere Vinot
+	Abat
+	Aguilar
+	Allard
+	Astier
+	Azeret
+	Ballard
+	Barbarin
+	Beauregard
+	Beauvais
+	Bellevue
+	Bénard
+	Bertonière
+	Blanchard
+	Bouligny
+	Broussian
+	Chauvin
+	Courcelli
+	D'Abbadie
+	Dabeville
+	Davezac
+	"de La Houssaye"
+	Delagnoue
+	Delaire
+	Delorme
+	Dubreuil
+	Duclos
+	Dufour
+	Duvergier
+	Fabre
+	Ferrière
+	Florance
+	Fortier
+	Foucher
+	Fournier
+	Garnier
+	Gasquet
+	Girod
+	Guesnard
+	"L'Hermite"
+	Labadie
+	Labarre
+	Laborde
+	Labranche
+	Lachaise
+	Lacoste
+	Lacouture
+	Lacroix
+	Lafarge
+	Lafaye
+	Lafourche
+	Lallande
+	Lamothe
+	Landreaux
+	Lanusse
+	Lapeyre
+	Laporte
+	Laroche
+	Latour
+	Laville
+	Leblanc
+	"Le Moyne"
+	Leprêtre
+	Lesparre
+	Levasseur
+	Livaudais
+	Lombard
+	Mansoury
+	Marigny
+	Milhet
+	Millaudon
+	Montegut
+	Musson
+	Paimboeuf
+	Paturel
+	Pecquet
+	Pelletier
+	Périer
+	Perrault
+	Pilie
+	Plicque
+	Renault
+	Rillieux
+	Rivière
+	Rochelle
+	Roussel
+	"Saint-Martin"
+	Salaignac
+	Salvant
+	Seignouret
+	Simard
+	"Saint-Blancard"
+	Terrasson
+	Tourangier
+	Valette
+	Vidal
+	Vignie
+	Villere
+	Vinot
 }
 
 ship_names = {
-	"Saint Louis" Detroit Natchitoches "New Orleans" "Bâton Rouge" Mobile Biloxi Peoria "Fort Maurepas" "Fort de Chartres" Florida Bayou Catahoula Tickfaw
-	Tangipahoa Pélican Rapides Terrebonne Houma Plaquemines Feliciana Avoyelles Calcasieu Sabine Caddo Tensas Atakpas "Pointe Coupee" Ascension Assumption
-	Iberia Opelousas Thibodaux Abbeville Amite "Ville Platte" "Pointe à la Hache" "Fort de La Boulaye" Iberville Bienville Mississippi Louisiana "La Balize"
-	"La Salle" Manchac Muscogee Istrouma Choctaw Bayougoula Acadie Teche "Les Arcs" Alligator Écrevisse Delcambre Lafourche Tchoupic "Queue de Tortue" Invincible
-	Babylone "Notre Dame" "Prompt Succor" "L'Ursuline" "Les Opelousas" "La Batre" "Saint Charles" "Saint James" "Saint Mary" "Saint Helena" Allemagne "Beau Pays"
-	"Le Creole" Aigrette "Detours des Anglais" "Fort Condé" "Saint Pierre"
+	"Saint Louis"
+	Detroit
+	Natchitoches
+	"New Orleans"
+	"Bâton Rouge"
+	Mobile
+	Biloxi
+	Peoria
+	"Fort Maurepas"
+	"Fort de Chartres"
+	Florida
+	Bayou
+	Catahoula
+	Tickfaw
+	Tangipahoa
+	Pélican
+	Rapides
+	Terrebonne
+	Houma
+	Plaquemines
+	Feliciana
+	Avoyelles
+	Calcasieu
+	Sabine
+	Caddo
+	Tensas
+	Atakpas
+	"Pointe Coupee"
+	Ascension
+	Assumption
+	Iberia
+	Opelousas
+	Thibodaux
+	Abbeville
+	Amite
+	"Ville Platte"
+	"Pointe à la Hache"
+	"Fort de La Boulaye"
+	Iberville
+	Bienville
+	Mississippi
+	Louisiana
+	"La Balize"
+	"La Salle"
+	Manchac
+	Muscogee
+	Istrouma
+	Choctaw
+	Bayougoula
+	Acadie
+	Teche
+	"Les Arcs"
+	Alligator
+	Écrevisse
+	Delcambre
+	Lafourche
+	Tchoupic
+	"Queue de Tortue"
+	Invincible
+	Babylone
+	"Notre Dame"
+	"Prompt Succor"
+	"L'Ursuline"
+	"Les Opelousas"
+	"La Batre"
+	"Saint Charles"
+	"Saint James"
+	"Saint Mary"
+	"Saint Helena"
+	Allemagne
+	"Beau Pays"
+	"Le Creole"
+	Aigrette
+	"Detours des Anglais"
+	"Fort Condé"
+	"Saint Pierre"
 }

@@ -1,8 +1,10 @@
 #Country Name: Please see filename.
-
 graphical_culture = muslimgfx
-
-color = { 207 213 47 }
+color = {
+	207
+	213
+	47
+}
 
 historical_idea_groups = {
 	defensive_ideas
@@ -16,17 +18,22 @@ historical_idea_groups = {
 }
 
 historical_units = {
-	persian_footsoldier
-	persian_cavalry_charge
-	persian_shamshir
-	qizilbash_cavalry
-	tofongchis_musketeer
-	topchis_artillery
-	afsharid_reformed
-	afsharid_reformed_infantry
-	muslim_mass_infantry
-	muslim_dragoon
-	persian_rifle
+	persian_archers
+	persian_horsemen
+	persian_ayyubid_duel_infantry
+	persian_ayyubid_shamshir
+	persian_ayyubid_cavalry
+	persian_ayyubid_musketeer
+	persian_ayyubid_musket_cavalry
+	persian_ayyubid_reformed_infantry
+	persian_ayyubid_reformed_cavalry
+	persian_ayyubid_musket_charge
+	persian_ayyubid_reformed_musketeers
+	persian_ayyubid_dragoon
+	persian_ayyubid_mass_infantry
+	persian_ayyubid_durrani_dragoon
+	persian_ayyubid_durrani_swivel
+	persian_rifle_infantry
 }
 
 monarch_names = {
@@ -52,7 +59,6 @@ monarch_names = {
 	"Mir Saifeddin #0" = 0
 	"Saidi #0" = 0
 	"Budak #0" = 0
-	
 	"Dawlat #0" = -10
 	"Atiya #0" = -1
 	"Anahita #0" = -1
@@ -81,30 +87,124 @@ leader_names = {
 }
 
 ship_names = {
-	Abathur "Adamn Kasia" "Aesma Daeva" Agas
-	Ahriman Ahura "Ahura Mazda" Ahurani Airyaman
-	"Aka Manah" Aladdin Allatum Amashaspan Ameratat
-	"Amesha Spentas" Anahita "Angra Mainyu" Anjuman
-	"Apam-natat" Apaosa Aredvi Arishtat Armaiti Arsaces
-	"Asha vahista" Asman "Asto Vidatu" "Astvat-Ereta"
-	Atar "Azi Dahaka" Baga Bahram Burijas Bushyasta Buyasta
-	Camros Daena Daevas Ahaka Dahhak Dena Dev Diwe Drug
-	Drvaspa Frashegird Fravashis Gandarewa "Gao-kerena"
-	Gayomard Gayomart "Geus-Tasan" "Geus-Urvan" Haoma
-	Haurvatat Humay Hvar Hvarekhshaeta Indar Indra Izha
-	Jamshid Jeh Karshipta Kavi Khara "Khshathra vairya"
-	Kundrav Mah Mahre Mahrianag Manu Manuchihir Mao 
-	Mashyane Mashye Menog Mithra Nairyosangha Nanghaithya
-	Neriosang Ormazd Peris Peshdadians Rapithwin Rashnu
-	Rustam Saurva Simurgh "Spenta Mainyu" Sraosa Srosh
-	Tawrich Thunaupa Tistrya Tushnamatay Vanant Vata
-	Verethragna "Vohu Manah" Vouruskasha Yam Yasht Yazata
-	Yezidi Yima Zal Zam "Zam-Armatay" Zarathustra Zarich
-	"Zend-Avesta" Zurvan
+	Abathur
+	"Adamn Kasia"
+	"Aesma Daeva"
+	Agas
+	Ahriman
+	Ahura
+	"Ahura Mazda"
+	Ahurani
+	Airyaman
+	"Aka Manah"
+	Aladdin
+	Allatum
+	Amashaspan
+	Ameratat
+	"Amesha Spentas"
+	Anahita
+	"Angra Mainyu"
+	Anjuman
+	"Apam-natat"
+	Apaosa
+	Aredvi
+	Arishtat
+	Armaiti
+	Arsaces
+	"Asha vahista"
+	Asman
+	"Asto Vidatu"
+	"Astvat-Ereta"
+	Atar
+	"Azi Dahaka"
+	Baga
+	Bahram
+	Burijas
+	Bushyasta
+	Buyasta
+	Camros
+	Daena
+	Daevas
+	Ahaka
+	Dahhak
+	Dena
+	Dev
+	Diwe
+	Drug
+	Drvaspa
+	Frashegird
+	Fravashis
+	Gandarewa
+	"Gao-kerena"
+	Gayomard
+	Gayomart
+	"Geus-Tasan"
+	"Geus-Urvan"
+	Haoma
+	Haurvatat
+	Humay
+	Hvar
+	Hvarekhshaeta
+	Indar
+	Indra
+	Izha
+	Jamshid
+	Jeh
+	Karshipta
+	Kavi
+	Khara
+	"Khshathra vairya"
+	Kundrav
+	Mah
+	Mahre
+	Mahrianag
+	Manu
+	Manuchihir
+	Mao
+	Mashyane
+	Mashye
+	Menog
+	Mithra
+	Nairyosangha
+	Nanghaithya
+	Neriosang
+	Ormazd
+	Peris
+	Peshdadians
+	Rapithwin
+	Rashnu
+	Rustam
+	Saurva
+	Simurgh
+	"Spenta Mainyu"
+	Sraosa
+	Srosh
+	Tawrich
+	Thunaupa
+	Tistrya
+	Tushnamatay
+	Vanant
+	Vata
+	Verethragna
+	"Vohu Manah"
+	Vouruskasha
+	Yam
+	Yasht
+	Yazata
+	Yezidi
+	Yima
+	Zal
+	Zam
+	"Zam-Armatay"
+	Zarathustra
+	Zarich
+	"Zend-Avesta"
+	Zurvan
 }
 
 army_names = {
-	Artesa "$PROVINCE$"
+	Artesa
+	"$PROVINCE$"
 }
 
 fleet_names = {

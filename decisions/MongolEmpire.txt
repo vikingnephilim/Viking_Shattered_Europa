@@ -15,9 +15,6 @@ country_decisions = {
 				culture_group = tartar
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				has_country_flag = mongol_empire_flag
 			}
 			NOT = {
@@ -70,9 +67,6 @@ country_decisions = {
 				tag = GLH
 				tag = ILK
 			}
-			NOT = {
-				government = codex
-			}
 			custom_trigger_tooltip = {
 				tooltip = mongolia_decision_tooltip
 				mongolia_region = {
@@ -120,6 +114,15 @@ country_decisions = {
 		effect = {
 			change_tag = MGE
 			restore_country_name_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = nomad_group
+					}
+				}
+				change_technology_group = nomad_group
+				change_unit_type = nomad_group
+			}
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
@@ -170,9 +173,6 @@ country_decisions = {
 				tag = MGE
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				has_country_flag = restored_ilkhanate_decision_flag
 			}
 			NOT = {
@@ -195,9 +195,6 @@ country_decisions = {
 		}
 		allow = {
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			persia_region = {
 				type = all
 				owned_by = ROOT
@@ -215,6 +212,15 @@ country_decisions = {
 			create_march = ILK
 			ILK = {
 				change_government = monarchy
+				if = {
+					limit = {
+						NOT = {
+							technology_group = muslim
+						}
+					}
+					change_technology_group = muslim
+					change_unit_type = muslim
+				}
 				#set_legacy_government = despotic_monarchy
 				change_primary_culture = ROOT
 				change_religion = ROOT
@@ -235,9 +241,6 @@ country_decisions = {
 			normal_or_historical_nations = yes
 			NOT = {
 				has_country_flag = formed_ilkhanate_flag
-			}
-			NOT = {
-				government = codex
 			}
 			was_never_end_game_tag_trigger = yes
 			OR = {
@@ -286,9 +289,6 @@ country_decisions = {
 		allow = {
 			NOT = {
 				exists = ILK
-			}
-			NOT = {
-				government = codex
 			}
 			is_at_war = no
 			persia_region = {

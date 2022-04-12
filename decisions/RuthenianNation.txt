@@ -12,9 +12,6 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				tag = PAP
 			}
 			NOT = {
@@ -77,9 +74,6 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			OR = {
 				#owns everything
 				AND = {
@@ -98,6 +92,15 @@ country_decisions = {
 		}
 		effect = {
 			restore_country_name_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = russian_group
+					}
+				}
+				change_technology_group = russian_group
+				change_unit_type = russian_group
+			}
 			280 = {
 				move_capital_effect = yes
 			}

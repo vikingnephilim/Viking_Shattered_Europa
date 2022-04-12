@@ -12,9 +12,6 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				tag = MUG
 			}
 			NOT = {
@@ -95,9 +92,6 @@ country_decisions = {
 			NOT = {
 				exists = GLH
 			}
-			NOT = {
-				government = codex
-			}
 			has_reform = steppe_horde
 			owns_core_province = 284			#Crimea
 			owns_core_province = 302			#Tambov
@@ -140,6 +134,15 @@ country_decisions = {
 			change_tag = GLH
 			restore_country_name_effect = yes
 			swap_non_generic_missions = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = nomad_group
+					}
+				}
+				change_technology_group = nomad_group
+				change_unit_type = nomad_group
+			}
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {
 				limit = {

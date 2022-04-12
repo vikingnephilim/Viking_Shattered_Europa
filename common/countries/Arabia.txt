@@ -1,10 +1,16 @@
 #Country Name: Please see filename.
-
 graphical_culture = muslimgfx
+color = {
+	76
+	141
+	58
+}
 
-color = { 76  141  58 } 
-
-revolutionary_colors = { 10 0 1 }
+revolutionary_colors = {
+	10
+	0
+	1
+}
 
 historical_idea_groups = {
 	religious_ideas
@@ -18,13 +24,22 @@ historical_idea_groups = {
 }
 
 historical_units = {
-	mamluk_archer
-	mamluk_cavalry_charge
-	mamluk_duel
-	mamluk_musket_charge
-	muslim_mass_infantry
+	mashriqi_archers
+	mashriqi_men_at_arms
+	muslim_duel_infantry
+	muslim_shamshir
+	muslim_qizilbash_cavalry
+	muslim_musketeer
+	muslim_musket_cavalry
+	muslim_afsharid_reformed_infantry
+	muslim_afsharid_reformed_cavalry
+	muslim_musket_charge
+	muslim_reformed_muslim_musketeers
 	muslim_dragoon
-	ali_bey_reformed_infantry
+	muslim_mass_infantry
+	muslim_durrani_dragoon
+	muslim_durrani_swivel
+	muslim_rifle_infantry
 }
 
 monarch_names = {
@@ -36,7 +51,7 @@ monarch_names = {
 	"Ahmad #2" = 50
 	"Humaida #1" = 10
 	"Qa'it #0" = 10
-	"Takaba #0" =  10
+	"Takaba #0" = 10
 	"Hassan #1" = 10
 	"Abu Talib #0" = 10
 	"Abu Aun Idris #0" = 10
@@ -52,7 +67,7 @@ monarch_names = {
 	"'Abd al-Ilah #0" = 20
 	"'Ali #2" = 10
 	"Yahya #0" = 10
-	"Mubarak #0" = 10 
+	"Mubarak #0" = 10
 	"Masa'id #0" = 10
 	"Djafar #0" = 10
 	"Inâl #0" = 20
@@ -92,7 +107,6 @@ monarch_names = {
 	"Sa'di #0" = 0
 	"Sayyid #0" = 0
 	"Yunus #0" = 0
-	
 	"Rajya #0" = -1
 	"Shahira #0" = -1
 	"Yusra #0" = -1
@@ -107,7 +121,7 @@ leader_names = {
 	Saleh
 	Farhat
 	Chammas
-	Mansour	
+	Mansour
 	Abbas
 	Hammoud
 	Ali
@@ -123,20 +137,66 @@ leader_names = {
 }
 
 ship_names = {
-	Hijaz Jeddah Mecca Medina "Jabal Baydan"
-	"Jabal Sawda" "Jabal Abu Hasan" "Jabal al-Jurayrah" 
-	"Harrat Al-Kishb" "Harrat Rahat" "Harrat Nawasif"
-	"Harrat Hadan" "Harrat Al-Buqum" "Harrat Khaybar"
-	"Harrat Kurama" "Harrat al-Unayyir"
-	"Zaher Barqooq" "Farag Ben Barqooq"
-	"Ben Barqooq" "Muyaid Sheikh" "Ahmen Muyaid" 
-	"Zaher Tatar" "Nasser Muhamed" "Ashraf Barsbay"
-	"Aziz Gamal" "Nahr an-Nil" "Al-Farafirah"
-	"Ad-Däkhilah" "Al-Kharijah" "Al-Ali" "Al-Bahriyah"
-	Rahman Rahim Malik Quddus Salam Mu'min Muhaymin
-	Aziz Jabbar Mutakabbir Khaliq Bari Musawwir 
-	Ghaffar Qahhar Wahhab Razzaq Fattah Alim Qabid
-	Basit Khafid Rafi Mu'izz Mudhill Sami Basir Hakam Adl
+	Hijaz
+	Jeddah
+	Mecca
+	Medina
+	"Jabal Baydan"
+	"Jabal Sawda"
+	"Jabal Abu Hasan"
+	"Jabal al-Jurayrah"
+	"Harrat Al-Kishb"
+	"Harrat Rahat"
+	"Harrat Nawasif"
+	"Harrat Hadan"
+	"Harrat Al-Buqum"
+	"Harrat Khaybar"
+	"Harrat Kurama"
+	"Harrat al-Unayyir"
+	"Zaher Barqooq"
+	"Farag Ben Barqooq"
+	"Ben Barqooq"
+	"Muyaid Sheikh"
+	"Ahmen Muyaid"
+	"Zaher Tatar"
+	"Nasser Muhamed"
+	"Ashraf Barsbay"
+	"Aziz Gamal"
+	"Nahr an-Nil"
+	"Al-Farafirah"
+	"Ad-Däkhilah"
+	"Al-Kharijah"
+	"Al-Ali"
+	"Al-Bahriyah"
+	Rahman
+	Rahim
+	Malik
+	Quddus
+	Salam
+	Mu'min
+	Muhaymin
+	Aziz
+	Jabbar
+	Mutakabbir
+	Khaliq
+	Bari
+	Musawwir
+	Ghaffar
+	Qahhar
+	Wahhab
+	Razzaq
+	Fattah
+	Alim
+	Qabid
+	Basit
+	Khafid
+	Rafi
+	Mu'izz
+	Mudhill
+	Sami
+	Basir
+	Hakam
+	Adl
 }
 
 army_names = {
@@ -144,5 +204,5 @@ army_names = {
 }
 
 fleet_names = {
-	"Istawal-al $PROVINCE$" 
+	"Istawal-al $PROVINCE$"
 }

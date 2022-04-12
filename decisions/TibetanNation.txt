@@ -7,18 +7,12 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_tibet_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
 			}
 			NOT = {
 				exists = TIB
-			}
-			NOT = {
-				government = codex
 			}
 			OR = {
 				primary_culture = tibetan
@@ -57,9 +51,6 @@ country_decisions = {
 		}
 		allow = {
 			religion = vajrayana
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			is_nomad = no
 			owns_core_province = 2135
@@ -68,9 +59,6 @@ country_decisions = {
 			677 = {
 				is_state = yes
 			}
-			NOT = {
-				government = codex
-			}
 		}
 		effect = {
 			677 = {
@@ -78,6 +66,15 @@ country_decisions = {
 				move_capital_effect = yes
 			}
 			change_tag = TIB
+			if = {
+				limit = {
+					NOT = {
+						technology_group = chinese
+					}
+				}
+				change_technology_group = chinese
+				change_unit_type = chinese
+			}
 			swap_non_generic_missions = yes
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes

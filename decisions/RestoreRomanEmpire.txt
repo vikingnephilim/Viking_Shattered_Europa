@@ -6,9 +6,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = restored_rome_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				tag = ERM
 				tag = WRM
@@ -55,9 +52,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = {
-				government = codex
-			}
 			italy_region = {
 				type = all
 				owned_by = ROOT
@@ -102,6 +96,15 @@ country_decisions = {
 			change_tag = ROM
 			change_government = monarchy
 			add_government_reform = roman_government
+			if = {
+				limit = {
+					NOT = {
+						technology_group = latin_group
+					}
+				}
+				change_technology_group = latin_group
+				change_unit_type = latin_group
+			}
 			restore_country_name_effect = yes
 			custom_tooltip = roman_culture_provinces_tooltip
 			change_primary_culture = roman
@@ -185,9 +188,6 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				tag = HLR
 			}
 			NOT = {
@@ -225,9 +225,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = {
-				government = codex
-			}
 			italy_region = {
 				type = all
 				owned_by = ROOT
@@ -273,6 +270,15 @@ country_decisions = {
 			restore_country_name_effect = yes
 			custom_tooltip = roman_culture_provinces_tooltip
 			change_primary_culture = roman
+			if = {
+				limit = {
+					NOT = {
+						technology_group = latin_group
+					}
+				}
+				change_technology_group = latin_group
+				change_unit_type = latin_group
+			}
 			hidden_effect = {
 				restore_country_name_effect = yes
 				every_owned_province = {
@@ -336,9 +342,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = restored_rome_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				tag = ERM
 				tag = WRM
@@ -385,9 +388,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = {
-				government = codex
-			}
 			italy_region = {
 				type = all
 				owned_by = ROOT
@@ -433,6 +433,15 @@ country_decisions = {
 			restore_country_name_effect = yes
 			custom_tooltip = roman_culture_provinces_tooltip
 			change_primary_culture = roman
+			if = {
+				limit = {
+					NOT = {
+						technology_group = latin_group
+					}
+				}
+				change_technology_group = latin_group
+				change_unit_type = latin_group
+			}
 			hidden_effect = {
 				restore_country_name_effect = yes
 				every_owned_province = {
@@ -496,9 +505,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = restored_rome_flag
 			}
-			NOT = {
-				government = codex
-			}
 			OR = {
 				tag = ERM
 				tag = WRM
@@ -545,9 +551,6 @@ country_decisions = {
 			}
 		}
 		allow = {
-			NOT = {
-				government = codex
-			}
 			italy_region = {
 				type = all
 				owned_by = ROOT
@@ -593,6 +596,15 @@ country_decisions = {
 			restore_country_name_effect = yes
 			custom_tooltip = roman_culture_provinces_tooltip
 			change_primary_culture = roman
+			if = {
+				limit = {
+					NOT = {
+						technology_group = latin_group
+					}
+				}
+				change_technology_group = latin_group
+				change_unit_type = latin_group
+			}
 			hidden_effect = {
 				restore_country_name_effect = yes
 				every_owned_province = {
@@ -654,9 +666,6 @@ country_decisions = {
 		potential = {
 			normal_or_historical_nations = yes
 			tag = PAP
-			NOT = {
-				government = codex
-			}
 		}
 		provinces_to_highlight = {
 			superregion = europe_superregion
@@ -668,9 +677,6 @@ country_decisions = {
 			europe_superregion = {
 				type = all
 				owned_by = ROOT
-			}
-			NOT = {
-				government = codex
 			}
 			all_core_province = {
 				religion = catholic
@@ -696,6 +702,15 @@ country_decisions = {
 				change_culture = roman
 			}
 			change_primary_culture = roman
+			if = {
+				limit = {
+					NOT = {
+						technology_group = latin_group
+					}
+				}
+				change_technology_group = latin_group
+				change_unit_type = latin_group
+			}
 			hidden_effect = {
 				every_owned_province = {
 					limit = {

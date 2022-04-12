@@ -1,6 +1,11 @@
 #Country Name: Please see filename.
 graphical_culture = westerngfx
-color = { 19 83 180 }
+color = {
+	19
+	83
+	180
+}
+
 historical_idea_groups = {
 	religious_ideas
 	defensive_ideas
@@ -11,21 +16,35 @@ historical_idea_groups = {
 	spy_ideas
 	economic_ideas
 }
+
 historical_units = {
-	western_medieval_infantry
-	western_medieval_knights
-	western_men_at_arms
-	spanish_tercio
-	austrian_tercio
-	austrian_grenzer
-	austrian_hussar
-	austrian_white_coat
-	austrian_jaeger
-	mixed_order_infantry
-	open_order_cavalry
-	napoleonic_square
-	napoleonic_lancers
+	latin_archers
+	latin_men_at_arms
+	latin_horsemen
+	latin_cavaleiros_vilaos
+	latin_hermandad
+	latin_condotta
+	latin_acorbetados
+	latin_tercio_infantry
+	latin_condotiero_infantry
+	latin_caracole_cavalry
+	latin_reformed_tercio_infantry
+	latin_gallop_cavalry
+	latin_conquistadors
+	latin_dragoons
+	latin_spanish_cazador
+	latin_carabiners
+	latin_italian_cacciatrice
+	latin_cazadores_de_africa
+	latin_greencoat_infantry
+	latin_infanteria_zaindaria
+	latin_lanceros_de_borbon
+	latin_mons_venatores
+	latin_guardas_regno
+	latin_regiment_de_granaders
+	latin_zalditeria_nazionala
 }
+
 monarch_names = {
 	"Enrique #2" = 40
 	"Fernando #4" = 20
@@ -68,39 +87,164 @@ monarch_names = {
 	"Tomas #0" = 0
 	"Valeriano #0" = 0
 }
+
 leader_names = {
-	"de Aguirre" "de Alarcon" "de Toledo" "de Andrade" "de Ayala"
-	"de Bazan" "de Benavides" Campomanes "de Castilla" "de la Cerda" Cienfuegos Colon Coronado Cortes
-	"de Toledo" "de Cordoba" "de la Cueva" "de Figueroa" Fonseca
-	Galvez Gomez "de Guzman" "Jimenez de Cisneros"
-	"de Leiva" "Lopez de Haro" "de Luna"
-	"de Lara" "de Velasco" "de Villena" "de Mendoza"
-	Narvaez "de Nebrija" "Nunez de Balboa" "de Ojeda" Orellana Osorio
-	Pimentel Pinzon Pizarro "Ponce de Leon" Portocarrero
-	"de Rojas" Tellez-Giron "de la Vega" "de Zuniga"
+	"de Aguirre"
+	"de Alarcon"
+	"de Toledo"
+	"de Andrade"
+	"de Ayala"
+	"de Bazan"
+	"de Benavides"
+	Campomanes
+	"de Castilla"
+	"de la Cerda"
+	Cienfuegos
+	Colon
+	Coronado
+	Cortes
+	"de Toledo"
+	"de Cordoba"
+	"de la Cueva"
+	"de Figueroa"
+	Fonseca
+	Galvez
+	Gomez
+	"de Guzman"
+	"Jimenez de Cisneros"
+	"de Leiva"
+	"Lopez de Haro"
+	"de Luna"
+	"de Lara"
+	"de Velasco"
+	"de Villena"
+	"de Mendoza"
+	Narvaez
+	"de Nebrija"
+	"Nunez de Balboa"
+	"de Ojeda"
+	Orellana
+	Osorio
+	Pimentel
+	Pinzon
+	Pizarro
+	"Ponce de Leon"
+	Portocarrero
+	"de Rojas"
+	Tellez-Giron
+	"de la Vega"
+	"de Zuniga"
 }
+
 ship_names = {
-	Andalucia Argonauta Asturias Asuncion Atrevido Azor
-	Cartagonova Castilla "Castillo Negro" Castor "Ciervo Volante"
-	Doncella Dragon
-	"El Gran Grin" "El Retiro" Eneas Eolo Esperanza "Espiritu Santo" Extremadura
-	Furor Galicia "Gran Grifon" Halcon Hercules Isabela Jupiter
-	"La Concepcion" "La Magdalena" "La Manuela" Leon Ligera "Lobo Marino"
-	Marte Mercurio Neptuno Nina Orion
-	"Paloma Blanca" Pegaso "Perro Marino" Pinta Pluton Pollux "Principe de Asturias"
-	Rayo "Real Alfonso" "Real Enrique" "Real Juan" "Rey Pelayo" "Rey Rodrigo"
-	"San Andres" "San Antonio" "San Bartolome" "San Bernabe" "San Cristobal" "San Enrique"
-	"San Esteban" "San Fernando" "San Francisco" "San Gabriel" "San Isidoro" "San Jeronimo"
-	"San Jose" "San Juan" "San Juan Bautista" "San Leandro" "San Miguel" "San Pedro"
-	"San Rafael" "San Salvador" "San Sebastian" "Santa Ana" "Santa BArbara" "Santa Beatriz"
-	"Santa Catalina" "Santa Cruz" "Santa Fe" "Santa Isabel" "Santa Justa" "Santa Maria"
-	"Santa Marta" "Santa Rita" "Santa Teresa" Santiago "Santisima Trinidad" "Santo Domingo" Sirena
-	Terror Toledo Trinidad Triton Unicornio
-	Vencedora Ventura Victoria Vigilante Vizcaya Vulcano Zuniga
+	Andalucia
+	Argonauta
+	Asturias
+	Asuncion
+	Atrevido
+	Azor
+	Cartagonova
+	Castilla
+	"Castillo Negro"
+	Castor
+	"Ciervo Volante"
+	Doncella
+	Dragon
+	"El Gran Grin"
+	"El Retiro"
+	Eneas
+	Eolo
+	Esperanza
+	"Espiritu Santo"
+	Extremadura
+	Furor
+	Galicia
+	"Gran Grifon"
+	Halcon
+	Hercules
+	Isabela
+	Jupiter
+	"La Concepcion"
+	"La Magdalena"
+	"La Manuela"
+	Leon
+	Ligera
+	"Lobo Marino"
+	Marte
+	Mercurio
+	Neptuno
+	Nina
+	Orion
+	"Paloma Blanca"
+	Pegaso
+	"Perro Marino"
+	Pinta
+	Pluton
+	Pollux
+	"Principe de Asturias"
+	Rayo
+	"Real Alfonso"
+	"Real Enrique"
+	"Real Juan"
+	"Rey Pelayo"
+	"Rey Rodrigo"
+	"San Andres"
+	"San Antonio"
+	"San Bartolome"
+	"San Bernabe"
+	"San Cristobal"
+	"San Enrique"
+	"San Esteban"
+	"San Fernando"
+	"San Francisco"
+	"San Gabriel"
+	"San Isidoro"
+	"San Jeronimo"
+	"San Jose"
+	"San Juan"
+	"San Juan Bautista"
+	"San Leandro"
+	"San Miguel"
+	"San Pedro"
+	"San Rafael"
+	"San Salvador"
+	"San Sebastian"
+	"Santa Ana"
+	"Santa BArbara"
+	"Santa Beatriz"
+	"Santa Catalina"
+	"Santa Cruz"
+	"Santa Fe"
+	"Santa Isabel"
+	"Santa Justa"
+	"Santa Maria"
+	"Santa Marta"
+	"Santa Rita"
+	"Santa Teresa"
+	Santiago
+	"Santisima Trinidad"
+	"Santo Domingo"
+	Sirena
+	Terror
+	Toledo
+	Trinidad
+	Triton
+	Unicornio
+	Vencedora
+	Ventura
+	Victoria
+	Vigilante
+	Vizcaya
+	Vulcano
+	Zuniga
 }
+
 army_names = {
-	"Guardia Real" "Ejercito de $PROVINCE$"
+	"Guardia Real"
+	"Ejercito de $PROVINCE$"
 }
+
 fleet_names = {
-	"Armada Real"	"Flota de $PROVINCE$"
+	"Armada Real"
+	"Flota de $PROVINCE$"
 }

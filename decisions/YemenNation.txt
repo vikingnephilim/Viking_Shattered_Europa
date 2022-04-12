@@ -2,9 +2,6 @@ country_decisions = {
 	yemen_nation = {
 		major = yes
 		potential = {
-			NOT = {
-				government = codex
-			}
 			normal_or_historical_nations = yes
 			NOT = {
 				has_country_flag = formed_yemen_flag
@@ -104,9 +101,6 @@ country_decisions = {
 			NOT = {
 				exists = YEM
 			}
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			is_nomad = no
 			owns_core_province = 387			# Mocha
@@ -121,6 +115,15 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = YEM
+			if = {
+				limit = {
+					NOT = {
+						technology_group = muslim
+					}
+				}
+				change_technology_group = muslim
+				change_unit_type = muslim
+			}
 			swap_non_generic_missions = yes
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes

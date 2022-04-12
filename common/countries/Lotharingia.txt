@@ -1,9 +1,16 @@
 #Country Name: Please see filename.
-
 graphical_culture = westerngfx
+color = {
+	95
+	106
+	207
+}
 
-color = { 95 106  207 }
-revolutionary_colors = { 8 5 8 }
+revolutionary_colors = {
+	8
+	5
+	8
+}
 
 historical_idea_groups = {
 	administrative_ideas
@@ -17,21 +24,31 @@ historical_idea_groups = {
 }
 
 historical_units = {
-	halberd_infantry
-	western_medieval_knights
+	western_archers
 	western_men_at_arms
-	swiss_landsknechten
-	dutch_maurician
-	french_caracolle
-	anglofrench_line
-	french_dragoon
-	french_bluecoat
-	french_cuirassier
-	french_impulse
-	mixed_order_infantry
-	open_order_cavalry
-	napoleonic_square
-	napoleonic_lancers
+	western_halberdmen
+	western_pikemen
+	western_matchlock_shooter
+	western_charge_infantry
+	western_reformed_shooter_infantry
+	western_grenadiers
+	western_regiment_of_foot
+	western_line_infantry
+	western_red_coat_infantry
+	western_square_infantry
+	western_drill_infantry
+	western_mixed_infantry
+	western_trench_infantry
+	western_horsemen
+	western_joust_knights
+	western_black_knights
+	western_caracole_cavalry
+	western_gallop_cavalry
+	western_dragoons
+	western_carabiners
+	western_hussars
+	western_lancers
+	western_household_cavalry
 }
 
 monarch_names = {
@@ -76,7 +93,6 @@ monarch_names = {
 	"René #0" = 0
 	"Sébastien #0" = 0
 	"Simon #0" = 0
-
 	"Clovis #0" = 50
 	"Clodomir #0" = 10
 	"Thierry #0" = 30
@@ -97,8 +113,6 @@ monarch_names = {
 	"Carloman #0" = 10
 	"Robert #0" = 10
 	"Arnoul #0" = 0
-
-	
 	"Marie #0" = -10
 	"Geneviève #0" = -2
 	"Anne #0" = -1
@@ -108,10 +122,9 @@ monarch_names = {
 	"Éléonore #0" = -1
 	"Isabelle #0" = -1
 	"Catherine #0" = -2
-	"Marguerite #0" = -1 # La Pléiade
-	"Jeanne #0" = -1 # La Pléiade
-	"Agnès #0" = -1 # La Pléiade
-	
+	"Marguerite #0" = -1	# La Pléiade
+	"Jeanne #0" = -1	# La Pléiade
+	"Agnès #0" = -1	# La Pléiade
 	"Clotilde #0" = -1
 	"Evochilde #0" = -1
 	"Suavegotta #0" = -1
@@ -133,35 +146,106 @@ monarch_names = {
 }
 
 leader_names = {
-        d'Aban d'Abonde Arbelot d'Auxy
-        "de Balay" "de Bauffremont" "de Beaumont" "de Beugre" "de Boulay" "de Bourgeois" Bourgogne-Montaigu "de Brachet" "de Brimeu"
-        "de Castaing" "de Chabot" "de Châlon" "de Châlon-Arlay" "de Chandieu" "de Chastellux" "de Chin" "de Cicon" "de Coligny" "de Créquy" "de Cuiseaux"
-        "de Damas" "de Dammartin" "de Donzy" "de Dyo"
-        "d'Egmont"
-        "de Ferrette"
-        "de Lalaing" "de Lannoy" "le Corgne" "de Lugny"
-        "de Marle" "de Melun" "de Montfaucon"
-        "Nagu de Varennes" "de Nanton" "de Neufchâtel" "de Noyelles"
-        "de Pontailler" "de la Porte"
-        "Pot de la Roche" "de Rochebaron" "de Rochechouart" "de Roye"
-        "de Scorailles" "de Sémur"
-        "de Ternant" "de Tonnerre" "de Toucy" "de Toulonjon"
-		"de Vaubresson" "de Vaudrey" "de Vellexon" "de Vergy" "de Vienne" "de Villaines" "de Villiers"
-		"de Montsouris" "l'Écrabouilleur"
+	d'Aban
+	d'Abonde
+	Arbelot
+	d'Auxy
+	"de Balay"
+	"de Bauffremont"
+	"de Beaumont"
+	"de Beugre"
+	"de Boulay"
+	"de Bourgeois"
+	Bourgogne-Montaigu
+	"de Brachet"
+	"de Brimeu"
+	"de Castaing"
+	"de Chabot"
+	"de Châlon"
+	"de Châlon-Arlay"
+	"de Chandieu"
+	"de Chastellux"
+	"de Chin"
+	"de Cicon"
+	"de Coligny"
+	"de Créquy"
+	"de Cuiseaux"
+	"de Damas"
+	"de Dammartin"
+	"de Donzy"
+	"de Dyo"
+	"d'Egmont"
+	"de Ferrette"
+	"de Lalaing"
+	"de Lannoy"
+	"le Corgne"
+	"de Lugny"
+	"de Marle"
+	"de Melun"
+	"de Montfaucon"
+	"Nagu de Varennes"
+	"de Nanton"
+	"de Neufchâtel"
+	"de Noyelles"
+	"de Pontailler"
+	"de la Porte"
+	"Pot de la Roche"
+	"de Rochebaron"
+	"de Rochechouart"
+	"de Roye"
+	"de Scorailles"
+	"de Sémur"
+	"de Ternant"
+	"de Tonnerre"
+	"de Toucy"
+	"de Toulonjon"
+	"de Vaubresson"
+	"de Vaudrey"
+	"de Vellexon"
+	"de Vergy"
+	"de Vienne"
+	"de Villaines"
+	"de Villiers"
+	"de Montsouris"
+	"l'Écrabouilleur"
 }
 
 ship_names = {
-	"l'Armançon" "l'Arroux"
-	"le Bourgogne" "le Bruges"
-	"le Cambrai" "le Castrum Divionense" "le Childebert" "le Childebert II" "le Chilpéric" "le Cîteaux" "le Clotaire" "le Cluny" "la Comtesse" "le Côte-d'Or" 
-	"le Dijon" "le Duc-de-Bourgogne" "la Duchesse"
-	"le Gibica" "le Giselher" "le Godégisel" "le Gondéric" "le Gondebaud" "le Gondemar" "le Gondemar II" "le Gunther" "le Gontran"
+	"l'Armançon"
+	"l'Arroux"
+	"le Bourgogne"
+	"le Bruges"
+	"le Cambrai"
+	"le Castrum Divionense"
+	"le Childebert"
+	"le Childebert II"
+	"le Chilpéric"
+	"le Cîteaux"
+	"le Clotaire"
+	"le Cluny"
+	"la Comtesse"
+	"le Côte-d'Or"
+	"le Dijon"
+	"le Duc-de-Bourgogne"
+	"la Duchesse"
+	"le Gibica"
+	"le Giselher"
+	"le Godégisel"
+	"le Gondéric"
+	"le Gondebaud"
+	"le Gondemar"
+	"le Gondemar II"
+	"le Gunther"
+	"le Gontran"
 	"le Jean-sans-Peur"
 	"la Marie-de-Bourgogne"
-	"le Philippe-le-Bon" "le Philippe-le-Hardi"
+	"le Philippe-le-Bon"
+	"le Philippe-le-Hardi"
 	"le Richard-de-Bourgogne"
-	"la Saône" "le Sigismond"
-	"le Théodebert" "le Theudéric II"
+	"la Saône"
+	"le Sigismond"
+	"le Théodebert"
+	"le Theudéric II"
 	"le Vézelay"
 	"la Clotilde"
 	"l'Evochilde"
@@ -183,9 +267,15 @@ army_names = {
 	"Les Fils de Lothair"
 	"Les Épees de Cloves"
 	"Les Lances de Charlemagne"
-         "Armée du Charolais"     "Armée de Chalon"    "Armée du Comté" 
-         "Armée de l'Autunois"    "Armée du Mâconnais" "Armée de l'Auxerrois"
-         "Armée de l'Avallonnais" "Armée de Tonnerre"  "Armée de l'Auxonnois"
-         "Armée de la Saône"      
-	 "Armée de $PROVINCE$" 
+	"Armée du Charolais"
+	"Armée de Chalon"
+	"Armée du Comté"
+	"Armée de l'Autunois"
+	"Armée du Mâconnais"
+	"Armée de l'Auxerrois"
+	"Armée de l'Avallonnais"
+	"Armée de Tonnerre"
+	"Armée de l'Auxonnois"
+	"Armée de la Saône"
+	"Armée de $PROVINCE$"
 }

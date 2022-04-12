@@ -2,9 +2,6 @@ country_decisions = {
 	israel_nation = {
 		major = yes
 		potential = {
-			NOT = {
-				government = codex
-			}
 			normal_or_historical_nations = yes
 			was_never_end_game_tag_trigger = yes
 			NOT = {
@@ -59,9 +56,6 @@ country_decisions = {
 		}
 		allow = {
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				exists = ISR
 			}
 			is_at_war = no
@@ -73,6 +67,15 @@ country_decisions = {
 		}
 		effect = {
 			change_tag = ISR
+			if = {
+				limit = {
+					NOT = {
+						technology_group = western
+					}
+				}
+				change_technology_group = western
+				change_unit_type = western
+			}
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
 			if = {

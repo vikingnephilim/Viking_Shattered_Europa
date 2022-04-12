@@ -12,9 +12,6 @@ country_decisions = {
 				is_playing_custom_nation = no
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				exists = IRE
 			}
 			NOT = {
@@ -57,9 +54,6 @@ country_decisions = {
 		allow = {
 			is_nomad = no
 			is_at_war = no
-			NOT = {
-				government = codex
-			}
 			munster_area = {
 				type = all
 				owned_by = ROOT
@@ -78,6 +72,15 @@ country_decisions = {
 			}
 		}
 		effect = {
+			if = {
+				limit = {
+					NOT = {
+						technology_group = western
+					}
+				}
+				change_technology_group = western
+				change_unit_type = western
+			}
 			change_tag = IRE
 			if = {
 				limit = {

@@ -1,3 +1,5 @@
+NDefines.NGame.START_DATE = "1355.01.01"
+NDefines.NGame.END_DATE = "1899.12.31"
 NDefines.NDiplomacy.NUM_POSSIBLE_RIVALS = 5
 NDefines.NDiplomacy.DESIRED_NUM_OF_ELECTORS = 8
 NDefines.NDiplomacy.HRE_PRINCE_AUTHORITY_THRESHOLD = 15
@@ -116,4 +118,4 @@ NDefines.NReligion.CONVERSION_COOLDOWN = 300						-- months before you can conve
 NDefines.NGovernment.TRIBAL_ALLEGIANCE_HUMILIATE = 100
 NDefines.NGovernment.TRIBAL_FEDERATION_ABILITY_COST = 33
 NDefines.NGovernment.PRESTIGE_TO_TRIBAL_ALLEGIANCE_FACTOR = 5
-NDefines.NEconomy.ADVISOR_COST = 1.5								-- Advisor cost modifier
+NDefines.NEconomy.ADVISOR_COST = 1.2								-- Advisor cost modifier

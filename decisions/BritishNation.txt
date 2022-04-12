@@ -41,9 +41,6 @@ country_decisions = {
 			NOT = {
 				tag = BHR
 			}
-			NOT = {
-				government = codex
-			}
 			culture_group = british
 			OR = {
 				ai = no
@@ -90,9 +87,6 @@ country_decisions = {
 				# London
 				is_state = yes
 			}
-			NOT = {
-				government = codex
-			}
 		}
 		effect = {
 			236 = {
@@ -136,6 +130,15 @@ country_decisions = {
 			restore_country_name_effect = yes
 			swap_non_generic_missions = yes
 			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = western
+					}
+				}
+				change_technology_group = western
+				change_unit_type = western
+			}
 			if = {
 				limit = {
 					NOT = {
@@ -354,6 +357,15 @@ country_decisions = {
 			}
 			add_government_reform = british_monarchy
 			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = western
+					}
+				}
+				change_technology_group = western
+				change_unit_type = western
+			}
 			if = {
 				limit = {
 					NOT = {

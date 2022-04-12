@@ -24,9 +24,6 @@ country_decisions = {
 				}
 			}
 			NOT = {
-				government = codex
-			}
-			NOT = {
 				tag = HLR
 			}
 			NOT = {
@@ -64,9 +61,6 @@ country_decisions = {
 			NOT = {
 				exists = BUL
 			}
-			NOT = {
-				government = codex
-			}
 			is_at_war = no
 			is_nomad = no
 			owns_core_province = 1765			# Sofia
@@ -81,6 +75,15 @@ country_decisions = {
 			change_tag = BUL
 			restore_country_name_effect = yes
 			remove_non_electors_emperors_from_empire_effect = yes
+			if = {
+				limit = {
+					NOT = {
+						technology_group = balkan
+					}
+				}
+				change_technology_group = balkan
+				change_unit_type = balkan
+			}
 			if = {
 				limit = {
 					NOT = {

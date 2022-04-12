@@ -8,9 +8,6 @@ country_decisions = {
 			NOT = {
 				exists = KOJ
 			}
-			NOT = {
-				government = codex
-			}
 			normal_or_historical_nations = yes
 			OR = {
 				ai = no
@@ -65,9 +62,6 @@ country_decisions = {
 			owns_core_province = 1854			#Jaffa
 			379 = {
 				is_state = yes
-			}
-			NOT = {
-				government = codex
 			}
 			if = {
 				limit = {
@@ -129,6 +123,7 @@ country_decisions = {
 				release = KOJ
 				KOJ = {
 					change_primary_culture = ROOT
+					change_technology_group = western
 				}
 			}
 			if = {
@@ -160,6 +155,7 @@ country_decisions = {
 					set_country_flag = knights_formed_jerusalem
 				}
 				change_tag = KOJ
+				change_technology_group = western
 				if = {
 					limit = {
 						has_custom_ideas = no
@@ -172,6 +168,15 @@ country_decisions = {
 			}
 			KOJ = {
 				set_capital = 379				#Jerusalem
+			if = {
+				limit = {
+					NOT = {
+						technology_group = latin_group
+					}
+				}
+				change_technology_group = latin_group
+				change_unit_type = latin_group
+			}
 				if = {
 					limit = {
 						NOT = {
