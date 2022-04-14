@@ -1,4 +1,3 @@
-# Amyz
 #######################
 ##IMMATURE UNREFINED ##
 #######################
@@ -16,7 +15,6 @@ birds = {
 	}
 	chance = {
 		factor = 1
-		# TERRAIN
 		modifier = {
 			factor = 2
 			has_terrain = farmlands
@@ -81,11 +79,6 @@ birds = {
 			factor = 0
 			has_terrain = glacier
 		}
-		# CLIMATE
-		# FOREST
-		# CONTINENT - N/A
-		# COASTAL - N/A
-		#AN
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -107,7 +100,6 @@ bison = {
 	}
 	chance = {
 		factor = 1
-		# TERRAIN
 		modifier = {
 			factor = 0.5
 			has_terrain = farmlands
@@ -172,9 +164,6 @@ bison = {
 			factor = 0
 			has_terrain = glacier
 		}
-		# CLIMATE
-		# FOREST - N/A
-		# CONTINENT 
 		modifier = {
 			factor = 0
 			OR = {
@@ -185,8 +174,6 @@ bison = {
 				continent = south_america
 			}
 		}
-		# COASTAL - N/A
-		#AN
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -208,7 +195,6 @@ camels = {
 	}
 	chance = {
 		factor = 1
-		# TERRAIN
 		modifier = {
 			factor = 0.25
 			has_terrain = farmlands
@@ -273,9 +259,6 @@ camels = {
 			factor = 0
 			has_terrain = glacier
 		}
-		# CLIMATE
-		# FOREST - N/A
-		# CONTINENT 
 		modifier = {
 			factor = 3
 			continent = africa
@@ -293,12 +276,10 @@ camels = {
 				continent = oceania
 			}
 		}
-		# COASTAL
 		modifier = {
 			factor = 0
 			has_port = yes
 		}
-		#AN
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -320,7 +301,6 @@ copper = {
 	}
 	chance = {
 		factor = 1
-		# TERRAIN
 		modifier = {
 			factor = 1
 			has_terrain = farmlands
@@ -385,9 +365,6 @@ copper = {
 			factor = 1
 			has_terrain = glacier
 		}
-		# CLIMATE
-		# FOREST
-		# CONTINENT 
 		modifier = {
 			factor = 2.5
 			continent = north_america
@@ -412,8 +389,6 @@ copper = {
 			factor = 1.75
 			continent = oceania
 		}
-		# COASTAL - N/A
-		#AN
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -435,7 +410,6 @@ crustaceans = {
 	}
 	chance = {
 		factor = 1
-		# TERRAIN
 		modifier = {
 			factor = 1
 			has_terrain = farmlands
@@ -500,9 +474,6 @@ crustaceans = {
 			factor = 0
 			has_terrain = glacier
 		}
-		# CLIMATE
-		# FOREST - N/A
-		# CONTINENT 
 		modifier = {
 			factor = 2
 			continent = north_america
@@ -527,12 +498,10 @@ crustaceans = {
 			factor = 1.25
 			continent = oceania
 		}
-		# COASTAL
 		modifier = {
 			factor = 0
 			has_port = no
 		}
-		#AN
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -546,7 +515,6 @@ dates = {
 		0.19
 		0.14
 	}
-	#color = { 0.98 0.23 0.23 }
 	modifier = {
 		global_missionary_strength = 0.01
 		development_cost = -0.05
@@ -557,7 +525,6 @@ dates = {
 	}
 	chance = {
 		factor = 1
-		# TERRAIN
 		modifier = {
 			factor = 0
 			has_terrain = farmlands
@@ -622,9 +589,6 @@ dates = {
 			factor = 0
 			has_terrain = glacier
 		}
-		# CLIMATE
-		# FOREST - N/A
-		# CONTINENT 
 		modifier = {
 			factor = 0
 			continent = north_america
@@ -649,8 +613,6 @@ dates = {
 			factor = 0
 			continent = oceania
 		}
-		# COASTAL - N/A
-		#AN
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -672,7 +634,6 @@ fish = {
 	}
 	chance = {
 		factor = 1
-		# TERRAIN
 		modifier = {
 			factor = 1
 			has_terrain = farmlands
@@ -737,9 +698,6 @@ fish = {
 			factor = 0.1
 			has_terrain = glacier
 		}
-		# CLIMATE
-		# FOREST - N/A
-		# CONTINENT 
 		modifier = {
 			factor = 1
 			continent = north_america
@@ -764,12 +722,10 @@ fish = {
 			factor = 0.75
 			continent = oceania
 		}
-		# COASTAL 
 		modifier = {
 			factor = 0
 			has_port = no
 		}
-		#AN
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -791,7 +747,6 @@ fruit = {
 	}
 	chance = {
 		factor = 1
-		# TERRAIN
 		modifier = {
 			factor = 4
 			has_terrain = farmlands
@@ -856,8 +811,6 @@ fruit = {
 			factor = 0
 			has_terrain = glacier
 		}
-		# CLIMATE
-		# CONTINENT 
 		modifier = {
 			factor = 1
 			continent = north_america
@@ -882,8 +835,6 @@ fruit = {
 			factor = 0.25
 			continent = oceania
 		}
-		# COASTAL - N/A
-		#AN
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -892,7 +843,6 @@ fruit = {
 }
 
 fur = {
-	#furs
 	color = {
 		0.48
 		0.35
@@ -957,7 +907,6 @@ fur = {
 			}
 		}
 		modifier = {
-			#BEYONDTYPUS change there are few furs or any animals for that matter in glacial areas fish and whale bone much more common goods and also usually in abundance   - laternote there are seals, of course, but we only want so many seal fur provinces
 			factor = 0.65
 			has_terrain = glacier
 		}
@@ -981,17 +930,14 @@ fur = {
 			}
 		}
 		modifier = {
-			#Furs very rare in California
 			factor = 0.25
 			region = california_region
 		}
 		modifier = {
-			#Canadian Fur Trade
 			factor = 1.5
 			region = canada_region
 		}
 		modifier = {
-			#Fine furs in the west
 			factor = 2
 			region = cascadia_region
 		}
@@ -1000,7 +946,6 @@ fur = {
 			region = ural_region
 		}
 		modifier = {
-			#Less fur in Acadia and Gaspesie than elsewhere in Canada
 			factor = 0.25
 			OR = {
 				area = lower_acadia_area
@@ -1009,7 +954,6 @@ fur = {
 			}
 		}
 		modifier = {
-			#Trying to discourage fur in Acadia only when province isnt hilly, hills should still have fur
 			factor = 0.25
 			area = upper_acadia_area
 			NOT = {
@@ -1017,45 +961,38 @@ fur = {
 			}
 		}
 		modifier = {
-			#Fur less likely in the Laurentides to encourage ores
 			factor = 0.35
 			area = laurentian_area
 		}
 		modifier = {
-			#Fur less likely in the Lower Canada to encourage Tobacco and Grain
 			factor = 0.5
 			area = lower_canada_area
 		}
 		modifier = {
-			#Newfoundland has the best fishing in the world but little else
 			factor = 0.2
 			OR = {
-				province_id = 980				#E Newfoundland
-				province_id = 981				#N Newfoundland
-				province_id = 2573				#S Newfoundland
-				province_id = 982				#Cape Breton
-				province_id = 983				#PEI
+				province_id = 980
+				province_id = 981
+				province_id = 2573
+				province_id = 982
+				province_id = 983
 			}
 		}
 		modifier = {
-			#These provinces should have fur or at least a very good chance of fur
 			factor = 4
-			province_id = 2578			# Anticosti
+			province_id = 2578
 		}
 		modifier = {
-			#Niagara shouldn't usually get furs
 			factor = 0.1
-			province_id = 987			# Niagara
+			province_id = 987
 		}
 		modifier = {
-			#Disabled for a few areas where we don't really want fur
 			factor = 0
 			OR = {
 				area = sennar_area
 				province_id = 1216
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -1065,7 +1002,7 @@ fur = {
 
 gold = {
 	is_latent = yes
-	rnw_latent_chance = 7	# Kind of on average how many provinces we want to spawn with it
+	rnw_latent_chance = 7
 	trigger = {
 		OR = {
 			development = 10
@@ -1086,7 +1023,6 @@ gold = {
 		0.84
 		0.19
 	}
-	#no modifiers
 	chance = {
 		factor = 5
 		modifier = {
@@ -1208,15 +1144,13 @@ gold = {
 			factor = 1.5
 			is_random_new_world = yes
 			has_terrain = mountain
-			continent = new_world			#Always in RNW
+			continent = new_world
 		}
 		modifier = {
-			#too much gold in Glacial areas due to few other options
 			factor = 0.5
 			has_terrain = glacier
 		}
 		modifier = {
-			#A few terrain modifers
 			factor = 1.2
 			OR = {
 				has_terrain = mountain
@@ -1225,7 +1159,6 @@ gold = {
 			}
 		}
 		modifier = {
-			#A few terrain modifers
 			factor = 0.5
 			OR = {
 				has_terrain = steppe
@@ -1242,7 +1175,6 @@ gold = {
 			normal_or_historical_nations = no
 		}
 		modifier = {
-			#Gold is abundant here
 			factor = 4
 			OR = {
 				region = peru_region
@@ -1258,62 +1190,52 @@ gold = {
 			}
 		}
 		modifier = {
-			#Gold is common here
 			factor = 2.5
 			OR = {
-				area = hispaniola_area				#Hispaniola has been described as 'one immense gold field', though ironically, the Spanish didn't find many of the deposits in the colonial period, and instead travelled further inland in search of often poorer gold mines
+				area = hispaniola_area
 				area = dominica_area
 			}
 		}
 		modifier = {
-			#Gold is a bit rarer here
 			factor = 0.5
 			OR = {
-				area = california_area				#Gold rarer in coastal California
+				area = california_area
 				area = baja_california_area
 				area = central_valley_area
 			}
 		}
 		modifier = {
-			#Gold is rarer here
 			factor = 0.25
-			#OR = {
-			#AND = {
-			region = cascadia_region
-			NOT = {
-				#Gold is rare in Cascadia, but more common in Oregon
-				area = oregon_area
+			AND = {
+				region = cascadia_region
+				NOT = {
+					area = oregon_area
+				}
 			}
-			#}
-			#}
 		}
 		modifier = {
-			#Specific province bonuses
 			factor = 8
 			OR = {
-				province_id = 4937				# Klondike
-				province_id = 1109				# Otago
+				province_id = 4937
+				province_id = 1109
 			}
 		}
 		modifier = {
-			#Specific province bonuses
 			factor = 4
 			OR = {
-				province_id = 4925				# Nome or Chinik
-				province_id = 4934				# Han Hwichin
-				province_id = 2480				# Shasta
+				province_id = 4925
+				province_id = 4934
+				province_id = 2480
 			}
 		}
 		modifier = {
-			#Specific province bonuses
 			factor = 2
 			OR = {
-				province_id = 858				# Tamaulipas
-				province_id = 2738				# Nelson (NZ)
-				province_id = 4926				# Kenai
+				province_id = 858
+				province_id = 2738
+				province_id = 4926
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -1327,7 +1249,6 @@ grain = {
 		0.93
 		0.58
 	}
-	#color = { 0.99 0.72 0.45 }
 	modifier = {
 		land_forcelimit_modifier = 0.2
 	}
@@ -1399,17 +1320,14 @@ grain = {
 			}
 		}
 		modifier = {
-			#Rich agriculture in the central valley
 			factor = 1.5
 			area = central_valley_area
 		}
 		modifier = {
-			#Rich agriculture on the prairies extra bonus to overcome natural penalties
 			factor = 6
 			area = prairies_area
 		}
 		modifier = {
-			#Very rich agriculture along the Red River and Quappelle river
 			factor = 6
 			OR = {
 				area = red_river_area
@@ -1417,12 +1335,10 @@ grain = {
 			}
 		}
 		modifier = {
-			#Very rich agriculture along the Columbia river and east facing mountain foothills despite climate extra bonus to overcome natural penalties
 			factor = 8
 			area = columbia_river_area
 		}
 		modifier = {
-			#No grain in Rockies
 			factor = 0
 			OR = {
 				area = interior_plateau_area
@@ -1430,28 +1346,24 @@ grain = {
 			}
 		}
 		modifier = {
-			#Better choices in Salish sea and Sierra Nevadas
 			factor = 0
 			area = salish_sea_area
 		}
 		modifier = {
-			#Newfoundland has the best fishing in the world but little else
 			factor = 0
 			OR = {
-				province_id = 980				#E Newfoundland
-				province_id = 981				#N Newfoundland
-				province_id = 2573				#S Newfoundland
-				province_id = 982				#Cape Breton
-				province_id = 983				#PEI
+				province_id = 980
+				province_id = 981
+				province_id = 2573
+				province_id = 982
+				province_id = 983
 			}
 		}
 		modifier = {
-			#Grain very rare in Athabaska
 			factor = 0.25
 			area = athabasca_area
 		}
 		modifier = {
-			#No grain in the north too cold
 			factor = 0
 			OR = {
 				area = james_bay_area
@@ -1471,14 +1383,12 @@ grain = {
 			}
 		}
 		modifier = {
-			#No grain in NWT outside athabaska and peace river
 			factor = 0
 			NOT = {
 				area = athabasca_area
 			}
 		}
 		modifier = {
-			#Rich Land
 			factor = 6
 			OR = {
 				area = hispaniola_area
@@ -1486,7 +1396,6 @@ grain = {
 			}
 		}
 		modifier = {
-			#Acadia actually has some decent farming   -x8 bonus because other factors cause penaltes
 			factor = 12
 			OR = {
 				area = lower_acadia_area
@@ -1494,7 +1403,6 @@ grain = {
 			}
 		}
 		modifier = {
-			#The richer parts of Canada had some excellent maize and other grainy type foods production   -x8 bonus because other factors cause penaltes
 			factor = 16
 			OR = {
 				area = lower_canada_area
@@ -1502,20 +1410,17 @@ grain = {
 			}
 		}
 		modifier = {
-			#Specific provinces which should get grain
 			factor = 4
 			OR = {
-				province_id = 2488				# Yakama
-				province_id = 2483				# Umatilla
-				province_id = 2486				# Sdukalbixw
+				province_id = 2488
+				province_id = 2483
+				province_id = 2486
 			}
 		}
 		modifier = {
-			#Nile River
 			factor = 2
 			area = sennar_area
 		}
-		#IR
 		modifier = {
 			factor = 0
 			OR = {
@@ -1549,7 +1454,6 @@ hardwood = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -1571,7 +1475,6 @@ herbs = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -1592,11 +1495,10 @@ horses = {
 	province = {
 		local_friendly_movement_speed = 0.1
 		local_manpower_modifier = 0.1
-		#local_amount_of_banners = 0.25 
+		local_amount_of_banners = 0.25
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -1610,7 +1512,6 @@ incense = {
 		0.79
 		0.47
 	}
-	#color = { 0.83 0.83 0.70 }
 	modifier = {
 		tolerance_own = 0.5
 	}
@@ -1672,11 +1573,9 @@ incense = {
 			region = arabia_region
 		}
 		modifier = {
-			#Incense in Australia... alright, but not as the most common trade good.
 			factor = 0.2
 			region = australia_region
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -1745,7 +1644,6 @@ ivory = {
 				region = indonesia_region
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -1765,7 +1663,6 @@ jade = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -1846,8 +1743,8 @@ livestock = {
 		modifier = {
 			factor = 0.2
 			OR = {
-				region = hudson_bay_region				#mostly fur in the north and grain in the south
-				region = great_plains_region				#mostly grain
+				region = hudson_bay_region
+				region = great_plains_region
 			}
 		}
 		modifier = {
@@ -1855,7 +1752,7 @@ livestock = {
 			has_winter = severe_winter
 		}
 		modifier = {
-			factor = 1.25			#Pastoralists
+			factor = 1.25
 			OR = {
 				has_terrain = desert
 				has_terrain = savannah
@@ -1884,7 +1781,6 @@ livestock = {
 			factor = 1.5
 			region = central_africa_region
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -1977,7 +1873,6 @@ palm = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -1986,7 +1881,6 @@ palm = {
 }
 
 pelagic_fish = {
-	#from fish
 	color = {
 		0.35
 		0.82
@@ -2016,14 +1910,13 @@ pelagic_fish = {
 			}
 		}
 		modifier = {
-			#Newfoundland has the best fishing in the world but little else
 			factor = 10
 			OR = {
-				province_id = 980				#E Newfoundland
-				province_id = 981				#N Newfoundland
-				province_id = 2573				#S Newfoundland
-				province_id = 982				#Cape Breton
-				province_id = 983				#PEI
+				province_id = 980
+				province_id = 981
+				province_id = 2573
+				province_id = 982
+				province_id = 983
 			}
 		}
 		modifier = {
@@ -2034,12 +1927,10 @@ pelagic_fish = {
 			}
 		}
 		modifier = {
-			#BEYONDTYPUS changed this number from 1.2 to 2.0 was too low there are few furs in glacial areas which was the primary alternative choice
 			factor = 2
 			has_terrain = glacier
 		}
 		modifier = {
-			#Pacific salmon
 			factor = 9
 			OR = {
 				area = salish_sea_area
@@ -2048,7 +1939,6 @@ pelagic_fish = {
 			}
 		}
 		modifier = {
-			#Pacific fishing lesser
 			factor = 3
 			OR = {
 				area = oregon_area
@@ -2061,7 +1951,6 @@ pelagic_fish = {
 			}
 		}
 		modifier = {
-			#Atlantic Grand Banks fishing
 			factor = 3
 			OR = {
 				area = lower_acadia_area
@@ -2069,29 +1958,25 @@ pelagic_fish = {
 			}
 		}
 		modifier = {
-			#Cote Nord and Labrador wants fish to be more likely   -x4 because for whatever reason fish is not showing up there
 			factor = 8
 			OR = {
 				area = cote_nord_area
 				area = labrador_area
-				province_id = 2578				# Anticosti
+				province_id = 2578
 			}
 		}
 		modifier = {
-			#These provinces should have fishing or at least a very good chance of fishing
 			factor = 4
 			OR = {
-				province_id = 982				# Cape Breton
-				province_id = 986				# South Gaspesie
-				province_id = 2569				# Halifax bay
+				province_id = 982
+				province_id = 986
+				province_id = 2569
 			}
 		}
 		modifier = {
-			#despite all the islands and water, ironically, the Caribbean doesn't have the most fantastic fish and would generally be better with some tropical crops like sugar, tropical wood, cocao, coffee, or tabacco
 			factor = 0.5
 			region = carribeans_region
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -2155,7 +2040,6 @@ pottery = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -2177,7 +2061,6 @@ poultry = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -2298,19 +2181,16 @@ salt = {
 					province_id = 1649
 				}
 			}
-			#Lake Victoria
 			NOT = {
 				any_neighbor_province = {
 					province_id = 1650
 				}
 			}
-			#Lake Tangyanika
 			NOT = {
 				any_neighbor_province = {
 					province_id = 1651
 				}
 			}
-			#Lake Malawi
 		}
 		modifier = {
 			factor = 2
@@ -2321,7 +2201,6 @@ salt = {
 					NOT = {
 						has_climate = arctic
 					}
-					#Hudson Bay
 				}
 			}
 		}
@@ -2334,12 +2213,10 @@ salt = {
 			area = western_sahara_area
 		}
 		modifier = {
-			#Salt very likely
 			factor = 8
-			area = lucayan_area			#Salt in the Bahamas
+			area = lucayan_area
 		}
 		modifier = {
-			#Salt very very rare in Cascadia Alaska NWT and Hudson Bay all fresh water and little evaporation for salt water   -just removing it, chance was negligable anyway
 			factor = 0
 			OR = {
 				region = cascadia_region
@@ -2347,11 +2224,9 @@ salt = {
 			}
 		}
 		modifier = {
-			#Salt very common in California
 			factor = 2
 			region = california_region
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -2434,7 +2309,7 @@ softwood = {
 		global_ship_cost = -0.2
 	}
 	province = {
-		#local_ship_cost = -0.1
+		local_ship_cost = -0.1
 		local_build_cost = -0.2
 	}
 	chance = {
@@ -2452,7 +2327,6 @@ softwood = {
 			factor = 1.5
 			continent = europe
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -2474,7 +2348,6 @@ stone = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -2496,7 +2369,6 @@ tomatoes = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -2518,7 +2390,6 @@ tin = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -2564,7 +2435,6 @@ tropical_wood = {
 				region = indonesia_region
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -2723,17 +2593,14 @@ wool = {
 			region = tibet_region
 		}
 		modifier = {
-			#Wool less common in rich central valley
 			factor = 0.5
 			area = central_valley_area
 		}
 		modifier = {
-			#Salish dog hair goods
 			factor = 1.5
 			area = salish_sea_area
 		}
 		modifier = {
-			#California climate plus what else in most parts
 			factor = 1.5
 			region = california_region
 			NOT = {
@@ -2741,16 +2608,13 @@ wool = {
 			}
 		}
 		modifier = {
-			#Better options in most of Cascadia
 			factor = 0.75
 			region = cascadia_region
 		}
 		modifier = {
-			#Paradox went livestock for Arabia, so I might as well follow suit
 			factor = 0.1
 			region = arabia_region
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -2803,7 +2667,6 @@ alum = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -2812,7 +2675,6 @@ alum = {
 }
 
 cloves = {
-	# from banda_spices
 	color = {
 		1
 		0.5
@@ -2858,7 +2720,6 @@ black_pepper = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -2905,7 +2766,6 @@ cocoa = {
 			NOT = {
 				continent = new_world
 			}
-			#Always in RNW
 		}
 		modifier = {
 			factor = 0
@@ -2923,7 +2783,6 @@ cocoa = {
 			}
 		}
 		modifier = {
-			#Somewhat less likely
 			factor = 0.5
 			region = carribeans_region
 		}
@@ -2933,9 +2792,8 @@ cocoa = {
 		}
 		modifier = {
 			factor = 8
-			province_id = 2654			#Baracoa
+			province_id = 2654
 		}
-		#IR
 		modifier = {
 			factor = 0
 			OR = {
@@ -2969,7 +2827,6 @@ carpet = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -2991,7 +2848,6 @@ cassava = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -3013,7 +2869,6 @@ cinnamon = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -3109,11 +2964,9 @@ coffee = {
 			}
 		}
 		modifier = {
-			#Caribbean wants sugar, cocao, and tobacco to be more common than coffee
 			factor = 0.5
 			region = carribeans_region
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -3190,7 +3043,6 @@ cotton = {
 			NOT = {
 				continent = new_world
 			}
-			#Always in RNW
 		}
 		modifier = {
 			factor = 0
@@ -3225,13 +3077,12 @@ cotton = {
 		}
 		modifier = {
 			factor = 0.2
-			region = carribeans_region			#We don't want so much cotton in the Caribbean
+			region = carribeans_region
 		}
 		modifier = {
 			factor = 10
-			area = lucayan_area			#But more in the Bahamas
+			area = lucayan_area
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -3253,7 +3104,6 @@ dairy = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -3313,7 +3163,6 @@ dyes = {
 				region = carribeans_region
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -3334,7 +3183,7 @@ gems = {
 		local_tax_modifier = 0.15
 	}
 	chance = {
-		factor = 3		#reduced from 5, gems were a bit too common
+		factor = 3
 		modifier = {
 			factor = 0
 			area = newfoundland_area
@@ -3402,7 +3251,6 @@ gems = {
 			NOT = {
 				continent = north_america
 			}
-			#I think this is a bug/oversight on Paradox's part? There were plenty of gems in the new world and below they have a NA bonus
 			NOT = {
 				area = minas_gerais_area
 			}
@@ -3484,18 +3332,7 @@ gems = {
 				has_terrain = marsh
 			}
 		}
-		#modifier = {
-		#	factor = 1.5
-		#	OR = {
-		#		has_terrain = mountain
-		#		has_terrain = jungle
-		#		has_terrain = hills
-		#		has_terrain = highlands
-		#		has_terrain = coastline #Pearls
-		#	}
-		#}
 		modifier = {
-			#Inverting above, disabling for the wrong terrain types like most other trade goods. Enabled terrains are now Forest, Coastline, Hills, Highlands, Mountains, Jungle, Deserts, Coastal Deserts, and Glacial
 			factor = 0
 			OR = {
 				has_terrain = farmlands
@@ -3505,7 +3342,6 @@ gems = {
 			}
 		}
 		modifier = {
-			#Also allowing gems in dryland and savannah only in Africa (at a penalty)
 			factor = 0.5
 			OR = {
 				has_terrain = drylands
@@ -3514,7 +3350,6 @@ gems = {
 			continent = africa
 		}
 		modifier = {
-			#And gems in march only the Americas (at a penalty)
 			factor = 0.5
 			has_terrain = marsh
 			OR = {
@@ -3523,7 +3358,6 @@ gems = {
 			}
 		}
 		modifier = {
-			#Furthermore, making gems in some enabled terrains less common. Only full chance terrains are now Coastline (pearls), Hills, Mountains, Jungles, Coastal Deserts (pearls), and Glacial
 			factor = 0.5
 			OR = {
 				has_terrain = forest
@@ -3533,12 +3367,12 @@ gems = {
 		}
 		modifier = {
 			factor = 1.2
-			has_climate = arctic			#Something about diamonds and arctic tundra
+			has_climate = arctic
 		}
 		modifier = {
 			factor = 2.5
 			OR = {
-				continent = africa				#Diamonds in Africa
+				continent = africa
 				area = diamantina_area
 				area = bogota_area
 			}
@@ -3556,41 +3390,38 @@ gems = {
 			OR = {
 				region = indonesia_region
 				continent = oceania
-				continent = north_america				#Gems were occuring far too often without this
+				continent = north_america
 			}
 		}
 		modifier = {
 			factor = 0.5
 			OR = {
-				region = california_region				#Gold and salt more common than gems here
-				region = great_plains_region				#Gems were much too common in the mountains
+				region = california_region
+				region = great_plains_region
 			}
 		}
 		modifier = {
 			factor = 1.5
 			is_random_new_world = yes
 			has_terrain = mountain
-			continent = new_world			#Always in RNW
+			continent = new_world
 		}
 		modifier = {
 			factor = 1.5
 			normal_or_historical_nations = no
 		}
 		modifier = {
-			#Not the greatest... bit rushed for update, so I'll probably come back and clean this up later
 			factor = 8
 			OR = {
-				#province_id = 5377			#Praetoria
-				province_id = 1175				#Orange River
-				province_id = 2864				#Orange River
-				province_id = 2880				#Orange River
+				province_id = 1175
+				province_id = 2864
+				province_id = 2880
 			}
 		}
 		modifier = {
 			factor = 0
-			province_id = 481			#Bermuda
+			province_id = 481
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -3612,7 +3443,6 @@ hemp = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -3626,7 +3456,6 @@ iron = {
 		0.2
 		0.2
 	}
-	#
 	modifier = {
 		global_regiment_cost = -0.05
 	}
@@ -3636,7 +3465,6 @@ iron = {
 	chance = {
 		factor = 10
 		modifier = {
-			#BEYONDTYPUS added copper terrain criteria if not in Africa iron producing areas Siberian Steppe border loses iron otherwise no change
 			factor = 0
 			OR = {
 				has_terrain = steppe
@@ -3696,10 +3524,9 @@ iron = {
 			factor = 1.5
 			is_random_new_world = yes
 			has_terrain = mountain
-			continent = new_world			#Always in RNW
+			continent = new_world
 		}
 		modifier = {
-			#Iron is present but mildly rare in NA
 			factor = 0.65
 			continent = north_america
 			NOT = {
@@ -3707,38 +3534,32 @@ iron = {
 			}
 		}
 		modifier = {
-			#Vast forests in NA give too much iron
 			factor = 0.25
 			continent = north_america
 			has_terrain = forest
 		}
 		modifier = {
-			#Iron is somewhat more common in SA still a bit rare
 			factor = 0.8
 			continent = south_america
 		}
 		modifier = {
-			#Havent done Australia yet but how did Paradox miss this I will improve later
 			factor = 3
 			area = western_australia_area
 		}
 		modifier = {
-			#Newfoundland has the best fishing in the world but little else
 			factor = 0.1
 			OR = {
-				province_id = 980				#E Newfoundland
-				province_id = 981				#N Newfoundland
-				province_id = 2573				#S Newfoundland
-				province_id = 982				#Cape Breton
-				province_id = 983				#PEI
+				province_id = 980
+				province_id = 981
+				province_id = 2573
+				province_id = 982
+				province_id = 983
 			}
 		}
 		modifier = {
-			#Fix Iron was too common in some areas
 			factor = 0.5
 			area = california_area
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -3760,7 +3581,6 @@ lead = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -3782,7 +3602,6 @@ leather = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -3836,7 +3655,6 @@ mollusk = {
 		0.61
 		0.74
 	}
-	#color = { 0.55 0.67 0.54 } 
 	modifier = {
 	}
 	province = {
@@ -3868,7 +3686,6 @@ mercury = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -3890,7 +3707,6 @@ chili_peppers = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -3912,7 +3728,6 @@ nuts = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -3921,7 +3736,6 @@ nuts = {
 }
 
 spices = {
-	#from 
 	color = {
 		0.4
 		0.65
@@ -3961,7 +3775,6 @@ spices = {
 			NOT = {
 				province_id = 1244
 			}
-			# Tahiti
 		}
 		modifier = {
 			factor = 0
@@ -3990,7 +3803,6 @@ spices = {
 				region = indonesia_region
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -4061,7 +3873,6 @@ opium = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -4092,13 +3903,11 @@ paper = {
 			NOT = {
 				development = 99
 			}
-			#Lower average dev in BT, so lowering from 18 to 12
 		}
 		modifier = {
 			factor = 2
-			development = 100			#Lower average dev in BT, so lowering from 22 to 16
+			development = 100
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -4120,7 +3929,6 @@ niter = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -4151,7 +3959,7 @@ slaves = {
 				NOT = {
 					continent = africa
 				}
-				province_id = 1174				#Namibia
+				province_id = 1174
 			}
 		}
 		modifier = {
@@ -4182,7 +3990,6 @@ slaves = {
 				area = dongola_area
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -4204,7 +4011,6 @@ saffron = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -4278,18 +4084,6 @@ silk = {
 			}
 			development = 40
 		}
-		#IR 
-		# REMOVED FOR NOW
-		#	modifier = {
-		#		factor = 0
-		#		OR = {
-		#			continent = africa
-		#			continent = south_america
-		#			continent = north_america
-		#			continent = oceania
-		#		}
-		#		NOT = { has_global_flag = silk_traded }
-		#	}
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -4311,7 +4105,6 @@ legumes = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -4394,7 +4187,6 @@ sugar = {
 			}
 		}
 		modifier = {
-			#Less likely in very rough/cold/dry terrain
 			factor = 0.5
 			OR = {
 				has_terrain = mountain
@@ -4417,11 +4209,9 @@ sugar = {
 			}
 		}
 		modifier = {
-			#Much less likely
 			factor = 0.1
 			area = lucayan_area
 		}
-		#IR
 		modifier = {
 			factor = 0
 			OR = {
@@ -4454,7 +4244,6 @@ sulfur = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -4509,43 +4298,34 @@ tea = {
 			NOT = {
 				area = banda_oriental_area
 			}
-			#Yerba Mate
 			NOT = {
 				area = rio_grande_do_sol_area
 			}
-			#Yerba Mate
 			NOT = {
 				area = buenos_aires_area
 			}
-			#Yerba Mate
 			NOT = {
 				area = misiones_area
 			}
-			#Yerba Mate
 			NOT = {
 				area = beni_area
 			}
-			#Yerba Mate
 			NOT = {
 				area = moxos_area
 			}
-			#Yerba Mate
 			NOT = {
 				area = paraguay_area
 			}
-			#Yerba Mate
 			NOT = {
 				area = sao_paolo_area
 			}
-			#Yerba Mate
 			NOT = {
 				area = west_sao_paolo_area
 			}
-			#Yerba Mate
 		}
 		modifier = {
 			factor = 0
-			is_random_new_world = yes			#Only the below cultures can get tea in the RNW
+			is_random_new_world = yes
 			FROM = {
 				NOT = {
 					culture_group = east_asian
@@ -4605,15 +4385,15 @@ tea = {
 		modifier = {
 			factor = 1.5
 			OR = {
-				area = banda_oriental_area				#Yerba Mate
-				area = rio_grande_do_sol_area				#Yerba Mate
-				area = buenos_aires_area				#Yerba Mate
-				area = misiones_area				#Yerba Mate
-				area = beni_area				#Yerba Mate
-				area = moxos_area				#Yerba Mate
-				area = paraguay_area				#Yerba Mate
-				area = sao_paolo_area				#Yerba Mate
-				area = west_sao_paolo_area				#Yerba Mate
+				area = banda_oriental_area
+				area = rio_grande_do_sol_area
+				area = buenos_aires_area
+				area = misiones_area
+				area = beni_area
+				area = moxos_area
+				area = paraguay_area
+				area = sao_paolo_area
+				area = west_sao_paolo_area
 			}
 		}
 		modifier = {
@@ -4626,7 +4406,6 @@ tea = {
 				has_global_flag = tea_traded
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -4663,15 +4442,12 @@ tobacco = {
 			NOT = {
 				area = huronia_area
 			}
-			#BT New
 			NOT = {
 				area = upper_canada_area
 			}
-			#BT New
 			NOT = {
 				area = lower_canada_area
 			}
-			#BT New
 			NOT = {
 				region = brazil_region
 			}
@@ -4691,7 +4467,6 @@ tobacco = {
 			NOT = {
 				continent = new_world
 			}
-			#Always in RNW
 		}
 		modifier = {
 			factor = 0
@@ -4733,17 +4508,16 @@ tobacco = {
 		}
 		modifier = {
 			factor = 4
-			area = huronia_area			#Tobacco people
+			area = huronia_area
 		}
 		modifier = {
 			factor = 2
 			OR = {
-				area = upper_canada_area				#Tobacco people lesser
+				area = upper_canada_area
 				area = cuba_area
 				area = east_cuba_area
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			OR = {
@@ -4777,7 +4551,6 @@ vanilla = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -4797,7 +4570,6 @@ zinc = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -4841,7 +4613,6 @@ artifices = {
 }
 
 beer = {
-	#from beer
 	color = {
 		0.76
 		0.73
@@ -4992,7 +4763,7 @@ bronze = {
 		0.2
 	}
 	is_latent = yes
-	rnw_latent_chance = 7	# Kind of on average how many provinces we want to spawn with it
+	rnw_latent_chance = 7
 	trigger = {
 		OR = {
 			development = 10
@@ -5041,7 +4812,7 @@ confectionary = {
 		0.58
 	}
 	is_latent = yes
-	rnw_latent_chance = 7	# Kind of on average how many provinces we want to spawn with it
+	rnw_latent_chance = 7
 	trigger = {
 		OR = {
 			development = 10
@@ -5090,7 +4861,7 @@ fertilizer = {
 		0.58
 	}
 	is_latent = yes
-	rnw_latent_chance = 7	# Kind of on average how many provinces we want to spawn with it
+	rnw_latent_chance = 7
 	trigger = {
 		OR = {
 			development = 15
@@ -5139,7 +4910,7 @@ furniture = {
 		0.2
 	}
 	is_latent = yes
-	rnw_latent_chance = 7	# Kind of on average how many provinces we want to spawn with it
+	rnw_latent_chance = 7
 	trigger = {
 		OR = {
 			development = 10
@@ -5202,11 +4973,10 @@ glass = {
 			NOT = {
 				development = 12
 			}
-			#Lower average dev in BT, so lowering from 18 to 12
 		}
 		modifier = {
 			factor = 2
-			development = 16			#Lower average dev in BT, so lowering from 22 to 16
+			development = 16
 		}
 		modifier = {
 			factor = 0
@@ -5435,7 +5205,6 @@ naval_supplies = {
 			}
 		}
 		modifier = {
-			#Logging capital of the world
 			factor = 8
 			OR = {
 				area = salish_sea_area
@@ -5444,50 +5213,42 @@ naval_supplies = {
 			}
 		}
 		modifier = {
-			#Fantastic wood in the rainforests of the Pacific Coast
 			factor = 4
 			area = hecate_strait_area
 		}
 		modifier = {
-			#Trees too small and weak for the most part in California too dry
 			factor = 0.25
 			region = california_region
 		}
 		modifier = {
-			#Timber slightly less likely in the Laurentides to encourage ores
 			factor = 0.65
 			area = laurentian_area
 		}
 		modifier = {
-			#Protected areas of southern Alaska has okay trees
 			factor = 3
 			area = alaska_area
 		}
 		modifier = {
-			#Cascadia lumber bonus provinces
 			factor = 1.5
 			region = cascadia_region
 		}
 		modifier = {
-			#Newfoundland doesnt have enough trees for lumber production
 			factor = 0
 			OR = {
-				province_id = 980				#E Newfoundland
-				province_id = 981				#N Newfoundland
-				province_id = 2573				#S Newfoundland
-				province_id = 982				#Cape Breton
-				province_id = 983				#PEI
+				province_id = 980
+				province_id = 981
+				province_id = 2573
+				province_id = 982
+				province_id = 983
 			}
 		}
 		modifier = {
-			#Naval Supplies very likely
 			factor = 5
 			OR = {
-				province_id = 2484				# Olympic Peninsula
-				province_id = 497				# Dominica
+				province_id = 2484
+				province_id = 497
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -5578,7 +5339,6 @@ chinaware = {
 				has_global_flag = china_traded
 			}
 		}
-		#IR 
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -5684,7 +5444,7 @@ rum = {
 
 steel = {
 	is_latent = yes
-	rnw_latent_chance = 7	# Kind of on average how many provinces we want to spawn with it
+	rnw_latent_chance = 7
 	trigger = {
 		OR = {
 			development = 20
@@ -5721,7 +5481,6 @@ steel = {
 }
 
 cloth = {
-	# texiles
 	color = {
 		0.86
 		0.19
@@ -5778,7 +5537,6 @@ wine = {
 				}
 			}
 		}
-		#
 		modifier = {
 			factor = 0
 			OR = {
@@ -5830,11 +5588,9 @@ wine = {
 			NOT = {
 				province_id = 2607
 			}
-			# Okanogan
 			NOT = {
 				province_id = 987
 			}
-			# Niagara
 		}
 		modifier = {
 			factor = 0.25
@@ -5870,12 +5626,10 @@ wine = {
 			}
 		}
 		modifier = {
-			#West coast wine very common
 			factor = 4
 			area = central_valley_area
 		}
 		modifier = {
-			#West coast wine common
 			factor = 1.5
 			OR = {
 				area = northern_california_area
@@ -5883,19 +5637,16 @@ wine = {
 			}
 		}
 		modifier = {
-			#Wine country
 			factor = 2
-			province_id = 2737			# Napier (NZ)
+			province_id = 2737
 		}
 		modifier = {
-			#Overcoming biases from other factors
 			factor = 32
 			OR = {
-				province_id = 987				# Niagara
-				province_id = 2607				# Okanogan
+				province_id = 987
+				province_id = 2607
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -5920,7 +5671,6 @@ aluminum = {
 	}
 	chance = {
 		factor = 10
-		#IR
 		modifier = {
 			factor = 0
 			NOT = {
@@ -5931,7 +5681,6 @@ aluminum = {
 				}
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -5946,7 +5695,7 @@ chemicals = {
 		0.58
 	}
 	is_latent = yes
-	rnw_latent_chance = 7	# Kind of on average how many provinces we want to spawn with it
+	rnw_latent_chance = 7
 	trigger = {
 		OR = {
 			development = 10
@@ -5980,7 +5729,6 @@ chemicals = {
 				}
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -6012,7 +5760,6 @@ concrete = {
 				}
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -6044,7 +5791,6 @@ explosives = {
 				}
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -6076,7 +5822,6 @@ machines = {
 				}
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -6108,7 +5853,6 @@ machine_parts = {
 				}
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -6140,7 +5884,6 @@ medicine = {
 				}
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -6172,7 +5915,6 @@ munitions = {
 				}
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -6204,7 +5946,6 @@ perfume = {
 				}
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -6236,7 +5977,6 @@ preserves = {
 				}
 			}
 		}
-		#IR
 		modifier = {
 			factor = 0
 			is_sea = yes
@@ -6248,7 +5988,6 @@ preserves = {
 ## LATENT ##
 ############
 chromite = {
-	# currently dup coal
 	color = {
 		0.41
 		0.47
@@ -6256,7 +5995,7 @@ chromite = {
 	}
 	is_latent = yes
 	is_valuable = yes
-	rnw_latent_chance = 7	# Kind of on average how many provinces we want to spawn with it
+	rnw_latent_chance = 7
 	trigger = {
 		OR = {
 			development = 20
@@ -6295,7 +6034,7 @@ coal = {
 	}
 	is_latent = yes
 	is_valuable = yes
-	rnw_latent_chance = 7	# Kind of on average how many provinces we want to spawn with it
+	rnw_latent_chance = 7
 	trigger = {
 		OR = {
 			development = 20
@@ -6327,7 +6066,6 @@ coal = {
 }
 
 phosphate = {
-	# currently dup coal
 	color = {
 		0.79
 		0.55
@@ -6335,7 +6073,7 @@ phosphate = {
 	}
 	is_latent = yes
 	is_valuable = yes
-	rnw_latent_chance = 7	# Kind of on average how many provinces we want to spawn with it
+	rnw_latent_chance = 7
 	trigger = {
 		OR = {
 			development = 20

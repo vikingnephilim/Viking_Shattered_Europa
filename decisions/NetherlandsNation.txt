@@ -7,9 +7,6 @@ country_decisions = {
 			NOT = {
 				has_country_flag = formed_netherlands_flag
 			}
-			NOT = {
-				has_global_flag = unified_lowlands_global
-			}
 			OR = {
 				ai = no
 				is_playing_custom_nation = no
@@ -17,12 +14,6 @@ country_decisions = {
 			OR = {
 				NOT = {
 					exists = NED
-				}
-				NOT = {
-					has_country_flag = unified_lowlands
-				}
-				NOT = {
-					has_global_flag = unified_lowlands_global
 				}
 				ai = no
 			}

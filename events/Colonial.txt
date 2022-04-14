@@ -753,15 +753,6 @@ province_event = {
 	is_triggered_only = yes
 	trigger = {
 		trade_goods = fur
-		OR = {
-			NOT = {
-				has_province_flag = received_trade_goods
-			}
-			had_province_flag = {
-				flag = received_trade_goods
-				days = 3650
-			}
-		}
 		NOT = {
 			any_neighbor_province = {
 				OR = {
@@ -1050,15 +1041,6 @@ province_event = {
 	is_triggered_only = yes
 	trigger = {
 		current_age = age_of_absolutism
-		OR = {
-			NOT = {
-				has_province_flag = received_trade_goods
-			}
-			had_province_flag = {
-				flag = received_trade_goods
-				days = 3650
-			}
-		}
 		OR = {
 			region = peru_region
 			region = carribeans_region

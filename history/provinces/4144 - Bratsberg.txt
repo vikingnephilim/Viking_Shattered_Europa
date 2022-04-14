@@ -2,22 +2,24 @@
 #=========================
 owner = NRG
 controller = NRG
-add_core = NRG
 is_city = yes
 # Demographic
 #=========================
 culture = norwegian
 religion = catholic
-hre = no
 capital = "Skien"
 # Economic
 #=========================
-base_tax = 2
-base_production = 2
+base_tax = 3
+base_production = 3
 trade_goods = naval_supplies
-base_manpower = 1
+latent_trade_goods = {
+	chromite
+}
+base_manpower = 2
 # Discovery
 #=========================
+add_core = NRG
 discovered_by = western
 discovered_by = latin_group
 discovered_by = german
@@ -31,5 +33,3 @@ discovered_by = greek
 discovered_by = russian_group
 discovered_by = balkan
 discovered_by = caucasian
-# History
-#=========================

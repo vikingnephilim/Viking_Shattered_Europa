@@ -34,6 +34,7 @@ country_event = {
 				tobacco = 4
 				sugar = 4
 				cotton = 4
+				rum = 4
 			}
 		}
 	}
@@ -153,6 +154,12 @@ country_event = {
 			}
 		}
 		change_price = {
+			trade_goods = pottery
+			key = JOHAN_FRIEDRICH_BOTTGER
+			value = -0.5
+			duration = -1
+		}
+		change_price = {
 			trade_goods = chinaware
 			key = JOHAN_FRIEDRICH_BOTTGER
 			value = -0.5
@@ -176,12 +183,16 @@ country_event = {
 		is_papal_controller = yes
 		calc_true_if = {
 			all_country = {
-				religion = protestant
+				OR = {
+					religion = protestant
+					religion = cathar
+					religion = reformed
+					religion = waldensian
+					religion = anglican
+					religion = henrician
+				}
 			}
 			amount = 5
-		}
-		NOT = {
-			has_global_flag = protestant_fish_happened
 		}
 	}
 	mean_time_to_happen = {
@@ -191,6 +202,18 @@ country_event = {
 		name = prices.4.a
 		change_price = {
 			trade_goods = fish
+			key = PROTESTANT_DONT_EAT_FISH
+			value = -0.1
+			duration = -1
+		}
+		change_price = {
+			trade_goods = pelagic_fish
+			key = PROTESTANT_DONT_EAT_FISH
+			value = -0.1
+			duration = -1
+		}
+		change_price = {
+			trade_goods = shoal_fish
 			key = PROTESTANT_DONT_EAT_FISH
 			value = -0.1
 			duration = -1
@@ -217,9 +240,6 @@ country_event = {
 				}
 				dip_tech = 20
 			}
-		}
-		NOT = {
-			has_global_flag = coffee_boom_happened
 		}
 		OR = {
 			any_owned_province = {
@@ -454,9 +474,6 @@ country_event = {
 				trade_goods = tea
 			}
 		}
-		NOT = {
-			has_global_flag = tea_and_sugar_happened
-		}
 	}
 	mean_time_to_happen = {
 		months = 1
@@ -512,9 +529,6 @@ country_event = {
 				province_id = 1340				# Comorin Cape
 			}
 		}
-		NOT = {
-			has_global_flag = spice_trade_happened
-		}
 	}
 	mean_time_to_happen = {
 		months = 1
@@ -542,9 +556,6 @@ country_event = {
 	major = yes
 	trigger = {
 		has_country_modifier = the_abolish_slavery_act
-		NOT = {
-			has_global_flag = abolitionism_happened
-		}
 	}
 	mean_time_to_happen = {
 		months = 1
@@ -674,9 +685,6 @@ country_event = {
 		dip_tech = 20
 		wine = 1
 		glass = 1
-		NOT = {
-			has_global_flag = wine_corks_happened
-		}
 	}
 	mean_time_to_happen = {
 		months = 1
@@ -709,9 +717,6 @@ country_event = {
 	trigger = {
 		dip_tech = 11
 		cloth = 1
-		NOT = {
-			has_global_flag = new_draperies_happened
-		}
 	}
 	mean_time_to_happen = {
 		months = 1
@@ -743,9 +748,6 @@ country_event = {
 	major = yes
 	trigger = {
 		mil_tech = 21
-		NOT = {
-			has_global_flag = regulated_uniforms_happened
-		}
 	}
 	mean_time_to_happen = {
 		months = 1
@@ -786,9 +788,6 @@ country_event = {
 			owns_core_province = 980
 			owns_core_province = 2573
 			owns_core_province = 981
-		}
-		NOT = {
-			has_global_flag = great_fisheries_happened
 		}
 		capital_scope = {
 			NOT = {
@@ -873,10 +872,6 @@ country_event = {
 		NOT = {
 			has_country_flag = cotton_imports
 		}
-		#Shouldn't trigger for someone that already disallowed Cotton imports
-		NOT = {
-			has_global_flag = calicoes_happened
-		}
 	}
 	mean_time_to_happen = {
 		months = 1
@@ -905,9 +900,6 @@ country_event = {
 			continent = europe
 		}
 		owns = 61
-		NOT = {
-			has_global_flag = depleted_beaver_happened
-		}
 		is_year = 1570
 	}
 	mean_time_to_happen = {
@@ -949,9 +941,6 @@ country_event = {
 				continent = new_world
 			}
 		}
-		NOT = {
-			has_global_flag = felt_hats_happened
-		}
 	}
 	mean_time_to_happen = {
 		months = 3
@@ -978,9 +967,6 @@ country_event = {
 	trigger = {
 		dip_tech = 22
 		num_of_ports = 3
-		NOT = {
-			has_global_flag = permanent_navies_happened
-		}
 	}
 	mean_time_to_happen = {
 		months = 1
@@ -1019,9 +1005,6 @@ country_event = {
 	trigger = {
 		mil_tech = 7
 		copper = 1
-		NOT = {
-			has_global_flag = bronze_cannons_happened
-		}
 	}
 	mean_time_to_happen = {
 		months = 1
@@ -1050,9 +1033,6 @@ country_event = {
 		OR = {
 			has_reform = shogunate
 			tag = JAP
-		}
-		NOT = {
-			has_global_flag = japanese_tea_happened
 		}
 	}
 	mean_time_to_happen = {
@@ -1096,9 +1076,6 @@ country_event = {
 			}
 			religion_group = christian
 			spices = 3
-		}
-		NOT = {
-			has_global_flag = decline_of_spices_happened
 		}
 	}
 	mean_time_to_happen = {
@@ -1150,9 +1127,6 @@ country_event = {
 				trade_goods = coffee
 				value = 0.05
 			}
-		}
-		NOT = {
-			has_global_flag = popularization_of_sugar_happened
 		}
 	}
 	mean_time_to_happen = {
@@ -1229,9 +1203,6 @@ country_event = {
 					share = 10
 				}
 			}
-		}
-		NOT = {
-			has_global_flag = popular_silk_happened
 		}
 	}
 	mean_time_to_happen = {
@@ -1373,9 +1344,6 @@ country_event = {
 				}
 			}
 		}
-		NOT = {
-			has_global_flag = veneering_happened
-		}
 	}
 	mean_time_to_happen = {
 		months = 60
@@ -1404,9 +1372,6 @@ country_event = {
 		capital_scope = {
 			region = indo_china_region
 		}
-		NOT = {
-			has_global_flag = ivory_shortage_happened
-		}
 	}
 	mean_time_to_happen = {
 		months = 1
@@ -1432,9 +1397,6 @@ country_event = {
 	major = yes
 	trigger = {
 		mil_tech = 18
-		NOT = {
-			has_global_flag = iron_working_happened
-		}
 	}
 	mean_time_to_happen = {
 		months = 1
@@ -1448,9 +1410,27 @@ country_event = {
 			duration = -1
 		}
 		change_price = {
+			trade_goods = steel
+			key = IRON_WORKING
+			value = 0.5
+			duration = -1
+		}
+		change_price = {
 			trade_goods = copper
 			key = IRON_WORKING
 			value = -0.35
+			duration = -1
+		}
+		change_price = {
+			trade_goods = bronze
+			key = IRON_WORKING
+			value = 0.5
+			duration = -1
+		}
+		change_price = {
+			trade_goods = brass
+			key = IRON_WORKING
+			value = 0.5
 			duration = -1
 		}
 	}
@@ -1483,9 +1463,6 @@ country_event = {
 			cocoa = 7
 			sugar = 1
 		}
-		NOT = {
-			has_global_flag = hot_chocolate_happened
-		}
 	}
 	mean_time_to_happen = {
 		months = 1
@@ -1512,9 +1489,6 @@ country_event = {
 	trigger = {
 		dip_tech = 16
 		colony = 1
-		NOT = {
-			has_global_flag = popularization_of_tobacco_happened
-		}
 		any_subject_country = {
 			is_colonial_nation = yes
 			OR = {
@@ -1555,9 +1529,6 @@ country_event = {
 	fire_only_once = yes
 	major = yes
 	trigger = {
-		NOT = {
-			has_global_flag = mocha_killed
-		}
 		NOT = {
 			owns = 387
 		}
@@ -1673,9 +1644,6 @@ country_event = {
 	fire_only_once = yes
 	major = yes
 	trigger = {
-		NOT = {
-			has_global_flag = printing_paper_prices_rise
-		}
 		has_institution = printing_press
 		any_owned_province = {
 			has_province_modifier = birthplace_of_printing_press
@@ -1767,9 +1735,6 @@ country_event = {
 	fire_only_once = yes
 	major = yes
 	trigger = {
-		NOT = {
-			has_global_flag = hollender_beater_flag
-		}
 		has_institution = manufactories
 		any_owned_province = {
 			province_without_special_goods_produced_trigger = yes
@@ -1966,9 +1931,6 @@ country_event = {
 	fire_only_once = yes
 	major = yes
 	trigger = {
-		NOT = {
-			has_global_flag = paper_in_bureaucracies
-		}
 		adm_tech = 6
 		has_institution = feudalism
 		OR = {
@@ -2036,9 +1998,6 @@ country_event = {
 	fire_only_once = yes
 	major = yes
 	trigger = {
-		NOT = {
-			has_global_flag = popular_literacy
-		}
 		has_institution = enlightenment
 		OR = {
 			full_idea_group = innovativeness_ideas
@@ -2122,9 +2081,6 @@ country_event = {
 	fire_only_once = yes
 	major = yes
 	trigger = {
-		NOT = {
-			has_global_flag = columbian_exchange_happened
-		}
 		is_institution_enabled = new_world_i
 		any_owned_province = {
 			OR = {
@@ -2194,9 +2150,6 @@ country_event = {
 	fire_only_once = yes
 	major = yes
 	trigger = {
-		NOT = {
-			has_global_flag = faceting_happened
-		}
 		has_institution = renaissance
 		prestige = 50
 		any_owned_province = {
@@ -2274,9 +2227,6 @@ country_event = {
 	major = yes
 	trigger = {
 		NOT = {
-			has_global_flag = brazilian_gems_happened
-		}
-		NOT = {
 			current_age = age_of_discovery
 		}
 		primitives = no
@@ -2325,9 +2275,6 @@ country_event = {
 	fire_only_once = yes
 	major = yes
 	trigger = {
-		NOT = {
-			has_global_flag = incense_rejected
-		}
 		is_religion_enabled = reformed
 		religion = reformed
 		any_owned_province = {
@@ -2370,9 +2317,6 @@ country_event = {
 	major = yes
 	trigger = {
 		has_institution = global_trade
-		NOT = {
-			has_global_flag = perfume_industry
-		}
 		any_owned_province = {
 			has_terrain = farmlands			#Flowers must grow here
 			is_capital = no
@@ -2467,9 +2411,6 @@ country_event = {
 	major = yes
 	trigger = {
 		has_institution = enlightenment
-		NOT = {
-			has_global_flag = selective_breeding_happened
-		}
 		livestock = 5
 		any_owned_province = {
 			enlightenment = 100
@@ -2528,9 +2469,6 @@ country_event = {
 						}
 					}
 				}
-				NOT = {
-					has_global_flag = bohemian_glass
-				}
 				owns = 1771
 				dip_tech = 17
 			}
@@ -2569,9 +2507,6 @@ country_event = {
 	fire_only_once = yes
 	major = yes
 	trigger = {
-		NOT = {
-			has_global_flag = development_of_optics
-		}
 		dip_tech = 18
 		has_institution = global_trade
 		any_owned_province = {
@@ -2669,9 +2604,6 @@ country_event = {
 	major = yes
 	trigger = {
 		#has_dlc = "Rule Britannia"
-		NOT = {
-			has_global_flag = steam_engine_happened
-		}
 		has_country_flag = watt_steam_engine_flag		#Set by Industrialization Events
 		has_country_flag = coke_blast_furnaces_flag		#Set by Industrialization Events.
 		has_institution = enlightenment

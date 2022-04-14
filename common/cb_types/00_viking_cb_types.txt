@@ -12,14 +12,15 @@
 #
 # TRIGGERED - Triggered from within the code or by event effects
 # --------------------------------------------------------------
-
 #Force HRE Religion
 viking_cb_hre_religion_change = {
 	ai_peace_desire = -50
 	valid_for_subject = no
 	prerequisites = {
 		is_emperor = no
-		NOT = { is_year = 1650 }
+		NOT = {
+			is_year = 1650
+		}
 		OR = {
 			religion = catholic
 			religion = fraticelli
@@ -34,11 +35,14 @@ viking_cb_hre_religion_change = {
 		is_revolutionary = no
 		FROM = {
 			is_emperor = yes
-			NOT = { religion = ROOT }
+			NOT = {
+				religion = ROOT
+			}
 		}
 	}
 	war_goal = viking_wg_hre_religion_change
 }
+
 #Special Great Holy War for Norse Fylkir
 cb_norse_crusade = {
 	valid_for_subject = no
@@ -53,23 +57,4 @@ cb_norse_crusade = {
 		}
 	}
 	war_goal = superiority_world_crusade
-}
-
-
-cb_force_tributary = {
-	valid_for_subject = no
-	prerequisites = {
-		has_dlc = "Mandate of Heaven"
-		OR = {
-			has_reform = geo_despotate
-			has_reform = inti_empire_reform
-			has_reform = polynesian_tribe
-			is_emperor_of_china = yes
-		}
-		FROM = {
-			is_subject = no
-		}
-		is_neighbor_of = FROM
-	}
-	war_goal = take_capital_force_tributary
 }
