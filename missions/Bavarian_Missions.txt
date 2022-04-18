@@ -9,50 +9,66 @@ bavarian_missions_main = {
 			tag = LBV
 			tag = UBV
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	bav_reunite_bavaria = {
 		icon = mission_conquer_50_development
-		required_missions = { }
+		required_missions = {
+		}
 		completed_by = 1507.1.1
 		ai_weight = {
 			factor = 10
 		}
-		ai_priority = {
-			factor = 10
-		}
-
 		provinces_to_highlight = {
 			OR = {
 				#other claimants are gone
 				AND = {
-					ROOT = { NOT = { tag = LBV } }
+					ROOT = {
+						NOT = {
+							tag = LBV
+						}
+					}
 					LBV = {
 						OR = {
 							num_of_cities = 5
-							NOT = { is_subject_of = ROOT }
+							NOT = {
+								is_subject_of = ROOT
+							}
 						}
 					}
 					owned_by = LBV
 				}
 				AND = {
-					ROOT = { NOT = { tag = ING } }
+					ROOT = {
+						NOT = {
+							tag = ING
+						}
+					}
 					ING = {
 						OR = {
 							num_of_cities = 5
-							NOT = { is_subject_of = ROOT }
+							NOT = {
+								is_subject_of = ROOT
+							}
 						}
 					}
 					owned_by = ING
 				}
 				AND = {
-					ROOT = { NOT = { tag = UBV } }
+					ROOT = {
+						NOT = {
+							tag = UBV
+						}
+					}
 					UBV = {
 						OR = {
 							num_of_cities = 5
-							NOT = { is_subject_of = ROOT }
+							NOT = {
+								is_subject_of = ROOT
+							}
 						}
 					}
 					owned_by = UBV
@@ -60,15 +76,21 @@ bavarian_missions_main = {
 				#make sure you are not benefitting from others' conquests
 				AND = {
 					province_id = 65
-					NOT = { country_or_subject_holds = ROOT }
+					NOT = {
+						country_or_subject_holds = ROOT
+					}
 				}
 				AND = {
 					province_id = 64
-					NOT = { country_or_subject_holds = ROOT }
+					NOT = {
+						country_or_subject_holds = ROOT
+					}
 				}
 				AND = {
 					province_id = 2955
-					NOT = { country_or_subject_holds = ROOT }
+					NOT = {
+						country_or_subject_holds = ROOT
+					}
 				}
 			}
 		}
@@ -76,39 +98,55 @@ bavarian_missions_main = {
 			tag = BAV
 			army_size_percentage = 1
 			all_owned_province = {
-				NOT = { unrest = 1 }
+				NOT = {
+					unrest = 1
+				}
 			}
 		}
 		effect = {
 			#Actually, the Bavaria formation decision will give you these, so it is just a tooltip
-			1757 = { #Oberpfalz
+			1757 = {
+				#Oberpfalz
 				if = {
 					limit = {
-						NOT = { is_permanent_claim = root }
-						NOT = { is_core = root }
+						NOT = {
+							is_permanent_claim = root
+						}
+						NOT = {
+							is_core = root
+						}
 					}
 					add_permanent_claim = root
 				}
 			}
-			76 = { #Salzburg
+			76 = {
+				#Salzburg
 				if = {
 					limit = {
-						NOT = { is_permanent_claim = root }
-						NOT = { is_core = root }
+						NOT = {
+							is_permanent_claim = root
+						}
+						NOT = {
+							is_core = root
+						}
 					}
 					add_permanent_claim = root
 				}
 			}
-			2957 = { #Regensburg
+			2957 = {
+				#Regensburg
 				if = {
 					limit = {
-						NOT = { is_permanent_claim = root }
-						NOT = { is_core = root }
+						NOT = {
+							is_permanent_claim = root
+						}
+						NOT = {
+							is_core = root
+						}
 					}
 					add_permanent_claim = root
 				}
 			}
-			
 			add_country_modifier = {
 				name = bav_rising_power
 				duration = 7300
@@ -117,10 +155,12 @@ bavarian_missions_main = {
 	}
 	bav_expand_in_bavaria = {
 		icon = mission_unite_home_region
-		required_missions = { bav_reunite_bavaria }
+		required_missions = {
+			bav_reunite_bavaria
+		}
 		position = 3
 		completed_by = 1618.5.6
-        provinces_to_highlight = {
+		provinces_to_highlight = {
 			OR = {
 				AND = {
 					OR = {
@@ -129,27 +169,36 @@ bavarian_missions_main = {
 						province_id = 2957
 					}
 					ROOT = {
-						NOT = { owns_or_non_sovereign_subject_of = 1757 }
-						NOT = { owns_or_non_sovereign_subject_of = 76 }
-						NOT = { owns_or_non_sovereign_subject_of = 2957 }
+						NOT = {
+							owns_or_non_sovereign_subject_of = 1757
+						}
+						NOT = {
+							owns_or_non_sovereign_subject_of = 76
+						}
+						NOT = {
+							owns_or_non_sovereign_subject_of = 2957
+						}
 					}
 				}
 			}
-        }
-        trigger = {
-            num_of_cities = 10
+		}
+		trigger = {
+			num_of_cities = 10
 			OR = {
-				1757 = { #Oberpfalz
+				1757 = {
+					#Oberpfalz
 					country_or_subject_holds = ROOT
 				}
-				76 = { #Salzburg
+				76 = {
+					#Salzburg
 					country_or_subject_holds = ROOT
 				}
-				2957 = { #Regensburg
+				2957 = {
+					#Regensburg
 					country_or_subject_holds = ROOT
 				}
 			}
-        }
+		}
 		effect = {
 			if = {
 				limit = {
@@ -169,8 +218,12 @@ bavarian_missions_main = {
 			else = {
 				palatinate_area = {
 					limit = {
-						NOT = { is_permanent_claim = root }
-						NOT = { is_core = root }
+						NOT = {
+							is_permanent_claim = root
+						}
+						NOT = {
+							is_core = root
+						}
 					}
 					add_permanent_claim = root
 				}
@@ -183,9 +236,15 @@ bavarian_missions_main = {
 						PAL = {
 							every_owned_province = {
 								limit = {
-									NOT = { area = palatinate_area }
-									NOT = { is_permanent_claim = root }
-									NOT = { is_core = root }
+									NOT = {
+										area = palatinate_area
+									}
+									NOT = {
+										is_permanent_claim = root
+									}
+									NOT = {
+										is_core = root
+									}
 								}
 								add_permanent_claim = root
 							}
@@ -195,24 +254,33 @@ bavarian_missions_main = {
 			}
 			franconia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = {  is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			upper_franconia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = {  is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-
 	conquer_franken = {
 		icon = mission_cannons_firing
-		required_missions = { bav_expand_in_bavaria }
+		required_missions = {
+			bav_expand_in_bavaria
+		}
 		completed_by = 1806.1.1
 		provinces_to_highlight = {
 			OR = {
@@ -240,24 +308,33 @@ bavarian_missions_main = {
 			}
 			lower_swabia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = {  is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			upper_swabia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = {  is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-
 	conquer_ansbach = {
 		icon = mission_landsknecht_soldier
-		required_missions = { conquer_franken }
+		required_missions = {
+			conquer_franken
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = lower_swabia_area
@@ -280,8 +357,12 @@ bavarian_missions_main = {
 			add_adm_power = 100
 			upper_rhineland_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = {  is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -300,15 +381,20 @@ bavarian_missions_palatinate = {
 			tag = LBV
 			tag = UBV
 		}
-		NOT = { map_setup = map_setup_random }
-		NOT = { has_dlc = "Emperor" }
+		NOT = {
+			map_setup = map_setup_random
+		}
+		NOT = {
+			has_dlc = "Emperor"
+		}
 	}
 	has_country_shield = yes
-	
 	conquer_alzey = {
 		position = 4
 		icon = mission_monarch_in_throne_room
-		required_missions = { bav_expand_in_bavaria }
+		required_missions = {
+			bav_expand_in_bavaria
+		}
 		completed_by = 1777.12.30
 		provinces_to_highlight = {
 			area = palatinate_area
@@ -322,7 +408,9 @@ bavarian_missions_palatinate = {
 				country_or_subject_holds = ROOT
 			}
 			OR = {
-				NOT = { exists = PAL }
+				NOT = {
+					exists = PAL
+				}
 				PAL = {
 					is_subject_of = ROOT
 				}
@@ -334,7 +422,9 @@ bavarian_missions_palatinate = {
 			add_devotion = 10
 			add_republican_tradition = 5
 			palatinate_area = {
-				limit = { country_or_subject_holds = ROOT }
+				limit = {
+					country_or_subject_holds = ROOT
+				}
 				add_province_modifier = {
 					name = faster_integration
 					duration = 7300

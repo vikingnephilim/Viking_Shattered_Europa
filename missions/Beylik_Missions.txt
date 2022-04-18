@@ -331,6 +331,7 @@ BEYLIK_MISSIONS_1 = {
 		}
 	}
 }
+
 #9 Missions
 BEYLIK_MISSIONS_2 = {
 	slot = 2
@@ -579,6 +580,7 @@ BEYLIK_MISSIONS_2 = {
 		}
 	}
 }
+
 #7 Missions
 BEYLIK_MISSIONS_3 = {
 	slot = 3
@@ -609,7 +611,9 @@ BEYLIK_MISSIONS_3 = {
 				anatolia_region = {
 					add_permanent_claim = ROOT
 				}
-				151 = { add_permanent_claim = ROOT }
+				151 = {
+					add_permanent_claim = ROOT
+				}
 			}
 		}
 	}
@@ -620,7 +624,7 @@ BEYLIK_MISSIONS_3 = {
 		}
 		position = 2
 		provinces_to_highlight = {
-				owned_by = MAM
+			owned_by = MAM
 			NOT = {
 				country_or_subject_holds = ROOT
 			}
@@ -631,9 +635,9 @@ BEYLIK_MISSIONS_3 = {
 				limit = {
 					exists = MAM
 				}
-					AND = {
-						alliance_with = MAM
-						marriage_with = MAM
+				AND = {
+					alliance_with = MAM
+					marriage_with = MAM
 				}
 			}
 			else = {
@@ -646,7 +650,8 @@ BEYLIK_MISSIONS_3 = {
 				if = {
 					limit = {
 						NOT = {
-							alliance_with = MAM }
+							alliance_with = MAM
+						}
 					}
 					create_general = {
 						tradition = 50
@@ -831,6 +836,7 @@ BEYLIK_MISSIONS_3 = {
 		}
 	}
 }
+
 #7 Missions
 BEYLIK_MISSIONS_4 = {
 	slot = 4
@@ -1043,6 +1049,7 @@ BEYLIK_MISSIONS_4 = {
 		}
 	}
 }
+
 #6 Missions
 BEYLIK_MISSIONS_5 = {
 	slot = 5
@@ -1240,6 +1247,7 @@ BEYLIK_MISSIONS_5 = {
 		}
 	}
 }
+
 ############OTTOMAN/RUM ADD ONS
 tur_conquerors_of_the_near_east = {
 	slot = 1	#upper left column
@@ -1259,7 +1267,8 @@ tur_conquerors_of_the_near_east = {
 		#City of Worlds Desire
 		icon = mission_conquer_50_development
 		required_missions = {
-		}		#None
+		}
+		#None
 		position = 9
 		trigger = {
 			owns = 151
@@ -1382,9 +1391,6 @@ tur_conquerors_of_the_near_east = {
 		ai_weight = {
 			factor = 3
 		}
-		ai_priority = {
-			factor = 3
-		}
 		completed_by = 1460.1.1
 		provinces_to_highlight = {
 			OR = {
@@ -1452,9 +1458,6 @@ tur_conquerors_of_the_near_east = {
 		ai_weight = {
 			factor = 2
 		}
-		ai_priority = {
-			factor = 2
-		}
 		position = 12
 		provinces_to_highlight = {
 			area = bosnia_area
@@ -1500,9 +1503,6 @@ tur_conquerors_of_the_near_east = {
 		}
 		ai_weight = {
 			factor = 2
-		}
-		ai_priority = {
-			factor = 1
 		}
 		position = 13
 		provinces_to_highlight = {
@@ -1578,9 +1578,6 @@ tur_eastern_balkans = {
 		ai_weight = {
 			factor = 2
 		}
-		ai_priority = {
-			factor = 3
-		}
 		required_missions = {
 		}
 		provinces_to_highlight = {
@@ -1627,9 +1624,6 @@ tur_eastern_balkans = {
 		}
 		ai_weight = {
 			factor = 3
-		}
-		ai_priority = {
-			factor = 2
 		}
 		position = 11
 		provinces_to_highlight = {
@@ -1795,9 +1789,6 @@ tur_conquest_of_middle_east = {
 		ai_weight = {
 			factor = 3
 		}
-		ai_priority = {
-			factor = 5
-		}
 		provinces_to_highlight = {
 			OR = {
 				area = hudavendigar_area
@@ -1909,9 +1900,6 @@ tur_conquest_of_middle_east = {
 		position = 9
 		ai_weight = {
 			factor = 6
-		}
-		ai_priority = {
-			factor = 3
 		}
 		completed_by = 1514.8.23
 		provinces_to_highlight = {
@@ -2204,9 +2192,6 @@ tur_eastern_mediterrenean_missions = {
 		ai_weight = {
 			factor = 6
 		}
-		ai_priority = {
-			factor = 4
-		}
 		provinces_to_highlight = {
 			OR = {
 				area = aleppo_area
@@ -2323,9 +2308,6 @@ tur_eastern_mediterrenean_missions = {
 		position = 9
 		ai_weight = {
 			factor = 6
-		}
-		ai_priority = {
-			factor = 5
 		}
 		provinces_to_highlight = {
 			OR = {

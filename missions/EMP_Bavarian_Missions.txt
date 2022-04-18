@@ -1,5 +1,3 @@
-
-
 emp_bav_prestige_branch = {
 	slot = 2
 	generic = no
@@ -15,19 +13,25 @@ emp_bav_prestige_branch = {
 			tag = LBV
 			tag = UBV
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_bav_cultural_center = {
 		icon = develop_our_capital
-		required_missions = { }
+		required_missions = {
+		}
 		provinces_to_highlight = {
 			country_or_subject_holds = ROOT
 			is_capital = yes
 			OR = {
-				NOT = { development = 25 }
-				NOT = { num_of_buildings_in_province = 5 }
+				NOT = {
+					development = 25
+				}
+				NOT = {
+					num_of_buildings_in_province = 5
+				}
 			}
 		}
 		trigger = {
@@ -41,13 +45,17 @@ emp_bav_prestige_branch = {
 				if = {
 					limit = {
 						province_has_center_of_trade_of_level = 1
-						NOT = { province_has_center_of_trade_of_level = 3 }
+						NOT = {
+							province_has_center_of_trade_of_level = 3
+						}
 					}
 					add_center_of_trade_level = 1
 				}
 				else_if = {
 					limit = {
-						NOT = { province_has_center_of_trade_of_level = 1 }
+						NOT = {
+							province_has_center_of_trade_of_level = 1
+						}
 					}
 					center_of_trade = 1
 				}
@@ -61,13 +69,19 @@ emp_bav_prestige_branch = {
 	}
 	emp_bav_splendour = {
 		icon = regal_splendour
-		required_missions = { emp_bav_cultural_center }
+		required_missions = {
+			emp_bav_cultural_center
+		}
 		trigger = {
 			if = {
-				limit = { has_dlc = "Common Sense" }
+				limit = {
+					has_dlc = "Common Sense"
+				}
 				government_rank = 2
 			}
-			else = { total_development = 300 }
+			else = {
+				total_development = 300
+			}
 			is_subject = no
 			if = {
 				limit = {
@@ -83,16 +97,18 @@ emp_bav_prestige_branch = {
 		}
 		effect = {
 			add_prestige = 20
-
 			add_country_modifier = {
 				name = bav_splendorous_bavaria
 				duration = 7300
 			}
-
 			if = {
 				limit = {
-					NOT = { has_dlc = "Common Sense" }
-					NOT = { government_rank = 2 }
+					NOT = {
+						has_dlc = "Common Sense"
+					}
+					NOT = {
+						government_rank = 2
+					}
 					OR = {
 						is_elector = yes
 						is_part_of_hre = no
@@ -104,24 +120,28 @@ emp_bav_prestige_branch = {
 	}
 	emp_bav_oktoberfest_mission = {
 		icon = establish_oktoberfest
-		required_missions = { emp_bav_splendour }
+		required_missions = {
+			emp_bav_splendour
+		}
 		provinces_to_highlight = {
 			OR = {
 				AND = {
 					country_or_subject_holds = ROOT
-					OR = {	
+					OR = {
 						trade_goods = grain
 						trade_goods = livestock
 						trade_goods = wine
 					}
-					NOT = { has_building = farm_estate }
+					NOT = {
+						has_building = farm_estate
+					}
 				}
 				AND = {
 					ROOT = {
 						NOT = {
 							num_of_owned_provinces_with = {
 								value = 5
-								OR = {	
+								OR = {
 									trade_goods = grain
 									trade_goods = livestock
 									trade_goods = wine
@@ -129,13 +149,15 @@ emp_bav_prestige_branch = {
 							}
 						}
 					}
-					OR = {	
+					OR = {
 						trade_goods = grain
 						trade_goods = livestock
 						trade_goods = wine
 					}
 					OR = {
-						owner = { is_subject_of = ROOT }
+						owner = {
+							is_subject_of = ROOT
+						}
 						any_neighbor_province = {
 							country_or_subject_holds = ROOT
 						}
@@ -145,7 +167,7 @@ emp_bav_prestige_branch = {
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
-				value = 5 #eligible Bavarian starting provs (of all three duchies)
+				value = 5				#eligible Bavarian starting provs (of all three duchies)
 				has_building = farm_estate
 			}
 			trade_goods_produced_amount = {
@@ -161,9 +183,15 @@ emp_bav_prestige_branch = {
 				}
 				if = {
 					limit = {
-						NOT = { devastation = 1 }
-						NOT = { prosperity = 100 }
-						ROOT = { has_dlc = "Mandate of Heaven" }
+						NOT = {
+							devastation = 1
+						}
+						NOT = {
+							prosperity = 100
+						}
+						ROOT = {
+							has_dlc = "Mandate of Heaven"
+						}
 					}
 					add_prosperity = 50
 				}
@@ -187,14 +215,17 @@ emp_bav_missions_conquest = {
 			tag = LBV
 			tag = UBV
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_bav_union_with_palatinate = {
 		icon = mission_conquer_50_development
 		position = 4
-		required_missions = { bav_expand_in_bavaria }
+		required_missions = {
+			bav_expand_in_bavaria
+		}
 		completed_by = 1777.12.30
 		provinces_to_highlight = {
 			OR = {
@@ -204,15 +235,13 @@ emp_bav_missions_conquest = {
 				province_id = 1761
 				province_id = 4767
 			}
-			NOT = { country_or_subject_holds = ROOT }
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
 		}
 		ai_weight = {
 			factor = 5
 		}
-		ai_priority = {
-			factor = 5
-		}
-
 		trigger = {
 			OR = {
 				senior_union_with = PAL
@@ -227,15 +256,23 @@ emp_bav_missions_conquest = {
 		effect = {
 			tirol_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			north_rhine_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -257,7 +294,9 @@ emp_bav_missions_conquest = {
 					limit = {
 						is_part_of_hre = yes
 						is_elector = no
-						PAL = { is_elector = yes }
+						PAL = {
+							is_elector = yes
+						}
 						OR = {
 							hre_religion_locked = no
 							hre_religion = root
@@ -274,7 +313,9 @@ emp_bav_missions_conquest = {
 						add_devotion = 10
 						add_republican_tradition = 5
 						palatinate_area = {
-							limit = { country_or_subject_holds = ROOT }
+							limit = {
+								country_or_subject_holds = ROOT
+							}
 							add_province_modifier = {
 								name = faster_integration
 								duration = 7300
@@ -289,7 +330,9 @@ emp_bav_missions_conquest = {
 						add_devotion = 10
 						add_republican_tradition = 5
 						palatinate_area = {
-							limit = { country_or_subject_holds = ROOT }
+							limit = {
+								country_or_subject_holds = ROOT
+							}
 							add_province_modifier = {
 								name = faster_integration
 								duration = 7300
@@ -302,7 +345,9 @@ emp_bav_missions_conquest = {
 				limit = {
 					is_part_of_hre = yes
 					is_elector = no
-					PAL = { is_elector = yes }
+					PAL = {
+						is_elector = yes
+					}
 					senior_union_with = PAL
 					OR = {
 						hre_religion_locked = no
@@ -315,7 +360,9 @@ emp_bav_missions_conquest = {
 							senior_union_with = PAL
 						}
 						emperor = {
-							country_event = { id = new_flavour_bav.10 }
+							country_event = {
+								id = new_flavour_bav.10
+							}
 						}
 					}
 				}
@@ -327,7 +374,9 @@ emp_bav_missions_conquest = {
 				add_devotion = 10
 				add_republican_tradition = 5
 				palatinate_area = {
-					limit = { country_or_subject_holds = ROOT }
+					limit = {
+						country_or_subject_holds = ROOT
+					}
 					add_province_modifier = {
 						name = faster_integration
 						duration = 7300
@@ -336,16 +385,23 @@ emp_bav_missions_conquest = {
 			}
 		}
 	}
-	
 	emp_bav_sway_cologne = {
 		icon = sway_cologne
 		position = 6
-		required_missions = { emp_bav_union_with_palatinate }
+		required_missions = {
+			emp_bav_union_with_palatinate
+		}
 		provinces_to_highlight = {
 			province_id = 85
 			OR = {
-				NOT = { country_or_subject_holds = ROOT }
-				NOT = { owner = { religion_group = root } }
+				NOT = {
+					country_or_subject_holds = ROOT
+				}
+				NOT = {
+					owner = {
+						religion_group = root
+					}
+				}
 			}
 		}
 		trigger = {
@@ -360,7 +416,7 @@ emp_bav_missions_conquest = {
 			if = {
 				limit = {
 					valid_for_personal_unions_trigger = yes
-					exists = BRA #deliberately not PRU, that would be OP
+					exists = BRA					#deliberately not PRU, that would be OP
 					BRA = {
 						valid_for_personal_unions_trigger = yes
 					}
@@ -374,24 +430,33 @@ emp_bav_missions_conquest = {
 			else = {
 				mittelmark_area = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+						NOT = {
+							is_permanent_claim = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 				neumark_area = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+						NOT = {
+							is_permanent_claim = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 			}
-			
 			if = {
 				limit = {
 					NOT = {
-						85 = { country_or_subject_holds = ROOT }
+						85 = {
+							country_or_subject_holds = ROOT
+						}
 					}
 				}
 				if = {
@@ -406,10 +471,11 @@ emp_bav_missions_conquest = {
 					}
 					custom_tooltip = emp_bav_sway_cologne_effect_tooltip
 					tooltip = {
-						country_event = { id = new_flavour_bav.11 }
+						country_event = {
+							id = new_flavour_bav.11
+						}
 					}
 					custom_tooltip = emp_bav_sway_cologne_effect_tooltip2
-	
 					tooltip = {
 						add_prestige = 10
 						add_legitimacy = 10
@@ -435,9 +501,13 @@ emp_bav_missions_conquest = {
 					}
 					government = monarchy
 					has_government_attribute = heir
-					KOL = { is_subject_of = ROOT }
+					KOL = {
+						is_subject_of = ROOT
+					}
 				}
-				country_event = { id = new_flavour_bav.11 }
+				country_event = {
+					id = new_flavour_bav.11
+				}
 			}
 			else = {
 				add_prestige = 10
@@ -464,20 +534,25 @@ emp_bav_missions_conquest_2 = {
 			tag = LBV
 			tag = UBV
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_bav_tame_brandenburg = {
 		icon = tame_brandenburg
 		position = 7
-		required_missions = { emp_bav_sway_cologne }
+		required_missions = {
+			emp_bav_sway_cologne
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = neumark_area
 				area = mittelmark_area
 			}
-			NOT = { country_or_subject_holds = ROOT }
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			neumark_area = {
@@ -496,7 +571,7 @@ emp_bav_missions_conquest_2 = {
 			}
 		}
 	}
-}	
+}
 
 emp_bav_missions_military = {
 	slot = 3
@@ -513,14 +588,17 @@ emp_bav_missions_military = {
 			tag = LBV
 			tag = UBV
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_bav_standing_army = {
 		icon = establish_a_standing_army
 		position = 2
-		required_missions = { emp_bav_cultural_center }
+		required_missions = {
+			emp_bav_cultural_center
+		}
 		provinces_to_highlight = {
 			country_or_subject_holds = ROOT
 			has_forcelimit_building_trigger = no
@@ -547,7 +625,9 @@ emp_bav_missions_military = {
 			}
 			manpower_percentage = 0.75
 			army_size_percentage = 1
-			NOT = { num_of_mercenaries = 1 }
+			NOT = {
+				num_of_mercenaries = 1
+			}
 		}
 		effect = {
 			capital_scope = {
@@ -587,25 +667,33 @@ emp_bav_cultural_dominance_branch = {
 			tag = LBV
 			tag = UBV
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_bav_cultural_dominance = {
 		icon = bavarian_cultural_dominance
-		required_missions = { emp_bav_oktoberfest_mission emp_bav_center_of_counter_reformation }
+		required_missions = {
+			emp_bav_oktoberfest_mission
+			emp_bav_center_of_counter_reformation
+		}
 		position = 4
 		provinces_to_highlight = {
 			OR = {
 				region = south_german_region
 				region = north_german_region
 			}
-			NOT = { country_or_subject_holds = ROOT }
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
 			OR = {
 				culture = bavarian
 				any_province = {
 					is_capital_of = root
-					NOT = { higher_development_than = prev }
+					NOT = {
+						higher_development_than = prev
+					}
 				}
 			}
 		}
@@ -626,14 +714,18 @@ emp_bav_cultural_dominance_branch = {
 						type = all
 						OR = {
 							country_or_subject_holds = ROOT
-							NOT = { higher_development_than = prev }
+							NOT = {
+								higher_development_than = prev
+							}
 						}
 					}
 					north_german_region = {
 						type = all
 						OR = {
 							country_or_subject_holds = ROOT
-							NOT = { higher_development_than = prev }
+							NOT = {
+								higher_development_than = prev
+							}
 						}
 					}
 				}
@@ -647,7 +739,6 @@ emp_bav_cultural_dominance_branch = {
 		}
 	}
 }
-
 
 emp_bav_missions_religious = {
 	slot = 4
@@ -664,13 +755,15 @@ emp_bav_missions_religious = {
 			tag = LBV
 			tag = UBV
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_bav_be_good_at_religion = {
 		icon = show_piety
-		required_missions = { }
+		required_missions = {
+		}
 		trigger = {
 			if = {
 				limit = {
@@ -726,16 +819,19 @@ emp_bav_missions_religious = {
 			}
 		}
 	}
-	
 	emp_bav_center_of_counter_reformation = {
 		icon = spread_piety
-		required_missions = { emp_bav_be_good_at_religion }
+		required_missions = {
+			emp_bav_be_good_at_religion
+		}
 		position = 3
 		provinces_to_highlight = {
 			OR = {
 				owner = {
 					is_neighbor_of = root
-					NOT = { religion = root }
+					NOT = {
+						religion = root
+					}
 					religion_group = root
 				}
 			}
@@ -760,7 +856,9 @@ emp_bav_missions_religious = {
 				tooltip = emp_bav_center_of_counter_reformation_tooltip
 				NOT = {
 					any_neighbor_country = {
-						NOT = { religion = root }
+						NOT = {
+							religion = root
+						}
 						religion_group = root
 					}
 				}
@@ -781,7 +879,6 @@ emp_bav_missions_religious = {
 	}
 }
 
-
 emp_bav_missions_illuminati = {
 	slot = 4
 	generic = no
@@ -797,32 +894,50 @@ emp_bav_missions_illuminati = {
 			tag = LBV
 			tag = UBV
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_bav_illuminati_mission = {
 		icon = deal_with_the_illuminati
 		position = 5
-		required_missions = { emp_bav_center_of_counter_reformation }
-
+		required_missions = {
+			emp_bav_center_of_counter_reformation
+		}
 		trigger = {
 			has_institution = enlightenment
 			if = {
 				limit = {
-					NOT = { has_estate = estate_church }
-					NOT = { has_estate = estate_nobles }
-					NOT = { has_estate = estate_burghers }
-					NOT = { has_reform = revolutionary_republic_reform }
-					NOT = { has_reform = junior_revolutionary_republic_reform }
+					NOT = {
+						has_estate = estate_church
+					}
+					NOT = {
+						has_estate = estate_nobles
+					}
+					NOT = {
+						has_estate = estate_burghers
+					}
+					NOT = {
+						has_reform = revolutionary_republic_reform
+					}
+					NOT = {
+						has_reform = junior_revolutionary_republic_reform
+					}
 				}
 				crown_land_share = 100
 			}
 			else_if = {
-				limit = { NOT = { has_estate = estate_nobles } }
+				limit = {
+					NOT = {
+						has_estate = estate_nobles
+					}
+				}
 				OR = {
 					AND = {
-						NOT = { absolutism = 50 }
+						NOT = {
+							absolutism = 50
+						}
 						estate_loyalty = {
 							estate = estate_church
 							loyalty = 60
@@ -848,7 +963,9 @@ emp_bav_missions_illuminati = {
 			else = {
 				OR = {
 					AND = {
-						NOT = { absolutism = 50 }
+						NOT = {
+							absolutism = 50
+						}
 						estate_loyalty = {
 							estate = estate_church
 							loyalty = 60
@@ -887,7 +1004,9 @@ emp_bav_missions_illuminati = {
 					NOT = {
 						OR = {
 							AND = {
-								NOT = { absolutism = 50 }
+								NOT = {
+									absolutism = 50
+								}
 								estate_loyalty = {
 									estate = estate_church
 									loyalty = 60
@@ -919,9 +1038,15 @@ emp_bav_missions_illuminati = {
 			}
 			if = {
 				limit = {
-					NOT = { has_estate = estate_church }
-					NOT = { has_estate = estate_nobles }
-					NOT = { has_estate = estate_burghers }
+					NOT = {
+						has_estate = estate_church
+					}
+					NOT = {
+						has_estate = estate_nobles
+					}
+					NOT = {
+						has_estate = estate_burghers
+					}
 				}
 				add_country_modifier = {
 					name = bav_bavarian_absolutism
@@ -930,7 +1055,9 @@ emp_bav_missions_illuminati = {
 			}
 			if = {
 				limit = {
-					NOT = { absolutism = 50 }
+					NOT = {
+						absolutism = 50
+					}
 					estate_loyalty = {
 						estate = estate_church
 						loyalty = 60
@@ -988,7 +1115,6 @@ emp_bav_missions_illuminati = {
 	}
 }
 
-
 emp_bav_missions_conquer_austria = {
 	slot = 3
 	generic = no
@@ -1004,14 +1130,16 @@ emp_bav_missions_conquer_austria = {
 			tag = LBV
 			tag = UBV
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-
-	
 	emp_bav_conquer_tirol = {
 		icon = claim_tirol
-		required_missions = { emp_bav_union_with_palatinate }
+		required_missions = {
+			emp_bav_union_with_palatinate
+		}
 		position = 5
 		provinces_to_highlight = {
 			area = tirol_area
@@ -1026,7 +1154,9 @@ emp_bav_missions_conquer_austria = {
 				}
 				owned_by = HAB
 			}
-			NOT = { country_or_subject_holds = ROOT }
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -1044,16 +1174,19 @@ emp_bav_missions_conquer_austria = {
 						}
 					}
 				}
-				HAB = { is_subject_of = root }
+				HAB = {
+					is_subject_of = root
+				}
 			}
 		}
 		effect = {
 			tirol_area = {
-				limit = { country_or_subject_holds = ROOT }
+				limit = {
+					country_or_subject_holds = ROOT
+				}
 				add_local_autonomy = -15
 				add_nationalism = -10
 			}
-			
 			if = {
 				limit = {
 					valid_for_personal_unions_trigger = yes
@@ -1071,31 +1204,42 @@ emp_bav_missions_conquer_austria = {
 			else = {
 				austria_proper_area = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+						NOT = {
+							is_permanent_claim = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 				inner_austria_area = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+						NOT = {
+							is_permanent_claim = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 			}
 		}
 	}
-
 	emp_bav_union_with_austria = {
 		icon = mission_the_austrian_succession
-		required_missions = { emp_bav_conquer_tirol }
+		required_missions = {
+			emp_bav_conquer_tirol
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = austria_proper_area
 				area = inner_austria_area
 			}
-			NOT = { country_or_subject_holds = ROOT }
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			austria_proper_area = {
@@ -1109,53 +1253,75 @@ emp_bav_missions_conquer_austria = {
 		}
 		effect = {
 			add_prestige = 20
-
 			frisia_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			holland_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			brabant_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			north_brabant_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			venetia_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			carinthia_area = {
 				limit = {
-					NOT = { is_permanent_claim = ROOT }
-					NOT = { is_core = ROOT }
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+					NOT = {
+						is_core = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
 }
-
 
 emp_bav_missions_conquer_italy = {
 	slot = 4
@@ -1172,14 +1338,17 @@ emp_bav_missions_conquer_italy = {
 			tag = LBV
 			tag = UBV
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_bav_italian_sun = {
 		icon = mission_control_venice
 		position = 7
-		required_missions = { emp_bav_union_with_austria }
+		required_missions = {
+			emp_bav_union_with_austria
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = venetia_area
@@ -1196,7 +1365,9 @@ emp_bav_missions_conquer_italy = {
 					}
 				}
 			}
-			NOT = { country_or_subject_holds = ROOT }
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			num_of_owned_provinces_with = {
@@ -1211,7 +1382,9 @@ emp_bav_missions_conquer_italy = {
 			add_dip_power = 100
 			if = {
 				limit = {
-					NOT = { max_sailors = 1000 }
+					NOT = {
+						max_sailors = 1000
+					}
 				}
 				add_sailors = 1000
 			}
@@ -1225,9 +1398,6 @@ emp_bav_missions_conquer_italy = {
 		}
 	}
 }
-
-
-
 
 emp_bav_missions_netherlands = {
 	slot = 3
@@ -1244,14 +1414,18 @@ emp_bav_missions_netherlands = {
 			tag = LBV
 			tag = UBV
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_bav_netherlands = {
 		icon = bavarian_netherlands
 		position = 7
-		required_missions = { emp_bav_sway_cologne emp_bav_union_with_austria }
+		required_missions = {
+			emp_bav_sway_cologne
+			emp_bav_union_with_austria
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = frisia_area
@@ -1272,7 +1446,9 @@ emp_bav_missions_netherlands = {
 					}
 				}
 			}
-			NOT = { country_or_subject_holds = ROOT }
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {

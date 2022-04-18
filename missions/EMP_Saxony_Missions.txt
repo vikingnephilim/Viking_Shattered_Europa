@@ -1,5 +1,3 @@
-
-
 emp_sax_missions_conquest = {
 	slot = 1
 	generic = no
@@ -13,26 +11,26 @@ emp_sax_missions_conquest = {
 			tag = SAX
 			tag = THU
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_sax_conquer_erzgebirge = {
 		icon = claim_the_borderlands
-		required_missions = {  }
+		required_missions = {
+		}
 		ai_weight = {
 			factor = 5
 		}
-		ai_priority = {
-			factor = 5
-		}
-
 		provinces_to_highlight = {
 			OR = {
 				area = erzgebirge_area
 				area = lusatia_area
 			}
-			NOT = { country_or_subject_holds = ROOT }
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
 			ROOT = {
 				NOT = {
 					num_of_owned_provinces_with = {
@@ -56,7 +54,9 @@ emp_sax_missions_conquest = {
 		}
 		effect = {
 			erzgebirge_area = {
-				limit = { country_or_subject_holds = ROOT }
+				limit = {
+					country_or_subject_holds = ROOT
+				}
 				add_nationalism = -10
 				add_province_modifier = {
 					name = sax_saxon_settlement
@@ -64,7 +64,9 @@ emp_sax_missions_conquest = {
 				}
 			}
 			lusatia_area = {
-				limit = { country_or_subject_holds = ROOT }
+				limit = {
+					country_or_subject_holds = ROOT
+				}
 				add_nationalism = -10
 				add_province_modifier = {
 					name = sax_saxon_settlement
@@ -73,21 +75,28 @@ emp_sax_missions_conquest = {
 			}
 			silesia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-	
 	emp_sax_conquer_silesia = {
 		icon = take_silesia
 		position = 2
-		required_missions = { emp_sax_conquer_erzgebirge }
+		required_missions = {
+			emp_sax_conquer_erzgebirge
+		}
 		provinces_to_highlight = {
 			area = silesia_area
-			NOT = { country_or_subject_holds = ROOT }
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
 			ROOT = {
 				NOT = {
 					num_of_owned_provinces_with = {
@@ -105,7 +114,9 @@ emp_sax_missions_conquest = {
 		}
 		effect = {
 			silesia_area = {
-				limit = { country_or_subject_holds = ROOT }
+				limit = {
+					country_or_subject_holds = ROOT
+				}
 				add_nationalism = -10
 				add_province_modifier = {
 					name = sax_saxon_settlement
@@ -114,15 +125,23 @@ emp_sax_missions_conquest = {
 			}
 			neumark_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			mittelmark_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -143,21 +162,19 @@ emp_sax_missions_defragment_and_go_east = {
 			tag = SAX
 			tag = THU
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_sax_conquer_brunswick = {
 		icon = conquer_brunswick
 		position = 1
-		required_missions = {  }
+		required_missions = {
+		}
 		ai_weight = {
 			factor = 5
 		}
-		ai_priority = {
-			factor = 5
-		}
-
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -183,7 +200,9 @@ emp_sax_missions_defragment_and_go_east = {
 					}
 				}
 			}
-			NOT = { country_or_subject_holds = ROOT }
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -198,39 +217,57 @@ emp_sax_missions_defragment_and_go_east = {
 		effect = {
 			lower_saxony_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			weser_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			westphalia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			north_westphalia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-	
 	emp_sax_reclaim_ancestral_lands = {
 		icon = reclaim_our_ancestral_lands
 		position = 2
-		required_missions = { emp_sax_conquer_brunswick emp_sax_defragment }
+		required_missions = {
+			emp_sax_conquer_brunswick
+			emp_sax_defragment
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = lower_saxony_area
@@ -238,7 +275,9 @@ emp_sax_missions_defragment_and_go_east = {
 				area = westphalia_area
 				area = north_westphalia_area
 			}
-			NOT = { country_or_subject_holds = ROOT }
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -271,17 +310,20 @@ emp_sax_missions_defragment_and_go_east = {
 			}
 		}
 	}
-	
 	emp_sax_conquer_brandenburg = {
 		icon = electorate_of_brandenburg
 		position = 3
-		required_missions = { emp_sax_conquer_silesia }
+		required_missions = {
+			emp_sax_conquer_silesia
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = mittelmark_area
 				area = neumark_area
 			}
-			NOT = { country_or_subject_holds = ROOT }
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
 			OR = {
 				province_id = 50
 				ROOT = {
@@ -298,7 +340,9 @@ emp_sax_missions_defragment_and_go_east = {
 			}
 		}
 		trigger = {
-			50 = { country_or_subject_holds = ROOT }
+			50 = {
+				country_or_subject_holds = ROOT
+			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 6
 				OR = {
@@ -329,31 +373,32 @@ emp_sax_missions_conquer_franconia = {
 			tag = SAX
 			tag = THU
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_sax_defragment = {
 		icon = avoid_fragmentation
 		position = 1
-		required_missions = {  }
-		
+		required_missions = {
+		}
 		ai_weight = {
 			factor = 10
 		}
-		ai_priority = {
-			factor = 10
-		}
-
 		provinces_to_highlight = {
 			OR = {
 				AND = {
 					owned_by = THU
-					root = { tag = SAX }
+					root = {
+						tag = SAX
+					}
 				}
 				AND = {
 					owned_by = SAX
-					root = { tag = THU }
+					root = {
+						tag = THU
+					}
 				}
 				AND = {
 					OR = {
@@ -361,8 +406,12 @@ emp_sax_missions_conquer_franconia = {
 						area = thuringia_area
 					}
 					OR = {
-						NOT = { country_or_subject_holds = ROOT }
-						NOT = { is_core = root }
+						NOT = {
+							country_or_subject_holds = ROOT
+						}
+						NOT = {
+							is_core = root
+						}
 					}
 				}
 			}
@@ -373,10 +422,14 @@ emp_sax_missions_conquer_franconia = {
 				limit = {
 					tag = SAX
 				}
-				NOT = { exists = THU }
+				NOT = {
+					exists = THU
+				}
 			}
 			else = {
-				NOT = { exists = SAX }
+				NOT = {
+					exists = SAX
+				}
 			}
 			south_saxony_area = {
 				type = all
@@ -392,15 +445,23 @@ emp_sax_missions_conquer_franconia = {
 		effect = {
 			upper_franconia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			franconia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
@@ -418,8 +479,12 @@ emp_sax_missions_conquer_franconia = {
 				}
 				northern_saxony_area = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
@@ -438,25 +503,32 @@ emp_sax_missions_conquer_franconia = {
 				}
 				braunschweig_area = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 			}
 		}
 	}
-	
 	emp_sax_conquer_franconia = {
 		icon = conquer_franconia
 		position = 2
-		required_missions = { emp_sax_defragment }
+		required_missions = {
+			emp_sax_defragment
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = franconia_area
 				area = upper_franconia_area
 			}
-			NOT = { country_or_subject_holds = ROOT }
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -483,7 +555,6 @@ emp_sax_missions_conquer_franconia = {
 			add_country_modifier = {
 				name = sax_holder_of_duchies
 				duration = 7300
-				
 			}
 		}
 	}
@@ -502,29 +573,39 @@ emp_sax_missions_religion = {
 			tag = SAX
 			tag = THU
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_sax_found_wittenberg = {
 		icon = wittenberg_university
 		completed_by = 1502.10.18
 		position = 3
-		required_missions = {  }
+		required_missions = {
+		}
 		provinces_to_highlight = {
 			OR = {
 				AND = {
 					province_id = 59
 					OR = {
-						NOT = { country_or_subject_holds = ROOT }
-						NOT = { development = 15 }
+						NOT = {
+							country_or_subject_holds = ROOT
+						}
+						NOT = {
+							development = 15
+						}
 						has_tax_building_trigger = no
 						has_courthouse_building_trigger = no
 					}
 				}
 				AND = {
 					is_capital_of = root
-					ROOT = { NOT = { has_institution = renaissance } }
+					ROOT = {
+						NOT = {
+							has_institution = renaissance
+						}
+					}
 				}
 			}
 		}
@@ -545,23 +626,28 @@ emp_sax_missions_religion = {
 			59 = {
 				if = {
 					limit = {
-						NOT = { has_building = university }
+						NOT = {
+							has_building = university
+						}
 					}
 					add_building = university
 				}
 			}
 		}
 	}
-	
 	emp_sax_victor_for_faith = {
 		icon = victor_for_the_true_faith
 		position = 4
-		required_missions = { emp_sax_found_wittenberg }
+		required_missions = {
+			emp_sax_found_wittenberg
+		}
 		provinces_to_highlight = {
 			OR = {
 				owner = {
 					is_neighbor_of = root
-					NOT = { religion = root }
+					NOT = {
+						religion = root
+					}
 					religion_group = root
 				}
 			}
@@ -592,7 +678,9 @@ emp_sax_missions_religion = {
 							tooltip = emp_bav_center_of_counter_reformation_tooltip
 							NOT = {
 								any_neighbor_country = {
-									NOT = { religion = root }
+									NOT = {
+										religion = root
+									}
 									religion_group = root
 								}
 							}
@@ -612,7 +700,9 @@ emp_sax_missions_religion = {
 					tooltip = emp_bav_center_of_counter_reformation_tooltip
 					NOT = {
 						any_neighbor_country = {
-							NOT = { religion = root }
+							NOT = {
+								religion = root
+							}
 							religion_group = root
 						}
 					}
@@ -626,10 +716,11 @@ emp_sax_missions_religion = {
 			}
 		}
 	}
-	
 	emp_sax_union_with_poland = {
 		icon = king_of_poland
-		required_missions = { emp_sax_spread_wettins }
+		required_missions = {
+			emp_sax_spread_wettins
+		}
 		provinces_to_highlight = {
 			OR = {
 				area = wielkopolska_area
@@ -637,7 +728,9 @@ emp_sax_missions_religion = {
 				area = malopolska_area
 				area = sandomierz_area
 			}
-			NOT = { country_or_subject_holds = ROOT }
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -687,14 +780,17 @@ emp_sax_missions_culture_1 = {
 			tag = SAX
 			tag = THU
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_sax_weimar_classicism = {
 		icon = weimar_classicism
 		position = 4
-		required_missions = { emp_sax_found_wittenberg }
+		required_missions = {
+			emp_sax_found_wittenberg
+		}
 		trigger = {
 			has_institution = enlightenment
 			has_adm_advisor_3 = yes
@@ -725,14 +821,17 @@ emp_sax_missions_culture_2 = {
 			tag = SAX
 			tag = THU
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-		
 	emp_sax_spread_wettins = {
 		icon = spread_the_von_wettins
 		position = 4
-		required_missions = { emp_sax_found_wittenberg }
+		required_missions = {
+			emp_sax_found_wittenberg
+		}
 		trigger = {
 			if = {
 				limit = {
@@ -932,7 +1031,6 @@ emp_sax_missions_culture_2 = {
 					duration = 7300
 				}
 			}
-
 			if = {
 				limit = {
 					valid_for_personal_unions_trigger = yes
@@ -964,40 +1062,57 @@ emp_sax_missions_culture_2 = {
 			else = {
 				wielkopolska_area = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 				central_poland_area = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 				malopolska_area = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 				sandomierz_area = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 			}
 		}
 	}
-	
 	emp_sax_become_king = {
 		icon = become_king
 		position = 3
-		required_missions = { emp_sax_spread_wettins }
+		required_missions = {
+			emp_sax_spread_wettins
+		}
 		trigger = {
 			if = {
 				limit = {
@@ -1008,7 +1123,9 @@ emp_sax_missions_culture_2 = {
 					any_subject_country = {
 						is_lesser_in_union = yes
 						government_rank = 2
-						NOT = { liberty_desire = 50 }
+						NOT = {
+							liberty_desire = 50
+						}
 					}
 				}
 			}
@@ -1018,7 +1135,9 @@ emp_sax_missions_culture_2 = {
 					any_subject_country = {
 						is_lesser_in_union = yes
 						government_rank = 2
-						NOT = { liberty_desire = 50 }
+						NOT = {
+							liberty_desire = 50
+						}
 					}
 				}
 			}
@@ -1026,7 +1145,9 @@ emp_sax_missions_culture_2 = {
 		effect = {
 			if = {
 				limit = {
-					NOT = { government_rank = 2 }
+					NOT = {
+						government_rank = 2
+					}
 				}
 				set_government_rank = 2
 			}
@@ -1053,18 +1174,24 @@ emp_sax_missions_economic = {
 			tag = SAX
 			tag = THU
 		}
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_sax_manufacturing = {
 		icon = saxon_manufacturing
-		required_missions = {  }
+		required_missions = {
+		}
 		provinces_to_highlight = {
 			province_id = 62
 			OR = {
-				NOT = { country_or_subject_holds = ROOT }
-				NOT = { is_core = root }
+				NOT = {
+					country_or_subject_holds = ROOT
+				}
+				NOT = {
+					is_core = root
+				}
 			}
 		}
 		trigger = {
@@ -1076,19 +1203,26 @@ emp_sax_missions_economic = {
 		}
 		effect = {
 			62 = {
-				province_event = { id = flavor_sax.3 }
+				province_event = {
+					id = flavor_sax.3
+				}
 			}
 		}
 	}
-	
 	emp_sax_meissen_porcelain = {
 		icon = porcelain_from_meissen
-		required_missions = { emp_sax_manufacturing }
+		required_missions = {
+			emp_sax_manufacturing
+		}
 		provinces_to_highlight = {
 			province_id = 61
 			OR = {
-				NOT = { is_strongest_trade_power = root }
-				NOT = { country_or_subject_holds = ROOT }
+				NOT = {
+					is_strongest_trade_power = root
+				}
+				NOT = {
+					country_or_subject_holds = ROOT
+				}
 				has_production_building_trigger = no
 			}
 		}
@@ -1113,9 +1247,14 @@ emp_sax_missions_economic = {
 		effect = {
 			if = {
 				limit = {
-					NOT = { has_global_flag = bottger_happened }
+					NOT = {
+						has_global_flag = bottger_happened
+					}
 				}
-				country_event = { id = prices.3 days = 1 }
+				country_event = {
+					id = prices.3
+					days = 1
+				}
 			}
 			else = {
 				61 = {
@@ -1128,10 +1267,11 @@ emp_sax_missions_economic = {
 			}
 		}
 	}
-	
 	emp_sax_industrialisation = {
 		icon = mission_rb_build_furnaces
-		required_missions = { emp_sax_meissen_porcelain }
+		required_missions = {
+			emp_sax_meissen_porcelain
+		}
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -1139,7 +1279,9 @@ emp_sax_missions_economic = {
 					OR = {
 						AND = {
 							has_manufactory_trigger = yes
-							NOT = { development = 20 }
+							NOT = {
+								development = 20
+							}
 						}
 						AND = {
 							has_manufactory_trigger = no
@@ -1157,7 +1299,9 @@ emp_sax_missions_economic = {
 					}
 				}
 				AND = {
-					NOT = { country_or_subject_holds = ROOT }
+					NOT = {
+						country_or_subject_holds = ROOT
+					}
 					any_neighbor_province = {
 						country_or_subject_holds = ROOT
 					}
@@ -1174,7 +1318,9 @@ emp_sax_missions_economic = {
 					}
 				}
 				AND = {
-					ROOT = { has_dlc = "Rule Britannia" }
+					ROOT = {
+						has_dlc = "Rule Britannia"
+					}
 					OR = {
 						province_id = 62
 						AND = {
@@ -1183,9 +1329,13 @@ emp_sax_missions_economic = {
 						}
 					}
 					OR = {
-						NOT = { country_or_subject_holds = ROOT }
+						NOT = {
+							country_or_subject_holds = ROOT
+						}
 						has_manufactory_trigger = no
-						NOT = { development = 20 }
+						NOT = {
+							development = 20
+						}
 					}
 				}
 			}
@@ -1207,7 +1357,9 @@ emp_sax_missions_economic = {
 				}
 				if = {
 					limit = {
-						1763 = { country_or_subject_holds = ROOT }
+						1763 = {
+							country_or_subject_holds = ROOT
+						}
 					}
 					1763 = {
 						country_or_subject_holds = ROOT

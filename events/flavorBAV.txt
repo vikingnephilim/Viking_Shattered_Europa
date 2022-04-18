@@ -1044,8 +1044,14 @@ country_event = {
 				}
 				else_if = {
 					limit = {
-						has_building = temple
+						OR = {
+							has_building = shrine
+							has_building = monastery
+							has_building = temple
+						}
 					}
+					remove_building = shrine
+					remove_building = monastery
 					remove_building = temple
 					add_building = cathedral
 				}

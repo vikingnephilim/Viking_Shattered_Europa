@@ -220,92 +220,92 @@ feudalism = {
 					is_colonial_nation = yes
 				}
 			}
-				custom_trigger_tooltip = {
-					tooltip = PORT_OR_CAPITAL_IN_COLONY_FEUDAL
-					OR = {
-						has_port = yes
-						is_capital = yes
-					}
-					owner = {
-						is_colonial_nation = yes
-						overlord = {
-							has_institution = feudalism
-						}
-					}
-				}
-			}
-			modifier = {
-				factor = 0.1
-				scale = yes
-				potential = {
-					owner = {
-						is_colonial_nation = no
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = CAPITAL_IN_OLD_WORLD_FEUDAL
+			custom_trigger_tooltip = {
+				tooltip = PORT_OR_CAPITAL_IN_COLONY_FEUDAL
+				OR = {
+					has_port = yes
 					is_capital = yes
-					NOT = {
-						continent = north_america
-					}
-					NOT = {
-						continent = south_america
-					}
-					NOT = {
-						continent = new_world
-					}
-					owner = {
-						NOT = {
-							government = tribal
-						}
-						NOT = {
-							government = native
-						}
-					}
 				}
-			}
-			modifier = {
-				factor = 2
-				scale = yes
-				potential = {
-					owner = {
-						has_institution = feudalism
-					}
-				}
-				custom_trigger_tooltip = {
-					tooltip = tooltip_feudalism_embraced
-					is_owned_by_trade_company = no
-					owner = {
+				owner = {
+					is_colonial_nation = yes
+					overlord = {
 						has_institution = feudalism
 					}
 				}
 			}
 		}
-		ai_will_do = {
-			#Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
-			factor = 24
-			modifier = {
-				factor = 0.25
-				is_at_war = yes
+		modifier = {
+			factor = 0.1
+			scale = yes
+			potential = {
+				owner = {
+					is_colonial_nation = no
+				}
 			}
-			modifier = {
-				factor = 2
-				neighbors_tech_discount = 0.1
+			custom_trigger_tooltip = {
+				tooltip = CAPITAL_IN_OLD_WORLD_FEUDAL
+				is_capital = yes
+				NOT = {
+					continent = north_america
+				}
+				NOT = {
+					continent = south_america
+				}
+				NOT = {
+					continent = new_world
+				}
+				owner = {
+					NOT = {
+						government = tribal
+					}
+					NOT = {
+						government = native
+					}
+				}
 			}
-			modifier = {
-				factor = 2
-				neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			scale = yes
+			potential = {
+				owner = {
+					has_institution = feudalism
+				}
 			}
-			modifier = {
-				factor = 2
-				neighbors_tech_discount = 0.3
-			}
-			modifier = {
-				factor = 2
-				neighbors_tech_discount = 0.4
+			custom_trigger_tooltip = {
+				tooltip = tooltip_feudalism_embraced
+				is_owned_by_trade_company = no
+				owner = {
+					has_institution = feudalism
+				}
 			}
 		}
 	}
+	ai_will_do = {
+		#Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
+		factor = 24
+		modifier = {
+			factor = 0.25
+			is_at_war = yes
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.1
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.2
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.3
+		}
+		modifier = {
+			factor = 2
+			neighbors_tech_discount = 0.4
+		}
+	}
+}
 
 #######################################
 # Renaissance
@@ -4580,8 +4580,22 @@ industrialization = {
 			AND = {
 				is_year = 1780
 				continent = europe
-				owner = {
-					technology_group = western
+				OR = {
+					owner = {
+						technology_group = western
+					}
+					owner = {
+						technology_group = latin_group
+					}
+					owner = {
+						technology_group = german
+					}
+					owner = {
+						technology_group = nordic
+					}
+					owner = {
+						technology_group = eastern
+					}
 				}
 			}
 			AND = {
@@ -4589,6 +4603,21 @@ industrialization = {
 				OR = {
 					owner = {
 						technology_group = western
+					}
+					owner = {
+						technology_group = western
+					}
+					owner = {
+						technology_group = latin_group
+					}
+					owner = {
+						technology_group = german
+					}
+					owner = {
+						technology_group = nordic
+					}
+					owner = {
+						technology_group = eastern
 					}
 					continent = europe
 				}
@@ -4603,78 +4632,23 @@ industrialization = {
 		ei_central_banks = 100
 		enlightenment = 100
 		development = 30
-		if = {
-			limit = {
-				has_dlc = "Rule Britannia"
-				NOT = {
-					is_year = 1765
+		owner = {
+			OR = {
+				production_leader = {
+					trade_goods = iron
 				}
-				#just in case no one develops their coal provinces
-			}
-			has_building = furnace
-			owner = {
-				OR = {
-					production_leader = {
-						trade_goods = iron
-					}
-					production_leader = {
-						trade_goods = cloth
-					}
-					production_leader = {
-						trade_goods = coal
-					}
-					num_of_trading_bonuses = 3
-					is_year = 1760					#fallback
+				production_leader = {
+					trade_goods = cloth
 				}
-			}
-		}
-		else = {
-			if = {
-				limit = {
-					has_dlc = "Rule Britannia"
+				production_leader = {
+					trade_goods = coal
 				}
-				OR = {
-					has_building = furnace
-					has_building = weapons
-					has_building = textile
-				}
-				owner = {
-					OR = {
-						production_leader = {
-							trade_goods = iron
-						}
-						production_leader = {
-							trade_goods = cloth
-						}
-						production_leader = {
-							trade_goods = coal
-						}
-						num_of_trading_bonuses = 3
-						is_year = 1775						#fallback
-					}
-				}
-			}
-			else = {
-				OR = {
-					has_building = weapons
-					has_building = textile
-				}
-				owner = {
-					OR = {
-						production_leader = {
-							trade_goods = iron
-						}
-						production_leader = {
-							trade_goods = cloth
-						}
-						num_of_trading_bonuses = 3
-						is_year = 1775						#fallback
-					}
-				}
+				num_of_trading_bonuses = 3
+				is_year = 1760				#fallback
 			}
 		}
 	}
-	start_chance = 15	#in 100 for when a province can_start (there are probably 4 or so)
+	start_chance = 100	#in 100 for when a province can_start (there are probably 4 or so)
 	on_start = institution_events.80
 	can_embrace = {
 		owner = {

@@ -1,5 +1,3 @@
-
-
 emp_hun_religion_branch_1 = {
 	slot = 3
 	generic = no
@@ -10,13 +8,15 @@ emp_hun_religion_branch_1 = {
 	potential = {
 		has_dlc = "Emperor"
 		tag = HUN
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_hun_fund_monasteries = {
 		icon = fund_the_monasteries
-		required_missions = {  }
+		required_missions = {
+		}
 		provinces_to_highlight = {
 			country_or_subject_holds = ROOT
 			has_tax_building_trigger = no
@@ -43,13 +43,16 @@ emp_hun_religion_branch_1 = {
 			}
 		}
 	}
-	
 	emp_hun_religious_unity = {
 		icon = spread_piety
-		required_missions = { emp_hun_fund_monasteries }
+		required_missions = {
+			emp_hun_fund_monasteries
+		}
 		provinces_to_highlight = {
 			country_or_subject_holds = ROOT
-			NOT = { religion = ROOT }
+			NOT = {
+				religion = ROOT
+			}
 		}
 		trigger = {
 			religious_unity = 1
@@ -70,13 +73,16 @@ emp_hun_poland_branch = {
 	potential = {
 		has_dlc = "Emperor"
 		tag = HUN
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_hun_take_galicia = {
 		icon = mission_partition_poland
-		required_missions = { hun_vassal_states_two }
+		required_missions = {
+			hun_vassal_states_two
+		}
 		position = 3
 		provinces_to_highlight = {
 			OR = {
@@ -84,7 +90,9 @@ emp_hun_poland_branch = {
 				area = red_ruthenia_area
 				area = sandomierz_area
 			}
-			NOT = { country_or_subject_holds = ROOT }
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			OR = {
@@ -145,39 +153,56 @@ emp_hun_poland_branch = {
 			else = {
 				mazovia_area = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+						NOT = {
+							is_permanent_claim = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 				central_poland_area = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+						NOT = {
+							is_permanent_claim = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 				wielkopolska_area = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+						NOT = {
+							is_permanent_claim = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 				kuyavia_area = {
 					limit = {
-						NOT = { is_permanent_claim = ROOT }
-						NOT = { is_core = ROOT }
+						NOT = {
+							is_permanent_claim = ROOT
+						}
+						NOT = {
+							is_core = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 			}
 		}
 	}
-	
 	emp_hun_jagiellonian_union = {
 		icon = jageillonian_union
-		required_missions = { emp_hun_take_galicia }
+		required_missions = {
+			emp_hun_take_galicia
+		}
 		position = 5
 		provinces_to_highlight = {
 			OR = {
@@ -186,11 +211,13 @@ emp_hun_poland_branch = {
 				area = wielkopolska_area
 				area = kuyavia_area
 			}
-			NOT = { country_or_subject_holds = ROOT }
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-						value = 12 #out of 15
+						value = 12						#out of 15
 						OR = {
 							area = mazovia_area
 							area = central_poland_area
@@ -203,7 +230,7 @@ emp_hun_poland_branch = {
 		}
 		trigger = {
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-				value = 12 #out of 15
+				value = 12				#out of 15
 				OR = {
 					area = mazovia_area
 					area = central_poland_area
@@ -221,7 +248,6 @@ emp_hun_poland_branch = {
 	}
 }
 
-
 emp_hun_black_army_branch = {
 	slot = 2
 	generic = no
@@ -232,22 +258,29 @@ emp_hun_black_army_branch = {
 	potential = {
 		has_dlc = "Emperor"
 		tag = HUN
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_hun_black_army_supreme = {
 		icon = gory_to_the_black_army
-		required_missions = { hun_ottoman_borders }
+		required_missions = {
+			hun_ottoman_borders
+		}
 		position = 5
 		provinces_to_highlight = {
 			is_capital = yes
 			owner = {
 				is_neighbor_of = root
 				land_morale = root
-				NOT = { is_subject_of = root }
+				NOT = {
+					is_subject_of = root
+				}
 			}
-			NOT = { country_or_subject_holds = ROOT }
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
 		}
 		trigger = {
 			OR = {
@@ -265,7 +298,9 @@ emp_hun_black_army_branch = {
 			land_morale = 4
 			all_neighbor_country = {
 				OR = {
-					NOT = { land_morale = root }
+					NOT = {
+						land_morale = root
+					}
 					is_subject_of = root
 				}
 			}
@@ -290,13 +325,15 @@ emp_hun_economy_branch = {
 	potential = {
 		has_dlc = "Emperor"
 		tag = HUN
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_hun_improve_economy = {
 		icon = mission_african_gold
-		required_missions = {  }
+		required_missions = {
+		}
 		trigger = {
 			share_of_starting_income = 2
 		}
@@ -307,10 +344,12 @@ emp_hun_economy_branch = {
 			}
 		}
 	}
-	
 	emp_hun_corviana_library = {
 		icon = bibliotheca_corviana
-		required_missions = { emp_hun_improve_economy emp_hun_fund_monasteries }
+		required_missions = {
+			emp_hun_improve_economy
+			emp_hun_fund_monasteries
+		}
 		trigger = {
 			has_institution = renaissance
 			prestige = 50
@@ -322,10 +361,12 @@ emp_hun_economy_branch = {
 			}
 		}
 	}
-	
 	emp_hun_nagyszombat_university = {
 		icon = nagyszombat_university
-		required_missions = { emp_hun_corviana_library emp_hun_religious_unity }
+		required_missions = {
+			emp_hun_corviana_library
+			emp_hun_religious_unity
+		}
 		provinces_to_highlight = {
 			province_id = 1772
 			NOT = {
@@ -364,7 +405,6 @@ emp_hun_economy_branch = {
 	}
 }
 
-
 emp_hun_economy_political_branch = {
 	slot = 5
 	generic = no
@@ -375,13 +415,16 @@ emp_hun_economy_political_branch = {
 	potential = {
 		has_dlc = "Emperor"
 		tag = HUN
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_hun_great_city_of_pest = {
 		icon = the_great_city_of_buda
-		required_missions = { emp_hun_corviana_library }
+		required_missions = {
+			emp_hun_corviana_library
+		}
 		position = 3
 		provinces_to_highlight = {
 			OR = {
@@ -422,10 +465,11 @@ emp_hun_economy_political_branch = {
 			}
 		}
 	}
-	
 	emp_hun_strong_government = {
 		icon = a_strong_government
-		required_missions = { emp_hun_great_city_of_pest }
+		required_missions = {
+			emp_hun_great_city_of_pest
+		}
 		position = 5
 		trigger = {
 			has_final_tier_reforms_trigger = yes
@@ -440,7 +484,6 @@ emp_hun_economy_political_branch = {
 	}
 }
 
-
 emp_hun_bohemia_austria_branch = {
 	slot = 4
 	generic = no
@@ -451,13 +494,15 @@ emp_hun_bohemia_austria_branch = {
 	potential = {
 		has_dlc = "Emperor"
 		tag = HUN
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_hun_hungarian_succession = {
 		icon = the_hungarian_succession
-		required_missions = {  }
+		required_missions = {
+		}
 		position = 4
 		trigger = {
 			custom_trigger_tooltip = {
@@ -481,45 +526,56 @@ emp_hun_bohemia_austria_branch = {
 			add_prestige = 20
 			moravia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			silesia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 			lusatia_area = {
 				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { is_permanent_claim = ROOT }
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
 				}
 				add_permanent_claim = ROOT
 			}
 		}
 	}
-	
 	emp_hun_bohemian_borderlands = {
 		icon = bohemian_borderlands
-		required_missions = { emp_hun_hungarian_succession }
+		required_missions = {
+			emp_hun_hungarian_succession
+		}
 		ai_weight = {
 			factor = 5
 		}
-		ai_priority = {
-			factor = 5
-		}
-
 		provinces_to_highlight = {
 			OR = {
 				area = moravia_area
 				area = silesia_area
 				area = lusatia_area
 			}
-			NOT = { country_or_subject_holds = ROOT }
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
 			ROOT = {
 				NOT = {
 					num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -546,7 +602,6 @@ emp_hun_bohemia_austria_branch = {
 		}
 		effect = {
 			add_adm_power = 50
-			
 			if = {
 				limit = {
 					exists = BOH
@@ -564,40 +619,48 @@ emp_hun_bohemia_austria_branch = {
 			else = {
 				bohemia_area = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 				erzgebirge_area = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 			}
 		}
 	}
-	
 	emp_hun_bohemian_crown = {
 		icon = bohemian_commonwealth
-		required_missions = { emp_hun_bohemian_borderlands }
+		required_missions = {
+			emp_hun_bohemian_borderlands
+		}
 		ai_weight = {
 			factor = 5
 		}
-		ai_priority = {
-			factor = 5
-		}
-
 		provinces_to_highlight = {
 			OR = {
 				area = bohemia_area
 				area = erzgebirge_area
 			}
-			NOT = { country_or_subject_holds = ROOT }
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
 		}
-		trigger = { #8 provinces so fine for demanding all
+		trigger = {
+			#8 provinces so fine for demanding all
 			bohemia_area = {
 				type = all
 				country_or_subject_holds = ROOT
@@ -607,15 +670,18 @@ emp_hun_bohemia_austria_branch = {
 				country_or_subject_holds = ROOT
 			}
 			is_subject = no
-			NOT = { active_imperial_incident = any }
+			NOT = {
+				active_imperial_incident = any
+			}
 		}
 		effect = {
 			add_prestige = 25
-
 			if = {
 				limit = {
 					is_elector = no
-					BOH = { is_elector = yes }
+					BOH = {
+						is_elector = yes
+					}
 					OR = {
 						hre_religion_locked = no
 						hre_religion = root
@@ -623,19 +689,25 @@ emp_hun_bohemia_austria_branch = {
 				}
 				if = {
 					limit = {
-						NOT = { senior_union_with = BOH }
+						NOT = {
+							senior_union_with = BOH
+						}
 					}
 					custom_tooltip = emp_hun_bohemian_crown_effect_tooltip
 				}
 				tooltip = {
-					country_event = { id = new_flavour_hun.1 }
+					country_event = {
+						id = new_flavour_hun.1
+					}
 				}
 				hidden_effect = {
 					if = {
 						limit = {
 							senior_union_with = BOH
 						}
-						country_event = { id = new_flavour_hun.1 }
+						country_event = {
+							id = new_flavour_hun.1
+						}
 					}
 				}
 			}
@@ -653,13 +725,16 @@ emp_hun_bohemia_austria_branch_2 = {
 	potential = {
 		has_dlc = "Emperor"
 		tag = HUN
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_hun_weaken_austria = {
 		icon = boh_humiliate_austria
-		required_missions = { emp_hun_bohemian_crown }
+		required_missions = {
+			emp_hun_bohemian_crown
+		}
 		position = 7
 		provinces_to_highlight = {
 			country_or_non_sovereign_subject_holds = HAB
@@ -671,7 +746,9 @@ emp_hun_bohemia_austria_branch_2 = {
 		}
 		trigger = {
 			OR = {
-				NOT = { exists = HAB }
+				NOT = {
+					exists = HAB
+				}
 				HAB = {
 					custom_trigger_tooltip = {
 						tooltip = emp_hun_weaken_austria_trigger_tooltip
@@ -682,14 +759,15 @@ emp_hun_bohemia_austria_branch_2 = {
 						}
 					}
 					is_emperor = no
-					NOT = { army_size = ROOT }
+					NOT = {
+						army_size = ROOT
+					}
 				}
 			}
 			is_subject = no
 		}
 		effect = {
 			add_prestige = 25
-			
 			if = {
 				limit = {
 					exists = HAB
@@ -707,25 +785,34 @@ emp_hun_bohemia_austria_branch_2 = {
 			else = {
 				austria_proper_area = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 				inner_austria_area = {
 					limit = {
-						NOT = { is_core = ROOT }
-						NOT = { is_permanent_claim = ROOT }
+						NOT = {
+							is_core = ROOT
+						}
+						NOT = {
+							is_permanent_claim = ROOT
+						}
 					}
 					add_permanent_claim = ROOT
 				}
 			}
 		}
 	}
-	
 	emp_hun_duchy_of_austria = {
 		icon = mission_the_austrian_succession
-		required_missions = { emp_hun_weaken_austria }
+		required_missions = {
+			emp_hun_weaken_austria
+		}
 		provinces_to_highlight = {
 			OR = {
 				AND = {
@@ -734,7 +821,9 @@ emp_hun_bohemia_austria_branch_2 = {
 						area = inner_austria_area
 						area = carinthia_area
 					}
-					NOT = { country_or_subject_holds = ROOT }
+					NOT = {
+						country_or_subject_holds = ROOT
+					}
 					NOT = {
 						ROOT = {
 							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
@@ -750,12 +839,14 @@ emp_hun_bohemia_austria_branch_2 = {
 				}
 				AND = {
 					province_id = 134
-					NOT = { country_or_subject_holds = ROOT }
+					NOT = {
+						country_or_subject_holds = ROOT
+					}
 				}
 			}
 		}
 		trigger = {
-			owns_or_non_sovereign_subject_of = 134 #Vienna
+			owns_or_non_sovereign_subject_of = 134			#Vienna
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 9
 				OR = {
@@ -768,12 +859,15 @@ emp_hun_bohemia_austria_branch_2 = {
 		effect = {
 			if = {
 				limit = {
-					NOT = { government_rank = 3 }
+					NOT = {
+						government_rank = 3
+					}
 				}
 				set_government_rank = 3
 			}
-			else = { add_prestige = 50 }
-
+			else = {
+				add_prestige = 50
+			}
 			add_country_modifier = {
 				name = hun_hungarian_austria
 				duration = -1
@@ -792,13 +886,16 @@ emp_hun_bulwark_of_christianity_branch = {
 	potential = {
 		has_dlc = "Emperor"
 		tag = HUN
-		NOT = { map_setup = map_setup_random }
+		NOT = {
+			map_setup = map_setup_random
+		}
 	}
 	has_country_shield = yes
-	
 	emp_hun_bulwark_of_christianity = {
 		icon = shield_of_christendom
-		required_missions = { hun_ottoman_borders_four }
+		required_missions = {
+			hun_ottoman_borders_four
+		}
 		position = 8
 		provinces_to_highlight = {
 			owner = {
@@ -838,7 +935,8 @@ emp_hun_bulwark_of_christianity_branch = {
 					}
 				}
 			}
-			else = { #congrats, you've broken it.
+			else = {
+				#congrats, you've broken it.
 				religion_group = root
 			}
 			is_subject = no

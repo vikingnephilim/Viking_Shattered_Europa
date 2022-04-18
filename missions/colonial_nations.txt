@@ -1549,8 +1549,14 @@ BRZ_missions_4 = {
 			2857 = {
 				if = {
 					limit = {
-						has_building = temple
+						OR = {
+							has_building = shrine
+							has_building = monastery
+							has_building = temple
+						}
 					}
+					remove_building = shrine
+					remove_building = monastery
 					remove_building = temple
 					add_building = cathedral
 				}
@@ -1561,7 +1567,10 @@ BRZ_missions_4 = {
 					add_base_tax = 2
 				}
 				else = {
-					add_building = temple
+					remove_building = shrine
+					remove_building = monastery
+					remove_building = temple
+					add_building = cathedral
 				}
 				add_trade_modifier = {
 					who = ROOT
