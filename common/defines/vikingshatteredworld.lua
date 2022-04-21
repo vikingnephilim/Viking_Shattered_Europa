@@ -99,6 +99,7 @@ NDefines.NCountry.MIGRATORY_TRIBE_DEVELOPMENT_PROGRESS = 0.05 		-- How much prog
 NDefines.NCountry.MIGRATORY_TRIBE_DEVELOPMENT_OTHER_BONUS = 0.1	-- Bonus progress gained on development from burning someone else province.
 NDefines.NCountry.TECH_TIME_COST = 0.40
 NDefines.NMilitary.WARDEC_COBELLI_FOR_WARNINGS = 1
+NDefines.NMilitary.MAX_COMBAT_WIDTH = 46
 NDefines.NReligion.CONSECRATE_PATRIARCH_THRESHOLD = 15 			--in development
 NDefines.NReligion.ORTHODOX_ICON_DURATION_MONTHS = 120
 NDefines.NReligion.ORTHODOX_ICON_AUTHORITY_COST = 0.05
