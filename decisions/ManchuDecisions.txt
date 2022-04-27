@@ -82,6 +82,13 @@ country_decisions = {
 			set_ruler_culture = manchu_new
 			if = {
 				limit = {
+					technology_group = siberian_group
+				}
+				change_technology_group = nomad_group
+				change_unit_type = nomad_group
+			}
+			else_if = {
+				limit = {
 					NOT = {
 						technology_group = chinese
 					}
