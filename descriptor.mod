@@ -6,6 +6,7 @@ replace_path="missions"
 replace_path="events"
 replace_path="gfx/sprite_packs_order"
 replace_path="dlc"
+replace_path="common/units"
 tags={
 	"National Ideas"
 	"Missions And Decisions"
