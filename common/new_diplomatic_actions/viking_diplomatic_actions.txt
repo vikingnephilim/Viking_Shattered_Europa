@@ -2227,6 +2227,14 @@ request_corsair_vassal = {
 	require_acceptance = yes	# Whether the recipient gets an option to decline
 	is_visible = {
 		can_be_overlord = corsair_vassal
+		ROOT = {
+			any_owned_province = {
+				has_port = yes
+			}
+		}
+		ROOT = {
+			culture_group = maghrebi
+		}
 		FROM = {
 			NOT = {
 				is_subject = yes

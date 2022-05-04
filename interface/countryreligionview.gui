@@ -906,93 +906,100 @@ guiTypes = {
 			}
 		}
 ################# MUSLIM PIETY
-				windowType = {
-			name = "muslim_specific_window"
-			backGround =""
-			position = { x=32 y=300 }
-			size = { x=280 y=50 }
-			moveable = 0
-			dontRender = ""
-			horizontalBorder = ""
-			Orientation = "UPPER_LEFT"
-			iconType = {
-				name ="religion_overlay_muslim_bg"
-				spriteType = "GFX_religion_overlay_big_bg"
-				position = { x= 0 y = -70 }
-			}
-			iconType = {
-				name ="current_piety"
-				spriteType = "GFX_war_overview_indicator"
-				position = { x= 135 y = -5 }
-			}
-			instantTextBoxType = {
-				name = "current_piety_value"
-				position = { x= 152 y = -21 }
-				font = "vic_18"
-				borderSize = {x = 0 y = 0}
-				text = ""
-				maxWidth = 32
-				maxHeight = 24
-				Orientation = "UPPER_LEFT"
-				format = centre
-			}
-			instantTextBoxType = {
-				name = "current_piety_text"
-				position = { x = 78 y = -60 }
-				font = "vic_18"
-				borderSize = {x = 0 y = 0}
-				text = "CURRENT_PIETY"
-				maxWidth = 160
-				maxHeight = 24
-				Orientation = "UPPER_LEFT"
-				format = centre
-			}
-			iconType ={
-				name ="current_piety_progress_bg"
-				spriteType = "GFX_piety_bar_bg"
-				position = { x= 68 y = -30 }
-			}
-			iconType ={
-				name ="current_piety_progress_frame"
-				spriteType = "GFX_piety_bar_frame"
-				position = { x= 52 y = -68 }
-			}
-			iconType = {
-				name ="low_piety"
-				spriteType = "GFX_piety_icon_low"
-				position = { x= -8 y = -66 }
-				Orientation = "CENTER_LEFT"
-			}
-			iconType = {
-				name ="high_piety"
-				spriteType = "GFX_piety_icon_high"
-				position = { x= 242 y = -66 }
-				Orientation = "CENTER_LEFT"
-			}
-			guiButtonType = {
-				name = "low_piety_action"
-				position = { x=71 y = -71}
-				quadTextureSprite ="GFX_low_piety_action"
-				Orientation = "LEFT"
-			}
-			guiButtonType = {
-				name = "high_piety_action"
-				position = { x=200 y = -71}
-				quadTextureSprite ="GFX_high_piety_action"
-				Orientation = "LEFT"
-			}
-			instantTextBoxType = {
-				name = "piety_action"
-				position = { x = 78 y = -59 }
-				font = "garamond_16"
-				borderSize = {x = 0 y = 0}
-				text = "PIETY_ACTION"
-				maxWidth = 160
-				maxHeight = 24
-				Orientation = "UPPER_LEFT"
-				format = centre
-			}
-		}
+windowType = {
+	name = "muslim_specific_window"
+	backGround =""
+	position = { x=32 y=300 }	
+	size = { x=280 y=50 }
+	moveable = 0
+	dontRender = ""
+	horizontalBorder = ""
+	Orientation = "UPPER_LEFT"
+			
+	iconType =
+	{
+		name ="religion_overlay_muslim_bg"
+		spriteType = "GFX_religion_overlay_big_bg"
+		position = { x= 0 y = -70 }
+	}
+	
+	iconType ={
+		name ="current_piety_progress_bg"
+		spriteType = "GFX_piety_bar_bg"
+		position = { x= 68 y = -30 }
+	}
+	
+	iconType ={
+		name ="current_piety_progress_frame"
+		spriteType = "GFX_piety_bar_frame"
+		position = { x= 52 y = -68 }
+	}
+	
+	iconType =
+	{
+		name ="low_piety"
+		spriteType = "GFX_piety_icon_low"
+		position = { x= -8 y = -66 }
+		Orientation = "UPPER_LEFT"
+	}
+	
+	iconType =
+	{
+		name ="high_piety"
+		spriteType = "GFX_piety_icon_high"
+		position = { x= 242 y = -66 }
+		Orientation = "UPPER_LEFT"
+	}
+	
+	iconType =
+	{
+		name ="current_piety"
+		spriteType = "GFX_war_overview_indicator"
+		position = { x= 135 y = -5 }
+	}
+	
+	instantTextBoxType = {
+		name = "current_piety_value"
+		position = { x= 152 y = -21 }
+		font = "vic_18"
+		borderSize = {x = 0 y = 0}
+		text = ""	
+		maxWidth = 32
+		maxHeight = 24
+		Orientation = "UPPER_LEFT"
+		format = centre
+	}
+	
+	instantTextBoxType = {
+		name = "current_piety_text"
+		position = { x = 78 y = -60 }
+		font = "vic_18"
+		borderSize = {x = 0 y = 0}
+		text = "CURRENT_PIETY"	
+		maxWidth = 160
+		maxHeight = 24
+		Orientation = "UPPER_LEFT"
+		format = centre
+	}
+	
+	
+	guiButtonType = {
+		name = "low_piety_action"
+		position = { x=71 y = -11}
+		quadTextureSprite ="GFX_low_piety_action"
+		Orientation = "LEFT"
+	}
+	
+	guiButtonType = {
+		name = "high_piety_action"
+		position = { x=200 y = -11}
+		quadTextureSprite ="GFX_high_piety_action"
+		Orientation = "LEFT"
+	}
+	
+
+
+}
 ################# BUDDHIST KARMA
 				windowType = {
 			name = "buddhist_specific_window"

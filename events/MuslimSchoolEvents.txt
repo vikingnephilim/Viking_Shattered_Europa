@@ -2983,16 +2983,8 @@ country_event = {
 	trigger = {
 		has_dlc = "Cradle of Civilization"
 		religion_group = muslim
+		has_religious_school = no
 		OR = {
-			has_religious_school = no
-			AND = {
-				religion_group = muslim
-				has_sunni_school_trigger = yes
-			}
-			AND = {
-				religion_group = muslim
-				has_sunni_school_trigger = yes
-			}
 			AND = {
 				religion_group = muslim
 				has_sunni_school_trigger = yes
@@ -3000,22 +2992,6 @@ country_event = {
 			AND = {
 				religion_group = muslim
 				has_shia_school_trigger = yes
-			}
-			AND = {
-				religion_group = muslim
-				has_shia_school_trigger = yes
-			}
-			AND = {
-				religion_group = muslim
-				has_shia_school_trigger = yes
-			}
-			AND = {
-				religion_group = muslim
-				has_quranist_school_trigger = yes
-			}
-			AND = {
-				religion_group = muslim
-				has_quranist_school_trigger = yes
 			}
 			AND = {
 				religion_group = muslim
@@ -3026,392 +3002,93 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = school_events.1.a		#Alawite
-		ai_chance = {
-			factor = 1
-		}
-		if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = alawite_school
-			}
-		}
-		else_if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = alawite_school
-			}
-		}
-		else = {
-			set_religious_school = {
-				group = muslim
-				school = alawite_school
-			}
+		set_religious_school = {
+			group = muslim
+			school = alawite_school
 		}
 	}
 	option = {
 		name = school_events.1.b		#Ashari
-		ai_chance = {
-			factor = 1
-		}
-		if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = ashari_school
-			}
-		}
-		else_if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = ashari_school
-			}
-		}
-		else = {
-			set_religious_school = {
-				group = muslim
-				school = ashari_school
-			}
+		set_religious_school = {
+			group = muslim
+			school = ashari_school
 		}
 	}
 	option = {
 		name = school_events.1.c		#Druze
-		ai_chance = {
-			factor = 1
-		}
-		if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = druze_school
-			}
-		}
-		else_if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = druze_school
-			}
-		}
-		else = {
-			set_religious_school = {
-				group = muslim
-				school = druze_school
-			}
+		set_religious_school = {
+			group = muslim
+			school = druze_school
 		}
 	}
 	option = {
 		name = school_events.1.dd		#fiqh
-		ai_chance = {
-			factor = 1
-		}
-		if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = fiqh_school
-			}
-		}
-		else_if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = fiqh_school
-			}
-		}
-		else = {
-			set_religious_school = {
-				group = muslim
-				school = fiqh_school
-			}
+		set_religious_school = {
+			group = muslim
+			school = fiqh_school
 		}
 	}
 	option = {
 		name = school_events.1.e		#Hurufi
-		ai_chance = {
-			factor = 1
-		}
-		if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = hurufi_school
-			}
-		}
-		else_if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = hurufi_school
-			}
-		}
-		else = {
-			set_religious_school = {
-				group = muslim
-				school = hurufi_school
-			}
+		set_religious_school = {
+			group = muslim
+			school = hurufi_school
 		}
 	}
 	option = {
 		name = school_events.1.f		#Ibadi
-		ai_chance = {
-			factor = 1
-		}
-		if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = ibadi_school
-			}
-		}
-		else_if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = ibadi_school
-			}
-		}
-		else = {
-			set_religious_school = {
-				group = muslim
-				school = ibadi_school
-			}
+		set_religious_school = {
+			group = muslim
+			school = ibadi_school
 		}
 	}
 	option = {
 		name = school_events.1.g		#Ismaili
-		ai_chance = {
-			factor = 1
-		}
-		if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = ismaili_school
-			}
-		}
-		else_if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = ismaili_school
-			}
-		}
-		else = {
-			set_religious_school = {
-				group = muslim
-				school = ismaili_school
-			}
+		set_religious_school = {
+			group = muslim
+			school = ismaili_school
 		}
 	}
 	option = {
 		name = school_events.1.h		#Kharijite
-		ai_chance = {
-			factor = 1
-		}
-		if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = kharijite_school
-			}
-		}
-		else_if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = kharijite_school
-			}
-		}
-		else = {
-			set_religious_school = {
-				group = muslim
-				school = kharijite_school
-			}
+		set_religious_school = {
+			group = muslim
+			school = kharijite_school
 		}
 	}
 	option = {
 		name = school_events.1.i		#Qarmatian
-		ai_chance = {
-			factor = 1
-		}
-		if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = qarmatian_school
-			}
-		}
-		else_if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = qarmatian_school
-			}
-		}
-		else = {
-			set_religious_school = {
-				group = muslim
-				school = qarmatian_school
-			}
+		set_religious_school = {
+			group = muslim
+			school = qarmatian_school
 		}
 	}
 	option = {
 		name = school_events.1.j		#Shabazzi
-		ai_chance = {
-			factor = 1
-		}
-		if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = shabazzi_school
-			}
-		}
-		else_if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = shabazzi_school
-			}
-		}
-		else = {
-			set_religious_school = {
-				group = muslim
-				school = shabazzi_school
-			}
+		set_religious_school = {
+			group = muslim
+			school = shabazzi_school
 		}
 	}
 	option = {
 		name = school_events.1.k		#Sufri
-		ai_chance = {
-			factor = 1
-		}
-		if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = sufri_school
-			}
-		}
-		else_if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = sufri_school
-			}
-		}
-		else = {
-			set_religious_school = {
-				group = muslim
-				school = sufri_school
-			}
+		set_religious_school = {
+			group = muslim
+			school = sufri_school
 		}
 	}
 	option = {
 		name = school_events.1.l		#Yazidi
-		ai_chance = {
-			factor = 1
-		}
-		if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = yazidi_school
-			}
-		}
-		else_if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = yazidi_school
-			}
-		}
-		else = {
-			set_religious_school = {
-				group = muslim
-				school = yazidi_school
-			}
+		set_religious_school = {
+			group = muslim
+			school = yazidi_school
 		}
 	}
 	option = {
 		name = school_events.1.m		#zikri
-		ai_chance = {
-			factor = 1
-		}
-		if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = zikri_school
-			}
-		}
-		else_if = {
-			limit = {
-				religion_group = muslim
-			}
-			set_religious_school = {
-				group = muslim
-				school = zikri_school
-			}
-		}
-		else = {
-			set_religious_school = {
-				group = muslim
-				school = zikri_school
-			}
+		set_religious_school = {
+			group = muslim
+			school = zikri_school
 		}
 	}
 }

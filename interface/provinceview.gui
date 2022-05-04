@@ -72,17 +72,17 @@ guiTypes = {
 
 	positionType = {
 		name = "top_section_lowres_history_pos"
-		position = { x = 436 y = 170 }
+		position = { x = -25 y = 40 }
 	}
 
 	positionType = {
 		name = "top_section_lowres_strait_pos"
-		position = { x = 180 y = 4 }
+		position = { x = 220 y = 4 }
 	}
 
 	positionType = {
 		name = "top_section_lowres_river_icon_pos"
-		position = { x = 210 y = 4 }
+		position = { x = 250 y = 4 }
 	}
 
 	positionType = {
@@ -118,7 +118,7 @@ guiTypes = {
 		iconType =
 		{
 			name ="provinceview_bg_large"
-			spriteType = "GFX_provinceview_bg_large"
+			spriteType = "GFX_provinceview_bg_new"
 			position = { x= -2 y = -81}
 		}
 
@@ -132,7 +132,7 @@ guiTypes = {
 		iconType =
 		{
 			name ="provinceview_foreign_bg_large"
-			spriteType = "GFX_provinceview_foreign_bg_large"
+			spriteType = "GFX_provinceview_foreign_bg_new"
 			position = { x= -2 y = -81}
 		}
 
@@ -146,7 +146,7 @@ guiTypes = {
 		{
 			name ="trade_icon"
 			spriteType = "GFX_diplomacy_traderights"
-			position = { x= 130 y = 413}
+			position = { x= 30 y = 471}
 			hint_tag = "hint_trade"
 		}
 
@@ -154,13 +154,13 @@ guiTypes = {
 		{
 			name ="military_icon"
 			spriteType = "GFX_icon_powers_military"
-			position = { x= 20 y = 415}
+			position = { x= 30 y = 373}
 		}
 
 		OverlappingElementsBoxType = {
 			name = "modifiers"
-			position = { x = 26 y = 371 }
-			size = { x = 446 y = 32 }
+			position = { x = 176 y = 331 }
+			size = { x = 252 y = 32 }
 			Orientation = "UPPER_LEFT"
 			format = right
 			spacing = 1
@@ -169,9 +169,9 @@ guiTypes = {
 		guiButtonType =
 		{
 			name ="institution_icon"
-			spriteType = "GFX_build_interface_institutions_tab_new"
-			position = { x=478 y=105}
-			shortcut = "s"
+			spriteType = "GFX_province_institutions_button"
+			position = { x= 440 y = 327 }
+			shortcut = "n"
 		}
 
 		iconType =
@@ -199,7 +199,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_province_tab_button"
 				buttonFont = "vic_18"
 				position = { x = 9 y = -40 }
-				shortcut = "a"
+				shortcut = "s"
 			}
 
 			guiButtonType = {
@@ -207,7 +207,7 @@ guiTypes = {
 				quadTextureSprite = "GFX_province_tab_button"
 				buttonFont = "vic_18"
 				position = { x = 212 y = -40 }
-				shortcut = "a"
+				shortcut = "s"
 			}
 
 			iconType ={
@@ -269,8 +269,7 @@ guiTypes = {
 			{
 				name ="history"
 				quadTextureSprite = "GFX_button_history"
-				position = { x = 107 y = 128 }
-				scale = 1.2
+				position = { x = -27 y = 128 }
 			}
 
 
@@ -282,9 +281,9 @@ guiTypes = {
 				textureFile = ""
 				font = "vic_22s"
 				borderSize = {x = 10 y = 8}
-				size = { x=240 y=32}
+				size = { x=180 y=32}
 				text = ""
-				ignore_tab_navigation = yes
+				ignore_tab_navigation = no
 			}
 
 			editBoxType = {
@@ -293,7 +292,7 @@ guiTypes = {
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 10 y = 8}
-				size = { x=240 y=32}
+				size = { x=180 y=32}
 				text = ""
 				ignore_tab_navigation = no
 			}
@@ -335,26 +334,26 @@ guiTypes = {
 			{
 				name ="strait_indicator"
 				spriteType = "GFX_strait"
-				position = { x= -25 y = 91 }
+				position = { x= -25 y = 96 }
 			}
 
 			iconType =
 			{
 				name = "river_indicator"
 				spriteType = "GFX_river_indicator_icon"
-				position = { x = -25 y = 60 }
+				position = { x = -25 y = 62 }
 			}
 
 			iconType =
 			{
 				name = "river_indicator_2"
 				spriteType = "GFX_river_indicator_icon"
-				position = { x = -25 y = 91 }
+				position = { x = -25 y = 96 }
 			}
 
 			guiButtonType = {
 				name = "close_button"
-				position = { x = 420 y = -10 }
+				position = { x = 418 y = -6 }
 				quadTextureSprite ="GFX_closebutton2"
 				shortcut = "ESCAPE"
 				clicksound = close_window
@@ -365,8 +364,8 @@ guiTypes = {
 		windowType = {
 			name = "province_window"
 			backGround=""
-			position = { x=0 y=12 }
-			size = { x=475 y=468 }
+			position = { x=0 y=0 }
+			size = { x=475 y=480 }
 			dontRender = ""
 			horizontalBorder= ""
 			verticalBorder= ""
@@ -386,7 +385,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "tax_base_value"
-				position = { x = 361 y = 68 }
+				position = { x = 80 y = 0}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -394,13 +393,13 @@ guiTypes = {
 				maxWidth = 40
 				maxHeight = 20
 				format = centre
-				#fixedsize = yes
+				fixedsize = yes
 			}
 
 			guiButtonType =
 			{
 				name ="tax_base_increase_button"
-				position = { x= 364 y = 87 }
+				position = { x= 50 y = 60 }
 				quadTextureSprite ="GFX_development_button_tax"
 				tooltip = ""
 				tooltipText =""
@@ -414,7 +413,7 @@ guiTypes = {
 			guiButtonType =
 			{
 				name ="tax_base_exploit_button"
-				position = { x= 364 y = 51 }
+				position = { x= 83 y = 78 }
 				quadTextureSprite ="GFX_exploit_button"
 				tooltip = ""
 				tooltipText =""
@@ -434,7 +433,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "prod_base_value"
-				position = { x = 398 y = 168 }
+				position = { x = 157 y = 0}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -442,13 +441,13 @@ guiTypes = {
 				maxWidth = 40
 				maxHeight = 20
 				format = centre
-			#	fixedsize = yes
+				fixedsize = yes
 			}
 
 			guiButtonType =
 			{
 				name ="prod_base_increase_button"
-				position = { x= 402 y = 87 }
+				position = { x= 128 y = 60 }
 				quadTextureSprite ="GFX_development_button_production"
 				tooltip = ""
 				tooltipText =""
@@ -461,7 +460,7 @@ guiTypes = {
 			guiButtonType =
 			{
 				name ="prod_base_exploit_button"
-				position = { x= 401 y = 51 }
+				position = { x= 161 y = 78 }
 				quadTextureSprite ="GFX_exploit_button"
 				tooltip = ""
 				tooltipText =""
@@ -479,7 +478,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "mp_base_value"
-				position = { x = 435 y = 68 } #position = { x = 244 y = 68 }
+				position = { x = 236 y = 0}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -487,13 +486,13 @@ guiTypes = {
 				maxWidth = 40
 				maxHeight = 20
 				format = centre
-			#	fixedsize = yes
+				fixedsize = yes
 			}
 
 			guiButtonType =
 			{
 				name ="mp_base_increase_button"
-				position = { x= 438 y = 87 } #position = { x= 416 y = 64 }
+				position = { x= 206 y = 60 }
 				quadTextureSprite ="GFX_development_button_manpower"
 				tooltip = ""
 				tooltipText =""
@@ -506,7 +505,7 @@ guiTypes = {
 			guiButtonType =
 			{
 				name ="mp_base_exploit_button"
-				position = { x= 437 y = 51 }
+				position = { x= 240 y = 78 }
 				quadTextureSprite ="GFX_exploit_button"
 				tooltip = ""
 				tooltipText =""
@@ -518,12 +517,12 @@ guiTypes = {
 			iconType = {
 				name ="development_icon"
 				spriteType = "GFX_development_icon"
-				position = { x = 323 y = 88 }
+				position = { x = 290 y = 64 }
 			}
 
 			instantTextBoxType = {
 				name = "development_value"
-				position = { x = 316 y = 63 }
+				position = { x = 309 y = 68}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -536,15 +535,14 @@ guiTypes = {
 
 			checkboxType = {
 				name = "settlement_growth_checkbox"
-				position = { x= 65 y = 242 }
+				position = { x= 342 y = 63 }
 				quadTextureSprite ="GFX_checkbox_settlement_growth"
-				scale = 1.2
 			}
-			
+
 			guiButtonType =
 			{
 				name ="settle_tribe_button"
-				position = { x= 450 y = 5 }
+				position = { x= 449 y = 60 }
 				quadTextureSprite ="GFX_settle_tribe_button"
 				tooltip = ""
 				tooltipText =""
@@ -557,12 +555,12 @@ guiTypes = {
 			iconType = {
 				name ="improve_icon"
 				spriteType = "GFX_extra_development_icon"
-				position = { x = -384 y = 63 } #negative x IR to remove
+				position = { x = 384 y = 63 }
 			}
 
 			instantTextBoxType = {
 				name = "improve_value"
-				position = { x = -405 y = 68} #negative x IR to remove
+				position = { x = 405 y = 68}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -576,7 +574,7 @@ guiTypes = {
 			guiButtonType =
 			{
 				name ="raze_button"
-				position = { x= 450 y = 5 }
+				position = { x= 450 y = 60 }
 				quadTextureSprite ="GFX_development_button_raze"
 				tooltip = ""
 				tooltipText =""
@@ -594,7 +592,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "tax"
-				position = { x = 320 y = 224}
+				position = { x = 25 y = 167}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -607,7 +605,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "tax_value"
-				position = { x = 403 y = 224}
+				position = { x = 69 y = 167}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -619,11 +617,11 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "production"
-				position = { x = 320 y = 242}
+				position = { x = 25 y = 188}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
-				text = "IR_PRODUCTION"
+				text = "LEDGER_PRODUCTION"
 				maxWidth = 80
 				maxHeight = 20
 				format = left
@@ -632,7 +630,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "production_value"
-				position = { x = 403 y = 242}
+				position = { x = 69 y = 188}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -644,7 +642,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "total"
-				position = { x = 320 y = 277}
+				position = { x = 25 y = 209}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -657,7 +655,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "total_value"
-				position = { x = 403 y = 277}
+				position = { x = 69 y = 209}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -671,7 +669,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "religion_title"
-				position = { x = 151 y = 268}
+				position = { x = 151 y = 241}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -689,7 +687,7 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "religion"
-				position = { x = 151 y = 288}
+				position = { x = 151 y = 259}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -704,14 +702,14 @@ guiTypes = {
 			{
 				name ="bad_religion_icon"
 				spriteType = "GFX_small_red_glow"
-				position = { x= 252 y = 263 }
+				position = { x= 252 y = 235 }
 			}
 
 			guiButtonType =
 			{
 				name ="religion_button"
 				spriteType = "GFX_province_religion_button"
-				position = { x= 257 y = 269 }
+				position = { x= 257 y = 241 }
 				hint_tag = "hint_religion"
 			}
 
@@ -719,7 +717,7 @@ guiTypes = {
 			{
 				name ="religion_icon"
 				spriteType = "GFX_icon_religion_small"
-				position = { x= 262 y = 274 }
+				position = { x= 262 y = 246 }
 				hint_tag = "hint_religion"
 				alwaystransparent = yes
 			}
@@ -729,7 +727,7 @@ guiTypes = {
 			{
 				name ="hre_icon"
 				spriteType = "GFX_hre_indicators"
-				position = { x = 52 y = 190 }
+				position = { x = 32 y = 328 }
 				Orientation = "UPPER_LEFT"
 				frame = 1
 				hint_tag = "hint_hre"
@@ -739,17 +737,16 @@ guiTypes = {
 			{
 				name ="trade_company_icon"
 				spriteType = "GFX_tradecompany_indicators"
-				position = { x = 52 y = 190 }
+				position = { x = 32 y = 328 }
 				Orientation = "UPPER_LEFT"
 				frame = 1
 				hint_tag = "hint_hre"
-				#scale = 0.75
 			}
 
 			guiButtonType = {
 				name ="hre_button"
 				quadTextureSprite = "GFX_hre_indicators"
-				position = { x = 52 y = 190 }
+				position = { x = 20 y = 328 }
 				hint_tag = "hint_hre"
 				frame = 1
 			}
@@ -757,7 +754,7 @@ guiTypes = {
 			guiButtonType = {
 				name ="trade_company_button"
 				quadTextureSprite = "GFX_tradecompany_indicators"
-				position = { x = 52 y = 190 }
+				position = { x = 20 y = 328 }
 				hint_tag = "hint_hre"
 				frame = 1
 			}
@@ -765,27 +762,19 @@ guiTypes = {
 			guiButtonType = {
 				name ="client_state_button"
 				quadTextureSprite = "GFX_client_state_button"
-				position = { x = 204 y = 48 }
+				position = { x = 100 y = 328 }
 			}
 
 			guiButtonType = {
 				name ="trading_city_button"
 				quadTextureSprite = "GFX_trading_city_button"
-				position = { x = 145 y = 62 }
+				position = { x = 140 y = 328 }
 			}
-
-			###AMYZ1.31
-			#guiButtonType = {
-			#	name ="migrate_button"
-			#	quadTextureSprite = "GFX_migrate_province"
-			#	position = { x = 225 y = 62 }
-			#	frame = 1
-			#}
 
 			### CLAIMS
 			instantTextBoxType = {
 				name = "claims_title"
-				position = { x = 21 y = 135}
+				position = { x = 151 y = 135}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -799,32 +788,30 @@ guiTypes = {
 			guiButtonType = {
 				name ="add_core_button"
 				quadTextureSprite = "GFX_add_core_button"
-				position = { x = 16 y = 190 }
-				shortcut = "x"
+				position = { x = 257 y = 150 }
 			}
 
-			guiButtonType = {
+				guiButtonType = {
 				name ="abandon_core_button"
 				quadTextureSprite = "GFX_abandon_core_button"
-				position = { x = 16 y = 190 }
+				position = { x = 257 y = 150 }
 			}
 
 			guiButtonType = {
 				name = "claim_province_button"
 				quadTextureSprite = "GFX_claim_province_button"
-				position = { x = 16 y = 190 }
-				shortcut = "x"
+				position = { x = 257 y = 150 }
 			}
 
-			guiButtonType = {
+				guiButtonType = {
 				name ="return_province_button"
 				quadTextureSprite = "GFX_return_province_button"
-				position = { x = 258 y = 48 }
+				position = { x = 60 y = 328 }
 			}
 
 			OverlappingElementsBoxType = {
 				name = "cores_box"
-				position = { x = 21 y = 155 }
+				position = { x = 151 y = 155 }
 				size = { x = 105 y = 32 }
 				Orientation = "UPPER_LEFT"
 				format = left
@@ -834,7 +821,7 @@ guiTypes = {
 			### Rebels
 			instantTextBoxType = {
 				name = "unrest_title"
-				position = { x = -4 y = 230}
+				position = { x = 22 y = 233}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -848,7 +835,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "unrest_value"
-				position = { x = 89 y = 230}
+				position = { x = 33 y = 248}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -863,7 +850,7 @@ guiTypes = {
 			guiButtonType =
 			{
 				name ="likely_rebel_shield"
-				position = { x= 106 y = 195 }
+				position = { x= 104 y = 233 }
 				quadTextureSprite = "GFX_shield_small"
 				tooltip = ""
 				tooltipText =""
@@ -874,11 +861,11 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "local_autonomy_title"
-				position = { x = 16 y = 266}
+				position = { x = 21 y = 268}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
-				text = "HEADER_AUTONOMY_WARSCORE_DEVASTATION_COMBO"
+				text = "autonomy"
 				maxWidth = 80
 				maxHeight = 20
 				format = left
@@ -887,7 +874,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "local_autonomy_value"
-				position = { x = 80 y = 266}
+				position = { x = 74 y = 268}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -902,21 +889,19 @@ guiTypes = {
 			guiButtonType = {
 				name ="inc_autonomy_button"
 				quadTextureSprite = "GFX_inc_autonomy_button"
-				position = { x =42 y = 244 }
-				scale = 0.75
+				position = { x =82 y = 286 }
 			}
 			guiButtonType = {
 				name ="dec_autonomy_button"
-				quadTextureSprite = "GFX_dec_autonomy_button" 
-				position = { x =17 y = 244 }
-				scale = 0.75
+				quadTextureSprite = "GFX_dec_autonomy_button"
+				position = { x =43 y = 286 }
 			}
 
 
 			### Culture
 			instantTextBoxType = {
 				name = "culture_title"
-				position = { x = 151 y = 224 }
+				position = { x = 151 y = 196}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -930,12 +915,12 @@ guiTypes = {
 			guiButtonType = {
 				name ="change_culture_button"
 				quadTextureSprite = "GFX_change_culture_button"
-				position = { x = 257 y = 223 }
+				position = { x = 257 y = 196 }
 			}
 
 			instantTextBoxType = {
 				name = "culture"
-				position = { x = 151 y = 242 }
+				position = { x = 151 y = 214}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -963,7 +948,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "queue_header"
-					position = { x = -620 y = 154} #yeeted off screen
+					position = { x = -20 y = 4}
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -976,11 +961,11 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "demographics_header"
-					position = { x = -196 y = 11 }
+					position = { x = -155 y = 4}
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
-					text = "HEADER_DEMOGRAPHICS_ECONOMY"
+					text = "HEADER_DEMOGRAPHICS"
 					maxWidth = 224
 					maxHeight = 20
 					format = centre
@@ -989,7 +974,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "military_header"
-					position = { x = -190 y = 303}
+					position = { x = -180 y = 275}
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -1002,11 +987,11 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "trade_header"
-					position = { x = -80 y = 303}
+					position = { x = -180 y = 375}
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
-					text = "HEADER_TRADE_STATUS_DUO"
+					text = "HEADER_TRADE"
 					maxWidth = 224
 					maxHeight = 20
 					format = left
@@ -1015,7 +1000,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "land_amount"
-					position = { x = 108 y = 340}
+					position = { x = 108 y = 57}
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -1030,12 +1015,12 @@ guiTypes = {
 				{
 					name ="land_amount_icon"
 					spriteType= "GFX_icon_land"
-					position = { x= 72 y = 328 }
+					position = { x= 72 y = 46 }
 				}
 
 				instantTextBoxType = {
 					name = "naval_amount"
-					position = { x = 192 y = 340}
+					position = { x = 192 y = 57}
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -1050,14 +1035,14 @@ guiTypes = {
 				{
 					name ="naval_amount_icon"
 					spriteType= "GFX_icon_naval"
-					position = { x= 156 y = 328 }
+					position = { x= 156 y = 46 }
 				}
 			}
 
 			windowType = {
 				name = "progress_bar_window"
 				backGround=""
-				position = { x=240 y=134 }
+				position = { x=240 y=104 }
 				size = { x=100 y=100 }
 				dontRender = ""
 				horizontalBorder= ""
@@ -1122,10 +1107,10 @@ guiTypes = {
 					scale = 0.8
 				}
 			}
-			#yeeting these off the screen
+
 			guiButtonType = {
 				name = "build_landunit_button"
-				position = { x=326 y = 466}#position = { x=317 y = 245}
+				position = { x=317 y = 245}
 				quadTextureSprite ="GFX_build_army"
 				tooltip = ""
 				tooltipText =""
@@ -1137,7 +1122,7 @@ guiTypes = {
 
 			guiButtonType = {
 				name = "build_merc_button"
-				position = { x= -627 y = 215}#position = { x= 427 y = 245}
+				position = { x= 427 y = 245}
 				quadTextureSprite ="GFX_build_merc"
 				tooltip = ""
 				tooltipText =""
@@ -1149,7 +1134,7 @@ guiTypes = {
 
 			guiButtonType = {
 				name = "build_navy_button"
-				position = { x = 406 y = 466}#position = { x = 372 y = 245}
+				position = { x = 372 y = 245}
 				quadTextureSprite ="GFX_build_navy"
 				tooltip = ""
 				tooltipText =""
@@ -1162,22 +1147,22 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "occupied_by"
-				position = { x = 309 y = 478}
+				position = { x = 309 y = 228}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
 				text = "PROVVIEW_OCCUPIED_BY"
 				maxWidth = 165
 				maxHeight = 30
-				format = center
+				format = centre
 				fixedsize = yes
 			}
 
 			guiButtonType =
 			{
 				name ="transfer_occupation_button"
-				position = { x= 478 y = 3 }
-				quadTextureSprite ="GFX_transfer_occupation_tab"
+				position = { x= 310 y = 245 }
+				quadTextureSprite ="GFX_transfer_occupation_button"
 				tooltip = ""
 				tooltipText =""
 				delayedTooltipText = ""
@@ -1188,7 +1173,7 @@ guiTypes = {
 			guiButtonType =
 			{
 				name ="occupied_by_shield"
-				position = { x= -650 y = 500 } #yeeted for space
+				position = { x= 370 y = 250 }
 				quadTextureSprite = "GFX_shield_small"
 				tooltip = ""
 				tooltipText =""
@@ -1202,12 +1187,12 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "sailor"
-				position = { x = 320 y = 200}
+				position = { x = 35 y = 450}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
 				text = "LEDGER_SAILORS"
-				maxWidth = 128
+				maxWidth = 100
 				maxHeight = 20
 				format = left
 				fixedsize = yes
@@ -1215,7 +1200,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "sailor_value"
-				position = { x = 403 y = 200}
+				position = { x = 108 y = 450}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -1228,13 +1213,12 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "manpower"
-				position = { x = 320 y = 182}
-				#position = { x = 35 y = 410}
+				position = { x = 35 y = 410}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
-				text = "IR_MANPOWER"
-				maxWidth = 128
+				text = "LEDGER_MANPOWER"
+				maxWidth = 100
 				maxHeight = 20
 				format = left
 				fixedsize = yes
@@ -1242,8 +1226,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "manpower_value"
-				position = { x = 403 y = 182}
-				#position = { x = 108 y = 410}
+				position = { x = 108 y = 410}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -1255,12 +1238,12 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "supply"
-				position = { x = 22 y = 47}
+				position = { x = 35 y = 430}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
 				text = "SUPPLY_LIMIT"
-				maxWidth = 128
+				maxWidth = 100
 				maxHeight = 20
 				format = left
 				fixedsize = yes
@@ -1268,7 +1251,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "supply_value"
-				position = { x = 77 y = 47}
+				position = { x = 108 y = 430}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -1281,7 +1264,7 @@ guiTypes = {
 			#Hidden by position
 			instantTextBoxType = {
 				name = "attrition"
-				position = { x = 21 y = 64}
+				position = { x = -2035 y = 450}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -1295,7 +1278,7 @@ guiTypes = {
 			#Hidden by position
 			instantTextBoxType = {
 				name = "attrition_value"
-				position = { x = 77 y = 64}
+				position = { x = -2108 y = 450}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -1308,69 +1291,70 @@ guiTypes = {
 			iconType = {
 				name ="warscore_icon"
 				spriteType = "GFX_ticking_war_score_icon"
-				position = { x = -557 y = 312 } #yeeted
+				position = { x = 197 y = 412 }
 			}
 
 			instantTextBoxType = {
 				name = "warscore_value"
-				position = { x = 94 y = 282 }
+				position = { x = 184 y = 445 }
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 4 y = 4}
 				text = "100.0%"
 				maxWidth = 50
 				maxHeight = 24
-				format = right
+				format = center
 			}
 
 			iconType = {
 				name ="no_building_fort"
 				spriteType = "GFX_fort0"
-				position = { x = 86 y = 468 }
+				position = { x = 240 y = 428 }
 				hint_tag = "hint_fortlevel"
 			}
 
 			iconType = {
 				name ="province_view_fort_nr_bg"
 				spriteType = "GFX_province_view_fort_nr_bg"
-				position = { x = 114 y = 464 }
+				position = { x = 268 y = 454 }
 			}
-			
+
 			iconType = {
 				name ="maintenance_icon"
 				spriteType = "GFX_maintenance_icon"
-				position = { x = 86 y = 445 }
+				position = { x = 240 y = 404 }
 			}
 
 			guiButtonType = {
 				name = "fort_maintenance_checkbox"
-				position = { x= 113 y= 447 }
+				position = { x= 267 y= 406 }
 				quadTextureSprite = "GFX_maintenance_checkbox"
-				shortcut = "z"
+				shortcut = "h"
 			}
 
 			iconType = {
 				name ="maintenance_lock_icon"
 				spriteType = "GFX_maintenance_lock_icon"
-				position = { x = 33 y = 445 }
+				position = { x = 292 y = 404 }
 			}
-			
+
 			guiButtonType = {
 				name = "fort_maintenance_lock_checkbox"
-				position = { x= 60 y= 447 }
+				position = { x= 319 y= 406 }
 				quadTextureSprite = "GFX_maintenance_checkbox"
 			}
 
 			iconType = {
 				name ="defensiveness_icon"
 				spriteType = "GFX_fort_defense_icon"
-				position = { x = 27 y = 490 }
+				position = { x = 344 y = 409 }
 				hint_tag = "hint_fortdefense"
+				scale = "0.8"
 			}
 
 			instantTextBoxType = {
 				name = "defensiveness_value"
-				position = { x = 36 y = 493 }
+				position = { x = 364 y = 408 }
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 4 y = 4}
@@ -1379,10 +1363,10 @@ guiTypes = {
 				maxHeight = 24
 				format = center
 			}
-			
+
 			instantTextBoxType = {
 				name = "garrison_value"
-				position = { x = 85 y = 520 }
+				position = { x = 418 y = 409 }
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 4 y = 4}
@@ -1391,29 +1375,17 @@ guiTypes = {
 				maxHeight = 24
 				format = centre
 			}
-			
-			instantTextBoxType = {
-				name = "garrison_label"
-				position = { x = 31 y = 520 }
-				textureFile = ""
-				font = "vic_18"
-				borderSize = {x = 4 y = 4}
-				text = "PW_GARRISON"
-				maxWidth = 70
-				maxHeight = 24
-				format = left
-			}
-			
+
 			iconType = {
 				name ="building_fort"
 				spriteType = "GFX_building_default"
-				position = { x = 86 y = 468 }
+				position = { x = 240 y = 428 }
 				hint_tag = "hint_fortlevel"
 			}
 
 			instantTextBoxType = {
 				name = "fort_number"
-				position = { x = 111 y = 492 }
+				position = { x = 265 y = 452 }
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 4 y = 4}
@@ -1422,18 +1394,10 @@ guiTypes = {
 				maxHeight = 24
 				format = center
 			}
-			
-			guiButtonType = {
-				name ="open_siege_window"
-				quadTextureSprite = "GFX_button_show_siege"
-				buttonFont = "vic_18"
-				position = { x = 442 y = 512 }
-				shortcut = "v"
-			}
 
 			guiButtonType = {
 				name = "select_allied_objective"
-				position = { x = 301 y = 516 }
+				position = { x = 291 y = 440 }
 				quadTextureSprite ="GFX_button_straight_148_32"
 				tooltip = ""
 				tooltipText =""
@@ -1446,9 +1410,9 @@ guiTypes = {
 
 				listboxType = {
 					name = "list"
-					position = { x = 302 y = 506 }
+					position = { x = 291 y = 440 }
 					backGround=""
-					size = { x=145 y = 200}
+					size = { x=150 y = 200}
 					Orientation = "UPPER_LEFT"
 					horizontal = 0
 					spacing = 0
@@ -1458,7 +1422,13 @@ guiTypes = {
 				}
 			}
 
-			
+			guiButtonType = {
+				name ="open_siege_window"
+				quadTextureSprite = "GFX_button_show_siege"
+				buttonFont = "vic_18"
+				position = { x = 437 y = 435 }
+				shortcut = "v"
+			}
 
 			### TRADE
 
@@ -1468,12 +1438,12 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "tradepower"
-				position = { x = 320 y = 128}
+				position = { x = 35 y = 510}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
 				text = "TRADE_POWER"
-				maxWidth = 128
+				maxWidth = 100
 				maxHeight = 20
 				format = left
 				fixedsize = yes
@@ -1481,7 +1451,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "tradepower_value"
-				position = { x = 403 y = 128}
+				position = { x = 108 y = 510}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -1493,12 +1463,12 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "tradevalue"
-				position = { x = 320 y = 164}
+				position = { x = 35 y = 530}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
 				text = "TRADE_VALUE"
-				maxWidth = 128
+				maxWidth = 100
 				maxHeight = 20
 				format = left
 				fixedsize = yes
@@ -1506,7 +1476,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "tradevalue_value"
-				position = { x = 403 y = 164}
+				position = { x = 108 y = 530}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -1518,12 +1488,12 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "goodsproduced"
-				position = { x = 320 y = 146}
+				position = { x = 35 y = 550}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
 				text = "TRADE_GOODS_LBL"
-				maxWidth = 128
+				maxWidth = 100
 				maxHeight = 20
 				format = left
 				fixedsize = yes
@@ -1531,7 +1501,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "goodsproduced_value"
-				position = { x = 403 y = 146}
+				position = { x = 108 y = 550}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
@@ -1543,16 +1513,15 @@ guiTypes = {
 
 			iconType = {
 				name = "latent_resource_icon"
-				position = { x= 233 y = 184 }
-				spriteType = "GFX_resource_icon_small"
+				position = { x= 423 y = 485 }
+				spriteType = "GFX_resource_icon"
 				Orientation = "UPPER_LEFT"
 				hint_tag = "hint_tradegoods"
 			}
 
 			guiButtonType = {
 				name = "resource_icon"
-				position = { x = 157 y = 149 }
-				#position = { x= 403 y = 500 }
+				position = { x= 403 y = 500 }
 				quadTextureSprite = "GFX_resource_icon"
 				Orientation = "UPPER_LEFT"
 				hint_tag = "hint_tradegoods"
@@ -1560,19 +1529,19 @@ guiTypes = {
 
 			iconType = {
 				name = "hidden_latent_resource_icon"
-				position = { x= 268 y = 184 }
+				position = { x= 448 y = 490 }
 				Orientation = "UPPER_LEFT"
 				spriteType = "GFX_resource_transparent"
 			}
 
 			instantTextBoxType = {
 				name = "resource_price_value"
-				position = { x= 198 y = 154 }
+				position = { x= 310 y = 560 }
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
 				text = "1337"
-				maxWidth = 64
+				maxWidth = 128
 				maxHeight = 24
 				format = right
 				fixedsize = yes
@@ -1581,7 +1550,7 @@ guiTypes = {
 			iconType = {
 				name ="resource_price_gold"
 				spriteType = "GFX_icon_gold_font_medium"
-				position = { x= 263 y = 150 }
+				position = { x= 435 y = 555 }
 				Orientation = "UPPER_LEFT"
 			}
 
@@ -1590,7 +1559,7 @@ guiTypes = {
 				quadTextureSprite = "button_type_1"
 				buttonFont = "vic_18"
 				buttonText = "NAME"
-				position = { x = 151 y = 516 }
+				position = { x = 251 y = 551 }
 			}
 
 
@@ -1598,7 +1567,7 @@ guiTypes = {
 			guiButtonType = {
 				name ="tradepost_button"
 				spriteType = "GFX_trade_post_button"
-				position = { x = 256 y = 466 }
+				position = { x = 356 y = 508 }
 				hint_tag = "hint_tradepost"
 			}
 
@@ -1606,7 +1575,7 @@ guiTypes = {
 			{
 				name ="tradepost_allready_present"
 				spriteType = "GFX_terms_accepted_icon"
-				position = { x= 263 y = 475 }
+				position = { x= 363 y = 517 }
 				scale = 0.7
 			}
 
@@ -1614,21 +1583,21 @@ guiTypes = {
 			{
 				name ="trade_pie"
 				spriteType = "GFX_trade_power_chart_small"
-				position = { x= 226 y = 460 }
+				position = { x= 276 y = 509 }
 			}
 
 			iconType =
 			{
 				name ="trade_pie_overlay"
 				spriteType = "GFX_provinceView_chart_overlay"
-				position = { x= 197 y = 455 }
+				position = { x= 247 y = 503 }
 			}
 
 			guiButtonType =
 			{
 				name ="trade_shield"
 				quadTextureSprite = "GFX_shield_small"
-				position = { x= 160 y = 469 }
+				position = { x= 310 y = 511 }
 			}
 
 
@@ -1636,7 +1605,7 @@ guiTypes = {
 			windowType = {
 				name = "change_culture_view"
 				backGround=""
-				position = { x= 28 y= 86 }
+				position = { x= 28 y= 137 }
 				size = { x=1024 y=100 }
 				moveable = 0
 				dontRender = ""
@@ -1707,7 +1676,7 @@ guiTypes = {
 			windowType = {
 				name = "build_army_view"
 				backGround=""
-				position = { x= 28 y= 86 }
+				position = { x= 28 y= 137 }
 				size = { x=1024 y=100 }
 				moveable = 0
 				dontRender = ""
@@ -1725,7 +1694,7 @@ guiTypes = {
 
 				guiButtonType = {
 					name = "back_button"
-					position = { x=175 y =448}
+					position = { x=175 y =408}
 					quadTextureSprite ="GFX_province_back_button"
 					tooltip = ""
 					tooltipText =""
@@ -1781,7 +1750,7 @@ guiTypes = {
 					name = "buildqueue"
 					position = { x = 0 y = 267 }
 					backGround=""
-					size = { x=433 y = 180}
+					size = { x=433 y = 144}
 					horizontal = 0
 					spacing = 0
 					scrollbartype = "standardlistbox_slider"
@@ -1789,7 +1758,7 @@ guiTypes = {
 				}
 				instantTextBoxType={
 					name = "force_limit"
-					position = {x = 0 y = 455 }
+					position = {x = 0 y = 415 }
 					font = "vic_18"
 					borderSize = {x = 0 y = 0}
 					maxWidth = 180
@@ -1802,7 +1771,7 @@ guiTypes = {
 			windowType = {
 				name = "build_navy_view"
 				backGround=""
-				position = { x= 28 y= 86 }
+				position = { x= 28 y= 137 }
 				size = { x=1024 y=100 }
 				moveable = 0
 				dontRender = ""
@@ -1820,7 +1789,7 @@ guiTypes = {
 
 				guiButtonType = {
 					name = "back_button"
-					position = { x=175 y =448}
+					position = { x=175 y =408}
 					quadTextureSprite ="GFX_province_back_button"
 					tooltip = ""
 					tooltipText =""
@@ -1881,7 +1850,7 @@ guiTypes = {
 					name = "buildqueue"
 					position = { x = 0 y = 267 }
 					backGround=""
-					size = { x=433 y = 180 }
+					size = { x=433 y = 150 }
 					horizontal = 0
 					spacing = 0
 					scrollbartype = "standardlistbox_slider"
@@ -1889,7 +1858,7 @@ guiTypes = {
 				}
 				instantTextBoxType={
 					name = "force_limit"
-					position = {x = 0 y = 455 }
+					position = {x = 0 y = 415 }
 					font = "vic_18"
 					borderSize = {x = 0 y = 0}
 					maxWidth = 180
@@ -1913,19 +1882,19 @@ guiTypes = {
 
 				guiButtonType = {
 					name = "shield"
-					position = { x=20 y = -76 }
+					position = { x=34 y = -4 }
 					quadTextureSprite ="GFX_shield_medium"
 					Orientation = "UPPER_LEFT"
 				}
 
 				instantTextBoxType = {
 					name = "country_name"
-					position = { x = -62 y = -180 }
+					position = { x = 96 y = -6 }
 					textureFile = ""
 					font = "vic_22"
 					borderSize = {x = 4 y = 4}
 					text = "Country Name"
-					maxWidth = 250
+					maxWidth = 130
 					maxHeight = 32
 					format = left
 					fixedsize = yes
@@ -1933,11 +1902,11 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "demographics_header"
-					position = { x = -206 y = 5 }
+					position = { x = -165 y = -2}
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
-					text = "HEADER_DEMOGRAPHICS_ECONOMY"
+					text = "HEADER_DEMOGRAPHICS"
 					maxWidth = 224
 					maxHeight = 20
 					format = centre
@@ -1946,7 +1915,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "military_header"
-					position = { x = -200 y = 297}
+					position = { x = -190 y = 269}
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -1959,11 +1928,11 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "trade_header"
-					position = { x = -90 y = 297}
+					position = { x = -190 y = 369}
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
-					text = "HEADER_TRADE_STATUS_DUO"
+					text = "HEADER_TRADE"
 					maxWidth = 224
 					maxHeight = 20
 					format = left
@@ -1974,13 +1943,13 @@ guiTypes = {
 				{
 					name ="government_type_icon"
 					spriteType = "GFX_government_type_icon"
-					position = { x= -60 y = -57 }
+					position = { x= 138 y = 24 }
 					Orientation = "UPPER_LEFT"
 				}
 
 				instantTextBoxType = {
 					name = "opinion_box"
-					position = { x = -26 y = -57 }
+					position = { x = 94 y = 28 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 4 y = 4}
@@ -1994,7 +1963,7 @@ guiTypes = {
 				{
 					name ="foreign_attitude_icons_strip"
 					spriteType = "GFX_attitude_icons_strip"
-					position = { x= -30 y = -57 }
+					position = { x= 87 y = 26 }
 					Orientation = "UPPER_LEFT"
 				}
 
@@ -2002,13 +1971,13 @@ guiTypes = {
 				{
 					name ="miltech_icon"
 					spriteType = "GFX_icon_powers_military_tech"
-					position = { x= -222 y = 357 }
+					position = { x= 175 y = 28 }
 					Orientation = "UPPER_LEFT"
 				}
 
 				instantTextBoxType = {
 					name = "miltech_value"
-					position = { x = -188 y = 356 }
+					position = { x = 202 y = 28 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 4 y = 4}
@@ -2020,15 +1989,15 @@ guiTypes = {
 
 				OverlappingElementsBoxType = {
 					name = "diplostatus_box"
-					position = { x = -230 y = -25 }
-					size = { x = 280 y = 32 }
-					format = right
+					position = { x = 57 y = 60 }
+					size = { x = 185 y = 32 }
+					format = left
 					spacing = 1
 				}
 
 				guiButtonType = {
 					name = "button_diploaction"
-					position = { x=70 y =326 } #yeeted, diplo thru shield
+					position = { x=66 y =91 }
 					quadTextureSprite ="button_type_7"
 					tooltip = ""
 					tooltipText =""
@@ -2132,8 +2101,8 @@ guiTypes = {
 					quadTextureSprite ="largefloaterbutton"
 					buttonText = "CANCEL"
 					buttonFont = "vic_18"
-					shortcut = "ESCAPE"
-					#extra_shortcut = ""
+					shortcut = "z"
+					extra_shortcut = "ESCAPE"
 				}
 			}
 
@@ -2179,8 +2148,8 @@ guiTypes = {
 					delayedTooltipText = ""
 					buttonText = "DOMESTIC_BACK"
 					buttonFont = "vic_18"
-					shortcut = "ESCAPE"
-					#extra_shortcut = ""
+					shortcut = "z"
+					extra_shortcut = "ESCAPE"
 					clicksound = back_click
 				}
 
@@ -2201,7 +2170,7 @@ guiTypes = {
 			windowType = {
 				name = "tradegoods_province_window"
 				backGround=""
-				position = { x=10 y=123 }
+				position = { x=10 y=485 }
 				size = { x=300 y=300 }
 				dontRender = ""
 				horizontalBorder= ""
@@ -2221,20 +2190,20 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "tradegoods_name"
-					position = { x = 85 y = 102 }
+					position = { x = 20 y = -10 }
 					textureFile = ""
 					font = "vic_22"
 					borderSize = {x = 4 y = 4}
 					text = "iron"
 					maxWidth = 250
 					maxHeight = 32
-					format = center
+					format = left
 					fixedsize = yes
 				}
 
 				instantTextBoxType = {
 					name = "tradegoods_base_price"
-					position = { x = -228 y = 18 } #yeeted
+					position = { x = 28 y = 18 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -2247,7 +2216,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "tradegoods_base_price_value"
-					position = { x = -255 y = 18 } #yeeted
+					position = { x = 55 y = 18 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -2261,13 +2230,13 @@ guiTypes = {
 				iconType = {
 					name ="tradegoods_base_price_value_gold"
 					spriteType = "GFX_icon_gold_font_medium"
-					position = { x= -180 y = 13 } #yeeted
+					position = { x= 180 y = 13 }
 					Orientation = "UPPER_LEFT"
 				}
 
 				instantTextBoxType = {
 					name = "tradegoods_current_price"
-					position = { x = -228 y = 37 }
+					position = { x = 28 y = 37 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -2280,7 +2249,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "tradegoods_current_price_value"
-					position = { x = -255 y = 37 }
+					position = { x = 55 y = 37 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -2294,17 +2263,17 @@ guiTypes = {
 				iconType = {
 					name ="tradegoods_current_price_value_gold"
 					spriteType = "GFX_icon_gold_font_medium"
-					position = { x= -180 y = 32 }
+					position = { x= 180 y = 32 }
 					Orientation = "UPPER_LEFT"
 				}
 
 				instantTextBoxType = {
 					name = "tradegoods_production"
-					position = { x = 148 y = 122 }
+					position = { x = 228 y = 32 }
 					textureFile = ""
 					font = "vic_22"
 					borderSize = {x = 2 y = 2}
-					text = "IR_PRODUCTION"
+					text = "LEDGER_PRODUCTION"
 					maxWidth = 128
 					maxHeight = 24
 					format = centre
@@ -2313,7 +2282,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "tradegoods_production_value"
-					position = { x = 148 y = 148 }
+					position = { x = 228 y = 58 }
 					textureFile = ""
 					font = "vic_22"
 					borderSize = {x = 2 y = 2}
@@ -2326,7 +2295,7 @@ guiTypes = {
 
 				guiButtonType = {
 					name = "close_button"
-					position = { x = 125 y = 80 }
+					position = { x = 437 y = -14 }
 					quadTextureSprite ="GFX_closebutton2"
 					shortcut = "ESCAPE"
 					clicksound = close_window
@@ -2337,7 +2306,7 @@ guiTypes = {
 			{
 				name = "loot_icon"
 				spriteType = "GFX_loot_icon"
-				position = { x= 21 y = 319 }
+				position = { x= 22 y = 130 }
 				Orientation = "UPPER_LEFT"
 			}
 
@@ -2345,7 +2314,7 @@ guiTypes = {
 			{
 				name = "loot_progress"
 				spriteType = "GFX_loot_progressbar"
-				position = { x= 61 y = 322 }
+				position = { x= 54 y = 137 }
 				Orientation = "UPPER_LEFT"
 			}
 
@@ -2353,7 +2322,7 @@ guiTypes = {
 			{
 				name = "loot_progress_frame"
 				spriteType = "GFX_loot_bar_frame"
-				position = { x= 60 y = 322 }
+				position = { x= 53 y = 135 }
 				Orientation = "UPPER_LEFT"
 			}
 
@@ -2361,29 +2330,28 @@ guiTypes = {
 			{
 				name = "devastation_icon"
 				spriteType = "GFX_devestation_icon"
-				position = { x= -524 y = 292 } #yeeted
+				position = { x= 24 y = 102 }
 				Orientation = "UPPER_LEFT"
 			}
 
 
 			instantTextBoxType = {
 				name = "devastation_value"
-				position = { x = 79 y = 303}
+				position = { x = 64 y = 108}
 				textureFile = ""
 				font = "vic_18"
 				borderSize = {x = 2 y = 2}
 				text = "22.12%"
 				maxWidth = 64
 				maxHeight = 20
-				format = right
+				format = center
 				fixedsize = yes
 			}
 
 			guiButtonType = {
 				name = "buildings_button"
-				position = { x=478 y=135}
+				position = { x=478 y=144}
 				quadTextureSprite ="GFX_build_interface_building_tab"
-				shortcut = "d"
 			}
 		}
 
@@ -2432,7 +2400,7 @@ guiTypes = {
 			{
 				name = "supply_depots"
 				spriteType = "GFX_supply_depots_icon"
-				position = { x = 306 y = 8 }
+				position = { x = 283 y = 8 }
 			}
 
 
@@ -2442,14 +2410,14 @@ guiTypes = {
 				spriteType = "GFX_in_state_icon"
 				position = { x = 277 y = 9 }
 			}
-			
+
 			iconType =
 			{
 				name = "is_territory"
 				spriteType = "GFX_in_territory_icon"
 				position = { x = 277 y = 9 }
 			}
-			
+
 			guiButtonType =
 			{
 				name = "concentrate_development"
@@ -2469,8 +2437,8 @@ guiTypes = {
 				name = "make_state"
 				quadTextureSprite = "GFX_make_state_button"
 				position = { x = 378 y = 9 }
-				
 			}
+
 			guiButtonType =
 			{
 				name = "abandon_state"
@@ -2591,7 +2559,7 @@ guiTypes = {
 				buttonText = "VIEW_STATE_EDICTS"
 
 				position = { x = 326 y = 157 }
-				shortcut = "g"
+				shortcut = "d"
 			}
 
 
@@ -2632,17 +2600,17 @@ guiTypes = {
 			guiButtonType = {
 				name = "sort_state_unrest"
 				quadTextureSprite = "GFX_sort_state_unrest"
-				position = { x = 361 y = 231 }
+				position = { x = 357 y = 231 }
 			}
 			guiButtonType = {
 				name = "sort_state_fort"
 				quadTextureSprite = "GFX_sort_state_fort"
-				position = { x = 399 y = 231 }
+				position = { x = 415 y = 231 }
 			}
 			guiButtonType = {
 				name = "sort_state_devastation"
 				quadTextureSprite = "GFX_sort_state_devastation"
-				position = { x = 432 y = 231 }
+				position = { x = 448 y = 231 }
 			}
 
 
@@ -2650,7 +2618,7 @@ guiTypes = {
 				name = "provinces_listbox"
 				backGround = ""
 				position = { x= 20 y = 250 }
-				size = { x=445 y=160 }
+				size = { x=220 y=250 }
 				Orientation = "UPPER_LEFT"
 				horizontal = 0
 				scrollbartype = "standardlistbox_slider"
@@ -2693,7 +2661,8 @@ guiTypes = {
 				maxHeight = 20
 				format = right
 			}
-			
+
+
 			# Cawa
 			iconType = {
 				name = "cawa_bg"
@@ -2709,7 +2678,7 @@ guiTypes = {
 
 				position = { x = 24 y = 427 }
 			}
-			
+
 			iconType =
 			{
 				name = "cawa_icon"
@@ -2824,28 +2793,30 @@ guiTypes = {
 			fullScreen = no
 			moveable = 0
 			Orientation = "UPPER_LEFT"
-			
+
 			#### GREAT PROJECTS WINDOW
 			windowType = {
 				name = "great_projects_window"
 				backGround=""
-				position = { x=15 y=-5 } 
-				size = { x=475 y=210 } 
+				position = { x=15 y=-105 }
+				size = { x=475 y=210 }
 				dontRender = ""
 				horizontalBorder= ""
 				verticalBorder= ""
 				fullScreen = no
 				moveable = 0
 				Orientation = "UPPER_LEFT"
+
 				iconType =
 				{
 					name ="great_projects_window_bg"
 					spriteType = "GFX_provinceview_great_projects_bg"
-					position = { x= -14 y = 100 }
+					position = { x= -14 y = 0 }
 				}
+
 				instantTextBoxType = {
 					name = "header_label"
-					position = { x = 16 y = 129 }
+					position = { x = 16 y = 29 }
 					textureFile = ""
 					font = "vic_22"
 					borderSize = {x = 2 y = 2}
@@ -2857,7 +2828,7 @@ guiTypes = {
 				
 				smoothListboxType = {
 					name = "great_projects_list"
-					position = { x = 7 y = 155 }
+					position = { x = 7 y = 55 }
 					backGround=""
 					size = { x = 300 y = 180 }
 					spacing = 2
@@ -2869,7 +2840,7 @@ guiTypes = {
 			windowType = {
 				name = "general_buildings_window"
 				backGround=""
-				position = { x=1 y=0 }
+				position = { x=1 y=115 }
 				size = { x=475 y=480 }
 				dontRender = ""
 				horizontalBorder= ""
@@ -2882,12 +2853,12 @@ guiTypes = {
 				{
 					name ="provinceview_building_bg"
 					spriteType = "GFX_provinceview_building_bg"
-					position = { x= -3 y = 115 }
+					position = { x= -3 y = 0 }
 				}
 
 				instantTextBoxType = {
 					name = "province_improvements_label"
-					position = { x = 30 y = 140 }
+					position = { x = 30 y = 25 }
 					textureFile = ""
 					font = "vic_22"
 					borderSize = {x = 2 y = 2}
@@ -2899,13 +2870,13 @@ guiTypes = {
 
 				guiButtonType = {
 					name = "center_of_trade_button"
-					position = { x=174 y=295 }
+					position = { x=174 y=180 }
 					spriteType = "GFX_center_of_trade_inland_1"
 				}
 
 				iconType = {
 					name = "center_of_trade_icon"
-					position = { x=174 y=295 }
+					position = { x=174 y=180 }
 					spriteType = "GFX_center_of_trade_inland_1"
 				}
 
@@ -2914,7 +2885,7 @@ guiTypes = {
 			windowType = {
 				name = "province_values_window"
 				backGround=""
-				position = { x=4 y=-106 }
+				position = { x=4 y=354 }
 				size = { x=475 y=480 }
 				dontRender = ""
 				horizontalBorder= ""
@@ -2925,7 +2896,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "province_values_label"
-					position = { x = 30 y = 460 }
+					position = { x = 30 y = 0 }
 					textureFile = ""
 					font = "vic_22"
 					borderSize = {x = 2 y = 2}
@@ -2934,11 +2905,11 @@ guiTypes = {
 					maxHeight = 32
 					format = left
 				}
-				
+
 				guiButtonType =
 				{
 					name ="expand_infrastructure_button"
-					position = { x= 240 y = 465 }
+					position = { x= 240 y = 5 }
 					quadTextureSprite ="GFX_exploit_button_expand_infrastructure"
 					tooltip = ""
 					tooltipText =""
@@ -2951,7 +2922,7 @@ guiTypes = {
 				guiButtonType =
 				{
 					name ="reduce_infrastructure_button"
-					position = { x= 280 y = 465 }
+					position = { x= 280 y = 5 }
 					quadTextureSprite ="GFX_exploit_button_reduce_infrastructure"
 					tooltip = ""
 					tooltipText =""
@@ -2965,13 +2936,13 @@ guiTypes = {
 				{
 					name ="naval_forcelimit_icon"
 					spriteType = "GFX_naval_forcelimit_icon"
-					position = { x= 33 y = 542 }
+					position = { x= 33 y = 82 }
 					Orientation = "UPPER_LEFT"
 				}
 
 				instantTextBoxType = {
 					name = "naval_forcelimit_value"
-					position = { x = 72 y = 547 }
+					position = { x = 72 y = 87 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -2985,13 +2956,13 @@ guiTypes = {
 				{
 					name ="land_forcelimit_icon"
 					spriteType = "GFX_land_forcelimit_icon"
-					position = { x= 130 y = 542 }
+					position = { x= 130 y = 82 }
 					Orientation = "UPPER_LEFT"
 				}
 
 				instantTextBoxType = {
 					name = "land_forcelimit_value"
-					position = { x = 148 y = 547 }
+					position = { x = 148 y = 87 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -3005,13 +2976,13 @@ guiTypes = {
 				{
 					name = "province_governing_cost_icon"
 					spriteType = "GFX_province_governing_cost"
-					position = { x= 224 y = 544  }
+					position = { x= 224 y = 82  }
 					Orientation = "UPPER_LEFT"
 				}
-
+				
 				instantTextBoxType = {
 					name = "capacity_value"
-					position = { x = 251 y = 547 }
+					position = { x = 253 y = 87 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -3020,18 +2991,18 @@ guiTypes = {
 					maxHeight = 20
 					format = right
 				}
-				
+
 				iconType =
 				{
 					name = "center_of_revolution"
 					spriteType = "GFX_center_of_revolution"
-					position = { x = 28 y = 601 }
+					position = { x = 28 y = 141 }
 					scale = 1
 				}
 
 				instantTextBoxType = {
 					name = "center_of_revolution_label"
-					position = { x = 90 y = 600 }
+					position = { x = 90 y = 140 }
 					textureFile = ""
 					font = "vic_22"
 					borderSize = {x = 2 y = 2}
@@ -3043,7 +3014,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "spreading_to_provinces_label"
-					position = { x = 93 y = 625 }
+					position = { x = 93 y = 165 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -3055,7 +3026,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "spreading_revolution_label"
-					position = { x = 90 y = 600 }
+					position = { x = 90 y = 140 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -3067,7 +3038,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "spreaded_revolution_label"
-					position = { x = 90 y = 600 }
+					position = { x = 90 y = 140 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -3081,26 +3052,26 @@ guiTypes = {
 				{
 					name = "revolution_spread"
 					spriteType = "GFX_revolution_spreading"
-					position = { x = 28 y = 601 }
+					position = { x = 28 y = 141 }
 				}
 
 				iconType =
 				{
 					name ="revolution_progress"
 					spriteType = "GFX_provinceView_revolution_progressbar"
-					position = { x = 99 y = 632 }
+					position = { x = 99 y = 172 }
 				}
 
 				iconType =
 				{
 					name ="revolution_progress_frame"
 					spriteType = "GFX_provinceView_morale_frame_medium"
-					position = { x = 90 y = 628 }
+					position = { x = 90 y = 168 }
 				}
 
 				instantTextBoxType = {
 					name = "revolution_progress_label"
-					position = { x = 150 y = 650 }
+					position = { x = 150 y = 190 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -3109,18 +3080,18 @@ guiTypes = {
 					maxHeight = 32
 					format = left
 				}
-
+	
 				iconType =
 				{
 					name ="build_allowed_icon"
 					spriteType = "GFX_technologyView_show_buildings"
-					position = { x= 32 y = 495 }
+					position = { x= 32 y = 35 }
 					Orientation = "UPPER_LEFT"
 				}
 
 				instantTextBoxType = {
 					name = "build_allowed_value"
-					position = { x = 66 y = 500}
+					position = { x = 66 y = 40}
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -3135,13 +3106,13 @@ guiTypes = {
 				{
 					name ="build_cost_modifier_icon"
 					spriteType = "GFX_build_cost"
-					position = { x= 129 y = 499 }
+					position = { x= 129 y = 39 }
 					Orientation = "UPPER_LEFT"
 				}
 
 				instantTextBoxType = {
 					name = "build_cost_modifier"
-					position = { x = 150 y = 500 }
+					position = { x = 150 y = 40 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -3155,13 +3126,13 @@ guiTypes = {
 				{
 					name ="build_time_modifier_icon"
 					spriteType = "GFX_build_time"
-					position = { x= 224 y = 496 }
+					position = { x= 224 y = 36 }
 					Orientation = "UPPER_LEFT"
 				}
 
 				instantTextBoxType = {
 					name = "build_time_modifier"
-					position = { x = 245 y = 500 }
+					position = { x = 245 y = 40 }
 					textureFile = ""
 					font = "vic_18"
 					borderSize = {x = 2 y = 2}
@@ -3196,11 +3167,11 @@ guiTypes = {
 				guiButtonType = {
 					name = "back_button"
 					position = { x=160 y =530}
-					quadTextureSprite ="GFX_closebutton2" #GFX_standard_button_71
+					quadTextureSprite ="GFX_standard_button_71"
 					tooltip = ""
 					tooltipText =""
 					delayedTooltipText = ""
-					buttonText = "" #DOMESTIC_BACK
+					buttonText = "DOMESTIC_BACK"
 					buttonFont = "vic_18"
 					shortcut = "ESCAPE"
 					clicksound = back_click
@@ -3255,12 +3226,12 @@ guiTypes = {
 
 				guiButtonType = {
 					name = "back_button"
-					position = { x=510 y = 5 }
-					quadTextureSprite ="GFX_closebutton2" #GFX_standard_button_71
+					position = { x=160 y =534}
+					quadTextureSprite ="GFX_standard_button_71"
 					tooltip = ""
 					tooltipText =""
 					delayedTooltipText = ""
-					buttonText = "" #DOMESTIC_BACK
+					buttonText = "DOMESTIC_BACK"
 					buttonFont = "vic_18"
 					shortcut = "ESCAPE"
 					clicksound = back_click
@@ -3294,8 +3265,8 @@ guiTypes = {
 			windowType = {
 				name = "natives_buildings_window"
 				backGround=""
-				position = {  x=1 y=-1 }
-				size = { x=475 y=480 }
+				position = {  x=1 y=209 }
+				size = { x=475 y=270 }
 				dontRender = ""
 				horizontalBorder= ""
 				verticalBorder= ""
@@ -3350,7 +3321,7 @@ guiTypes = {
 					name = "buildings"
 					position = { x = 12 y = 67 }
 					backGround=""
-					size = { x=365 y = 420}
+					size = { x=365 y = 210}
 					Orientation = "UPPER_LEFT"
 					horizontal = 0
 					spacing = 0
@@ -3363,7 +3334,7 @@ guiTypes = {
 				windowType = {
 					name = "province_values_window"
 					backGround=""
-					position = { x=0 y=-100 }
+					position = { x=0 y=290 }
 					size = { x=475 y=586 }
 					dontRender = ""
 					horizontalBorder= ""
@@ -3374,7 +3345,7 @@ guiTypes = {
 
 					instantTextBoxType = {
 						name = "province_values_label"
-						position = { x = 30 y = 602 }
+						position = { x = 30 y = 2 }
 						textureFile = ""
 						font = "vic_22"
 						borderSize = {x = 2 y = 2}
@@ -3389,13 +3360,13 @@ guiTypes = {
 					{
 						name ="naval_forcelimit_icon"
 						spriteType = "GFX_naval_forcelimit_icon"
-						position = { x= 30 y = 640 }
+						position = { x= 30 y = 33 }
 						Orientation = "UPPER_LEFT"
 					}
 
 					instantTextBoxType = {
 						name = "naval_forcelimit_value"
-						position = { x = 62 y = 654 }
+						position = { x = 62 y = 38 }
 						textureFile = ""
 						font = "vic_18"
 						borderSize = {x = 2 y = 2}
@@ -3409,13 +3380,13 @@ guiTypes = {
 					{
 						name ="land_forcelimit_icon"
 						spriteType = "GFX_land_forcelimit_icon"
-						position = { x= 120 y = 640 }
+						position = { x= 120 y = 33 }
 						Orientation = "UPPER_LEFT"
 					}
 
 					instantTextBoxType = {
 						name = "land_forcelimit_value"
-						position = { x = 152 y = 654 }
+						position = { x = 152 y = 38 }
 						textureFile = ""
 						font = "vic_18"
 						borderSize = {x = 2 y = 2}
@@ -3434,14 +3405,14 @@ guiTypes = {
 					{
 						name ="governing_capacity_icon"
 						spriteType = "GFX_governing_capacity"
-						position = { x= 220 y = 640  }
+						position = { x= 205 y = -12  }
 						Orientation = "UPPER_LEFT"
 						scale = 0.75
 					}
 					
 					instantTextBoxType = {
 						name = "capacity_value"
-						position = { x = 260 y = 654 }
+						position = { x = 237 y = 0 }
 						textureFile = ""
 						font = "vic_18"
 						borderSize = {x = 2 y = 2}
@@ -3455,13 +3426,13 @@ guiTypes = {
 					{
 						name ="build_allowed_icon"
 						spriteType = "GFX_technologyView_show_buildings"
-						position = { x= 210 y = 634 }
+						position = { x= 210 y = 32 }
 						Orientation = "UPPER_LEFT"
 					}
 
 					instantTextBoxType = {
 						name = "build_allowed_value"
-						position = { x = 242 y = 638 }
+						position = { x = 242 y = 38 }
 						textureFile = ""
 						font = "vic_18"
 						borderSize = {x = 2 y = 2}
@@ -3476,13 +3447,13 @@ guiTypes = {
 					{
 						name ="build_cost_modifier_icon"
 						spriteType = "GFX_build_cost"
-						position = { x= 300 y = 634 }
+						position = { x= 300 y = 34 }
 						Orientation = "UPPER_LEFT"
 					}
 
 					instantTextBoxType = {
 						name = "build_cost_modifier"
-						position = { x = 332 y = 638 }
+						position = { x = 332 y = 38 }
 						textureFile = ""
 						font = "vic_18"
 						borderSize = {x = 2 y = 2}
@@ -3495,13 +3466,13 @@ guiTypes = {
 					{
 						name ="build_time_modifier_icon"
 						spriteType = "GFX_build_time"
-						position = { x= 300 y = 596 }
+						position = { x= 300 y = -4 }
 						Orientation = "UPPER_LEFT"
 					}
 
 					instantTextBoxType = {
 						name = "build_time_modifier"
-						position = { x = 332 y = 600 }
+						position = { x = 332 y = 0 }
 						textureFile = ""
 						font = "vic_18"
 						borderSize = {x = 2 y = 2}
@@ -3656,14 +3627,13 @@ guiTypes = {
 					{
 						name ="governing_capacity_icon"
 						spriteType = "GFX_governing_capacity"
-						position = { x= 220 y = 634  }
+						position = { x= 212 y = 599 }
 						Orientation = "UPPER_LEFT"
-						scale = 0.75
 					}
 					
 					instantTextBoxType = {
 						name = "capacity_value"
-						position = { x = 260 y = 638 }
+						position = { x = 245 y = 600 }
 						textureFile = ""
 						font = "vic_18"
 						borderSize = {x = 2 y = 2}
@@ -3741,7 +3711,6 @@ guiTypes = {
 				position = { x = 304 y = 123 }
 				quadTextureSprite ="GFX_closebutton2"
 				clicksound = close_window
-				shortcut = "d"
 			}
 		}
 
@@ -3749,7 +3718,7 @@ guiTypes = {
 		windowType = {
 			name = "institutions_window"
 			backGround=""
-			position = { x=480 y=-44 }
+			position = { x=480 y=-47 }
 			size = { x=475 y=540 }
 			dontRender = ""
 			horizontalBorder= ""
@@ -3816,7 +3785,7 @@ guiTypes = {
 				position = { x = 304 y = 123 }
 				quadTextureSprite ="GFX_closebutton2"
 				clicksound = close_window
-				shortcut = "s"
+				shortcut = "n"
 			}
 		}
 
@@ -3824,7 +3793,7 @@ guiTypes = {
 		windowType = {
 			name = "history_window"
 			backGround="background"
-			position = { x=486 y=-445}
+			position = { x=490 y=-468}
 			size = { x=505 y=468 }
 			dontRender = ""
 			horizontalBorder= ""
@@ -3843,15 +3812,20 @@ guiTypes = {
 
 			guiButtonType = {
 				name = "back_button"
-				position = { x=474 y =-6}
-				quadTextureSprite ="GFX_closebutton2"
-				shortcut = "h"
-				clicksound = close_window
+				position = { x=215 y =410}
+				quadTextureSprite ="GFX_standard_button_71"
+				tooltip = ""
+				tooltipText =""
+				delayedTooltipText = ""
+				buttonText = "DOMESTIC_BACK"
+				buttonFont = "vic_18"
+				shortcut = "ESCAPE"
+				clicksound = back_click
 			}
 
 			listboxType = {
 				name = "history_list"
-				position = { x = 27 y = 46 }
+				position = { x = 27 y = 36 }
 				backGround=""
 				size = { x=430 y = 370}
 				Orientation = "UPPER_LEFT"
@@ -4000,7 +3974,7 @@ guiTypes = {
 		name = "foreignviewview_diplistitem"
 		backGround =""
 		position = { x=0 y=0 }
-		size = { x=30 y=40 }
+		size = { x=40 y=40 }
 		moveable = 0
 		dontRender = ""
 		horizontalBorder = ""
@@ -4009,7 +3983,7 @@ guiTypes = {
 		{
 			name ="icon"
 			spriteType = "GFX_icon_powers_military"
-			position = { x= -40 y = 0 }
+			position = { x= 0 y = 0 }
 			Orientation = "UPPER_LEFT"
 		}
 	}
@@ -4576,7 +4550,7 @@ guiTypes = {
 
 	positionType = {
 		name = "building_close_button_natives"
-		position = { x = 382 y = -10 }
+		position = { x = 382 y = 200 }
 	}
 
 	positionType = {
@@ -4609,7 +4583,8 @@ guiTypes = {
 		name = "province_modifier_offset"
 		position = { x=-32 y = 0}
 	}
-	
+
+
 	#### GREAT PROJECT ENTRY
 	windowType = 
 	{
@@ -4630,6 +4605,7 @@ guiTypes = {
 			position = { x = 0 y = 0 }
 		}
 		
+
 		instantTextBoxType = {
 			name = "name_label"
 			position = { x = 17 y = 11 }
@@ -4654,18 +4630,21 @@ guiTypes = {
 			fullScreen = no
 			moveable = 0
 			Orientation = "UPPER_LEFT"
+
 			guiButtonType =
 			{
 				name ="great_project_cancel"
 				quadTextureSprite = "GFX_alerticon_dismiss_always"
 				position = { x = 110 y = 11 }
 			}
+
 			iconType =
 			{
 				name ="great_project_progress"
 				spriteType = "GFX_provinceView_progressbar"
 				position = { x = 10 y = 19 }
 			}
+
 			iconType =
 			{
 				name ="great_project_progress_frame"
@@ -4673,6 +4652,7 @@ guiTypes = {
 				position = { x = 0 y = 15 }
 			}
 		}
+
 		guiButtonType =
 		{
 			name ="build_upgrade_button"
@@ -4685,7 +4665,7 @@ guiTypes = {
 			buttonFont = "vic_18"
 			Orientation = "UPPER_LEFT"
 		}
-	
+
 		guiButtonType =
 		{
 			name ="use_money_to_boost_button"
@@ -4698,6 +4678,7 @@ guiTypes = {
 			buttonFont = "vic_18"
 			Orientation = "UPPER_LEFT"
 		}
+
 		guiButtonType =
 		{
 			name ="use_manpower_to_boost_button"
@@ -4710,6 +4691,7 @@ guiTypes = {
 			buttonFont = "vic_18"
 			Orientation = "UPPER_LEFT"
 		}
+
 		guiButtonType =
 		{
 			name ="move_button"
@@ -4722,7 +4704,7 @@ guiTypes = {
 			buttonFont = "vic_18"
 			Orientation = "UPPER_LEFT"
 		}
-		
+
 		### TIER ICONS
 		windowType =
 		{
@@ -4735,6 +4717,7 @@ guiTypes = {
 			horizontalBorder= ""
 			verticalBorder= ""
 			fullScreen = no
+
 			iconType =
 			{
 				name ="bg"
@@ -4743,6 +4726,7 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 		}
+
 		windowType =
 		{
 			name = "tier_1_icon"
@@ -4754,6 +4738,7 @@ guiTypes = {
 			horizontalBorder= ""
 			verticalBorder= ""
 			fullScreen = no
+
 			iconType =
 			{
 				name ="bg"
@@ -4762,6 +4747,7 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 		}
+
 		windowType =
 		{
 			name = "tier_2_icon"
@@ -4773,6 +4759,7 @@ guiTypes = {
 			horizontalBorder= ""
 			verticalBorder= ""
 			fullScreen = no
+
 			iconType =
 			{
 				name ="bg"
@@ -4780,7 +4767,8 @@ guiTypes = {
 				position = { x = 0 y = 0 }
 				Orientation = "UPPER_LEFT"
 			}
-		}	
+		}
+
 		windowType =
 		{
 			name = "tier_3_icon"
@@ -4792,6 +4780,7 @@ guiTypes = {
 			horizontalBorder= ""
 			verticalBorder= ""
 			fullScreen = no
+
 			iconType =
 			{
 				name ="bg"
@@ -4806,7 +4795,7 @@ guiTypes = {
 
 	positionType = {
 		name = "building_start"
-		position = { x = 41 y = 162 }
+		position = { x = 41 y = 47 }
 	}
 
 	positionType = {
@@ -4902,7 +4891,7 @@ guiTypes = {
 		instantTextBoxType =
 		{
 			name = "required_development"
-			position = { x = -1064 y = 8 } #yeeted
+			position = { x = 4 y = 8 }
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
 			text = "0"
@@ -4998,7 +4987,7 @@ guiTypes = {
 		instantTextBoxType =
 		{
 			name = "building_name"
-			position = { x = 70 y = 10 }
+			position = { x = 70 y = 0 }
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
 			text = "BUILDING_NAME"
@@ -5010,11 +4999,11 @@ guiTypes = {
 		instantTextBoxType =
 		{
 			name = "building_cost"
-			position = { x = -14 y = 10 }
+			position = { x = 215 y = 0 }
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
 			text = "CAT"
-			maxWidth = 375
+			maxWidth = 145
 			maxHeight = 64
 			format = right
 		}
@@ -5022,7 +5011,7 @@ guiTypes = {
 		instantTextBoxType =
 		{
 			name = "building_effect"
-			position = { x = 70 y = 30 }
+			position = { x = 70 y = 15 }
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
 			text = "BUILDING_EFFECT"
@@ -5227,8 +5216,8 @@ guiTypes = {
 			quadTextureSprite ="largefloaterbutton"
 			buttonText = "CANCEL"
 			buttonFont = "vic_18"
-			shortcut = "ESCAPE"
-			#extra_shortcut = ""
+			shortcut = "z"
+			extra_shortcut = "ESCAPE"
 		}
 		guiButtonType = {
 			name = "AgreeButton"
@@ -5236,7 +5225,8 @@ guiTypes = {
 			quadTextureSprite ="largefloaterbutton"
 			buttonText = "OK"
 			buttonFont = "vic_18"
-			shortcut = "RETURN"
+			shortcut = "c"
+			extra_shortcut = "RETURN"
 			clicksound = ok_click
 		}
 
@@ -5636,8 +5626,8 @@ guiTypes = {
 			quadTextureSprite ="largefloaterbutton"
 			buttonText = "OK"
 			buttonFont = "vic_18"
-			shortcut = "RETURN"
-			#extra_shortcut = ""
+			shortcut = "c"
+			extra_shortcut = "RETURN"
 			clicksound = ok_click
 		}
 
@@ -5738,8 +5728,8 @@ guiTypes = {
 			quadTextureSprite ="largefloaterbutton"
 			buttonText = "OK"
 			buttonFont = "vic_18"
-			shortcut = "RETURN"
-			#extra_shortcut = ""
+			shortcut = "c"
+			extra_shortcut = "RETURN"
 			clicksound = ok_click
 		}
 
@@ -5759,8 +5749,8 @@ guiTypes = {
 			buttonText = "GOTO"
 			buttonFont = "vic_18"
 			clicksound = ok_click
-			shortcut = "ESCAPE"
-			#extra_shortcut = ""
+			shortcut = "z"
+			extra_shortcut = "ESCAPE"
 		}
 	}
 
@@ -7613,7 +7603,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "sp_unrest"
-			position = { x = 325 y = 8 }
+			position = { x = 338 y = 8 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
@@ -7625,7 +7615,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "fort_level"
-			position = { x = 375 y = 6 }
+			position = { x = 395 y = 6 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 2 y = 2}
@@ -7637,7 +7627,7 @@ guiTypes = {
 
 		instantTextBoxType = {
 			name = "sp_devastation"
-			position = { x = 410 y = 8 }
+			position = { x = 430 y = 8 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 0 y = 0}
@@ -7670,15 +7660,15 @@ guiTypes = {
 
 		guiButtonType = {
 			name ="select_edicts_button"
-			quadTextureSprite = "button_type_7"
+			quadTextureSprite = "gfx_button_base_button"
 			buttonFont = "vic_18"
 			buttonText = "txt"
-			position = { x = 252 y = 20 }
+			position = { x = 52 y = 0 }
 		}
 
 		instantTextBoxType = {
 			name = "edicts_eff"
-			position = { x = 52 y = 0 }
+			position = { x = 52 y = 30 }
 			textureFile = ""
 			font = "vic_18"
 			borderSize = {x = 2 y = 2}
@@ -7711,17 +7701,11 @@ guiTypes = {
 				position = { x = 484 y = -20 }
 			}
 			
-			iconType = {
-				name ="region_area_banner"
-				spriteType = "GFX_banner_right_5"
-				position = { x= -470 y = -40 }
-			}
-			
 			instantTextBoxType = {
 				name = "edicts_list_title"
-				position = { x = -500 y = -33 }
+				position = { x = 520 y = 14 }
 				textureFile = ""
-				font = "vic_18"
+				font = "vic_22"
 				borderSize = {x = 2 y = 2}
 				text = ""
 				maxWidth = 380
@@ -7732,7 +7716,7 @@ guiTypes = {
 			listboxType = {
 				name = "edicts_listbox"
 				backGround = ""
-				position = { x = 500 y = 0 }
+				position = { x = 500 y = 51 }
 				size = { x = 380 y = 450 }
 				horizontal = 0
 				scrollbartype = "standardlistbox_slider"
