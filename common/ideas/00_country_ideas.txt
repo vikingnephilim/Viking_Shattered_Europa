@@ -2028,7 +2028,7 @@ ARM_ideas = {
 ARN_ideas = {
 	start = {
 		trade_range_modifier = 0.25
-		infantry_cost = -0.10
+		infantry_cost = -0.1
 	}
 	bonus = {
 		army_tradition = 1
@@ -2650,14 +2650,14 @@ ATW_ideas = {
 		prestige = 1
 	}
 	bonus = {
-		movement_speed = 0.10
+		movement_speed = 0.1
 	}
 	trigger = {
 		tag = ATW
 	}
 	free = yes
 	ATW_nation_of_wolves = {
-		land_attrition = -0.10
+		land_attrition = -0.1
 		army_tradition_decay = -0.01
 	}
 	ATW_stationary_tribe = {
@@ -6859,36 +6859,38 @@ CHT_ideas = {
 
 CHU_ideas = {
 	start = {
-		unjustified_demands = -0.25
-		war_exhaustion = -0.05
+		loot_amount = 0.25		#Raids against the Cossacks
+		movement_speed = 0.15
 	}
 	bonus = {
-		land_attrition = -0.15
+		global_sailors_modifier = 0.2
 	}
 	trigger = {
 		tag = CHU
 	}
 	free = yes
-	siberian_hunt_north = {
-		hostile_attrition = 1
+	CHU_chavchyvat = {
+		land_attrition = -0.15
 	}
-	siberian_fur_trade = {
-		global_own_trade_power = 0.1
+	CHU_ancient_battles = {
+		land_morale = 0.1
 	}
-	siberian_enslave_captives = {
-		production_efficiency = 0.1
+	CHU_laminar_armor = {
+		shock_damage_received = -0.1
 	}
-	siberian_backwoods = {
-		defensiveness = 0.15
+	anu_riches_of_the_sea = {
+		#From Ainu ideas
+		global_trade_goods_size_modifier = 0.1
 	}
-	siberian_land_bought_with_blood = {
-		prestige_from_land = 1
+	CHU_no_fear_of_death = {
+		fire_damage_received = -0.05
+		discipline = 0.025
 	}
-	siberian_raids = {
-		global_manpower_modifier = 0.15
-		reinforce_speed = 0.05
+	CHU_russian_trade = {
+		global_trade_power = 0.15
 	}
 	siberian_hunting_expansion = {
+		#From Siberian ideas
 		global_colonial_growth = 20
 	}
 }
@@ -9690,37 +9692,38 @@ EGY_ideas = {
 
 EJZ_ideas = {
 	start = {
-		land_morale = 0.15
-		stability_cost_modifier = -0.1
+		tolerance_own = 2
+		shock_damage_received = -0.15
 	}
 	bonus = {
-		discipline = 0.05
+		global_unrest = -1
 	}
 	trigger = {
 		tag = EJZ
 	}
 	free = yes
-	EJZ_raids = {
-		loot_amount = 0.25
+	EJZ_winter_dwellings = {
+		land_attrition = -0.2
 	}
-	EJZ_exploration = {
-		range = 0.4
+	EJZ_amur_river = {
+		global_sailors_modifier = 0.1
+		global_own_trade_power = 0.1
 	}
-	EJZ_colonization = {
-		colonists = 1
-		may_explore = yes
+	EJZ_hurka_resistance = {
+		war_exhaustion = -0.02
 	}
-	EJZ_adopt_feudal_system = {
+	EJZ_fish_skin_tatars = {
 		production_efficiency = 0.1
 	}
-	EJZ_sea_awaits = {
-		global_sailors_modifier = 0.25
+	EJZ_souls = {
+		horde_unity = 1
+		legitimacy = 1
 	}
-	EJZ_massive_fishing_and_hunting = {
-		global_trade_goods_size_modifier = 0.1
+	EJZ_kasa_tavori = {
+		prestige = 1
 	}
-	EJZ_Korean_shipwrights = {
-		global_ship_cost = -0.15
+	EJZ_identity = {
+		land_morale = 0.1
 	}
 }
 
@@ -13021,37 +13024,39 @@ HOB_ideas = {
 
 HOD_ideas = {
 	start = {
-		unjustified_demands = -0.25
-		land_attrition = -0.15
+		production_efficiency = 0.1
+		hostile_attrition = 1
 	}
 	bonus = {
-		war_exhaustion = -0.05
+		land_morale = 0.1
 	}
 	trigger = {
 		tag = HOD
 	}
 	free = yes
-	siberian_enslave_captives = {
-		production_efficiency = 0.1
+	HOD_sakhadzibe = {
+		stability_cost_modifier = -0.1
+		female_advisor_chance = 0.5
 	}
-	siberian_raids = {
-		global_manpower_modifier = 0.15
-		reinforce_speed = 0.05
+	HOD_tonbaia_shomorokh = {
+		leader_land_shock = 1
 	}
-	siberian_hunting_expansion = {
-		global_colonial_growth = 20
+	HOD_pugu = {
+		tolerance_own = 1
+		yearly_corruption = -0.1
 	}
-	siberian_hunt_north = {
-		hostile_attrition = 1
+	HOD_icy_people = {
+		land_attrition = -0.15
+	}
+	HOD_ancient_origins = {
+		unjustified_demands = -0.25
 	}
 	siberian_fur_trade = {
 		global_own_trade_power = 0.1
 	}
-	siberian_backwoods = {
-		defensiveness = 0.15
-	}
-	siberian_land_bought_with_blood = {
-		prestige_from_land = 1
+	HOD_birchbark_letters = {
+		trade_efficiency = 0.05
+		leader_land_manuever = 1
 	}
 }
 
@@ -16933,37 +16938,37 @@ KLT_ideas = {
 
 KMC_ideas = {
 	start = {
-		unjustified_demands = -0.25
-		land_attrition = -0.15
+		global_sailors_modifier = 0.2
+		movement_speed = 0.15
 	}
 	bonus = {
-		defensiveness = 0.15
+		leader_naval_manuever = 1
 	}
 	trigger = {
 		tag = KMC
 	}
 	free = yes
-	siberian_enslave_captives = {
-		production_efficiency = 0.1
+	KMC_divine_couple = {
+		legitimacy = 1
 	}
-	siberian_hunt_north = {
-		hostile_attrition = 1
+	KMC_mitgh_blessing = {
+		global_trade_goods_size_modifier = 0.1
 	}
-	siberian_raids = {
-		global_manpower_modifier = 0.15
-		reinforce_speed = 0.05
+	KMC_xagelan_tales = {
+		leader_land_shock = 1
+	}
+	KMC_defensible_villages = {
+		defensiveness = 0.15
+	}
+	KMC_resist_russian_expansion = {
+		global_manpower_modifier = 0.1
+	}
+	evenk_siberian_resources = {
+		#From Evenk ideas
+		build_cost = -0.1
 	}
 	siberian_fur_trade = {
 		global_own_trade_power = 0.1
-	}
-	siberian_backwoods = {
-		war_exhaustion = -0.05
-	}
-	siberian_land_bought_with_blood = {
-		prestige_from_land = 1
-	}
-	siberian_hunting_expansion = {
-		global_colonial_growth = 20
 	}
 }
 
@@ -17877,8 +17882,8 @@ KSK_ideas = {
 
 KSP_ideas = {
 	start = {
-		land_attrition = -0.10
-		reinforce_cost_modifier = -0.10
+		land_attrition = -0.1
+		reinforce_cost_modifier = -0.1
 	}
 	bonus = {
 		range = 0.5
@@ -18469,7 +18474,7 @@ LAK_ideas = {
 	}
 	free = yes
 	LAK_dwellers_of_tipis = {
-		manpower_recovery_speed = 0.10
+		manpower_recovery_speed = 0.1
 	}
 	LAK_bow_archery = {
 		cavalry_fire = 0.1
@@ -22462,7 +22467,7 @@ MLO_ideas = {
 
 MLS_ideas = {
 	start = {
-		rival_border_fort_maintenance = -0.10
+		rival_border_fort_maintenance = -0.1
 		stability_cost_modifier = -0.1
 	}
 	bonus = {
@@ -22485,7 +22490,7 @@ MLS_ideas = {
 		yearly_corruption = -0.1
 	}
 	MLS_marten_clan = {
-		mercenary_cost = -0.10
+		mercenary_cost = -0.1
 	}
 	MLS_eagle_clan = {
 		global_unrest = 0.1
@@ -23487,7 +23492,7 @@ MSG_ideas = {
 		infantry_shock = 0.1
 	}
 	bonus = {
-		drill_gain_modifier = 0.10
+		drill_gain_modifier = 0.1
 	}
 	trigger = {
 		tag = MSG
@@ -23498,7 +23503,7 @@ MSG_ideas = {
 	}
 	MSG_stationary_tribe = {
 		garrison_size = 0.225
-		global_garrison_growth = 0.10
+		global_garrison_growth = 0.1
 	}
 	MSG_ritual_leadership = {
 		reform_progress_growth = 0.1
@@ -23513,7 +23518,7 @@ MSG_ideas = {
 		free_leader_pool = 1
 	}
 	MSG_fur_trade = {
-		war_taxes_cost_modifier = -0.10
+		war_taxes_cost_modifier = -0.1
 	}
 }
 
@@ -23845,38 +23850,36 @@ MYA_ideas = {
 
 MYR_ideas = {
 	start = {
-		land_attrition = -0.1
-		land_morale = 0.1
+		defensiveness = 0.1
+		fire_damage = 0.15
 	}
 	bonus = {
-		global_manpower_modifier = 0.15
+		culture_conversion_cost = -0.1
 	}
 	trigger = {
 		tag = MYR
 	}
 	free = yes
-	jurchen_warlords_generosity = {
-		improve_relation_modifier = 0.25
+	MYR_xianbei_descendants = {
+		cavalry_power = 0.1
 	}
-	sons_of_the_mountain = {
-		hostile_attrition = 1
-	}
-	the_jurchen_banners = {
-		amount_of_banners = 0.15
-	}
-	jurchen_border_skirmishes = {
-		manpower_recovery_speed = 0.2
-	}
-	jurchen_pigtail = {
-		horde_unity = 0.5
-		legitimacy = 0.5
-		global_unrest = -1
-	}
-	jurchen_many_wives = {
+	MYR_mama_xili = {
 		heir_chance = 0.5
 	}
-	jurchen_foreign_service = {
-		leader_land_shock = 1
+	MYR_xibe_script = {
+		idea_cost = -0.1
+	}
+	MYR_three_arts = {
+		discipline = 0.05
+	}
+	MYR_qing_logistics = {
+		movement_speed = 0.15
+	}
+	MYR_genius_translators = {
+		improve_relation_modifier = 0.2
+	}
+	MYR_ili_self_dependency = {
+		development_cost = -0.1
 	}
 }
 
@@ -24535,38 +24538,38 @@ NGP_ideas = {
 
 NHX_ideas = {
 	start = {
-		land_attrition = -0.1
-		land_morale = 0.1
+		legitimacy = 1
+		hostile_attrition = 1
 	}
 	bonus = {
-		global_manpower_modifier = 0.15
+		global_manpower_modifier = 0.2
 	}
 	trigger = {
 		tag = NHX
 	}
 	free = yes
-	jurchen_pigtail = {
-		horde_unity = 0.5
-		legitimacy = 0.5
-		global_unrest = -1
+	NHX_wuji_forest_dwellers = {
+		production_efficiency = 0.1
 	}
-	the_jurchen_banners = {
-		amount_of_banners = 0.15
+	NHX_hunters = {
+		infantry_power = 0.1
 	}
-	jurchen_foreign_service = {
-		leader_land_shock = 1
+	NHX_people_of_the_tiger = {
+		shock_damage = 0.1
 	}
-	jurchen_warlords_generosity = {
-		improve_relation_modifier = 0.25
+	NHX_ana_omorochka = {
+		leader_naval_manuever = 1
+		leader_land_manuever = 1
 	}
-	sons_of_the_mountain = {
-		hostile_attrition = 1
+	NHX_iekhei = {
+		prestige = 1
 	}
-	jurchen_border_skirmishes = {
-		manpower_recovery_speed = 0.2
+	NHX_skis = {
+		movement_speed = 0.15
 	}
-	jurchen_many_wives = {
-		heir_chance = 0.5
+	EJZ_identity = {
+		#Copied from Nanai ideas
+		land_morale = 0.1
 	}
 }
 
@@ -25124,7 +25127,7 @@ NSA_ideas = {
 NSE_ideas = {
 	start = {
 		prestige = 1
-		loot_amount = 0.40
+		loot_amount = 0.4
 	}
 	bonus = {
 		global_manpower_modifier = 0.25
@@ -25387,37 +25390,37 @@ NUP_ideas = {
 
 NVK_ideas = {
 	start = {
-		naval_maintenance_modifier = -0.1
-		discipline = 0.05
+		trade_efficiency = 0.1
+		naval_morale = 0.1
 	}
 	bonus = {
-		hostile_attrition = 1.5
+		improve_relation_modifier = 0.15
 	}
 	trigger = {
 		tag = NVK
 	}
 	free = yes
-	nvk_hunting_economy = {
-		global_colonial_growth = 25
+	NVK_hospitality = {
+		diplomatic_reputation = 1
 	}
-	nvk_blood_money = {
-		stability_cost_modifier = -0.1
+	EJZ_amur_river = {
+		global_sailors_modifier = 0.1
+		global_own_trade_power = 0.1
 	}
-	nvk_the_mighty_amur = {
+	EJZ_fish_skin_tatars = {
+		production_efficiency = 0.1
+	}
+	NVK_bear_festival = {
+		global_unrest = -1
+	}
+	anu_riches_of_the_sea = {
 		global_trade_goods_size_modifier = 0.1
 	}
-	nvk_evenki_reindeer = {
-		movement_speed = 0.1
+	NVK_mercantile_connections = {
+		trade_range_modifier = 0.15
 	}
-	nvk_mongol_assistance = {
-		cavalry_power = 0.1
-		cavalry_cost = -0.08
-	}
-	nvk_sakhalin_conquest = {
-		core_creation = -0.15
-	}
-	nvk_treaty_of_nerchinsk = {
-		diplomatic_reputation = 1
+	NVK_kinrsh = {
+		infantry_power = 0.1
 	}
 }
 
@@ -25781,7 +25784,7 @@ OEO_ideas = {
 		prestige_decay = -0.01
 	}
 	OEO_horse_riders = {
-		reinforce_cost_modifier = -0.10
+		reinforce_cost_modifier = -0.1
 	}
 }
 
@@ -26104,7 +26107,7 @@ ONE_ideas = {
 		liberty_desire_from_subject_development = -0.25
 	}
 	ONE_marten_clan = {
-		mercenary_manpower = 0.10
+		mercenary_manpower = 0.1
 	}
 	ONE_eagle_clan = {
 		discovered_relations_impact = -0.1
@@ -26117,11 +26120,11 @@ ONE_ideas = {
 
 ONO_ideas = {
 	start = {
-		prestige_from_land = 0.10
+		prestige_from_land = 0.1
 		development_cost = -0.1
 	}
 	bonus = {
-		fort_maintenance_modifier = -0.10
+		fort_maintenance_modifier = -0.1
 	}
 	trigger = {
 		tag = ONO
@@ -26140,8 +26143,8 @@ ONO_ideas = {
 		vassal_forcelimit_bonus = 0.2
 	}
 	ONO_marten_clan = {
-		general_cost = -0.50
-		war_taxes_cost_modifier = -0.50
+		general_cost = -0.5
+		war_taxes_cost_modifier = -0.5
 	}
 	ONO_eagle_clan = {
 		stability_cost_modifier = -0.1
@@ -27171,31 +27174,31 @@ PEG_ideas = {
 
 PEN_ideas = {
 	start = {
-		rival_border_fort_maintenance = -0.10
-		movement_speed = 0.10
+		rival_border_fort_maintenance = -0.1
+		movement_speed = 0.1
 	}
 	bonus = {
-		recover_army_morale_speed = 0.10
+		recover_army_morale_speed = 0.1
 	}
 	trigger = {
 		tag = PEN
 	}
 	free = yes
 	PEN_turtle_clan = {
-		siege_ability = 0.10
+		siege_ability = 0.1
 	}
 	PEN_deer_clan = {
 		improve_relation_modifier = 0.2
 	}
 	PEN_bear_clan = {
-		reinforce_cost_modifier = -0.10
-		reinforce_speed = 0.10
+		reinforce_cost_modifier = -0.1
+		reinforce_speed = 0.1
 	}
 	PEN_wolf_clan = {
 		yearly_corruption = -0.1
 	}
 	PEN_marten_clan = {
-		mercenary_discipline = 0.10
+		mercenary_discipline = 0.1
 	}
 	PEN_eagle_clan = {
 		global_unrest = 0.1
@@ -27232,8 +27235,8 @@ PEO_ideas = {
 		vassal_income = 0.1
 	}
 	PEO_marten_clan = {
-		general_cost = -0.50
-		war_taxes_cost_modifier = -0.50
+		general_cost = -0.5
+		war_taxes_cost_modifier = -0.5
 	}
 	PEO_eagle_clan = {
 		development_cost = -0.1
@@ -30658,16 +30661,16 @@ SEN_ideas = {
 		diplomatic_reputation = 1
 	}
 	SEN_tree_of_peace = {
-		global_garrison_growth = 0.10
+		global_garrison_growth = 0.1
 	}
 	SEN_great_white_roots = {
 		discovered_relations_impact = -0.1
 	}
 	SEN_into_the_grave = {
-		land_forcelimit_modifier = 0.10
+		land_forcelimit_modifier = 0.1
 	}
 	SEN_the_good_word = {
-		manpower_recovery_speed = 0.10
+		manpower_recovery_speed = 0.1
 	}
 	SEN_sachems = {
 		religious_unity = 0.25
@@ -33457,7 +33460,7 @@ TAB_ideas = {
 TAH_ideas = {
 	start = {
 		global_tax_modifier = 0.05
-		land_maintenance_modifier = -0.10
+		land_maintenance_modifier = -0.1
 	}
 	bonus = {
 		interest = -1
@@ -34325,7 +34328,7 @@ TIM_ideas = {
 
 TIO_ideas = {
 	start = {
-		war_exhaustion = -0.10
+		war_exhaustion = -0.1
 		innovativeness_gain = 0.5
 	}
 	bonus = {
@@ -34339,8 +34342,8 @@ TIO_ideas = {
 		global_rebel_suppression_efficiency = -0.2
 	}
 	TIO_stationary_tribe = {
-		rival_border_fort_maintenance = -0.10
-		fort_maintenance_modifier = -0.10
+		rival_border_fort_maintenance = -0.1
+		fort_maintenance_modifier = -0.1
 	}
 	TIO_ritual_leadership = {
 		all_estate_loyalty_equilibrium = 0.1
@@ -35565,7 +35568,7 @@ TRY_ideas = {
 TSC_ideas = {
 	start = {
 		global_trade_power = 0.1
-		mercenary_cost = -0.10
+		mercenary_cost = -0.1
 	}
 	bonus = {
 		missionaries = 1
@@ -39305,5 +39308,3 @@ ZZZ_ideas = {
 		reduced_liberty_desire = 10
 	}
 }
-
-

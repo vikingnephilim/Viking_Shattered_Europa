@@ -9,7 +9,6 @@ country_event = {
 	title = "flavor_ice.EVTNAME1"
 	desc = "flavor_ice.EVTDESC1"
 	picture = COURT_eventPicture
-	fire_only_once = yes
 	trigger = {
 		OR = {
 			tag = ICE
@@ -45,7 +44,6 @@ country_event = {
 	title = "flavor_ice.EVTNAME2"
 	desc = "flavor_ice.EVTDESC2"
 	picture = ECONOMY_eventPicture
-	fire_only_once = yes
 	trigger = {
 		OR = {
 			tag = ICE
@@ -130,7 +128,7 @@ country_event = {
 				}
 			}
 		}
-		IF= {
+		IF = {
 			limit = {
 				tag = FRO
 			}
@@ -206,11 +204,10 @@ country_event = {
 	title = "flavor_ice.EVTNAME3"
 	desc = "flavor_ice.EVTDESC3"
 	picture = ADVISOR_eventPicture
-	fire_only_once = yes
 	trigger = {
 		OR = {
-		tag = ICE
-		tag = FRO
+			tag = ICE
+			tag = FRO
 		}
 		has_country_modifier = ice_trade_colonies
 		NOT = {
@@ -258,7 +255,6 @@ country_event = {
 	title = "flavor_ice.EVTNAME4"
 	desc = "flavor_ice.EVTDESC4"
 	picture = ST_PETERS_CHURCH_eventPicture
-	fire_only_once = yes
 	trigger = {
 		OR = {
 			tag = ICE
@@ -310,7 +306,6 @@ country_event = {
 	title = "flavor_ice.EVTNAME5"
 	desc = "flavor_ice.EVTDESC5"
 	picture = ST_PETERS_CHURCH_eventPicture
-	fire_only_once = yes
 	trigger = {
 		OR = {
 			tag = ICE

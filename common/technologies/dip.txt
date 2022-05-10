@@ -17,8 +17,7 @@ technology = {
 	shipwright = yes
 	merchants = yes
 	#Boats
-	enable = littoral_canoe
-	enable = transport_barge
+	enable = war_canoe
 }
 
 technology = {
@@ -30,9 +29,6 @@ technology = {
 	expects_institution = {
 		feudalism = 0.1
 	}
-	#Boats
-	enable = heavy_catamaran
-	enable = light_outrigger
 }
 
 technology = {
@@ -43,6 +39,12 @@ technology = {
 	expects_institution = {
 		feudalism = 0.25
 	}
+	naval_engagement_width = 20
+	range = 100
+	trade_range = 100
+	enable = barque
+	enable = cog
+	enable = galley
 }
 
 technology = {
@@ -58,9 +60,6 @@ technology = {
 	expects_institution = {
 		feudalism = 0.5
 	}
-	#Boats
-	enable = heavy_chelandion
-	enable = littoral_dromon
 }
 
 technology = {
@@ -73,9 +72,6 @@ technology = {
 	expects_institution = {
 		feudalism = 0.5
 	}
-	#Boats
-	enable = light_liburna
-	enable = transport_katergon
 }
 
 technology = {
@@ -83,6 +79,7 @@ technology = {
 	year = 1275
 	trade_efficiency = 0.01
 	may_agitate_for_liberty = yes
+	enable = early_carrack
 	expects_institution = {
 		feudalism = 0.5
 	}
@@ -95,14 +92,10 @@ technology = {
 	trade_range = 10
 	range = 10
 	trade_efficiency = 0.01
+	naval_maintenance = 0.1
 	expects_institution = {
 		feudalism = 0.5
 	}
-	#Boats
-	enable = heavy_knarr
-	enable = light_balinger
-	enable = littoral_birlinn
-	enable = transport_tarida
 }
 
 technology = {
@@ -136,11 +129,6 @@ technology = {
 	expects_institution = {
 		feudalism = 0.5
 	}
-	#Boats
-	enable = heavy_nava
-	enable = light_hippagoge
-	enable = littoral_half_galley
-	enable = transport_cog
 }
 
 technology = {
@@ -183,6 +171,7 @@ technology = {
 	trade_efficiency = 0.01
 	bank = yes
 	national_mint = yes
+	global_colonial_growth = 10
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
@@ -195,15 +184,11 @@ technology = {
 	trade_efficiency = 0.01
 	impressment_offices = yes
 	grand_shipyard = yes
+	may_build_flagships = yes
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
 	}
-	#Boats
-	enable = heavy_holk
-	enable = light_barque
-	enable = littoral_galley
-	enable = transport_hoy
 }
 
 technology = {
@@ -226,6 +211,7 @@ technology = {
 	trade_efficiency = 0.01
 	printing_press_building = yes
 	may_sabotage_reputation = yes
+	global_colonial_growth = 15
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
@@ -240,16 +226,12 @@ technology = {
 	trade_range = 50
 	range = 50
 	trade_efficiency = 0.01
+	naval_maintenance = 0.1
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
 		printing_press = 1
 	}
-	#Boats
-	enable = heavy_carrack
-	enable = light_caravel
-	enable = littoral_galleass
-	enable = transport_fluyt
 }
 
 technology = {
@@ -283,6 +265,7 @@ technology = {
 	# Tech 20
 	year = 1490
 	trade_efficiency = 0.02
+	naval_engagement_width = 10
 	may_study_technology = yes
 	expects_institution = {
 		feudalism = 1
@@ -301,6 +284,9 @@ technology = {
 	trade_efficiency = 0.02
 	admiralty = yes
 	may_sabotage_recruitment = yes
+	num_accepted_cultures = 1
+	enable = carrack
+	enable = caravel
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
@@ -313,21 +299,22 @@ technology = {
 	# Tech 22
 	year = 1525
 	trade_efficiency = 0.02
+	naval_maintenance = 0.1
+	enable = flute
+	enable = war_galley
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
 		printing_press = 1
 		new_world_i = 1
 	}
-	#Boats
-	enable = light_schooner
-	enable = transport_brigatine
 }
 
 technology = {
 	# Tech 23
 	year = 1540
 	trade_efficiency = 0.02
+	global_colonial_growth = 10
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
@@ -344,6 +331,7 @@ technology = {
 	trade_range = 50
 	range = 50
 	trade_efficiency = 0.02
+	naval_engagement_width = 15
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
@@ -352,15 +340,13 @@ technology = {
 		ei_empiricism = 0.5
 		ei_standing_armies = 0.1
 	}
-	#Boats
-	enable = heavy_galleon
-	enable = littoral_galiot
 }
 
 technology = {
 	# Tech 25
 	year = 1570
 	trade_efficiency = 0.02
+	enable = brig
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
@@ -377,6 +363,8 @@ technology = {
 	trade_range = 50
 	range = 50
 	trade_efficiency = 0.02
+	enable = galleass
+	num_accepted_cultures = 1
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
@@ -393,6 +381,10 @@ technology = {
 	trade_efficiency = 0.02
 	stock_exchange = yes
 	may_corrupt_officials = yes
+	naval_maintenance = 0.1
+	global_colonial_growth = 15
+	enable = galleon
+	enable = early_frigate
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
@@ -411,6 +403,7 @@ technology = {
 	trade_range = 50
 	range = 50
 	trade_efficiency = 0.02
+	enable = merchantman
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
@@ -420,17 +413,14 @@ technology = {
 		ei_standing_armies = 0.5
 		global_trade = 0.5
 	}
-	#Boats
-	enable = heavy_man_of_war
-	enable = light_sloop
-	enable = littoral_pinnace
-	enable = transport_brig
 }
 
 technology = {
 	# Tech 29
 	year = 1630
 	trade_efficiency = 0.02
+	naval_engagement_width = 10
+	enable = galiot
 	theatre = yes
 	expects_institution = {
 		feudalism = 1
@@ -450,6 +440,9 @@ technology = {
 	trade_range = 50
 	range = 50
 	trade_efficiency = 0.03
+	naval_maintenance = 0.1
+	enable = wargalleon
+	enable = frigate
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
@@ -467,6 +460,7 @@ technology = {
 	year = 1660
 	naval_morale = 0.5
 	trade_efficiency = 0.03
+	num_accepted_cultures = 1
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
@@ -484,6 +478,7 @@ technology = {
 	# Tech 32
 	year = 1675
 	trade_efficiency = 0.03
+	enable = chebeck
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
@@ -495,17 +490,17 @@ technology = {
 		manufactories = 0.5
 		ei_rationalism = 0.5
 	}
-	#Boats
-	enable = heavy_ship_of_the_line
-	enable = light_barquetine
-	enable = littoral_xebec
-	enable = transport_trabakul
 }
 
 technology = {
 	# Tech 33
 	year = 1690
 	trade_efficiency = 0.03
+	naval_engagement_width = 5
+	naval_maintenance = 0.1
+	reduced_naval_attrition = yes
+	enable = twodecker
+	enable = trabakul
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
@@ -527,6 +522,8 @@ technology = {
 	trade_range = 50
 	range = 50
 	trade_efficiency = 0.03
+	global_colonial_growth = 25
+	enable = heavy_frigate
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
@@ -545,6 +542,8 @@ technology = {
 	# Tech 35
 	year = 1720
 	trade_efficiency = 0.03
+	naval_engagement_width = 10
+	enable = archipelago_frigate
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
@@ -566,6 +565,8 @@ technology = {
 	foreign_office = yes
 	allow_client_states = yes
 	may_sow_discontent = yes
+	naval_maintenance = 0.1
+	enable = threedecker
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
@@ -588,6 +589,10 @@ technology = {
 	trade_range = 50
 	range = 50
 	trade_efficiency = 0.03
+	global_colonial_growth = 25
+	num_accepted_cultures = 1
+	enable = eastindiaman
+	enable = great_frigate
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
@@ -601,17 +606,13 @@ technology = {
 		ei_central_banks = 0.5
 		enlightenment = 0.25
 	}
-	#Boats
-	enable = heavy_twodecker
-	enable = light_frigate
-	enable = littoral_gallivat
-	enable = transport_merchantman
 }
 
 technology = {
 	# Tech 38
 	year = 1765
 	trade_efficiency = 0.03
+	naval_maintenance = 0.1
 	may_infiltrate_administration = yes
 	expects_institution = {
 		feudalism = 1
@@ -653,6 +654,7 @@ technology = {
 	# Tech 40
 	year = 1795
 	trade_efficiency = 0.04
+	naval_maintenance = 0.1
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
@@ -690,17 +692,15 @@ technology = {
 		enlightenment = 0.5
 		industrialization = 0.1
 	}
-	#Boats
-	enable = heavy_threedecker
-	enable = light_corvette
-	enable = littoral_gunboat
-	enable = transport_clipper
 }
 
 technology = {
 	# Tech 42
 	year = 1825
+	num_accepted_cultures = 1
 	trade_efficiency = 0.04
+	naval_maintenance = 0.1
+	global_colonial_growth = 50
 	expects_institution = {
 		feudalism = 1
 		renaissance = 1
@@ -757,11 +757,6 @@ technology = {
 		industrialization = 0.5
 		weights_and_measures = 0.1
 	}
-	#Boats
-	enable = heavy_ironclad
-	enable = light_steamer
-	enable = littoral_monitor
-	enable = transport_paddle_wheeler
 }
 
 technology = {
@@ -807,11 +802,6 @@ technology = {
 		industrialization = 0.5
 		weights_and_measures = 0.5
 	}
-	#Boats
-	enable = heavy_battleship
-	enable = light_cruiser
-	enable = littoral_destroyer
-	enable = transport_troopship
 }
 
 technology = {

@@ -8,10 +8,10 @@ birds = {
 		0.01
 	}
 	modifier = {
-		land_forcelimit_modifier = 0.2
+		prestige_from_naval = 0.1
 	}
 	province = {
-		land_forcelimit = 0.5
+		local_hostile_movement_speed = 0.1
 	}
 	chance = {
 		factor = 1
@@ -93,10 +93,10 @@ bison = {
 		0.18
 	}
 	modifier = {
-		land_forcelimit_modifier = 0.2
+		global_supply_limit_modifier = 0.10
 	}
 	province = {
-		land_forcelimit = 0.5
+		local_friendly_movement_speed = 0.1
 	}
 	chance = {
 		factor = 1
@@ -188,10 +188,10 @@ camels = {
 		0.58
 	}
 	modifier = {
-		land_forcelimit_modifier = 0.2
+		land_maintenance_modifier = -0.10
 	}
 	province = {
-		land_forcelimit = 0.5
+		province_trade_power_modifier = 0.1
 	}
 	chance = {
 		factor = 1
@@ -403,10 +403,10 @@ crustaceans = {
 		0.1
 	}
 	modifier = {
-		land_forcelimit_modifier = 0.2
+		navy_tradition_decay = -0.01
 	}
 	province = {
-		land_forcelimit = 0.5
+		blockade_force_required = 0.5
 	}
 	chance = {
 		factor = 1
@@ -517,11 +517,9 @@ dates = {
 	}
 	modifier = {
 		global_missionary_strength = 0.01
-		development_cost = -0.05
 	}
 	province = {
 		supply_limit = 1
-		trade_goods_size_modifier = 0.5
 	}
 	chance = {
 		factor = 1
@@ -1447,10 +1445,10 @@ hardwood = {
 		0.08
 	}
 	modifier = {
-		land_forcelimit_modifier = 0.2
+		heavy_ship_cost = -0.1
 	}
 	province = {
-		land_forcelimit = 0.5
+		local_ship_cost = -0.2
 	}
 	chance = {
 		factor = 10
@@ -1468,10 +1466,10 @@ herbs = {
 		0.15
 	}
 	modifier = {
-		land_forcelimit_modifier = 0.2
+		global_religious_conversion_resistance = -0.1
 	}
 	province = {
-		land_forcelimit = 0.5
+		local_religious_conversion_resistance = 0.1
 	}
 	chance = {
 		factor = 10
@@ -1493,8 +1491,6 @@ horses = {
 		amount_of_banners = 0.25
 	}
 	province = {
-		local_friendly_movement_speed = 0.1
-		local_manpower_modifier = 0.1
 		local_amount_of_banners = 0.25
 	}
 	chance = {
@@ -1658,8 +1654,10 @@ jade = {
 		0.54
 	}
 	modifier = {
+		missionaries = 1
 	}
 	province = {
+		local_religious_unity_contribution = 0.1
 	}
 	chance = {
 		factor = 10
@@ -1828,10 +1826,10 @@ millet = {
 		0.11
 	}
 	modifier = {
-		land_forcelimit_modifier = 0.2
+		years_of_nationalism = -5
 	}
 	province = {
-		land_forcelimit = 0.75
+		local_years_of_nationalism = -5
 	}
 	chance = {
 		factor = 1
@@ -1866,10 +1864,10 @@ palm = {
 		0.27
 	}
 	modifier = {
-		land_forcelimit_modifier = 0.2
+		harsh_treatment_cost = -0.2
 	}
 	province = {
-		land_forcelimit = 0.5
+		local_hostile_attrition = 5
 	}
 	chance = {
 		factor = 10
@@ -2033,10 +2031,14 @@ pottery = {
 		0.37
 	}
 	modifier = {
-		land_forcelimit_modifier = 0.2
+		legitimacy = 0.125
+		devotion = 0.125
+		horde_unity = 0.125
+		republican_tradition = 0.06
+		meritocracy = 0.05
 	}
 	province = {
-		land_forcelimit = 0.5
+		local_autonomy = -0.05
 	}
 	chance = {
 		factor = 10
@@ -2306,11 +2308,10 @@ softwood = {
 		0.05
 	}
 	modifier = {
-		global_ship_cost = -0.2
+		light_ship_cost = -0.2
 	}
 	province = {
 		local_ship_cost = -0.1
-		local_build_cost = -0.2
 	}
 	chance = {
 		factor = 25
@@ -2341,10 +2342,10 @@ stone = {
 		0.27
 	}
 	modifier = {
-		land_forcelimit_modifier = 0.2
+		fort_maintenance_modifier = -0.25
 	}
 	province = {
-		land_forcelimit = 0.5
+		local_defensiveness = 0.1
 	}
 	chance = {
 		factor = 10
@@ -2713,10 +2714,10 @@ black_pepper = {
 		0.07
 	}
 	modifier = {
-		land_forcelimit_modifier = 0.2
+		trade_efficiency = 0.1
 	}
 	province = {
-		land_forcelimit = 0.5
+		province_trade_power_modifier = 0.1
 	}
 	chance = {
 		factor = 10
@@ -3700,10 +3701,10 @@ chili_peppers = {
 		0.15
 	}
 	modifier = {
-		land_forcelimit_modifier = 0.2
+		spy_offence = 0.2533
 	}
 	province = {
-		land_forcelimit = 0.5
+		local_monthly_devastation = -0.1
 	}
 	chance = {
 		factor = 10
@@ -4642,16 +4643,17 @@ beer = {
 }
 
 bricks = {
+	is_latent = yes
 	color = {
 		0.6
 		0.29
 		0.18
 	}
 	modifier = {
-		land_forcelimit_modifier = 0.2
+		fort_maintenance_modifier = -0.5
 	}
 	province = {
-		land_forcelimit = 0.5
+		local_defensiveness = 0.2
 	}
 	chance = {
 		factor = 10
@@ -4728,10 +4730,10 @@ brass = {
 		0.58
 	}
 	modifier = {
-		land_forcelimit_modifier = 0.2
+		global_regiment_cost = -0.25
 	}
 	province = {
-		land_forcelimit = 0.5
+		regiment_recruit_speed = -0.25
 	}
 	chance = {
 		factor = 10
@@ -4777,10 +4779,10 @@ bronze = {
 		}
 	}
 	modifier = {
-		land_forcelimit_modifier = 0.2
+		global_regiment_recruit_speed = -0.25
 	}
 	province = {
-		land_forcelimit = 0.5
+		regiment_recruit_speed = -0.25
 	}
 	chance = {
 		factor = 10
@@ -4826,10 +4828,10 @@ confectionary = {
 		}
 	}
 	modifier = {
-		land_forcelimit_modifier = 0.2
+		manpower_recovery_speed = 0.1
 	}
 	province = {
-		land_forcelimit = 0.5
+		local_manpower_modifier = 0.2
 	}
 	chance = {
 		factor = 10
@@ -5463,10 +5465,10 @@ steel = {
 		0.88
 	}
 	modifier = {
-		land_forcelimit_modifier = 0.2
+		global_regiment_cost = -0.1
 	}
 	province = {
-		land_forcelimit = 0.5
+		local_build_time = -0.4
 	}
 	chance = {
 		factor = 10
