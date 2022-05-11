@@ -2,6 +2,7 @@ country_decisions = {
 	english_nation = {
 		major = yes
 		potential = {
+			has_country_flag = bretwalda
 			was_never_end_game_tag_trigger = yes
 			NOT = {
 				has_country_flag = formed_england_flag
@@ -52,6 +53,7 @@ country_decisions = {
 			NOT = {
 				exists = ENG
 			}
+			has_country_flag = bretwalda
 			owns_core_province = 236			# London
 			owns_core_province = 237			# Oxfordshire
 			owns_core_province = 234			# Wessex
@@ -87,9 +89,6 @@ country_decisions = {
 				change_government_to_monarchy = yes
 			}
 			add_government_reform = english_monarchy
-			set_country_flag = lancaster_estate
-			set_country_flag = plantagenet_estate
-			set_country_flag = york_estate
 			hidden_effect = {
 				every_owned_province = {
 					limit = {

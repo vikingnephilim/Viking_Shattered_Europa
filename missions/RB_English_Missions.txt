@@ -20,7 +20,7 @@ eng_british_naval_conq = {
 		icon = mission_rb_a_mighty_fleet
 		required_missions = {
 		}
-		position = 2
+		position = 1
 		completed_by = 1700.1.1
 		ai_weight = {
 			factor = 2
@@ -73,7 +73,7 @@ eng_rb_gibraltar = {
 			eng_mighty_navy
 		}
 		completed_by = 1713.4.11
-		position = 3
+		position = 2
 		provinces_to_highlight = {
 			province_id = 226
 			NOT = {
@@ -140,7 +140,7 @@ eng_rb_islands_med = {
 		required_missions = {
 			eng_rb_take_gibraltar
 		}
-		position = 4
+		position = 3
 		provinces_to_highlight = {
 			OR = {
 				area = corsica_sardinia_area
@@ -187,7 +187,7 @@ eng_rb_islands_med = {
 		required_missions = {
 			eng_rb_take_baleares
 		}
-		position = 5
+		position = 4
 		provinces_to_highlight = {
 			OR = {
 				province_id = 126
@@ -250,7 +250,7 @@ eng_rb_egypt = {
 			eng_rb_take_baleares
 			eng_rb_empire_status
 		}
-		position = 5
+		position = 4
 		provinces_to_highlight = {
 			area = delta_area
 			NOT = {
@@ -285,7 +285,7 @@ eng_rb_egypt = {
 		required_missions = {
 			eng_rb_take_delta
 		}
-		position = 6
+		position = 5
 		provinces_to_highlight = {
 			OR = {
 				area = bahari_area
@@ -351,7 +351,7 @@ eng_rb_stability = {
 		required_missions = {
 		}
 		completed_by = 1530.1.1
-		position = 2
+		position = 1
 		trigger = {
 			custom_trigger_tooltip = {
 				tooltip = eng_rb_war_of_roses.tooltip
@@ -375,7 +375,7 @@ eng_rb_stability = {
 		required_missions = {
 			eng_rb_war_of_roses
 		}
-		position = 3
+		position = 2
 		completed_by = 1534.1.1
 		trigger = {
 			NOT = {
@@ -400,7 +400,7 @@ eng_rb_stability = {
 		required_missions = {
 			eng_rb_control_state_religion
 		}
-		position = 4
+		position = 3
 		trigger = {
 			if = {
 				limit = {
@@ -443,7 +443,7 @@ eng_rb_burgundy = {
 		required_missions = {
 			eng_rb_angevin
 		}
-		position = 7
+		position = 6
 		provinces_to_highlight = {
 			OR = {
 				area = picardy_area
@@ -523,7 +523,7 @@ gbr_rb_canada_group = {
 			english_colony_in_north_america
 		}
 		completed_by = 1613.1.1
-		position = 8
+		position = 7
 		provinces_to_highlight = {
 			colonial_region = colonial_canada
 			NOT = {
@@ -576,7 +576,7 @@ eng_rb_trade_value_group = {
 		required_missions = {
 			eng_establish_trade_in_home_cot_gb
 		}
-		position = 10
+		position = 9
 		provinces_to_highlight = {
 			province_id = 1269
 			has_discovered = ROOT
@@ -617,7 +617,7 @@ eng_rb_buildings_group = {
 		icon = mission_rb_renovate_oxbridge
 		required_missions = {
 		}
-		position = 9
+		position = 8
 		provinces_to_highlight = {
 			OR = {
 				province_id = 237
@@ -681,7 +681,7 @@ eng_rb_buildings_group = {
 		required_missions = {
 			eng_rb_universities
 		}
-		position = 10
+		position = 9
 		trigger = {
 			has_institution = enlightenment
 			calc_true_if = {
@@ -752,7 +752,7 @@ eng_rb_buildings_group = {
 		required_missions = {
 			eng_rb_coal
 		}
-		position = 11
+		position = 10
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1861
@@ -812,7 +812,7 @@ eng_rb_conquest_europe = {
 		required_missions = {
 			eng_reclaim_arm_paris
 		}
-		position = 5
+		position = 4
 		provinces_to_highlight = {
 			area = brittany_area
 			NOT = {
@@ -908,7 +908,7 @@ eng_rb_conquest_europe = {
 		required_missions = {
 			eng_rb_brittany
 		}
-		position = 6
+		position = 5
 		provinces_to_highlight = {
 			OR = {
 				area = pyrenees_area
@@ -1016,7 +1016,7 @@ gbr_rb_empire_group = {
 		required_missions = {
 			eng_rb_angevin
 		}
-		position = 7
+		position = 6
 		trigger = {
 			if = {
 				limit = {
@@ -1058,7 +1058,7 @@ gbr_rb_empire_group = {
 		required_missions = {
 			eng_rb_hre_electors
 		}
-		position = 8
+		position = 7
 		trigger = {
 			OR = {
 				ROOT = {
@@ -1115,7 +1115,7 @@ gbr_rb_spice_islands_group = {
 		required_missions = {
 			england_discovers_india
 		}
-		position = 9
+		position = 8
 		completed_by = 1776.1.1
 		provinces_to_highlight = {
 			OR = {
@@ -1206,7 +1206,7 @@ gbr_rb_indian_group = {
 		required_missions = {
 			eng_rb_spice_islands
 		}
-		position = 10
+		position = 9
 		completed_by = 1789.1.1
 		provinces_to_highlight = {
 			area = west_bengal_area
@@ -1306,7 +1306,7 @@ gbr_rb_indian_group = {
 		required_missions = {
 			gbr_rb_india_landfall
 		}
-		position = 11
+		position = 10
 		provinces_to_highlight = {
 			OR = {
 				area = orissa_area
@@ -1379,7 +1379,7 @@ gbr_rb_indian_group = {
 		required_missions = {
 			gbr_rb_india_coast
 		}
-		position = 12
+		position = 11
 		provinces_to_highlight = {
 			OR = {
 				area = bihar_area
@@ -1439,7 +1439,7 @@ gbr_rb_india_princes = {
 		required_missions = {
 			gbr_rb_india_landfall
 		}
-		position = 11
+		position = 10
 		provinces_to_highlight = {
 			OR = {
 				area = golconda_area
@@ -1537,7 +1537,7 @@ gbr_rb_northern_colonial = {
 		required_missions = {
 			conquer_scotland
 		}
-		position = 6
+		position = 5
 		provinces_to_highlight = {
 			OR = {
 				province_id = 369
@@ -1582,7 +1582,7 @@ gbr_rb_northern_colonial = {
 		required_missions = {
 			eng_rb_take_shetland_and_faro_isles
 		}
-		position = 7
+		position = 6
 		provinces_to_highlight = {
 			area = greenland_area
 			NOT = {
@@ -1701,7 +1701,7 @@ eng_rb_thirteen_colonies_group = {
 			english_colony_in_north_america
 		}
 		completed_by = 1701.1.1
-		position = 8
+		position = 7
 		provinces_to_highlight = {
 			colonial_region = colonial_eastern_america
 			NOT = {
@@ -1746,7 +1746,7 @@ eng_rb_trade_in_home_cot_group = {
 		icon = mission_rb_monopolize_the_channel
 		required_missions = {
 		}
-		position = 9
+		position = 8
 		provinces_to_highlight = {
 			if = {
 				limit = {
@@ -1807,7 +1807,7 @@ eng_rb_trade_in_home_cot_group = {
 		required_missions = {
 			eng_establish_trade_in_home_cot_gb
 		}
-		position = 9
+		position = 8
 		provinces_to_highlight = {
 			OR = {
 				province_id = 1874
@@ -1863,7 +1863,7 @@ eng_rb_trade_in_home_cot_group = {
 		required_missions = {
 			eng_hanseatic_one
 		}
-		position = 10
+		position = 9
 		provinces_to_highlight = {
 			OR = {
 				province_id = 43

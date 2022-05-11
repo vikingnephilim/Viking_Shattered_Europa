@@ -8,18 +8,16 @@ country_event = {
 	id = flavor_ice.1
 	title = "flavor_ice.EVTNAME1"
 	desc = "flavor_ice.EVTDESC1"
+	fire_only_once = yes
 	picture = COURT_eventPicture
 	trigger = {
-		OR = {
-			tag = ICE
-			tag = FRO
-			AND = {
-				NOT = {
-					is_year = 1500
-				}
-				NOT = {
-					has_country_modifier = ice_old_colonies
-				}
+		tag = ICE
+		AND = {
+			NOT = {
+				is_year = 1500
+			}
+			NOT = {
+				has_country_modifier = ice_old_colonies
 			}
 		}
 	}
@@ -45,10 +43,7 @@ country_event = {
 	desc = "flavor_ice.EVTDESC2"
 	picture = ECONOMY_eventPicture
 	trigger = {
-		OR = {
-			tag = ICE
-			tag = FRO
-		}
+		tag = ICE
 		has_country_modifier = ice_old_colonies
 		NOT = {
 			has_country_modifier = ice_trade_colonies
@@ -73,116 +68,6 @@ country_event = {
 			create_alliance = VIN
 			create_alliance = MRL
 		}
-		IF = {
-			limit = {
-				tag = ICE
-			}
-			hidden_effect = {
-				sea_of_labrador_area = {
-					discover_country = ICE
-				}
-				gulf_of_st_lawrence_area = {
-					discover_country = ICE
-				}
-				hudson_bay_sea_area = {
-					discover_country = ICE
-				}
-				north_atlantic_area = {
-					discover_country = ICE
-				}
-				notre_dame_mountains_area = {
-					discover_country = ICE
-				}
-				greenland_area = {
-					discover_country = ICE
-				}
-				cote_nord_area = {
-					discover_country = ICE
-				}
-				great_woods_area = {
-					discover_country = ICE
-				}
-				maine_area = {
-					discover_country = ICE
-				}
-				denmark_strait_area = {
-					discover_country = ICE
-				}
-				upper_acadia_area = {
-					discover_country = ICE
-				}
-				lower_acadia_area = {
-					discover_country = ICE
-				}
-				massachusetts_bay_area = {
-					discover_country = ICE
-				}
-				newfoundland_area = {
-					discover_country = ICE
-				}
-				gulf_stream_area = {
-					discover_country = ICE
-				}
-				connecticut_valley_area = {
-					discover_country = ICE
-				}
-			}
-		}
-		IF = {
-			limit = {
-				tag = FRO
-			}
-			hidden_effect = {
-				sea_of_labrador_area = {
-					discover_country = FRO
-				}
-				gulf_of_st_lawrence_area = {
-					discover_country = FRO
-				}
-				hudson_bay_sea_area = {
-					discover_country = FRO
-				}
-				north_atlantic_area = {
-					discover_country = FRO
-				}
-				notre_dame_mountains_area = {
-					discover_country = FRO
-				}
-				greenland_area = {
-					discover_country = FRO
-				}
-				cote_nord_area = {
-					discover_country = FRO
-				}
-				great_woods_area = {
-					discover_country = FRO
-				}
-				maine_area = {
-					discover_country = FRO
-				}
-				denmark_strait_area = {
-					discover_country = FRO
-				}
-				upper_acadia_area = {
-					discover_country = FRO
-				}
-				lower_acadia_area = {
-					discover_country = FRO
-				}
-				massachusetts_bay_area = {
-					discover_country = FRO
-				}
-				newfoundland_area = {
-					discover_country = FRO
-				}
-				gulf_stream_area = {
-					discover_country = FRO
-				}
-				connecticut_valley_area = {
-					discover_country = FRO
-				}
-			}
-		}
 		add_country_modifier = {
 			name = ice_trade_colonies
 			duration = 18250
@@ -205,10 +90,7 @@ country_event = {
 	desc = "flavor_ice.EVTDESC3"
 	picture = ADVISOR_eventPicture
 	trigger = {
-		OR = {
-			tag = ICE
-			tag = FRO
-		}
+		tag = ICE
 		has_country_modifier = ice_trade_colonies
 		NOT = {
 			has_country_flag = vinlanders_turned_away
@@ -256,10 +138,7 @@ country_event = {
 	desc = "flavor_ice.EVTDESC4"
 	picture = ST_PETERS_CHURCH_eventPicture
 	trigger = {
-		OR = {
-			tag = ICE
-			tag = FRO
-		}
+		tag = ICE
 		has_country_modifier = ice_norse_influx
 		NOT = {
 			has_country_flag = screw_pope
@@ -307,10 +186,7 @@ country_event = {
 	desc = "flavor_ice.EVTDESC5"
 	picture = ST_PETERS_CHURCH_eventPicture
 	trigger = {
-		OR = {
-			tag = ICE
-			tag = FRO
-		}
+		tag = ICE
 		has_country_modifier = ice_norse_influx
 		has_country_flag = screw_pope
 		NOT = {

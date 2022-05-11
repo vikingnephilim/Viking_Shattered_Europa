@@ -301,3 +301,160 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	id = bendtheknee.8
+	title = "bendtheknee.8.t"
+	desc = "bendtheknee.8.d"
+	picture = POPE_PREACHING_eventPicture
+	trigger = {
+		AND = {
+			OR = {
+				tag = TKT
+				tag = RIG
+				tag = KNI
+				tag = TEU
+				tag = LIV
+			}
+		}
+		NOT = {
+			has_country_flag = screw_pope_subject
+		}
+		NOT = {
+			has_country_flag = hail_popeman_subject
+		}
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	immediate = {
+		PAP = {
+			set_country_flag = pope_asks_for_subjects
+		}
+	}
+	option = {
+		name = "bendtheknee.7.a"
+		set_country_flag = hail_popeman_subject
+		ai_chance = {
+			factor = 95
+		}
+	}
+	option = {
+		name = "bendtheknee.7.b"
+		set_country_flag = screw_pope_subject
+		ai_chance = {
+			factor = 5
+		}
+	}
+}
+country_event = {
+	id = bendtheknee.9
+	title = "bendtheknee.9.t"
+	desc = "bendtheknee.9.d"
+	picture = POPE_PREACHING_eventPicture
+	fire_only_once = yes
+	trigger = {
+		tag = PAP
+		has_country_flag = pope_asks_for_subjects
+	}
+	mean_time_to_happen = {
+		months = 12
+	}
+	option = {
+		name = "bendtheknee.9.a"
+		IF = {
+			limit = {
+				RIG = {
+					has_country_flag = hail_popeman_subject
+				}
+			}
+			create_subject = {
+				subject_type = papal_vassal
+				subject = RIG
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				KNI = {
+					has_country_flag = screw_pope_subject
+				}
+			}
+			excommunicate = RIG
+		}
+		IF = {
+			limit = {
+				KNI = {
+					has_country_flag = hail_popeman_subject
+				}
+			}
+			create_subject = {
+				subject_type = papal_vassal
+				subject = KNI
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				KNI = {
+					has_country_flag = screw_pope_subject
+				}
+			}
+			excommunicate = KNI
+		}
+		IF = {
+			limit = {
+				LIV = {
+					has_country_flag = hail_popeman_subject
+				}
+			}
+			create_subject = {
+				subject_type = papal_vassal
+				subject = LIV
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				KNI = {
+					has_country_flag = screw_pope_subject
+				}
+			}
+			excommunicate = LIV
+		}
+		IF = {
+			limit = {
+				TEU = {
+					has_country_flag = hail_popeman_subject
+				}
+			}
+			create_subject = {
+				subject_type = papal_vassal
+				subject = TEU
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				TEU = {
+					has_country_flag = screw_pope_subject
+				}
+			}
+			excommunicate = TEU
+		}
+		IF = {
+			limit = {
+				TKT = {
+					has_country_flag = hail_popeman_subject
+				}
+			}
+			create_subject = {
+				subject_type = papal_vassal
+				subject = TKT
+			}
+		}
+		ELSE_IF = {
+			limit = {
+				TKT = {
+					has_country_flag = screw_pope_subject
+				}
+			}
+			excommunicate = TKT
+		}
+	}
+}
