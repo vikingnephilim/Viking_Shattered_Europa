@@ -218,12 +218,9 @@ stonehenge = {
 	type = monument
 	#can we build it?
 	build_trigger = {
-		custom_trigger_tooltip = {
-			tooltip = english_culture_tt
-			AND = {
-				culture = english
-				has_owner_accepted_culture = yes
-			}
+		OR = {
+			culture = cornish
+			culture_group = british
 		}
 		custom_trigger_tooltip = {
 			tooltip = ancient_pagan_tt
@@ -242,12 +239,9 @@ stonehenge = {
 	}
 	#can our country use it?
 	can_use_modifiers_trigger = {
-		custom_trigger_tooltip = {
-			tooltip = english_culture_tt
-			AND = {
-				culture = english
-				has_owner_accepted_culture = yes
-			}
+		OR = {
+			culture = cornish
+			culture_group = british
 		}
 		custom_trigger_tooltip = {
 			tooltip = ancient_pagan_tt
@@ -258,12 +252,9 @@ stonehenge = {
 	}
 	#can our country upgrade it?
 	can_upgrade_trigger = {
-		custom_trigger_tooltip = {
-			tooltip = english_culture_tt
-			AND = {
-				culture = english
-				has_owner_accepted_culture = yes
-			}
+		OR = {
+			culture = cornish
+			culture_group = british
 		}
 		custom_trigger_tooltip = {
 			tooltip = ancient_pagan_tt

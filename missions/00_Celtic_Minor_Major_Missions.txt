@@ -1,0 +1,5157 @@
+Alba_Missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = ABA
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = KOI
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	alba_fortify_capital = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			is_subject = no
+			capital_scope = {
+				fort_level = 1
+			}
+			capital_scope = {
+				development = 6
+			}
+		}
+		effect = {
+			scottish_marches_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			yorkshire_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			west_midlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_midlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			wessex_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			home_counties_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_anglia_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			yorkshire_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			wales_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			highlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			lowlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			kingdom_of_the_isles_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_historical_rival = LOD
+			add_historical_rival = WSX
+			add_historical_rival = NOL
+			add_historical_rival = MRC
+			add_historical_rival = CRN
+			add_historical_rival = WLS
+			add_historical_rival = SCO
+			add_historical_rival = HSC
+			add_historical_rival = EAL
+			add_historical_rival = KOI
+			add_historical_rival = LOI
+			add_historical_rival = OKN
+		}
+	}
+	alba_northumberland = {
+		icon = mission_rb_into_england
+		position = 2
+		required_missions = {
+			alba_fortify_capital
+		}
+		provinces_to_highlight = {
+			area = scottish_marches_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			scottish_marches_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = cumbria_secured
+				duration = 9125
+			}
+		}
+	}
+	alba_manx_celts = {
+		icon = mission_rb_conquer_the_isles
+		position = 3
+		required_missions = {
+			alba_northumberland
+			alba_mercia
+		}
+		provinces_to_highlight = {
+			province_id = 4365
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			4365 = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = mann_secured
+				duration = 9125
+			}
+		}
+	}
+	alba_the_pale_of_meath = {
+		icon = mission_rb_beyond_the_pale
+		position = 5
+		required_missions = {
+			alba_dominate_cornish
+		}
+		provinces_to_highlight = {
+			province_id = 373
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			373 = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = meath_secured
+				duration = 9125
+			}
+		}
+	}
+}
+
+Alba_Missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = ABA
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = KOI
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	alba_befriend_icelanders = {
+		icon = mission_rb_settle_the_north
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			OR = {
+				alliance_with = FRO
+				alliance_with = ICE
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = befriended_icelanders
+				duration = 9125
+			}
+		}
+	}
+	alba_mercia = {
+		icon = mission_rb_into_england
+		position = 2
+		required_missions = {
+			alba_befriend_icelanders
+		}
+		provinces_to_highlight = {
+			area = west_midlands_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			west_midlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = mercia_secured
+				duration = 9125
+			}
+		}
+	}
+	alba_dominate_cornish = {
+		icon = mission_rb_conquer_the_isles
+		position = 4
+		required_missions = {
+			alba_manx_celts
+		}
+		provinces_to_highlight = {
+			area = wessex_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			wessex_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = cornish_contained
+				duration = 9125
+			}
+		}
+	}
+	alba_ulster_strait = {
+		icon = mission_rb_conquer_ulster
+		position = 5
+		required_missions = {
+			alba_dominate_cornish
+		}
+		provinces_to_highlight = {
+			area = ulster_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			ulster_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ulster_secured
+				duration = 9125
+			}
+		}
+	}
+	alba_beyond_the_pale = {
+		icon = mission_rb_conquer_leinster
+		position = 6
+		required_missions = {
+			alba_the_pale_of_meath
+			alba_ulster_strait
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = munster_area
+				area = connacht_area
+				area = leinster_area
+			}
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			munster_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			connacht_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			leinster_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = beyond_pale_secured
+				duration = 9125
+			}
+		}
+	}
+	alba_perfidious_albion = {
+		icon = mission_united_kingdoms_terra_brittanica
+		position = 7
+		required_missions = {
+			alba_beyond_the_pale
+			alba_unify_scotland
+		}
+		trigger = {
+		}
+		effect = {
+			set_country_flag = perfidious_albion
+		}
+	}
+}
+
+Alba_Missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = ABA
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = KOI
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	alba_confirm_religious_path = {
+		icon = a_center_of_religion
+		position = 3
+		required_missions = {
+			alba_religious_influence
+		}
+		trigger = {
+			religion = insular
+			religious_unity = 0.95
+		}
+		effect = {
+			add_country_modifier = {
+				name = religious_path_confirmed_anew
+				duration = 9125
+			}
+		}
+	}
+	alba_unify_scotland = {
+		icon = mission_rb_rein_in_the_highland_clans
+		position = 6
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = highlands_area
+				area = lowlands_area
+			}
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			lowlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			highlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = scotland_united
+				duration = 9125
+			}
+		}
+	}
+}
+
+Alba_Missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = ABA
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = KOI
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	alba_restore_capital_monastary = {
+		icon = mission_siena_cathedral
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			capital_scope = {
+				has_building = monastery
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = safe_faith_practice
+				duration = 9125
+			}
+		}
+	}
+	alba_religious_influence = {
+		icon = mission_religious
+		position = 2
+		required_missions = {
+			alba_restore_capital_monastary
+			alba_befriend_pope
+		}
+		trigger = {
+			papal_influence = 10
+		}
+		effect = {
+			add_country_modifier = {
+				name = religious_influence_pressed
+				duration = 9125
+			}
+		}
+	}
+	alba_a_question_of_faith = {
+		icon = chivalry_is_not_dead
+		position = 4
+		required_missions = {
+			alba_confirm_religious_path
+			alba_remove_false_clerics
+		}
+		trigger = {
+			religious_unity = 1
+			has_opinion = {
+				who = PAP
+				value = 200
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = religious_path_confirmed
+				duration = 9125
+			}
+		}
+	}
+	alba_subjugate_welsh = {
+		icon = mission_wales_flag
+		position = 5
+		required_missions = {
+			alba_dominate_cornish
+		}
+		provinces_to_highlight = {
+			area = wales_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			wales_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = northumberland_welsh_border
+				duration = 9125
+			}
+		}
+	}
+	alba_outlying_islands = {
+		icon = mission_rb_conquer_the_isles
+		position = 6
+		required_missions = {
+			alba_subjugate_welsh
+			alba_look_to_britanny
+		}
+		provinces_to_highlight = {
+			area = kingdom_of_the_isles_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			kingdom_of_the_isles_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = outlying_islands_secured
+				duration = 9125
+			}
+		}
+	}
+	alba_north_sea_trade = {
+		icon = mission_rb_monopolize_the_channel
+		position = 7
+		required_missions = {
+			alba_unify_scotland
+			alba_outlying_islands
+		}
+		trigger = {
+			trade_income_percentage = 0.25
+		}
+		effect = {
+			add_country_modifier = {
+				name = celtic_north_sea_trade
+				duration = 9125
+			}
+		}
+	}
+}
+
+Alba_Missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = ABA
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = KOI
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	alba_befriend_pope = {
+		icon = spread_piety
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			alliance_with = PAP
+		}
+		effect = {
+			add_country_modifier = {
+				name = celtic_pope_befriended
+				duration = 9125
+			}
+		}
+	}
+	alba_remove_false_clerics = {
+		icon = mission_rb_control_state_religion
+		position = 3
+		required_missions = {
+			alba_religious_influence
+		}
+		trigger = {
+			NOT = {
+				exists = EAL
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = false_clerics_removed
+				duration = 9125
+			}
+		}
+	}
+	alba_look_to_britanny = {
+		icon = mission_rb_conquer_brittany
+		position = 5
+		required_missions = {
+			alba_dominate_cornish
+		}
+		provinces_to_highlight = {
+			area = brittany_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			brittany_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = britanny_secured
+				duration = 9125
+			}
+		}
+	}
+}
+
+Cornwall_Missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = CRN
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = KOI
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	cornwall_fortify_capital = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			is_subject = no
+			capital_scope = {
+				fort_level = 1
+			}
+			capital_scope = {
+				development = 6
+			}
+		}
+		effect = {
+			scottish_marches_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			yorkshire_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			west_midlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_midlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			wessex_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			home_counties_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_anglia_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			yorkshire_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			wales_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			highlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			lowlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			kingdom_of_the_isles_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_historical_rival = LOD
+			add_historical_rival = WSX
+			add_historical_rival = NOL
+			add_historical_rival = MRC
+			add_historical_rival = EAL
+			add_historical_rival = WLS
+			add_historical_rival = SCO
+			add_historical_rival = HSC
+			add_historical_rival = ABA
+			add_historical_rival = KOI
+			add_historical_rival = LOI
+			add_historical_rival = OKN
+		}
+	}
+	cornwall_manx_celts = {
+		icon = mission_retake_ceuta
+		position = 3
+		required_missions = {
+			cornwall_subjugate_welsh
+		}
+		provinces_to_highlight = {
+			province_id = 4365
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			4365 = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = mann_secured
+				duration = 9125
+			}
+		}
+	}
+	cornwall_the_pale_of_meath = {
+		icon = mission_rb_beyond_the_pale
+		position = 5
+		required_missions = {
+			cornwall_look_to_britanny
+		}
+		provinces_to_highlight = {
+			province_id = 373
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			373 = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = meath_secured
+				duration = 9125
+			}
+		}
+	}
+}
+
+Cornwall_Missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = CRN
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = KOI
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	cornwall_restore_stone_henge = {
+		icon = mission_stonehenge
+		position = 1
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			province_id = 234
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			234 = {
+				country_or_subject_holds = ROOT
+				development = 15
+			}
+			234 = {
+				OR = {
+					has_great_project = {
+						type = stonehenge
+						tier = 1
+					}
+					has_great_project = {
+						type = stonehenge
+						tier = 2
+					}
+					has_great_project = {
+						type = stonehenge
+						tier = 3
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = stonehenge_restored
+				duration = 9125
+			}
+		}
+	}
+	cornwall_subjugate_welsh = {
+		icon = mission_wales_flag
+		position = 2
+		required_missions = {
+			cornwall_fortify_capital
+			cornwall_restore_stone_henge
+		}
+		provinces_to_highlight = {
+			area = wales_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			wales_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = northumberland_welsh_border
+				duration = 9125
+			}
+		}
+	}
+	cornwall_look_to_britanny = {
+		icon = mission_rb_conquer_brittany
+		position = 4
+		required_missions = {
+			cornwall_manx_celts
+		}
+		provinces_to_highlight = {
+			area = brittany_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			brittany_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = britanny_secured
+				duration = 9125
+			}
+		}
+	}
+	cornwall_ulster_strait = {
+		icon = mission_rb_conquer_ulster
+		position = 5
+		required_missions = {
+			cornwall_look_to_britanny
+		}
+		provinces_to_highlight = {
+			area = ulster_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			ulster_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ulster_secured
+				duration = 9125
+			}
+		}
+	}
+	cornwall_beyond_the_pale = {
+		icon = mission_rb_conquer_leinster
+		position = 6
+		required_missions = {
+			cornwall_the_pale_of_meath
+			cornwall_ulster_strait
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = munster_area
+				area = connacht_area
+				area = leinster_area
+			}
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			munster_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			connacht_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			leinster_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = beyond_pale_secured
+				duration = 9125
+			}
+		}
+	}
+}
+
+Cornwall_Missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = CRN
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = KOI
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	cornwall_security_of_druids = {
+		icon = mission_druids
+		position = 3
+		required_missions = {
+			cornwall_subjugate_welsh
+			cornwall_dominate_wessex
+		}
+		provinces_to_highlight = {
+			province_id = 234
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			234 = {
+				development = 30
+				OR = {
+					has_great_project = {
+						type = stonehenge
+						tier = 2
+					}
+					has_great_project = {
+						type = stonehenge
+						tier = 3
+					}
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = safe_faith_practice
+				duration = 9125
+			}
+		}
+	}
+	cornwall_mercia = {
+		icon = mission_rb_into_england
+		position = 5
+		required_missions = {
+			cornwall_look_to_britanny
+		}
+		provinces_to_highlight = {
+			area = west_midlands_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			west_midlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = mercia_secured
+				duration = 9125
+			}
+		}
+	}
+	cornwall_highland_conquest = {
+		icon = mission_rb_conquer_the_highlands
+		position = 6
+		required_missions = {
+			cornwall_mercia
+			cornwall_northumberland
+		}
+		provinces_to_highlight = {
+			area = highlands_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			highlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = scotland_united
+				duration = 9125
+			}
+		}
+	}
+	cornwall_perfidious_albion = {
+		icon = mission_united_kingdoms_terra_brittanica
+		position = 7
+		required_missions = {
+			cornwall_highland_conquest
+		}
+		trigger = {
+		}
+		effect = {
+			set_country_flag = perfidious_albion
+		}
+	}
+}
+
+Cornwall_Missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = CRN
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = KOI
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	cornwall_befriend_danes = {
+		icon = mission_gather_allies
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			OR = {
+				alliance_with = JUT
+				alliance_with = ZEA
+				alliance_with = SCN
+				alliance_with = DAN
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = befriended_danes
+				duration = 9125
+			}
+		}
+	}
+	cornwall_dominate_wessex = {
+		icon = mission_wessex_flag
+		position = 2
+		required_missions = {
+			cornwall_befriend_danes
+			cornwall_befriend_normans
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = wessex_area
+				area = home_counties_area
+			}
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			wessex_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			home_counties_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wessex_south_holdings
+				duration = 9125
+			}
+		}
+	}
+	cornwall_a_question_of_faith = {
+		icon = chivalry_is_not_dead
+		position = 4
+		required_missions = {
+			cornwall_security_of_druids
+			cornwall_remove_false_clerics
+		}
+		trigger = {
+			OR = {
+				AND = {
+					religion = druidic_pagan
+					OR = {
+						secondary_religion = insular
+						secondary_religion = lollard
+					}
+				}
+				religion = insular
+				religion = lollard
+			}
+			religious_unity = 0.95
+		}
+		effect = {
+			add_country_modifier = {
+				name = religious_path_confirmed
+				duration = 9125
+			}
+		}
+	}
+	cornwall_northumberland = {
+		icon = mission_rb_into_england
+		position = 5
+		required_missions = {
+			cornwall_look_to_britanny
+		}
+		provinces_to_highlight = {
+			area = scottish_marches_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			scottish_marches_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = cumbria_secured
+				duration = 9125
+			}
+		}
+	}
+	cornwall_outlying_islands = {
+		icon = mission_rb_conquer_the_isles
+		position = 6
+		required_missions = {
+			cornwall_hadrians_wall_broken
+		}
+		provinces_to_highlight = {
+			area = kingdom_of_the_isles_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			kingdom_of_the_isles_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = outlying_islands_secured
+				duration = 9125
+			}
+		}
+	}
+}
+
+Cornwall_Missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = CRN
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = KOI
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	cornwall_befriend_normans = {
+		icon = carolingian_empire
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			alliance_with = NRM
+		}
+		effect = {
+			add_country_modifier = {
+				name = normans_allied
+				duration = 9125
+			}
+		}
+	}
+	cornwall_remove_false_clerics = {
+		icon = mission_rb_control_state_religion
+		position = 3
+		required_missions = {
+			cornwall_dominate_wessex
+		}
+		trigger = {
+			NOT = {
+				exists = EAL
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = false_clerics_removed
+				duration = 9125
+			}
+		}
+	}
+	cornwall_hadrians_wall_broken = {
+		icon = mission_rb_rein_in_the_highland_clans
+		position = 5
+		required_missions = {
+			cornwall_look_to_britanny
+		}
+		provinces_to_highlight = {
+			area = lowlands_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			lowlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = hadrians_wall_broken
+				duration = 9125
+			}
+		}
+	}
+}
+
+Gaeldom_Missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = HSC
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = KOI
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	gaeldom_fortify_capital = {
+		icon = mission_crusade_kolossi_castle
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			is_subject = no
+			capital_scope = {
+				fort_level = 1
+			}
+			capital_scope = {
+				development = 6
+			}
+		}
+		effect = {
+			scottish_marches_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			yorkshire_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			west_midlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_midlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			wessex_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			home_counties_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_anglia_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			yorkshire_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			wales_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			highlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			lowlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			kingdom_of_the_isles_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_historical_rival = LOD
+			add_historical_rival = WSX
+			add_historical_rival = NOL
+			add_historical_rival = MRC
+			add_historical_rival = EAL
+			add_historical_rival = WLS
+			add_historical_rival = SCO
+			add_historical_rival = CRN
+			add_historical_rival = ABA
+			add_historical_rival = KOI
+			add_historical_rival = LOI
+			add_historical_rival = OKN
+		}
+	}
+	gaeldom_scotland_controlled = {
+		icon = mission_build_up_to_force_limit
+		position = 2
+		required_missions = {
+			gaeldom_fortify_capital
+			gaeldom_irish_sea
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = highlands_area
+				area = lowlands_area
+			}
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			highlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			lowlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = scotland_united
+				duration = 9125
+			}
+		}
+	}
+	gaeldom_unity_of_ireland = {
+		icon = mission_rb_conquer_leinster
+		position = 3
+		required_missions = {
+			gaeldom_foothold_in_ulster
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = munster_area
+				area = connacht_area
+				area = leinster_area
+			}
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			munster_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			connacht_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			leinster_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = beyond_pale_secured
+				duration = 9125
+			}
+		}
+	}
+	gaeldom_brittany_annexed = {
+		icon = mission_retake_ceuta
+		position = 5
+		required_missions = {
+			gaeldom_unity_of_ireland
+		}
+		provinces_to_highlight = {
+			area = brittany_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			brittany_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = britanny_secured
+				duration = 9125
+			}
+		}
+	}
+}
+
+Gaeldom_Missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = HSC
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = KOI
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	gaeldom_irish_sea = {
+		icon = mission_rb_grow_the_channel
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			navy_size_percentage = 0.5
+		}
+		effect = {
+			add_country_modifier = {
+				name = manx_irish_navy
+				duration = 9125
+			}
+		}
+	}
+	gaeldom_foothold_in_ulster = {
+		icon = mission_rb_conquer_ulster
+		position = 2
+		required_missions = {
+			gaeldom_irish_sea
+		}
+		provinces_to_highlight = {
+			area = ulster_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			ulster_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ulster_secured
+				duration = 9125
+			}
+		}
+	}
+	gaeldom_foothold_in_mercia = {
+		icon = mission_rb_into_england
+		position = 4
+		required_missions = {
+			gaeldom_unity_of_ireland
+			gaeldom_hadrians_wall_destroyed
+		}
+		provinces_to_highlight = {
+			area = west_midlands_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			west_midlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wessex_welsh_border
+				duration = 9125
+			}
+		}
+	}
+	gaeldom_dominant_trade = {
+		icon = mission_rb_scottish_north_sea_trade
+		position = 6
+		required_missions = {
+			gaeldom_london_controlled
+		}
+		trigger = {
+			trade_income_percentage = 0.25
+		}
+		effect = {
+			add_country_modifier = {
+				name = london_strong_trade_nation
+				duration = 9125
+			}
+		}
+	}
+}
+
+Gaeldom_Missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = HSC
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = KOI
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	gaeldom_build_an_army = {
+		icon = mission_build_up_to_force_limit
+		position = 2
+		required_missions = {
+		}
+		trigger = {
+			army_size_percentage = 0.9
+			infantry_fraction = 0.6
+			cavalry_fraction = 0.2
+			artillery_fraction = 0.2
+		}
+		effect = {
+			add_country_modifier = {
+				name = mercia_strong_nation
+				duration = 9125
+			}
+		}
+	}
+	gaeldom_hadrians_wall_destroyed = {
+		icon = mission_rb_rein_in_the_highland_clans
+		position = 3
+		required_missions = {
+			gaeldom_build_an_army
+		}
+		trigger = {
+			NOT = {
+				exists = SCO
+			}
+			NOT = {
+				exists = NOL
+			}
+			lowlands_area = {
+				country_or_subject_holds = ROOT
+			}
+			scottish_marches_area = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = hadrians_wall_broken
+				duration = 9125
+			}
+		}
+	}
+	gaeldom_london_controlled = {
+		icon = the_london_steelyard
+		position = 5
+		required_missions = {
+			gaeldom_foothold_in_mercia
+			gaeldom_foothold_in_cumbria
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = home_counties_area
+				area = east_anglia_area
+			}
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			home_counties_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			east_anglia_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wessex_london
+				duration = 9125
+			}
+		}
+	}
+	gaeldom_perfidious_albion = {
+		icon = mission_united_kingdoms_terra_brittanica
+		position = 7
+		required_missions = {
+			gaeldom_dominant_trade
+			gaeldom_england_controlled
+		}
+		trigger = {
+		}
+		effect = {
+			set_country_flag = perfidious_albion
+		}
+	}
+}
+
+Gaeldom_Missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = HSC
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = KOI
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	gaeldom_befriend_danes = {
+		icon = catholic_confraternity
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			OR = {
+				alliance_with = JUT
+				alliance_with = ZEA
+				alliance_with = SCN
+				alliance_with = DAN
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = befriended_danes
+				duration = 9125
+			}
+		}
+	}
+	gaeldom_make_the_pope_happy = {
+		icon = mission_crusade_cross
+		position = 2
+		required_missions = {
+			gaeldom_befriend_danes
+		}
+		trigger = {
+			alliance_with = PAP
+		}
+		effect = {
+			add_country_modifier = {
+				name = celtic_pope_befriended
+				duration = 9125
+			}
+		}
+	}
+	gaeldom_foothold_in_cumbria = {
+		icon = mission_rb_into_england
+		position = 4
+		required_missions = {
+			gaeldom_religious_path_secured
+			gaeldom_hadrians_wall_destroyed
+		}
+		provinces_to_highlight = {
+			area = scottish_marches_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			scottish_marches_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wessex_scottish_border
+				duration = 9125
+			}
+		}
+	}
+	gaeldom_england_controlled = {
+		icon = mission_rb_angevin_kingdom
+		position = 6
+		required_missions = {
+			gaeldom_london_controlled
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = east_midlands_area
+				area = west_midlands_area
+				area = yorkshire_area
+				area = scottish_marches_area
+				area = wessex_area
+				area = home_counties_area
+				area = east_anglia_area
+			}
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			east_midlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			west_midlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			yorkshire_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			scottish_marches_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			wessex_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			home_counties_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			east_anglia_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = manx_england_controlled_modifier
+				duration = 9125
+			}
+		}
+	}
+}
+
+Gaeldom_Missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = HSC
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = KOI
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	gaeldom_befriend_normans = {
+		icon = fixed_garrison_system
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			alliance_with = NRM
+		}
+		effect = {
+			add_country_modifier = {
+				name = normans_allied
+				duration = 9125
+			}
+		}
+	}
+	gaeldom_security_of_marriage = {
+		icon = mission_france_marriage_in_iberia
+		position = 2
+		required_missions = {
+			gaeldom_befriend_danes
+			gaeldom_befriend_normans
+		}
+		trigger = {
+			num_of_royal_marriages = 4
+		}
+		effect = {
+			add_country_modifier = {
+				name = gaeldom_marriage_security
+				duration = 9125
+			}
+		}
+	}
+	gaeldom_religious_path_secured = {
+		icon = chivalry_is_not_dead
+		position = 3
+		required_missions = {
+			gaeldom_make_the_pope_happy
+		}
+		trigger = {
+			religious_unity = 1
+			has_opinion = {
+				who = PAP
+				value = 200
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = religious_path_confirmed
+				duration = 9125
+			}
+		}
+	}
+	gaeldom_destroy_false_clerics = {
+		icon = mission_rb_control_state_religion
+		position = 5
+		required_missions = {
+			gaeldom_religious_path_secured
+		}
+		trigger = {
+			NOT = {
+				exists = EAL
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = false_clerics_removed
+				duration = 9125
+			}
+		}
+	}
+}
+
+The_Isles_Missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = LOI
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = KOI
+				}
+			}
+		}
+	}
+	the_isles_fortify_capital = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			is_subject = no
+			capital_scope = {
+				fort_level = 1
+			}
+			capital_scope = {
+				development = 6
+			}
+		}
+		effect = {
+			scottish_marches_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			yorkshire_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			west_midlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_midlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			wessex_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			home_counties_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_anglia_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			yorkshire_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			wales_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			highlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			lowlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			kingdom_of_the_isles_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_historical_rival = LOD
+			add_historical_rival = WSX
+			add_historical_rival = NOL
+			add_historical_rival = MRC
+			add_historical_rival = EAL
+			add_historical_rival = WLS
+			add_historical_rival = SCO
+			add_historical_rival = CRN
+			add_historical_rival = ABA
+			add_historical_rival = KOI
+			add_historical_rival = HSC
+			add_historical_rival = OKN
+		}
+	}
+	the_isles_scotland_ireland_strait = {
+		icon = mission_rb_conquer_scotland
+		position = 2
+		required_missions = {
+			the_isles_fortify_capital
+			the_isles_the_other_isles
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 249
+				province_id = 4121
+			}
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			249 = {
+				country_or_subject_holds = ROOT
+			}
+			4121 = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ulster_secured
+				duration = 9125
+			}
+		}
+	}
+	the_isles_unity_of_ulster = {
+		icon = mission_rb_conquer_ulster
+		position = 3
+		required_missions = {
+			the_isles_scotland_ireland_strait
+		}
+		provinces_to_highlight = {
+			area = ulster_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			ulster_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_sailors = 1000
+			add_splendor = 200
+		}
+	}
+	the_isles_celts_in_wales = {
+		icon = mission_rb_conquer_wales
+		position = 5
+		required_missions = {
+			the_isles_push_beyond_ulster
+		}
+		provinces_to_highlight = {
+			area = wales_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			wales_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wessex_welsh_border
+				duration = 9125
+			}
+		}
+	}
+	the_isles_brittany_annex = {
+		icon = mission_rb_conquer_brittany
+		position = 6
+		required_missions = {
+			the_isles_celts_in_wales
+			the_isles_celts_in_cornwall
+		}
+		provinces_to_highlight = {
+			area = brittany_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			brittany_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = britanny_secured
+				duration = 9125
+			}
+		}
+	}
+}
+
+The_Isles_Missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = LOI
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = KOI
+				}
+			}
+		}
+	}
+	the_isles_the_other_isles = {
+		icon = mission_rb_conquer_the_isles
+		position = 1
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			province_id = 4365
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			4365 = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+		}
+	}
+	the_isles_push_beyond_ulster = {
+		icon = mission_rb_conquer_leinster
+		position = 4
+		required_missions = {
+			the_isles_unity_of_ulster
+			the_isles_build_monastaries
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = ulster_area
+				area = leinster_area
+				area = connacht_area
+				area = munster_area
+			}
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			ulster_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			leinster_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			connacht_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			munster_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = beyond_pale_secured
+				duration = 9125
+			}
+		}
+	}
+	the_isles_celts_in_cornwall = {
+		icon = mission_unite_coromandel
+		position = 5
+		required_missions = {
+			the_isles_push_beyond_ulster
+		}
+		provinces_to_highlight = {
+			area = wessex_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			wessex_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
+		}
+	}
+}
+
+The_Isles_Missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = LOI
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = KOI
+				}
+			}
+		}
+	}
+	the_isles_for_odin = {
+		icon = impaled_soldier
+		position = 2
+		required_missions = {
+			the_isles_the_other_isles
+			the_isles_control_the_straits
+		}
+		trigger = {
+			has_personal_deity = odin
+			religious_unity = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = manx_sacrifice_given
+				duration = 9125
+			}
+		}
+	}
+	the_isles_build_monastaries = {
+		icon = mission_rb_control_state_religion
+		position = 3
+		required_missions = {
+			the_isles_for_odin
+		}
+		provinces_to_highlight = {
+			4364 = {
+				NOT = {
+					OR = {
+						has_building = shrine
+						has_building = temple
+						has_building = monastery
+					}
+				}
+			}
+		}
+		trigger = {
+			4364 = {
+				OR = {
+					has_building = shrine
+					has_building = temple
+					has_building = monastery
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = mercia_religion
+				duration = 9125
+			}
+		}
+	}
+	the_isles_london_annexed = {
+		icon = mission_rb_scottish_conquer_london
+		position = 5
+		required_missions = {
+			the_isles_push_beyond_ulster
+			the_isles_scotland_old_gods
+		}
+		provinces_to_highlight = {
+			province_id = 236
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+			NOT = {
+				religion = ROOT
+			}
+		}
+		trigger = {
+			236 = {
+				country_or_subject_holds = ROOT
+				religion = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wessex_london
+				duration = 9125
+			}
+		}
+	}
+	the_isles_english_mainland = {
+		icon = mission_rb_into_england
+		position = 6
+		required_missions = {
+			the_isles_celts_in_cornwall
+			the_isles_london_annexed
+			the_isles_destroy_lindisfarne
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = west_midlands_area
+				area = east_midlands_area
+				area = scottish_marches_area
+				area = wessex_area
+				area = home_counties_area
+				area = east_anglia_area
+				area = yorkshire_area
+			}
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			west_midlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			east_midlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			scottish_marches_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			wessex_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			home_counties_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			east_anglia_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			yorkshire_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = manx_england_controlled_modifier
+				duration = 9125
+			}
+		}
+	}
+	the_isles_perfidious_albion = {
+		icon = mission_united_kingdoms_terra_brittanica
+		position = 7
+		required_missions = {
+			the_isles_brittany_annex
+			the_isles_english_mainland
+			the_isles_britannia_asatru
+		}
+		trigger = {
+		}
+		effect = {
+			set_country_flag = perfidious_albion
+		}
+	}
+}
+
+The_Isles_Missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = LOI
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = KOI
+				}
+			}
+		}
+	}
+	the_isles_control_the_straits = {
+		icon = mission_rb_grow_the_channel
+		position = 1
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			province_id = 4110
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+			NOT = {
+				religion = ROOT
+			}
+		}
+		trigger = {
+			4110 = {
+				country_or_subject_holds = ROOT
+				religion = ROOT
+			}
+		}
+		effect = {
+			add_historical_rival = FRO
+			add_historical_rival = ICE
+		}
+	}
+	the_isles_scotland_old_gods = {
+		icon = mission_rb_unite_the_clans
+		position = 4
+		required_missions = {
+			the_isles_build_monastaries
+			the_isles_scottish_coast
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = lowlands_area
+				area = highlands_area
+			}
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+			NOT = {
+				religion = ROOT
+			}
+		}
+		trigger = {
+			lowlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+				religion = ROOT
+			}
+			highlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+				religion = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = manx_asatru_dominance
+				duration = 9125
+			}
+		}
+	}
+	the_isles_destroy_lindisfarne = {
+		icon = mission_rb_control_state_religion
+		position = 5
+		required_missions = {
+			the_isles_scotland_old_gods
+		}
+		provinces_to_highlight = {
+			province_id = 246
+			NOT = {
+				controlled_by = ROOT
+			}
+			NOT = {
+				devastation = 50
+			}
+		}
+		trigger = {
+			246 = {
+				controlled_by = ROOT
+				devastation = 50
+			}
+		}
+		effect = {
+			add_splendor = 200
+			add_historical_friend = DAN
+			add_historical_friend = JUT
+			add_historical_friend = SCN
+			add_historical_friend = ZEA
+		}
+	}
+}
+
+The_Isles_Missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = LOI
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = KOI
+				}
+			}
+		}
+	}
+	the_isles_northern_isles = {
+		icon = mission_rb_settle_the_north
+		position = 1
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 369
+				province_id = 1978
+			}
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			369 = {
+				country_or_subject_holds = ROOT
+			}
+			1978 = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			north_atlantic_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	the_isles_scotland_faroes_strait = {
+		icon = mission_rb_scottish_north_sea_trade
+		position = 2
+		required_missions = {
+			the_isles_control_the_straits
+			the_isles_northern_isles
+		}
+		provinces_to_highlight = {
+			OR = {
+				province_id = 369
+				province_id = 4110
+			}
+			NOT = {
+				development = 10
+			}
+		}
+		trigger = {
+			369 = {
+				development = 10
+			}
+			4110 = {
+				development = 10
+			}
+		}
+		effect = {
+			add_sailors = 1000
+			add_legitimacy = 25
+		}
+	}
+	the_isles_scottish_coast = {
+		icon = mission_advance_to_the_dnieper
+		position = 3
+		required_missions = {
+			the_isles_scotland_faroes_strait
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = kingdom_of_the_isles_area
+				area = highlands_area
+				area = lowlands_area
+			}
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			kingdom_of_the_isles_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			highlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			lowlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_prestige = 25
+			add_splendor = 100
+		}
+	}
+	the_isles_remove_false_clerics = {
+		icon = mission_rb_control_state_religion
+		position = 5
+		required_missions = {
+			the_isles_scotland_old_gods
+		}
+		trigger = {
+			NOT = {
+				exists = EAL
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = false_clerics_removed
+				duration = 9125
+			}
+		}
+	}
+	the_isles_britannia_asatru = {
+		icon = norse_missions_icon
+		position = 6
+		required_missions = {
+			the_isles_destroy_lindisfarne
+			the_isles_remove_false_clerics
+		}
+		provinces_to_highlight = {
+			region = british_isles_region
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+			NOT = {
+				religion = ROOT
+			}
+		}
+		trigger = {
+			british_isles_region = {
+				type = all
+				country_or_subject_holds = ROOT
+				religion = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = manx_raiding_fleet
+				duration = 9125
+			}
+		}
+	}
+}
+
+Manx_Missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = KOI
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	manx_fortify_capital = {
+		icon = mission_crusade_kolossi_castle
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			is_subject = no
+			capital_scope = {
+				fort_level = 1
+			}
+			capital_scope = {
+				development = 6
+			}
+		}
+		effect = {
+			scottish_marches_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			yorkshire_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			west_midlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_midlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			wessex_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			home_counties_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_anglia_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			yorkshire_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			wales_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			highlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			lowlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			kingdom_of_the_isles_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_historical_rival = LOD
+			add_historical_rival = WSX
+			add_historical_rival = NOL
+			add_historical_rival = MRC
+			add_historical_rival = CRN
+			add_historical_rival = WLS
+			add_historical_rival = SCO
+			add_historical_rival = HSC
+			add_historical_rival = EAL
+			add_historical_rival = ABA
+			add_historical_rival = LOI
+			add_historical_rival = OKN
+		}
+	}
+	manx_wales_controlled = {
+		icon = mission_build_up_to_force_limit
+		position = 2
+		required_missions = {
+			manx_fortify_capital
+			manx_irish_sea
+		}
+		provinces_to_highlight = {
+			area = wales_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			wales_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = northumberland_welsh_border
+				duration = 9125
+			}
+		}
+	}
+	manx_unity_of_ireland = {
+		icon = mission_rb_conquer_leinster
+		position = 3
+		required_missions = {
+			manx_foothold_in_ulster
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = munster_area
+				area = connacht_area
+				area = leinster_area
+			}
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			munster_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			connacht_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			leinster_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = beyond_pale_secured
+				duration = 9125
+			}
+		}
+	}
+	manx_brittany_annexed = {
+		icon = mission_retake_ceuta
+		position = 5
+		required_missions = {
+			manx_unity_of_ireland
+		}
+		provinces_to_highlight = {
+			area = brittany_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			brittany_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = britanny_secured
+				duration = 9125
+			}
+		}
+	}
+}
+
+Manx_Missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = KOI
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	manx_irish_sea = {
+		icon = mission_rb_grow_the_channel
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			navy_size_percentage = 0.5
+		}
+		effect = {
+			add_country_modifier = {
+				name = manx_irish_navy
+				duration = 9125
+			}
+		}
+	}
+	manx_foothold_in_ulster = {
+		icon = mission_rb_conquer_ulster
+		position = 2
+		required_missions = {
+			manx_irish_sea
+		}
+		provinces_to_highlight = {
+			area = ulster_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			ulster_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ulster_secured
+				duration = 9125
+			}
+		}
+	}
+	manx_foothold_in_mercia = {
+		icon = mission_rb_into_england
+		position = 4
+		required_missions = {
+			manx_unity_of_ireland
+			manx_pirate_fleets
+		}
+		provinces_to_highlight = {
+			area = west_midlands_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			west_midlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = mercia_secured
+				duration = 9125
+			}
+		}
+	}
+	manx_dominant_trade = {
+		icon = mission_rb_scottish_north_sea_trade
+		position = 6
+		required_missions = {
+			manx_london_controlled
+		}
+		trigger = {
+			trade_income_percentage = 0.45
+		}
+		effect = {
+			add_country_modifier = {
+				name = manx_dominant_traders
+				duration = 9125
+			}
+		}
+	}
+}
+
+Manx_Missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = KOI
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	manx_build_a_navy = {
+		icon = imperial_navy
+		position = 2
+		required_missions = {
+		}
+		trigger = {
+			navy_size_percentage = 0.85
+		}
+		effect = {
+			add_country_modifier = {
+				name = east_anglia_trade_fleet
+				duration = 9125
+			}
+		}
+	}
+	manx_pirate_fleets = {
+		icon = mission_merchant_navy
+		position = 3
+		required_missions = {
+			manx_build_a_navy
+		}
+		trigger = {
+			navy_size_percentage = 0.85
+			light_ship_fraction = 0.5
+		}
+		effect = {
+			add_country_modifier = {
+				name = manx_pirate_fleet
+				duration = 9125
+			}
+		}
+	}
+	manx_london_controlled = {
+		icon = the_london_steelyard
+		position = 5
+		required_missions = {
+			manx_foothold_in_mercia
+			manx_south_coast_controlled
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = home_counties_area
+				area = east_anglia_area
+			}
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			home_counties_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			east_anglia_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wessex_london
+				duration = 9125
+			}
+		}
+	}
+	manx_perfidious_albion = {
+		icon = mission_united_kingdoms_terra_brittanica
+		position = 7
+		required_missions = {
+			manx_dominant_trade
+			manx_england_controlled
+		}
+		trigger = {
+		}
+		effect = {
+			set_country_flag = perfidious_albion
+		}
+	}
+}
+
+Manx_Missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = KOI
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	manx_befriend_iceland = {
+		icon = mission_rb_settle_the_north
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			alliance_with = ICE
+		}
+		effect = {
+			add_country_modifier = {
+				name = befriended_icelanders
+				duration = 9125
+			}
+		}
+	}
+	manx_dominance_of_asatru = {
+		icon = mission_rb_control_state_religion
+		position = 2
+		required_missions = {
+			manx_befriend_iceland
+		}
+		trigger = {
+			religion = norse_pagan_reformed
+			OR = {
+				has_personal_deity = odin
+				has_personal_deity = tor
+				has_personal_deity = tyr
+				has_personal_deity = freya
+				has_personal_deity = snotra
+				has_personal_deity = njord
+			}
+			religious_unity = 1
+		}
+		effect = {
+			add_country_modifier = {
+				name = manx_asatru_dominance
+				duration = 9125
+			}
+		}
+	}
+	manx_south_coast_controlled = {
+		icon = mission_rb_conquer_the_isles
+		position = 4
+		required_missions = {
+			manx_sacrifice_for_gods
+			manx_pirate_fleets
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = wessex_area
+				area = home_counties_area
+			}
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			wessex_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			home_counties_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wessex_south_holdings
+				duration = 9125
+			}
+		}
+	}
+	manx_england_controlled = {
+		icon = mission_rb_angevin_kingdom
+		position = 6
+		required_missions = {
+			manx_london_controlled
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = east_midlands_area
+				area = west_midlands_area
+				area = yorkshire_area
+				area = scottish_marches_area
+				area = wessex_area
+				area = home_counties_area
+				area = east_anglia_area
+			}
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			east_midlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			west_midlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			yorkshire_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			scottish_marches_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			wessex_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			home_counties_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			east_anglia_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = manx_england_controlled_modifier
+				duration = 9125
+			}
+		}
+	}
+}
+
+Manx_Missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = KOI
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = WLS
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	manx_island_defence = {
+		icon = fixed_garrison_system
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			4365 = {
+				OR = {
+					has_building = castle
+					has_building = keep
+					has_building = bastion
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = mann_secured
+				duration = 9125
+			}
+		}
+	}
+	manx_foothold_in_scotland = {
+		icon = mission_rb_conquer_scotland
+		position = 2
+		required_missions = {
+			manx_befriend_iceland
+			manx_island_defence
+		}
+		provinces_to_highlight = {
+			area = lowlands_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			lowlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = hadrians_wall_broken
+				duration = 9125
+			}
+		}
+	}
+	manx_sacrifice_for_gods = {
+		icon = impaled_soldier
+		position = 3
+		required_missions = {
+			manx_dominance_of_asatru
+		}
+		trigger = {
+			OR = {
+				ruler_has_personality = zealot_personality
+				ruler_has_personality_ancestor = {
+					key = zealot
+				}
+				heir_has_personality = zealot_personality
+				heir_has_personality_ancestor = {
+					key = zealot
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = manx_sacrifice_given
+				duration = 9125
+			}
+		}
+	}
+	manx_channel_raiding_fleets = {
+		icon = mission_burn_wooden_wall
+		position = 5
+		required_missions = {
+			manx_sacrifice_for_gods
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = wessex_area
+				area = home_counties_area
+				area = brittany_area
+			}
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			wessex_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			brittany_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			home_counties_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = manx_raiding_fleet
+				duration = 9125
+			}
+		}
+	}
+}
+
+Wales_Missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = WLS
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = KOI
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	wales_fortify_capital = {
+		icon = mission_build_up_to_force_limit
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			is_subject = no
+			capital_scope = {
+				fort_level = 1
+			}
+			capital_scope = {
+				development = 6
+			}
+		}
+		effect = {
+			scottish_marches_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			yorkshire_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			west_midlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_midlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			wessex_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			home_counties_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			east_anglia_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			yorkshire_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			wales_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			highlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			lowlands_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			kingdom_of_the_isles_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			add_historical_rival = LOD
+			add_historical_rival = WSX
+			add_historical_rival = NOL
+			add_historical_rival = MRC
+			add_historical_rival = CRN
+			add_historical_rival = EAL
+			add_historical_rival = SCO
+			add_historical_rival = HSC
+			add_historical_rival = ABA
+			add_historical_rival = KOI
+			add_historical_rival = LOI
+			add_historical_rival = OKN
+		}
+	}
+	wales_manx_celts = {
+		icon = mission_rb_conquer_the_isles
+		position = 3
+		required_missions = {
+			wales_mercia
+		}
+		provinces_to_highlight = {
+			province_id = 4365
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			4365 = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = mann_secured
+				duration = 9125
+			}
+		}
+	}
+	wales_subjugate_cornish = {
+		icon = mission_rb_conquer_wales
+		position = 4
+		required_missions = {
+			wales_manx_celts
+		}
+		trigger = {
+			CRN = {
+				is_subject_of = WLS
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = cornish_contained
+				duration = 9125
+			}
+		}
+	}
+	wales_the_pale_of_meath = {
+		icon = mission_rb_beyond_the_pale
+		position = 5
+		required_missions = {
+			wales_subjugate_cornish
+		}
+		provinces_to_highlight = {
+			province_id = 373
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			373 = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+		}
+	}
+	wales_beyond_the_pale = {
+		icon = mission_rb_conquer_leinster
+		position = 6
+		required_missions = {
+			wales_the_pale_of_meath
+		}
+		provinces_to_highlight = {
+			OR = {
+				area = munster_area
+				area = connacht_area
+				area = leinster_area
+			}
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			munster_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			connacht_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			leinster_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = beyond_pale_secured
+				duration = 9125
+			}
+		}
+	}
+}
+
+Wales_Missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = WLS
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = KOI
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	wales_river_severn = {
+		icon = mission_unite_coromandel
+		position = 1
+		required_missions = {
+		}
+		provinces_to_highlight = {
+			province_id = 239
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+			NOT = {
+				religion = lollard
+			}
+			NOT = {
+				development = 9
+			}
+		}
+		trigger = {
+			239 = {
+				country_or_subject_holds = ROOT
+				religion = lollard
+				development = 9
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = celtic_north_sea_trade
+				duration = 9125
+			}
+		}
+	}
+	wales_mercia = {
+		icon = mission_rb_into_england
+		position = 2
+		required_missions = {
+			wales_fortify_capital
+			wales_river_severn
+		}
+		provinces_to_highlight = {
+			area = west_midlands_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			west_midlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = mercia_secured
+				duration = 9125
+			}
+		}
+	}
+	wales_ulster_strait = {
+		icon = mission_rb_conquer_ulster
+		position = 5
+		required_missions = {
+			wales_subjugate_cornish
+		}
+		provinces_to_highlight = {
+			area = ulster_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			ulster_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = ulster_secured
+				duration = 9125
+			}
+		}
+	}
+}
+
+Wales_Missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = WLS
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = KOI
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	wales_look_to_britanny = {
+		icon = mission_rb_conquer_brittany
+		position = 4
+		required_missions = {
+			wales_manx_celts
+		}
+		provinces_to_highlight = {
+			area = brittany_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			brittany_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = britanny_secured
+				duration = 9125
+			}
+		}
+	}
+	wales_highland_conquest = {
+		icon = mission_rb_conquer_the_highlands
+		position = 6
+		required_missions = {
+			wales_ulster_strait
+			wales_northumberland
+		}
+		provinces_to_highlight = {
+			area = highlands_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			highlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = scotland_united
+				duration = 9125
+			}
+		}
+	}
+	wales_perfidious_albion = {
+		icon = mission_build_up_to_force_limit
+		position = 7
+		required_missions = {
+			wales_beyond_the_pale
+			wales_highland_conquest
+			wales_outlying_islands
+		}
+		trigger = {
+		}
+		effect = {
+			set_country_flag = perfidious_albion
+		}
+	}
+}
+
+Wales_Missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = WLS
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = KOI
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	wales_befriend_danes = {
+		icon = mission_rb_settle_the_north
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			OR = {
+				alliance_with = JUT
+				alliance_with = ZEA
+				alliance_with = SCN
+				alliance_with = DAN
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = befriended_danes
+				duration = 9125
+			}
+		}
+	}
+	wales_dominate_wessex = {
+		icon = mission_wessex_flag
+		position = 2
+		required_missions = {
+			wales_befriend_danes
+			wales_befriend_normans
+		}
+		provinces_to_highlight = {
+			area = wessex_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			wessex_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = wessex_south_holdings
+				duration = 9125
+			}
+		}
+	}
+	wales_security_of_lollards = {
+		icon = law_of_the_pious
+		position = 3
+		required_missions = {
+		}
+		trigger = {
+			religion = lollard
+			religious_unity = 0.85
+			has_opinion = {
+				who = PAP
+				value = -100
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = safe_faith_practice
+				duration = 9125
+			}
+		}
+	}
+	wales_northumberland = {
+		icon = mission_rb_into_england
+		position = 5
+		required_missions = {
+			wales_subjugate_cornish
+		}
+		provinces_to_highlight = {
+			area = scottish_marches_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			scottish_marches_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = cumbria_secured
+				duration = 9125
+			}
+		}
+	}
+}
+
+Wales_Missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			tag = WLS
+			AND = {
+				tag = BHR
+				NOT = {
+					was_tag = HSC
+				}
+				NOT = {
+					was_tag = KOI
+				}
+				NOT = {
+					was_tag = CRN
+				}
+				NOT = {
+					was_tag = ABA
+				}
+				NOT = {
+					was_tag = LOI
+				}
+			}
+		}
+	}
+	has_country_shield = yes
+	wales_befriend_normans = {
+		icon = carolingian_empire
+		position = 1
+		required_missions = {
+		}
+		trigger = {
+			alliance_with = NRM
+		}
+		effect = {
+			add_country_modifier = {
+				name = normans_allied
+				duration = 9125
+			}
+		}
+	}
+	wales_strengthen_clerics = {
+		icon = control_the_church
+		position = 3
+		required_missions = {
+			wales_dominate_wessex
+		}
+		trigger = {
+			church_power = 200
+		}
+		effect = {
+		}
+	}
+	wales_a_question_of_faith = {
+		icon = chivalry_is_not_dead
+		position = 4
+		required_missions = {
+			wales_security_of_lollards
+			wales_strengthen_clerics
+		}
+		trigger = {
+			religious_unity = 1
+			power_projection = 75
+		}
+		effect = {
+			add_country_modifier = {
+				name = religious_path_confirmed
+				duration = 9125
+			}
+		}
+	}
+	wales_hadrians_wall_broken = {
+		icon = mission_rb_rein_in_the_highland_clans
+		position = 5
+		required_missions = {
+			wales_subjugate_cornish
+		}
+		provinces_to_highlight = {
+			area = lowlands_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			lowlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = hadrians_wall_broken
+				duration = 9125
+			}
+		}
+	}
+	wales_outlying_islands = {
+		icon = mission_rb_conquer_the_isles
+		position = 6
+		required_missions = {
+			wales_hadrians_wall_broken
+		}
+		provinces_to_highlight = {
+			area = kingdom_of_the_isles_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			kingdom_of_the_isles_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = outlying_islands_secured
+				duration = 9125
+			}
+		}
+	}
+}
+
+Albion_Missions_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			was_tag = ABA
+			was_tag = CRN
+			was_tag = HSC
+			was_tag = KOI
+			was_tag = LOI
+			was_tag = WLS
+		}
+		tag = BHR
+	}
+	has_country_shield = yes
+	maritime_empire = {
+		icon = mission_naval_dominance
+		position = 7
+		required_missions = {
+		}
+		trigger = {
+			navy_size_percentage = 1
+			heavy_ship_fraction = 0.35
+			light_ship_fraction = 0.35
+			transport_fraction = 0.3
+		}
+		effect = {
+			add_country_modifier = {
+				name = albion_maritime_empire
+				duration = 9125
+			}
+		}
+	}
+	settle_west_africa = {
+		icon = mission_into_africa
+		position = 9
+		required_missions = {
+			look_to_africa
+		}
+		provinces_to_highlight = {
+			area = jolof_area
+			NOT = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		trigger = {
+			jolof_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = learn_about_mansa_musa
+				duration = -1
+			}
+		}
+	}
+	mansa_musas_gold = {
+		icon = mission_african_gold
+		position = 10
+		required_missions = {
+			settle_west_africa
+		}
+		trigger = {
+			gold_income_percentage = 0.15
+		}
+		effect = {
+			add_country_modifier = {
+				name = albion_gold_boom
+				duration = -1
+			}
+		}
+	}
+}
+
+Albion_Missions_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			was_tag = ABA
+			was_tag = CRN
+			was_tag = HSC
+			was_tag = KOI
+			was_tag = LOI
+			was_tag = WLS
+		}
+		tag = BHR
+	}
+	has_country_shield = yes
+	look_to_africa = {
+		icon = mission_into_africa
+		position = 8
+		required_missions = {
+			maritime_empire
+		}
+		trigger = {
+			has_any_colonist_idea = yes
+		}
+		effect = {
+			jolof_area = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	revolutionise_production = {
+		icon = mission_industrial_smoking_chimney
+		position = 12
+		required_missions = {
+			revolutionise_banking
+		}
+		trigger = {
+			has_institution = weights_and_measures
+		}
+		effect = {
+			add_country_modifier = {
+				name = albion_production
+				duration = -1
+			}
+		}
+	}
+}
+
+Albion_Missions_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			was_tag = ABA
+			was_tag = CRN
+			was_tag = HSC
+			was_tag = KOI
+			was_tag = LOI
+			was_tag = WLS
+		}
+		tag = BHR
+	}
+	has_country_shield = yes
+	discover_americas = {
+		icon = mission_iceland_discover_new_world
+		position = 8
+		required_missions = {
+			maritime_empire
+			north_sea_islands
+		}
+		trigger = {
+			colony = 1
+		}
+		effect = {
+			northeast_america_region = {
+				limit = {
+					NOT = {
+						is_core = ROOT
+					}
+					NOT = {
+						is_permanent_claim = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	settle_america = {
+		icon = mission_iceland_colonize_vinland
+		position = 9
+		required_missions = {
+			discover_americas
+		}
+		trigger = {
+			OR = {
+				any_owned_province = {
+					OR = {
+						continent = north_america
+						continent = south_america
+						continent = new_world
+					}
+				}
+				any_subject_country = {
+					custom_trigger_tooltip = {
+						tooltip = tooltip_ei_new_world_i_type
+						OR = {
+							is_subject_of_type = colony
+							is_subject_of_type = crown_colony
+							is_subject_of_type = private_enterprise
+							is_subject_of_type = self_governing_colony
+						}
+					}
+					capital_scope = {
+						OR = {
+							continent = north_america
+							continent = south_america
+							continent = new_world
+						}
+					}
+				}
+			}
+		}
+		effect = {
+		}
+	}
+	cleanse_the_unbelievers = {
+		icon = show_piety
+		position = 10
+		required_missions = {
+			settle_west_africa
+			settle_america
+			settle_the_north
+		}
+		trigger = {
+			NOT = {
+				religious_unity = 1
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = albion_missionaries
+				duration = -1
+			}
+		}
+	}
+	revolutionise_banking = {
+		icon = mission_rb_the_bank_of_scotland
+		position = 11
+		required_missions = {
+			mansa_musas_gold
+			cleanse_the_unbelievers
+			american_gold
+		}
+		trigger = {
+			monthly_income = 1500
+			has_institution = ei_central_banks
+		}
+		effect = {
+			add_country_modifier = {
+				name = albion_banking
+				duration = -1
+			}
+		}
+	}
+}
+
+Albion_Missions_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			was_tag = ABA
+			was_tag = CRN
+			was_tag = HSC
+			was_tag = KOI
+			was_tag = LOI
+			was_tag = WLS
+		}
+		tag = BHR
+	}
+	has_country_shield = yes
+	control_north_sea = {
+		icon = mission_corsairs_of_the_north_sea
+		position = 8
+		required_missions = {
+			north_sea_islands
+		}
+		trigger = {
+			jutland_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			western_norway = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			northern_norway = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			east_midlands_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			home_counties_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_splendor = 200
+			add_sailors = 2000
+		}
+	}
+	revolutionise_industry = {
+		icon = mission_industrial_foundry_workers
+		position = 12
+		required_missions = {
+			revolutionise_banking
+		}
+		trigger = {
+			has_institution = industrialization
+		}
+		effect = {
+			add_country_modifier = {
+				name = albion_industry
+				duration = -1
+			}
+		}
+	}
+}
+
+Albion_Missions_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		OR = {
+			was_tag = ABA
+			was_tag = CRN
+			was_tag = HSC
+			was_tag = KOI
+			was_tag = LOI
+			was_tag = WLS
+		}
+		tag = BHR
+	}
+	has_country_shield = yes
+	north_sea_islands = {
+		icon = mission_look_west
+		position = 7
+		required_missions = {
+		}
+		trigger = {
+			north_atlantic_area = {
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_sailors = 2000
+		}
+	}
+	settle_the_north = {
+		icon = mission_iceland_colonize_greenland
+		position = 9
+		required_missions = {
+			control_north_sea
+		}
+		trigger = {
+			greenland_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+			labrador_area = {
+				type = all
+				country_or_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = albion_north_settled
+				duration = -1
+			}
+		}
+	}
+	american_gold = {
+		icon = mission_zambezi_gold
+		position = 10
+		required_missions = {
+			settle_the_north
+		}
+		trigger = {
+			any_owned_province = {
+				is_colony = yes
+				continent = north_america
+			}
+			any_owned_province = {
+				is_colony = yes
+				continent = south_america
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = albion_american_gold
+				duration = -1
+			}
+		}
+	}
+}

@@ -2,7 +2,6 @@ country_decisions = {
 	english_nation = {
 		major = yes
 		potential = {
-			has_country_flag = bretwalda
 			was_never_end_game_tag_trigger = yes
 			NOT = {
 				has_country_flag = formed_england_flag
@@ -53,7 +52,16 @@ country_decisions = {
 			NOT = {
 				exists = ENG
 			}
-			has_country_flag = bretwalda
+			custom_trigger_tooltip = {
+				tooltip = bretwalda_mission_tt
+				OR = {
+					mission_completed = east_anglia_become_bretwalda
+					mission_completed = london_become_bretwalda
+					mission_completed = mercia_become_bretwalda
+					mission_completed = northumberland_become_bretwalda
+					mission_completed = wessex_become_bretwalda
+				}
+			}
 			owns_core_province = 236			# London
 			owns_core_province = 237			# Oxfordshire
 			owns_core_province = 234			# Wessex

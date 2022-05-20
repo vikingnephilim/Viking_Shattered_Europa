@@ -83,6 +83,17 @@ country_decisions = {
 				}
 				owns_core_province = 172
 			}
+			custom_trigger_tooltip = {
+				tooltip = perfidious_albion_tt
+				OR = {
+					mission_completed = alba_perfidious_albion
+					mission_completed = cornwall_perfidious_albion
+					mission_completed = gaeldom_perfidious_albion
+					mission_completed = the_isles_perfidious_albion
+					mission_completed = manx_perfidious_albion
+					mission_completed = wales_perfidious_albion
+				}
+			}
 		}
 		effect = {
 			restore_country_name_effect = yes
@@ -101,12 +112,7 @@ country_decisions = {
 			hidden_effect = {
 				every_owned_province = {
 					limit = {
-						OR = {
-							culture = anglosaxon
-							culture = mercian
-							culture = northumbrian
-							culture = english
-						}
+						culture_group = gaelic
 					}
 					change_culture = capital
 				}
@@ -159,6 +165,7 @@ country_decisions = {
 			set_country_flag = formed_celbri_flag
 			hidden_effect = {
 				restore_country_name_effect = yes
+				swap_non_generic_missions = yes
 				every_owned_province = {
 					limit = {
 						culture_group = gaelic
